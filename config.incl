@@ -1,0 +1,25 @@
+
+# Configuration file for settings, includes and libs that NOT depends of the type
+# of compilation: DEBUG or RELEASE
+
+CONFIG += warn_on
+CONFIG += USE_AIMSUN_SDK
+
+QT -= qt3support
+CONFIG += warn_on
+
+unix:!macx {
+	CONFIG += linux
+}
+
+win32 {	
+	QMAKE_LFLAGS_DEBUG += /LARGEADDRESSAWARE
+	QMAKE_LFLAGS_RELEASE += /LARGEADDRESSAWARE
+	QMAKE_LFLAGS_DEBUG += /FIXED:NO
+
+	include (config_win64_vc13.pri)
+}macx{
+	include (config_mac.pri)
+}linux{
+	include (config_linux.incl)
+}
