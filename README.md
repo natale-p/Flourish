@@ -1,7 +1,5 @@
 # Flourish Plugin
 
-Integration of the Flourish plugin in Aimsun.
-
 ## Compiling
 
 We recommend using shadow builds, that is, have the compiled objects separated from source files. We also recommend to have Aimsun copied in a user folder and write the compiled plugins directly on it.
@@ -32,10 +30,15 @@ The top folder contains required configuration files. The plugin code will be in
 Edit the file build_path.pri to set the location of the build path and the Aimsun SDK if you are placing the binaries and the sources elsewhere. The default values are:
 
 ```
-BLD_PATH = $$(HOMEDRIVE)$$(HOMEPATH)/software/build/Aimsun_8_2_debug
-AIMSUN_SDK_DIR = $$(HOMEDRIVE)$$(HOMEPATH)/software/sources/Flourish
+win32{  
+	BLD_PATH = $$(HOMEDRIVE)$$(HOMEPATH)/software/build/Aimsun_8_2_debug
+	AIMSUN_SDK_DIR = $$(HOMEDRIVE)$$(HOMEPATH)/software/sources/Flourish
+}else{
+	BLD_PATH = $$(HOME)/software/build/Aimsun_8_2_debug
+	AIMSUN_SDK_DIR = $$(HOME)/software/sources/Flourish
+}
 ```
-
+ 
 Then create the Makefile manually as:
 
 ```
@@ -58,15 +61,14 @@ Following this structure the compiler will place all the object files in the fol
 
 *~/software/build/Aimsun_8_2_debug/plugins/Flourish*
 
-And the plugin in the Aimsun plug-ins folder:
+And the plugin in the Aimsun dynamicAPIS folder:
 
-- Windows: *~/software/build/Aimsun_8_2_debug/bin/plugins/*
-- Linux: *~/software/build/Aimsun_8_2_debug/bin/plugins/*
-- macOS: *~/software/build/Aimsun_8_2_debug/bin/Aimsun.app/Contents/PlugIns/*
+- Windows: *~/software/build/Aimsun_8_2_debug/bin/plugins/dynamicAPIS/*
+- Linux: *~/software/build/Aimsun_8_2_debug/bin/plugins/dynamicAPIS/*
+- macOS: *~/software/build/Aimsun_8_2_debug/bin/Aimsun.app/Contents/PlugIns/dynamicAPIS/*
 
 ## Registering the Plug-in
 
-Copy the signed XML file (*01_FlourishV2XFramework.xml*) into the Aimsun plug-ins folder. This file is located in:
+Copy the XML file (*01_FlourishV2XFramework.xml*) into the Aimsun dynamicAPIS folder. This file is located in:
 
 *~/software/sources/Flourish/plugins/FlourishV2XFramework*
-
