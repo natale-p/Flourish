@@ -28,8 +28,7 @@ INCLUDEPATH += $${AIMSUN_SDK_DIR}/include/core/ANG_DTA
 INCLUDEPATH += $${AIMSUN_SDK_DIR}/include/core/ANG_DTA/ADynamicAPI 
 INCLUDEPATH += $${AIMSUN_SDK_DIR}/include/aimsun_extensions/V2XFramework
 
-INCLUDEPATH += C:/Users/david.hermosa/software/sources/Flourish/include/core/ANG_DTA
-INCLUDEPATH += C:/Users/david.hermosa/software/sources/Flourish/include/core/ANG_DTA/ADynamicAPI
-INCLUDEPATH += C:/Users/david.hermosa/software/sources/Flourish/include/aimsun_extensions/V2XFramework
+INCLUDEPATH += include/core/ANG_DTA
+INCLUDEPATH += include/core/ANG_DTA/ADynamicAPI
+INCLUDEPATH += include/aimsun_extensions/V2XFramework
 #LIBS += -L$${AIMSUN_SDK_DIR}/lib  -lV2XFramework8
-

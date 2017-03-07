@@ -32,7 +32,7 @@ The top folder contains required configuration files. The plugin code will be in
 Edit the file build_path.pri to set the location of the build path and the Aimsun SDK if you are placing the binaries and the sources elsewhere. The default values are:
 
 ```
-BLD_PATH = $$(HOMEDRIVE)$$(HOMEPATH)/software/build/8_2_QT5_6_vc2013_x86_64_NotTrident
+BLD_PATH = $$(HOMEDRIVE)$$(HOMEPATH)/software/build/Aimsun_8_2_debug
 AIMSUN_SDK_DIR = $$(HOMEDRIVE)$$(HOMEPATH)/software/sources/Flourish
 ```
 
