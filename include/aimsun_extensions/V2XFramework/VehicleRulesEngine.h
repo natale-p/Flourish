@@ -1,10 +1,12 @@
-#ifndef VEHICLERULESENGINE_H
-#define VEHICLERULESENGINE_H
-
+#pragma once
 #include "V2XFrameworkUtil.h"
 
 class ConnectedAgent;
 
+/**
+ * \ingroup V2XFramework
+ * \brief The VehicleRulesEngine class
+ */
 class V2XFRAMEWORKEXPORT VehicleRulesEngine
 {
 public:
@@ -14,7 +16,3 @@ public:
 
 	virtual bool evaluate(ConnectedAgent * agent) = 0;
 };
-
-
-
-#endif // VEHICLERULESENGINE_H

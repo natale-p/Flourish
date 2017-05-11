@@ -6,6 +6,11 @@
 
 class GKModel;
 class GKExperiment;
+class GKObject;
+class GKType;
+class GKLayer;
+class GKFolder;
+class GKColumn;
 
 class DTAEXPORT ADynamicAPISetup
 {
@@ -24,9 +29,22 @@ public:
 	/*! It sets the value of a column (attribute) defined inside the experiment that defines the parameters for the simulation .*/
 	void setExperimentValue(int acolumn, double avalue);
 
+	/*!
+	 * \brief Get a list of access point set through the GUI
+	 *
+	 * \return a list of object, to be casted to NetworkGUIAP
+	 */
+	QList<GKObject*> getObjInFolder(const GKFolder *folder) const;
+
+	GKType* createType (const QString & typeName, const QString &superType,
+						const QString & guiName);
+
+	GKType* findType (const QString &typeName) const;
+
+	GKFolder* findFolder(const QString &layerFolder) const;
+
 private:
 	class Private;
 	Private *m;
-
 };
 

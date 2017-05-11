@@ -1,92 +1,88 @@
+/**
+  * Copyright TSS 2017
+  *
+  * Author: Natale Patriciello <natale.patriciello@aimsun.com>
+  */
 #include "FlourishConnectedAgent.h"
+#include "FlourishBroker.h"
+#include "CAMMessage.h"
+#include "DENMMessage.h"
 
-#include "FlourishV2XBroker.h"
-#include "FlourishCAMMessage.h"
-#include "FlourishVehicleRulesEngine.h"
-
-#ifdef _WIN32
-
-	#pragma warning(disable: 4251)
-	#pragma warning(disable: 4786)
-	#pragma warning(disable: 4503)
-//	#pragma warning(disable: 4284)
-#endif
-
-
-
-FlourishConnectedAgent::FlourishConnectedAgent(unsigned short idhandler, void *agent, VehicleRulesEngine * const avehRules, V2XBroker * const abroker): ConnectedAgent(idhandler, agent, avehRules, abroker)
+FlourishConnectedAgent::FlourishConnectedAgent(unsigned short idhandler, void *agent, FlourishBroker *broker) :
+	V2XConnectedAgent(idhandler, agent),
+	m_broker (broker)
 {
-	V2XBroker * abrokerC = getBroker();
-	if (abrokerC != nullptr){
-		abrokerC->vehSubscription(this);
-	}
 }
 
-FlourishConnectedAgent::~FlourishConnectedAgent()
+void FlourishConnectedAgent::received (const QPointer<NetDevice> &device,
+						   const QSharedPointer<const Packet> &packet, const Address &addr)
 {
-	V2XBroker * abroker = getBroker();
-	if (abroker != nullptr){
-		abroker->vehUnsubscription(this);
-	}
-}
+	Q_UNUSED(device);
+	Q_UNUSED(packet);
+	Q_UNUSED(addr);
 
-void FlourishConnectedAgent::buildCAMMessage(double time, double timeSta, FlourishCAMMessage & mess)
-{
+	const QSharedPointer<const CAMMessage> cam = qSharedPointerDynamicCast<const CAMMessage>(packet);
 
-	mess.setTimeStamp(time);
-	CAMMessage & camMessageContent = mess.getCamMessageContent();
-	ItsPduHeader & header = camMessageContent.getItsPduHeader();
-
-	header.setProtocolVersion(1);
-	header.setMessageId(ItsPduHeader::eCam);
-	header.setStationId(getId());
-
-	CoopAwareness & cam = camMessageContent.getCoopAwareness();
-	cam.setGenerationDeltaTime(time);
-
-	CamParameters &camParam = cam.getCamParameters();
-
-
-	BasicContainer & basicContainer = camParam.getBasicContainer();
-	// check different vehTypes: how they are defined
-	basicContainer.setStationType(BasicContainer::ePassengerCar);
-	ReferencePosition refFront, refBack;
-	getCoordinates(refFront.x, refFront.y, refFront.z, refBack.x, refBack.y , refBack.z);
-	basicContainer.setReferencePosition( refFront);
-
-
-	HighFrequencyContainer &highFrequencyContainer = camParam.getHighFrequencyContainer();
-	BasicVehicleContainerHighFrequency &basicVehicleContainerHighFrequency = highFrequencyContainer.getBasicVehicleContainerHighFrequency();
-	basicVehicleContainerHighFrequency.setHeading(BasicVehicleContainerHighFrequency::eNAHead);
-	basicVehicleContainerHighFrequency.setSpeed(getSpeed());
-	basicVehicleContainerHighFrequency.setDriveDirection(BasicVehicleContainerHighFrequency::eForward);
-	basicVehicleContainerHighFrequency.setVehicleLength(getLength());
-	basicVehicleContainerHighFrequency.setVehicleWidth(getWidth());
-	basicVehicleContainerHighFrequency.setLongitudinalAcceleration(getAcceleration());
-	basicVehicleContainerHighFrequency.setCurvature(0);
-	basicVehicleContainerHighFrequency.setCurvatureCalculationMode(BasicVehicleContainerHighFrequency::eNACurvC);
-
-}
-
-void FlourishConnectedAgent::getState(double time, double timeSta)
-{
-	FlourishCAMMessage * message = dynamic_cast <FlourishCAMMessage *> (v2xbrokerItem->getNewMessage(V2XMessage::TypeMess::eCAM));
-	if (message != nullptr){
-		buildCAMMessage(time, timeSta, *message);
-		V2XBroker * abroker = getBroker();
-		if (abroker != nullptr){
-			abroker->broadcast(time, message);
+	if (cam == nullptr) {
+		const QSharedPointer<const DENMMessage> denm = qSharedPointerDynamicCast<const DENMMessage> (packet);
+		//Q_ASSERT (denm != nullptr);
+		if (denm != nullptr) {
+			qDebug() << V2XNetworkNode::getId() << "received DENMMessage";
+		} else {
+			qDebug() << V2XNetworkNode::getId() << "RECEIVED GARBAGE";
 		}
+	} else {
+		qDebug() << V2XNetworkNode::getId() << "received CAMMessage";
 	}
 }
 
 
-
-void FlourishConnectedAgent::setState(double time, double timeSta)
+QSharedPointer<Packet> FlourishConnectedAgent::generateMessage()
 {
-	if (getVehicleRulesEngine() != nullptr){
-		getVehicleRulesEngine()->evaluate(this);
-	}
-	qDeleteAll(bufferMessages);
-	bufferMessages.clear();
+	qDebug() << V2XNetworkNode::getId() << "is generating a CAMMessage";
+
+	CAMMessage *msg = new CAMMessage();
+	msg->initializeEmpty();
+	CAM_t *data = msg->data();
+
+	// ItsPduHeader
+	data->header.messageID = messageID_cam;
+	data->header.protocolVersion = protocolVersion_currentVersion;
+	data->header.stationID = V2XNetworkNode::getId();
+
+	// CoopAwareness
+	data->cam.generationDeltaTime = V2XNetworkNode::getCurrentTime().getMilliseconds();
+
+	// CAM parameters
+	// Basic Container
+	data->cam.camParameters.basicContainer.stationType = StationType_passengerCar; // TODO: BUSSes
+	data->cam.camParameters.basicContainer.referencePosition.latitude = getPosition().x;
+	data->cam.camParameters.basicContainer.referencePosition.longitude = getPosition().y;
+	data->cam.camParameters.basicContainer.referencePosition.altitude.altitudeValue = getPosition().z;
+
+	// High Frequency Container
+	BasicVehicleContainerHighFrequency_t & basicVehicleContainerHighFrequency = data->cam.camParameters.highFrequencyContainer.choice.basicVehicleContainerHighFrequency;
+	basicVehicleContainerHighFrequency.heading.headingValue = HeadingValue_unavailable;
+	basicVehicleContainerHighFrequency.speed.speedValue = getSpeed();
+
+	asn_long2INTEGER(&basicVehicleContainerHighFrequency.driveDirection, DriveDirection_forward);
+
+	basicVehicleContainerHighFrequency.vehicleLength.vehicleLengthValue = getLength();
+	basicVehicleContainerHighFrequency.vehicleWidth = getWidth();
+	basicVehicleContainerHighFrequency.longitudinalAcceleration.longitudinalAccelerationValue = getAcceleration();
+	basicVehicleContainerHighFrequency.curvature.curvatureValue = 0;
+
+	asn_long2INTEGER(&basicVehicleContainerHighFrequency.curvatureCalculationMode, CurvatureCalculationMode_unavailable);
+
+	return QSharedPointer<Packet>(msg);
+}
+
+QSet<V2XNetworkNode *> FlourishConnectedAgent::getNearestStations(const V2XNetworkNode *target) const
+{
+	return m_broker->getNearestStations(qobject_cast<const V2XSimpleAP*> (target));
+}
+
+QSet<V2XNetworkNode*> FlourishConnectedAgent::getNearestAgent(const V2XNetworkNode *station) const
+{
+	return m_broker->getNearestAgent(qobject_cast<const V2XSimpleAP*> (station));
 }

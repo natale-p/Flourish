@@ -73,7 +73,7 @@ public:
 
 	/*!  getCoordinates() returns the coordinates of the midle front point and midle back point
 		*/
-	bool getCoordinates( double &xfront, double &yfront, double &zfront, double &xback, double &yback, double &zback) const;
+	bool getCoordinates( double *xfront, double *yfront, double *zfront, double *xback, double *yback, double *zback) const;
 
 	/*!  getFreeFlowSpeed() returns the maximum Desired Speed of the vehicle for the current lane (m/s)
 		*/
@@ -86,6 +86,11 @@ public:
 	/*!  getAcceleration() returns the current acceleration/deceleration of the vehicle (m/s2)
 		*/
 	double getAcceleration() const;
+
+	/*!  getHeading() returns the heading express in angle : 0 Notrh, 90 East, 180 South 270 West
+		*/
+
+	double getHeading() const;
 
 private:
 	class Private;

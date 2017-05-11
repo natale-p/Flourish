@@ -2,6 +2,10 @@
 # Configuration file for settings, includes and libs that NOT depends of the type
 # of compilation: DEBUG or RELEASE
 
+!include( build_path.pri ) {
+	error("build_path.pri missing. Can't continue.")
+}
+
 CONFIG += warn_on
 CONFIG += USE_AIMSUN_SDK
 
@@ -12,7 +16,7 @@ unix:!macx {
 	CONFIG += linux
 }
 
-win32 {	
+win32 {
 	QMAKE_LFLAGS_DEBUG += /LARGEADDRESSAWARE
 	QMAKE_LFLAGS_RELEASE += /LARGEADDRESSAWARE
 	QMAKE_LFLAGS_DEBUG += /FIXED:NO
@@ -21,5 +25,8 @@ win32 {
 }macx{
 	include (config_mac.pri)
 }linux{
-	include (config_linux.incl)
+	include (config_linux.pri)
 }
+
+message( $${BLD_PATH} )
+message( $${AIMSUN_SDK_DIR} )

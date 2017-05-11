@@ -15,6 +15,7 @@ FlourishVehicleRulesEngine::~FlourishVehicleRulesEngine()
 
 bool FlourishVehicleRulesEngine::evaluate(ConnectedAgent * agent)
 {
+	Q_UNUSED(agent);
 	bool res = true;
 //	qDebug("FlourishVehicleRulesEngine::evaluate");
 //	qDebug(" veh id = %d", agent->getId());

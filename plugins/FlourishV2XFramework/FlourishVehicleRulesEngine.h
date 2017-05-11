@@ -5,6 +5,10 @@
 
 class FlourishConnectedAgent;
 
+/**
+ * \ingroup V2XFramework
+ * @brief The FlourishVehicleRulesEngine class
+ */
 class FlourishVehicleRulesEngine: public VehicleRulesEngine
 {
 public:

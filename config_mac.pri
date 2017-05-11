@@ -3,18 +3,6 @@ message( "Mac OS X 64 bits platform" )
 
 QTDIR = $$[QT_INSTALL_PREFIX]
 
-!include( build_path.pri ) {
-	CONFIG( debug, debug|release ){
-		BLD_PATH = $$(HOME)/software/build/Aimsun_8_2_debug
-	}else{
-		BLD_PATH = $$(HOME)/software/build/Aimsun_8_2_release
-	}
-	AIMSUN_SDK_DIR = $$(HOME)/software/sources/Aimsun_8_2
-}
-
-message( $${BLD_PATH} )
-message( $${AIMSUN_SDK_DIR} )
-
 BIN_PATH = $${BLD_PATH}/bin
 SLP_PATH = $${BLD_PATH}/lib
 

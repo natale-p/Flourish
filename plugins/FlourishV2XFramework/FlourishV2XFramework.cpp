@@ -1,8 +1,8 @@
 #include "FlourishV2XFramework.h"
-
 #include "FlourishConnectedAgent.h"
 #include "FlourishVehicleRulesEngine.h"
-#include "FlourishV2XBroker.h"
+#include "NetworkGUIAP.h"
+#include "GKObject.h"
 
 static int latencyColumn = 0;
 static int probabilityLostPacketsColumn = 0;
@@ -28,22 +28,25 @@ ADynamicAPI * FlourishV2XFrameworkFactory(ADynamicAPISetup & setup)
 
 FlourishV2XFramework::FlourishV2XFramework(ADynamicAPISetup & setup): V2XFramework(setup)
 {
-
-
-	double latencyBroker = setup.getExperimentValue(latencyColumn);
-	double alatencyTimeDev = 0.0;
-	double alatencyTimeMin = latencyBroker - 1;
-	double alatencyTimeMax = latencyBroker + 1;
 	double probabilityLostPackets = setup.getExperimentValue(probabilityLostPacketsColumn);
+	qDebug(" FlourishV2XFramework::FlourishV2XFramework()   "
+		   "probabilityLostPackets = %f", probabilityLostPackets);
+	double latency = setup.getExperimentValue(latencyColumn);
+	qDebug(" FlourishV2XFramework::FlourishV2XFramework()   "
+		   "latency = %f", latency);
 
+	m_broker.setLatency(latency);
+	m_broker.setProbLostPackets(probabilityLostPackets);
 
-	qDebug(" FlourishV2XFramework::FlourishV2XFramework()   latencyBroker = %f probabilityLostPackets = %f", latencyBroker, probabilityLostPackets);
+	QList<GKObject*> accessPoints = setup.getAccessPoints();
 
-	// it creates the context: broker and VehRulesEngine
-	broker = new FlourishV2XBroker();
-	((FlourishV2XBroker *)broker)->setParam(latencyBroker, alatencyTimeDev, alatencyTimeMin, alatencyTimeMax, probabilityLostPackets);
-
-	ruleEngineItem=  new FlourishVehicleRulesEngine() ;
+	for (GKObject *obj : accessPoints) {
+		NetworkGUIAP *accessPoint = dynamic_cast<NetworkGUIAP*> (obj);
+		if (accessPoint != 0) {
+			m_broker.addStation(accessPoint->getId(), accessPoint->getPosition(),
+								accessPoint->getRadius());
+		}
+	}
 }
 
 FlourishV2XFramework::~FlourishV2XFramework()
@@ -52,26 +55,26 @@ FlourishV2XFramework::~FlourishV2XFramework()
 
 ADynamicAgent * FlourishV2XFramework::arrivalNewVehicle(unsigned short idHandler, void *agent)
 {
-	FlourishConnectedAgent *res = new FlourishConnectedAgent(idHandler,agent, ruleEngineItem, broker);
+	QPointer<FlourishConnectedAgent> res = new FlourishConnectedAgent (idHandler, agent, &m_broker);
+	m_broker.addAgent (res);
 	return res;
 }
 
 void FlourishV2XFramework::removedVehicle(unsigned short idHandler, ADynamicAgent * agent )
 {
+	Q_UNUSED(idHandler);
+	FlourishConnectedAgent *ag = dynamic_cast<FlourishConnectedAgent*> (agent);
+	if (ag != nullptr)
+		m_broker.removeAgent(ag);
 	delete agent;
 }
 
 void FlourishV2XFramework::preUpdate(double time, double timeSta, double simStep)
 {
-	if (broker){
-		broker->preUpdate(time, timeSta, simStep);
-	}
+	m_broker.doPre(time, timeSta, simStep);
 }
 
 void FlourishV2XFramework::postUpdate(double time, double timeSta, double simStep)
 {
-	if (broker){
-		broker->postUpdate(time, timeSta, simStep);
-	}
+	m_broker.doPost(time, timeSta, simStep);
 }
-
