@@ -2,6 +2,7 @@
 #pragma once
 
 #include "VehicleRulesEngine.h"
+#include "FlourishV2XFrameworkUtil.h"
 
 class FlourishConnectedAgent;
 
@@ -9,7 +10,7 @@ class FlourishConnectedAgent;
  * \ingroup V2XFramework
  * @brief The FlourishVehicleRulesEngine class
  */
-class FlourishVehicleRulesEngine: public VehicleRulesEngine
+class FLOURISHV2XFRAMEWORKEXPORT FlourishVehicleRulesEngine: public VehicleRulesEngine
 {
 public:
 	FlourishVehicleRulesEngine();

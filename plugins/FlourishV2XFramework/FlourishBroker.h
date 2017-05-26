@@ -8,7 +8,7 @@
 #include <QSet>
 #include "V2XNetworkNode.h"
 #include "ErrorModel.h"
-
+#include "FlourishV2XFrameworkUtil.h"
 #include "GKGeoUtil.h"
 
 class V2XSimpleAP;
@@ -34,19 +34,17 @@ extern uint qHash(const V2XNetworkNode* node);
  * to be called by FlourishV2XFramework. The second one, composed by now,
  * getNearestStation, getNearestAgent, is meant to be called by the stations.
  *
- * The coordination of pre and post actions is done through a Qt connection.
- * In fact, not all the vehicles want to perform pre/post actions (e.g., the
- * vehicles which does not move), while all the others can connect to the
- * prepareForPost or prepareForPre signal. Then, a cycle is performed
- * on the list of the agents and stations to execute the pre and post operations.
+ * To see what is possible to do with the agents and stations, please take a
+ * look to their documentation (FlourishConnectedAgent and FlourishAP).
  *
  * \see getNearestStation
  * \see getNearestAgent
  *
  */
-class FlourishBroker : public QObject
+class FLOURISHV2XFRAMEWORKEXPORT FlourishBroker : public QObject
 {
 	Q_OBJECT
+	Q_DISABLE_COPY(FlourishBroker)
 public:
 	/**
 	 * \brief Constructor
@@ -57,16 +55,18 @@ public:
 	 */
 	~FlourishBroker();
 
-	// Disable copy and move operators
-	FlourishBroker(FlourishBroker const &) = delete;
-	void operator=(FlourishBroker const &x) = delete;
-	FlourishBroker (FlourishBroker&& other) noexcept = delete;
-	FlourishBroker& operator= (FlourishBroker&& other) = delete;
-
 	// Interface to FlourishV2XFramework
 
 	/**
-	 * \brief ask the subscriber to do the post operations
+	 * \brief Ask the agents and stations to do the post operations
+	 *
+	 * The order is the following:
+	 *
+	 * - It is asked to all the agents to update their links, giving their
+	 * positions and the positions of the other agent/stations
+	 * - It is asked to all the agents and to all the stations to exchange
+	 * messages, and then to generate their message to broadcast
+	 *
 	 * \param time TODO
 	 * \param timeSta TODO
 	 * \param simStep TODO
@@ -74,7 +74,11 @@ public:
 	void doPost(double time, double timeSta, double simStep);
 
 	/**
-	 * \brief ask the subscriber to do the pre operations
+	 * \brief Ask the agents and stations to do the pre operations
+	 *
+	 * It only update the current time in all the agents/stations. In the future,
+	 * it will trigger the analysis of the income messages.
+	 *
 	 * \param time TODO
 	 * \param timeSta TODO
 	 * \param simStep TODO
@@ -86,12 +90,11 @@ public:
 	 * \param id id of the station
 	 * \param position position
 	 * \param radius the station radius
+	 * \param delay the propagation delay of this station
+	 * \param prob the probability of loss (PER) of this station
 	 */
-	void addStation (quint32 id, const GKPoint &position, double radius);
-
-	void setLatency (double latency);
-
-	void setProbLostPackets(double prob);
+	void addStation (quint32 id, const GKPoint &position, double radius,
+					 double delay, double prob);
 
 	/**
 	 * \brief Save the pointer of the agent inside an internal list
@@ -128,7 +131,4 @@ public:
 private:
 	QMap<quint32, V2XSimpleAP*> m_stations; /**!< All the stations in the simulation */
 	QSet<FlourishConnectedAgent*> m_agents; /**!< All the agents in the simulation */
-	double m_latency; /**!< Latency for all vehicles and stations */
-	double m_probLostPackets; /**!< Probability that a packet goes lost */
-	QSharedPointer<RateErrorModel> m_errorModel;
 };

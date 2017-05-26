@@ -16,12 +16,10 @@ uint qHash(const V2XNetworkNode* node)
 
 FlourishBroker::FlourishBroker() : QObject ()
 {
-	m_errorModel = QSharedPointer<RateErrorModel>(new RateErrorModel);
 }
 
 FlourishBroker::~FlourishBroker()
 {
-	// m_errorModel is shared ptr!!
 	qDeleteAll(m_stations);
 }
 
@@ -69,7 +67,7 @@ void FlourishBroker::doPre(double time, double timeSta, double simStep)
 
 void FlourishBroker::addAgent(FlourishConnectedAgent *agent)
 {
-	agent->getChannel()->setErrorModel(m_errorModel);
+	//agent->getChannel()->setErrorModel(m_errorModel);
 	m_agents.insert(agent);
 }
 
@@ -79,25 +77,23 @@ void FlourishBroker::removeAgent(FlourishConnectedAgent *agent)
 }
 
 void FlourishBroker::addStation (quint32 id, const GKPoint &position,
-								 double radius)
+								 double radius, double delay, double prob)
 {
+
+	qDebug() << "Added STATION" << id << delay << prob;
+
 	QPointer<FlourishAP> station = new FlourishAP (position);
 	station->setRadius(radius);
-	station->getChannel()->setErrorModel(m_errorModel);
+	QSharedPointer<RateErrorModel> errorModel = QSharedPointer<RateErrorModel>(new RateErrorModel());
+	errorModel->setUnit(RateErrorModel::ERROR_UNIT_PACKET);
+	errorModel->setRate(prob);
+	errorModel->enable();
+
+	station->getChannel()->setErrorModel(errorModel);
+	station->getChannel()->setDelay(delay);
+
 	m_stations.insert(id, station);
-}
 
-void FlourishBroker::setLatency(double latency)
-{
-	m_latency = latency;
-}
-
-void FlourishBroker::setProbLostPackets(double prob)
-{
-	m_probLostPackets = prob;
-	m_errorModel->setUnit(RateErrorModel::ERROR_UNIT_PACKET);
-	m_errorModel->setRate(prob);
-	m_errorModel->enable();
 }
 
 QSet<V2XNetworkNode *> FlourishBroker::getNearestStations(const V2XSimpleAP *target) const

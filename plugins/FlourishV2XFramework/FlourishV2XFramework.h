@@ -20,11 +20,11 @@ class ConnectedAgent;
  * between what is going on in this plugin and inside Aimsun.
  *
  * In the framework we have two main objects: a FlourishConnectedAgent, which
- * represents a vehicle, and FlourishStation, which represents a static
+ * represents a vehicle, and FlourishAP, which represents a static
  * infrastructure. To enable V2V communication, each vehicle has internally
  * a station. This means that a FlourishConnectedAgent can be seen as a
  * moving station. Therefore, we can say that the main components of the framework
- * are mobile stations (FlourishConnectedAgent) and fixed stations (FlourishStation).
+ * are mobile stations (FlourishConnectedAgent) and fixed stations (FlourishAP).
  *
  * To start, look at the documentation of the FlourishV2XFramework class.
  *
@@ -40,25 +40,29 @@ extern "C" FLOURISHV2XFRAMEWORKEXPORT void FlourishV2XFrameworkSetup( ADynamicAP
  *
  *
  * The main objects of the plugin are created by this class, and in general
- * this is the plugin door to the Aimsun simulator.
+ * this is the door to the Aimsun simulator.
  *
- * The class is created at the beginning of the simulation and provides five
+ * The class is created at the beginning of the simulation and provides four
  * methods to exchange information with the core. We have:
  *
  * - arrivalNewVehicle, which is called by the core when a vehicle enters the scene;
  * - removedVehicle, which is called when a vehicle leaves the scene;
  * - preUpdate, which is called at the beginning of each simulation step;
  * - postUpdate, which is called at the end of each simulation step;
- * - newStation, which is called when a station (infrastructure) is added to the field.
  *
- * At each simulation step, these callback will be called by the core, depending
- * on the situation. The management of the list of stations and vehicle is done
- * by the class FlourishBroker.
+ * The first two will be called independently from simulation steps, while
+ * the last two will be called by the core each simulation step, depending
+ * on the situation. The list of stations (or access point, the terms will be
+ * used as synonyms in this framework).
  *
- * The communication model is explained in the class FlourishStation. Everything
- * else is explained in the class FlourishConnectedAgent.
+ * The stations are added at the beginning of the simulations, by querying
+ * the simulation model; right now, moving or resizing infrastructures radius
+ * during the simulation is not supported. The class in charge of saving a list
+ * of stations and agents is FlourishBroker, and in its documentation you can
+ * find the basics for the communication model.
  *
  * \see FlourishBroker
+ *
  * \see arrivalNewVehicle
  * \see preUpdate
  * \see postUpdate
@@ -71,6 +75,9 @@ public:
 	 * \param setup the API setup function
 	 */
 	FlourishV2XFramework(ADynamicAPISetup & setup);
+	/**
+	 * \brief Deconstructor
+	 */
 	virtual ~FlourishV2XFramework();
 
 	// inherited from V2XFramework

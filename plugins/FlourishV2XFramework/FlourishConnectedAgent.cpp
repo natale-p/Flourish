@@ -65,14 +65,14 @@ QSharedPointer<Packet> FlourishConnectedAgent::generateMessage()
 	basicVehicleContainerHighFrequency.heading.headingValue = HeadingValue_unavailable;
 	basicVehicleContainerHighFrequency.speed.speedValue = getSpeed();
 
-	asn_long2INTEGER(&basicVehicleContainerHighFrequency.driveDirection, DriveDirection_forward);
+	basicVehicleContainerHighFrequency.driveDirection = DriveDirection_forward;
 
 	basicVehicleContainerHighFrequency.vehicleLength.vehicleLengthValue = getLength();
 	basicVehicleContainerHighFrequency.vehicleWidth = getWidth();
 	basicVehicleContainerHighFrequency.longitudinalAcceleration.longitudinalAccelerationValue = getAcceleration();
 	basicVehicleContainerHighFrequency.curvature.curvatureValue = 0;
 
-	asn_long2INTEGER(&basicVehicleContainerHighFrequency.curvatureCalculationMode, CurvatureCalculationMode_unavailable);
+	basicVehicleContainerHighFrequency.curvatureCalculationMode = CurvatureCalculationMode_unavailable;
 
 	return QSharedPointer<Packet>(msg);
 }

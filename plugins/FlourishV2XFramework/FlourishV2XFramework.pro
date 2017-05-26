@@ -41,19 +41,33 @@ contains(DEVELOPER, true) {
 	message("Developer build; install headers enabled")
 	PREFIX_INCLUDEPATH = $${SOURCES_DIR}
 
-	core_ang_dta_headers.path = ../../include/core/ANG_DTA
-	core_ang_dta_headers.files += $${SOURCES_DIR}/core/ANG_DTA/DTAUtil.h
+#	core_ang_dta_headers.path = ../../include/core/ANG_DTA
+#	core_ang_dta_headers.files += $${SOURCES_DIR}/core/ANG_DTA/DTAUtil.h
 
-	INSTALLS += core_ang_dta_headers
-	PRE_TARGETDEPS += install_core_ang_dta_headers
+#	INSTALLS += core_ang_dta_headers
+#	PRE_TARGETDEPS += install_core_ang_dta_headers
 
-	core_ang_kernel_headers.path = ../../include/core/ang_kernel
-	core_ang_kernel_headers.files += $${SOURCES_DIR}/core/ang_kernel/GKObject.h
-	core_ang_kernel_headers.files += $${SOURCES_DIR}/core/ang_kernel/GKGeoUtil.h
-	core_ang_kernel_headers.files += $${SOURCES_DIR}/core/ang_kernel/GKUtil.h
+#	core_ang_kernel_headers.path = ../../include/core/ang_kernel
+#	core_ang_kernel_headers.files += $${SOURCES_DIR}/core/ang_kernel/GKGeoUtil.h
+#	core_ang_kernel_headers.files += $${SOURCES_DIR}/core/ang_kernel/GKObject.h
+#	core_ang_kernel_headers.files += $${SOURCES_DIR}/core/ang_kernel/GKType.h
+#	core_ang_kernel_headers.files += $${SOURCES_DIR}/core/ang_kernel/GKColumn.h
+#	core_ang_kernel_headers.files += $${SOURCES_DIR}/core/ang_kernel/GKUtil.h
 
-	INSTALLS += core_ang_kernel_headers
-	PRE_TARGETDEPS += install_core_ang_kernel_headers
+#	INSTALLS += core_ang_kernel_headers
+#	PRE_TARGETDEPS += install_core_ang_kernel_headers
+
+#	random_headers.path = ../../include/core/random
+#	random_headers.files += $${SOURCES_DIR}/core/random/FRand.h
+
+#	INSTALLS += random_headers
+#	PRE_TARGETDEPS += install_random_headers
+
+	networkgui_headers.path = ../../include/plugins/NetworkGUI/
+	networkgui_headers.files += $${SOURCES_DIR}/plugins/NetworkGUI/NetworkGUIAP.h
+
+	INSTALLS += networkgui_headers
+	PRE_TARGETDEPS += install_networkgui_headers
 
 	adynamic_api_headers.path = ../../include/core/ANG_DTA/ADynamicAPI
 	adynamic_api_headers.files += $${SOURCES_DIR}/core/ANG_DTA/ADynamicAPI/ADynamicAgent.h
@@ -275,17 +289,6 @@ contains(DEVELOPER, true) {
 	INSTALLS += its_headers
 	PRE_TARGETDEPS += install_its_headers
 
-	random_headers.path = ../../include/core/random
-	random_headers.files += $${SOURCES_DIR}/core/random/FRand.h
-
-	INSTALLS += random_headers
-	PRE_TARGETDEPS += install_random_headers
-
-	networkgui_headers.path = ../../include/plugins/NetworkGUI/
-	networkgui_headers.files += $${SOURCES_DIR}/plugins/NetworkGUI/NetworkGUIAP.h
-
-	INSTALLS += networkgui_headers
-	PRE_TARGETDEPS += install_networkgui_headers
 } else {
 	message("User build")
 	PREFIX_INCLUDEPATH = $${AIMSUN_SDK_DIR}

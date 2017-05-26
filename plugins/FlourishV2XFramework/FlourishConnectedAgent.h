@@ -4,12 +4,18 @@
   * Author: Natale Patriciello <natale.patriciello@aimsun.com>
   */
 #pragma once
-
+#include "FlourishV2XFrameworkUtil.h"
 #include "V2XConnectedAgent.h"
 
 class FlourishBroker;
 
-class FlourishConnectedAgent : public V2XConnectedAgent
+/**
+ * \brief A mobile agent
+ *
+ * When it receives a message, the method received is invoked.
+ * To generate a message, use the method generateMessage.
+ */
+class FLOURISHV2XFRAMEWORKEXPORT FlourishConnectedAgent : public V2XConnectedAgent
 {
 public:
 	FlourishConnectedAgent (unsigned short idhandler, void *agent, FlourishBroker *broker);

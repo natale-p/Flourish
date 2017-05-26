@@ -4,9 +4,16 @@
   * Author: Natale Patriciello <natale.patriciello@aimsun.com>
   */
 
+#include "FlourishV2XFrameworkUtil.h"
 #include "V2XSimpleAP.h"
 
-class FlourishAP: public V2XSimpleAP
+/**
+ * \brief A non-mobile infrastructure
+ *
+ * When it receives a message, the method received is invoked.
+ * To generate a message, use the method generateMessage.
+ */
+class FLOURISHV2XFRAMEWORKEXPORT FlourishAP: public V2XSimpleAP
 {
 public:
 	/**
