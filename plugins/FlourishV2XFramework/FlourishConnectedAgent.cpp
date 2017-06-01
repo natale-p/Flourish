@@ -7,37 +7,46 @@
 #include "FlourishBroker.h"
 #include "CAMMessage.h"
 #include "DENMMessage.h"
+#include "SPATEMMessage.h"
 
-FlourishConnectedAgent::FlourishConnectedAgent(unsigned short idhandler, void *agent, FlourishBroker *broker) :
+FlourishConnectedAgent::FlourishConnectedAgent(quint32 idhandler, DTAVeh *agent,
+											   FlourishBroker *broker) :
 	V2XConnectedAgent(idhandler, agent),
 	m_broker (broker)
 {
 }
 
 void FlourishConnectedAgent::received (const QPointer<NetDevice> &device,
-						   const QSharedPointer<const Packet> &packet, const Address &addr)
+									   const QSharedPointer<const Packet> &packet,
+									   const Address &addr)
 {
 	Q_UNUSED(device);
-	Q_UNUSED(packet);
 	Q_UNUSED(addr);
 
 	const QSharedPointer<const CAMMessage> cam = qSharedPointerDynamicCast<const CAMMessage>(packet);
-
-	if (cam == nullptr) {
-		const QSharedPointer<const DENMMessage> denm = qSharedPointerDynamicCast<const DENMMessage> (packet);
-		//Q_ASSERT (denm != nullptr);
-		if (denm != nullptr) {
-			qDebug() << V2XNetworkNode::getId() << "received DENMMessage";
-		} else {
-			qDebug() << V2XNetworkNode::getId() << "RECEIVED GARBAGE";
-		}
-	} else {
-		qDebug() << V2XNetworkNode::getId() << "received CAMMessage";
+	if (cam != nullptr) {
+		m_engine.evaluate(cam, dynamic_cast<V2XConnectedAgent*> (this));
+		return;
 	}
+
+	const QSharedPointer<const DENMMessage> denm = qSharedPointerDynamicCast<const DENMMessage> (packet);
+	if (denm != nullptr) {
+		m_engine.evaluate(denm, dynamic_cast<V2XConnectedAgent*> (this));
+		return;
+	}
+
+
+	const QSharedPointer<const SPATEMMessage> spatem = qSharedPointerDynamicCast<const SPATEMMessage> (packet);
+	if (spatem != nullptr) {
+		m_engine.evaluate(spatem, dynamic_cast<V2XConnectedAgent*> (this));
+		return;
+	}
+
+	qDebug () << "RECEIVED GARBAGE";
 }
 
 
-QSharedPointer<Packet> FlourishConnectedAgent::generateMessage()
+PacketPointerList FlourishConnectedAgent::generateMessage()
 {
 	qDebug() << V2XNetworkNode::getId() << "is generating a CAMMessage";
 
@@ -74,7 +83,9 @@ QSharedPointer<Packet> FlourishConnectedAgent::generateMessage()
 
 	basicVehicleContainerHighFrequency.curvatureCalculationMode = CurvatureCalculationMode_unavailable;
 
-	return QSharedPointer<Packet>(msg);
+	PacketPointerList list;
+	list.append(PacketPointer(msg));
+	return list;
 }
 
 QSet<V2XNetworkNode *> FlourishConnectedAgent::getNearestStations(const V2XNetworkNode *target) const

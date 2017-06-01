@@ -5,6 +5,7 @@
   */
 #pragma once
 #include "FlourishV2XFrameworkUtil.h"
+#include "FlourishVehicleRulesEngine.h"
 #include "V2XConnectedAgent.h"
 
 class FlourishBroker;
@@ -12,13 +13,17 @@ class FlourishBroker;
 /**
  * \brief A mobile agent
  *
- * When it receives a message, the method received is invoked.
- * To generate a message, use the method generateMessage.
+ * When it receives a message, the method received is invoked, and then the
+ * correspondent methods of FlourishVehicleRulesEngine are called. In particular,
+ * right now are managed CAM, DENM, and SPATEM messages.
+ *
+ * To generate a message, use the method generateMessage, that should return
+ * a list of messages to transmit.
  */
 class FLOURISHV2XFRAMEWORKEXPORT FlourishConnectedAgent : public V2XConnectedAgent
 {
 public:
-	FlourishConnectedAgent (unsigned short idhandler, void *agent, FlourishBroker *broker);
+	FlourishConnectedAgent (quint32 idhandler, DTAVeh *agent, FlourishBroker *broker);
 public slots:
 	/**
 	 * \brief A message has been received
@@ -27,14 +32,14 @@ public slots:
 	 * \param addr Source address
 	 */
 	virtual void received (const QPointer<NetDevice> &device,
-						   const QSharedPointer<const Packet> &packet, const Address &addr);
+						   const QSharedPointer<const Packet> &packet, const Address &addr) Q_DECL_OVERRIDE;
 protected:
 	/**
-	 * \brief Generate a single message to be transmitted
+	 * \brief Generate messages to be transmitted
 	 *
-	 * \return A packet containing the message
+	 * \return A list of messages
 	 */
-	virtual QSharedPointer<Packet> generateMessage();
+	virtual PacketPointerList generateMessage() Q_DECL_OVERRIDE;
 
 	/**
 	 * \brief Get a set of station near the given station
@@ -43,7 +48,7 @@ protected:
 	 * \param target target station
 	 * \return a set of station for which the given position is in the communication range
 	 */
-	QSet<V2XNetworkNode*> getNearestStations(const V2XNetworkNode *target) const;
+	QSet<V2XNetworkNode*> getNearestStations(const V2XNetworkNode *target) const Q_DECL_OVERRIDE;
 	/**
 	 * \brief Get a set of agent near the given station
 	 *
@@ -51,8 +56,9 @@ protected:
 	 * \param station station
 	 * \return a set of agents for which the given position is in the communication range
 	 */
-	QSet<V2XNetworkNode*> getNearestAgent(const V2XNetworkNode *station) const;
+	QSet<V2XNetworkNode*> getNearestAgent(const V2XNetworkNode *station) const Q_DECL_OVERRIDE;
 
 private:
-	FlourishBroker *m_broker;
+	FlourishBroker *m_broker; /**!< Pointer to the broker */
+	FlourishVehicleRulesEngine m_engine; /**!< Instance of the Veh Rules Engine */
 };

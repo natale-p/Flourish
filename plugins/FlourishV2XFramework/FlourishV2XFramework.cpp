@@ -6,27 +6,45 @@
 #include "FlourishV2XFramework.h"
 #include "FlourishConnectedAgent.h"
 #include "FlourishVehicleRulesEngine.h"
-#include "NetworkGUIAP.h"
-#include "GKType.h"
-#include "GKColumn.h"
-#include "GKObject.h"
+#include "FlourishAP.h"
 
 void FlourishV2XFrameworkSetup( ADynamicAPISetup & setup )
 {
 	V2XFrameworkSetup(setup);
-	qDebug() << "FlourishV2XFrameworkSetup    BEGIN";
+	int ret;
 
-	GKType *apType = setup.findType(V2XFramework::getInternalAPName());
-	apType->addColumn(V2XFramework::getInternalAPName() + "::FlourishV2XFramework::delay",
-					  QObject::tr("Access point propagation delay (s)"), GKColumn::Double);
+	ret = setup.addTypeColumn(V2XFramework::getInternalAPName(),
+							  "FlourishV2XFramework::delay",
+							  QObject::tr("Access Point propagation delay (s)"),
+							  ADynamicAPISetup::Double);
 
-	apType->addColumn("FlourishV2XFramework::error_rate",
-					  QObject::tr("Access point packet error rate (PER %)"),
-					  GKColumn::Double);
+	Q_ASSERT (ret != -1);
+	Q_UNUSED (ret);
 
-	GKType *vehType = setup.findType("GKMobileAgent");
-	vehType->addColumn("FlourishV2XFramework::agent_delay",
-					   QObject::tr("Agent propagation delay (s)"), GKColumn::Double);
+	ret = setup.addTypeColumn(V2XFramework::getInternalAPName(),
+							  "FlourishV2XFramework::error_rate",
+							  QObject::tr("Access Point error rate (PER %)"),
+							  ADynamicAPISetup::Double);
+	Q_ASSERT (ret != -1);
+	Q_UNUSED (ret);
+
+	ret = setup.addTypeColumn("GKMobileAgent",
+							  "FlourishV2XFramework::delay",
+							  QObject::tr("Agent propagation delay (s)"),
+							  ADynamicAPISetup::Double);
+	Q_ASSERT (ret != -1);
+	Q_UNUSED (ret);
+	ret = setup.addTypeColumn("GKMobileAgent",
+							  "FlourishV2XFramework::error_rate",
+							  QObject::tr("Agent packet error rate (PER %)"),
+							  ADynamicAPISetup::Double);
+	Q_ASSERT (ret != -1);
+	Q_UNUSED (ret);
+	ret = setup.addTypeColumn("GKMobileAgent",
+							  "FlourishV2XFramework::radius",
+							  QObject::tr("Agent radius (m)"), ADynamicAPISetup::Double);
+	Q_ASSERT (ret != -1);
+	Q_UNUSED (ret);
 }
 
 ADynamicAPI * FlourishV2XFrameworkFactory(ADynamicAPISetup & setup)
@@ -35,40 +53,51 @@ ADynamicAPI * FlourishV2XFrameworkFactory(ADynamicAPISetup & setup)
 }
 
 FlourishV2XFramework::FlourishV2XFramework(ADynamicAPISetup & setup): V2XFramework(setup)
-{
-	QList<GKObject*> accessPoints = setup.getObjInFolder(setup.findFolder(V2XFramework::getInternalAPFolderName()));
-
-	for (GKObject *obj : accessPoints) {
-		NetworkGUIAP *accessPoint = dynamic_cast<NetworkGUIAP*> (obj);
-		GKType *type = accessPoint->getType();
-		Q_ASSERT(type != nullptr);
-
-		GKColumn *delay = type->getColumn(V2XFramework::getInternalAPName() + "::FlourishV2XFramework::delay", GKType::eSearchOnlyThisType);
-		GKColumn *error_rate = type->getColumn("FlourishV2XFramework::error_rate", GKType::eSearchOnlyThisType);
-
-		Q_ASSERT(delay != nullptr);
-		Q_ASSERT(error_rate != nullptr);
-
-		if (accessPoint != 0) {
-			m_broker.addStation(accessPoint->getId(), accessPoint->getPosition(),
-								accessPoint->getRadius(), accessPoint->getDataValueDouble(delay),
-								accessPoint->getDataValueDouble(error_rate));
-		}
-	}
+{	
+	init();
 }
 
 FlourishV2XFramework::~FlourishV2XFramework()
 {
 }
 
-ADynamicAgent * FlourishV2XFramework::arrivalNewVehicle(unsigned short idHandler, void *agent)
+void FlourishV2XFramework::arrivalNewAP(quint32 id, GKObject *obj,
+										V2XConnectedControlList controls)
+{
+	Q_UNUSED(id);
+	QPointer<FlourishAP> station = new FlourishAP (obj);
+	station->connectControls (controls);
+
+	double delay = m_setup.getObjectValue<double>(obj, V2XFramework::getInternalAPName(),
+												  "FlourishV2XFramework::delay");
+
+	double error_rate = m_setup.getObjectValue<double>(obj, V2XFramework::getInternalAPName(),
+													   "FlourishV2XFramework::error_rate");
+
+	m_broker.addAP(station, delay, error_rate);
+}
+
+ADynamicAgent * FlourishV2XFramework::arrivalNewVehicle(quint32 idHandler, DTAVeh *agent)
 {
 	QPointer<FlourishConnectedAgent> res = new FlourishConnectedAgent (idHandler, agent, &m_broker);
-	m_broker.addAgent (res);
+
+	double del = m_setup.getObjectValue<double>(res->getVehicleType(),
+												"GKMobileAgent",
+												"FlourishV2XFramework::delay");
+	double err = m_setup.getObjectValue<double>(res->getVehicleType(),
+												"GKMobileAgent",
+												"FlourishV2XFramework::error_rate");
+	double rad = m_setup.getObjectValue<double>(res->getVehicleType(),
+												"GKMobileAgent",
+												"FlourishV2XFramework::radius");
+
+
+	qDebug () << del << err << rad;
+	m_broker.addAgent (res, rad, del, err);
 	return res;
 }
 
-void FlourishV2XFramework::removedVehicle(unsigned short idHandler, ADynamicAgent * agent )
+void FlourishV2XFramework::removedVehicle(quint32 idHandler, ADynamicAgent * agent )
 {
 	Q_UNUSED(idHandler);
 	FlourishConnectedAgent *ag = dynamic_cast<FlourishConnectedAgent*> (agent);

@@ -9,10 +9,10 @@
 #include "V2XNetworkNode.h"
 #include "ErrorModel.h"
 #include "FlourishV2XFrameworkUtil.h"
-#include "GKGeoUtil.h"
 
 class V2XSimpleAP;
 class FlourishConnectedAgent;
+class FlourishAP;
 
 extern uint qHash(const V2XNetworkNode* node);
 
@@ -87,21 +87,21 @@ public:
 
 	/**
 	 * \brief Creates a new FlourishAP
-	 * \param id id of the station
-	 * \param position position
-	 * \param radius the station radius
+	 * \param ap Access Point
 	 * \param delay the propagation delay of this station
 	 * \param prob the probability of loss (PER) of this station
 	 */
-	void addStation (quint32 id, const GKPoint &position, double radius,
-					 double delay, double prob);
+	void addAP (FlourishAP *ap, double delay, double prob);
 
 	/**
 	 * \brief Save the pointer of the agent inside an internal list
 	 *
 	 * \param agent created agent
+	 * \param radius the radius of the agent
+	 * \param delay the delay of its channel
+	 * \param prob the error probability (PER)
 	 */
-	void addAgent (FlourishConnectedAgent *agent);
+	void addAgent (FlourishConnectedAgent *agent, double radius, double delay, double prob);
 
 	/**
 	 * \brief removeAgent
@@ -131,4 +131,6 @@ public:
 private:
 	QMap<quint32, V2XSimpleAP*> m_stations; /**!< All the stations in the simulation */
 	QSet<FlourishConnectedAgent*> m_agents; /**!< All the agents in the simulation */
+
+	QSharedPointer<RateErrorModel> m_agentModel; /**!< ErrorModel for agents */
 };

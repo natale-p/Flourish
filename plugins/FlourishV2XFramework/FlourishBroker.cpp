@@ -16,6 +16,7 @@ uint qHash(const V2XNetworkNode* node)
 
 FlourishBroker::FlourishBroker() : QObject ()
 {
+	m_agentModel = QSharedPointer<RateErrorModel>(new RateErrorModel());
 }
 
 FlourishBroker::~FlourishBroker()
@@ -42,7 +43,6 @@ void FlourishBroker::doPost(double time, double timeSta, double simStep)
 		station->distributeMessages();
 		station->sendMessage();
 	}
-
 }
 
 void FlourishBroker::doPre(double time, double timeSta, double simStep)
@@ -65,9 +65,16 @@ void FlourishBroker::doPre(double time, double timeSta, double simStep)
 	}
 }
 
-void FlourishBroker::addAgent(FlourishConnectedAgent *agent)
+void FlourishBroker::addAgent(FlourishConnectedAgent *agent,
+							  double radius, double delay, double prob)
 {
-	//agent->getChannel()->setErrorModel(m_errorModel);
+	m_agentModel->setUnit(RateErrorModel::ERROR_UNIT_PACKET);
+	m_agentModel->setRate(prob);
+
+	agent->getChannel()->setDelay(delay);
+	agent->getChannel()->setErrorModel(m_agentModel);
+	agent->setRadius(radius);
+
 	m_agents.insert(agent);
 }
 
@@ -76,23 +83,17 @@ void FlourishBroker::removeAgent(FlourishConnectedAgent *agent)
 	m_agents.remove(agent);
 }
 
-void FlourishBroker::addStation (quint32 id, const GKPoint &position,
-								 double radius, double delay, double prob)
+void FlourishBroker::addAP (FlourishAP *ap, double delay, double prob)
 {
-
-	qDebug() << "Added STATION" << id << delay << prob;
-
-	QPointer<FlourishAP> station = new FlourishAP (position);
-	station->setRadius(radius);
 	QSharedPointer<RateErrorModel> errorModel = QSharedPointer<RateErrorModel>(new RateErrorModel());
 	errorModel->setUnit(RateErrorModel::ERROR_UNIT_PACKET);
 	errorModel->setRate(prob);
 	errorModel->enable();
 
-	station->getChannel()->setErrorModel(errorModel);
-	station->getChannel()->setDelay(delay);
+	ap->getChannel()->setErrorModel(errorModel);
+	ap->getChannel()->setDelay(delay);
 
-	m_stations.insert(id, station);
+	m_stations.insert(ap->getId(), ap);
 
 }
 

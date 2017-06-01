@@ -8,13 +8,10 @@
 #include "FlourishV2XFrameworkUtil.h"
 #include "FlourishBroker.h"
 
-class ConnectedAgent;
-
-
 /**
  * \defgroup FlourishV2X Flourish V2X Plugin
  *
- * The framework aims to provide a platform to simulate communications between
+ * The framework (based on V2XFramework) aims to provide a platform to simulate communications between
  * vehicles and between vehicles and stations. In the following, we will
  * refer to "core" as everything inside Aimsun simulator, keeping a distinction
  * between what is going on in this plugin and inside Aimsun.
@@ -26,7 +23,17 @@ class ConnectedAgent;
  * moving station. Therefore, we can say that the main components of the framework
  * are mobile stations (FlourishConnectedAgent) and fixed stations (FlourishAP).
  *
- * To start, look at the documentation of the FlourishV2XFramework class.
+ * Visually, in the Aimsun simulator, two main attributes are added to vehicles
+ * and access point: delay and error_rate. Delay (in seconds) is the propagation
+ * delay of the associated channel; error_rate is, instead, the probability
+ * of losing a packet, expressed in %.
+ *
+ * They can be changed through the associated type (e.g., for access point
+ * right click on the access point, and then go to "Attribute" tab, for Vehicles
+ * go in Demand Data - Vehicle - and then right click on the vehicle class, and
+ * then go to "Attribute" tab).
+ *
+ * To learn about the internals, look at the documentation of the FlourishV2XFramework class.
  *
  * \see FlourishV2XFramework
  */
@@ -38,9 +45,9 @@ extern "C" FLOURISHV2XFRAMEWORKEXPORT void FlourishV2XFrameworkSetup( ADynamicAP
  * \ingroup FlourishV2X
  * \brief Main framework class
  *
- *
  * The main objects of the plugin are created by this class, and in general
- * this is the door to the Aimsun simulator.
+ * this is the door to the Aimsun simulator. It is based over the V2XFramework
+ * class, so if you have not read it, it is better to start from there.
  *
  * The class is created at the beginning of the simulation and provides four
  * methods to exchange information with the core. We have:
@@ -62,7 +69,6 @@ extern "C" FLOURISHV2XFRAMEWORKEXPORT void FlourishV2XFrameworkSetup( ADynamicAP
  * find the basics for the communication model.
  *
  * \see FlourishBroker
- *
  * \see arrivalNewVehicle
  * \see preUpdate
  * \see postUpdate
@@ -81,11 +87,12 @@ public:
 	virtual ~FlourishV2XFramework();
 
 	// inherited from V2XFramework
-	virtual ADynamicAgent * arrivalNewVehicle( unsigned short idHandler, void *agent);
-	virtual void removedVehicle( unsigned short idHandler, ADynamicAgent * agent );
-	virtual void preUpdate(double time, double timeSta, double simStep);
-	virtual void postUpdate(double time, double timeSta, double simStep);
+	virtual ADynamicAgent * arrivalNewVehicle( quint32 idHandler, DTAVeh *agent) Q_DECL_OVERRIDE;
+	virtual void removedVehicle( quint32 idHandler, ADynamicAgent * agent ) Q_DECL_OVERRIDE;
+	virtual void preUpdate(double time, double timeSta, double simStep) Q_DECL_OVERRIDE;
+	virtual void postUpdate(double time, double timeSta, double simStep) Q_DECL_OVERRIDE;
+	virtual void arrivalNewAP (quint32 id, GKObject *obj, V2XConnectedControlList controls) Q_DECL_OVERRIDE;
 private:
-	FlourishBroker m_broker; /**!< The broker pointer */
+	FlourishBroker m_broker; /**!< The broker */
 };
 

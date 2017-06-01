@@ -20,7 +20,7 @@ public:
 	 * \brief Constructor for an AP
 	 * \param position Position of the AP
 	 */
-	FlourishAP(const GKPoint &position);
+	FlourishAP(const GKObject *obj);
 
 public slots:
 	/**
@@ -30,12 +30,24 @@ public slots:
 	 * \param addr Source address
 	 */
 	virtual void received (const QPointer<NetDevice> &device,
-						   const QSharedPointer<const Packet> &packet, const Address &addr);
+						   const QSharedPointer<const Packet> &packet, const Address &addr) Q_DECL_OVERRIDE;
 protected:
 	/**
-	 * \brief Generate a single message to be transmitted
+	 * \brief Generate messages to be transmitted
 	 *
-	 * \return A packet containing the message
+	 * \return A list of messages
 	 */
-	virtual QSharedPointer<Packet> generateMessage();
+	virtual PacketPointerList generateMessage() Q_DECL_OVERRIDE;
+
+	/**
+	 * \brief Generate a DENM message
+	 * \return A DENM message
+	 */
+	PacketPointer generateDENM();
+
+	/**
+	 * \brief Generate a SPATEM message
+	 * \return A SPATEM message
+	 */
+	PacketPointer generateSPATEM( const V2XConnectedControlPointer &control);
 };

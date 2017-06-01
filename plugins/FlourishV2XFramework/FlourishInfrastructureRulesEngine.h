@@ -10,24 +10,24 @@
 
 /**
  * \ingroup V2XFramework
- * \brief Takes decision for a vehicle giving the received messages
+ * \brief Takes decision for an infrastructure giving the received messages
  *
  * Takes decisions based on the incoming messages. The 'evaluate' methods,
  * are called when a message should be evaluated (please note that they are empty
- * now and should be implemented)
+ * now and should be implemented).
  */
-class FLOURISHV2XFRAMEWORKEXPORT FlourishVehicleRulesEngine: public V2XRulesEngine
+class FLOURISHV2XFRAMEWORKEXPORT FlourishInfrastructureRulesEngine: public V2XRulesEngine
 {
 public:
 	/**
 	 * \brief Constructor
 	 */
-	FlourishVehicleRulesEngine();
+	FlourishInfrastructureRulesEngine();
 
 	/**
 	 * \brief Deconstructor
 	 */
-	virtual ~FlourishVehicleRulesEngine();
+	virtual ~FlourishInfrastructureRulesEngine();
 
 	/**
 	 * \brief Evaluate a CAM message
