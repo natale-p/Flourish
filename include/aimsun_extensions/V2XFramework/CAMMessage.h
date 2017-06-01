@@ -10,7 +10,6 @@
 #include "V2XMessage.h"
 #include "Asn1cContainer.h"
 #include "ITS-spec/CAM.h"
-#include "V2XFrameworkUtil.h"
 
 /**
  * \ingroup V2XFramework

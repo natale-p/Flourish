@@ -9,7 +9,6 @@
 #include "V2XFrameworkUtil.h"
 #include "V2XSimpleAP.h"
 
-
 /**
  * \ingroup V2XFramework
  * \brief Represents a connected vehicle (e.g., a mobile station) in the framework
@@ -27,7 +26,7 @@ public:
 	 * \param idhandler TODO
 	 * \param agent TODO
 	 */
-	V2XConnectedAgent(unsigned short idhandler, void *agent);
+	V2XConnectedAgent(quint32 idHandler, DTAVeh *agent);
 
 	/**
 	  * \brief Deconstructor
@@ -37,6 +36,8 @@ public:
 	// inherit by ADynamicAgent
 	virtual void getState(double time, double timeSta) Q_DECL_OVERRIDE;
 	virtual void setState(double time, double timeSta) Q_DECL_OVERRIDE;
+	// inherit by V2XNetworkNode
+	virtual GKPoint getPosition() const Q_DECL_OVERRIDE;
 
 	/**
 	 * \brief Try to update the active links
@@ -81,6 +82,7 @@ private:
 	void initialConnect();
 
 private:
+	GKPoint m_position; /**!< The position of the station */
 	QMap<quint32, V2XNetworkNode*> m_inRangeStations; /**!< List of in-range stations */
 	QMap<quint32, V2XNetworkNode*> m_inRangeAgents; /**!< List of in-range agents */
 };

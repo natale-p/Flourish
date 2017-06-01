@@ -83,13 +83,16 @@ class V2XFRAMEWORKEXPORT V2XNetworkNode : public QObject
 	Q_OBJECT
 public:
 	/**
-	 * \brief Constructor
+	 * \brief Constructor with an id
+	 *
+	 * \param id Given ID
 	 */
-	V2XNetworkNode();
+	V2XNetworkNode(quint32 id);
+
 	/**
 	 * \brief Deconstructor
 	 */
-	virtual ~V2XNetworkNode () { }
+	virtual ~V2XNetworkNode ();
 
 	/**
 	 * \brief operator ==
@@ -113,7 +116,7 @@ public:
 	 * \brief Get the position of the node
 	 * \return the position of the node
 	 */
-	GKPoint getPosition () const { return m_position; }
+	virtual GKPoint getPosition () const = 0;
 
 	/**
 	 * \brief Update the time in this node
@@ -123,10 +126,9 @@ public:
 	void setTime(const V2XNetworkTime &time) { m_currentTime = time; }
 
 protected:
-	GKPoint m_position; /**!< The position */
 	QPointer<NetDevice> m_dev; /**!< Device*/
 	V2XNetworkTime m_currentTime; /**!< The current time */
 
 private:
-	quint64 m_id; /**!< ID */
+	quint32 m_id; /**!< ID */
 };

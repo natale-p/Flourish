@@ -6,10 +6,12 @@
 #pragma once
 
 #include "V2XNetworkNode.h"
+#include "V2XIntersection.h"
 #include "NetDevice.h"
 #include "Packet.h"
 
 class SimpleChannel;
+class GKObject;
 
 /**
  * \ingroup FlourishV2X
@@ -54,13 +56,15 @@ class V2XFRAMEWORKEXPORT V2XSimpleAP : public V2XNetworkNode
 public:
 	/**
 	 * \brief Constructor for a moving AP
+	 * \param id Unique ID for the object
 	 */
-	V2XSimpleAP ();
+	V2XSimpleAP (quint32 id);
 	/**
 	 * \brief Constructor for an AP
-	 * \param position Position of the AP
+	 * \param id Unique ID for the object
+	 * \param obj (Opaque) pointer to an object inside Aimsun
 	 */
-	V2XSimpleAP(const GKPoint &position);
+	V2XSimpleAP(quint32 id, const GKObject *obj);
 
 	/**
 	 * \brief Deconstructor
@@ -115,6 +119,18 @@ public:
 		return V2XSimpleAP::isInRadius(this, agentPos);
 	}
 
+	/**
+	 * \brief Attach to this station a list of V2XIntersection objects.
+	 *
+	 * After this call, the station become a RSU.
+	 *
+	 * \param connectedIntersections The connected intersections
+	 */
+	void connectIntersections (V2XIntersectionList connectedIntersections);
+
+	//inherited from V2XNetworkNode
+	virtual GKPoint getPosition() const Q_DECL_OVERRIDE;
+
 public slots:
 	/**
 	 * \brief A message has been received
@@ -159,11 +175,14 @@ protected:
 	virtual void disconnectFrom(V2XSimpleAP *AP);
 
 	/**
-	 * \brief Generate a single message to be transmitted
+	 * \brief Generate a list of messages to be transmitted
 	 *
-	 * \return A packet containing the message
+	 * \return A list of messages
 	 */
-	virtual QSharedPointer<Packet> generateMessage() = 0;
+	virtual PacketPointerList generateMessage() = 0;
+
+protected:
+	V2XIntersectionList m_connectedIntersections; /**!< The list of intersections connected to this AP */
 
 private:
 	/**
@@ -181,4 +200,5 @@ private:
 	QPointer<SimpleChannel> m_channel;	/**!< Channel of the AP */
 	double m_radius;					/**!< Radius of the AP */
 	QMap<quint32, QMetaObject::Connection> m_stationConnection; /**!< Connection to the destroyed signal of other APs */
+	const GKObject *m_obj; /**!< Associated object */
 };

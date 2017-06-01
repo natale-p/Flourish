@@ -25,6 +25,11 @@ public:
 	V2XMessage() { }
 
 	/**
+	 * \brief Empty default deconstructor
+	 */
+	virtual ~V2XMessage() { }
+
+	/**
 	 * \brief Copy the message
 	 * \return A copy of the message
 	 */
