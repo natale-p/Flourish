@@ -47,3 +47,13 @@ void FlourishInfrastructureRulesEngine::evaluate( const QSharedPointer<const SPA
 
 	qDebug() << "Received SPATEMMessage";
 }
+
+void FlourishInfrastructureRulesEngine::evaluate( const QSharedPointer<const MAPEMMessage> &message,
+												  V2XSimpleAP *agent)
+{
+	Q_UNUSED(message);
+	Q_UNUSED(agent);
+
+
+	qDebug() << "Received MAPEMMessage";
+}

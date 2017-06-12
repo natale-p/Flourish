@@ -7,6 +7,7 @@
 #include "FlourishV2XFrameworkUtil.h"
 #include "FlourishVehicleRulesEngine.h"
 #include "V2XConnectedAgent.h"
+#include "ADynamicAPISetup.h"
 
 class FlourishBroker;
 
@@ -23,7 +24,15 @@ class FlourishBroker;
 class FLOURISHV2XFRAMEWORKEXPORT FlourishConnectedAgent : public V2XConnectedAgent
 {
 public:
-	FlourishConnectedAgent (quint32 idhandler, DTAVeh *agent, FlourishBroker *broker);
+	/**
+	 * \brief Constructor
+	 * \param idhandler id of the agent
+	 * \param agent opaque pointer to the agent
+	 * \param broker the broker
+	 * \param setup the API setup
+	 */
+	FlourishConnectedAgent (quint32 idhandler, DTAVeh *agent, FlourishBroker *broker,
+							ADynamicAPISetup &setup);
 public slots:
 	/**
 	 * \brief A message has been received
@@ -61,4 +70,5 @@ protected:
 private:
 	FlourishBroker *m_broker; /**!< Pointer to the broker */
 	FlourishVehicleRulesEngine m_engine; /**!< Instance of the Veh Rules Engine */
+	int m_stationType;
 };

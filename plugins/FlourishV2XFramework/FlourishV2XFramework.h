@@ -91,7 +91,13 @@ public:
 	virtual void removedVehicle( quint32 idHandler, ADynamicAgent * agent ) Q_DECL_OVERRIDE;
 	virtual void preUpdate(double time, double timeSta, double simStep) Q_DECL_OVERRIDE;
 	virtual void postUpdate(double time, double timeSta, double simStep) Q_DECL_OVERRIDE;
-	virtual void arrivalNewAP (quint32 id, GKObject *obj, V2XConnectedControlList controls) Q_DECL_OVERRIDE;
+	virtual void arrivalNewAP (quint32 id, GKObject *obj, V2XIntersectionList controls) Q_DECL_OVERRIDE;
+
+	static QString getInternalAPDelayPreferenceName () { return "FlourishV2XFramework::Module::APDelay"; }
+	static QString getInternalAPErrorRatePreferenceName () { return "FlourishV2XFramework::Module::APPER"; }
+	static QString getInternalAgentDelayPreferenceName () { return "FlourishV2XFramework::Module::AgentDelay"; }
+	static QString getInternalAgentErrorRatePreferenceName () { return "FlourishV2XFramework::Module::AgentPER"; }
+	static QString getInternalAgentRadiusPreferenceName () { return "FlourishV2XFramework::Module::AgentRadius"; }
 private:
 	FlourishBroker m_broker; /**!< The broker */
 };

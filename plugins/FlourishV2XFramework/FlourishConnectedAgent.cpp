@@ -8,12 +8,17 @@
 #include "CAMMessage.h"
 #include "DENMMessage.h"
 #include "SPATEMMessage.h"
+#include "MAPEMMessage.h"
+#include "V2XFramework.h"
 
 FlourishConnectedAgent::FlourishConnectedAgent(quint32 idhandler, DTAVeh *agent,
-											   FlourishBroker *broker) :
+											   FlourishBroker *broker, ADynamicAPISetup & setup) :
 	V2XConnectedAgent(idhandler, agent),
 	m_broker (broker)
 {
+	m_stationType = setup.getObjectValue<int>(getVehicleType(),
+											  "GKMobileAgent",
+											  V2XFramework::getInternalFrameworkName() + "::" + V2XFramework::getInternalStationTypeName());
 }
 
 void FlourishConnectedAgent::received (const QPointer<NetDevice> &device,
@@ -35,10 +40,15 @@ void FlourishConnectedAgent::received (const QPointer<NetDevice> &device,
 		return;
 	}
 
-
 	const QSharedPointer<const SPATEMMessage> spatem = qSharedPointerDynamicCast<const SPATEMMessage> (packet);
 	if (spatem != nullptr) {
 		m_engine.evaluate(spatem, dynamic_cast<V2XConnectedAgent*> (this));
+		return;
+	}
+
+	const QSharedPointer<const MAPEMMessage> mapem = qSharedPointerDynamicCast<const MAPEMMessage> (packet);
+	if (mapem != nullptr) {
+		m_engine.evaluate(mapem, dynamic_cast<V2XConnectedAgent*> (this));
 		return;
 	}
 
@@ -64,7 +74,7 @@ PacketPointerList FlourishConnectedAgent::generateMessage()
 
 	// CAM parameters
 	// Basic Container
-	data->cam.camParameters.basicContainer.stationType = StationType_passengerCar; // TODO: BUSSes
+	data->cam.camParameters.basicContainer.stationType = m_stationType;
 	data->cam.camParameters.basicContainer.referencePosition.latitude = getPosition().x;
 	data->cam.camParameters.basicContainer.referencePosition.longitude = getPosition().y;
 	data->cam.camParameters.basicContainer.referencePosition.altitude.altitudeValue = getPosition().z;

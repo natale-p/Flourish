@@ -7,7 +7,7 @@ SOURCES += \
 	FlourishV2XFramework.cpp \
 	FlourishVehicleRulesEngine.cpp \
 	FlourishBroker.cpp \
-        FlourishAP.cpp \
+	FlourishAP.cpp \
 	FlourishInfrastructureRulesEngine.cpp
 
 HEADERS += \
@@ -47,9 +47,6 @@ contains(DEVELOPER, true) {
 	core_ang_kernel_headers.files += $${SOURCES_DIR}/core/ang_kernel/GKGeoUtil.h
 	core_ang_kernel_headers.files += $${SOURCES_DIR}/core/ang_kernel/GKUtil.h
 
-#	core_ang_kernel_headers.files += $${SOURCES_DIR}/core/ang_kernel/GKType.h
-#	core_ang_kernel_headers.files += $${SOURCES_DIR}/core/ang_kernel/GKColumn.h
-
 	INSTALLS += core_ang_kernel_headers
 	PRE_TARGETDEPS += install_core_ang_kernel_headers
 
@@ -58,13 +55,6 @@ contains(DEVELOPER, true) {
 
 	INSTALLS += random_headers
 	PRE_TARGETDEPS += install_random_headers
-
-#	networkgui_headers.path = ../../include/plugins/NetworkGUI/
-#	networkgui_headers.files += $${SOURCES_DIR}/plugins/NetworkGUI/NetworkGUIAP.h
-#	networkgui_headers.files += $${SOURCES_DIR}/plugins/NetworkGUI/NetworkGUIUtil.h
-
-#	INSTALLS += networkgui_headers
-#	PRE_TARGETDEPS += install_networkgui_headers
 
 	adynamic_api_headers.path = ../../include/core/ANG_DTA/ADynamicAPI
 	adynamic_api_headers.files += $${SOURCES_DIR}/core/ANG_DTA/ADynamicAPI/ADynamicAgent.h
@@ -94,7 +84,8 @@ contains(DEVELOPER, true) {
 	V2XMessage.h \
 	V2XRulesEngine.h \
 	V2XNetworkNode.h \
-	V2XConnectedControl.h
+	V2XIntersection.h \
+	MAPEMMessage.h
 
 	v2x_framework_headers.path = ../../include/aimsun_extensions/V2XFramework
 	for (header, V2XFramework_headers) {

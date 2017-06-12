@@ -47,4 +47,10 @@ public:
 	 * \param agent Agent who received the message
 	 */
 	virtual void evaluate( const QSharedPointer<const SPATEMMessage> &message, V2XSimpleAP *agent) Q_DECL_OVERRIDE;
+	/**
+	 * \brief Evaluate a MAPEM message
+	 * \param message Message to evaluate
+	 * \param agent Agent who received the message
+	 */
+	virtual void evaluate( const QSharedPointer<const MAPEMMessage> &message, V2XSimpleAP *agent) Q_DECL_OVERRIDE;
 };

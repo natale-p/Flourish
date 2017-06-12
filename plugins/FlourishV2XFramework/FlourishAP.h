@@ -6,6 +6,7 @@
 
 #include "FlourishV2XFrameworkUtil.h"
 #include "V2XSimpleAP.h"
+#include "FlourishInfrastructureRulesEngine.h"
 
 /**
  * \brief A non-mobile infrastructure
@@ -18,9 +19,10 @@ class FLOURISHV2XFRAMEWORKEXPORT FlourishAP: public V2XSimpleAP
 public:
 	/**
 	 * \brief Constructor for an AP
-	 * \param position Position of the AP
+	 * \param id Unique ID for the object
+	 * \param obj An object in aimsun representing this AP
 	 */
-	FlourishAP(const GKObject *obj);
+	FlourishAP(quint32 id, const GKObject *obj);
 
 public slots:
 	/**
@@ -47,7 +49,17 @@ protected:
 
 	/**
 	 * \brief Generate a SPATEM message
+	 * \param control Intersection pointer
 	 * \return A SPATEM message
 	 */
-	PacketPointer generateSPATEM( const V2XConnectedControlPointer &control);
+	PacketPointer generateSPATEM( const V2XIntersectionPointer &control);
+
+	/**
+	 * \brief Generate a MAPEM message
+	 * \param control Intersection pointer
+	 * \return
+	 */
+	PacketPointer generateMAPEM( const V2XIntersectionPointer &control );
+private:
+	FlourishInfrastructureRulesEngine m_engine; /**!< Engine instance */
 };

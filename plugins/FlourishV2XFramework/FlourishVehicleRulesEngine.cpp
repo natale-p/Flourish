@@ -60,3 +60,13 @@ void FlourishVehicleRulesEngine::evaluate( const QSharedPointer<const SPATEMMess
 
 	qDebug() << "Received SPATEMMessage";
 }
+
+void FlourishVehicleRulesEngine::evaluate( const QSharedPointer<const MAPEMMessage> &message, V2XSimpleAP *agent)
+{
+	Q_UNUSED(message);
+	V2XConnectedAgent *connectedAgent = dynamic_cast<V2XConnectedAgent*> (agent);
+	Q_ASSERT(connectedAgent != nullptr);
+
+
+	qDebug() << "Received MAPEMMessage";
+}
