@@ -3,12 +3,15 @@
   *
   * Author: Natale Patriciello <natale.patriciello@aimsun.com>
   */
+#pragma once
 
 #include "FlourishV2XFrameworkUtil.h"
 #include "V2XSimpleAP.h"
 #include "FlourishInfrastructureRulesEngine.h"
+#include "ADynamicAPISetup.h"
 
 /**
+ * \ingroup FlourishV2X
  * \brief A non-mobile infrastructure
  *
  * When it receives a message, the method received is invoked.
@@ -21,8 +24,9 @@ public:
 	 * \brief Constructor for an AP
 	 * \param id Unique ID for the object
 	 * \param obj An object in aimsun representing this AP
+	 * \param setup The Setup API
 	 */
-	FlourishAP(quint32 id, const GKObject *obj);
+	FlourishAP(quint32 id, const GKObject *obj, const ADynamicAPISetup &setup);
 
 public slots:
 	/**
@@ -49,17 +53,24 @@ protected:
 
 	/**
 	 * \brief Generate a SPATEM message
-	 * \param control Intersection pointer
+	 *
+	 * The SPATEM in the current implementation refers to a single intersection.
+	 *
+	 * \param intersection Intersection pointer
 	 * \return A SPATEM message
 	 */
-	PacketPointer generateSPATEM( const V2XIntersectionPointer &control);
+	PacketPointer generateSPATEM( const V2XIntersectionPointer &intersection);
 
 	/**
 	 * \brief Generate a MAPEM message
-	 * \param control Intersection pointer
+	 *
+	 * The MAPEM in the current implementation refers to a single intersection.
+	 *
+	 * \param intersection Intersection pointer
 	 * \return
 	 */
-	PacketPointer generateMAPEM( const V2XIntersectionPointer &control );
+	PacketPointer generateMAPEM( const V2XIntersectionPointer &intersection );
 private:
 	FlourishInfrastructureRulesEngine m_engine; /**!< Engine instance */
+	ADynamicAPISetup m_setup;
 };

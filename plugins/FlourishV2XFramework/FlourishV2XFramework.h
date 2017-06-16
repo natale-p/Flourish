@@ -93,12 +93,32 @@ public:
 	virtual void postUpdate(double time, double timeSta, double simStep) Q_DECL_OVERRIDE;
 	virtual void arrivalNewAP (quint32 id, GKObject *obj, V2XIntersectionList controls) Q_DECL_OVERRIDE;
 
+	/**
+	 * \brief Get the internal name for the Access Point delay preference
+	 * \return the specified name
+	 */
 	static QString getInternalAPDelayPreferenceName () { return "FlourishV2XFramework::Module::APDelay"; }
+	/**
+	 * \brief Get the internal name for the Access Point PER preference
+	 * \return the specified name
+	 */
 	static QString getInternalAPErrorRatePreferenceName () { return "FlourishV2XFramework::Module::APPER"; }
+	/**
+	 * \brief Get the internal name for the Agent delay preference
+	 * \return the specified name
+	 */
 	static QString getInternalAgentDelayPreferenceName () { return "FlourishV2XFramework::Module::AgentDelay"; }
+	/**
+	 * \brief Get the internal name for the Agent PER preference
+	 * \return the specified name
+	 */
 	static QString getInternalAgentErrorRatePreferenceName () { return "FlourishV2XFramework::Module::AgentPER"; }
+	/**
+	 * \brief Get the internal name for the Agent radius preference
+	 * \return the specified name
+	 */
 	static QString getInternalAgentRadiusPreferenceName () { return "FlourishV2XFramework::Module::AgentRadius"; }
 private:
-	FlourishBroker m_broker; /**!< The broker */
+	FlourishBroker m_broker; //!< The broker */
 };
 

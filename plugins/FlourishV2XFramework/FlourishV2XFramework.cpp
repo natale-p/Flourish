@@ -28,7 +28,7 @@ void FlourishV2XFrameworkSetup( ADynamicAPISetup & setup )
 	pref.guiName = delayGuiName;
 	pref.internalName = FlourishV2XFramework::getInternalAPDelayPreferenceName();
 	pref.type = ADynamicAPISetup::Double;
-	pref.defaultValue = "0.050";
+	pref.defaultValue = "0.010";
 	setup.createPreference(prefs, pref);
 
 	QString apPERGuiName = QObject::tr("Access Point error rate (PER %)");
@@ -58,7 +58,7 @@ void FlourishV2XFrameworkSetup( ADynamicAPISetup & setup )
 	pref.guiName = agentGuiDelay;
 	pref.internalName = FlourishV2XFramework::getInternalAgentDelayPreferenceName();
 	pref.type = ADynamicAPISetup::Double;
-	pref.defaultValue = "0.080";
+	pref.defaultValue = "0.020";
 	setup.createPreference(prefs, pref);
 
 	QString agentPERGuiName = QObject::tr("Agent packet error rate (PER %)");
@@ -107,7 +107,7 @@ FlourishV2XFramework::~FlourishV2XFramework()
 void FlourishV2XFramework::arrivalNewAP(quint32 id, GKObject *obj,
 										V2XIntersectionList controls)
 {
-	QPointer<FlourishAP> station = new FlourishAP (id, obj);
+	QPointer<FlourishAP> station = new FlourishAP (id, obj, m_setup);
 	qDebug() << "Connecting to this ap" << controls.size() << "intersections";
 	station->connectIntersections (controls);
 

@@ -9,9 +9,9 @@
 #include <SPATEMMessage.h>
 #include <MAPEMMessage.h>
 
-FlourishAP::FlourishAP(quint32 id, const GKObject *obj) : V2XSimpleAP(id, obj)
+FlourishAP::FlourishAP(quint32 id, const GKObject *obj, const ADynamicAPISetup &setup) : V2XSimpleAP(id, obj)
 {
-
+	m_setup = setup;
 }
 
 PacketPointer FlourishAP::generateDENM()
@@ -30,9 +30,8 @@ PacketPointer FlourishAP::generateDENM()
 	return PacketPointer(msg);
 }
 
-PacketPointer FlourishAP::generateMAPEM(const V2XIntersectionPointer &control)
+PacketPointer FlourishAP::generateMAPEM(const V2XIntersectionPointer &intersection)
 {
-	Q_UNUSED(control);
 	qDebug() << V2XNetworkNode::getId() << "is generating a MAPEMMessage";
 
 	MAPEMMessage *msg = new MAPEMMessage ();
@@ -43,17 +42,14 @@ PacketPointer FlourishAP::generateMAPEM(const V2XIntersectionPointer &control)
 	data->header.protocolVersion = protocolVersion_currentVersion;
 	data->header.stationID = V2XNetworkNode::getId();
 
-	// IT CONTAINS BUG!
-	//control->getMapData(&data->map);
+	intersection->getMapData(&data->map);
 
 	return PacketPointer(msg);
 }
 
-PacketPointer FlourishAP::generateSPATEM(const V2XIntersectionPointer &control)
+PacketPointer FlourishAP::generateSPATEM(const V2XIntersectionPointer &intersection)
 {
 	qDebug() << V2XNetworkNode::getId() << "is generating a SPATEMMessage";
-	Q_UNUSED(control);
-
 	SPATEMMessage *msg = new SPATEMMessage ();
 	msg->initializeEmpty();
 
@@ -63,28 +59,10 @@ PacketPointer FlourishAP::generateSPATEM(const V2XIntersectionPointer &control)
 	data->header.protocolVersion = protocolVersion_currentVersion;
 	data->header.stationID = V2XNetworkNode::getId();
 
-	/*
 	IntersectionState *state = (IntersectionState*) calloc (1, sizeof(*state));
-	state->id.id = control->getId ();
-	state->revision = 0;
-	control->getIntersectionState(&state->status);
-
-	MovementState *movement = (MovementState*) calloc (1, sizeof (*movement));
-	movement->signalGroup = 0;
-	
-	MovementEvent *event = (MovementEvent*) calloc (1, sizeof (*event));
-	control->getMovementPhaseState(&event->eventState);
-
-	TimeChangeDetails *timeChangeDetails = (TimeChangeDetails*) calloc (1, sizeof(TimeChangeDetails));
-	control->getTimingsChangeDetails (timeChangeDetails);
-	event->timing = timeChangeDetails;
-
-	asn_sequence_add(&movement->state_time_speed, event);
-
-	asn_sequence_add(&state->states, movement);
+	intersection->getIntersectionState(state, m_setup, getTimeOfTheDay().getSeconds());
 
 	asn_sequence_add (&data->spat.intersections, state);
-	*/
 
 	return PacketPointer(msg);
 }
@@ -95,7 +73,6 @@ PacketPointerList FlourishAP::generateMessage()
 	list.append(generateDENM());
 
 	for (V2XIntersectionPointer control : m_connectedIntersections) {
-		qDebug() << "Generating messages for the control";
 		list.append(generateMAPEM(control));
 		list.append(generateSPATEM(control));
 	}
@@ -108,6 +85,9 @@ void FlourishAP::received (const QPointer<NetDevice> &device,
 {
 	Q_UNUSED(device);
 	Q_UNUSED(addr);
+
+
+	qDebug() << getId() << "received a message, passing it to engine";
 
 	const QSharedPointer<const CAMMessage> cam = qSharedPointerDynamicCast<const CAMMessage>(packet);
 	if (cam != nullptr) {
