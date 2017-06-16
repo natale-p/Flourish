@@ -9,7 +9,7 @@
 #include "FlourishV2XFrameworkUtil.h"
 
 /**
- * \ingroup V2XFramework
+ * \ingroup FlourishV2X
  * \brief Takes decision for a vehicle giving the received messages
  *
  * Takes decisions based on the incoming messages. The 'evaluate' methods,
