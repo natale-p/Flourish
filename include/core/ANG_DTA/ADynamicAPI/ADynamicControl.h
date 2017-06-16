@@ -10,7 +10,7 @@
 /**
  * \brief The ADynamicControl class
  *
- * To complete; it is here only as a placeholder
+ * This is a placeholder and does not contain any code
  */
 class ADYNAMICAPIEXPORT ADynamicControl
 {

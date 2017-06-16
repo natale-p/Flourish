@@ -6,12 +6,7 @@
 #pragma once
 
 #include "Packet.h"
-#include <QSharedPointer>
 #include "V2XFrameworkUtil.h"
-
-// Very basic because right now we don't need any address at all;
-// For sure it will change in the future in an interface class
-typedef QString Address;
 
 class V2XNetworkNode;
 

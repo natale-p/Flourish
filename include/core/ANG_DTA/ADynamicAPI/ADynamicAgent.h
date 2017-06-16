@@ -11,13 +11,12 @@ class DTAVehicleType;
 
 /** \brief Get and set information from/to the Aimsun objects (including vehicles)
  *
- * The two methods which are called in a middle of the simulation steps are:
+ * The two methods, which are called in a middle of the simulation steps, are:
  *
  * - The getState method, will be called by Aimsun simulator for every simulation step.
- *  No order of call is guaranty between different updates.
- *- The setState method, will be called by Aimsun simulator for every simulation step.
- *  No order of call is guaranty between different updates.
+ * - The setState method, will be called by Aimsun simulator for every simulation step.
  *
+ * Please remember that no order of call is guaranty between different updates.
  * The other methods are getters for various vehicle properties, and they
  * resolve to the internal agent in Aimsun.
 */
@@ -39,23 +38,23 @@ public:
 
 
 	/**
-	 * \brief will be called by Aimsun simulator for every simulation step
+	 * \brief Will be called by Aimsun simulator for every simulation step
 	 *
-	 * \param time TODO
-	 * \param timeSta TODO
+	 * \param time Simulation time
+	 * \param timeSta Time from 00:00.00 (midnight) of the current day
 	 */
 	virtual void getState(double time, double timeSta) = 0;
 
 	/**
-	 * \brief will be called by Aimsun simulator for every simulation step
+	 * \brief Will be called by Aimsun simulator for every simulation step
 	 *
-	 * \param time TODO
-	 * \param timeSta TODO
+	 * \param time Simulation time
+	 * \param timeSta Time from 00:00.00 (midnight) of the current day
 	 */
 	virtual void setState(double time, double timeSta) = 0;
 
 	/**
-	 * \return the Aimsun id vehicle assigned during the simulation
+	 * \return The Aimsun id vehicle assigned during the simulation
 	 */
 	int getId() const;
 
@@ -64,43 +63,44 @@ public:
 	 */
 	int getVehType() const;
 
-	/*!  getLength() returns the length of the vehicle (meters)
-		*/
+	/**
+	 * \return The length of the vehicle (meters)
+	 */
 	double getLength() const;
 
 	/**
-	 * \return the width of the vehicle (meters)
+	 * \return The width of the vehicle (meters)
 	 */
 	double getWidth() const;
 
 	/**
-	 * \return the Maximum acceleration of the vehicle as specified in the vehicle type considering local variations (m/s2)
+	 * \return The Maximum acceleration of the vehicle as specified in the vehicle type considering local variations (m/s2)
 	 */
 	double getMaxAcceleration( ) const;
 
 	/**
-	 * \return the Nomal deceleration of the vehicle as specified in the vehicle type considering local variations (m/s2)
+	 * \return The Nomal deceleration of the vehicle as specified in the vehicle type considering local variations (m/s2)
 	 */
 	double getNormalDeceleration( ) const;
 
 	/**
-	 * \return the Maximum (emergency) deceleration of the vehicle as specified in the vehicle type considering local variations (m/s2)
+	 * \return The Maximum (emergency) deceleration of the vehicle as specified in the vehicle type considering local variations (m/s2)
 	 */
 	double getMaxDeceleration( ) const;
 
 	/**
-	 * \return the clearance space (Minimum gap) of the vehicle as defined in the vehicle type (m)
+	 * \return The clearance space (Minimum gap) of the vehicle as defined in the vehicle type (m)
 	 */
 	double getClearance() const;
 
 
 	/**
-	 * \return the sensitivity Factor to Leader´s deceleration as defined in the vehicle type
+	 * \return The sensitivity Factor to Leader´s deceleration as defined in the vehicle type
 	 */
 	double getSensitivityFactor() const;
 
 	/**
-	 * \return  the Minimum Headway (also know as Gap) in font of the vehicle as defined in the vehicle type (s)
+	 * \return The Minimum Headway (also know as Gap) in font of the vehicle as defined in the vehicle type (s)
 	 */
 	double getMinimumHeadway() const;
 
@@ -111,35 +111,35 @@ public:
 	 * \param xback TODO
 	 * \param yback TODO
 	 * \param zback TODO
-	 * \return the coordinates of the middle front point and middle back point
+	 * \return The coordinates of the middle front point and middle back point
 	 */
 	bool getCoordinates( double *xfront, double *yfront, double *zfront,
 						 double *xback, double *yback, double *zback ) const;
 
 	/**
-	 * \return the maximum Desired Speed of the vehicle for the current lane (m/s)
+	 * \return The maximum Desired Speed of the vehicle for the current lane (m/s)
 	 */
 	double getFreeFlowSpeed() const;
 
 
 	/**
-	 * \return the current speed of the vehicle (m/s)
+	 * \return The current speed of the vehicle (m/s)
 	 */
 	double getSpeed() const;
 
 
 	/**
-	 * \return the current acceleration/deceleration of the vehicle (m/s2)
+	 * \return The current acceleration/deceleration of the vehicle (m/s2)
 	 */
 	double getAcceleration() const;
 
 	/**
-	 * \return the heading express in angle : 0 North, 90 East, 180 South 270 West
+	 * \return The heading express in angle : 0 North, 90 East, 180 South 270 West
 	 */
 	double getHeading() const;
 
 	/**
-	 * \return the vehicle type
+	 * \return The vehicle type
 	 */
 	DTAVehicleType* getVehicleType() const;
 

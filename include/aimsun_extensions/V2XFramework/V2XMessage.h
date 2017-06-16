@@ -7,6 +7,11 @@
 
 #include "V2XFrameworkUtil.h"
 #include <QtGlobal>
+#include <QString>
+
+// Very basic because right now we don't need any address at all;
+// For sure it will change in the future in an interface class
+typedef QString Address;
 
 /**
  * \ingroup V2XFramework
@@ -44,5 +49,22 @@ public:
 	 * \return the message size
 	 */
 	virtual quint32 getSize() const = 0;
+
+	/**
+	 * \brief Set the source of the message
+	 *
+	 * TODO: Implement Headers
+	 *
+	 * \param source the source address
+	 */
+	void setSource (const Address& source) { m_source = source; }
+
+	/**
+	 * \brief Get the source address
+	 * \return the source address
+	 */
+	Address getSource () const { return m_source; }
+private:
+	Address m_source; //!< The source address of the message
 };
 

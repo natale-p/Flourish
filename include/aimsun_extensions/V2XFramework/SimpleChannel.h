@@ -61,21 +61,19 @@ public:
 	 * \brief Deliver to the current registered stations the messages enqueued
 	 * up to the time specified
 	 *
-	 * \param time Time
+	 * \param time Absolute time
 	 */
 	void sendUpTo (double time);
 
 	/**
-	 * \brief set the delay of this channel
-	 *
-	 * TODO: Use an appropriate class instead of double which represent seconds
+	 * \brief Set the delay of this channel
 	 *
 	 * \param delay the delay
 	 */
 	void setDelay (double delay);
 
 	/**
-	 * \brief set the error model of this channel
+	 * \brief Set the error model of this channel
 	 *
 	 * \param errorModel the error model
 	 */
@@ -109,13 +107,13 @@ protected:
 
 	/**
 	 * \brief attach a device to this channel
-	 * \param netDevice the netdevice to attach
+	 * \param device the netdevice to attach
 	 */
 	void attach (NetDevice *device);
 
 	/**
 	 * \brief detach detach a device from this channel
-	 * \param deviceId The netdevice to detach
+	 * \param device The netdevice to detach
 	 */
 	void detach (NetDevice *device);
 
@@ -137,10 +135,10 @@ private:
 	/**
 	 * \brief A map between a time and a list of messages
 	 */
-	typedef QMap< double, QList <QSharedPointer<Packet> > > MessageList;
+	typedef QMap< double, PacketPointerList* > MessageList;
 
-	double m_delay;								/**!< The delay */
-	QSharedPointer<ErrorModel> m_errorModel;	/**!< The error model */
-	QMap<quint32, NetDevice*> m_devices;		/**!< The list of attached NetDevices */
-	MessageList m_messages;						/**!< Message list */
+	double m_delay;								//!< The delay
+	QSharedPointer<ErrorModel> m_errorModel;	//!< The error model
+	QMap<quint32, NetDevice*> m_devices;		//!< The list of attached NetDevices
+	MessageList m_messages;						//!< Message list
 };

@@ -5,10 +5,9 @@
   */
 #pragma once
 #include "ADynamicControl.h"
+#include "ADynamicAPISetup.h"
 
-#include "IntersectionStatusObject.h"
-#include "MovementPhaseState.h"
-#include "TimeChangeDetails.h"
+#include "SPAT.h"
 #include "MapData.h"
 
 #include <QSharedPointer>
@@ -33,10 +32,19 @@ typedef QList<V2XIntersectionPointer> V2XIntersectionList;
 
 /**
  * \ingroup V2XFramework
- * \brief A representation of a connected control in the context of V2XFramework.
+ * \brief A representation of an intersection in the context of V2XFramework.
  *
- * It is strictly linked to a node, and can obtain information from it.
+ * In the context of V2X communications, the Road Side Units (RSU) are entities
+ * that get information from the intersection(s) they are connected to and broadcast
+ * them to the near vehicles. This class translates information from the Aimsun
+ * world to the V2X world. This done through the filling of common structures,
+ * that are defined by the ETSI standard.
  *
+ * The intersection is strictly linked to a node, and can obtain information
+ * from it.
+ *
+ * Reasoning in terms of the framework, the intersections are connections
+ * between V2XGenericLane objects.
  *
  */
 class V2XIntersection : ADynamicControl
@@ -186,16 +194,23 @@ public:
 
 
 
-
-	// Very high-level primitives, useful for creating SPAT/MAP messages
-	// They MUST use low-level primitives
-
 	/**
 	 * \brief Method to get an intersection state as per ISO TS 19091
-	 * \param [in] intersection The IntersectionStatusObject_t object to fill.
+	 * \param intersectionState The object to fill.
+	 * \param setup ADynamicAPISetup instance to query information about control
+	 * plans
+	 * \param time the time at which the state should be get
 	 * \return true in case of success
 	 */
-	bool getIntersectionState(IntersectionStatusObject_t *intersection) const;
+	bool getIntersectionState(IntersectionState *intersectionState, const ADynamicAPISetup &setup,
+							  double time) const;
+
+	/**
+	 * \brief Get the IntersectionStatusObject as per ISO TS 19091
+	 * \param intersectionStateObject The object to fill
+	 * \return true in case of success
+	 */
+	bool getIntersectionStatusObject(IntersectionStatusObject_t *intersectionStateObject) const;
 	/**
 	 * \brief Method to get the movement phase
 	 * \param [in] phaseState The MovementPhaseState_t object to fill
@@ -224,9 +239,6 @@ public:
 	 */
 	bool getIntersectionGeometry (IntersectionGeometryList *geometry) const;
 
-protected:
-
 private:
-	GKNode *m_node; //!< Node */
-	QVector<V2XGenericLane*> m_lanes; /**!< Lanes that arrives/stay in this node */
+	GKNode *m_node; //!< Node
 };

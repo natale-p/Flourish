@@ -14,15 +14,15 @@ class SimpleChannel;
 class GKObject;
 
 /**
- * \ingroup FlourishV2X
+ * \ingroup V2XFramework
  * \brief Represent a wireless Access Point
  *
  * The objective is to model any wireless object which has the capability to
  * send or to receive a message. The communication model lacks
  * propagation fading, transmission power, and in general, is a very basic one.
  *
- * Features
- * ++++++++
+ * <b> Features </b>
+ *
  * A radius is the main property of a wireless access point, to emulate a
  * propagation fading. Every object out of this radius is, therefore, unable
  * to communicate with it (take a look to setRadius and getRadius, and for
@@ -34,8 +34,8 @@ class GKObject;
  * of channels is often limited). The documentation of SimpleChannel defines
  * the properties of the channel itself (namely, ErrorModel and latency).
  *
- * Communication Model
- * +++++++++++++++++++
+ * <b> Communication Model </b>
+ *
  * The access point is born to be passive, in the sense that it does not
  * initiate any connection, but instead is waiting passively for others
  * to connect to its channel (we will refer to these others as subscribers).
@@ -182,7 +182,7 @@ protected:
 	virtual PacketPointerList generateMessage() = 0;
 
 protected:
-	V2XIntersectionList m_connectedIntersections; /**!< The list of intersections connected to this AP */
+	V2XIntersectionList m_connectedIntersections; //!< The list of intersections connected to this AP
 
 private:
 	/**
@@ -197,8 +197,8 @@ private:
 	}
 
 private:
-	QPointer<SimpleChannel> m_channel;	/**!< Channel of the AP */
-	double m_radius;					/**!< Radius of the AP */
-	QMap<quint32, QMetaObject::Connection> m_stationConnection; /**!< Connection to the destroyed signal of other APs */
-	const GKObject *m_obj; /**!< Associated object */
+	QPointer<SimpleChannel> m_channel;	//!< Channel of the AP
+	double m_radius;					//!< Radius of the AP
+	QMap<quint32, QMetaObject::Connection> m_stationConnection; //!< Connection to the destroyed signal of other APs
+	const GKObject *m_obj; //!< Associated object
 };

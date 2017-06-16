@@ -13,18 +13,27 @@
  * \ingroup V2XFramework
  * \brief Represents a connected vehicle (e.g., a mobile station) in the framework
  *
+ * The vehicle position is given by the Aimsun simulator. In this framework,
+ * it is managed the connection (and the disconnection) of the vehicle with others
+ * vehicles/infrastructures. This is done in a very transparent way, equipping
+ * the vehicle with an access point, that works like the V2XSimpleAP object.
+ *
+ * The only difference is that it should maintain a list of the in-range
+ * vehicles and stations, because after each simulation step it is required
+ * to update the active links through a call to the method updateLinks.
+ *
+ * \see updateLinks
  *
  */
 class V2XFRAMEWORKEXPORT V2XConnectedAgent: public V2XSimpleAP, public ADynamicAgent
 {
 	Q_OBJECT
 	Q_DISABLE_COPY(V2XConnectedAgent)
-
 public:
 	/**
 	 * \brief Constructor
-	 * \param idhandler TODO
-	 * \param agent TODO
+	 * \param idHandler Id of the agent (should be unique)
+	 * \param agent Opaque pointer representing the agent inside Aimsun
 	 */
 	V2XConnectedAgent(quint32 idHandler, DTAVeh *agent);
 
@@ -45,7 +54,14 @@ public:
 	void updateLinks();
 
 public slots:
-	// inherit by V2XSimpleAP
+	/**
+	 * \brief An AP has been removed
+	 *
+	 * This can be called because a AP we were connected to is being
+	 * destroyed (e.g., it is leaving the network).
+	 *
+	 * \param station AP which is about to be removed
+	 */
 	virtual void stationRemoved(V2XSimpleAP *station) Q_DECL_OVERRIDE;
 
 protected:
@@ -82,9 +98,9 @@ private:
 	void initialConnect();
 
 private:
-	GKPoint m_position; /**!< The position of the station */
-	QMap<quint32, V2XNetworkNode*> m_inRangeStations; /**!< List of in-range stations */
-	QMap<quint32, V2XNetworkNode*> m_inRangeAgents; /**!< List of in-range agents */
+	GKPoint m_position; //!< The position of the station
+	QMap<quint32, V2XNetworkNode*> m_inRangeStations; //!< List of in-range stations
+	QMap<quint32, V2XNetworkNode*> m_inRangeAgents; //!< List of in-range agents
 };
 
 

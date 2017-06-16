@@ -6,7 +6,7 @@
 #pragma once
 
 #include "V2XMessage.h"
-#include "QSharedPointer"
+#include <QSharedPointer>
 
 // Later this will be eliminated, and V2XMessage will inherit from Packet
 /**

@@ -32,6 +32,7 @@
  */
 
 /**
+ * \ingroup V2XFramework
  * \brief Setup common types and attributes for the V2XFramework
  *
  * It creates the type for the network group, named internally by the
@@ -89,15 +90,19 @@ public:
 	 */
 	V2XFramework(ADynamicAPISetup &setup);
 
+	/**
+	 * \brief Deconstructor
+	 */
 	virtual ~V2XFramework();
 
 	/**
 	 * \brief Called each time an access point is added in the GUI
 	 * \param id unique ID of the access point
 	 * \param obj an opaque pointer to the object
+	 * \param intersections the intersections the AP is connected to (RSU)
 	 */
 	virtual void arrivalNewAP ( quint32 id, GKObject *obj,
-								V2XIntersectionList controls) = 0;
+								V2XIntersectionList intersections) = 0;
 	/**
 	 * \brief Get the internal Network group name
 	 * \return "NetworkGUIGroup"
@@ -158,7 +163,7 @@ protected:
 	void init ();
 
 protected:
-	ADynamicAPISetup m_setup; /**!< The setup object */
+	ADynamicAPISetup m_setup; //!< The setup object
 };
 
 

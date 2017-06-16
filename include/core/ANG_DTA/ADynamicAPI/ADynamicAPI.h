@@ -87,16 +87,16 @@ public:
 
 	/**
 	 * \brief Called before every simulation step (or simulation event)
-	 * \param time To fill
-	 * \param timeSta To fill
-	 * \param simStep To fill
+	 * \param time Simulation time
+	 * \param timeSta Time from 00:00.00 (midnight) of the current day
+	 * \param simStep Simulation step
 	 */
 	virtual void preUpdate(double time, double timeSta, double simStep) = 0;
 	/**
 	 * \brief Called after every simulation step (or simulation event)
-	 * \param time To fill
-	 * \param timeSta To fill
-	 * \param simStep To fill
+	 * \param time Simulation time
+	 * \param timeSta Time from 00:00.00 (midnight) of the current day
+	 * \param simStep Simulation step
 	 */
 	virtual void postUpdate(double time, double timeSta, double simStep) = 0;
 

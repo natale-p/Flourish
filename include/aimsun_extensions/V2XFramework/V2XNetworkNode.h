@@ -13,7 +13,11 @@ class NetDevice;
 
 /**
  * \ingroup V2XFramework
- * \brief Represents a time with respect to the simulation start
+ * \brief Represents a time with respect to some initial reference point
+ *
+ * The reference point could be the simulation start, or another fixed point
+ * in time. Please refer to the documentation of the variable to know what is
+ * the reference time.
  *
  * The implementation is expected to change to use big integer representing
  * milliseconds.
@@ -68,19 +72,26 @@ private:
  * \ingroup V2XFramework
  * \brief A Node in the network
  *
- * It represents any object with a connection. It has an internal time, and
- * a position. Different objects have different id; it is guaranteed to have
- * an unique value (except for quint32 wrap-around).
+ * It represents any object with a connection. It has two different time values:
+ * the first is the so-called absolute time, and represents the time since the
+ * beginning of the simulation. The second one, called time of the day, it is the
+ * difference between now and midnight (00:00.00) of the current day.
+ *
+ * A network node has also a position; moreover, different objects have
+ * different id. The ID should be unique, or otherwise a lot of problems
+ * will appear.
  *
  * To retrieve the values, use the associated getters.
  *
  * \see getId
- * \see getCurrentTime
+ * \see getTimeOfTheDay
+ * \see getAbsTime
  * \see getPosition
  */
 class V2XFRAMEWORKEXPORT V2XNetworkNode : public QObject
 {
 	Q_OBJECT
+	Q_DISABLE_COPY(V2XNetworkNode)
 public:
 	/**
 	 * \brief Constructor with an id
@@ -103,11 +114,6 @@ public:
 		return (getId() == other.getId());
 	}
 	/**
-	 * \brief Get the current time for the node
-	 * \return The current time
-	 */
-	V2XNetworkTime getCurrentTime () const { return m_currentTime; }
-	/**
 	 * \brief Get the ID of the node
 	 * \return the ID of the node
 	 */
@@ -119,16 +125,35 @@ public:
 	virtual GKPoint getPosition () const = 0;
 
 	/**
-	 * \brief Update the time in this node
+	 * \brief Update the time of the day in this node
 	 *
 	 * \param time the current time
 	 */
-	void setTime(const V2XNetworkTime &time) { m_currentTime = time; }
+	void setTimeOfTheDay(const V2XNetworkTime &time) { m_timeOfTheDay = time; }
+
+	/**
+	 * \brief Get the current time for the node
+	 * \return The current time
+	 */
+	V2XNetworkTime getTimeOfTheDay () const { return m_timeOfTheDay; }
+
+	/**
+	 * \brief Update the absolute time in this node
+	 * \param time the current absolute time
+	 */
+	void setAbsTime (const V2XNetworkTime &time) { m_absTime = time; }
+
+	/**
+	 * \brief Get the current absolute time for the node
+	 * \return The current absolute time
+	 */
+	V2XNetworkTime getAbsTime() const { return m_absTime; }
 
 protected:
-	QPointer<NetDevice> m_dev; /**!< Device*/
-	V2XNetworkTime m_currentTime; /**!< The current time */
+	QPointer<NetDevice> m_dev;		//!< Device
+	V2XNetworkTime m_timeOfTheDay;	//!< Time of the day
+	V2XNetworkTime m_absTime;		//!< Absolute time
 
 private:
-	quint32 m_id; /**!< ID */
+	quint32 m_id;					//!< ID
 };

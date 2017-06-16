@@ -95,5 +95,5 @@ public:
 	void initializeEmpty() { m_message->initializeEmpty(); }
 
 private:
-	QSharedDataPointer< ASN1CContainer<MAPEM_t> > m_message; /**!< The message */
+	QSharedDataPointer< ASN1CContainer<MAPEM_t> > m_message; //!< The message
 };

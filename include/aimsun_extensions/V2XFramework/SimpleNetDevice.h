@@ -95,8 +95,8 @@ public slots:
 	void channelRemoved(SimpleChannel *channel);
 
 private:
-	QMap<quint32, SimpleChannel*> m_channels; /**!< The list of attached channel */
-	V2XNetworkNode *m_node; /**!< The owner */
-	QMap<quint32, QMetaObject::Connection> m_connections; /**!< The list of connections to the destroyed signal */
+	QMap<quint32, SimpleChannel*> m_channels; //!< The list of attached channel
+	V2XNetworkNode *m_node; //!< The owner
+	QMap<quint32, QMetaObject::Connection> m_connections; //!< The list of connections to the destroyed signal
 };
 

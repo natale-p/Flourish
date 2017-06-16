@@ -94,5 +94,5 @@ public:
 	void initializeEmpty() { m_message->initializeEmpty(); }
 
 private:
-	QSharedDataPointer< ASN1CContainer<DENM_t> > m_message; /**!< The real data */
+	QSharedDataPointer< ASN1CContainer<DENM_t> > m_message; //!< The real data
 };

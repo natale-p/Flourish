@@ -106,6 +106,7 @@ public:
 	 * It will be prepended by "GKExperiment::" to form a complete name
 	 * "GKExperiment::yy::zz").
 	 * \param guiName Translatable name for the GUI
+	 * \param columnType Type of the column
 	 *
 	 * \return -1 in case of failure, otherwise the attribute ID
 	 */
@@ -128,7 +129,7 @@ public:
 
 	/**
 	 * \brief Gets a unique id of a column (attribute) from GKExperiment.
-	 * \param iname Internal attribute name
+	 * \param internalName Internal attribute name
 	 * \return The unique id of the attribute from GKExperiment
 	 */
 	int getExperimentColumnId(const QString & internalName) const;
@@ -136,7 +137,7 @@ public:
 	/**
 	 * \brief Gets a unique id of a column (attribute) for a generic type
 	 * \param typeName The type name
-	 * \param iname Internal attribute name
+	 * \param internalName Internal attribute name
 	 * \return The unique id of the attribute
 	 */
 	int getTypeColumnID(const QString &typeName, const QString &internalName) const;
@@ -187,10 +188,10 @@ public:
 	 * \brief Define a preference for the attributes.
 	 */
 	struct UserPreference {
-		QString internalName;	/** \brief Internal name */
-		QString guiName;		/** \brief GUI name (translatable) */
-		Type type;				/** \brief Type of the attribute */
-		QString defaultValue;	/** \brief Default value */
+		QString internalName;	//!< \brief Internal name
+		QString guiName;		//!< \brief GUI name (translatable) */
+		Type type;				//!< \brief Type of the attribute */
+		QString defaultValue;	//!< \brief Default value */
 	};
 
 	/**
@@ -274,6 +275,13 @@ public:
 	 * \return a pointer to GKColumn if found, nullptr otherwise
 	 */
 	GKColumn* getTypeColumn(const QString &typeName, const QString &internalName) const;
+
+	/**
+	 * \brief Get a pointer to the current experiment
+	 *
+	 * \return an (opaque) pointer to the experiment
+	 */
+	const GKExperiment *getExperiment () const;
 
 private:
 	/**
