@@ -24,7 +24,7 @@ void FlourishInfrastructureRulesEngine::evaluate( const QSharedPointer<const CAM
 	Q_UNUSED(message);
 	Q_UNUSED(agent);
 
-	qDebug() << "Received CAMMessage";
+	qDebug() << agent->getId() << "Received CAMMessage from" << message->getSource();
 }
 
 void FlourishInfrastructureRulesEngine::evaluate( const QSharedPointer<const DENMMessage> &message,
@@ -35,7 +35,7 @@ void FlourishInfrastructureRulesEngine::evaluate( const QSharedPointer<const DEN
 
 
 
-	qDebug() << "Received DENMMessage";
+	qDebug() << agent->getId() << "Received DENMMessage from" << message->getSource();
 }
 
 void FlourishInfrastructureRulesEngine::evaluate( const QSharedPointer<const SPATEMMessage> &message,
@@ -45,7 +45,7 @@ void FlourishInfrastructureRulesEngine::evaluate( const QSharedPointer<const SPA
 	Q_UNUSED(agent);
 
 
-	qDebug() << "Received SPATEMMessage";
+	qDebug() << agent->getId() << "Received SPATEMMessage from" << message->getSource();
 }
 
 void FlourishInfrastructureRulesEngine::evaluate( const QSharedPointer<const MAPEMMessage> &message,
@@ -55,5 +55,5 @@ void FlourishInfrastructureRulesEngine::evaluate( const QSharedPointer<const MAP
 	Q_UNUSED(agent);
 
 
-	qDebug() << "Received MAPEMMessage";
+	qDebug() << agent->getId() << "Received MAPEMMessage from" << message->getSource();
 }

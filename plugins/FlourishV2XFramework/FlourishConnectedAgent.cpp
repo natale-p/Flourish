@@ -70,7 +70,7 @@ PacketPointerList FlourishConnectedAgent::generateMessage()
 	data->header.stationID = V2XNetworkNode::getId();
 
 	// CoopAwareness
-	data->cam.generationDeltaTime = V2XNetworkNode::getCurrentTime().getMilliseconds();
+	data->cam.generationDeltaTime = V2XNetworkNode::getAbsTime().getMilliseconds();
 
 	// CAM parameters
 	// Basic Container

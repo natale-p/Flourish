@@ -12,6 +12,7 @@
 class FlourishBroker;
 
 /**
+ * \ingroup FlourishV2X
  * \brief A mobile agent
  *
  * When it receives a message, the method received is invoked, and then the

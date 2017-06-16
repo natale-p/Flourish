@@ -9,7 +9,7 @@
 #include "FlourishV2XFrameworkUtil.h"
 
 /**
- * \ingroup V2XFramework
+ * \ingroup FlourishV2X
  * \brief Takes decision for an infrastructure giving the received messages
  *
  * Takes decisions based on the incoming messages. The 'evaluate' methods,
@@ -52,5 +52,5 @@ public:
 	 * \param message pointer to the MAP message
 	 * \param agent the agent originating the request
 	 */
-	virtual void evaluate( const QSharedPointer<const MAPEMMessage> &message, V2XSimpleAP *agent);
+	virtual void evaluate( const QSharedPointer<const MAPEMMessage> &message, V2XSimpleAP *agent) Q_DECL_OVERRIDE;
 };

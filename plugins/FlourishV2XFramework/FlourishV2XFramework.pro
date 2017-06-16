@@ -66,7 +66,7 @@ contains(DEVELOPER, true) {
 	INSTALLS += adynamic_api_headers
 	PRE_TARGETDEPS += install_adynamic_api_headers
 
-	V2XFramework_headers = Aggregate.h \
+	V2XFramework_headers = \
 	Asn1cContainer.h \
 	CAMMessage.h \
 	Channel.h \
@@ -85,6 +85,7 @@ contains(DEVELOPER, true) {
 	V2XRulesEngine.h \
 	V2XNetworkNode.h \
 	V2XIntersection.h \
+	V2XGenericLane.h \
 	MAPEMMessage.h
 
 	v2x_framework_headers.path = ../../include/aimsun_extensions/V2XFramework

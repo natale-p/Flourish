@@ -40,7 +40,6 @@ void FlourishBroker::doPost(double time, double timeSta, double simStep)
 
 	for(V2XSimpleAP *station : m_stations.values())
 	{
-		station->distributeMessages();
 		station->sendMessage();
 	}
 }
@@ -50,18 +49,25 @@ void FlourishBroker::doPre(double time, double timeSta, double simStep)
 	Q_UNUSED(timeSta);
 	Q_UNUSED(simStep);
 
-	V2XNetworkTime currentTime;
-	currentTime.fromSeconds(time);
+	V2XNetworkTime timeOfTheDay;
+	timeOfTheDay.fromSeconds(timeSta);
 
-	// post operation for stations
+	V2XNetworkTime absTime;
+	absTime.fromSeconds(time);
+
+	// pre operation for stations
 	for(V2XSimpleAP *station : m_stations.values())
 	{
-		station->setTime(currentTime);
+		station->setTimeOfTheDay(timeOfTheDay);
+		station->setAbsTime(absTime);
+
+		station->distributeMessages();
 	}
 
 	for (FlourishConnectedAgent *agent : m_agents.values())
 	{
-		agent->setTime(currentTime);
+		agent->setTimeOfTheDay(timeOfTheDay);
+		agent->setAbsTime(absTime);
 	}
 }
 
