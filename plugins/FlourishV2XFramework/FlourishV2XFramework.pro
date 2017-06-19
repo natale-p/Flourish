@@ -610,7 +610,7 @@ INCLUDEPATH += $$PREFIX_INCLUDEPATH/aimsun_extensions/V2XFramework/ITS-spec
 DEPENDPATH += $$INCLUDEPATH
 
 win32 {
-	LIBS += -L$${BIN_PATH} -langkernel -ladynamicapi8 -lV2XFramework8
+	LIBS += -L$${BIN_PATH} -langkernel8 -ladynamicapi8 -lV2XFramework8
 } macx {
 	LIBS += $$QWT_LIBS $$GDAL_LIBS $$QSCINDILLA_LIBS
 	LIBS += -L$${BIN_PATH}/AIMSUN.app/Contents/Frameworks -langkernel -ladynamicapi -lV2XFramework
