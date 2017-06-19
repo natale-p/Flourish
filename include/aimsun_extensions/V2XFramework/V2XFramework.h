@@ -11,8 +11,6 @@
 #include <QObject>
 #include <QMap>
 
-#include <GKGeoUtil.h>
-
 /**
  * \defgroup V2XFramework V2X Framework for Aimsun
  *

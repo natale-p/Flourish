@@ -115,7 +115,7 @@ public:
 	 */
 	bool agentIsInRadius(const V2XNetworkNode *agent) const
 	{
-		GKPoint agentPos = agent->getPosition();
+		V2XNetworkPoint agentPos = agent->getPosition();
 		return V2XSimpleAP::isInRadius(this, agentPos);
 	}
 
@@ -129,7 +129,7 @@ public:
 	void connectIntersections (V2XIntersectionList connectedIntersections);
 
 	//inherited from V2XNetworkNode
-	virtual GKPoint getPosition() const Q_DECL_OVERRIDE;
+	virtual V2XNetworkPoint getPosition() const Q_DECL_OVERRIDE;
 
 public slots:
 	/**
@@ -191,7 +191,7 @@ private:
 	 * \param pos Position to check
 	 * \return true if pos in the range of the AP
 	 */
-	static bool isInRadius(const V2XSimpleAP *AP, const GKPoint &pos)
+	static bool isInRadius(const V2XSimpleAP *AP, const V2XNetworkPoint &pos)
 	{
 		return (AP->getPosition().distance2D(pos) < AP->getRadius());
 	}

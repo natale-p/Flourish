@@ -46,7 +46,7 @@ public:
 	virtual void getState(double time, double timeSta) Q_DECL_OVERRIDE;
 	virtual void setState(double time, double timeSta) Q_DECL_OVERRIDE;
 	// inherit by V2XNetworkNode
-	virtual GKPoint getPosition() const Q_DECL_OVERRIDE;
+	virtual V2XNetworkPoint getPosition() const Q_DECL_OVERRIDE;
 
 	/**
 	 * \brief Try to update the active links
@@ -98,7 +98,7 @@ private:
 	void initialConnect();
 
 private:
-	GKPoint m_position; //!< The position of the station
+	V2XNetworkPoint m_position; //!< The position of the station
 	QMap<quint32, V2XNetworkNode*> m_inRangeStations; //!< List of in-range stations
 	QMap<quint32, V2XNetworkNode*> m_inRangeAgents; //!< List of in-range agents
 };

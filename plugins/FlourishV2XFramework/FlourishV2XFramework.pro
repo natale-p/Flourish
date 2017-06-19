@@ -43,14 +43,6 @@ QT += sql xml widgets
 contains(DEVELOPER, true) {
 	message("Developer build; install headers enabled")
 
-	core_ang_kernel_headers.path = ../../include/core/ang_kernel
-	core_ang_kernel_headers.files += $${SOURCES_DIR}/core/ang_kernel/GKPoint.h
-	core_ang_kernel_headers.files += $${SOURCES_DIR}/core/ang_kernel/GKGeoUtil.h
-	core_ang_kernel_headers.files += $${SOURCES_DIR}/core/ang_kernel/GKUtil.h
-
-	INSTALLS += core_ang_kernel_headers
-	PRE_TARGETDEPS += install_core_ang_kernel_headers
-
 	random_headers.path = ../../include/core/random
 	random_headers.files += $${SOURCES_DIR}/core/random/FRand.h
 
@@ -610,13 +602,13 @@ INCLUDEPATH += $$PREFIX_INCLUDEPATH/aimsun_extensions/V2XFramework/ITS-spec
 DEPENDPATH += $$INCLUDEPATH
 
 win32 {
-	LIBS += -L$${BIN_PATH} -langkernel8 -ladynamicapi8 -lV2XFramework8
+        LIBS += -L$${BIN_PATH} -ladynamicapi8 -lV2XFramework8
 } macx {
 	LIBS += $$QWT_LIBS $$GDAL_LIBS $$QSCINDILLA_LIBS
-	LIBS += -L$${BIN_PATH}/AIMSUN.app/Contents/Frameworks -langkernel -ladynamicapi -lV2XFramework
+        LIBS += -L$${BIN_PATH}/AIMSUN.app/Contents/Frameworks -ladynamicapi -lV2XFramework
 } linux {
 	LIBS += $$QWT_LIBS $$GDAL_LIBS $$QSCINDILLA_LIBS
-	LIBS += -L$${BIN_PATH} -langkernel -ladynamicapi -lV2XFramework
+        LIBS += -L$${BIN_PATH} -ladynamicapi -lV2XFramework
 
         QMAKE_CXXFLAGS += -Werror
 }

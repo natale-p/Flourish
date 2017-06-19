@@ -6,10 +6,59 @@
 #pragma once
 #include <QtCore>
 //#include "Aggregate.h"
-#include "GKPoint.h"
 #include "V2XFrameworkUtil.h"
 
 class NetDevice;
+class GKPoint;
+
+class V2XNetworkPoint
+{
+public:
+	V2XNetworkPoint();
+	V2XNetworkPoint(const GKPoint *point);
+	V2XNetworkPoint(double x, double y, double z);
+	~V2XNetworkPoint();
+
+	//! Distance between "this" point and point "c" whitout use Z coordinate.
+	double distance2D( const V2XNetworkPoint & c ) const;
+	//! Distance between "this" point and point "c".
+	double distance3D( const V2XNetworkPoint & c ) const;
+
+	double		x;	//!< X coordinate of the point
+	double		y;	//!< Y coordinate of the point
+	double		z;	//!< Z coordinate of the point
+
+
+	bool operator == ( const V2XNetworkPoint & c ) const;
+	/*! Operator that returns true if the two compared points are different.
+		This operator returns false if the points are equal.
+	*/
+	bool operator != ( const V2XNetworkPoint & c ) const;
+
+	/*! Operator that adds one point to another.*/
+	V2XNetworkPoint & operator += ( const V2XNetworkPoint & c );
+	/*! Operator that subtracts one point to another.*/
+	V2XNetworkPoint & operator -= ( const V2XNetworkPoint & c );
+
+	V2XNetworkPoint &operator *=(double f);
+
+	/*! Operator that adds one point to another.*/
+	V2XNetworkPoint operator + ( const V2XNetworkPoint & c ) const;
+	/*! Operator that subtracts one point to another.*/
+	V2XNetworkPoint operator - ( const V2XNetworkPoint & c ) const;
+	/*! Operator that adds a scalar to all point components*/
+	V2XNetworkPoint operator + (double c) const = delete;
+	/*! Operator that subtracts a scalar to all point components.*/
+	V2XNetworkPoint operator - (double c) const = delete;
+	/*! Operator that multiplies a scalar to all point components*/
+	V2XNetworkPoint operator * (double c) const = delete;
+	/*! Operator that divides a scalar to all point components*/
+	V2XNetworkPoint operator / (double c) const = delete;
+
+	//! Dot product
+	double operator*(const V2XNetworkPoint &c) const;
+
+};
 
 /**
  * \ingroup V2XFramework
@@ -122,7 +171,7 @@ public:
 	 * \brief Get the position of the node
 	 * \return the position of the node
 	 */
-	virtual GKPoint getPosition () const = 0;
+	virtual V2XNetworkPoint getPosition () const = 0;
 
 	/**
 	 * \brief Update the time of the day in this node
