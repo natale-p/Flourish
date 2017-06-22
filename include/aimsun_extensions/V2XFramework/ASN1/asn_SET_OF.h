@@ -5,6 +5,8 @@
 #ifndef	ASN_SET_OF_H
 #define	ASN_SET_OF_H
 
+#include "V2XFrameworkUtil.h"
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -29,7 +31,7 @@ extern "C" {
  * RETURN VALUES:
  * 0 for success and -1/errno for failure.
  */
-int  asn_set_add(void *asn_set_of_x, void *ptr);
+V2XFRAMEWORKEXPORT int  asn_set_add(void *asn_set_of_x, void *ptr);
 
 /*
  * Delete the element from the set by its number (base 0).

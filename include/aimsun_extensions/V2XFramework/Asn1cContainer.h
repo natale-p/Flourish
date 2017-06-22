@@ -145,7 +145,7 @@ struct asn_TYPE_descriptor_s;
  *
  */
 template<typename asn_TYPE>
-class V2XFRAMEWORKEXPORT ASN1CContainer : public QSharedData
+class ASN1CContainer : public QSharedData
 {
 public:
 	/**
@@ -171,7 +171,7 @@ public:
 
 	/**
 	 * \brief Return a pointer to the ASN.1 structure, allowing reading and editing
-	 *
+	 *setTypeDef
 	 * If the internal reference count is greater than 1, it will trigger
 	 * a deep copy even in case of a read operation.
 	 *
@@ -499,7 +499,6 @@ void ASN1CContainer<asn_TYPE>::setData(asn_TYPE *data)
 	}
 	m_data = data;
 }
-
 
 // --------------------- to [something] ---------------------------------------
 template<typename asn_TYPE>

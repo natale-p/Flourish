@@ -1,23 +1,22 @@
-//-*-Mode: C++;-*-
+/**
+  * Copyright TSS 2017
+  *
+  * Author: Natale Patriciello <natale.patriciello@aimsun.com>
+  */
 #pragma once
 
-//SDK
-
 #ifdef _WIN32
-    #ifdef _FlourishV2XFrameworkEXTDLL_DEF
-        #define FLOURISHV2XFRAMEWORKEXPORT __declspec(dllexport)
-    #else
-    #ifdef _FlourishV2XFrameworkEXTDLL_DEF
-    #define FLOURISHV2XFRAMEWORKEXPORT __declspec(dllexport)
-            #else
-    #define FLOURISHV2XFRAMEWORKEXPORT __declspec(dllimport)
-            #endif
-    #endif
-
-    #pragma warning(disable: 4251)
-    #pragma warning(disable: 4786)
-    #pragma warning(disable: 4503)
-    //	#pragma warning(disable: 4284)
+	#ifdef _FlourishV2XFrameworkEXTDLL_DEF
+		#define FLOURISHV2XFRAMEWORKEXPORT __declspec(dllexport)
+	#else
+		#define FLOURISHV2XFRAMEWORKEXPORT __declspec(dllimport)
+	#endif
 #else
-#define FLOURISHV2XFRAMEWORKEXPORT
+	#ifdef _FlourishV2XFrameworkEXTDLL_DEF
+		// it is assumed that in linux we are using gcc >= 4.0
+		#define FLOURISHV2XFRAMEWORKEXPORT __attribute__ ((visibility("default")))
+	#else
+		#define FLOURISHV2XFRAMEWORKEXPORT
+	#endif
 #endif
+

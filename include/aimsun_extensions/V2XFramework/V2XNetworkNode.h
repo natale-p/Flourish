@@ -11,7 +11,7 @@
 class NetDevice;
 class GKPoint;
 
-class V2XNetworkPoint
+class V2XFRAMEWORKEXPORT V2XNetworkPoint
 {
 public:
 	V2XNetworkPoint();

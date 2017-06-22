@@ -14,6 +14,8 @@
 #include <QList>
 #include <QVector>
 
+#include "V2XFrameworkUtil.h"
+
 class GKNode;
 class GKSection;
 class V2XIntersection;
@@ -47,7 +49,7 @@ typedef QList<V2XIntersectionPointer> V2XIntersectionList;
  * between V2XGenericLane objects.
  *
  */
-class V2XIntersection : ADynamicControl
+class V2XFRAMEWORKEXPORT V2XIntersection : ADynamicControl
 {
 public:
 	/**

@@ -6,6 +6,7 @@
 #define	_XER_ENCODER_H_
 
 #include <asn_application.h>
+#include "V2XFrameworkUtil.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -23,7 +24,7 @@ enum xer_encoder_flags_e {
 /*
  * The XER encoder of any type. May be invoked by the application.
  */
-asn_enc_rval_t xer_encode(struct asn_TYPE_descriptor_s *type_descriptor,
+V2XFRAMEWORKEXPORT asn_enc_rval_t xer_encode(struct asn_TYPE_descriptor_s *type_descriptor,
 		void *struct_ptr,	/* Structure to be encoded */
 		enum xer_encoder_flags_e xer_flags,
 		asn_app_consume_bytes_f *consume_bytes_cb,

@@ -5,6 +5,7 @@
   */
 #pragma once
 #include "GenericLane.h"
+#include "V2XFrameworkUtil.h"
 
 #include <QList>
 #include <QSharedPointer>
@@ -32,7 +33,7 @@ typedef QList<V2XGenericLanePointer> V2XGenericLaneList;
  * simulator into common defined structures, to be used to construct ETSI-compliant
  * messages.
  */
-class V2XGenericLane
+class V2XFRAMEWORKEXPORT V2XGenericLane
 {
 private:
 	/**

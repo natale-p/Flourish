@@ -34,7 +34,6 @@ VERSION = 8.2.0
 CONFIG += dll qt thread exceptions rtti
 
 win32 {
-	DEFINES += _V2XFrameworkEXTDLL_DEF
 	DEFINES += _FlourishV2XFrameworkEXTDLL_DEF
 }
 

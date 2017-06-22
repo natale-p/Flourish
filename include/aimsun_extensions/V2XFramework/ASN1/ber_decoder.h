@@ -6,6 +6,7 @@
 #define	_BER_DECODER_H_
 
 #include <asn_application.h>
+#include "V2XFrameworkUtil.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -19,7 +20,7 @@ struct asn_codec_ctx_s;		/* Forward declaration */
  * This function may be invoked directly from the application.
  * The der_encode() function (der_encoder.h) is an opposite to ber_decode().
  */
-asn_dec_rval_t ber_decode(struct asn_codec_ctx_s *opt_codec_ctx,
+V2XFRAMEWORKEXPORT asn_dec_rval_t ber_decode(struct asn_codec_ctx_s *opt_codec_ctx,
 	struct asn_TYPE_descriptor_s *type_descriptor,
 	void **struct_ptr,	/* Pointer to a target structure's pointer */
 	const void *buffer,	/* Data to be decoded */
