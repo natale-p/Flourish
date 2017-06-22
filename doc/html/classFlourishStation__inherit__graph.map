@@ -1,0 +1,5 @@
+<map id="FlourishStation" name="FlourishStation">
+<area shape="rect" id="node5" href="$classFlourishConnectedAgent.html" title="Represents a connected vehicle (e.g., a mobile station) in the Flourish framework. " alt="" coords="5,304,171,331"/>
+<area shape="rect" id="node2" href="$classV2XNetworkNode.html" title="A Node in the network. " alt="" coords="25,155,151,181"/>
+<area shape="rect" id="node3" href="$classAggregation_1_1Aggregate.html" title="Aggregate QObjects. " alt="" coords="9,80,167,107"/>
+</map>

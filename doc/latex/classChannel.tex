@@ -1,0 +1,82 @@
+\hypertarget{classChannel}{}\section{Channel Class Reference}
+\label{classChannel}\index{Channel@{Channel}}
+
+
+Abstract \hyperlink{classChannel}{Channel} Base Class.  
+
+
+
+
+{\ttfamily \#include $<$Channel.\+h$>$}
+
+
+
+Inheritance diagram for Channel\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{classChannel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Channel\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=133pt]{classChannel__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classChannel_af2b4b16288cbb2c592b1e0f6486c2430}{Channel} ()\hypertarget{classChannel_af2b4b16288cbb2c592b1e0f6486c2430}{}\label{classChannel_af2b4b16288cbb2c592b1e0f6486c2430}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{classChannel}{Channel} constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classChannel_af649ff0e4381291b608813b35f998047}{$\sim$\+Channel} ()\hypertarget{classChannel_af649ff0e4381291b608813b35f998047}{}\label{classChannel_af649ff0e4381291b608813b35f998047}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{classChannel}{Channel} deconstructor. \end{DoxyCompactList}\item 
+qint32 \hyperlink{classChannel_af2a456051ae4b3765e4dd01f169c0317}{get\+Id} (void) const 
+\item 
+virtual quint32 \hyperlink{classChannel_a28065f95665bec4b81c305dbe04d2af4}{get\+N\+Devices} (void) const =0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract \hyperlink{classChannel}{Channel} Base Class. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classSimpleChannel}{Simple\+Channel} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\index{Channel@{Channel}!get\+Id@{get\+Id}}
+\index{get\+Id@{get\+Id}!Channel@{Channel}}
+\subsubsection[{\texorpdfstring{get\+Id(void) const }{getId(void) const }}]{\setlength{\rightskip}{0pt plus 5cm}qint32 Channel\+::get\+Id (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classChannel_af2a456051ae4b3765e4dd01f169c0317}{}\label{classChannel_af2a456051ae4b3765e4dd01f169c0317}
+\begin{DoxyReturn}{Returns}
+the unique id of this channel
+\end{DoxyReturn}
+This unique id happens to be also the index of the \hyperlink{classChannel}{Channel} into the Channel\+List. \index{Channel@{Channel}!get\+N\+Devices@{get\+N\+Devices}}
+\index{get\+N\+Devices@{get\+N\+Devices}!Channel@{Channel}}
+\subsubsection[{\texorpdfstring{get\+N\+Devices(void) const =0}{getNDevices(void) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual quint32 Channel\+::get\+N\+Devices (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classChannel_a28065f95665bec4b81c305dbe04d2af4}{}\label{classChannel_a28065f95665bec4b81c305dbe04d2af4}
+\begin{DoxyReturn}{Returns}
+the number of Net\+Devices connected to this \hyperlink{classChannel}{Channel}. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classSimpleChannel_a6e2407c25fa79ff9f0a22fa1bd65f1d7}{Simple\+Channel}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/aimsun\+\_\+extensions/\+V2\+X\+Framework/Channel.\+h\end{DoxyCompactItemize}

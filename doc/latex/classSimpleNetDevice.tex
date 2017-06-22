@@ -1,0 +1,289 @@
+\hypertarget{classSimpleNetDevice}{}\section{Simple\+Net\+Device Class Reference}
+\label{classSimpleNetDevice}\index{Simple\+Net\+Device@{Simple\+Net\+Device}}
+
+
+A simple \hyperlink{classNetDevice}{Net\+Device}.  
+
+
+
+
+{\ttfamily \#include $<$Simple\+Net\+Device.\+h$>$}
+
+
+
+Inheritance diagram for Simple\+Net\+Device\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=173pt]{classSimpleNetDevice__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Simple\+Net\+Device\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=173pt]{classSimpleNetDevice__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classSimpleNetDevice_ab0820d8c23bc64c58824e70a830d2e5d}{channel\+Removed} (\hyperlink{classSimpleChannel}{Simple\+Channel} $\ast$channel)
+\begin{DoxyCompactList}\small\item\em Called when a channel we were attached to is destroyed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSimpleNetDevice_a797080e518413247b8a14d4da7641724}{Simple\+Net\+Device} ()\hypertarget{classSimpleNetDevice_a797080e518413247b8a14d4da7641724}{}\label{classSimpleNetDevice_a797080e518413247b8a14d4da7641724}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classSimpleNetDevice_a63bb1922138e7d800b765475208942ea}{$\sim$\+Simple\+Net\+Device} ()\hypertarget{classSimpleNetDevice_a63bb1922138e7d800b765475208942ea}{}\label{classSimpleNetDevice_a63bb1922138e7d800b765475208942ea}
+
+\begin{DoxyCompactList}\small\item\em Deconstructor. \end{DoxyCompactList}\item 
+void \hyperlink{classSimpleNetDevice_a8ff228ecc433a6ed058bdcb290f08458}{set\+Node} (\hyperlink{classV2XNetworkNode}{V2\+X\+Network\+Node} $\ast$node)
+\begin{DoxyCompactList}\small\item\em Set the owner node. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classSimpleNetDevice_a525799a679531561aa37c1621a744373}{attach} (\hyperlink{classSimpleChannel}{Simple\+Channel} $\ast$channel)
+\begin{DoxyCompactList}\small\item\em Attach to a channel. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classSimpleNetDevice_a9abf0fa7a4808ce9343a964f141da25c}{detach} (\hyperlink{classSimpleChannel}{Simple\+Channel} $\ast$channel)
+\begin{DoxyCompactList}\small\item\em Detach from a channel. \end{DoxyCompactList}\item 
+Address \hyperlink{classSimpleNetDevice_af57b3191ab96448629dddbeadbb91960}{get\+Broadcast\+Address} ()
+\begin{DoxyCompactList}\small\item\em Get the address which represents the broadcast. \end{DoxyCompactList}\item 
+quint32 \hyperlink{classSimpleNetDevice_aa169aa32a738e2980b08ddc32cb6a252}{devices\+Connected\+To\+Attached\+Channels} () const 
+\begin{DoxyCompactList}\small\item\em Get the number of devices attached to the channels to which this device is attached to. \end{DoxyCompactList}\item 
+void \hyperlink{classSimpleNetDevice_a24c1075eb17c31001763e3b77692550e}{packet\+Received} (const Q\+Shared\+Pointer$<$ const \hyperlink{group__V2XFramework_ga1b82bfc289dbcb9aced56200d7abc964}{Packet} $>$ \&packet)
+\begin{DoxyCompactList}\small\item\em A packet has been received. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classSimpleNetDevice_afa5565402ab4df3f09a78d9cf7ee9143}{send} (Q\+Shared\+Pointer$<$ \hyperlink{group__V2XFramework_ga1b82bfc289dbcb9aced56200d7abc964}{Packet} $>$ packet, const Address \&dest) Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\begin{DoxyCompactList}\small\item\em Send a packet to a destination. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classSimpleNetDevice_a2ca62c834e4940132b8003218309ec06}{send\+From} (Q\+Shared\+Pointer$<$ \hyperlink{group__V2XFramework_ga1b82bfc289dbcb9aced56200d7abc964}{Packet} $>$ packet, const Address \&source, const Address \&dest) Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\begin{DoxyCompactList}\small\item\em Send a packet to a destination from a source. \end{DoxyCompactList}\item 
+virtual \hyperlink{classV2XNetworkNode}{V2\+X\+Network\+Node} $\ast$ \hyperlink{classSimpleNetDevice_a1e7e40ef64fb3f057f6b4a2df054cad2}{get\+Node} () const Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\begin{DoxyCompactList}\small\item\em Get the node associated. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classSimpleNetDevice_a39e6c1c9de73f5c3a6d358a20d54b3c7}{is\+Up} () const Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\begin{DoxyCompactList}\small\item\em Determine if the device is up or not. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A simple \hyperlink{classNetDevice}{Net\+Device}. 
+
+Copyright T\+SS 2017
+
+Author\+: Natale Patriciello \href{mailto:natale.patriciello@aimsun.com}{\tt natale.\+patriciello@aimsun.\+com}
+
+All the logic behind this class is in the methods attach and detach. Basically, it represents a device which can connect to many channels, and that can do a broadcast of Packets to all the other devices attached to them.
+
+A send operation is modeled as a cycle, in which the class calls the method \hyperlink{classSimpleChannel_ab8b945de11215700a1577e2956a7e056}{Simple\+Channel\+::broadcast} over all attached channels. At the receive time, the method packet\+Received will be called by the \hyperlink{classSimpleChannel}{Simple\+Channel} class. For this and other details, please have a look to its documentation.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classSimpleChannel}{Simple\+Channel} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\index{Simple\+Net\+Device@{Simple\+Net\+Device}!attach@{attach}}
+\index{attach@{attach}!Simple\+Net\+Device@{Simple\+Net\+Device}}
+\subsubsection[{\texorpdfstring{attach(\+Simple\+Channel $\ast$channel)}{attach(SimpleChannel *channel)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Simple\+Net\+Device\+::attach (
+\begin{DoxyParamCaption}
+\item[{{\bf Simple\+Channel} $\ast$}]{channel}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classSimpleNetDevice_a525799a679531561aa37c1621a744373}{}\label{classSimpleNetDevice_a525799a679531561aa37c1621a744373}
+
+
+Attach to a channel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & \hyperlink{classChannel}{Channel} \\
+\hline
+\end{DoxyParams}
+\index{Simple\+Net\+Device@{Simple\+Net\+Device}!channel\+Removed@{channel\+Removed}}
+\index{channel\+Removed@{channel\+Removed}!Simple\+Net\+Device@{Simple\+Net\+Device}}
+\subsubsection[{\texorpdfstring{channel\+Removed}{channelRemoved}}]{\setlength{\rightskip}{0pt plus 5cm}void Simple\+Net\+Device\+::channel\+Removed (
+\begin{DoxyParamCaption}
+\item[{{\bf Simple\+Channel} $\ast$}]{channel}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}\hypertarget{classSimpleNetDevice_ab0820d8c23bc64c58824e70a830d2e5d}{}\label{classSimpleNetDevice_ab0820d8c23bc64c58824e70a830d2e5d}
+
+
+Called when a channel we were attached to is destroyed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & \hyperlink{classChannel}{Channel} destroyed \\
+\hline
+\end{DoxyParams}
+\index{Simple\+Net\+Device@{Simple\+Net\+Device}!detach@{detach}}
+\index{detach@{detach}!Simple\+Net\+Device@{Simple\+Net\+Device}}
+\subsubsection[{\texorpdfstring{detach(\+Simple\+Channel $\ast$channel)}{detach(SimpleChannel *channel)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Simple\+Net\+Device\+::detach (
+\begin{DoxyParamCaption}
+\item[{{\bf Simple\+Channel} $\ast$}]{channel}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classSimpleNetDevice_a9abf0fa7a4808ce9343a964f141da25c}{}\label{classSimpleNetDevice_a9abf0fa7a4808ce9343a964f141da25c}
+
+
+Detach from a channel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & Channnel \\
+\hline
+\end{DoxyParams}
+\index{Simple\+Net\+Device@{Simple\+Net\+Device}!devices\+Connected\+To\+Attached\+Channels@{devices\+Connected\+To\+Attached\+Channels}}
+\index{devices\+Connected\+To\+Attached\+Channels@{devices\+Connected\+To\+Attached\+Channels}!Simple\+Net\+Device@{Simple\+Net\+Device}}
+\subsubsection[{\texorpdfstring{devices\+Connected\+To\+Attached\+Channels() const }{devicesConnectedToAttachedChannels() const }}]{\setlength{\rightskip}{0pt plus 5cm}quint32 Simple\+Net\+Device\+::devices\+Connected\+To\+Attached\+Channels (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classSimpleNetDevice_aa169aa32a738e2980b08ddc32cb6a252}{}\label{classSimpleNetDevice_aa169aa32a738e2980b08ddc32cb6a252}
+
+
+Get the number of devices attached to the channels to which this device is attached to. 
+
+\begin{DoxyReturn}{Returns}
+a number 
+\end{DoxyReturn}
+\index{Simple\+Net\+Device@{Simple\+Net\+Device}!get\+Broadcast\+Address@{get\+Broadcast\+Address}}
+\index{get\+Broadcast\+Address@{get\+Broadcast\+Address}!Simple\+Net\+Device@{Simple\+Net\+Device}}
+\subsubsection[{\texorpdfstring{get\+Broadcast\+Address()}{getBroadcastAddress()}}]{\setlength{\rightskip}{0pt plus 5cm}Address Simple\+Net\+Device\+::get\+Broadcast\+Address (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classSimpleNetDevice_af57b3191ab96448629dddbeadbb91960}{}\label{classSimpleNetDevice_af57b3191ab96448629dddbeadbb91960}
+
+
+Get the address which represents the broadcast. 
+
+\begin{DoxyReturn}{Returns}
+the address which represents the broadcast 
+\end{DoxyReturn}
+\index{Simple\+Net\+Device@{Simple\+Net\+Device}!get\+Node@{get\+Node}}
+\index{get\+Node@{get\+Node}!Simple\+Net\+Device@{Simple\+Net\+Device}}
+\subsubsection[{\texorpdfstring{get\+Node() const Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE}{getNode() const Q_DECL_OVERRIDE}}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf V2\+X\+Network\+Node}$\ast$ Simple\+Net\+Device\+::get\+Node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classSimpleNetDevice_a1e7e40ef64fb3f057f6b4a2df054cad2}{}\label{classSimpleNetDevice_a1e7e40ef64fb3f057f6b4a2df054cad2}
+
+
+Get the node associated. 
+
+\begin{DoxyReturn}{Returns}
+The node 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classNetDevice_a34ebef976ef91e805d49982c8b8b8510}{Net\+Device}.
+
+\index{Simple\+Net\+Device@{Simple\+Net\+Device}!is\+Up@{is\+Up}}
+\index{is\+Up@{is\+Up}!Simple\+Net\+Device@{Simple\+Net\+Device}}
+\subsubsection[{\texorpdfstring{is\+Up() const Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE}{isUp() const Q_DECL_OVERRIDE}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Simple\+Net\+Device\+::is\+Up (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classSimpleNetDevice_a39e6c1c9de73f5c3a6d358a20d54b3c7}{}\label{classSimpleNetDevice_a39e6c1c9de73f5c3a6d358a20d54b3c7}
+
+
+Determine if the device is up or not. 
+
+\begin{DoxyReturn}{Returns}
+true if it is up (attached to a channel) 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classNetDevice_a30b09e09a2b54cdfb41342aba5750196}{Net\+Device}.
+
+\index{Simple\+Net\+Device@{Simple\+Net\+Device}!packet\+Received@{packet\+Received}}
+\index{packet\+Received@{packet\+Received}!Simple\+Net\+Device@{Simple\+Net\+Device}}
+\subsubsection[{\texorpdfstring{packet\+Received(const Q\+Shared\+Pointer$<$ const Packet $>$ \&packet)}{packetReceived(const QSharedPointer< const Packet > &packet)}}]{\setlength{\rightskip}{0pt plus 5cm}void Simple\+Net\+Device\+::packet\+Received (
+\begin{DoxyParamCaption}
+\item[{const Q\+Shared\+Pointer$<$ const {\bf Packet} $>$ \&}]{packet}
+\end{DoxyParamCaption}
+)}\hypertarget{classSimpleNetDevice_a24c1075eb17c31001763e3b77692550e}{}\label{classSimpleNetDevice_a24c1075eb17c31001763e3b77692550e}
+
+
+A packet has been received. 
+
+It emits the received signal, to which the owning class should connect to.
+
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & Received packet \\
+\hline
+\end{DoxyParams}
+\index{Simple\+Net\+Device@{Simple\+Net\+Device}!send@{send}}
+\index{send@{send}!Simple\+Net\+Device@{Simple\+Net\+Device}}
+\subsubsection[{\texorpdfstring{send(\+Q\+Shared\+Pointer$<$ Packet $>$ packet, const Address \&dest) Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE}{send(QSharedPointer< Packet > packet, const Address &dest) Q_DECL_OVERRIDE}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Simple\+Net\+Device\+::send (
+\begin{DoxyParamCaption}
+\item[{Q\+Shared\+Pointer$<$ {\bf Packet} $>$}]{packet, }
+\item[{const Address \&}]{dest}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classSimpleNetDevice_afa5565402ab4df3f09a78d9cf7ee9143}{}\label{classSimpleNetDevice_afa5565402ab4df3f09a78d9cf7ee9143}
+
+
+Send a packet to a destination. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & packet to send \\
+\hline
+{\em dest} & destination \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the packet is enqueued successfully for transmission 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classNetDevice_af454c2180f83e8a25791621ad0d119f5}{Net\+Device}.
+
+\index{Simple\+Net\+Device@{Simple\+Net\+Device}!send\+From@{send\+From}}
+\index{send\+From@{send\+From}!Simple\+Net\+Device@{Simple\+Net\+Device}}
+\subsubsection[{\texorpdfstring{send\+From(\+Q\+Shared\+Pointer$<$ Packet $>$ packet, const Address \&source, const Address \&dest) Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE}{sendFrom(QSharedPointer< Packet > packet, const Address &source, const Address &dest) Q_DECL_OVERRIDE}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Simple\+Net\+Device\+::send\+From (
+\begin{DoxyParamCaption}
+\item[{Q\+Shared\+Pointer$<$ {\bf Packet} $>$}]{packet, }
+\item[{const Address \&}]{source, }
+\item[{const Address \&}]{dest}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classSimpleNetDevice_a2ca62c834e4940132b8003218309ec06}{}\label{classSimpleNetDevice_a2ca62c834e4940132b8003218309ec06}
+
+
+Send a packet to a destination from a source. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & packet to send \\
+\hline
+{\em source} & source address \\
+\hline
+{\em dest} & destination address \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the packet is enqueued successfully for transmission 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classNetDevice_a25395de765edd09a9585dd5c66519cf8}{Net\+Device}.
+
+\index{Simple\+Net\+Device@{Simple\+Net\+Device}!set\+Node@{set\+Node}}
+\index{set\+Node@{set\+Node}!Simple\+Net\+Device@{Simple\+Net\+Device}}
+\subsubsection[{\texorpdfstring{set\+Node(\+V2\+X\+Network\+Node $\ast$node)}{setNode(V2XNetworkNode *node)}}]{\setlength{\rightskip}{0pt plus 5cm}void Simple\+Net\+Device\+::set\+Node (
+\begin{DoxyParamCaption}
+\item[{{\bf V2\+X\+Network\+Node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\hypertarget{classSimpleNetDevice_a8ff228ecc433a6ed058bdcb290f08458}{}\label{classSimpleNetDevice_a8ff228ecc433a6ed058bdcb290f08458}
+
+
+Set the owner node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & owner \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/aimsun\+\_\+extensions/\+V2\+X\+Framework/Simple\+Net\+Device.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,4 @@
+<map id="VehicleIdentification" name="VehicleIdentification">
+<area shape="rect" id="node2" href="$structOCTET__STRING.html" title="OCTET_STRING" alt="" coords="109,95,235,121"/>
+<area shape="rect" id="node3" href="$structasn__struct__ctx__s.html" title="asn_struct_ctx_s" alt="" coords="13,5,136,32"/>
+</map>

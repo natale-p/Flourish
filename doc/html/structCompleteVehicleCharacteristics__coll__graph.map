@@ -1,0 +1,8 @@
+<map id="CompleteVehicleCharacteristics" name="CompleteVehicleCharacteristics">
+<area shape="rect" id="node2" href="$structTractorCharacteristics.html" title="TractorCharacteristics" alt="" coords="657,143,808,169"/>
+<area shape="rect" id="node3" href="$structTractorCharacteristics_1_1TractorCharacteristics____ranges.html" title="TractorCharacteristics\l::TractorCharacteristics\l__ranges" alt="" coords="233,91,392,147"/>
+<area shape="rect" id="node4" href="$structasn__struct__ctx__s.html" title="asn_struct_ctx_s" alt="" coords="5,151,128,177"/>
+<area shape="rect" id="node5" href="$structTractorCharacteristics_1_1TractorCharacteristics____notEqualTo.html" title="TractorCharacteristics\l::TractorCharacteristics\l__notEqualTo" alt="" coords="233,171,392,227"/>
+<area shape="rect" id="node6" href="$structTractorCharacteristics_1_1TractorCharacteristics____equalTo.html" title="TractorCharacteristics\l::TractorCharacteristics\l__equalTo" alt="" coords="233,251,392,307"/>
+<area shape="rect" id="node7" href="$structCompleteVehicleCharacteristics_1_1CompleteVehicleCharacteristics____trailer.html" title="CompleteVehicleCharacteristics\l::CompleteVehicleCharacteristics\l__trailer" alt="" coords="416,311,633,367"/>
+</map>

@@ -1,0 +1,334 @@
+\hypertarget{classGKTimeDuration}{}\section{G\+K\+Time\+Duration Class Reference}
+\label{classGKTimeDuration}\index{G\+K\+Time\+Duration@{G\+K\+Time\+Duration}}
+
+
+A positive time duration with a precision of millisecond.  
+
+
+
+
+{\ttfamily \#include $<$G\+K\+Time\+Duration.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries G\+K\+Time\+Duration} (quint64 dsinit)\hypertarget{classGKTimeDuration_ac053c096f3666db57e364bf2b04bd4d9}{}\label{classGKTimeDuration_ac053c096f3666db57e364bf2b04bd4d9}
+
+\item 
+{\bfseries G\+K\+Time\+Duration} (int h, int m, int s=0, int ms=0)\hypertarget{classGKTimeDuration_a37253720e036484b0b317c25302bbb76}{}\label{classGKTimeDuration_a37253720e036484b0b317c25302bbb76}
+
+\item 
+{\bfseries G\+K\+Time\+Duration} (const Q\+Time \&t)\hypertarget{classGKTimeDuration_a4fef2ceb1797b3513ec2519e80ebc253}{}\label{classGKTimeDuration_a4fef2ceb1797b3513ec2519e80ebc253}
+
+\item 
+{\bfseries G\+K\+Time\+Duration} (const \hyperlink{classGKTimeDuration}{G\+K\+Time\+Duration} \&rhs)\hypertarget{classGKTimeDuration_aa2de538cbbaa011980332f49ac19d6e0}{}\label{classGKTimeDuration_aa2de538cbbaa011980332f49ac19d6e0}
+
+\item 
+bool \hyperlink{classGKTimeDuration_ae75629302e5023f67b9592c42721aa23}{is\+Null} () const 
+\item 
+bool \hyperlink{classGKTimeDuration_a2a580e8b2ba2dd8cb2b47eeb7f9d4138}{is\+Valid} () const 
+\item 
+qint64 \hyperlink{classGKTimeDuration_ac859fdb80b546d28bb27d954cb81713c}{hour} () const 
+\item 
+qint64 \hyperlink{classGKTimeDuration_aead0dfa90124e247a7f00d4202f42bf3}{minute} () const 
+\item 
+qint64 \hyperlink{classGKTimeDuration_abf201ad8041c5481ba30891a772ef76d}{second} () const 
+\item 
+qint64 \hyperlink{classGKTimeDuration_a93743059f0a51c62e27e4348f2c50708}{msec} () const 
+\item 
+qint64 \hyperlink{classGKTimeDuration_a18473b5f220016fc535caef9b9ba5c94}{to\+Milliseconds} () const 
+\item 
+Q\+String \hyperlink{classGKTimeDuration_a41d8d3a9c9c1b6b9fdeac2c268563566}{to\+String} (bool force\+Milliseconds=false) const 
+\item 
+bool \hyperlink{classGKTimeDuration_afef035c2daa3601775774a794f9a0e80}{set\+H\+MS} (int h, int m, int s, int ms=0)
+\item 
+Q\+Time \hyperlink{classGKTimeDuration_ac2508f1a09763814997ac8ff9038fd4c}{to\+Q\+Time} () const 
+\item 
+qint64 \hyperlink{classGKTimeDuration_a9e2c2978d6e8e7720e231efca7429bda}{to\+Seconds} (uint $\ast$miliseconds=N\+U\+LL) const \hypertarget{classGKTimeDuration_a9e2c2978d6e8e7720e231efca7429bda}{}\label{classGKTimeDuration_a9e2c2978d6e8e7720e231efca7429bda}
+
+\begin{DoxyCompactList}\small\item\em Returns this \hyperlink{classGKTimeDuration}{G\+K\+Time\+Duration}\textquotesingle{}s hour, minute and second converted to seconds. \end{DoxyCompactList}\item 
+qint64 \hyperlink{classGKTimeDuration_a5c39c7d68e6137529d6854969bd8ff49}{to\+Days} (uint $\ast$miliseconds=N\+U\+LL) const 
+\item 
+float \hyperlink{classGKTimeDuration_a78966d06b2b2cea7074a3b5d1f1c45ed}{to\+Minutes} () const 
+\item 
+float \hyperlink{classGKTimeDuration_a4f515cfbc64c2cf1b5398abe1b7d7b8d}{to\+Hours} () const \hypertarget{classGKTimeDuration_a4f515cfbc64c2cf1b5398abe1b7d7b8d}{}\label{classGKTimeDuration_a4f515cfbc64c2cf1b5398abe1b7d7b8d}
+
+\begin{DoxyCompactList}\small\item\em Returns this \hyperlink{classGKTimeDuration}{G\+K\+Time\+Duration}\textquotesingle{}s hour, minute and second converted to hours. \end{DoxyCompactList}\item 
+\hyperlink{classGKTimeDuration}{G\+K\+Time\+Duration} \hyperlink{classGKTimeDuration_a37d5bf801b28442afb9242fbcf57d5d5}{add\+Secs} (qint64 secs) const 
+\item 
+qint64 \hyperlink{classGKTimeDuration_a6532a78b59e29d7b0938db4dfc2e763b}{secs\+To} (const \hyperlink{classGKTimeDuration}{G\+K\+Time\+Duration} \&) const 
+\item 
+\hyperlink{classGKTimeDuration}{G\+K\+Time\+Duration} \hyperlink{classGKTimeDuration_afda956a8ca2225d69810e45e06727164}{add\+M\+Secs} (qint64 ms) const 
+\item 
+qint64 \hyperlink{classGKTimeDuration_a0efe6cc980ad7b3f62bc16bc41e0ab82}{msecs\+To} (const \hyperlink{classGKTimeDuration}{G\+K\+Time\+Duration} \&t) const 
+\item 
+bool \hyperlink{classGKTimeDuration_a02b0b945ea9d2657cc8007c2601e687b}{operator==} (const \hyperlink{classGKTimeDuration}{G\+K\+Time\+Duration} \&d) const 
+\item 
+bool \hyperlink{classGKTimeDuration_a11ce01f84db5ca2fc5af9e7d5a919ed9}{operator!=} (const \hyperlink{classGKTimeDuration}{G\+K\+Time\+Duration} \&d) const 
+\item 
+bool \hyperlink{classGKTimeDuration_aa797ef444df5a4cbf83e9b4131244cd7}{operator$<$} (const \hyperlink{classGKTimeDuration}{G\+K\+Time\+Duration} \&d) const 
+\item 
+bool \hyperlink{classGKTimeDuration_a9ee26e9129f4f0aa6f142a5bb036e3ff}{operator$<$=} (const \hyperlink{classGKTimeDuration}{G\+K\+Time\+Duration} \&d) const 
+\item 
+bool \hyperlink{classGKTimeDuration_a87863a770684c84b04beabd3063780f5}{operator$>$} (const \hyperlink{classGKTimeDuration}{G\+K\+Time\+Duration} \&d) const 
+\item 
+bool \hyperlink{classGKTimeDuration_a954acef46595eee00c6e1a6354764b93}{operator$>$=} (const \hyperlink{classGKTimeDuration}{G\+K\+Time\+Duration} \&d) const 
+\item 
+\hyperlink{classGKTimeDuration}{G\+K\+Time\+Duration} \& \hyperlink{classGKTimeDuration_af81a5ba643ae5509dbad0d8abb6a0a23}{operator+=} (const \hyperlink{classGKTimeDuration}{G\+K\+Time\+Duration} \&c)
+\item 
+\hyperlink{classGKTimeDuration}{G\+K\+Time\+Duration} \& \hyperlink{classGKTimeDuration_a15e9d7585b367bec684bbeb1f3433cc7}{operator-\/=} (const \hyperlink{classGKTimeDuration}{G\+K\+Time\+Duration} \&c)
+\item 
+\hyperlink{classGKTimeDuration}{G\+K\+Time\+Duration} \hyperlink{classGKTimeDuration_a207c33c362a3f225fafa257c5d2a2796}{operator+} (const \hyperlink{classGKTimeDuration}{G\+K\+Time\+Duration} \&c) const 
+\item 
+\hyperlink{classGKTimeDuration}{G\+K\+Time\+Duration} \hyperlink{classGKTimeDuration_af0c9b2d9432fa06f64d287ccb6f86976}{operator-\/} (const \hyperlink{classGKTimeDuration}{G\+K\+Time\+Duration} \&c) const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classGKTimeDuration}{G\+K\+Time\+Duration} \hyperlink{classGKTimeDuration_a946f27b1c6067ebae9c350ba7a9caa4d}{duration\+Between\+Times} (const Q\+Time \&from, const Q\+Time \&to)
+\item 
+static \hyperlink{classGKTimeDuration}{G\+K\+Time\+Duration} \hyperlink{classGKTimeDuration_a20e724a6d56ef1a30247fa1c73f18e2f}{duration\+Between\+Times} (const Q\+Date\+Time \&from, const Q\+Date\+Time \&to)
+\item 
+static bool \hyperlink{classGKTimeDuration_ac464568ea70da6a938917513bd8f65ea}{is\+Valid} (int h, int m, int s)
+\item 
+static \hyperlink{classGKTimeDuration}{G\+K\+Time\+Duration} \hyperlink{classGKTimeDuration_af202d4742fd47b841f0976cb2b360c5b}{from\+String} (const Q\+String \&s)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+G\+K\+E\+X\+P\+O\+RT Q\+Data\+Stream \& {\bfseries operator$<$$<$} (Q\+Data\+Stream \&, const \hyperlink{classGKTimeDuration}{G\+K\+Time\+Duration} \&)\hypertarget{classGKTimeDuration_a697ce2be9f789e134bbb0136998fe4b2}{}\label{classGKTimeDuration_a697ce2be9f789e134bbb0136998fe4b2}
+
+\item 
+G\+K\+E\+X\+P\+O\+RT Q\+Data\+Stream \& {\bfseries operator$>$$>$} (Q\+Data\+Stream \&, \hyperlink{classGKTimeDuration}{G\+K\+Time\+Duration} \&)\hypertarget{classGKTimeDuration_a59821b0943515d9e168a946492f5b4bc}{}\label{classGKTimeDuration_a59821b0943515d9e168a946492f5b4bc}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A positive time duration with a precision of millisecond. 
+
+In Aimsun events start at a given moment and have a duration instead of an end time. 
+
+\subsection{Member Function Documentation}
+\index{G\+K\+Time\+Duration@{G\+K\+Time\+Duration}!add\+M\+Secs@{add\+M\+Secs}}
+\index{add\+M\+Secs@{add\+M\+Secs}!G\+K\+Time\+Duration@{G\+K\+Time\+Duration}}
+\subsubsection[{\texorpdfstring{add\+M\+Secs(qint64 ms) const }{addMSecs(qint64 ms) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+K\+Time\+Duration} G\+K\+Time\+Duration\+::add\+M\+Secs (
+\begin{DoxyParamCaption}
+\item[{qint64}]{ms}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKTimeDuration_afda956a8ca2225d69810e45e06727164}{}\label{classGKTimeDuration_afda956a8ca2225d69810e45e06727164}
+Adds milliseconds to the current time duration \index{G\+K\+Time\+Duration@{G\+K\+Time\+Duration}!add\+Secs@{add\+Secs}}
+\index{add\+Secs@{add\+Secs}!G\+K\+Time\+Duration@{G\+K\+Time\+Duration}}
+\subsubsection[{\texorpdfstring{add\+Secs(qint64 secs) const }{addSecs(qint64 secs) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+K\+Time\+Duration} G\+K\+Time\+Duration\+::add\+Secs (
+\begin{DoxyParamCaption}
+\item[{qint64}]{secs}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKTimeDuration_a37d5bf801b28442afb9242fbcf57d5d5}{}\label{classGKTimeDuration_a37d5bf801b28442afb9242fbcf57d5d5}
+Adds seconds to the current time duration \index{G\+K\+Time\+Duration@{G\+K\+Time\+Duration}!duration\+Between\+Times@{duration\+Between\+Times}}
+\index{duration\+Between\+Times@{duration\+Between\+Times}!G\+K\+Time\+Duration@{G\+K\+Time\+Duration}}
+\subsubsection[{\texorpdfstring{duration\+Between\+Times(const Q\+Time \&from, const Q\+Time \&to)}{durationBetweenTimes(const QTime &from, const QTime &to)}}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf G\+K\+Time\+Duration} G\+K\+Time\+Duration\+::duration\+Between\+Times (
+\begin{DoxyParamCaption}
+\item[{const Q\+Time \&}]{from, }
+\item[{const Q\+Time \&}]{to}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classGKTimeDuration_a946f27b1c6067ebae9c350ba7a9caa4d}{}\label{classGKTimeDuration_a946f27b1c6067ebae9c350ba7a9caa4d}
+Duration between to times. Note that a duration is always positive so this function will reorder from and to if to $<$ from. \index{G\+K\+Time\+Duration@{G\+K\+Time\+Duration}!duration\+Between\+Times@{duration\+Between\+Times}}
+\index{duration\+Between\+Times@{duration\+Between\+Times}!G\+K\+Time\+Duration@{G\+K\+Time\+Duration}}
+\subsubsection[{\texorpdfstring{duration\+Between\+Times(const Q\+Date\+Time \&from, const Q\+Date\+Time \&to)}{durationBetweenTimes(const QDateTime &from, const QDateTime &to)}}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf G\+K\+Time\+Duration} G\+K\+Time\+Duration\+::duration\+Between\+Times (
+\begin{DoxyParamCaption}
+\item[{const Q\+Date\+Time \&}]{from, }
+\item[{const Q\+Date\+Time \&}]{to}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classGKTimeDuration_a20e724a6d56ef1a30247fa1c73f18e2f}{}\label{classGKTimeDuration_a20e724a6d56ef1a30247fa1c73f18e2f}
+Duration between to times. Note that a duration is always positive so this function will reorder from and to if to $<$ from. \index{G\+K\+Time\+Duration@{G\+K\+Time\+Duration}!from\+String@{from\+String}}
+\index{from\+String@{from\+String}!G\+K\+Time\+Duration@{G\+K\+Time\+Duration}}
+\subsubsection[{\texorpdfstring{from\+String(const Q\+String \&s)}{fromString(const QString &s)}}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf G\+K\+Time\+Duration} G\+K\+Time\+Duration\+::from\+String (
+\begin{DoxyParamCaption}
+\item[{const Q\+String \&}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classGKTimeDuration_af202d4742fd47b841f0976cb2b360c5b}{}\label{classGKTimeDuration_af202d4742fd47b841f0976cb2b360c5b}
+Returns a duration from a string in the format H\+H\+:\+MM\+:SS \index{G\+K\+Time\+Duration@{G\+K\+Time\+Duration}!hour@{hour}}
+\index{hour@{hour}!G\+K\+Time\+Duration@{G\+K\+Time\+Duration}}
+\subsubsection[{\texorpdfstring{hour() const }{hour() const }}]{\setlength{\rightskip}{0pt plus 5cm}qint64 G\+K\+Time\+Duration\+::hour (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKTimeDuration_ac859fdb80b546d28bb27d954cb81713c}{}\label{classGKTimeDuration_ac859fdb80b546d28bb27d954cb81713c}
+Convers this duration to hour, minutes, seconds and milliseconds and returns the hour. For example\+: 3610.\+5 is converted to 01\+:00\+:10.\+500 and it returns 1. \index{G\+K\+Time\+Duration@{G\+K\+Time\+Duration}!is\+Null@{is\+Null}}
+\index{is\+Null@{is\+Null}!G\+K\+Time\+Duration@{G\+K\+Time\+Duration}}
+\subsubsection[{\texorpdfstring{is\+Null() const }{isNull() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+Time\+Duration\+::is\+Null (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classGKTimeDuration_ae75629302e5023f67b9592c42721aa23}{}\label{classGKTimeDuration_ae75629302e5023f67b9592c42721aa23}
+A duration of 0 milliseconds. \index{G\+K\+Time\+Duration@{G\+K\+Time\+Duration}!is\+Valid@{is\+Valid}}
+\index{is\+Valid@{is\+Valid}!G\+K\+Time\+Duration@{G\+K\+Time\+Duration}}
+\subsubsection[{\texorpdfstring{is\+Valid() const }{isValid() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+Time\+Duration\+::is\+Valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKTimeDuration_a2a580e8b2ba2dd8cb2b47eeb7f9d4138}{}\label{classGKTimeDuration_a2a580e8b2ba2dd8cb2b47eeb7f9d4138}
+Is valid? \index{G\+K\+Time\+Duration@{G\+K\+Time\+Duration}!is\+Valid@{is\+Valid}}
+\index{is\+Valid@{is\+Valid}!G\+K\+Time\+Duration@{G\+K\+Time\+Duration}}
+\subsubsection[{\texorpdfstring{is\+Valid(int h, int m, int s)}{isValid(int h, int m, int s)}}]{\setlength{\rightskip}{0pt plus 5cm}static bool G\+K\+Time\+Duration\+::is\+Valid (
+\begin{DoxyParamCaption}
+\item[{int}]{h, }
+\item[{int}]{m, }
+\item[{int}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classGKTimeDuration_ac464568ea70da6a938917513bd8f65ea}{}\label{classGKTimeDuration_ac464568ea70da6a938917513bd8f65ea}
+Is valid? \index{G\+K\+Time\+Duration@{G\+K\+Time\+Duration}!minute@{minute}}
+\index{minute@{minute}!G\+K\+Time\+Duration@{G\+K\+Time\+Duration}}
+\subsubsection[{\texorpdfstring{minute() const }{minute() const }}]{\setlength{\rightskip}{0pt plus 5cm}qint64 G\+K\+Time\+Duration\+::minute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKTimeDuration_aead0dfa90124e247a7f00d4202f42bf3}{}\label{classGKTimeDuration_aead0dfa90124e247a7f00d4202f42bf3}
+Convers this duration to hour, minutes, seconds and milliseconds and returns the minute. For example\+: 3610.\+5 is converted to 01\+:00\+:10.\+500 and it returns 0. \index{G\+K\+Time\+Duration@{G\+K\+Time\+Duration}!msec@{msec}}
+\index{msec@{msec}!G\+K\+Time\+Duration@{G\+K\+Time\+Duration}}
+\subsubsection[{\texorpdfstring{msec() const }{msec() const }}]{\setlength{\rightskip}{0pt plus 5cm}qint64 G\+K\+Time\+Duration\+::msec (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKTimeDuration_a93743059f0a51c62e27e4348f2c50708}{}\label{classGKTimeDuration_a93743059f0a51c62e27e4348f2c50708}
+Convers this duration to hour, minutes, seconds and milliseconds and returns the millisecond. For example\+: 3610.\+5 is converted to 01\+:00\+:10.\+500 and it returns 500. \index{G\+K\+Time\+Duration@{G\+K\+Time\+Duration}!msecs\+To@{msecs\+To}}
+\index{msecs\+To@{msecs\+To}!G\+K\+Time\+Duration@{G\+K\+Time\+Duration}}
+\subsubsection[{\texorpdfstring{msecs\+To(const G\+K\+Time\+Duration \&t) const }{msecsTo(const GKTimeDuration &t) const }}]{\setlength{\rightskip}{0pt plus 5cm}qint64 G\+K\+Time\+Duration\+::msecs\+To (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Time\+Duration} \&}]{t}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKTimeDuration_a0efe6cc980ad7b3f62bc16bc41e0ab82}{}\label{classGKTimeDuration_a0efe6cc980ad7b3f62bc16bc41e0ab82}
+Returns the number of remaining milliseconds until the desired time) \index{G\+K\+Time\+Duration@{G\+K\+Time\+Duration}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!G\+K\+Time\+Duration@{G\+K\+Time\+Duration}}
+\subsubsection[{\texorpdfstring{operator"!=(const G\+K\+Time\+Duration \&d) const }{operator!=(const GKTimeDuration &d) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+Time\+Duration\+::operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Time\+Duration} \&}]{d}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classGKTimeDuration_a11ce01f84db5ca2fc5af9e7d5a919ed9}{}\label{classGKTimeDuration_a11ce01f84db5ca2fc5af9e7d5a919ed9}
+Returns true if the compared time durations are not equal \index{G\+K\+Time\+Duration@{G\+K\+Time\+Duration}!operator+@{operator+}}
+\index{operator+@{operator+}!G\+K\+Time\+Duration@{G\+K\+Time\+Duration}}
+\subsubsection[{\texorpdfstring{operator+(const G\+K\+Time\+Duration \&c) const }{operator+(const GKTimeDuration &c) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+K\+Time\+Duration} G\+K\+Time\+Duration\+::operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Time\+Duration} \&}]{c}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKTimeDuration_a207c33c362a3f225fafa257c5d2a2796}{}\label{classGKTimeDuration_a207c33c362a3f225fafa257c5d2a2796}
+Adds two time durations \index{G\+K\+Time\+Duration@{G\+K\+Time\+Duration}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!G\+K\+Time\+Duration@{G\+K\+Time\+Duration}}
+\subsubsection[{\texorpdfstring{operator+=(const G\+K\+Time\+Duration \&c)}{operator+=(const GKTimeDuration &c)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+K\+Time\+Duration}\& G\+K\+Time\+Duration\+::operator+= (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Time\+Duration} \&}]{c}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKTimeDuration_af81a5ba643ae5509dbad0d8abb6a0a23}{}\label{classGKTimeDuration_af81a5ba643ae5509dbad0d8abb6a0a23}
+Adds a time duration to the current time duration \index{G\+K\+Time\+Duration@{G\+K\+Time\+Duration}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!G\+K\+Time\+Duration@{G\+K\+Time\+Duration}}
+\subsubsection[{\texorpdfstring{operator-\/(const G\+K\+Time\+Duration \&c) const }{operator-(const GKTimeDuration &c) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+K\+Time\+Duration} G\+K\+Time\+Duration\+::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Time\+Duration} \&}]{c}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKTimeDuration_af0c9b2d9432fa06f64d287ccb6f86976}{}\label{classGKTimeDuration_af0c9b2d9432fa06f64d287ccb6f86976}
+Subtracts a time duration to another time duration \index{G\+K\+Time\+Duration@{G\+K\+Time\+Duration}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!G\+K\+Time\+Duration@{G\+K\+Time\+Duration}}
+\subsubsection[{\texorpdfstring{operator-\/=(const G\+K\+Time\+Duration \&c)}{operator-=(const GKTimeDuration &c)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+K\+Time\+Duration}\& G\+K\+Time\+Duration\+::operator-\/= (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Time\+Duration} \&}]{c}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKTimeDuration_a15e9d7585b367bec684bbeb1f3433cc7}{}\label{classGKTimeDuration_a15e9d7585b367bec684bbeb1f3433cc7}
+Subtracts a time duration to the current time duration \index{G\+K\+Time\+Duration@{G\+K\+Time\+Duration}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!G\+K\+Time\+Duration@{G\+K\+Time\+Duration}}
+\subsubsection[{\texorpdfstring{operator$<$(const G\+K\+Time\+Duration \&d) const }{operator<(const GKTimeDuration &d) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+Time\+Duration\+::operator$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Time\+Duration} \&}]{d}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classGKTimeDuration_aa797ef444df5a4cbf83e9b4131244cd7}{}\label{classGKTimeDuration_aa797ef444df5a4cbf83e9b4131244cd7}
+Returns true if the left time duration is lower \index{G\+K\+Time\+Duration@{G\+K\+Time\+Duration}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!G\+K\+Time\+Duration@{G\+K\+Time\+Duration}}
+\subsubsection[{\texorpdfstring{operator$<$=(const G\+K\+Time\+Duration \&d) const }{operator<=(const GKTimeDuration &d) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+Time\+Duration\+::operator$<$= (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Time\+Duration} \&}]{d}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classGKTimeDuration_a9ee26e9129f4f0aa6f142a5bb036e3ff}{}\label{classGKTimeDuration_a9ee26e9129f4f0aa6f142a5bb036e3ff}
+Returns true if the left time duration is lower or equal \index{G\+K\+Time\+Duration@{G\+K\+Time\+Duration}!operator==@{operator==}}
+\index{operator==@{operator==}!G\+K\+Time\+Duration@{G\+K\+Time\+Duration}}
+\subsubsection[{\texorpdfstring{operator==(const G\+K\+Time\+Duration \&d) const }{operator==(const GKTimeDuration &d) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+Time\+Duration\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Time\+Duration} \&}]{d}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classGKTimeDuration_a02b0b945ea9d2657cc8007c2601e687b}{}\label{classGKTimeDuration_a02b0b945ea9d2657cc8007c2601e687b}
+Returns true if the compared time durations are equal \index{G\+K\+Time\+Duration@{G\+K\+Time\+Duration}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!G\+K\+Time\+Duration@{G\+K\+Time\+Duration}}
+\subsubsection[{\texorpdfstring{operator$>$(const G\+K\+Time\+Duration \&d) const }{operator>(const GKTimeDuration &d) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+Time\+Duration\+::operator$>$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Time\+Duration} \&}]{d}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classGKTimeDuration_a87863a770684c84b04beabd3063780f5}{}\label{classGKTimeDuration_a87863a770684c84b04beabd3063780f5}
+Returns true if the left time duration is greater \index{G\+K\+Time\+Duration@{G\+K\+Time\+Duration}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!G\+K\+Time\+Duration@{G\+K\+Time\+Duration}}
+\subsubsection[{\texorpdfstring{operator$>$=(const G\+K\+Time\+Duration \&d) const }{operator>=(const GKTimeDuration &d) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+Time\+Duration\+::operator$>$= (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Time\+Duration} \&}]{d}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classGKTimeDuration_a954acef46595eee00c6e1a6354764b93}{}\label{classGKTimeDuration_a954acef46595eee00c6e1a6354764b93}
+Returns true if the left time duration is greater or equal \index{G\+K\+Time\+Duration@{G\+K\+Time\+Duration}!second@{second}}
+\index{second@{second}!G\+K\+Time\+Duration@{G\+K\+Time\+Duration}}
+\subsubsection[{\texorpdfstring{second() const }{second() const }}]{\setlength{\rightskip}{0pt plus 5cm}qint64 G\+K\+Time\+Duration\+::second (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKTimeDuration_abf201ad8041c5481ba30891a772ef76d}{}\label{classGKTimeDuration_abf201ad8041c5481ba30891a772ef76d}
+Convers this duration to hour, minutes, seconds and milliseconds and returns the second. For example\+: 3610.\+5 is converted to 01\+:00\+:10.\+500 and it returns 10. \index{G\+K\+Time\+Duration@{G\+K\+Time\+Duration}!secs\+To@{secs\+To}}
+\index{secs\+To@{secs\+To}!G\+K\+Time\+Duration@{G\+K\+Time\+Duration}}
+\subsubsection[{\texorpdfstring{secs\+To(const G\+K\+Time\+Duration \&) const }{secsTo(const GKTimeDuration &) const }}]{\setlength{\rightskip}{0pt plus 5cm}qint64 G\+K\+Time\+Duration\+::secs\+To (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Time\+Duration} \&}]{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKTimeDuration_a6532a78b59e29d7b0938db4dfc2e763b}{}\label{classGKTimeDuration_a6532a78b59e29d7b0938db4dfc2e763b}
+Returns the number of remaining seconds until the desired time) \index{G\+K\+Time\+Duration@{G\+K\+Time\+Duration}!set\+H\+MS@{set\+H\+MS}}
+\index{set\+H\+MS@{set\+H\+MS}!G\+K\+Time\+Duration@{G\+K\+Time\+Duration}}
+\subsubsection[{\texorpdfstring{set\+H\+M\+S(int h, int m, int s, int ms=0)}{setHMS(int h, int m, int s, int ms=0)}}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+Time\+Duration\+::set\+H\+MS (
+\begin{DoxyParamCaption}
+\item[{int}]{h, }
+\item[{int}]{m, }
+\item[{int}]{s, }
+\item[{int}]{ms = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKTimeDuration_afef035c2daa3601775774a794f9a0e80}{}\label{classGKTimeDuration_afef035c2daa3601775774a794f9a0e80}
+Set the duration. \index{G\+K\+Time\+Duration@{G\+K\+Time\+Duration}!to\+Days@{to\+Days}}
+\index{to\+Days@{to\+Days}!G\+K\+Time\+Duration@{G\+K\+Time\+Duration}}
+\subsubsection[{\texorpdfstring{to\+Days(uint $\ast$miliseconds=\+N\+U\+L\+L) const }{toDays(uint *miliseconds=NULL) const }}]{\setlength{\rightskip}{0pt plus 5cm}qint64 G\+K\+Time\+Duration\+::to\+Days (
+\begin{DoxyParamCaption}
+\item[{uint $\ast$}]{miliseconds = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKTimeDuration_a5c39c7d68e6137529d6854969bd8ff49}{}\label{classGKTimeDuration_a5c39c7d68e6137529d6854969bd8ff49}
+Returns this duration in days, the remaining time is returned in milliseconds. \index{G\+K\+Time\+Duration@{G\+K\+Time\+Duration}!to\+Milliseconds@{to\+Milliseconds}}
+\index{to\+Milliseconds@{to\+Milliseconds}!G\+K\+Time\+Duration@{G\+K\+Time\+Duration}}
+\subsubsection[{\texorpdfstring{to\+Milliseconds() const }{toMilliseconds() const }}]{\setlength{\rightskip}{0pt plus 5cm}qint64 G\+K\+Time\+Duration\+::to\+Milliseconds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKTimeDuration_a18473b5f220016fc535caef9b9ba5c94}{}\label{classGKTimeDuration_a18473b5f220016fc535caef9b9ba5c94}
+Get this duration in milliseconds (note that this is not equal to \hyperlink{classGKTimeDuration_a93743059f0a51c62e27e4348f2c50708}{G\+K\+Time\+Duration\+::msec}) \index{G\+K\+Time\+Duration@{G\+K\+Time\+Duration}!to\+Minutes@{to\+Minutes}}
+\index{to\+Minutes@{to\+Minutes}!G\+K\+Time\+Duration@{G\+K\+Time\+Duration}}
+\subsubsection[{\texorpdfstring{to\+Minutes() const }{toMinutes() const }}]{\setlength{\rightskip}{0pt plus 5cm}float G\+K\+Time\+Duration\+::to\+Minutes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKTimeDuration_a78966d06b2b2cea7074a3b5d1f1c45ed}{}\label{classGKTimeDuration_a78966d06b2b2cea7074a3b5d1f1c45ed}
+Returns this \hyperlink{classGKTimeDuration}{G\+K\+Time\+Duration}\textquotesingle{}s hour, minute and second converted to minutes \index{G\+K\+Time\+Duration@{G\+K\+Time\+Duration}!to\+Q\+Time@{to\+Q\+Time}}
+\index{to\+Q\+Time@{to\+Q\+Time}!G\+K\+Time\+Duration@{G\+K\+Time\+Duration}}
+\subsubsection[{\texorpdfstring{to\+Q\+Time() const }{toQTime() const }}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Time G\+K\+Time\+Duration\+::to\+Q\+Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKTimeDuration_ac2508f1a09763814997ac8ff9038fd4c}{}\label{classGKTimeDuration_ac2508f1a09763814997ac8ff9038fd4c}
+Retuns a Q\+Time equivalent to this duration. Note that an overflow is possible as Q\+Time only support 24 hours (check Q\+Time\+::is\+Valid()). \index{G\+K\+Time\+Duration@{G\+K\+Time\+Duration}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!G\+K\+Time\+Duration@{G\+K\+Time\+Duration}}
+\subsubsection[{\texorpdfstring{to\+String(bool force\+Milliseconds=false) const }{toString(bool forceMilliseconds=false) const }}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String G\+K\+Time\+Duration\+::to\+String (
+\begin{DoxyParamCaption}
+\item[{bool}]{force\+Milliseconds = {\ttfamily false}}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKTimeDuration_a41d8d3a9c9c1b6b9fdeac2c268563566}{}\label{classGKTimeDuration_a41d8d3a9c9c1b6b9fdeac2c268563566}
+Returns a string representation of this duration. If force\+Milliseconds is false it will not add millisecond info when they are zero. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/core/ang\+\_\+kernel/G\+K\+Time\+Duration.\+h\end{DoxyCompactItemize}

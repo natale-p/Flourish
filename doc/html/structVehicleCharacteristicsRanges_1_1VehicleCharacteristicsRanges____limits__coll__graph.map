@@ -1,0 +1,12 @@
+<map id="VehicleCharacteristicsRanges::VehicleCharacteristicsRanges__limits" name="VehicleCharacteristicsRanges::VehicleCharacteristicsRanges__limits">
+<area shape="rect" id="node2" href="$unionVehicleCharacteristicsRanges_1_1VehicleCharacteristicsRanges____limits_1_1VehicleCharacteristicsRanges____limits__u.html" title="VehicleCharacteristicsRanges\l::VehicleCharacteristicsRanges\l__limits::VehicleCharacteristicsRanges\l__limits_u" alt="" coords="941,243,1192,314"/>
+<area shape="rect" id="node3" href="$structAxleWeightLimits.html" title="AxleWeightLimits" alt="" coords="439,67,563,93"/>
+<area shape="rect" id="node4" href="$structasn__struct__ctx__s.html" title="asn_struct_ctx_s" alt="" coords="5,251,128,277"/>
+<area shape="rect" id="node5" href="$structDieselEmissionValues.html" title="DieselEmissionValues" alt="" coords="607,185,760,212"/>
+<area shape="rect" id="node6" href="$structDieselEmissionValues_1_1DieselEmissionValues____particulate.html" title="DieselEmissionValues\l::DieselEmissionValues\l__particulate" alt="" coords="233,171,395,227"/>
+<area shape="rect" id="node7" href="$structPassengerCapacity.html" title="PassengerCapacity" alt="" coords="433,247,569,273"/>
+<area shape="rect" id="node8" href="$structVehicleWeightLimits.html" title="VehicleWeightLimits" alt="" coords="613,303,754,329"/>
+<area shape="rect" id="node9" href="$structExhaustEmissionValues.html" title="ExhaustEmissionValues" alt="" coords="419,360,583,387"/>
+<area shape="rect" id="node10" href="$structSoundLevel.html" title="SoundLevel" alt="" coords="638,416,729,443"/>
+<area shape="rect" id="node11" href="$structVehicleDimensions.html" title="VehicleDimensions" alt="" coords="247,477,381,504"/>
+</map>

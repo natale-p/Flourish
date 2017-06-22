@@ -1,0 +1,192 @@
+\hypertarget{classFlourishAP}{}\section{Flourish\+AP Class Reference}
+\label{classFlourishAP}\index{Flourish\+AP@{Flourish\+AP}}
+
+
+A non-\/mobile infrastructure.  
+
+
+
+
+{\ttfamily \#include $<$Flourish\+A\+P.\+h$>$}
+
+
+
+Inheritance diagram for Flourish\+AP\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{classFlourishAP__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Flourish\+AP\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{classFlourishAP__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classFlourishAP_acff41fd22ca0610c85f170a68897a502}{received} (const Q\+Pointer$<$ \hyperlink{classNetDevice}{Net\+Device} $>$ \&device, const Q\+Shared\+Pointer$<$ const \hyperlink{group__V2XFramework_ga1b82bfc289dbcb9aced56200d7abc964}{Packet} $>$ \&packet, const Address \&addr) Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\begin{DoxyCompactList}\small\item\em A message has been received. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classFlourishAP_a12e96b3386fbd07beb0602c49a395f93}{Flourish\+AP} (quint32 id, const G\+K\+Object $\ast$obj, const \hyperlink{classADynamicAPISetup}{A\+Dynamic\+A\+P\+I\+Setup} \&setup)
+\begin{DoxyCompactList}\small\item\em Constructor for an AP. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual Packet\+Pointer\+List \hyperlink{classFlourishAP_a63b7d385704b4ff897120751223e27f0}{generate\+Message} () Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\begin{DoxyCompactList}\small\item\em Generate messages to be transmitted. \end{DoxyCompactList}\item 
+Packet\+Pointer \hyperlink{classFlourishAP_ae05777f70d3ba4b90a2bdc7342bafe10}{generate\+D\+E\+NM} ()
+\begin{DoxyCompactList}\small\item\em Generate a \hyperlink{structDENM}{D\+E\+NM} message. \end{DoxyCompactList}\item 
+Packet\+Pointer \hyperlink{classFlourishAP_afe2550ca74f6d6375f290b97271996a2}{generate\+S\+P\+A\+T\+EM} (const \hyperlink{group__V2XFramework_ga56fae412bb1a3173fc5009ac4ade2352}{V2\+X\+Intersection\+Pointer} \&intersection)
+\begin{DoxyCompactList}\small\item\em Generate a \hyperlink{structSPATEM}{S\+P\+A\+T\+EM} message. \end{DoxyCompactList}\item 
+Packet\+Pointer \hyperlink{classFlourishAP_a626674a5ffab067ab081603ddc930e1d}{generate\+M\+A\+P\+EM} (const \hyperlink{group__V2XFramework_ga56fae412bb1a3173fc5009ac4ade2352}{V2\+X\+Intersection\+Pointer} \&intersection)
+\begin{DoxyCompactList}\small\item\em Generate a \hyperlink{structMAPEM}{M\+A\+P\+EM} message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A non-\/mobile infrastructure. 
+
+Copyright T\+SS 2017
+
+Author\+: Natale Patriciello \href{mailto:natale.patriciello@aimsun.com}{\tt natale.\+patriciello@aimsun.\+com}
+
+When it receives a message, the method received is invoked. To generate a message, use the method generate\+Message. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Flourish\+AP@{Flourish\+AP}!Flourish\+AP@{Flourish\+AP}}
+\index{Flourish\+AP@{Flourish\+AP}!Flourish\+AP@{Flourish\+AP}}
+\subsubsection[{\texorpdfstring{Flourish\+A\+P(quint32 id, const G\+K\+Object $\ast$obj, const A\+Dynamic\+A\+P\+I\+Setup \&setup)}{FlourishAP(quint32 id, const GKObject *obj, const ADynamicAPISetup &setup)}}]{\setlength{\rightskip}{0pt plus 5cm}Flourish\+A\+P\+::\+Flourish\+AP (
+\begin{DoxyParamCaption}
+\item[{quint32}]{id, }
+\item[{const G\+K\+Object $\ast$}]{obj, }
+\item[{const {\bf A\+Dynamic\+A\+P\+I\+Setup} \&}]{setup}
+\end{DoxyParamCaption}
+)}\hypertarget{classFlourishAP_a12e96b3386fbd07beb0602c49a395f93}{}\label{classFlourishAP_a12e96b3386fbd07beb0602c49a395f93}
+
+
+Constructor for an AP. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Unique ID for the object \\
+\hline
+{\em obj} & An object in aimsun representing this AP \\
+\hline
+{\em setup} & The Setup A\+PI\\
+\hline
+\end{DoxyParams}
+Copyright T\+SS 2017
+
+Author\+: Natale Patriciello \href{mailto:natale.patriciello@aimsun.com}{\tt natale.\+patriciello@aimsun.\+com} 
+
+\subsection{Member Function Documentation}
+\index{Flourish\+AP@{Flourish\+AP}!generate\+D\+E\+NM@{generate\+D\+E\+NM}}
+\index{generate\+D\+E\+NM@{generate\+D\+E\+NM}!Flourish\+AP@{Flourish\+AP}}
+\subsubsection[{\texorpdfstring{generate\+D\+E\+N\+M()}{generateDENM()}}]{\setlength{\rightskip}{0pt plus 5cm}Packet\+Pointer Flourish\+A\+P\+::generate\+D\+E\+NM (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classFlourishAP_ae05777f70d3ba4b90a2bdc7342bafe10}{}\label{classFlourishAP_ae05777f70d3ba4b90a2bdc7342bafe10}
+
+
+Generate a \hyperlink{structDENM}{D\+E\+NM} message. 
+
+\begin{DoxyReturn}{Returns}
+A \hyperlink{structDENM}{D\+E\+NM} message 
+\end{DoxyReturn}
+\index{Flourish\+AP@{Flourish\+AP}!generate\+M\+A\+P\+EM@{generate\+M\+A\+P\+EM}}
+\index{generate\+M\+A\+P\+EM@{generate\+M\+A\+P\+EM}!Flourish\+AP@{Flourish\+AP}}
+\subsubsection[{\texorpdfstring{generate\+M\+A\+P\+E\+M(const V2\+X\+Intersection\+Pointer \&intersection)}{generateMAPEM(const V2XIntersectionPointer &intersection)}}]{\setlength{\rightskip}{0pt plus 5cm}Packet\+Pointer Flourish\+A\+P\+::generate\+M\+A\+P\+EM (
+\begin{DoxyParamCaption}
+\item[{const {\bf V2\+X\+Intersection\+Pointer} \&}]{intersection}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classFlourishAP_a626674a5ffab067ab081603ddc930e1d}{}\label{classFlourishAP_a626674a5ffab067ab081603ddc930e1d}
+
+
+Generate a \hyperlink{structMAPEM}{M\+A\+P\+EM} message. 
+
+The \hyperlink{structMAPEM}{M\+A\+P\+EM} in the current implementation refers to a single intersection.
+
+
+\begin{DoxyParams}{Parameters}
+{\em intersection} & Intersection pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\index{Flourish\+AP@{Flourish\+AP}!generate\+Message@{generate\+Message}}
+\index{generate\+Message@{generate\+Message}!Flourish\+AP@{Flourish\+AP}}
+\subsubsection[{\texorpdfstring{generate\+Message() Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE}{generateMessage() Q_DECL_OVERRIDE}}]{\setlength{\rightskip}{0pt plus 5cm}Packet\+Pointer\+List Flourish\+A\+P\+::generate\+Message (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classFlourishAP_a63b7d385704b4ff897120751223e27f0}{}\label{classFlourishAP_a63b7d385704b4ff897120751223e27f0}
+
+
+Generate messages to be transmitted. 
+
+\begin{DoxyReturn}{Returns}
+A list of messages 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classV2XSimpleAP_a7dd6286913001eb2554dee16693e8def}{V2\+X\+Simple\+AP}.
+
+\index{Flourish\+AP@{Flourish\+AP}!generate\+S\+P\+A\+T\+EM@{generate\+S\+P\+A\+T\+EM}}
+\index{generate\+S\+P\+A\+T\+EM@{generate\+S\+P\+A\+T\+EM}!Flourish\+AP@{Flourish\+AP}}
+\subsubsection[{\texorpdfstring{generate\+S\+P\+A\+T\+E\+M(const V2\+X\+Intersection\+Pointer \&intersection)}{generateSPATEM(const V2XIntersectionPointer &intersection)}}]{\setlength{\rightskip}{0pt plus 5cm}Packet\+Pointer Flourish\+A\+P\+::generate\+S\+P\+A\+T\+EM (
+\begin{DoxyParamCaption}
+\item[{const {\bf V2\+X\+Intersection\+Pointer} \&}]{intersection}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classFlourishAP_afe2550ca74f6d6375f290b97271996a2}{}\label{classFlourishAP_afe2550ca74f6d6375f290b97271996a2}
+
+
+Generate a \hyperlink{structSPATEM}{S\+P\+A\+T\+EM} message. 
+
+The \hyperlink{structSPATEM}{S\+P\+A\+T\+EM} in the current implementation refers to a single intersection.
+
+
+\begin{DoxyParams}{Parameters}
+{\em intersection} & Intersection pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A \hyperlink{structSPATEM}{S\+P\+A\+T\+EM} message 
+\end{DoxyReturn}
+\index{Flourish\+AP@{Flourish\+AP}!received@{received}}
+\index{received@{received}!Flourish\+AP@{Flourish\+AP}}
+\subsubsection[{\texorpdfstring{received}{received}}]{\setlength{\rightskip}{0pt plus 5cm}void Flourish\+A\+P\+::received (
+\begin{DoxyParamCaption}
+\item[{const Q\+Pointer$<$ {\bf Net\+Device} $>$ \&}]{device, }
+\item[{const Q\+Shared\+Pointer$<$ const {\bf Packet} $>$ \&}]{packet, }
+\item[{const Address \&}]{addr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [slot]}}\hypertarget{classFlourishAP_acff41fd22ca0610c85f170a68897a502}{}\label{classFlourishAP_acff41fd22ca0610c85f170a68897a502}
+
+
+A message has been received. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Device which has received the message \\
+\hline
+{\em packet} & Packet received \\
+\hline
+{\em addr} & Source address \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+plugins/\+Flourish\+V2\+X\+Framework/Flourish\+A\+P.\+h\item 
+plugins/\+Flourish\+V2\+X\+Framework/Flourish\+A\+P.\+cpp\end{DoxyCompactItemize}

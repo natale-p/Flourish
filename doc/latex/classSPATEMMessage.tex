@@ -1,0 +1,223 @@
+\hypertarget{classSPATEMMessage}{}\section{S\+P\+A\+T\+E\+M\+Message Class Reference}
+\label{classSPATEMMessage}\index{S\+P\+A\+T\+E\+M\+Message@{S\+P\+A\+T\+E\+M\+Message}}
+
+
+A \hyperlink{structSPATEM}{S\+P\+A\+T\+EM} message.  
+
+
+
+
+{\ttfamily \#include $<$S\+P\+A\+T\+E\+M\+Message.\+h$>$}
+
+
+
+Inheritance diagram for S\+P\+A\+T\+E\+M\+Message\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{classSPATEMMessage__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for S\+P\+A\+T\+E\+M\+Message\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{classSPATEMMessage__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSPATEMMessage_abd0df1be48cb4a8b8f1d5b4e0c1e8822}{S\+P\+A\+T\+E\+M\+Message} ()\hypertarget{classSPATEMMessage_abd0df1be48cb4a8b8f1d5b4e0c1e8822}{}\label{classSPATEMMessage_abd0df1be48cb4a8b8f1d5b4e0c1e8822}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{classSPATEMMessage}{S\+P\+A\+T\+E\+M\+Message} constructor. \end{DoxyCompactList}\item 
+\hyperlink{classSPATEMMessage_a83b6ef70487b5fd5768291fdb8480e54}{S\+P\+A\+T\+E\+M\+Message} (const \hyperlink{classSPATEMMessage}{S\+P\+A\+T\+E\+M\+Message} \&other)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classSPATEMMessage}{S\+P\+A\+T\+E\+M\+Message} copy constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classSPATEMMessage_a6cb36864c94227303ba9a1dd760594f8}{$\sim$\+S\+P\+A\+T\+E\+M\+Message} ()\hypertarget{classSPATEMMessage_a6cb36864c94227303ba9a1dd760594f8}{}\label{classSPATEMMessage_a6cb36864c94227303ba9a1dd760594f8}
+
+\begin{DoxyCompactList}\small\item\em Deconstructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classV2XMessage}{V2\+X\+Message} $\ast$ \hyperlink{classSPATEMMessage_a082ffadf59589fe7a9c80573e948839d}{copy} () const 
+\begin{DoxyCompactList}\small\item\em Copy the message content (shallow copy) \end{DoxyCompactList}\item 
+virtual void \hyperlink{classSPATEMMessage_abd1a523ecdde1313c3cc4623abc0c3d9}{print} () const \hypertarget{classSPATEMMessage_abd1a523ecdde1313c3cc4623abc0c3d9}{}\label{classSPATEMMessage_abd1a523ecdde1313c3cc4623abc0c3d9}
+
+\begin{DoxyCompactList}\small\item\em print the message over console in X\+ML format \end{DoxyCompactList}\item 
+virtual quint32 \hyperlink{classSPATEMMessage_a96963a892572398a79ea2c742d53085b}{get\+Size} () const 
+\begin{DoxyCompactList}\small\item\em get the size of a message \end{DoxyCompactList}\item 
+bool \hyperlink{classSPATEMMessage_a22a5b83422f56e47cd67cdb92309f14b}{from\+X\+ML} (const char $\ast$buf, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Build this object from an X\+ML representation. \end{DoxyCompactList}\item 
+bool \hyperlink{classSPATEMMessage_af892fdbc96a9ca40ea391fe6e3a54737}{from\+X\+ML} (const char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Build this object from a file containing an X\+ML representation. \end{DoxyCompactList}\item 
+bool \hyperlink{classSPATEMMessage_ae52cf83efa24c7ce678f002e96bfff60}{to\+X\+ML} (std\+::ostream $\ast$out) const 
+\begin{DoxyCompactList}\small\item\em Write this message in an X\+ML format. \end{DoxyCompactList}\item 
+void \hyperlink{classSPATEMMessage_a36055a9e9d460fad039b7b1dbae7b12e}{to\+Console} () const \hypertarget{classSPATEMMessage_a36055a9e9d460fad039b7b1dbae7b12e}{}\label{classSPATEMMessage_a36055a9e9d460fad039b7b1dbae7b12e}
+
+\begin{DoxyCompactList}\small\item\em Print the message to the console. \end{DoxyCompactList}\item 
+const \hyperlink{structSPATEM}{S\+P\+A\+T\+E\+M\+\_\+t} $\ast$ \hyperlink{classSPATEMMessage_afbb721337b41135e1316bc1fc99c37d5}{const\+Data} () const 
+\begin{DoxyCompactList}\small\item\em Read-\/only data access. \end{DoxyCompactList}\item 
+\hyperlink{structSPATEM}{S\+P\+A\+T\+E\+M\+\_\+t} $\ast$ \hyperlink{classSPATEMMessage_a43c27d472bbe0476d1a786078c492131}{data} ()
+\begin{DoxyCompactList}\small\item\em data Write data access \end{DoxyCompactList}\item 
+void \hyperlink{classSPATEMMessage_acec758fcc9c2eb8500ea03d8b772898a}{initialize\+Empty} ()\hypertarget{classSPATEMMessage_acec758fcc9c2eb8500ea03d8b772898a}{}\label{classSPATEMMessage_acec758fcc9c2eb8500ea03d8b772898a}
+
+\begin{DoxyCompactList}\small\item\em Allocate raw data for directly manipulating it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A \hyperlink{structSPATEM}{S\+P\+A\+T\+EM} message. 
+
+Copyright T\+SS 2017
+
+Author\+: Natale Patriciello \href{mailto:natale.patriciello@aimsun.com}{\tt natale.\+patriciello@aimsun.\+com}
+
+Represents a \hyperlink{structSPATEM}{S\+P\+A\+T\+EM} Message through the use of \hyperlink{classASN1CContainer}{A\+S\+N1\+C\+Container}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{S\+P\+A\+T\+E\+M\+Message@{S\+P\+A\+T\+E\+M\+Message}!S\+P\+A\+T\+E\+M\+Message@{S\+P\+A\+T\+E\+M\+Message}}
+\index{S\+P\+A\+T\+E\+M\+Message@{S\+P\+A\+T\+E\+M\+Message}!S\+P\+A\+T\+E\+M\+Message@{S\+P\+A\+T\+E\+M\+Message}}
+\subsubsection[{\texorpdfstring{S\+P\+A\+T\+E\+M\+Message(const S\+P\+A\+T\+E\+M\+Message \&other)}{SPATEMMessage(const SPATEMMessage &other)}}]{\setlength{\rightskip}{0pt plus 5cm}S\+P\+A\+T\+E\+M\+Message\+::\+S\+P\+A\+T\+E\+M\+Message (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+P\+A\+T\+E\+M\+Message} \&}]{other}
+\end{DoxyParamCaption}
+)}\hypertarget{classSPATEMMessage_a83b6ef70487b5fd5768291fdb8480e54}{}\label{classSPATEMMessage_a83b6ef70487b5fd5768291fdb8480e54}
+
+
+\hyperlink{classSPATEMMessage}{S\+P\+A\+T\+E\+M\+Message} copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & the copy \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{S\+P\+A\+T\+E\+M\+Message@{S\+P\+A\+T\+E\+M\+Message}!const\+Data@{const\+Data}}
+\index{const\+Data@{const\+Data}!S\+P\+A\+T\+E\+M\+Message@{S\+P\+A\+T\+E\+M\+Message}}
+\subsubsection[{\texorpdfstring{const\+Data() const }{constData() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf S\+P\+A\+T\+E\+M\+\_\+t}$\ast$ S\+P\+A\+T\+E\+M\+Message\+::const\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classSPATEMMessage_afbb721337b41135e1316bc1fc99c37d5}{}\label{classSPATEMMessage_afbb721337b41135e1316bc1fc99c37d5}
+
+
+Read-\/only data access. 
+
+\begin{DoxyReturn}{Returns}
+A copy of the data 
+\end{DoxyReturn}
+\index{S\+P\+A\+T\+E\+M\+Message@{S\+P\+A\+T\+E\+M\+Message}!copy@{copy}}
+\index{copy@{copy}!S\+P\+A\+T\+E\+M\+Message@{S\+P\+A\+T\+E\+M\+Message}}
+\subsubsection[{\texorpdfstring{copy() const }{copy() const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf V2\+X\+Message}$\ast$ S\+P\+A\+T\+E\+M\+Message\+::copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classSPATEMMessage_a082ffadf59589fe7a9c80573e948839d}{}\label{classSPATEMMessage_a082ffadf59589fe7a9c80573e948839d}
+
+
+Copy the message content (shallow copy) 
+
+\begin{DoxyReturn}{Returns}
+a copy of the message 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classV2XMessage_a0838dc7505794641df7f0a3bdc4148b1}{V2\+X\+Message}.
+
+\index{S\+P\+A\+T\+E\+M\+Message@{S\+P\+A\+T\+E\+M\+Message}!data@{data}}
+\index{data@{data}!S\+P\+A\+T\+E\+M\+Message@{S\+P\+A\+T\+E\+M\+Message}}
+\subsubsection[{\texorpdfstring{data()}{data()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+P\+A\+T\+E\+M\+\_\+t}$\ast$ S\+P\+A\+T\+E\+M\+Message\+::data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classSPATEMMessage_a43c27d472bbe0476d1a786078c492131}{}\label{classSPATEMMessage_a43c27d472bbe0476d1a786078c492131}
+
+
+data Write data access 
+
+\begin{DoxyReturn}{Returns}
+A copy of the data 
+\end{DoxyReturn}
+\index{S\+P\+A\+T\+E\+M\+Message@{S\+P\+A\+T\+E\+M\+Message}!from\+X\+ML@{from\+X\+ML}}
+\index{from\+X\+ML@{from\+X\+ML}!S\+P\+A\+T\+E\+M\+Message@{S\+P\+A\+T\+E\+M\+Message}}
+\subsubsection[{\texorpdfstring{from\+X\+M\+L(const char $\ast$buf, size\+\_\+t size)}{fromXML(const char *buf, size_t size)}}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+P\+A\+T\+E\+M\+Message\+::from\+X\+ML (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{buf, }
+\item[{size\+\_\+t}]{size}
+\end{DoxyParamCaption}
+)}\hypertarget{classSPATEMMessage_a22a5b83422f56e47cd67cdb92309f14b}{}\label{classSPATEMMessage_a22a5b83422f56e47cd67cdb92309f14b}
+
+
+Build this object from an X\+ML representation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & buffer of the representation \\
+\hline
+{\em size} & size of the buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the construction was fine 
+\end{DoxyReturn}
+\index{S\+P\+A\+T\+E\+M\+Message@{S\+P\+A\+T\+E\+M\+Message}!from\+X\+ML@{from\+X\+ML}}
+\index{from\+X\+ML@{from\+X\+ML}!S\+P\+A\+T\+E\+M\+Message@{S\+P\+A\+T\+E\+M\+Message}}
+\subsubsection[{\texorpdfstring{from\+X\+M\+L(const char $\ast$filename)}{fromXML(const char *filename)}}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+P\+A\+T\+E\+M\+Message\+::from\+X\+ML (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename}
+\end{DoxyParamCaption}
+)}\hypertarget{classSPATEMMessage_af892fdbc96a9ca40ea391fe6e3a54737}{}\label{classSPATEMMessage_af892fdbc96a9ca40ea391fe6e3a54737}
+
+
+Build this object from a file containing an X\+ML representation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & File name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the construction was fine 
+\end{DoxyReturn}
+\index{S\+P\+A\+T\+E\+M\+Message@{S\+P\+A\+T\+E\+M\+Message}!get\+Size@{get\+Size}}
+\index{get\+Size@{get\+Size}!S\+P\+A\+T\+E\+M\+Message@{S\+P\+A\+T\+E\+M\+Message}}
+\subsubsection[{\texorpdfstring{get\+Size() const }{getSize() const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual quint32 S\+P\+A\+T\+E\+M\+Message\+::get\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classSPATEMMessage_a96963a892572398a79ea2c742d53085b}{}\label{classSPATEMMessage_a96963a892572398a79ea2c742d53085b}
+
+
+get the size of a message 
+
+\begin{DoxyReturn}{Returns}
+the size of a message 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classV2XMessage_ae1b54af9f8f88bb0c2a6967d3f6e7777}{V2\+X\+Message}.
+
+\index{S\+P\+A\+T\+E\+M\+Message@{S\+P\+A\+T\+E\+M\+Message}!to\+X\+ML@{to\+X\+ML}}
+\index{to\+X\+ML@{to\+X\+ML}!S\+P\+A\+T\+E\+M\+Message@{S\+P\+A\+T\+E\+M\+Message}}
+\subsubsection[{\texorpdfstring{to\+X\+M\+L(std\+::ostream $\ast$out) const }{toXML(std::ostream *out) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+P\+A\+T\+E\+M\+Message\+::to\+X\+ML (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream $\ast$}]{out}
+\end{DoxyParamCaption}
+) const}\hypertarget{classSPATEMMessage_ae52cf83efa24c7ce678f002e96bfff60}{}\label{classSPATEMMessage_ae52cf83efa24c7ce678f002e96bfff60}
+
+
+Write this message in an X\+ML format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & output stream \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if everything went fine 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/aimsun\+\_\+extensions/\+V2\+X\+Framework/S\+P\+A\+T\+E\+M\+Message.\+h\end{DoxyCompactItemize}

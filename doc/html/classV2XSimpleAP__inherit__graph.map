@@ -1,0 +1,6 @@
+<map id="V2XSimpleAP" name="V2XSimpleAP">
+<area shape="rect" id="node4" href="$classFlourishAP.html" title="A non&#45;mobile infrastructure. " alt="" coords="5,229,92,256"/>
+<area shape="rect" id="node5" href="$classV2XConnectedAgent.html" title="Represents a connected vehicle (e.g., a mobile station) in the framework. " alt="" coords="117,229,261,256"/>
+<area shape="rect" id="node2" href="$classV2XNetworkNode.html" title="A Node in the network. " alt="" coords="55,80,181,107"/>
+<area shape="rect" id="node6" href="$classFlourishConnectedAgent.html" title="A mobile agent. " alt="" coords="106,304,271,331"/>
+</map>

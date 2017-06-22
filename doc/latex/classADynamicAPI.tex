@@ -1,0 +1,188 @@
+\hypertarget{classADynamicAPI}{}\section{A\+Dynamic\+A\+PI Class Reference}
+\label{classADynamicAPI}\index{A\+Dynamic\+A\+PI@{A\+Dynamic\+A\+PI}}
+
+
+A communication framework between Aimsun and an external plugin.  
+
+
+
+
+{\ttfamily \#include $<$A\+Dynamic\+A\+P\+I.\+h$>$}
+
+
+
+Inheritance diagram for A\+Dynamic\+A\+PI\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{classADynamicAPI__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classADynamicAPI_a0791cdc47d83c1c2cb8fcca9318ea1b4}{A\+Dynamic\+A\+PI} (\hyperlink{classADynamicAPISetup}{A\+Dynamic\+A\+P\+I\+Setup} \&setup)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classADynamicAPI}{A\+Dynamic\+A\+PI} Constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classADynamicAPI_a4f3e3112b0e1d679865e20c69597c2ba}{$\sim$\+A\+Dynamic\+A\+PI} ()\hypertarget{classADynamicAPI_a4f3e3112b0e1d679865e20c69597c2ba}{}\label{classADynamicAPI_a4f3e3112b0e1d679865e20c69597c2ba}
+
+\begin{DoxyCompactList}\small\item\em Deconstructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classADynamicAgent}{A\+Dynamic\+Agent} $\ast$ \hyperlink{classADynamicAPI_a9515f56fba44ad8f5aeaeca1b5091b14}{arrival\+New\+Vehicle} (quint32 id\+Handler, D\+T\+A\+Veh $\ast$agent)=0
+\begin{DoxyCompactList}\small\item\em A vehicle enters the system. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classADynamicAPI_a6f4148dd485116a83caba071ea6a688f}{removed\+Vehicle} (quint32 id\+Handler, \hyperlink{classADynamicAgent}{A\+Dynamic\+Agent} $\ast$agent)=0
+\begin{DoxyCompactList}\small\item\em A vehicle leaves the system. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classADynamicAPI_ab00f0ff26b69cae13d72d2d84cc8174b}{pre\+Update} (double time, double time\+Sta, double sim\+Step)=0
+\begin{DoxyCompactList}\small\item\em Called before every simulation step (or simulation event) \end{DoxyCompactList}\item 
+virtual void \hyperlink{classADynamicAPI_ab70821f058585820cfbc9287946642da}{post\+Update} (double time, double time\+Sta, double sim\+Step)=0
+\begin{DoxyCompactList}\small\item\em Called after every simulation step (or simulation event) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A communication framework between Aimsun and an external plugin. 
+
+The objective of this class is to manage the communication between Aimsun simulator and this framework.
+
+The user must rewrite its four virtual methods, which acts as a callbacks (the simulator will call these methods, and will use its return value).
+
+For a detailed description, please look at the documentation of each method.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classADynamicAPI_a9515f56fba44ad8f5aeaeca1b5091b14}{arrival\+New\+Vehicle} 
+
+\hyperlink{classADynamicAPI_a6f4148dd485116a83caba071ea6a688f}{removed\+Vehicle} 
+
+\hyperlink{classADynamicAPI_ab00f0ff26b69cae13d72d2d84cc8174b}{pre\+Update} 
+
+\hyperlink{classADynamicAPI_ab70821f058585820cfbc9287946642da}{post\+Update} 
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{A\+Dynamic\+A\+PI@{A\+Dynamic\+A\+PI}!A\+Dynamic\+A\+PI@{A\+Dynamic\+A\+PI}}
+\index{A\+Dynamic\+A\+PI@{A\+Dynamic\+A\+PI}!A\+Dynamic\+A\+PI@{A\+Dynamic\+A\+PI}}
+\subsubsection[{\texorpdfstring{A\+Dynamic\+A\+P\+I(\+A\+Dynamic\+A\+P\+I\+Setup \&setup)}{ADynamicAPI(ADynamicAPISetup &setup)}}]{\setlength{\rightskip}{0pt plus 5cm}A\+Dynamic\+A\+P\+I\+::\+A\+Dynamic\+A\+PI (
+\begin{DoxyParamCaption}
+\item[{{\bf A\+Dynamic\+A\+P\+I\+Setup} \&}]{setup}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classADynamicAPI_a0791cdc47d83c1c2cb8fcca9318ea1b4}{}\label{classADynamicAPI_a0791cdc47d83c1c2cb8fcca9318ea1b4}
+
+
+\hyperlink{classADynamicAPI}{A\+Dynamic\+A\+PI} Constructor. 
+
+The \hyperlink{classADynamicAPISetup}{A\+Dynamic\+A\+P\+I\+Setup} will always be valid (a copy can be made)
+
+
+\begin{DoxyParams}{Parameters}
+{\em setup} & The A\+PI setup interface \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{A\+Dynamic\+A\+PI@{A\+Dynamic\+A\+PI}!arrival\+New\+Vehicle@{arrival\+New\+Vehicle}}
+\index{arrival\+New\+Vehicle@{arrival\+New\+Vehicle}!A\+Dynamic\+A\+PI@{A\+Dynamic\+A\+PI}}
+\subsubsection[{\texorpdfstring{arrival\+New\+Vehicle(quint32 id\+Handler, D\+T\+A\+Veh $\ast$agent)=0}{arrivalNewVehicle(quint32 idHandler, DTAVeh *agent)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf A\+Dynamic\+Agent}$\ast$ A\+Dynamic\+A\+P\+I\+::arrival\+New\+Vehicle (
+\begin{DoxyParamCaption}
+\item[{quint32}]{id\+Handler, }
+\item[{D\+T\+A\+Veh $\ast$}]{agent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classADynamicAPI_a9515f56fba44ad8f5aeaeca1b5091b14}{}\label{classADynamicAPI_a9515f56fba44ad8f5aeaeca1b5091b14}
+
+
+A vehicle enters the system. 
+
+It is called whenever a vehicle enters inside the system and should create a new vehicle. 
+\begin{DoxyParams}{Parameters}
+{\em id\+Handler} & Unique ID of the agent (it is equivalent to \hyperlink{classADynamicAgent_afaf6756338d00b2448776747ad00ea65}{A\+Dynamic\+Agent\+::get\+Id}) \\
+\hline
+{\em agent} & An opaque pointer representing the vehicle.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to an \hyperlink{classADynamicAgent}{A\+Dynamic\+Agent} to be used by the simulator
+\end{DoxyReturn}
+An user outside Aimsun should never use this pointer directly. 
+
+Implemented in \hyperlink{classFlourishV2XFramework_a47368514f7814d3d6db4cf8aaf049d3b}{Flourish\+V2\+X\+Framework}.
+
+\index{A\+Dynamic\+A\+PI@{A\+Dynamic\+A\+PI}!post\+Update@{post\+Update}}
+\index{post\+Update@{post\+Update}!A\+Dynamic\+A\+PI@{A\+Dynamic\+A\+PI}}
+\subsubsection[{\texorpdfstring{post\+Update(double time, double time\+Sta, double sim\+Step)=0}{postUpdate(double time, double timeSta, double simStep)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void A\+Dynamic\+A\+P\+I\+::post\+Update (
+\begin{DoxyParamCaption}
+\item[{double}]{time, }
+\item[{double}]{time\+Sta, }
+\item[{double}]{sim\+Step}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classADynamicAPI_ab70821f058585820cfbc9287946642da}{}\label{classADynamicAPI_ab70821f058585820cfbc9287946642da}
+
+
+Called after every simulation step (or simulation event) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Simulation time \\
+\hline
+{\em time\+Sta} & Time from 00\+:00.\+00 (midnight) of the current day \\
+\hline
+{\em sim\+Step} & Simulation step \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classFlourishV2XFramework_aa1417bf763cc7b9278df12dfda185010}{Flourish\+V2\+X\+Framework}.
+
+\index{A\+Dynamic\+A\+PI@{A\+Dynamic\+A\+PI}!pre\+Update@{pre\+Update}}
+\index{pre\+Update@{pre\+Update}!A\+Dynamic\+A\+PI@{A\+Dynamic\+A\+PI}}
+\subsubsection[{\texorpdfstring{pre\+Update(double time, double time\+Sta, double sim\+Step)=0}{preUpdate(double time, double timeSta, double simStep)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void A\+Dynamic\+A\+P\+I\+::pre\+Update (
+\begin{DoxyParamCaption}
+\item[{double}]{time, }
+\item[{double}]{time\+Sta, }
+\item[{double}]{sim\+Step}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classADynamicAPI_ab00f0ff26b69cae13d72d2d84cc8174b}{}\label{classADynamicAPI_ab00f0ff26b69cae13d72d2d84cc8174b}
+
+
+Called before every simulation step (or simulation event) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Simulation time \\
+\hline
+{\em time\+Sta} & Time from 00\+:00.\+00 (midnight) of the current day \\
+\hline
+{\em sim\+Step} & Simulation step \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classFlourishV2XFramework_a7dc6777db5dc693c67733e50af76c855}{Flourish\+V2\+X\+Framework}.
+
+\index{A\+Dynamic\+A\+PI@{A\+Dynamic\+A\+PI}!removed\+Vehicle@{removed\+Vehicle}}
+\index{removed\+Vehicle@{removed\+Vehicle}!A\+Dynamic\+A\+PI@{A\+Dynamic\+A\+PI}}
+\subsubsection[{\texorpdfstring{removed\+Vehicle(quint32 id\+Handler, A\+Dynamic\+Agent $\ast$agent)=0}{removedVehicle(quint32 idHandler, ADynamicAgent *agent)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void A\+Dynamic\+A\+P\+I\+::removed\+Vehicle (
+\begin{DoxyParamCaption}
+\item[{quint32}]{id\+Handler, }
+\item[{{\bf A\+Dynamic\+Agent} $\ast$}]{agent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classADynamicAPI_a6f4148dd485116a83caba071ea6a688f}{}\label{classADynamicAPI_a6f4148dd485116a83caba071ea6a688f}
+
+
+A vehicle leaves the system. 
+
+It is called when a vehicle leaves the system; the memory pointed by agent can be safely freed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\+Handler} & Unique ID of the agent \\
+\hline
+{\em agent} & The agent pointer \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classFlourishV2XFramework_a60ff1aaea1448c9a05892597898c48a6}{Flourish\+V2\+X\+Framework}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/core/\+A\+N\+G\+\_\+\+D\+T\+A/\+A\+Dynamic\+A\+P\+I/A\+Dynamic\+A\+P\+I.\+h\end{DoxyCompactItemize}

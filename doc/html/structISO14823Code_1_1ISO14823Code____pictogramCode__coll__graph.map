@@ -1,0 +1,7 @@
+<map id="ISO14823Code::ISO14823Code__pictogramCode" name="ISO14823Code::ISO14823Code__pictogramCode">
+<area shape="rect" id="node2" href="$structOCTET__STRING.html" title="OCTET_STRING" alt="" coords="562,44,687,71"/>
+<area shape="rect" id="node3" href="$structasn__struct__ctx__s.html" title="asn_struct_ctx_s" alt="" coords="131,65,254,92"/>
+<area shape="rect" id="node4" href="$structISO14823Code_1_1ISO14823Code____pictogramCode_1_1ISO14823Code____pictogramCode____pictogramCategoryCode.html" title="ISO14823Code::ISO14823Code\l__pictogramCode::ISO14823Code\l__pictogramCode__pictogramCategoryCode" alt="" coords="485,95,764,151"/>
+<area shape="rect" id="node5" href="$structISO14823Code_1_1ISO14823Code____pictogramCode_1_1ISO14823Code____pictogramCode____serviceCategoryCode.html" title="ISO14823Code::ISO14823Code\l__pictogramCode::ISO14823Code\l__pictogramCode__serviceCategoryCode" alt="" coords="493,175,757,231"/>
+<area shape="rect" id="node6" href="$unionISO14823Code_1_1ISO14823Code____pictogramCode_1_1ISO14823Code____pictogramCode____serviceCae55999a37109a17de215317f84c86695.html" title="ISO14823Code::ISO14823Code\l__pictogramCode::ISO14823Code\l__pictogramCode__serviceCategoryCode\l::ISO14823Code__pictogramCode__serviceCategoryCode_u" alt="" coords="5,167,380,238"/>
+</map>

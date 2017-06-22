@@ -1,0 +1,286 @@
+\hypertarget{classFlourishStation}{}\section{Flourish\+Station Class Reference}
+\label{classFlourishStation}\index{Flourish\+Station@{Flourish\+Station}}
+
+
+A station with a connection through a channel.  
+
+
+
+
+{\ttfamily \#include $<$Flourish\+Station.\+h$>$}
+
+
+
+Inheritance diagram for Flourish\+Station\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{classFlourishStation__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Flourish\+Station\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFlourishStation__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classFlourishStation_a2f45c2c14fa88707e4af97d4d99b23bb}{received} (const Q\+Pointer$<$ \hyperlink{classNetDevice}{Net\+Device} $>$ \&device, const Q\+Shared\+Pointer$<$ const \hyperlink{classV2XMessage}{Packet} $>$ \&packet, const Address \&addr)
+\begin{DoxyCompactList}\small\item\em A message has been received. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries destroyed} (\hyperlink{classFlourishStation}{Flourish\+Station} $\ast$station)\hypertarget{classFlourishStation_ae56c849a7c45fcca35d7870f62dfa9bc}{}\label{classFlourishStation_ae56c849a7c45fcca35d7870f62dfa9bc}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classFlourishStation_ace4a06cb1057847b37865681087c8af9}{Flourish\+Station} ()
+\begin{DoxyCompactList}\small\item\em Constructor for a moving station. \end{DoxyCompactList}\item 
+\hyperlink{classFlourishStation_a0eef2386a1e0a401c9b5537f40fd4438}{Flourish\+Station} (double x, double y, double z)
+\begin{DoxyCompactList}\small\item\em Constructor for a static station. \end{DoxyCompactList}\item 
+\hyperlink{classFlourishStation_a773f8325b054f417d6e73de5dba62984}{$\sim$\+Flourish\+Station} ()\hypertarget{classFlourishStation_a773f8325b054f417d6e73de5dba62984}{}\label{classFlourishStation_a773f8325b054f417d6e73de5dba62984}
+
+\begin{DoxyCompactList}\small\item\em Deconstructor. \end{DoxyCompactList}\item 
+{\bfseries Flourish\+Station} (\hyperlink{classFlourishStation}{Flourish\+Station} const \&)=delete\hypertarget{classFlourishStation_a4a8e1e586d17dea809d4a624f6ec24f4}{}\label{classFlourishStation_a4a8e1e586d17dea809d4a624f6ec24f4}
+
+\item 
+void {\bfseries operator=} (\hyperlink{classFlourishStation}{Flourish\+Station} const \&x)=delete\hypertarget{classFlourishStation_a520678ea7e11f0964c55d6a9c881305c}{}\label{classFlourishStation_a520678ea7e11f0964c55d6a9c881305c}
+
+\item 
+{\bfseries Flourish\+Station} (\hyperlink{classFlourishStation}{Flourish\+Station} \&\&other) noexcept=delete\hypertarget{classFlourishStation_a0cb3c168f35a4dcc80179446dc62e139}{}\label{classFlourishStation_a0cb3c168f35a4dcc80179446dc62e139}
+
+\item 
+\hyperlink{classFlourishStation}{Flourish\+Station} \& {\bfseries operator=} (\hyperlink{classFlourishStation}{Flourish\+Station} \&\&other)=delete\hypertarget{classFlourishStation_ad217d84bfc5195e5eb6d4532a8915cb1}{}\label{classFlourishStation_ad217d84bfc5195e5eb6d4532a8915cb1}
+
+\item 
+void \hyperlink{classFlourishStation_a17ba50ba20d55d98ac51e599e35540f4}{set\+Radius} (double radius)
+\begin{DoxyCompactList}\small\item\em Set the radius of the station. \end{DoxyCompactList}\item 
+double \hyperlink{classFlourishStation_a5053348c641ca1b71133f20d27481bd7}{get\+Radius} () const 
+\begin{DoxyCompactList}\small\item\em Get the station radius. \end{DoxyCompactList}\item 
+\hyperlink{classSimpleChannel}{Simple\+Channel} $\ast$ \hyperlink{classFlourishStation_a1b3dd54c5ea74e919b9d5cc7d92b757d}{get\+Channel} () const 
+\item 
+void \hyperlink{classFlourishStation_a0093cc9442a3ff16f064c402ba479084}{do\+Post} (double time, double time\+Sta, double sim\+Step)
+\begin{DoxyCompactList}\small\item\em Execute operations at the end of the simulation step. \end{DoxyCompactList}\item 
+void \hyperlink{classFlourishStation_abc038feac73ec5835c194648fe319bc6}{do\+Pre} (double time, double time\+Sta, double sim\+Step)
+\begin{DoxyCompactList}\small\item\em Execute operations at the beginning of the simulation step. \end{DoxyCompactList}\item 
+bool \hyperlink{classFlourishStation_a80a772ef1fb87d5e3d604ca8c9f3c54d}{agent\+Is\+In\+Radius} (const \hyperlink{classV2XNetworkNode}{V2\+X\+Network\+Node} $\ast$agent) const 
+\begin{DoxyCompactList}\small\item\em Check if the given agent is in the radius of the station. \end{DoxyCompactList}\item 
+virtual Q\+List$<$ \hyperlink{classFlourishStation}{Flourish\+Station} $\ast$ $>$ \hyperlink{classFlourishStation_a1fe311546a3336d1090829900a21f279}{get\+Neighbors} () const 
+\begin{DoxyCompactList}\small\item\em Get the neighbors of this station. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A station with a connection through a channel. 
+
+The objective is to model with this class any object which has the capability to send or to receive message. The communication model lacks of propagation fading, transmission power, and in general is a very basic one.
+
+There can be two types of stations\+: a static one (represented by this class) and a mobile one (represented by the class \hyperlink{classFlourishConnectedAgent}{Flourish\+Connected\+Agent}). Both shares the background of the operations; however, they implement it differently.
+
+Features ++++++++
+
+A station is characterized by a radius, to emulate a propagation fading. Every point which is out of this radius is therefore unable to radio communicate with it. This is verified by calling the static method is\+In\+Radius.
+
+Each station is characterized by its own channel, on which it can send message. There are as many channel as stations (contrary on the real world in which the number of channels is often limited). To see the properties of the channel (namely, \hyperlink{classErrorModel}{Error\+Model} and delay) please look to the \hyperlink{classFlourishSimpleChannel}{Flourish\+Simple\+Channel} page.
+
+Communication model +++++++++++++++++++
+
+In-\/range vehicles will substribe to the channel of this station. Then, before the simulation step, they will send their message as a broadcast. When the propagation time is elapsed, the reception will be triggered in the stations and the connected vehicle through the method received.
+
+For more details about V2I and V2V, please look at the class \hyperlink{classFlourishConnectedAgent}{Flourish\+Connected\+Agent}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Flourish\+Station@{Flourish\+Station}!Flourish\+Station@{Flourish\+Station}}
+\index{Flourish\+Station@{Flourish\+Station}!Flourish\+Station@{Flourish\+Station}}
+\subsubsection[{\texorpdfstring{Flourish\+Station()}{FlourishStation()}}]{\setlength{\rightskip}{0pt plus 5cm}Flourish\+Station\+::\+Flourish\+Station (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classFlourishStation_ace4a06cb1057847b37865681087c8af9}{}\label{classFlourishStation_ace4a06cb1057847b37865681087c8af9}
+
+
+Constructor for a moving station. 
+
+Copyright T\+SS 2017
+
+Author\+: Natale Patriciello \href{mailto:natale.patriciello@aimsun.com}{\tt natale.\+patriciello@aimsun.\+com} \index{Flourish\+Station@{Flourish\+Station}!Flourish\+Station@{Flourish\+Station}}
+\index{Flourish\+Station@{Flourish\+Station}!Flourish\+Station@{Flourish\+Station}}
+\subsubsection[{\texorpdfstring{Flourish\+Station(double x, double y, double z)}{FlourishStation(double x, double y, double z)}}]{\setlength{\rightskip}{0pt plus 5cm}Flourish\+Station\+::\+Flourish\+Station (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{z}
+\end{DoxyParamCaption}
+)}\hypertarget{classFlourishStation_a0eef2386a1e0a401c9b5537f40fd4438}{}\label{classFlourishStation_a0eef2386a1e0a401c9b5537f40fd4438}
+
+
+Constructor for a static station. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & x position \\
+\hline
+{\em y} & y position \\
+\hline
+{\em z} & z position \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Flourish\+Station@{Flourish\+Station}!agent\+Is\+In\+Radius@{agent\+Is\+In\+Radius}}
+\index{agent\+Is\+In\+Radius@{agent\+Is\+In\+Radius}!Flourish\+Station@{Flourish\+Station}}
+\subsubsection[{\texorpdfstring{agent\+Is\+In\+Radius(const V2\+X\+Network\+Node $\ast$agent) const }{agentIsInRadius(const V2XNetworkNode *agent) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Flourish\+Station\+::agent\+Is\+In\+Radius (
+\begin{DoxyParamCaption}
+\item[{const {\bf V2\+X\+Network\+Node} $\ast$}]{agent}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classFlourishStation_a80a772ef1fb87d5e3d604ca8c9f3c54d}{}\label{classFlourishStation_a80a772ef1fb87d5e3d604ca8c9f3c54d}
+
+
+Check if the given agent is in the radius of the station. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em agent} & Agent to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the agent in the range of the station 
+\end{DoxyReturn}
+\index{Flourish\+Station@{Flourish\+Station}!do\+Post@{do\+Post}}
+\index{do\+Post@{do\+Post}!Flourish\+Station@{Flourish\+Station}}
+\subsubsection[{\texorpdfstring{do\+Post(double time, double time\+Sta, double sim\+Step)}{doPost(double time, double timeSta, double simStep)}}]{\setlength{\rightskip}{0pt plus 5cm}void Flourish\+Station\+::do\+Post (
+\begin{DoxyParamCaption}
+\item[{double}]{time, }
+\item[{double}]{time\+Sta, }
+\item[{double}]{sim\+Step}
+\end{DoxyParamCaption}
+)}\hypertarget{classFlourishStation_a0093cc9442a3ff16f064c402ba479084}{}\label{classFlourishStation_a0093cc9442a3ff16f064c402ba479084}
+
+
+Execute operations at the end of the simulation step. 
+
+In particular, it instruct the channel to deliver the queued message up to the current time. 
+\begin{DoxyParams}{Parameters}
+{\em time} & T\+O\+DO \\
+\hline
+{\em time\+Sta} & T\+O\+DO \\
+\hline
+{\em sim\+Step} & T\+O\+DO \\
+\hline
+\end{DoxyParams}
+\index{Flourish\+Station@{Flourish\+Station}!do\+Pre@{do\+Pre}}
+\index{do\+Pre@{do\+Pre}!Flourish\+Station@{Flourish\+Station}}
+\subsubsection[{\texorpdfstring{do\+Pre(double time, double time\+Sta, double sim\+Step)}{doPre(double time, double timeSta, double simStep)}}]{\setlength{\rightskip}{0pt plus 5cm}void Flourish\+Station\+::do\+Pre (
+\begin{DoxyParamCaption}
+\item[{double}]{time, }
+\item[{double}]{time\+Sta, }
+\item[{double}]{sim\+Step}
+\end{DoxyParamCaption}
+)}\hypertarget{classFlourishStation_abc038feac73ec5835c194648fe319bc6}{}\label{classFlourishStation_abc038feac73ec5835c194648fe319bc6}
+
+
+Execute operations at the beginning of the simulation step. 
+
+In particular, it saves the current time in this node
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & T\+O\+DO \\
+\hline
+{\em time\+Sta} & T\+O\+DO \\
+\hline
+{\em sim\+Step} & T\+O\+DO \\
+\hline
+\end{DoxyParams}
+\index{Flourish\+Station@{Flourish\+Station}!get\+Channel@{get\+Channel}}
+\index{get\+Channel@{get\+Channel}!Flourish\+Station@{Flourish\+Station}}
+\subsubsection[{\texorpdfstring{get\+Channel() const }{getChannel() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Simple\+Channel} $\ast$ Flourish\+Station\+::get\+Channel (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classFlourishStation_a1b3dd54c5ea74e919b9d5cc7d92b757d}{}\label{classFlourishStation_a1b3dd54c5ea74e919b9d5cc7d92b757d}
+\begin{DoxyReturn}{Returns}
+The channel of this station 
+\end{DoxyReturn}
+\index{Flourish\+Station@{Flourish\+Station}!get\+Neighbors@{get\+Neighbors}}
+\index{get\+Neighbors@{get\+Neighbors}!Flourish\+Station@{Flourish\+Station}}
+\subsubsection[{\texorpdfstring{get\+Neighbors() const }{getNeighbors() const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual Q\+List$<${\bf Flourish\+Station}$\ast$$>$ Flourish\+Station\+::get\+Neighbors (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classFlourishStation_a1fe311546a3336d1090829900a21f279}{}\label{classFlourishStation_a1fe311546a3336d1090829900a21f279}
+
+
+Get the neighbors of this station. 
+
+\begin{DoxyReturn}{Returns}
+an empty list, the concept of neighbors is not present for the stations 
+\end{DoxyReturn}
+\index{Flourish\+Station@{Flourish\+Station}!get\+Radius@{get\+Radius}}
+\index{get\+Radius@{get\+Radius}!Flourish\+Station@{Flourish\+Station}}
+\subsubsection[{\texorpdfstring{get\+Radius() const }{getRadius() const }}]{\setlength{\rightskip}{0pt plus 5cm}double Flourish\+Station\+::get\+Radius (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classFlourishStation_a5053348c641ca1b71133f20d27481bd7}{}\label{classFlourishStation_a5053348c641ca1b71133f20d27481bd7}
+
+
+Get the station radius. 
+
+\begin{DoxyReturn}{Returns}
+the station radius 
+\end{DoxyReturn}
+\index{Flourish\+Station@{Flourish\+Station}!received@{received}}
+\index{received@{received}!Flourish\+Station@{Flourish\+Station}}
+\subsubsection[{\texorpdfstring{received}{received}}]{\setlength{\rightskip}{0pt plus 5cm}void Flourish\+Station\+::received (
+\begin{DoxyParamCaption}
+\item[{const Q\+Pointer$<$ {\bf Net\+Device} $>$ \&}]{device, }
+\item[{const Q\+Shared\+Pointer$<$ const {\bf Packet} $>$ \&}]{packet, }
+\item[{const Address \&}]{addr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [slot]}}\hypertarget{classFlourishStation_a2f45c2c14fa88707e4af97d4d99b23bb}{}\label{classFlourishStation_a2f45c2c14fa88707e4af97d4d99b23bb}
+
+
+A message has been received. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Device which has received the message \\
+\hline
+{\em packet} & Packet received \\
+\hline
+{\em addr} & Source address \\
+\hline
+\end{DoxyParams}
+\index{Flourish\+Station@{Flourish\+Station}!set\+Radius@{set\+Radius}}
+\index{set\+Radius@{set\+Radius}!Flourish\+Station@{Flourish\+Station}}
+\subsubsection[{\texorpdfstring{set\+Radius(double radius)}{setRadius(double radius)}}]{\setlength{\rightskip}{0pt plus 5cm}void Flourish\+Station\+::set\+Radius (
+\begin{DoxyParamCaption}
+\item[{double}]{radius}
+\end{DoxyParamCaption}
+)}\hypertarget{classFlourishStation_a17ba50ba20d55d98ac51e599e35540f4}{}\label{classFlourishStation_a17ba50ba20d55d98ac51e599e35540f4}
+
+
+Set the radius of the station. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radius} & Radius \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+plugins/\+Flourish\+V2\+X\+Framework/Flourish\+Station.\+h\item 
+plugins/\+Flourish\+V2\+X\+Framework/Flourish\+Station.\+cpp\end{DoxyCompactItemize}

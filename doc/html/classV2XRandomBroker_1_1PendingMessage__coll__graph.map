@@ -1,0 +1,5 @@
+<map id="V2XRandomBroker::PendingMessage" name="V2XRandomBroker::PendingMessage">
+<area shape="rect" id="node2" href="$classConnectedAgent.html" title="Represents a connected vehicle. " alt="" coords="5,81,124,108"/>
+<area shape="rect" id="node3" href="$classADynamicAgent.html" title="ADynamicAgent" alt="" coords="6,5,123,32"/>
+<area shape="rect" id="node4" href="$classV2XMessage.html" title="A message in the V2XFramework. " alt="" coords="148,81,248,108"/>
+</map>

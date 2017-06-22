@@ -1,0 +1,318 @@
+\hypertarget{classFlourishV2XFramework}{}\section{Flourish\+V2\+X\+Framework Class Reference}
+\label{classFlourishV2XFramework}\index{Flourish\+V2\+X\+Framework@{Flourish\+V2\+X\+Framework}}
+
+
+Main framework class.  
+
+
+
+
+{\ttfamily \#include $<$Flourish\+V2\+X\+Framework.\+h$>$}
+
+
+
+Inheritance diagram for Flourish\+V2\+X\+Framework\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{classFlourishV2XFramework__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Flourish\+V2\+X\+Framework\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{classFlourishV2XFramework__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classFlourishV2XFramework_a81dbf090f0aab6fd6fa1e7926b90593a}{Flourish\+V2\+X\+Framework} (\hyperlink{classADynamicAPISetup}{A\+Dynamic\+A\+P\+I\+Setup} \&setup)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classFlourishV2XFramework}{Flourish\+V2\+X\+Framework} constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classFlourishV2XFramework_a8b86274d692297621913399ec42e8aee}{$\sim$\+Flourish\+V2\+X\+Framework} ()\hypertarget{classFlourishV2XFramework_a8b86274d692297621913399ec42e8aee}{}\label{classFlourishV2XFramework_a8b86274d692297621913399ec42e8aee}
+
+\begin{DoxyCompactList}\small\item\em Deconstructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classADynamicAgent}{A\+Dynamic\+Agent} $\ast$ \hyperlink{classFlourishV2XFramework_a47368514f7814d3d6db4cf8aaf049d3b}{arrival\+New\+Vehicle} (quint32 id\+Handler, D\+T\+A\+Veh $\ast$agent) Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\begin{DoxyCompactList}\small\item\em A vehicle enters the system. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classFlourishV2XFramework_a60ff1aaea1448c9a05892597898c48a6}{removed\+Vehicle} (quint32 id\+Handler, \hyperlink{classADynamicAgent}{A\+Dynamic\+Agent} $\ast$agent) Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\begin{DoxyCompactList}\small\item\em A vehicle leaves the system. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classFlourishV2XFramework_a7dc6777db5dc693c67733e50af76c855}{pre\+Update} (double time, double time\+Sta, double sim\+Step) Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\begin{DoxyCompactList}\small\item\em Called before every simulation step (or simulation event) \end{DoxyCompactList}\item 
+virtual void \hyperlink{classFlourishV2XFramework_aa1417bf763cc7b9278df12dfda185010}{post\+Update} (double time, double time\+Sta, double sim\+Step) Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\begin{DoxyCompactList}\small\item\em Called after every simulation step (or simulation event) \end{DoxyCompactList}\item 
+virtual void \hyperlink{classFlourishV2XFramework_a7229f12d53f55bf2486612c97785aa5b}{arrival\+New\+AP} (quint32 id, G\+K\+Object $\ast$obj, \hyperlink{group__V2XFramework_ga22a1c07fac7df77efff8f0d4f6f3c248}{V2\+X\+Intersection\+List} controls) Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\begin{DoxyCompactList}\small\item\em Called each time an access point is added in the G\+UI. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Q\+String \hyperlink{classFlourishV2XFramework_ae087a92f4ca51d92c44c443c790f633c}{get\+Internal\+A\+P\+Delay\+Preference\+Name} ()
+\begin{DoxyCompactList}\small\item\em Get the internal name for the Access Point delay preference. \end{DoxyCompactList}\item 
+static Q\+String \hyperlink{classFlourishV2XFramework_ac3b5d93d4d9b2908f059921f804ccd22}{get\+Internal\+A\+P\+Error\+Rate\+Preference\+Name} ()
+\begin{DoxyCompactList}\small\item\em Get the internal name for the Access Point P\+ER preference. \end{DoxyCompactList}\item 
+static Q\+String \hyperlink{classFlourishV2XFramework_a53554640f6360668357a2079241a8d10}{get\+Internal\+Agent\+Delay\+Preference\+Name} ()
+\begin{DoxyCompactList}\small\item\em Get the internal name for the Agent delay preference. \end{DoxyCompactList}\item 
+static Q\+String \hyperlink{classFlourishV2XFramework_a4cd588c909b77b70157c5c5436050a7c}{get\+Internal\+Agent\+Error\+Rate\+Preference\+Name} ()
+\begin{DoxyCompactList}\small\item\em Get the internal name for the Agent P\+ER preference. \end{DoxyCompactList}\item 
+static Q\+String \hyperlink{classFlourishV2XFramework_a2d39fd13894cf679132ebf620f4e2821}{get\+Internal\+Agent\+Radius\+Preference\+Name} ()
+\begin{DoxyCompactList}\small\item\em Get the internal name for the Agent radius preference. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Main framework class. 
+
+The main objects of the plugin are created by this class, and in general this is the door to the Aimsun simulator. It is based over the \hyperlink{classV2XFramework}{V2\+X\+Framework} class, so if you have not read it, it is better to start from there.
+
+The class is created at the beginning of the simulation and provides four methods to exchange information with the core. We have\+:
+
+
+\begin{DoxyItemize}
+\item arrival\+New\+Vehicle, which is called by the core when a vehicle enters the scene;
+\item removed\+Vehicle, which is called when a vehicle leaves the scene;
+\item pre\+Update, which is called at the beginning of each simulation step;
+\item post\+Update, which is called at the end of each simulation step;
+\end{DoxyItemize}
+
+The first two will be called independently from simulation steps, while the last two will be called by the core each simulation step, depending on the situation. The list of stations (or access point, the terms will be used as synonyms in this framework).
+
+The stations are added at the beginning of the simulations, by querying the simulation model; right now, moving or resizing infrastructures radius during the simulation is not supported. The class in charge of saving a list of stations and agents is \hyperlink{classFlourishBroker}{Flourish\+Broker}, and in its documentation you can find the basics for the communication model.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classFlourishBroker}{Flourish\+Broker} 
+
+\hyperlink{classFlourishV2XFramework_a47368514f7814d3d6db4cf8aaf049d3b}{arrival\+New\+Vehicle} 
+
+\hyperlink{classFlourishV2XFramework_a7dc6777db5dc693c67733e50af76c855}{pre\+Update} 
+
+\hyperlink{classFlourishV2XFramework_aa1417bf763cc7b9278df12dfda185010}{post\+Update} 
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Flourish\+V2\+X\+Framework@{Flourish\+V2\+X\+Framework}!Flourish\+V2\+X\+Framework@{Flourish\+V2\+X\+Framework}}
+\index{Flourish\+V2\+X\+Framework@{Flourish\+V2\+X\+Framework}!Flourish\+V2\+X\+Framework@{Flourish\+V2\+X\+Framework}}
+\subsubsection[{\texorpdfstring{Flourish\+V2\+X\+Framework(\+A\+Dynamic\+A\+P\+I\+Setup \&setup)}{FlourishV2XFramework(ADynamicAPISetup &setup)}}]{\setlength{\rightskip}{0pt plus 5cm}Flourish\+V2\+X\+Framework\+::\+Flourish\+V2\+X\+Framework (
+\begin{DoxyParamCaption}
+\item[{{\bf A\+Dynamic\+A\+P\+I\+Setup} \&}]{setup}
+\end{DoxyParamCaption}
+)}\hypertarget{classFlourishV2XFramework_a81dbf090f0aab6fd6fa1e7926b90593a}{}\label{classFlourishV2XFramework_a81dbf090f0aab6fd6fa1e7926b90593a}
+
+
+\hyperlink{classFlourishV2XFramework}{Flourish\+V2\+X\+Framework} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em setup} & the A\+PI setup function \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Flourish\+V2\+X\+Framework@{Flourish\+V2\+X\+Framework}!arrival\+New\+AP@{arrival\+New\+AP}}
+\index{arrival\+New\+AP@{arrival\+New\+AP}!Flourish\+V2\+X\+Framework@{Flourish\+V2\+X\+Framework}}
+\subsubsection[{\texorpdfstring{arrival\+New\+A\+P(quint32 id, G\+K\+Object $\ast$obj, V2\+X\+Intersection\+List controls) Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE}{arrivalNewAP(quint32 id, GKObject *obj, V2XIntersectionList controls) Q_DECL_OVERRIDE}}]{\setlength{\rightskip}{0pt plus 5cm}void Flourish\+V2\+X\+Framework\+::arrival\+New\+AP (
+\begin{DoxyParamCaption}
+\item[{quint32}]{id, }
+\item[{G\+K\+Object $\ast$}]{obj, }
+\item[{{\bf V2\+X\+Intersection\+List}}]{intersections}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classFlourishV2XFramework_a7229f12d53f55bf2486612c97785aa5b}{}\label{classFlourishV2XFramework_a7229f12d53f55bf2486612c97785aa5b}
+
+
+Called each time an access point is added in the G\+UI. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & unique ID of the access point \\
+\hline
+{\em obj} & an opaque pointer to the object \\
+\hline
+{\em intersections} & the intersections the AP is connected to (R\+SU) \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classV2XFramework_a192e2e3d6ddcf126cdeff7fbc016589e}{V2\+X\+Framework}.
+
+\index{Flourish\+V2\+X\+Framework@{Flourish\+V2\+X\+Framework}!arrival\+New\+Vehicle@{arrival\+New\+Vehicle}}
+\index{arrival\+New\+Vehicle@{arrival\+New\+Vehicle}!Flourish\+V2\+X\+Framework@{Flourish\+V2\+X\+Framework}}
+\subsubsection[{\texorpdfstring{arrival\+New\+Vehicle(quint32 id\+Handler, D\+T\+A\+Veh $\ast$agent) Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE}{arrivalNewVehicle(quint32 idHandler, DTAVeh *agent) Q_DECL_OVERRIDE}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf A\+Dynamic\+Agent} $\ast$ Flourish\+V2\+X\+Framework\+::arrival\+New\+Vehicle (
+\begin{DoxyParamCaption}
+\item[{quint32}]{id\+Handler, }
+\item[{D\+T\+A\+Veh $\ast$}]{agent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classFlourishV2XFramework_a47368514f7814d3d6db4cf8aaf049d3b}{}\label{classFlourishV2XFramework_a47368514f7814d3d6db4cf8aaf049d3b}
+
+
+A vehicle enters the system. 
+
+It is called whenever a vehicle enters inside the system and should create a new vehicle. 
+\begin{DoxyParams}{Parameters}
+{\em id\+Handler} & Unique ID of the agent (it is equivalent to \hyperlink{classADynamicAgent_afaf6756338d00b2448776747ad00ea65}{A\+Dynamic\+Agent\+::get\+Id}) \\
+\hline
+{\em agent} & An opaque pointer representing the vehicle.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to an \hyperlink{classADynamicAgent}{A\+Dynamic\+Agent} to be used by the simulator
+\end{DoxyReturn}
+An user outside Aimsun should never use this pointer directly. 
+
+Implements \hyperlink{classADynamicAPI_a9515f56fba44ad8f5aeaeca1b5091b14}{A\+Dynamic\+A\+PI}.
+
+\index{Flourish\+V2\+X\+Framework@{Flourish\+V2\+X\+Framework}!get\+Internal\+Agent\+Delay\+Preference\+Name@{get\+Internal\+Agent\+Delay\+Preference\+Name}}
+\index{get\+Internal\+Agent\+Delay\+Preference\+Name@{get\+Internal\+Agent\+Delay\+Preference\+Name}!Flourish\+V2\+X\+Framework@{Flourish\+V2\+X\+Framework}}
+\subsubsection[{\texorpdfstring{get\+Internal\+Agent\+Delay\+Preference\+Name()}{getInternalAgentDelayPreferenceName()}}]{\setlength{\rightskip}{0pt plus 5cm}static Q\+String Flourish\+V2\+X\+Framework\+::get\+Internal\+Agent\+Delay\+Preference\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{classFlourishV2XFramework_a53554640f6360668357a2079241a8d10}{}\label{classFlourishV2XFramework_a53554640f6360668357a2079241a8d10}
+
+
+Get the internal name for the Agent delay preference. 
+
+\begin{DoxyReturn}{Returns}
+the specified name 
+\end{DoxyReturn}
+\index{Flourish\+V2\+X\+Framework@{Flourish\+V2\+X\+Framework}!get\+Internal\+Agent\+Error\+Rate\+Preference\+Name@{get\+Internal\+Agent\+Error\+Rate\+Preference\+Name}}
+\index{get\+Internal\+Agent\+Error\+Rate\+Preference\+Name@{get\+Internal\+Agent\+Error\+Rate\+Preference\+Name}!Flourish\+V2\+X\+Framework@{Flourish\+V2\+X\+Framework}}
+\subsubsection[{\texorpdfstring{get\+Internal\+Agent\+Error\+Rate\+Preference\+Name()}{getInternalAgentErrorRatePreferenceName()}}]{\setlength{\rightskip}{0pt plus 5cm}static Q\+String Flourish\+V2\+X\+Framework\+::get\+Internal\+Agent\+Error\+Rate\+Preference\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{classFlourishV2XFramework_a4cd588c909b77b70157c5c5436050a7c}{}\label{classFlourishV2XFramework_a4cd588c909b77b70157c5c5436050a7c}
+
+
+Get the internal name for the Agent P\+ER preference. 
+
+\begin{DoxyReturn}{Returns}
+the specified name 
+\end{DoxyReturn}
+\index{Flourish\+V2\+X\+Framework@{Flourish\+V2\+X\+Framework}!get\+Internal\+Agent\+Radius\+Preference\+Name@{get\+Internal\+Agent\+Radius\+Preference\+Name}}
+\index{get\+Internal\+Agent\+Radius\+Preference\+Name@{get\+Internal\+Agent\+Radius\+Preference\+Name}!Flourish\+V2\+X\+Framework@{Flourish\+V2\+X\+Framework}}
+\subsubsection[{\texorpdfstring{get\+Internal\+Agent\+Radius\+Preference\+Name()}{getInternalAgentRadiusPreferenceName()}}]{\setlength{\rightskip}{0pt plus 5cm}static Q\+String Flourish\+V2\+X\+Framework\+::get\+Internal\+Agent\+Radius\+Preference\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{classFlourishV2XFramework_a2d39fd13894cf679132ebf620f4e2821}{}\label{classFlourishV2XFramework_a2d39fd13894cf679132ebf620f4e2821}
+
+
+Get the internal name for the Agent radius preference. 
+
+\begin{DoxyReturn}{Returns}
+the specified name 
+\end{DoxyReturn}
+\index{Flourish\+V2\+X\+Framework@{Flourish\+V2\+X\+Framework}!get\+Internal\+A\+P\+Delay\+Preference\+Name@{get\+Internal\+A\+P\+Delay\+Preference\+Name}}
+\index{get\+Internal\+A\+P\+Delay\+Preference\+Name@{get\+Internal\+A\+P\+Delay\+Preference\+Name}!Flourish\+V2\+X\+Framework@{Flourish\+V2\+X\+Framework}}
+\subsubsection[{\texorpdfstring{get\+Internal\+A\+P\+Delay\+Preference\+Name()}{getInternalAPDelayPreferenceName()}}]{\setlength{\rightskip}{0pt plus 5cm}static Q\+String Flourish\+V2\+X\+Framework\+::get\+Internal\+A\+P\+Delay\+Preference\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{classFlourishV2XFramework_ae087a92f4ca51d92c44c443c790f633c}{}\label{classFlourishV2XFramework_ae087a92f4ca51d92c44c443c790f633c}
+
+
+Get the internal name for the Access Point delay preference. 
+
+\begin{DoxyReturn}{Returns}
+the specified name 
+\end{DoxyReturn}
+\index{Flourish\+V2\+X\+Framework@{Flourish\+V2\+X\+Framework}!get\+Internal\+A\+P\+Error\+Rate\+Preference\+Name@{get\+Internal\+A\+P\+Error\+Rate\+Preference\+Name}}
+\index{get\+Internal\+A\+P\+Error\+Rate\+Preference\+Name@{get\+Internal\+A\+P\+Error\+Rate\+Preference\+Name}!Flourish\+V2\+X\+Framework@{Flourish\+V2\+X\+Framework}}
+\subsubsection[{\texorpdfstring{get\+Internal\+A\+P\+Error\+Rate\+Preference\+Name()}{getInternalAPErrorRatePreferenceName()}}]{\setlength{\rightskip}{0pt plus 5cm}static Q\+String Flourish\+V2\+X\+Framework\+::get\+Internal\+A\+P\+Error\+Rate\+Preference\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{classFlourishV2XFramework_ac3b5d93d4d9b2908f059921f804ccd22}{}\label{classFlourishV2XFramework_ac3b5d93d4d9b2908f059921f804ccd22}
+
+
+Get the internal name for the Access Point P\+ER preference. 
+
+\begin{DoxyReturn}{Returns}
+the specified name 
+\end{DoxyReturn}
+\index{Flourish\+V2\+X\+Framework@{Flourish\+V2\+X\+Framework}!post\+Update@{post\+Update}}
+\index{post\+Update@{post\+Update}!Flourish\+V2\+X\+Framework@{Flourish\+V2\+X\+Framework}}
+\subsubsection[{\texorpdfstring{post\+Update(double time, double time\+Sta, double sim\+Step) Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE}{postUpdate(double time, double timeSta, double simStep) Q_DECL_OVERRIDE}}]{\setlength{\rightskip}{0pt plus 5cm}void Flourish\+V2\+X\+Framework\+::post\+Update (
+\begin{DoxyParamCaption}
+\item[{double}]{time, }
+\item[{double}]{time\+Sta, }
+\item[{double}]{sim\+Step}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classFlourishV2XFramework_aa1417bf763cc7b9278df12dfda185010}{}\label{classFlourishV2XFramework_aa1417bf763cc7b9278df12dfda185010}
+
+
+Called after every simulation step (or simulation event) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Simulation time \\
+\hline
+{\em time\+Sta} & Time from 00\+:00.\+00 (midnight) of the current day \\
+\hline
+{\em sim\+Step} & Simulation step \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classADynamicAPI_ab70821f058585820cfbc9287946642da}{A\+Dynamic\+A\+PI}.
+
+\index{Flourish\+V2\+X\+Framework@{Flourish\+V2\+X\+Framework}!pre\+Update@{pre\+Update}}
+\index{pre\+Update@{pre\+Update}!Flourish\+V2\+X\+Framework@{Flourish\+V2\+X\+Framework}}
+\subsubsection[{\texorpdfstring{pre\+Update(double time, double time\+Sta, double sim\+Step) Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE}{preUpdate(double time, double timeSta, double simStep) Q_DECL_OVERRIDE}}]{\setlength{\rightskip}{0pt plus 5cm}void Flourish\+V2\+X\+Framework\+::pre\+Update (
+\begin{DoxyParamCaption}
+\item[{double}]{time, }
+\item[{double}]{time\+Sta, }
+\item[{double}]{sim\+Step}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classFlourishV2XFramework_a7dc6777db5dc693c67733e50af76c855}{}\label{classFlourishV2XFramework_a7dc6777db5dc693c67733e50af76c855}
+
+
+Called before every simulation step (or simulation event) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Simulation time \\
+\hline
+{\em time\+Sta} & Time from 00\+:00.\+00 (midnight) of the current day \\
+\hline
+{\em sim\+Step} & Simulation step \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classADynamicAPI_ab00f0ff26b69cae13d72d2d84cc8174b}{A\+Dynamic\+A\+PI}.
+
+\index{Flourish\+V2\+X\+Framework@{Flourish\+V2\+X\+Framework}!removed\+Vehicle@{removed\+Vehicle}}
+\index{removed\+Vehicle@{removed\+Vehicle}!Flourish\+V2\+X\+Framework@{Flourish\+V2\+X\+Framework}}
+\subsubsection[{\texorpdfstring{removed\+Vehicle(quint32 id\+Handler, A\+Dynamic\+Agent $\ast$agent) Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE}{removedVehicle(quint32 idHandler, ADynamicAgent *agent) Q_DECL_OVERRIDE}}]{\setlength{\rightskip}{0pt plus 5cm}void Flourish\+V2\+X\+Framework\+::removed\+Vehicle (
+\begin{DoxyParamCaption}
+\item[{quint32}]{id\+Handler, }
+\item[{{\bf A\+Dynamic\+Agent} $\ast$}]{agent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classFlourishV2XFramework_a60ff1aaea1448c9a05892597898c48a6}{}\label{classFlourishV2XFramework_a60ff1aaea1448c9a05892597898c48a6}
+
+
+A vehicle leaves the system. 
+
+It is called when a vehicle leaves the system; the memory pointed by agent can be safely freed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\+Handler} & Unique ID of the agent \\
+\hline
+{\em agent} & The agent pointer \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classADynamicAPI_a6f4148dd485116a83caba071ea6a688f}{A\+Dynamic\+A\+PI}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+plugins/\+Flourish\+V2\+X\+Framework/Flourish\+V2\+X\+Framework.\+h\item 
+plugins/\+Flourish\+V2\+X\+Framework/Flourish\+V2\+X\+Framework.\+cpp\end{DoxyCompactItemize}

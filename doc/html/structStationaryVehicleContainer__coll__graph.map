@@ -1,0 +1,8 @@
+<map id="StationaryVehicleContainer" name="StationaryVehicleContainer">
+<area shape="rect" id="node2" href="$structasn__struct__ctx__s.html" title="asn_struct_ctx_s" alt="" coords="258,5,381,32"/>
+<area shape="rect" id="node3" href="$structVehicleIdentification.html" title="VehicleIdentification" alt="" coords="37,213,175,240"/>
+<area shape="rect" id="node4" href="$structOCTET__STRING.html" title="OCTET_STRING" alt="" coords="162,95,287,121"/>
+<area shape="rect" id="node5" href="$structBIT__STRING__s.html" title="BIT_STRING_s" alt="" coords="407,154,522,181"/>
+<area shape="rect" id="node6" href="$structDangerousGoodsExtended.html" title="DangerousGoodsExtended" alt="" coords="199,213,378,240"/>
+<area shape="rect" id="node7" href="$structCauseCode.html" title="CauseCode" alt="" coords="534,154,625,181"/>
+</map>

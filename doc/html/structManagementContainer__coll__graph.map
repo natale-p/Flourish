@@ -1,0 +1,8 @@
+<map id="ManagementContainer" name="ManagementContainer">
+<area shape="rect" id="node2" href="$structASN____PRIMITIVE__TYPE__s.html" title="ASN__PRIMITIVE_TYPE_s" alt="" coords="5,196,193,223"/>
+<area shape="rect" id="node3" href="$structReferencePosition.html" title="ReferencePosition" alt="" coords="279,196,408,223"/>
+<area shape="rect" id="node4" href="$structasn__struct__ctx__s.html" title="asn_struct_ctx_s" alt="" coords="397,5,519,32"/>
+<area shape="rect" id="node5" href="$structPosConfidenceEllipse.html" title="PosConfidenceEllipse" alt="" coords="383,95,533,121"/>
+<area shape="rect" id="node6" href="$structAltitude.html" title="Altitude" alt="" coords="558,95,625,121"/>
+<area shape="rect" id="node7" href="$structActionID.html" title="ActionID" alt="" coords="613,145,687,172"/>
+</map>

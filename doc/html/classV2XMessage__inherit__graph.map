@@ -1,0 +1,6 @@
+<map id="V2XMessage" name="V2XMessage">
+<area shape="rect" id="node2" href="$classCAMMessage.html" title="A CAM message. " alt="" coords="5,80,111,107"/>
+<area shape="rect" id="node3" href="$classDENMMessage.html" title="A DENM message. " alt="" coords="135,80,250,107"/>
+<area shape="rect" id="node4" href="$classMAPEMMessage.html" title="A MAPEM message. " alt="" coords="275,80,399,107"/>
+<area shape="rect" id="node5" href="$classSPATEMMessage.html" title="A SPATEM message. " alt="" coords="422,80,553,107"/>
+</map>

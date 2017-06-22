@@ -1,0 +1,409 @@
+\hypertarget{classGKBBox}{}\section{G\+K\+B\+Box Class Reference}
+\label{classGKBBox}\index{G\+K\+B\+Box@{G\+K\+B\+Box}}
+
+
+Bounding box of a graphical object.  
+
+
+
+
+{\ttfamily \#include $<$G\+K\+B\+Box.\+h$>$}
+
+
+
+Collaboration diagram for G\+K\+B\+Box\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=171pt]{classGKBBox__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries G\+K\+B\+Box} (const \hyperlink{classGKBBox}{G\+K\+B\+Box} \&rec)\hypertarget{classGKBBox_a3d26f49e0c483fec1dd355a34e393554}{}\label{classGKBBox_a3d26f49e0c483fec1dd355a34e393554}
+
+\item 
+{\bfseries G\+K\+B\+Box} (const \hyperlink{classGKPoint}{G\+K\+Point} \&\hyperlink{classGKBBox_aa5b512feaacc7fab5aa6e84bbe6f106f}{from}, const \hyperlink{classGKPoint}{G\+K\+Point} \&\hyperlink{classGKBBox_af0ec176a4cfaa7731b39858cbb88d6db}{to})\hypertarget{classGKBBox_a783f85af922785e3674ce474c6e72e5b}{}\label{classGKBBox_a783f85af922785e3674ce474c6e72e5b}
+
+\item 
+{\bfseries G\+K\+B\+Box} (G\+K\+Coord \hyperlink{classGKBBox_ac607e63172143a23c6c2dfd89a13d1d0}{x}, G\+K\+Coord \hyperlink{classGKBBox_a1e3d663358c16956585b9ef44131fd26}{y}, G\+K\+Coord X, G\+K\+Coord Y)\hypertarget{classGKBBox_aeb9eebe1df57d021831941a5a219bfc0}{}\label{classGKBBox_aeb9eebe1df57d021831941a5a219bfc0}
+
+\item 
+{\bfseries G\+K\+B\+Box} (G\+K\+Coord \hyperlink{classGKBBox_ac607e63172143a23c6c2dfd89a13d1d0}{x}, G\+K\+Coord \hyperlink{classGKBBox_a1e3d663358c16956585b9ef44131fd26}{y}, G\+K\+Coord \hyperlink{classGKBBox_ae36232dda9ccdec81abaa8ebc009ccd7}{z}, G\+K\+Coord X, G\+K\+Coord Y, G\+K\+Coord Z)\hypertarget{classGKBBox_ae366bffaf8df7a2e47426553c45a2314}{}\label{classGKBBox_ae366bffaf8df7a2e47426553c45a2314}
+
+\item 
+{\bfseries G\+K\+B\+Box} (const G\+K\+Points \&points)\hypertarget{classGKBBox_a93ac777f0364f84aeed3893beeffcd1d}{}\label{classGKBBox_a93ac777f0364f84aeed3893beeffcd1d}
+
+\item 
+double \hyperlink{classGKBBox_a517343b18cb19420be70ff1cbad84724}{get\+Area\+Dimensions} () const 
+\item 
+void \hyperlink{classGKBBox_afd1d34ca5fd9321a5e3eba22fb79f087}{set} (const \hyperlink{classGKPoint}{G\+K\+Point} \&\hyperlink{classGKBBox_aa5b512feaacc7fab5aa6e84bbe6f106f}{from}, const \hyperlink{classGKPoint}{G\+K\+Point} \&\hyperlink{classGKBBox_af0ec176a4cfaa7731b39858cbb88d6db}{to})
+\item 
+void \hyperlink{classGKBBox_a8590b3edcf262ffef586b917a1bd1b1c}{set} (G\+K\+Coord \hyperlink{classGKBBox_ac607e63172143a23c6c2dfd89a13d1d0}{x}, G\+K\+Coord \hyperlink{classGKBBox_a1e3d663358c16956585b9ef44131fd26}{y}, G\+K\+Coord X, G\+K\+Coord Y)
+\item 
+void \hyperlink{classGKBBox_a982ad5e8995a1fad7d08020c578c45ae}{set} (G\+K\+Coord \hyperlink{classGKBBox_ac607e63172143a23c6c2dfd89a13d1d0}{x}, G\+K\+Coord \hyperlink{classGKBBox_a1e3d663358c16956585b9ef44131fd26}{y}, G\+K\+Coord \hyperlink{classGKBBox_ae36232dda9ccdec81abaa8ebc009ccd7}{z}, G\+K\+Coord X, G\+K\+Coord Y, G\+K\+Coord Z)
+\item 
+void \hyperlink{classGKBBox_a4fe74afcb0b32afa738673ac761f5b6d}{set} (const G\+K\+Points \&points)
+\item 
+void \hyperlink{classGKBBox_ae50cbcbc60808351af8d9706b95f0940}{expand3D} (const \hyperlink{classGKPoint}{G\+K\+Point} \&p)
+\item 
+void \hyperlink{classGKBBox_a6a778e6cae7b7d2dbccf4789b9a7dccb}{expand3D} (const \hyperlink{classGKBBox}{G\+K\+B\+Box} \&rec)
+\item 
+void \hyperlink{classGKBBox_ac4f8eed51dd83bee955f383d051a155e}{expand3D} (const G\+K\+Points \&points)
+\item 
+void \hyperlink{classGKBBox_a04e66e0838cb073e1b3bc18e7d6c79a2}{translate} (const \hyperlink{classGKPoint}{G\+K\+Point} \&inc)
+\item 
+void \hyperlink{classGKBBox_a0d937ae05237d8df865a1371295d765a}{scale} (double factor)
+\item 
+void \hyperlink{classGKBBox_a2965a2bd67a7e06d8e45b3147892aa16}{undefine} ()
+\item 
+bool \hyperlink{classGKBBox_ade515a944ff5e97371e787c4dde2d2cc}{is\+Undefined} () const 
+\item 
+G\+K\+Coord \hyperlink{classGKBBox_ac607e63172143a23c6c2dfd89a13d1d0}{x} () const 
+\item 
+G\+K\+Coord \hyperlink{classGKBBox_a1e3d663358c16956585b9ef44131fd26}{y} () const 
+\item 
+G\+K\+Coord \hyperlink{classGKBBox_ae36232dda9ccdec81abaa8ebc009ccd7}{z} () const 
+\item 
+G\+K\+Coord \hyperlink{classGKBBox_a59a65c87c87647a8ba76042d5823ee4b}{width} () const 
+\item 
+G\+K\+Coord \hyperlink{classGKBBox_ae7584a835d849c6e48db731560b4c657}{height} () const 
+\item 
+G\+K\+Coord \hyperlink{classGKBBox_a7495da2c883c0ff50609b40e2b51b41e}{altitude} () const 
+\item 
+double {\bfseries radio\+Esf\+Min\+Contenedora} () const \hypertarget{classGKBBox_a2c5a51d45f5dc7344d7398d7534c3174}{}\label{classGKBBox_a2c5a51d45f5dc7344d7398d7534c3174}
+
+\item 
+const \hyperlink{classGKPoint}{G\+K\+Point} \hyperlink{classGKBBox_a14e3417d8315b7e9a54080881181fe42}{center} () const 
+\item 
+G\+K\+Coord \hyperlink{classGKBBox_aedd86e69eeb9afd6bb2a0975d1924622}{radious} () const 
+\item 
+bool \hyperlink{classGKBBox_a7e9d32193fa69683ee353a5c44f749d7}{contains2D} (G\+K\+Coord px, G\+K\+Coord py) const 
+\item 
+bool \hyperlink{classGKBBox_a0bc0829bc5c9fc734f4f2bf27e3cd516}{contains2D} (const \hyperlink{classGKPoint}{G\+K\+Point} \&p) const 
+\item 
+bool \hyperlink{classGKBBox_a23d1a10b4e653aa0408f05736ffebbbb}{contains3D} (const \hyperlink{classGKPoint}{G\+K\+Point} \&p) const 
+\item 
+bool \hyperlink{classGKBBox_a245b9d4ecee6761297b8cc652b9abf26}{contains3D} (const \hyperlink{classGKBBox}{G\+K\+B\+Box} \&rec) const 
+\item 
+bool \hyperlink{classGKBBox_a45141d6026fbb6d569515376fb83eb9b}{intersects2D} (const \hyperlink{classGKBBox}{G\+K\+B\+Box} \&b) const 
+\item 
+bool \hyperlink{classGKBBox_a64de2a820a7b7fa08be5ae67439eef27}{intersects2D} (const \hyperlink{classGKLine}{G\+K\+Line} \&line2, \hyperlink{classGKPoint}{G\+K\+Point} $\ast$point, double epsilon=0.\+00001) const 
+\item 
+G\+K\+Points {\bfseries intersections2D} (const \hyperlink{classGKLine}{G\+K\+Line} \&line2, double epsilon=0.\+00001) const \hypertarget{classGKBBox_a4da81e600d467da0d2a554f503bd8890}{}\label{classGKBBox_a4da81e600d467da0d2a554f503bd8890}
+
+\item 
+void \hyperlink{classGKBBox_ae6aa2b78ef7ce790e851a4050a9e4645}{ensure\+Minimum\+Size} ()
+\item 
+void \hyperlink{classGKBBox_ac3ec53960aa45b542901bb33becfd10b}{expand\+Width} (G\+K\+Coord size)
+\item 
+void \hyperlink{classGKBBox_a6d878f55c35b0fc7fcdba2aa90fd7bb6}{expand\+Height} (G\+K\+Coord size)
+\item 
+G\+K\+Points \hyperlink{classGKBBox_a7f2422352cdb1a2145d11a7460dbeb0c}{as2\+D\+Polygon} () const 
+\item 
+bool \hyperlink{classGKBBox_a334b81cfdf382a87f7a38f5783be61db}{operator!=} (const \hyperlink{classGKBBox}{G\+K\+B\+Box} \&c) const 
+\item 
+bool \hyperlink{classGKBBox_a3190f2a212087bc073c87eb15ebb87d2}{intersects3D} (const \hyperlink{classGKBBox}{G\+K\+B\+Box} \&box, \hyperlink{classGKBBox}{G\+K\+B\+Box} \&result\+Box, bool noZ=false) const 
+\item 
+virtual void \hyperlink{classGKBBox_a098df9ad0268796d88c75a4cf94c2dce}{store\+X\+ML} (G\+K\+Text\+Stream \&s)\hypertarget{classGKBBox_a098df9ad0268796d88c75a4cf94c2dce}{}\label{classGKBBox_a098df9ad0268796d88c75a4cf94c2dce}
+
+\begin{DoxyCompactList}\small\item\em Stores the object in a file. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classGKBBox_a7f34117ddfd461423868fe51ab83de21}{restore\+X\+ML} (G\+K\+Text\+Stream \&s, Q\+Dom\+Node \&node)\hypertarget{classGKBBox_a7f34117ddfd461423868fe51ab83de21}{}\label{classGKBBox_a7f34117ddfd461423868fe51ab83de21}
+
+\begin{DoxyCompactList}\small\item\em Restores the object from a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classGKPoint}{G\+K\+Point} \hyperlink{classGKBBox_aa5b512feaacc7fab5aa6e84bbe6f106f}{from}
+\item 
+\hyperlink{classGKPoint}{G\+K\+Point} \hyperlink{classGKBBox_af0ec176a4cfaa7731b39858cbb88d6db}{to}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries i\+\_\+intersects} (const \hyperlink{classGKBBox}{G\+K\+B\+Box} \&rec) const \hypertarget{classGKBBox_a13f61a846ae084bbcf71b412d370d837}{}\label{classGKBBox_a13f61a846ae084bbcf71b412d370d837}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries defined}\hypertarget{classGKBBox_a80f0f3648b816f6d102694b9bf86e1fd}{}\label{classGKBBox_a80f0f3648b816f6d102694b9bf86e1fd}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+G\+K\+E\+X\+P\+O\+RT Q\+Data\+Stream \& {\bfseries operator$<$$<$} (Q\+Data\+Stream \&, const \hyperlink{classGKBBox}{G\+K\+B\+Box} \&)\hypertarget{classGKBBox_a1977a20f83fb0e1b9b7c43e6cf5eb736}{}\label{classGKBBox_a1977a20f83fb0e1b9b7c43e6cf5eb736}
+
+\item 
+G\+K\+E\+X\+P\+O\+RT Q\+Data\+Stream \& {\bfseries operator$>$$>$} (Q\+Data\+Stream \&, \hyperlink{classGKBBox}{G\+K\+B\+Box} \&)\hypertarget{classGKBBox_a3e8e7ddd034b096c780ce264833524c2}{}\label{classGKBBox_a3e8e7ddd034b096c780ce264833524c2}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Bounding box of a graphical object. 
+
+A bounding box is the minimum size rectangle that englobes completely a graphic shape. It is defined by two points, called from and to, for the bottom-\/left and top-\/right coordinates of the rectangle.
+
+A bbox have two states\+: defined or undefined. An undefined bbox means that the bottom-\/left and top-\/right coordinates stored on it cannot be used since they have not been calculated yet. A defined bbox means that the bottom-\/left and top-\/right coordinates have been calculated for the graphical object\textquotesingle{}s shape.
+
+A bbox is undefined when created and can be undefined (to discard the current calculated coordinates) using the method undefined().
+
+Using the set or the expand methods an undefined bbox is defined. 
+
+\subsection{Member Function Documentation}
+\index{G\+K\+B\+Box@{G\+K\+B\+Box}!altitude@{altitude}}
+\index{altitude@{altitude}!G\+K\+B\+Box@{G\+K\+B\+Box}}
+\subsubsection[{\texorpdfstring{altitude() const }{altitude() const }}]{\setlength{\rightskip}{0pt plus 5cm}G\+K\+Coord G\+K\+B\+Box\+::altitude (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKBBox_a7495da2c883c0ff50609b40e2b51b41e}{}\label{classGKBBox_a7495da2c883c0ff50609b40e2b51b41e}
+Returns the altitude of the bounding box. \index{G\+K\+B\+Box@{G\+K\+B\+Box}!as2\+D\+Polygon@{as2\+D\+Polygon}}
+\index{as2\+D\+Polygon@{as2\+D\+Polygon}!G\+K\+B\+Box@{G\+K\+B\+Box}}
+\subsubsection[{\texorpdfstring{as2\+D\+Polygon() const }{as2DPolygon() const }}]{\setlength{\rightskip}{0pt plus 5cm}G\+K\+Points G\+K\+B\+Box\+::as2\+D\+Polygon (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKBBox_a7f2422352cdb1a2145d11a7460dbeb0c}{}\label{classGKBBox_a7f2422352cdb1a2145d11a7460dbeb0c}
+Returns this bbox as a 2D polygon of 4 points \index{G\+K\+B\+Box@{G\+K\+B\+Box}!center@{center}}
+\index{center@{center}!G\+K\+B\+Box@{G\+K\+B\+Box}}
+\subsubsection[{\texorpdfstring{center() const }{center() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf G\+K\+Point} G\+K\+B\+Box\+::center (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKBBox_a14e3417d8315b7e9a54080881181fe42}{}\label{classGKBBox_a14e3417d8315b7e9a54080881181fe42}
+Calculates and returns the center of the bbox. \index{G\+K\+B\+Box@{G\+K\+B\+Box}!contains2D@{contains2D}}
+\index{contains2D@{contains2D}!G\+K\+B\+Box@{G\+K\+B\+Box}}
+\subsubsection[{\texorpdfstring{contains2\+D(\+G\+K\+Coord px, G\+K\+Coord py) const }{contains2D(GKCoord px, GKCoord py) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+B\+Box\+::contains2D (
+\begin{DoxyParamCaption}
+\item[{G\+K\+Coord}]{px, }
+\item[{G\+K\+Coord}]{py}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classGKBBox_a7e9d32193fa69683ee353a5c44f749d7}{}\label{classGKBBox_a7e9d32193fa69683ee353a5c44f749d7}
+It returns true if (px, py) is inside the bbox without taking into account the z coordinate in the box and in the point. \index{G\+K\+B\+Box@{G\+K\+B\+Box}!contains2D@{contains2D}}
+\index{contains2D@{contains2D}!G\+K\+B\+Box@{G\+K\+B\+Box}}
+\subsubsection[{\texorpdfstring{contains2\+D(const G\+K\+Point \&p) const }{contains2D(const GKPoint &p) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+B\+Box\+::contains2D (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Point} \&}]{p}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classGKBBox_a0bc0829bc5c9fc734f4f2bf27e3cd516}{}\label{classGKBBox_a0bc0829bc5c9fc734f4f2bf27e3cd516}
+It returns true if p is inside the bbox without taking into account the z coordinate in the box and in the point. \index{G\+K\+B\+Box@{G\+K\+B\+Box}!contains3D@{contains3D}}
+\index{contains3D@{contains3D}!G\+K\+B\+Box@{G\+K\+B\+Box}}
+\subsubsection[{\texorpdfstring{contains3\+D(const G\+K\+Point \&p) const }{contains3D(const GKPoint &p) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+B\+Box\+::contains3D (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Point} \&}]{p}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classGKBBox_a23d1a10b4e653aa0408f05736ffebbbb}{}\label{classGKBBox_a23d1a10b4e653aa0408f05736ffebbbb}
+Returns true if p is inside the bbox. \index{G\+K\+B\+Box@{G\+K\+B\+Box}!contains3D@{contains3D}}
+\index{contains3D@{contains3D}!G\+K\+B\+Box@{G\+K\+B\+Box}}
+\subsubsection[{\texorpdfstring{contains3\+D(const G\+K\+B\+Box \&rec) const }{contains3D(const GKBBox &rec) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+B\+Box\+::contains3D (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+B\+Box} \&}]{rec}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classGKBBox_a245b9d4ecee6761297b8cc652b9abf26}{}\label{classGKBBox_a245b9d4ecee6761297b8cc652b9abf26}
+Returns true if rec is inside the bbox. \index{G\+K\+B\+Box@{G\+K\+B\+Box}!ensure\+Minimum\+Size@{ensure\+Minimum\+Size}}
+\index{ensure\+Minimum\+Size@{ensure\+Minimum\+Size}!G\+K\+B\+Box@{G\+K\+B\+Box}}
+\subsubsection[{\texorpdfstring{ensure\+Minimum\+Size()}{ensureMinimumSize()}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+B\+Box\+::ensure\+Minimum\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKBBox_ae6aa2b78ef7ce790e851a4050a9e4645}{}\label{classGKBBox_ae6aa2b78ef7ce790e851a4050a9e4645}
+Makes this bbox greater if it is too small (width or height almost zero) It changes the bbox if width or height is less than 0.\+5 m adding 0.\+5 m to its size. \index{G\+K\+B\+Box@{G\+K\+B\+Box}!expand3D@{expand3D}}
+\index{expand3D@{expand3D}!G\+K\+B\+Box@{G\+K\+B\+Box}}
+\subsubsection[{\texorpdfstring{expand3\+D(const G\+K\+Point \&p)}{expand3D(const GKPoint &p)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+B\+Box\+::expand3D (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Point} \&}]{p}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKBBox_ae50cbcbc60808351af8d9706b95f0940}{}\label{classGKBBox_ae50cbcbc60808351af8d9706b95f0940}
+Expands a bbox with the point p. If p is inside the bbox nothing happen. If p is outside the bbox it will grow to keep p inside. \index{G\+K\+B\+Box@{G\+K\+B\+Box}!expand3D@{expand3D}}
+\index{expand3D@{expand3D}!G\+K\+B\+Box@{G\+K\+B\+Box}}
+\subsubsection[{\texorpdfstring{expand3\+D(const G\+K\+B\+Box \&rec)}{expand3D(const GKBBox &rec)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+B\+Box\+::expand3D (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+B\+Box} \&}]{rec}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKBBox_a6a778e6cae7b7d2dbccf4789b9a7dccb}{}\label{classGKBBox_a6a778e6cae7b7d2dbccf4789b9a7dccb}
+Expands a bbox with the bbox rec. If rec is inside the bbox nothing happen. If rec is outside the bbox it will grow to keep rec inside. \index{G\+K\+B\+Box@{G\+K\+B\+Box}!expand3D@{expand3D}}
+\index{expand3D@{expand3D}!G\+K\+B\+Box@{G\+K\+B\+Box}}
+\subsubsection[{\texorpdfstring{expand3\+D(const G\+K\+Points \&points)}{expand3D(const GKPoints &points)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+B\+Box\+::expand3D (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Points \&}]{points}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKBBox_ac4f8eed51dd83bee955f383d051a155e}{}\label{classGKBBox_ac4f8eed51dd83bee955f383d051a155e}
+Expands a bbox with points. If all the points in points are inside the bbox nothing happen. If any point is outside it will grow to keep the point inside. \index{G\+K\+B\+Box@{G\+K\+B\+Box}!expand\+Height@{expand\+Height}}
+\index{expand\+Height@{expand\+Height}!G\+K\+B\+Box@{G\+K\+B\+Box}}
+\subsubsection[{\texorpdfstring{expand\+Height(\+G\+K\+Coord size)}{expandHeight(GKCoord size)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+B\+Box\+::expand\+Height (
+\begin{DoxyParamCaption}
+\item[{G\+K\+Coord}]{size}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKBBox_a6d878f55c35b0fc7fcdba2aa90fd7bb6}{}\label{classGKBBox_a6d878f55c35b0fc7fcdba2aa90fd7bb6}
+Expands the bbox in both y limits with \char`\"{}size\char`\"{} \index{G\+K\+B\+Box@{G\+K\+B\+Box}!expand\+Width@{expand\+Width}}
+\index{expand\+Width@{expand\+Width}!G\+K\+B\+Box@{G\+K\+B\+Box}}
+\subsubsection[{\texorpdfstring{expand\+Width(\+G\+K\+Coord size)}{expandWidth(GKCoord size)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+B\+Box\+::expand\+Width (
+\begin{DoxyParamCaption}
+\item[{G\+K\+Coord}]{size}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKBBox_ac3ec53960aa45b542901bb33becfd10b}{}\label{classGKBBox_ac3ec53960aa45b542901bb33becfd10b}
+Expands the bbox in both x limits with \char`\"{}size\char`\"{} \index{G\+K\+B\+Box@{G\+K\+B\+Box}!get\+Area\+Dimensions@{get\+Area\+Dimensions}}
+\index{get\+Area\+Dimensions@{get\+Area\+Dimensions}!G\+K\+B\+Box@{G\+K\+B\+Box}}
+\subsubsection[{\texorpdfstring{get\+Area\+Dimensions() const }{getAreaDimensions() const }}]{\setlength{\rightskip}{0pt plus 5cm}double G\+K\+B\+Box\+::get\+Area\+Dimensions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKBBox_a517343b18cb19420be70ff1cbad84724}{}\label{classGKBBox_a517343b18cb19420be70ff1cbad84724}
+Returns the area (in square m) of this bbox \index{G\+K\+B\+Box@{G\+K\+B\+Box}!height@{height}}
+\index{height@{height}!G\+K\+B\+Box@{G\+K\+B\+Box}}
+\subsubsection[{\texorpdfstring{height() const }{height() const }}]{\setlength{\rightskip}{0pt plus 5cm}G\+K\+Coord G\+K\+B\+Box\+::height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKBBox_ae7584a835d849c6e48db731560b4c657}{}\label{classGKBBox_ae7584a835d849c6e48db731560b4c657}
+Returns the height of the bounding box. \index{G\+K\+B\+Box@{G\+K\+B\+Box}!intersects2D@{intersects2D}}
+\index{intersects2D@{intersects2D}!G\+K\+B\+Box@{G\+K\+B\+Box}}
+\subsubsection[{\texorpdfstring{intersects2\+D(const G\+K\+B\+Box \&b) const }{intersects2D(const GKBBox &b) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+B\+Box\+::intersects2D (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+B\+Box} \&}]{b}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classGKBBox_a45141d6026fbb6d569515376fb83eb9b}{}\label{classGKBBox_a45141d6026fbb6d569515376fb83eb9b}
+Returns true if rec is inside the bbox or if both bboxes intersect. \index{G\+K\+B\+Box@{G\+K\+B\+Box}!intersects2D@{intersects2D}}
+\index{intersects2D@{intersects2D}!G\+K\+B\+Box@{G\+K\+B\+Box}}
+\subsubsection[{\texorpdfstring{intersects2\+D(const G\+K\+Line \&line2, G\+K\+Point $\ast$point, double epsilon=0.\+00001) const }{intersects2D(const GKLine &line2, GKPoint *point, double epsilon=0.00001) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+B\+Box\+::intersects2D (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Line} \&}]{line2, }
+\item[{{\bf G\+K\+Point} $\ast$}]{point, }
+\item[{double}]{epsilon = {\ttfamily 0.00001}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classGKBBox_a64de2a820a7b7fa08be5ae67439eef27}{}\label{classGKBBox_a64de2a820a7b7fa08be5ae67439eef27}
+If this and line2 intersect returns true and finds the intersection point p. Remember that lines perpendicular to the x axis are codified with slope = D\+B\+L\+\_\+\+M\+AX and coef = x. Epsilon is the allowed difference between slopes to consider both lines parallel \index{G\+K\+B\+Box@{G\+K\+B\+Box}!intersects3D@{intersects3D}}
+\index{intersects3D@{intersects3D}!G\+K\+B\+Box@{G\+K\+B\+Box}}
+\subsubsection[{\texorpdfstring{intersects3\+D(const G\+K\+B\+Box \&box, G\+K\+B\+Box \&result\+Box, bool no\+Z=false) const }{intersects3D(const GKBBox &box, GKBBox &resultBox, bool noZ=false) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+B\+Box\+::intersects3D (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+B\+Box} \&}]{box, }
+\item[{{\bf G\+K\+B\+Box} \&}]{result\+Box, }
+\item[{bool}]{noZ = {\ttfamily false}}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKBBox_a3190f2a212087bc073c87eb15ebb87d2}{}\label{classGKBBox_a3190f2a212087bc073c87eb15ebb87d2}
+Returns true if the two given bounding boxes intersect \index{G\+K\+B\+Box@{G\+K\+B\+Box}!is\+Undefined@{is\+Undefined}}
+\index{is\+Undefined@{is\+Undefined}!G\+K\+B\+Box@{G\+K\+B\+Box}}
+\subsubsection[{\texorpdfstring{is\+Undefined() const }{isUndefined() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+B\+Box\+::is\+Undefined (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKBBox_ade515a944ff5e97371e787c4dde2d2cc}{}\label{classGKBBox_ade515a944ff5e97371e787c4dde2d2cc}
+Returns true if the bbox bottom-\/left and top-\/right points have not been calculated yet and false otherwise. \index{G\+K\+B\+Box@{G\+K\+B\+Box}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!G\+K\+B\+Box@{G\+K\+B\+Box}}
+\subsubsection[{\texorpdfstring{operator"!=(const G\+K\+B\+Box \&c) const }{operator!=(const GKBBox &c) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+B\+Box\+::operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+B\+Box} \&}]{c}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKBBox_a334b81cfdf382a87f7a38f5783be61db}{}\label{classGKBBox_a334b81cfdf382a87f7a38f5783be61db}
+Returns true if the compared bounding boxes are different \index{G\+K\+B\+Box@{G\+K\+B\+Box}!radious@{radious}}
+\index{radious@{radious}!G\+K\+B\+Box@{G\+K\+B\+Box}}
+\subsubsection[{\texorpdfstring{radious() const }{radious() const }}]{\setlength{\rightskip}{0pt plus 5cm}G\+K\+Coord G\+K\+B\+Box\+::radious (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKBBox_aedd86e69eeb9afd6bb2a0975d1924622}{}\label{classGKBBox_aedd86e69eeb9afd6bb2a0975d1924622}
+Calculates and returns the radious of a circle that totally encloses the bbox. This circle is centred at \hyperlink{classGKBBox_a14e3417d8315b7e9a54080881181fe42}{G\+K\+B\+Box\+::center()}. \index{G\+K\+B\+Box@{G\+K\+B\+Box}!scale@{scale}}
+\index{scale@{scale}!G\+K\+B\+Box@{G\+K\+B\+Box}}
+\subsubsection[{\texorpdfstring{scale(double factor)}{scale(double factor)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+B\+Box\+::scale (
+\begin{DoxyParamCaption}
+\item[{double}]{factor}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKBBox_a0d937ae05237d8df865a1371295d765a}{}\label{classGKBBox_a0d937ae05237d8df865a1371295d765a}
+Scales the bbox. Keeps the same center. \index{G\+K\+B\+Box@{G\+K\+B\+Box}!set@{set}}
+\index{set@{set}!G\+K\+B\+Box@{G\+K\+B\+Box}}
+\subsubsection[{\texorpdfstring{set(const G\+K\+Point \&from, const G\+K\+Point \&to)}{set(const GKPoint &from, const GKPoint &to)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+B\+Box\+::set (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Point} \&}]{from, }
+\item[{const {\bf G\+K\+Point} \&}]{to}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKBBox_afd1d34ca5fd9321a5e3eba22fb79f087}{}\label{classGKBBox_afd1d34ca5fd9321a5e3eba22fb79f087}
+Creates a bbox using two points. The previous bottom-\/left and top-\/right coordinates are discarded. \index{G\+K\+B\+Box@{G\+K\+B\+Box}!set@{set}}
+\index{set@{set}!G\+K\+B\+Box@{G\+K\+B\+Box}}
+\subsubsection[{\texorpdfstring{set(\+G\+K\+Coord x, G\+K\+Coord y, G\+K\+Coord X, G\+K\+Coord Y)}{set(GKCoord x, GKCoord y, GKCoord X, GKCoord Y)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+B\+Box\+::set (
+\begin{DoxyParamCaption}
+\item[{G\+K\+Coord}]{x, }
+\item[{G\+K\+Coord}]{y, }
+\item[{G\+K\+Coord}]{X, }
+\item[{G\+K\+Coord}]{Y}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKBBox_a8590b3edcf262ffef586b917a1bd1b1c}{}\label{classGKBBox_a8590b3edcf262ffef586b917a1bd1b1c}
+Creates a bbox using two points. The previous bottom-\/left and top-\/right coordinates are discarded. \index{G\+K\+B\+Box@{G\+K\+B\+Box}!set@{set}}
+\index{set@{set}!G\+K\+B\+Box@{G\+K\+B\+Box}}
+\subsubsection[{\texorpdfstring{set(\+G\+K\+Coord x, G\+K\+Coord y, G\+K\+Coord z, G\+K\+Coord X, G\+K\+Coord Y, G\+K\+Coord Z)}{set(GKCoord x, GKCoord y, GKCoord z, GKCoord X, GKCoord Y, GKCoord Z)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+B\+Box\+::set (
+\begin{DoxyParamCaption}
+\item[{G\+K\+Coord}]{x, }
+\item[{G\+K\+Coord}]{y, }
+\item[{G\+K\+Coord}]{z, }
+\item[{G\+K\+Coord}]{X, }
+\item[{G\+K\+Coord}]{Y, }
+\item[{G\+K\+Coord}]{Z}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKBBox_a982ad5e8995a1fad7d08020c578c45ae}{}\label{classGKBBox_a982ad5e8995a1fad7d08020c578c45ae}
+Creates a bbox using two points. The previous bottom-\/left and top-\/right coordinates are discarded. \index{G\+K\+B\+Box@{G\+K\+B\+Box}!set@{set}}
+\index{set@{set}!G\+K\+B\+Box@{G\+K\+B\+Box}}
+\subsubsection[{\texorpdfstring{set(const G\+K\+Points \&points)}{set(const GKPoints &points)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+B\+Box\+::set (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Points \&}]{points}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKBBox_a4fe74afcb0b32afa738673ac761f5b6d}{}\label{classGKBBox_a4fe74afcb0b32afa738673ac761f5b6d}
+Calculates the bbox of points. The previous bottom-\/left and top-\/right coordinates are discarded. \index{G\+K\+B\+Box@{G\+K\+B\+Box}!translate@{translate}}
+\index{translate@{translate}!G\+K\+B\+Box@{G\+K\+B\+Box}}
+\subsubsection[{\texorpdfstring{translate(const G\+K\+Point \&inc)}{translate(const GKPoint &inc)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+B\+Box\+::translate (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Point} \&}]{inc}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKBBox_a04e66e0838cb073e1b3bc18e7d6c79a2}{}\label{classGKBBox_a04e66e0838cb073e1b3bc18e7d6c79a2}
+Translates the bbox to a new location. That is\+: add inc to from and to \index{G\+K\+B\+Box@{G\+K\+B\+Box}!undefine@{undefine}}
+\index{undefine@{undefine}!G\+K\+B\+Box@{G\+K\+B\+Box}}
+\subsubsection[{\texorpdfstring{undefine()}{undefine()}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+B\+Box\+::undefine (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKBBox_a2965a2bd67a7e06d8e45b3147892aa16}{}\label{classGKBBox_a2965a2bd67a7e06d8e45b3147892aa16}
+Marks the bbox as undefined. Values in from and to cannot be used. \index{G\+K\+B\+Box@{G\+K\+B\+Box}!width@{width}}
+\index{width@{width}!G\+K\+B\+Box@{G\+K\+B\+Box}}
+\subsubsection[{\texorpdfstring{width() const }{width() const }}]{\setlength{\rightskip}{0pt plus 5cm}G\+K\+Coord G\+K\+B\+Box\+::width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKBBox_a59a65c87c87647a8ba76042d5823ee4b}{}\label{classGKBBox_a59a65c87c87647a8ba76042d5823ee4b}
+Returns the width of the bounding box. \index{G\+K\+B\+Box@{G\+K\+B\+Box}!x@{x}}
+\index{x@{x}!G\+K\+B\+Box@{G\+K\+B\+Box}}
+\subsubsection[{\texorpdfstring{x() const }{x() const }}]{\setlength{\rightskip}{0pt plus 5cm}G\+K\+Coord G\+K\+B\+Box\+::x (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKBBox_ac607e63172143a23c6c2dfd89a13d1d0}{}\label{classGKBBox_ac607e63172143a23c6c2dfd89a13d1d0}
+Returns the x coordinate of the \char`\"{}from\char`\"{} point of the bounding box, the minimum x of the box. \index{G\+K\+B\+Box@{G\+K\+B\+Box}!y@{y}}
+\index{y@{y}!G\+K\+B\+Box@{G\+K\+B\+Box}}
+\subsubsection[{\texorpdfstring{y() const }{y() const }}]{\setlength{\rightskip}{0pt plus 5cm}G\+K\+Coord G\+K\+B\+Box\+::y (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKBBox_a1e3d663358c16956585b9ef44131fd26}{}\label{classGKBBox_a1e3d663358c16956585b9ef44131fd26}
+Returns the y coordinate of the \char`\"{}from\char`\"{} point of the bounding box, the minimum y of the box. \index{G\+K\+B\+Box@{G\+K\+B\+Box}!z@{z}}
+\index{z@{z}!G\+K\+B\+Box@{G\+K\+B\+Box}}
+\subsubsection[{\texorpdfstring{z() const }{z() const }}]{\setlength{\rightskip}{0pt plus 5cm}G\+K\+Coord G\+K\+B\+Box\+::z (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKBBox_ae36232dda9ccdec81abaa8ebc009ccd7}{}\label{classGKBBox_ae36232dda9ccdec81abaa8ebc009ccd7}
+Returns the z coordinate of the \char`\"{}from\char`\"{} point of the bounding box, the minimum z of the box. 
+
+\subsection{Member Data Documentation}
+\index{G\+K\+B\+Box@{G\+K\+B\+Box}!from@{from}}
+\index{from@{from}!G\+K\+B\+Box@{G\+K\+B\+Box}}
+\subsubsection[{\texorpdfstring{from}{from}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+K\+Point} G\+K\+B\+Box\+::from}\hypertarget{classGKBBox_aa5b512feaacc7fab5aa6e84bbe6f106f}{}\label{classGKBBox_aa5b512feaacc7fab5aa6e84bbe6f106f}
+Bottom left point of the bounding box \index{G\+K\+B\+Box@{G\+K\+B\+Box}!to@{to}}
+\index{to@{to}!G\+K\+B\+Box@{G\+K\+B\+Box}}
+\subsubsection[{\texorpdfstring{to}{to}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+K\+Point} G\+K\+B\+Box\+::to}\hypertarget{classGKBBox_af0ec176a4cfaa7731b39858cbb88d6db}{}\label{classGKBBox_af0ec176a4cfaa7731b39858cbb88d6db}
+Top right point of the bounding box 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/core/ang\+\_\+kernel/G\+K\+B\+Box.\+h\end{DoxyCompactItemize}

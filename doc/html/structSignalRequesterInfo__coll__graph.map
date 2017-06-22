@@ -1,0 +1,7 @@
+<map id="SignalRequesterInfo" name="SignalRequesterInfo">
+<area shape="rect" id="node2" href="$structVehicleID.html" title="VehicleID" alt="" coords="82,285,161,312"/>
+<area shape="rect" id="node3" href="$structasn__struct__ctx__s.html" title="asn_struct_ctx_s" alt="" coords="75,5,197,32"/>
+<area shape="rect" id="node5" href="$structOCTET__STRING.html" title="OCTET_STRING" alt="" coords="140,95,265,121"/>
+<area shape="rect" id="node6" href="$structRequestorType.html" title="RequestorType" alt="" coords="277,145,387,172"/>
+<area shape="rect" id="node4" href="$unionVehicleID_1_1VehicleID__u.html" title="VehicleID::VehicleID_u" alt="" coords="138,196,297,223"/>
+</map>

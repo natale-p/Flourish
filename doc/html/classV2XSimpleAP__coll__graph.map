@@ -1,0 +1,4 @@
+<map id="V2XSimpleAP" name="V2XSimpleAP">
+<area shape="rect" id="node2" href="$classV2XNetworkNode.html" title="A Node in the network. " alt="" coords="39,109,165,136"/>
+<area shape="rect" id="node4" href="$classV2XNetworkTime.html" title="Represents a time with respect to some initial reference point. " alt="" coords="101,5,226,32"/>
+</map>

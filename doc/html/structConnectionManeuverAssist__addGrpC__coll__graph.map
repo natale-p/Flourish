@@ -1,0 +1,15 @@
+<map id="ConnectionManeuverAssist_addGrpC" name="ConnectionManeuverAssist_addGrpC">
+<area shape="rect" id="node2" href="$structNodeOffsetPointXY.html" title="NodeOffsetPointXY" alt="" coords="1200,120,1337,147"/>
+<area shape="rect" id="node3" href="$structasn__struct__ctx__s.html" title="asn_struct_ctx_s" alt="" coords="5,299,128,325"/>
+<area shape="rect" id="node5" href="$structNode__XY__24b.html" title="Node_XY_24b" alt="" coords="372,116,479,143"/>
+<area shape="rect" id="node6" href="$structNode__LLmD__64b.html" title="Node_LLmD_64b" alt="" coords="364,169,487,196"/>
+<area shape="rect" id="node7" href="$structNode__XY__20b.html" title="Node_XY_20b" alt="" coords="549,245,655,272"/>
+<area shape="rect" id="node8" href="$structRegionalExtension__272P15.html" title="RegionalExtension_272P15" alt="" coords="511,297,693,324"/>
+<area shape="rect" id="node9" href="$structANY.html" title="ANY" alt="" coords="261,336,312,363"/>
+<area shape="rect" id="node10" href="$structNode__XY__26b.html" title="Node_XY_26b" alt="" coords="372,377,479,404"/>
+<area shape="rect" id="node11" href="$structNode__XY__32b.html" title="Node_XY_32b" alt="" coords="549,413,655,440"/>
+<area shape="rect" id="node12" href="$structNode__XY__28b.html" title="Node_XY_28b" alt="" coords="372,500,479,527"/>
+<area shape="rect" id="node13" href="$structNode__XY__22b.html" title="Node_XY_22b" alt="" coords="233,551,340,577"/>
+<area shape="rect" id="node14" href="$structItsStationPositionList.html" title="ItsStationPositionList" alt="" coords="717,588,864,615"/>
+<area shape="rect" id="node4" href="$unionNodeOffsetPointXY_1_1NodeOffsetPointXY__u.html" title="NodeOffsetPointXY::\lNodeOffsetPointXY_u" alt="" coords="888,290,1039,331"/>
+</map>

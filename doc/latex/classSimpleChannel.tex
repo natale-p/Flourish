@@ -1,0 +1,262 @@
+\hypertarget{classSimpleChannel}{}\section{Simple\+Channel Class Reference}
+\label{classSimpleChannel}\index{Simple\+Channel@{Simple\+Channel}}
+
+
+A simple channel class.  
+
+
+
+
+{\ttfamily \#include $<$Simple\+Channel.\+h$>$}
+
+
+
+Inheritance diagram for Simple\+Channel\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{classSimpleChannel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Simple\+Channel\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{classSimpleChannel__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classSimpleChannel_a98ab252a64e2a4c14995e443f522ab7f}{destroyed} (\hyperlink{classSimpleChannel}{Simple\+Channel} $\ast$channel)
+\begin{DoxyCompactList}\small\item\em Emitted when the channel is about to be destroyed. \end{DoxyCompactList}\item 
+void \hyperlink{classSimpleChannel_a3ad9f5e7f28555474627eb42c6427bbe}{attached\+To} (\hyperlink{classNetDevice}{Net\+Device} $\ast$device)
+\begin{DoxyCompactList}\small\item\em Emitted when a device is attaching to this channel. \end{DoxyCompactList}\item 
+void \hyperlink{classSimpleChannel_a97a24487241781870c5aea86530a982c}{detached\+From} (\hyperlink{classNetDevice}{Net\+Device} $\ast$device)
+\begin{DoxyCompactList}\small\item\em Emitted when a device is detaching from this channel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSimpleChannel_a0152fac3eaebcbd4050231ea223d4312}{Simple\+Channel} ()\hypertarget{classSimpleChannel_a0152fac3eaebcbd4050231ea223d4312}{}\label{classSimpleChannel_a0152fac3eaebcbd4050231ea223d4312}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classSimpleChannel_a0fced0bc510cfd5d5054138b6b929eb2}{$\sim$\+Simple\+Channel} ()\hypertarget{classSimpleChannel_a0fced0bc510cfd5d5054138b6b929eb2}{}\label{classSimpleChannel_a0fced0bc510cfd5d5054138b6b929eb2}
+
+\begin{DoxyCompactList}\small\item\em Deconstructor. \end{DoxyCompactList}\item 
+void \hyperlink{classSimpleChannel_af532431db230ffe67431dad38b31cc87}{send\+Up\+To} (double time)
+\begin{DoxyCompactList}\small\item\em Deliver to the current registered stations the messages enqueued up to the time specified. \end{DoxyCompactList}\item 
+void \hyperlink{classSimpleChannel_a334d0c084b7240cb64d61d06468ddba8}{set\+Delay} (double delay)
+\begin{DoxyCompactList}\small\item\em Set the delay of this channel. \end{DoxyCompactList}\item 
+void \hyperlink{classSimpleChannel_a95450daefc5d4d363170948eae9ca75b}{set\+Error\+Model} (const Q\+Shared\+Pointer$<$ \hyperlink{classErrorModel}{Error\+Model} $>$ \&error\+Model)
+\begin{DoxyCompactList}\small\item\em Set the error model of this channel. \end{DoxyCompactList}\item 
+virtual quint32 \hyperlink{classSimpleChannel_a6e2407c25fa79ff9f0a22fa1bd65f1d7}{get\+N\+Devices} (void) const Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classSimpleChannel_aeb89e3c48776ef199dc0a62dbe61b8af}{attach} (\hyperlink{classNetDevice}{Net\+Device} $\ast$device)
+\begin{DoxyCompactList}\small\item\em attach a device to this channel \end{DoxyCompactList}\item 
+void \hyperlink{classSimpleChannel_a6c16592ec6f763352839f8a75ff0f62a}{detach} (\hyperlink{classNetDevice}{Net\+Device} $\ast$device)
+\begin{DoxyCompactList}\small\item\em detach detach a device from this channel \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classSimpleChannel_ab8b945de11215700a1577e2956a7e056}{broadcast} (const Q\+Shared\+Pointer$<$ \hyperlink{group__V2XFramework_ga1b82bfc289dbcb9aced56200d7abc964}{Packet} $>$ \&packet, const \hyperlink{classNetDevice}{Net\+Device} $\ast$src\+Net\+Device)
+\begin{DoxyCompactList}\small\item\em broadcast a packet to all attached devices \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Simple\+Net\+Device}\hypertarget{classSimpleChannel_ab30aa312df54c87efc3db0b6dee0af5e}{}\label{classSimpleChannel_ab30aa312df54c87efc3db0b6dee0af5e}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A simple channel class. 
+
+It has a concept of propagation delay and can use an error model to determine the error on each packet that passes over the channel.
+
+The channel provide a simple functionality for doing a broadcast between all the connected devices. It is strictly connected to the class \hyperlink{classSimpleNetDevice}{Simple\+Net\+Device}.
+
+A device should register itself through the attach method (and, therefore, detach it when it is appropriate through the detach method). Then, to send a message, the device should call the broadcast method that calculates the delivery time, and save the pair delivery time -\/ message into an internal queue.
+
+To deliver the messages enqueued, the owner of the \hyperlink{classChannel}{Channel} should call the send\+Up\+To method, specifying a time. All the messages enqued for a delivery time which is less or equal to the one specified will be delivered to the attached devices.
+
+In this way, it is modeled the possibility of a vehicle A which is in the range of the vehicle B at the time of the sending, but then A leaves the range at the time of delivery, and therefore should not be able to receive the message.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classSimpleChannel_af532431db230ffe67431dad38b31cc87}{send\+Up\+To} 
+
+\hyperlink{classSimpleChannel_ab8b945de11215700a1577e2956a7e056}{broadcast} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\index{Simple\+Channel@{Simple\+Channel}!attach@{attach}}
+\index{attach@{attach}!Simple\+Channel@{Simple\+Channel}}
+\subsubsection[{\texorpdfstring{attach(\+Net\+Device $\ast$device)}{attach(NetDevice *device)}}]{\setlength{\rightskip}{0pt plus 5cm}void Simple\+Channel\+::attach (
+\begin{DoxyParamCaption}
+\item[{{\bf Net\+Device} $\ast$}]{device}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classSimpleChannel_aeb89e3c48776ef199dc0a62dbe61b8af}{}\label{classSimpleChannel_aeb89e3c48776ef199dc0a62dbe61b8af}
+
+
+attach a device to this channel 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & the netdevice to attach \\
+\hline
+\end{DoxyParams}
+\index{Simple\+Channel@{Simple\+Channel}!attached\+To@{attached\+To}}
+\index{attached\+To@{attached\+To}!Simple\+Channel@{Simple\+Channel}}
+\subsubsection[{\texorpdfstring{attached\+To}{attachedTo}}]{\setlength{\rightskip}{0pt plus 5cm}void Simple\+Channel\+::attached\+To (
+\begin{DoxyParamCaption}
+\item[{{\bf Net\+Device} $\ast$}]{device}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}\hypertarget{classSimpleChannel_a3ad9f5e7f28555474627eb42c6427bbe}{}\label{classSimpleChannel_a3ad9f5e7f28555474627eb42c6427bbe}
+
+
+Emitted when a device is attaching to this channel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & device attaching \\
+\hline
+\end{DoxyParams}
+\index{Simple\+Channel@{Simple\+Channel}!broadcast@{broadcast}}
+\index{broadcast@{broadcast}!Simple\+Channel@{Simple\+Channel}}
+\subsubsection[{\texorpdfstring{broadcast(const Q\+Shared\+Pointer$<$ Packet $>$ \&packet, const Net\+Device $\ast$src\+Net\+Device)}{broadcast(const QSharedPointer< Packet > &packet, const NetDevice *srcNetDevice)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Simple\+Channel\+::broadcast (
+\begin{DoxyParamCaption}
+\item[{const Q\+Shared\+Pointer$<$ {\bf Packet} $>$ \&}]{packet, }
+\item[{const {\bf Net\+Device} $\ast$}]{src\+Net\+Device}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classSimpleChannel_ab8b945de11215700a1577e2956a7e056}{}\label{classSimpleChannel_ab8b945de11215700a1577e2956a7e056}
+
+
+broadcast a packet to all attached devices 
+
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & the packet to transmit \\
+\hline
+{\em src\+Net\+Device} & the source of the packet \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if success 
+\end{DoxyReturn}
+\index{Simple\+Channel@{Simple\+Channel}!destroyed@{destroyed}}
+\index{destroyed@{destroyed}!Simple\+Channel@{Simple\+Channel}}
+\subsubsection[{\texorpdfstring{destroyed}{destroyed}}]{\setlength{\rightskip}{0pt plus 5cm}void Simple\+Channel\+::destroyed (
+\begin{DoxyParamCaption}
+\item[{{\bf Simple\+Channel} $\ast$}]{channel}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}\hypertarget{classSimpleChannel_a98ab252a64e2a4c14995e443f522ab7f}{}\label{classSimpleChannel_a98ab252a64e2a4c14995e443f522ab7f}
+
+
+Emitted when the channel is about to be destroyed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & (this) channel \\
+\hline
+\end{DoxyParams}
+\index{Simple\+Channel@{Simple\+Channel}!detach@{detach}}
+\index{detach@{detach}!Simple\+Channel@{Simple\+Channel}}
+\subsubsection[{\texorpdfstring{detach(\+Net\+Device $\ast$device)}{detach(NetDevice *device)}}]{\setlength{\rightskip}{0pt plus 5cm}void Simple\+Channel\+::detach (
+\begin{DoxyParamCaption}
+\item[{{\bf Net\+Device} $\ast$}]{device}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classSimpleChannel_a6c16592ec6f763352839f8a75ff0f62a}{}\label{classSimpleChannel_a6c16592ec6f763352839f8a75ff0f62a}
+
+
+detach detach a device from this channel 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & The netdevice to detach \\
+\hline
+\end{DoxyParams}
+\index{Simple\+Channel@{Simple\+Channel}!detached\+From@{detached\+From}}
+\index{detached\+From@{detached\+From}!Simple\+Channel@{Simple\+Channel}}
+\subsubsection[{\texorpdfstring{detached\+From}{detachedFrom}}]{\setlength{\rightskip}{0pt plus 5cm}void Simple\+Channel\+::detached\+From (
+\begin{DoxyParamCaption}
+\item[{{\bf Net\+Device} $\ast$}]{device}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}\hypertarget{classSimpleChannel_a97a24487241781870c5aea86530a982c}{}\label{classSimpleChannel_a97a24487241781870c5aea86530a982c}
+
+
+Emitted when a device is detaching from this channel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & device detaching \\
+\hline
+\end{DoxyParams}
+\index{Simple\+Channel@{Simple\+Channel}!get\+N\+Devices@{get\+N\+Devices}}
+\index{get\+N\+Devices@{get\+N\+Devices}!Simple\+Channel@{Simple\+Channel}}
+\subsubsection[{\texorpdfstring{get\+N\+Devices(void) const Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE}{getNDevices(void) const Q_DECL_OVERRIDE}}]{\setlength{\rightskip}{0pt plus 5cm}virtual quint32 Simple\+Channel\+::get\+N\+Devices (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classSimpleChannel_a6e2407c25fa79ff9f0a22fa1bd65f1d7}{}\label{classSimpleChannel_a6e2407c25fa79ff9f0a22fa1bd65f1d7}
+\begin{DoxyReturn}{Returns}
+the number of Net\+Devices connected to this \hyperlink{classChannel}{Channel}. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classChannel_a28065f95665bec4b81c305dbe04d2af4}{Channel}.
+
+\index{Simple\+Channel@{Simple\+Channel}!send\+Up\+To@{send\+Up\+To}}
+\index{send\+Up\+To@{send\+Up\+To}!Simple\+Channel@{Simple\+Channel}}
+\subsubsection[{\texorpdfstring{send\+Up\+To(double time)}{sendUpTo(double time)}}]{\setlength{\rightskip}{0pt plus 5cm}void Simple\+Channel\+::send\+Up\+To (
+\begin{DoxyParamCaption}
+\item[{double}]{time}
+\end{DoxyParamCaption}
+)}\hypertarget{classSimpleChannel_af532431db230ffe67431dad38b31cc87}{}\label{classSimpleChannel_af532431db230ffe67431dad38b31cc87}
+
+
+Deliver to the current registered stations the messages enqueued up to the time specified. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Absolute time \\
+\hline
+\end{DoxyParams}
+\index{Simple\+Channel@{Simple\+Channel}!set\+Delay@{set\+Delay}}
+\index{set\+Delay@{set\+Delay}!Simple\+Channel@{Simple\+Channel}}
+\subsubsection[{\texorpdfstring{set\+Delay(double delay)}{setDelay(double delay)}}]{\setlength{\rightskip}{0pt plus 5cm}void Simple\+Channel\+::set\+Delay (
+\begin{DoxyParamCaption}
+\item[{double}]{delay}
+\end{DoxyParamCaption}
+)}\hypertarget{classSimpleChannel_a334d0c084b7240cb64d61d06468ddba8}{}\label{classSimpleChannel_a334d0c084b7240cb64d61d06468ddba8}
+
+
+Set the delay of this channel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delay} & the delay \\
+\hline
+\end{DoxyParams}
+\index{Simple\+Channel@{Simple\+Channel}!set\+Error\+Model@{set\+Error\+Model}}
+\index{set\+Error\+Model@{set\+Error\+Model}!Simple\+Channel@{Simple\+Channel}}
+\subsubsection[{\texorpdfstring{set\+Error\+Model(const Q\+Shared\+Pointer$<$ Error\+Model $>$ \&error\+Model)}{setErrorModel(const QSharedPointer< ErrorModel > &errorModel)}}]{\setlength{\rightskip}{0pt plus 5cm}void Simple\+Channel\+::set\+Error\+Model (
+\begin{DoxyParamCaption}
+\item[{const Q\+Shared\+Pointer$<$ {\bf Error\+Model} $>$ \&}]{error\+Model}
+\end{DoxyParamCaption}
+)}\hypertarget{classSimpleChannel_a95450daefc5d4d363170948eae9ca75b}{}\label{classSimpleChannel_a95450daefc5d4d363170948eae9ca75b}
+
+
+Set the error model of this channel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em error\+Model} & the error model \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/aimsun\+\_\+extensions/\+V2\+X\+Framework/Simple\+Channel.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,9 @@
+<map id="VehicleCharacteristicsFixValues" name="VehicleCharacteristicsFixValues">
+<area shape="rect" id="node2" href="$unionVehicleCharacteristicsFixValues_1_1VehicleCharacteristicsFixValues__u.html" title="VehicleCharacteristicsFix\lValues::VehicleCharacteristics\lFixValues_u" alt="" coords="955,123,1156,179"/>
+<area shape="rect" id="node3" href="$structLoadType.html" title="LoadType" alt="" coords="737,109,816,136"/>
+<area shape="rect" id="node4" href="$structasn__struct__ctx__s.html" title="asn_struct_ctx_s" alt="" coords="37,120,160,147"/>
+<area shape="rect" id="node5" href="$structBIT__STRING__s.html" title="BIT_STRING_s" alt="" coords="323,120,437,147"/>
+<area shape="rect" id="node6" href="$structEnvironmentalCharacteristics.html" title="EnvironmentalCharacteristics" alt="" coords="487,164,680,191"/>
+<area shape="rect" id="node7" href="$structEuVehicleCategoryCode.html" title="EuVehicleCategoryCode" alt="" coords="297,224,463,251"/>
+<area shape="rect" id="node8" href="$unionEuVehicleCategoryCode_1_1EuVehicleCategoryCode__u.html" title="EuVehicleCategoryCode\l::EuVehicleCategoryCode_u" alt="" coords="5,254,192,295"/>
+</map>

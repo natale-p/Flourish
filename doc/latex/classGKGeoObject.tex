@@ -1,0 +1,741 @@
+\hypertarget{classGKGeoObject}{}\section{G\+K\+Geo\+Object Class Reference}
+\label{classGKGeoObject}\index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+
+
+Base class for all the graphical objects (objects with a representation in 2D and/or 3D Views)  
+
+
+
+
+{\ttfamily \#include $<$G\+K\+Geo\+Object.\+h$>$}
+
+
+
+Inheritance diagram for G\+K\+Geo\+Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=165pt]{classGKGeoObject__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for G\+K\+Geo\+Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{classGKGeoObject__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classGKGeoObject_ab07ccd042325dcfc9a4fce1f98e5ae51}{G\+K\+Geo\+Container} \{ {\bfseries e\+Nothing} = 0, 
+{\bfseries e\+Partially} = 1, 
+{\bfseries e\+Totally} = 2
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classGKGeoObject}{G\+K\+Geo\+Object} \& {\bfseries operator=} (const \hyperlink{classGKGeoObject}{G\+K\+Geo\+Object} \&item)\hypertarget{classGKGeoObject_a3ffa97f5309fa03289b2e4afb9660c5b}{}\label{classGKGeoObject_a3ffa97f5309fa03289b2e4afb9660c5b}
+
+\item 
+{\bfseries G\+K\+Geo\+Object} (\hyperlink{classGKGeoObject}{G\+K\+Geo\+Object} const \&)\hypertarget{classGKGeoObject_a31853fb805a0bb92dfc7714f21b9c3b4}{}\label{classGKGeoObject_a31853fb805a0bb92dfc7714f21b9c3b4}
+
+\item 
+virtual void \hyperlink{classGKGeoObject_a9016157ffeac73f0d89f8c5f309edba5}{set\+Selected} (bool new\+State)
+\item 
+virtual bool \hyperlink{classGKGeoObject_ad9e5fac3e4f56c153972beef5f433954}{is\+Selected} () const 
+\item 
+bool \hyperlink{classGKGeoObject_a19a4e8d78feb4d584c975acef1efb68d}{can\+Be\+Modified} () const override
+\item 
+bool \hyperlink{classGKGeoObject_a1f711271ae98d5eecb3a4cc4482a3110}{can\+Be\+Edited} () const override
+\item 
+virtual bool \hyperlink{classGKGeoObject_ab0e4aa17d4dc49aef5bc6110c1355e08}{can\+Be\+Grouped} () const 
+\item 
+int \hyperlink{classGKGeoObject_a8b18aa49cf7791d1f4d5ece6964aaf87}{get\+Mark} () const 
+\item 
+int \hyperlink{classGKGeoObject_a7d6f3701127ac947309993f1883c2f9f}{get\+Mark} (int pos)
+\item 
+virtual void \hyperlink{classGKGeoObject_aef22c197bc73c9282952b0d0308acabf}{set\+Mark} (int new\+Mark)
+\item 
+virtual void \hyperlink{classGKGeoObject_a083e57a14f1106112ccf467572695ae6}{add\+Mark} (int new\+Mark)\hypertarget{classGKGeoObject_a083e57a14f1106112ccf467572695ae6}{}\label{classGKGeoObject_a083e57a14f1106112ccf467572695ae6}
+
+\begin{DoxyCompactList}\small\item\em Add a new mark to the object keeping the rest. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classGKGeoObject_a8e5528f7a64dbd78080d65e6354d1a22}{unmark} ()\hypertarget{classGKGeoObject_a8e5528f7a64dbd78080d65e6354d1a22}{}\label{classGKGeoObject_a8e5528f7a64dbd78080d65e6354d1a22}
+
+\begin{DoxyCompactList}\small\item\em Removes any mark in the object. \end{DoxyCompactList}\item 
+const Q\+Vector$<$ int $>$ $\ast$ \hyperlink{classGKGeoObject_ae8b262aa37cad6be9afc4bd0b1a2d9b7}{get\+Marks} () const \hypertarget{classGKGeoObject_ae8b262aa37cad6be9afc4bd0b1a2d9b7}{}\label{classGKGeoObject_ae8b262aa37cad6be9afc4bd0b1a2d9b7}
+
+\begin{DoxyCompactList}\small\item\em Gets all the marks of the object. A N\+U\+LL vector means no mark. \end{DoxyCompactList}\item 
+quint32 \hyperlink{classGKGeoObject_a7100a655a7d87fd956df6075b74db2f9}{get\+Number\+Of\+Marks} () const \hypertarget{classGKGeoObject_a7100a655a7d87fd956df6075b74db2f9}{}\label{classGKGeoObject_a7100a655a7d87fd956df6075b74db2f9}
+
+\begin{DoxyCompactList}\small\item\em Returns the number of marks in the object. \end{DoxyCompactList}\item 
+virtual int \hyperlink{classGKGeoObject_afb827f2d02c261840b9f60b54d66977a}{get\+Data\+Value\+Int} (const G\+K\+Column $\ast$attr, const \hyperlink{classGKContext}{G\+K\+Context} \&context=\hyperlink{classGKContext_a37de2dc1b6bab087b9b92a445922e79d}{G\+K\+Context\+::any\+Context}) const override
+\item 
+virtual double \hyperlink{classGKGeoObject_ac32ff25339c108c9c4eb1327bd1cdad4}{get\+Data\+Value\+Double} (const G\+K\+Column $\ast$attr, const \hyperlink{classGKContext}{G\+K\+Context} \&context=\hyperlink{classGKContext_a37de2dc1b6bab087b9b92a445922e79d}{G\+K\+Context\+::any\+Context}) const override
+\item 
+virtual void \hyperlink{classGKGeoObject_ad86c134ad0733ca08d9663205cc72e39}{set\+Data\+Value} (const G\+K\+Column $\ast$attr, const Q\+Variant \&v) override
+\item 
+virtual void \hyperlink{classGKGeoObject_ad7741c593a280579d11686f3ef0024d9}{increase\+Tick} () override\hypertarget{classGKGeoObject_ad7741c593a280579d11686f3ef0024d9}{}\label{classGKGeoObject_ad7741c593a280579d11686f3ef0024d9}
+
+\begin{DoxyCompactList}\small\item\em increase\+Tick for top\+Objects too. \end{DoxyCompactList}\item 
+G\+K\+Layer $\ast$ \hyperlink{classGKGeoObject_a0ab06d03207c3f7094459283a9e524ed}{get\+Layer} () const \hypertarget{classGKGeoObject_a0ab06d03207c3f7094459283a9e524ed}{}\label{classGKGeoObject_a0ab06d03207c3f7094459283a9e524ed}
+
+\begin{DoxyCompactList}\small\item\em Get the layer in where this object is... \end{DoxyCompactList}\item 
+virtual void \hyperlink{classGKGeoObject_a2bc41c1436e19de5bd3938c5a57936c3}{set\+Layer} (G\+K\+Layer $\ast$alayer)
+\item 
+virtual void \hyperlink{classGKGeoObject_a353e80eb4751b336f3ea021032ac9bb0}{translate} (const \hyperlink{classGKPoint}{G\+K\+Point} \&)\hypertarget{classGKGeoObject_a353e80eb4751b336f3ea021032ac9bb0}{}\label{classGKGeoObject_a353e80eb4751b336f3ea021032ac9bb0}
+
+\begin{DoxyCompactList}\small\item\em Translates an object using a delta. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classGKGeoObject_a51615728502012b8b4d168976bd89210}{rotate} (const \hyperlink{classGKPoint}{G\+K\+Point} \&, double)
+\item 
+virtual void \hyperlink{classGKGeoObject_aa7048ab8de03f02a167306922ab0b137}{scale} (const \hyperlink{classGKPoint}{G\+K\+Point} \&)\hypertarget{classGKGeoObject_aa7048ab8de03f02a167306922ab0b137}{}\label{classGKGeoObject_aa7048ab8de03f02a167306922ab0b137}
+
+\begin{DoxyCompactList}\small\item\em Scales an object in the X, Y and Z. \end{DoxyCompactList}\item 
+virtual G\+K\+Coord \hyperlink{classGKGeoObject_afcd83963b4e1eab7d5401cfc268ed4d2}{get\+Altitude} () const \hypertarget{classGKGeoObject_afcd83963b4e1eab7d5401cfc268ed4d2}{}\label{classGKGeoObject_afcd83963b4e1eab7d5401cfc268ed4d2}
+
+\begin{DoxyCompactList}\small\item\em Get the altitude of this object (the minimum Z among all the possible Z of the object) \end{DoxyCompactList}\item 
+virtual void \hyperlink{classGKGeoObject_a2891f402d1030c8e89cef8483b416e73}{set\+Altitude} (G\+K\+Coord value)
+\item 
+void \hyperlink{classGKGeoObject_ac4029be1854b1cb8796dfe0973f7ca8d}{add\+Top\+Object} (\hyperlink{classGKGeoObject}{G\+K\+Geo\+Object} $\ast$atop\+Object)
+\item 
+bool \hyperlink{classGKGeoObject_aee570d7157bff565aaa862bfb79bb1ce}{remove\+Top\+Object} (\hyperlink{classGKGeoObject}{G\+K\+Geo\+Object} $\ast$atop\+Object)
+\item 
+bool \hyperlink{classGKGeoObject_adcdf58a21dfa1ae17f2cb69f55631750}{contains\+Top\+Object} (\hyperlink{classGKGeoObject}{G\+K\+Geo\+Object} $\ast$atop\+Object) const 
+\item 
+G\+K\+Geo\+Top\+Objects $\ast$ \hyperlink{classGKGeoObject_a4ad5c1d5ddb758e4b0eb1c568ea02a57}{get\+Top\+Objects} () const \hypertarget{classGKGeoObject_a4ad5c1d5ddb758e4b0eb1c568ea02a57}{}\label{classGKGeoObject_a4ad5c1d5ddb758e4b0eb1c568ea02a57}
+
+\begin{DoxyCompactList}\small\item\em Returns all the top objects. Can be N\+U\+LL, means no top objects. \end{DoxyCompactList}\item 
+\hyperlink{classGKGeoObject}{G\+K\+Geo\+Object} $\ast$ \hyperlink{classGKGeoObject_a6b0caeaefb7b5a75aa48cb34638517f3}{get\+Bottom\+Object} () const 
+\item 
+virtual \hyperlink{classGKBBox}{G\+K\+B\+Box} \hyperlink{classGKGeoObject_ab878506693e9aaf26fc11b01212b0805}{get\+B\+Box} () const \hypertarget{classGKGeoObject_ab878506693e9aaf26fc11b01212b0805}{}\label{classGKGeoObject_ab878506693e9aaf26fc11b01212b0805}
+
+\begin{DoxyCompactList}\small\item\em Gets the bbox of this object. The default implementation returns an undefined \hyperlink{classGKBBox}{G\+K\+B\+Box}. \end{DoxyCompactList}\item 
+void \hyperlink{classGKGeoObject_a94546f583dd6e41cafab462f48030557}{set\+Labeled} (bool value)
+\item 
+bool \hyperlink{classGKGeoObject_afda581780cf5612911884bdc657c402d}{is\+Labeled} () const 
+\item 
+virtual G\+K\+Geo\+Object\+Cut\+Cmd $\ast$ \hyperlink{classGKGeoObject_aa59746e77c12c5632d8ea725dfb98966}{get\+Cut\+Cmd} (const \hyperlink{classGKPoint}{G\+K\+Point} \&from, const \hyperlink{classGKPoint}{G\+K\+Point} \&to, bool keep\+Connection)
+\item 
+\hyperlink{classGKGeoObject_ab07ccd042325dcfc9a4fce1f98e5ae51}{G\+K\+Geo\+Container} \hyperlink{classGKGeoObject_a171311a8af5f1df9c74cf065f856a609}{get\+Contained\+Way} (const G\+K\+Points \&points, const \hyperlink{classGKBBox}{G\+K\+B\+Box} \&bbox\+Points) const 
+\item 
+virtual \hyperlink{classGKGeoObject_ab07ccd042325dcfc9a4fce1f98e5ae51}{G\+K\+Geo\+Container} \hyperlink{classGKGeoObject_a11c419daf68511bd1c8f82c1d16bd7df}{do\+Get\+Contained\+Way} (const \hyperlink{classGKBBox}{G\+K\+B\+Box} \&my\+B\+Box, const G\+K\+Points \&points, const \hyperlink{classGKBBox}{G\+K\+B\+Box} \&bbox\+Points) const 
+\item 
+\hyperlink{namespaceGK_acff655917cf02cfbda984b465457ce74}{G\+K\+::\+Connection\+Type} \hyperlink{classGKGeoObject_a98217b2518e6f0d1c4ef46f5f508b4af}{object\+Connection\+Type} (const \hyperlink{classGKGeoObject}{G\+K\+Geo\+Object} $\ast$object=N\+U\+LL) const 
+\item 
+G\+K\+Object\+Connections \hyperlink{classGKGeoObject_a9cf197127c9a81f5409ebedaa82a6d28}{get\+Connections} () const 
+\item 
+G\+K\+Object\+Connections \hyperlink{classGKGeoObject_ac66c2b8d0eb86dbc2f308541c278a0da}{get\+Connections} (const \hyperlink{classGKGeoObject}{G\+K\+Geo\+Object} $\ast$target) const 
+\item 
+G\+K\+Object\+Connections \hyperlink{classGKGeoObject_a1181f330364245da88a149f94f1432cb}{get\+Connections} (const \hyperlink{classGKGeoObject}{G\+K\+Geo\+Object} $\ast$target, \hyperlink{namespaceGK_acff655917cf02cfbda984b465457ce74}{G\+K\+::\+Connection\+Type} connection\+Type) const 
+\item 
+G\+K\+Object\+Connections \hyperlink{classGKGeoObject_ab262093423bac1799e757fd482630fbe}{get\+Connections} (G\+K\+Type $\ast$target\+Type) const 
+\item 
+bool \hyperlink{classGKGeoObject_a2d8ccad133fd3be2f904e3a39196723e}{any\+Connection} (const \hyperlink{classGKGeoObject}{G\+K\+Geo\+Object} $\ast$target) const 
+\item 
+bool \hyperlink{classGKGeoObject_a469a8d173bc5b6c64de2cb49018ac1b2}{any\+Connection} (const \hyperlink{classGKGeoObject}{G\+K\+Geo\+Object} $\ast$target, \hyperlink{namespaceGK_acff655917cf02cfbda984b465457ce74}{G\+K\+::\+Connection\+Type} connection\+Type) const 
+\item 
+virtual void \hyperlink{classGKGeoObject_a9397e33c3e0bc9a437ed88ef1e71a8c3}{add\+Connection} (G\+K\+Object\+Connection $\ast$connection)
+\item 
+virtual void \hyperlink{classGKGeoObject_a8f09e8f475c307bbb3e0eb5472d148a7}{remove\+Connection} (G\+K\+Object\+Connection $\ast$connection, \hyperlink{namespaceGK_a2f01756bc0253f960ed9e75b00638fd3}{G\+K\+::\+Object\+Deletion\+Behaviour} delete\+Object=G\+K\+::e\+Do\+Not\+Delete\+Objects)
+\item 
+virtual void \hyperlink{classGKGeoObject_a165b244b3c7e713e87df698144d24fbe}{change\+Connection\+Object} (\hyperlink{classGKGeoObject}{G\+K\+Geo\+Object} $\ast$old\+Object, \hyperlink{classGKGeoObject}{G\+K\+Geo\+Object} $\ast$new\+Object, \hyperlink{namespaceGK_acff655917cf02cfbda984b465457ce74}{G\+K\+::\+Connection\+Type} connection\+Type=G\+K\+::e\+Connection\+Undefined)
+\item 
+virtual void \hyperlink{classGKGeoObject_a6b78e6d11185fdd58f94b30895bd1993}{remove\+All\+Connections} (\hyperlink{namespaceGK_a2f01756bc0253f960ed9e75b00638fd3}{G\+K\+::\+Object\+Deletion\+Behaviour} delete\+Objects)
+\item 
+virtual bool \hyperlink{classGKGeoObject_aaf1fb883b5660c91eef09182524336ae}{accept\+Connection} (\hyperlink{classGKGeoObject}{G\+K\+Geo\+Object} $\ast$object) const 
+\item 
+virtual void \hyperlink{classGKGeoObject_a12ff207590fdaab07595a2fe5c43a6f8}{set\+Bottom\+Object} (\hyperlink{classGKGeoObject}{G\+K\+Geo\+Object} $\ast$the\+Bottom\+Object)\hypertarget{classGKGeoObject_a12ff207590fdaab07595a2fe5c43a6f8}{}\label{classGKGeoObject_a12ff207590fdaab07595a2fe5c43a6f8}
+
+\begin{DoxyCompactList}\small\item\em Automatically called by add\+Top\+Object. \end{DoxyCompactList}\item 
+G\+K\+Geo\+Object\+Group $\ast$ \hyperlink{classGKGeoObject_aa36faa1a7f0e7d7ba0b0cc2eeaca835c}{get\+Group} () const \hypertarget{classGKGeoObject_aa36faa1a7f0e7d7ba0b0cc2eeaca835c}{}\label{classGKGeoObject_aa36faa1a7f0e7d7ba0b0cc2eeaca835c}
+
+\begin{DoxyCompactList}\small\item\em In which group is this object? can be N\+U\+LL. \end{DoxyCompactList}\item 
+void \hyperlink{classGKGeoObject_aac42df6f761987deee79046d3ba53ff6}{set\+Group} (G\+K\+Geo\+Object\+Group $\ast$agroup)\hypertarget{classGKGeoObject_aac42df6f761987deee79046d3ba53ff6}{}\label{classGKGeoObject_aac42df6f761987deee79046d3ba53ff6}
+
+\begin{DoxyCompactList}\small\item\em In which group is this object? can be N\+U\+LL. \end{DoxyCompactList}\item 
+virtual Q\+String \hyperlink{classGKGeoObject_a72a947de242b8108e434881ec8046d62}{get\+Tool\+Tip\+String} () const override
+\item 
+quint8 \hyperlink{classGKGeoObject_a0308e2b5627e7a5f84dbb663b2769c27}{get\+Filter\+Scale} () const 
+\item 
+void \hyperlink{classGKGeoObject_ab57cdf6bc945e4d0c30582aa23b0a9a2}{set\+Filter\+Scale} (quint8 value)
+\item 
+virtual bool \hyperlink{classGKGeoObject_a7cfe423fb52cb46d8aa0bb148a4961e2}{exists} (quint32 scenario\+Id) const override
+\item 
+virtual G\+K\+Command $\ast$ {\bfseries get\+Create\+Connection\+Cmd} (\hyperlink{classGKGeoObject}{G\+K\+Geo\+Object} $\ast$, const \hyperlink{classGKPoint}{G\+K\+Point} \&, const \hyperlink{classGKPoint}{G\+K\+Point} \&)\hypertarget{classGKGeoObject_a7eaebdae37f0de7bd23ff5bdc211519b}{}\label{classGKGeoObject_a7eaebdae37f0de7bd23ff5bdc211519b}
+
+\item 
+virtual void \hyperlink{classGKGeoObject_ae44304ff62c691c3d78de0b5f0909e9d}{store} (G\+K\+Data\+Stream \&s) override\hypertarget{classGKGeoObject_ae44304ff62c691c3d78de0b5f0909e9d}{}\label{classGKGeoObject_ae44304ff62c691c3d78de0b5f0909e9d}
+
+\begin{DoxyCompactList}\small\item\em Stores the object in a file. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classGKGeoObject_a25db05c75c600113d18a323e95db488a}{restore} (G\+K\+Data\+Stream \&s) override\hypertarget{classGKGeoObject_a25db05c75c600113d18a323e95db488a}{}\label{classGKGeoObject_a25db05c75c600113d18a323e95db488a}
+
+\begin{DoxyCompactList}\small\item\em Restores the object from a file. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classGKGeoObject_ac3d477ad4b35bc0628c39081b4fc09ec}{post\+Restore} (G\+K\+Data\+Stream \&s) override
+\item 
+bool \hyperlink{classGKGeoObject_ad51f9b7b707899590228da2f4eec29e7}{check\+For\+Validity} (G\+K\+Data\+Stream \&s) override
+\item 
+virtual G\+K\+Object\+Compare\+Data \hyperlink{classGKGeoObject_aec2c201cfcc6e9740bbe67875f0aeb5c}{compare} (const \hyperlink{classGKObject}{G\+K\+Object} $\ast$obj) const override
+\item 
+virtual void \hyperlink{classGKGeoObject_a1ab5659f574c83ec6bd8e22fbc6c104a}{store\+X\+ML} (G\+K\+Text\+Stream \&s) override\hypertarget{classGKGeoObject_a1ab5659f574c83ec6bd8e22fbc6c104a}{}\label{classGKGeoObject_a1ab5659f574c83ec6bd8e22fbc6c104a}
+
+\begin{DoxyCompactList}\small\item\em Stores the object in a file. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classGKGeoObject_a0a7885d3b95b0229be53bd1dd582b1a1}{restore\+X\+ML} (G\+K\+Text\+Stream \&s, Q\+Dom\+Node \&node) override\hypertarget{classGKGeoObject_a0a7885d3b95b0229be53bd1dd582b1a1}{}\label{classGKGeoObject_a0a7885d3b95b0229be53bd1dd582b1a1}
+
+\begin{DoxyCompactList}\small\item\em Restores the object from a file. \end{DoxyCompactList}\item 
+virtual \hyperlink{classGKObject}{G\+K\+Object} $\ast$ \hyperlink{classGKGeoObject_a342c5d7928c3c4e82cc44240078d4e27}{clone} (bool add\+It\+To\+Model=true) const override
+\item 
+uint \hyperlink{classGKGeoObject_a71276d56a112e8e6c63c286d15cf27b6}{get\+Drawed\+In\+Frame} () const 
+\item 
+void \hyperlink{classGKGeoObject_adaf0e387abe85f6b0127137d9107d56a}{set\+Drawed\+In\+Frame} (uint frame)
+\item 
+virtual void \hyperlink{classGKGeoObject_a7ba7ef1150e1b27c41b47b21c738b52a}{accept\+Visitor} (G\+K\+Visitor \&visitor) override
+\item 
+virtual void \hyperlink{classGKGeoObject_a8098da83ef0177983da38f045281cfa5}{accept\+Visitor} (G\+K\+Visitor \&visitor) const override
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static uint \hyperlink{classGKGeoObject_af44e0720cc5baca36c2995219ec7846c}{mark\+Att}\hypertarget{classGKGeoObject_af44e0720cc5baca36c2995219ec7846c}{}\label{classGKGeoObject_af44e0720cc5baca36c2995219ec7846c}
+
+\begin{DoxyCompactList}\small\item\em The mark attribute (as in G\+K\+Geo\+Model\+::get\+Mark) \end{DoxyCompactList}\item 
+static uint \hyperlink{classGKGeoObject_a08676fb7e1a8afff241442c10fe3aec6}{altitude\+Att}\hypertarget{classGKGeoObject_a08676fb7e1a8afff241442c10fe3aec6}{}\label{classGKGeoObject_a08676fb7e1a8afff241442c10fe3aec6}
+
+\begin{DoxyCompactList}\small\item\em The altitude attribute (as in G\+K\+Geo\+Model\+::get\+Altitude) \end{DoxyCompactList}\item 
+static uint \hyperlink{classGKGeoObject_a2d2a3be13580143b887d208a02c61734}{number\+Of\+Connections\+Att}\hypertarget{classGKGeoObject_a2d2a3be13580143b887d208a02c61734}{}\label{classGKGeoObject_a2d2a3be13580143b887d208a02c61734}
+
+\begin{DoxyCompactList}\small\item\em The number of connections attribute. \end{DoxyCompactList}\item 
+static uint \hyperlink{classGKGeoObject_a9c27b0e72bcbbb5fa5a03703ab3d55e9}{layer\+Att}\hypertarget{classGKGeoObject_a9c27b0e72bcbbb5fa5a03703ab3d55e9}{}\label{classGKGeoObject_a9c27b0e72bcbbb5fa5a03703ab3d55e9}
+
+\begin{DoxyCompactList}\small\item\em The layer attribute (as in G\+K\+Geo\+Model\+::get\+Layer) \end{DoxyCompactList}\item 
+static uint \hyperlink{classGKGeoObject_a601ea581178a33ab3c9921aff0e0ba91}{group\+Att}\hypertarget{classGKGeoObject_a601ea581178a33ab3c9921aff0e0ba91}{}\label{classGKGeoObject_a601ea581178a33ab3c9921aff0e0ba91}
+
+\begin{DoxyCompactList}\small\item\em The group attribute (as in G\+K\+Geo\+Model\+::get\+Group) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries sel}\hypertarget{classGKGeoObject_a4f0895a6962f511ec1ff0ffa0a110839}{}\label{classGKGeoObject_a4f0895a6962f511ec1ff0ffa0a110839}
+
+\item 
+bool {\bfseries labeled}\hypertarget{classGKGeoObject_a5a268a805ce93fdbfc65fa21b31c2d66}{}\label{classGKGeoObject_a5a268a805ce93fdbfc65fa21b31c2d66}
+
+\item 
+uint {\bfseries drawed\+In\+Frame}\hypertarget{classGKGeoObject_a84c645246f15f9486fc05c69aae389ed}{}\label{classGKGeoObject_a84c645246f15f9486fc05c69aae389ed}
+
+\item 
+quint8 {\bfseries filter\+Scale}\hypertarget{classGKGeoObject_ab5e74f9b904c858ab6ef1dc6e8373366}{}\label{classGKGeoObject_ab5e74f9b904c858ab6ef1dc6e8373366}
+
+\item 
+Q\+Vector$<$ int $>$ $\ast$ {\bfseries marks}\hypertarget{classGKGeoObject_a4bc2d309d07e27df551e9294426c8e0e}{}\label{classGKGeoObject_a4bc2d309d07e27df551e9294426c8e0e}
+
+\item 
+G\+K\+Layer $\ast$ {\bfseries layer}\hypertarget{classGKGeoObject_adde7029125f1305d0f8f4af3740af4da}{}\label{classGKGeoObject_adde7029125f1305d0f8f4af3740af4da}
+
+\item 
+\hyperlink{classGKGeoObject}{G\+K\+Geo\+Object} $\ast$ {\bfseries bottom\+Object}\hypertarget{classGKGeoObject_a5c4cd6023e727c2d98ebe57aa9f43fbb}{}\label{classGKGeoObject_a5c4cd6023e727c2d98ebe57aa9f43fbb}
+
+\item 
+G\+K\+Geo\+Top\+Objects $\ast$ {\bfseries top\+Objects}\hypertarget{classGKGeoObject_a5529be519acf8afb068492993b12c641}{}\label{classGKGeoObject_a5529be519acf8afb068492993b12c641}
+
+\item 
+G\+K\+Object\+Connections $\ast$ {\bfseries connections}\hypertarget{classGKGeoObject_a090b81c96e2253a027bb0fd43c96bcc3}{}\label{classGKGeoObject_a090b81c96e2253a027bb0fd43c96bcc3}
+
+\item 
+G\+K\+Geo\+Object\+Group $\ast$ {\bfseries group}\hypertarget{classGKGeoObject_a4583b8095540e8e7d8f4a29515111edd}{}\label{classGKGeoObject_a4583b8095540e8e7d8f4a29515111edd}
+
+\item 
+G\+K\+Coord {\bfseries altitude}\hypertarget{classGKGeoObject_a80f3f44f516be302c2febc0168c88167}{}\label{classGKGeoObject_a80f3f44f516be302c2febc0168c88167}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries G\+K\+Object\+Del\+Cmd}\hypertarget{classGKGeoObject_a59ce7d69e7de6e472cda5210ce7b00a6}{}\label{classGKGeoObject_a59ce7d69e7de6e472cda5210ce7b00a6}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Base class for all the graphical objects (objects with a representation in 2D and/or 3D Views) 
+
+\hyperlink{classGKGeoObject}{G\+K\+Geo\+Object} is the base class for all the objects with a graphical representation. They are stored in layers (G\+K\+Layer) and these layers are in the G\+K\+Geo\+Model.
+
+When creating a geo object with the G\+K\+System\+::new\+Object, it will not be add to the geomodel. Until then it will not be visible. Add it using the G\+K\+Geo\+Model\+::add.
+
+Objects are selected by model, what means that a selected object is selected in all the views in where it appears (2D and/or 3D).
+
+An object can have a mark (or more than one) using \hyperlink{classGKGeoObject_aef22c197bc73c9282952b0d0308acabf}{G\+K\+Geo\+Object\+::set\+Mark} to mark it with a special colour and/or shape (depending of the object).
+
+An object can be groupped with other ones in a group (G\+K\+Geo\+Object\+Group). In this case the group and not the individual objects will be manipulated.
+
+An object can have object on top of it (\hyperlink{classGKGeoObject_a4ad5c1d5ddb758e4b0eb1c568ea02a57}{G\+K\+Geo\+Object\+::get\+Top\+Objects}). These objects bellows to this bottom object and are translated, rotated and deleted with it.
+
+\begin{DoxySeeAlso}{See also}
+G\+K\+Geo\+Model, G\+K\+Layer 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Enumeration Documentation}
+\index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!G\+K\+Geo\+Container@{G\+K\+Geo\+Container}}
+\index{G\+K\+Geo\+Container@{G\+K\+Geo\+Container}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{G\+K\+Geo\+Container}{GKGeoContainer}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf G\+K\+Geo\+Object\+::\+G\+K\+Geo\+Container}}\hypertarget{classGKGeoObject_ab07ccd042325dcfc9a4fce1f98e5ae51}{}\label{classGKGeoObject_ab07ccd042325dcfc9a4fce1f98e5ae51}
+See \hyperlink{classGKGeoObject_a11c419daf68511bd1c8f82c1d16bd7df}{G\+K\+Geo\+Object\+::do\+Get\+Contained\+Way} 
+
+\subsection{Member Function Documentation}
+\index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!accept\+Connection@{accept\+Connection}}
+\index{accept\+Connection@{accept\+Connection}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{accept\+Connection(\+G\+K\+Geo\+Object $\ast$object) const }{acceptConnection(GKGeoObject *object) const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool G\+K\+Geo\+Object\+::accept\+Connection (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+K\+Geo\+Object} $\ast$}]{object}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKGeoObject_aaf1fb883b5660c91eef09182524336ae}{}\label{classGKGeoObject_aaf1fb883b5660c91eef09182524336ae}
+Returns true if a connection to this object will be accepted. The current implementation will return true if no other connection to \char`\"{}object\char`\"{} exists (so no repeated connections are allowed). \index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!accept\+Visitor@{accept\+Visitor}}
+\index{accept\+Visitor@{accept\+Visitor}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{accept\+Visitor(\+G\+K\+Visitor \&visitor) override}{acceptVisitor(GKVisitor &visitor) override}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+K\+Geo\+Object\+::accept\+Visitor (
+\begin{DoxyParamCaption}
+\item[{G\+K\+Visitor \&}]{visitor}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classGKGeoObject_a7ba7ef1150e1b27c41b47b21c738b52a}{}\label{classGKGeoObject_a7ba7ef1150e1b27c41b47b21c738b52a}
+Accept visitor method. See G\+K\+Visitor class. 
+
+Reimplemented from \hyperlink{classGKObject_abd9a874f8e2a6da483136787335562d9}{G\+K\+Object}.
+
+
+
+Reimplemented in \hyperlink{classGKDPoint_a72ec8ba93733d4dd9eea7ee0eed6ade5}{G\+K\+D\+Point}.
+
+\index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!accept\+Visitor@{accept\+Visitor}}
+\index{accept\+Visitor@{accept\+Visitor}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{accept\+Visitor(\+G\+K\+Visitor \&visitor) const override}{acceptVisitor(GKVisitor &visitor) const override}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+K\+Geo\+Object\+::accept\+Visitor (
+\begin{DoxyParamCaption}
+\item[{G\+K\+Visitor \&}]{visitor}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classGKGeoObject_a8098da83ef0177983da38f045281cfa5}{}\label{classGKGeoObject_a8098da83ef0177983da38f045281cfa5}
+Accept visitor method (const version). See G\+K\+Visitor class. 
+
+Reimplemented from \hyperlink{classGKObject_a3f4d1001e500a2d4744483fbf422aee5}{G\+K\+Object}.
+
+
+
+Reimplemented in \hyperlink{classGKDPoint_afa6a3ce0476ed68257e7864e701856dd}{G\+K\+D\+Point}.
+
+\index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!add\+Connection@{add\+Connection}}
+\index{add\+Connection@{add\+Connection}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{add\+Connection(\+G\+K\+Object\+Connection $\ast$connection)}{addConnection(GKObjectConnection *connection)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+K\+Geo\+Object\+::add\+Connection (
+\begin{DoxyParamCaption}
+\item[{G\+K\+Object\+Connection $\ast$}]{connection}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKGeoObject_a9397e33c3e0bc9a437ed88ef1e71a8c3}{}\label{classGKGeoObject_a9397e33c3e0bc9a437ed88ef1e71a8c3}
+Adds a connection. The connection object is adopted \index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!add\+Top\+Object@{add\+Top\+Object}}
+\index{add\+Top\+Object@{add\+Top\+Object}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{add\+Top\+Object(\+G\+K\+Geo\+Object $\ast$atop\+Object)}{addTopObject(GKGeoObject *atopObject)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+Geo\+Object\+::add\+Top\+Object (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+K\+Geo\+Object} $\ast$}]{atop\+Object}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKGeoObject_ac4029be1854b1cb8796dfe0973f7ca8d}{}\label{classGKGeoObject_ac4029be1854b1cb8796dfe0973f7ca8d}
+Over objects\+: An object can have other object always over it as a section has always over detector. If an object is over another it will be drawn inmediedly after the \char`\"{}bottom\char`\"{} object because the G\+K\+Geo\+Model (and the associate Views) will take care of this requirement.
+
+This method will call atop\+Object-\/$>$set\+Bottom\+Object( this ) (that is, it will set the bottom object of the top object). \index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!any\+Connection@{any\+Connection}}
+\index{any\+Connection@{any\+Connection}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{any\+Connection(const G\+K\+Geo\+Object $\ast$target) const }{anyConnection(const GKGeoObject *target) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+Geo\+Object\+::any\+Connection (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Geo\+Object} $\ast$}]{target}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKGeoObject_a2d8ccad133fd3be2f904e3a39196723e}{}\label{classGKGeoObject_a2d8ccad133fd3be2f904e3a39196723e}
+Returns true if there are any connection between this object and target \index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!any\+Connection@{any\+Connection}}
+\index{any\+Connection@{any\+Connection}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{any\+Connection(const G\+K\+Geo\+Object $\ast$target, G\+K\+::\+Connection\+Type connection\+Type) const }{anyConnection(const GKGeoObject *target, GK::ConnectionType connectionType) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+Geo\+Object\+::any\+Connection (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Geo\+Object} $\ast$}]{target, }
+\item[{{\bf G\+K\+::\+Connection\+Type}}]{connection\+Type}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKGeoObject_a469a8d173bc5b6c64de2cb49018ac1b2}{}\label{classGKGeoObject_a469a8d173bc5b6c64de2cb49018ac1b2}
+Returns true if there are any connection of the specified connection\+Type between this object and target. \index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!can\+Be\+Edited@{can\+Be\+Edited}}
+\index{can\+Be\+Edited@{can\+Be\+Edited}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{can\+Be\+Edited() const override}{canBeEdited() const override}}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+Geo\+Object\+::can\+Be\+Edited (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classGKGeoObject_a1f711271ae98d5eecb3a4cc4482a3110}{}\label{classGKGeoObject_a1f711271ae98d5eecb3a4cc4482a3110}
+Rewritten to return false when this object is in a layer that is external. 
+
+Reimplemented from \hyperlink{classGKObject_ad5ac15fbbca40d75a943a8ddf73a8a7a}{G\+K\+Object}.
+
+\index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!can\+Be\+Grouped@{can\+Be\+Grouped}}
+\index{can\+Be\+Grouped@{can\+Be\+Grouped}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{can\+Be\+Grouped() const }{canBeGrouped() const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool G\+K\+Geo\+Object\+::can\+Be\+Grouped (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKGeoObject_ab0e4aa17d4dc49aef5bc6110c1355e08}{}\label{classGKGeoObject_ab0e4aa17d4dc49aef5bc6110c1355e08}
+Can this object be grouped? Usually true unless it is already grouped. \index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!can\+Be\+Modified@{can\+Be\+Modified}}
+\index{can\+Be\+Modified@{can\+Be\+Modified}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{can\+Be\+Modified() const override}{canBeModified() const override}}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+Geo\+Object\+::can\+Be\+Modified (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classGKGeoObject_a19a4e8d78feb4d584c975acef1efb68d}{}\label{classGKGeoObject_a19a4e8d78feb4d584c975acef1efb68d}
+Rewritten to return false when this object is in a layer that either is external or does not allow object editing. 
+
+Reimplemented from \hyperlink{classGKObject_a8f50f2a968b01df84a07cfd02ae0d5ff}{G\+K\+Object}.
+
+\index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!change\+Connection\+Object@{change\+Connection\+Object}}
+\index{change\+Connection\+Object@{change\+Connection\+Object}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{change\+Connection\+Object(\+G\+K\+Geo\+Object $\ast$old\+Object, G\+K\+Geo\+Object $\ast$new\+Object, G\+K\+::\+Connection\+Type connection\+Type=\+G\+K\+::e\+Connection\+Undefined)}{changeConnectionObject(GKGeoObject *oldObject, GKGeoObject *newObject, GK::ConnectionType connectionType=GK::eConnectionUndefined)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+K\+Geo\+Object\+::change\+Connection\+Object (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+K\+Geo\+Object} $\ast$}]{old\+Object, }
+\item[{{\bf G\+K\+Geo\+Object} $\ast$}]{new\+Object, }
+\item[{{\bf G\+K\+::\+Connection\+Type}}]{connection\+Type = {\ttfamily GK\+:\+:eConnectionUndefined}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKGeoObject_a165b244b3c7e713e87df698144d24fbe}{}\label{classGKGeoObject_a165b244b3c7e713e87df698144d24fbe}
+Replace \char`\"{}old\+Object\char`\"{} by \char`\"{}new\+Object\char`\"{} in all the connections that are of the specified connection\+Type. If connection\+Type is G\+K\+::e\+Connection\+Undefined, all matching connections will be affected. \index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!check\+For\+Validity@{check\+For\+Validity}}
+\index{check\+For\+Validity@{check\+For\+Validity}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{check\+For\+Validity(\+G\+K\+Data\+Stream \&s) override}{checkForValidity(GKDataStream &s) override}}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+Geo\+Object\+::check\+For\+Validity (
+\begin{DoxyParamCaption}
+\item[{G\+K\+Data\+Stream \&}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classGKGeoObject_ad51f9b7b707899590228da2f4eec29e7}{}\label{classGKGeoObject_ad51f9b7b707899590228da2f4eec29e7}
+After a restore, return false if this object is invalid. It will be removed from the model. 
+
+Reimplemented from \hyperlink{classGKObject_afd278ae77f692983059e45391532b9d3}{G\+K\+Object}.
+
+\index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!clone@{clone}}
+\index{clone@{clone}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{clone(bool add\+It\+To\+Model=true) const override}{clone(bool addItToModel=true) const override}}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf G\+K\+Object}$\ast$ G\+K\+Geo\+Object\+::clone (
+\begin{DoxyParamCaption}
+\item[{bool}]{add\+It\+To\+Model = {\ttfamily true}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classGKGeoObject_a342c5d7928c3c4e82cc44240078d4e27}{}\label{classGKGeoObject_a342c5d7928c3c4e82cc44240078d4e27}
+Returns a clone of this object (minus the ID that will be different). The cloned object will be added to the model (it will be created using the G\+K\+System\+::new\+Object call. 
+
+Reimplemented from \hyperlink{classGKObject_a0b70f4563bd69f3a4ff5d5a893b4e221}{G\+K\+Object}.
+
+
+
+Reimplemented in \hyperlink{classGKCircle_a2b820f2a2970c26fc00d551a928666c5}{G\+K\+Circle}, and \hyperlink{classGKDPoint_a8289d0a5357e581c7a0450f8fa649ecd}{G\+K\+D\+Point}.
+
+\index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!compare@{compare}}
+\index{compare@{compare}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{compare(const G\+K\+Object $\ast$obj) const override}{compare(const GKObject *obj) const override}}]{\setlength{\rightskip}{0pt plus 5cm}virtual G\+K\+Object\+Compare\+Data G\+K\+Geo\+Object\+::compare (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classGKGeoObject_aec2c201cfcc6e9740bbe67875f0aeb5c}{}\label{classGKGeoObject_aec2c201cfcc6e9740bbe67875f0aeb5c}
+Compare this object with \char`\"{}obj\char`\"{}. Return a list of attributes that are different. The ID is not compared. 
+
+Reimplemented from \hyperlink{classGKObject_a6b22ecbae17d74a55bd9bc698641db86}{G\+K\+Object}.
+
+
+
+Reimplemented in \hyperlink{classGKDPoint_a0dc57d1512d6eae6ffff4e3a4e2d3df5}{G\+K\+D\+Point}.
+
+\index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!contains\+Top\+Object@{contains\+Top\+Object}}
+\index{contains\+Top\+Object@{contains\+Top\+Object}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{contains\+Top\+Object(\+G\+K\+Geo\+Object $\ast$atop\+Object) const }{containsTopObject(GKGeoObject *atopObject) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+Geo\+Object\+::contains\+Top\+Object (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+K\+Geo\+Object} $\ast$}]{atop\+Object}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKGeoObject_adcdf58a21dfa1ae17f2cb69f55631750}{}\label{classGKGeoObject_adcdf58a21dfa1ae17f2cb69f55631750}
+Returns true if this objects is in the top objects list. \index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!do\+Get\+Contained\+Way@{do\+Get\+Contained\+Way}}
+\index{do\+Get\+Contained\+Way@{do\+Get\+Contained\+Way}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{do\+Get\+Contained\+Way(const G\+K\+B\+Box \&my\+B\+Box, const G\+K\+Points \&points, const G\+K\+B\+Box \&bbox\+Points) const }{doGetContainedWay(const GKBBox &myBBox, const GKPoints &points, const GKBBox &bboxPoints) const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf G\+K\+Geo\+Container} G\+K\+Geo\+Object\+::do\+Get\+Contained\+Way (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+B\+Box} \&}]{my\+B\+Box, }
+\item[{const G\+K\+Points \&}]{points, }
+\item[{const {\bf G\+K\+B\+Box} \&}]{bbox\+Points}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKGeoObject_a11c419daf68511bd1c8f82c1d16bd7df}{}\label{classGKGeoObject_a11c419daf68511bd1c8f82c1d16bd7df}
+If this object is totally inside the polygon (points) it returns e\+Totally; if this object is totally outside the polygon it returns e\+Nothing; if this object is partially inside and partially outside it returns e\+Partially. The default implementation does this\+: if all the corners of the object bounding box are inside points, e\+Totally if any corner of the object bounding box is inside points, e\+Partially if any corner of bbox\+Points is inside the object bounding box, e\+Partially else e\+Nothing \index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!exists@{exists}}
+\index{exists@{exists}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{exists(quint32 scenario\+Id) const override}{exists(quint32 scenarioId) const override}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool G\+K\+Geo\+Object\+::exists (
+\begin{DoxyParamCaption}
+\item[{quint32}]{scenario\+Id}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classGKGeoObject_a7cfe423fb52cb46d8aa0bb148a4961e2}{}\label{classGKGeoObject_a7cfe423fb52cb46d8aa0bb148a4961e2}
+Returns true if this object exists in the scenario. An object can exist in several, all or just one scenario. If scenario is 0 it will return always true. Objects exist or not based on Geometry Configuration settings attached to the Scenario.
+
+An object exists only if its top object exist and if all the required objects exist (for example a turn cannot exist if the required sections are not in the current geometry). 
+
+Reimplemented from \hyperlink{classGKObject_a089427722ccb540bc4d376102c4e3953}{G\+K\+Object}.
+
+\index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!get\+Bottom\+Object@{get\+Bottom\+Object}}
+\index{get\+Bottom\+Object@{get\+Bottom\+Object}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{get\+Bottom\+Object() const }{getBottomObject() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+K\+Geo\+Object}$\ast$ G\+K\+Geo\+Object\+::get\+Bottom\+Object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKGeoObject_a6b0caeaefb7b5a75aa48cb34638517f3}{}\label{classGKGeoObject_a6b0caeaefb7b5a75aa48cb34638517f3}
+Any \char`\"{}top\char`\"{} object has one (and only one) object that is \char`\"{}under\char`\"{} it (the bottom object) \index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!get\+Connections@{get\+Connections}}
+\index{get\+Connections@{get\+Connections}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{get\+Connections() const }{getConnections() const }}]{\setlength{\rightskip}{0pt plus 5cm}G\+K\+Object\+Connections G\+K\+Geo\+Object\+::get\+Connections (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKGeoObject_a9cf197127c9a81f5409ebedaa82a6d28}{}\label{classGKGeoObject_a9cf197127c9a81f5409ebedaa82a6d28}
+Returns all the connections to this object \index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!get\+Connections@{get\+Connections}}
+\index{get\+Connections@{get\+Connections}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{get\+Connections(const G\+K\+Geo\+Object $\ast$target) const }{getConnections(const GKGeoObject *target) const }}]{\setlength{\rightskip}{0pt plus 5cm}G\+K\+Object\+Connections G\+K\+Geo\+Object\+::get\+Connections (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Geo\+Object} $\ast$}]{target}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKGeoObject_ac66c2b8d0eb86dbc2f308541c278a0da}{}\label{classGKGeoObject_ac66c2b8d0eb86dbc2f308541c278a0da}
+Returns all the connections between this object and target \index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!get\+Connections@{get\+Connections}}
+\index{get\+Connections@{get\+Connections}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{get\+Connections(const G\+K\+Geo\+Object $\ast$target, G\+K\+::\+Connection\+Type connection\+Type) const }{getConnections(const GKGeoObject *target, GK::ConnectionType connectionType) const }}]{\setlength{\rightskip}{0pt plus 5cm}G\+K\+Object\+Connections G\+K\+Geo\+Object\+::get\+Connections (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Geo\+Object} $\ast$}]{target, }
+\item[{{\bf G\+K\+::\+Connection\+Type}}]{connection\+Type}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKGeoObject_a1181f330364245da88a149f94f1432cb}{}\label{classGKGeoObject_a1181f330364245da88a149f94f1432cb}
+Returns all the connections between this object and target with a specific connection\+Type between this object and target. \index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!get\+Connections@{get\+Connections}}
+\index{get\+Connections@{get\+Connections}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{get\+Connections(\+G\+K\+Type $\ast$target\+Type) const }{getConnections(GKType *targetType) const }}]{\setlength{\rightskip}{0pt plus 5cm}G\+K\+Object\+Connections G\+K\+Geo\+Object\+::get\+Connections (
+\begin{DoxyParamCaption}
+\item[{G\+K\+Type $\ast$}]{target\+Type}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKGeoObject_ab262093423bac1799e757fd482630fbe}{}\label{classGKGeoObject_ab262093423bac1799e757fd482630fbe}
+Returns all the connections between this object and objects of the provided type \index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!get\+Contained\+Way@{get\+Contained\+Way}}
+\index{get\+Contained\+Way@{get\+Contained\+Way}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{get\+Contained\+Way(const G\+K\+Points \&points, const G\+K\+B\+Box \&bbox\+Points) const }{getContainedWay(const GKPoints &points, const GKBBox &bboxPoints) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+K\+Geo\+Container} G\+K\+Geo\+Object\+::get\+Contained\+Way (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Points \&}]{points, }
+\item[{const {\bf G\+K\+B\+Box} \&}]{bbox\+Points}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKGeoObject_a171311a8af5f1df9c74cf065f856a609}{}\label{classGKGeoObject_a171311a8af5f1df9c74cf065f856a609}
+Deprecated function, use \hyperlink{classGKGeoObject_a11c419daf68511bd1c8f82c1d16bd7df}{G\+K\+Geo\+Object\+::do\+Get\+Contained\+Way}. The current implementation calls G\+K\+Geo\+Object\+::do\+Get\+Contained\+Way(get\+B\+Box(), points, bbox\+Points). \index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!get\+Cut\+Cmd@{get\+Cut\+Cmd}}
+\index{get\+Cut\+Cmd@{get\+Cut\+Cmd}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{get\+Cut\+Cmd(const G\+K\+Point \&from, const G\+K\+Point \&to, bool keep\+Connection)}{getCutCmd(const GKPoint &from, const GKPoint &to, bool keepConnection)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual G\+K\+Geo\+Object\+Cut\+Cmd$\ast$ G\+K\+Geo\+Object\+::get\+Cut\+Cmd (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Point} \&}]{from, }
+\item[{const {\bf G\+K\+Point} \&}]{to, }
+\item[{bool}]{keep\+Connection}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKGeoObject_aa59746e77c12c5632d8ea725dfb98966}{}\label{classGKGeoObject_aa59746e77c12c5632d8ea725dfb98966}
+Returns a command for a cut operation. Note that not all the geo objects can be cutted, so they will return N\+U\+LL. An object can return N\+U\+LL also if it cannot be cutted due to some state (is locked for example). This functions receives the segment uses to cut the object. \index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!get\+Data\+Value\+Double@{get\+Data\+Value\+Double}}
+\index{get\+Data\+Value\+Double@{get\+Data\+Value\+Double}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{get\+Data\+Value\+Double(const G\+K\+Column $\ast$attr, const G\+K\+Context \&context=\+G\+K\+Context\+::any\+Context) const override}{getDataValueDouble(const GKColumn *attr, const GKContext &context=GKContext::anyContext) const override}}]{\setlength{\rightskip}{0pt plus 5cm}virtual double G\+K\+Geo\+Object\+::get\+Data\+Value\+Double (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Column $\ast$}]{attr, }
+\item[{const {\bf G\+K\+Context} \&}]{context = {\ttfamily {\bf G\+K\+Context\+::any\+Context}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classGKGeoObject_ac32ff25339c108c9c4eb1327bd1cdad4}{}\label{classGKGeoObject_ac32ff25339c108c9c4eb1327bd1cdad4}
+See \hyperlink{classGKObject_a1a19168a7f85db37554ae5632a5e89a5}{G\+K\+Object\+::get\+Data\+Value\+Int} 
+
+Implements \hyperlink{classGKBaseObject_ab31d8734b5c82b7872da7c28caccc535}{G\+K\+Base\+Object}.
+
+\index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!get\+Data\+Value\+Int@{get\+Data\+Value\+Int}}
+\index{get\+Data\+Value\+Int@{get\+Data\+Value\+Int}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{get\+Data\+Value\+Int(const G\+K\+Column $\ast$attr, const G\+K\+Context \&context=\+G\+K\+Context\+::any\+Context) const override}{getDataValueInt(const GKColumn *attr, const GKContext &context=GKContext::anyContext) const override}}]{\setlength{\rightskip}{0pt plus 5cm}virtual int G\+K\+Geo\+Object\+::get\+Data\+Value\+Int (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Column $\ast$}]{attr, }
+\item[{const {\bf G\+K\+Context} \&}]{context = {\ttfamily {\bf G\+K\+Context\+::any\+Context}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classGKGeoObject_afb827f2d02c261840b9f60b54d66977a}{}\label{classGKGeoObject_afb827f2d02c261840b9f60b54d66977a}
+Helper functions (only for access). It\textquotesingle{}s faster than get\+Data\+Value since it doesn\textquotesingle{}t creates any intermediate Q\+Variant for internal attributes. Note that for G\+K\+Time\+Serie it returns the default value, in order to get any other value (position or condition dependant) use get\+Data\+Value to take the whole attribute 
+
+Reimplemented from \hyperlink{classGKObject_a1a19168a7f85db37554ae5632a5e89a5}{G\+K\+Object}.
+
+\index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!get\+Drawed\+In\+Frame@{get\+Drawed\+In\+Frame}}
+\index{get\+Drawed\+In\+Frame@{get\+Drawed\+In\+Frame}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{get\+Drawed\+In\+Frame() const }{getDrawedInFrame() const }}]{\setlength{\rightskip}{0pt plus 5cm}uint G\+K\+Geo\+Object\+::get\+Drawed\+In\+Frame (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKGeoObject_a71276d56a112e8e6c63c286d15cf27b6}{}\label{classGKGeoObject_a71276d56a112e8e6c63c286d15cf27b6}
+The last frame in which this object was found inside the view and drawn. Only valid when drawing a view. The next view will reset this value. \index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!get\+Filter\+Scale@{get\+Filter\+Scale}}
+\index{get\+Filter\+Scale@{get\+Filter\+Scale}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{get\+Filter\+Scale() const }{getFilterScale() const }}]{\setlength{\rightskip}{0pt plus 5cm}quint8 G\+K\+Geo\+Object\+::get\+Filter\+Scale (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKGeoObject_a0308e2b5627e7a5f84dbb663b2769c27}{}\label{classGKGeoObject_a0308e2b5627e7a5f84dbb663b2769c27}
+Based on this setting we will hide this object at some zoom scales\+: The values are\+:
+\begin{DoxyItemize}
+\item 0\+: Always show this object
+\item 1-\/5\+: Show this object based on zoom level (lower number, higher priority)
+\item 10\+: Automatic filtering based on the area of the object (the default) 
+\end{DoxyItemize}\index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!get\+Mark@{get\+Mark}}
+\index{get\+Mark@{get\+Mark}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{get\+Mark() const }{getMark() const }}]{\setlength{\rightskip}{0pt plus 5cm}int G\+K\+Geo\+Object\+::get\+Mark (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKGeoObject_a8b18aa49cf7791d1f4d5ece6964aaf87}{}\label{classGKGeoObject_a8b18aa49cf7791d1f4d5ece6964aaf87}
+Is the object marked?... 0 means that the object is not marked, any value greater than 0 means that is marked.
+
+An object marked appears in a different color Used, for example, to show what sections pertains to a route. A Mark is a integer, allowing to mark different objects with different marks and show all togethers (for examplem mark=1 is they are in a route, mark=0 is they are not, mark=2 is they are in two routes...)
+
+This method returns the first (if any) mark on the object. \index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!get\+Mark@{get\+Mark}}
+\index{get\+Mark@{get\+Mark}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{get\+Mark(int pos)}{getMark(int pos)}}]{\setlength{\rightskip}{0pt plus 5cm}int G\+K\+Geo\+Object\+::get\+Mark (
+\begin{DoxyParamCaption}
+\item[{int}]{pos}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKGeoObject_a7d6f3701127ac947309993f1883c2f9f}{}\label{classGKGeoObject_a7d6f3701127ac947309993f1883c2f9f}
+When an objects has more than one mark, return the mark at \char`\"{}pos\char`\"{} (from 0 to N-\/1, where N is the number of marks). If no mark is available at that position (or at all) it will return 0. \index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!get\+Tool\+Tip\+String@{get\+Tool\+Tip\+String}}
+\index{get\+Tool\+Tip\+String@{get\+Tool\+Tip\+String}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{get\+Tool\+Tip\+String() const override}{getToolTipString() const override}}]{\setlength{\rightskip}{0pt plus 5cm}virtual Q\+String G\+K\+Geo\+Object\+::get\+Tool\+Tip\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classGKGeoObject_a72a947de242b8108e434881ec8046d62}{}\label{classGKGeoObject_a72a947de242b8108e434881ec8046d62}
+Adds the altitude to the \hyperlink{classGKObject_a270fc001443a1c24c0f8d34353f2c69b}{G\+K\+Object\+::get\+Tool\+Tip\+String} information 
+
+Reimplemented from \hyperlink{classGKObject_a270fc001443a1c24c0f8d34353f2c69b}{G\+K\+Object}.
+
+\index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!is\+Labeled@{is\+Labeled}}
+\index{is\+Labeled@{is\+Labeled}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{is\+Labeled() const }{isLabeled() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+Geo\+Object\+::is\+Labeled (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKGeoObject_afda581780cf5612911884bdc657c402d}{}\label{classGKGeoObject_afda581780cf5612911884bdc657c402d}
+Is this object labeled? See \hyperlink{classGKGeoObject_a94546f583dd6e41cafab462f48030557}{G\+K\+Geo\+Object\+::set\+Labeled} \index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!is\+Selected@{is\+Selected}}
+\index{is\+Selected@{is\+Selected}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{is\+Selected() const }{isSelected() const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool G\+K\+Geo\+Object\+::is\+Selected (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKGeoObject_ad9e5fac3e4f56c153972beef5f433954}{}\label{classGKGeoObject_ad9e5fac3e4f56c153972beef5f433954}
+Is the object selected?... Note that is selected by model and not by view. This means that a selected object will appear selected in all the views. \index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!object\+Connection\+Type@{object\+Connection\+Type}}
+\index{object\+Connection\+Type@{object\+Connection\+Type}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{object\+Connection\+Type(const G\+K\+Geo\+Object $\ast$object=\+N\+U\+L\+L) const }{objectConnectionType(const GKGeoObject *object=NULL) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+K\+::\+Connection\+Type} G\+K\+Geo\+Object\+::object\+Connection\+Type (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Geo\+Object} $\ast$}]{object = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKGeoObject_a98217b2518e6f0d1c4ef46f5f508b4af}{}\label{classGKGeoObject_a98217b2518e6f0d1c4ef46f5f508b4af}
+Returns the connection type between this object and the specified one. If the specified object is N\+U\+LL, all connections will be considered. \index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!post\+Restore@{post\+Restore}}
+\index{post\+Restore@{post\+Restore}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{post\+Restore(\+G\+K\+Data\+Stream \&s) override}{postRestore(GKDataStream &s) override}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+K\+Geo\+Object\+::post\+Restore (
+\begin{DoxyParamCaption}
+\item[{G\+K\+Data\+Stream \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classGKGeoObject_ac3d477ad4b35bc0628c39081b4fc09ec}{}\label{classGKGeoObject_ac3d477ad4b35bc0628c39081b4fc09ec}
+All the objects have been restored. Use this call to perform any additional operation that cannot be done in the restore method (maybe requires an object that will be restored after this one).
+
+This method is evaluated using thread so it must be thread safe. For unsafe operations used post\+Restore\+Unsafe. 
+
+Reimplemented from \hyperlink{classGKObject_a443757bcfd3dee1826155a3f89497c8e}{G\+K\+Object}.
+
+
+
+Reimplemented in \hyperlink{classGKDPoint_a43415f7118e37f8e495c5b484565902e}{G\+K\+D\+Point}.
+
+\index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!remove\+All\+Connections@{remove\+All\+Connections}}
+\index{remove\+All\+Connections@{remove\+All\+Connections}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{remove\+All\+Connections(\+G\+K\+::\+Object\+Deletion\+Behaviour delete\+Objects)}{removeAllConnections(GK::ObjectDeletionBehaviour deleteObjects)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+K\+Geo\+Object\+::remove\+All\+Connections (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+K\+::\+Object\+Deletion\+Behaviour}}]{delete\+Objects}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKGeoObject_a6b78e6d11185fdd58f94b30895bd1993}{}\label{classGKGeoObject_a6b78e6d11185fdd58f94b30895bd1993}
+Removes all the connections. \index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!remove\+Connection@{remove\+Connection}}
+\index{remove\+Connection@{remove\+Connection}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{remove\+Connection(\+G\+K\+Object\+Connection $\ast$connection, G\+K\+::\+Object\+Deletion\+Behaviour delete\+Object=\+G\+K\+::e\+Do\+Not\+Delete\+Objects)}{removeConnection(GKObjectConnection *connection, GK::ObjectDeletionBehaviour deleteObject=GK::eDoNotDeleteObjects)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+K\+Geo\+Object\+::remove\+Connection (
+\begin{DoxyParamCaption}
+\item[{G\+K\+Object\+Connection $\ast$}]{connection, }
+\item[{{\bf G\+K\+::\+Object\+Deletion\+Behaviour}}]{delete\+Object = {\ttfamily GK\+:\+:eDoNotDeleteObjects}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKGeoObject_a8f09e8f475c307bbb3e0eb5472d148a7}{}\label{classGKGeoObject_a8f09e8f475c307bbb3e0eb5472d148a7}
+Removes a connection. The connection object is N\+OT deleted \index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!remove\+Top\+Object@{remove\+Top\+Object}}
+\index{remove\+Top\+Object@{remove\+Top\+Object}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{remove\+Top\+Object(\+G\+K\+Geo\+Object $\ast$atop\+Object)}{removeTopObject(GKGeoObject *atopObject)}}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+Geo\+Object\+::remove\+Top\+Object (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+K\+Geo\+Object} $\ast$}]{atop\+Object}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKGeoObject_aee570d7157bff565aaa862bfb79bb1ce}{}\label{classGKGeoObject_aee570d7157bff565aaa862bfb79bb1ce}
+Removes atopobject from the list of top objects. The object is not deleted and the bottom object at atopobject is not changed (it will keed a pointer to \char`\"{}this\char`\"{}).
+
+Returns true if the object was found and removed and false (object not found) otherwise. \index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!rotate@{rotate}}
+\index{rotate@{rotate}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{rotate(const G\+K\+Point \&, double)}{rotate(const GKPoint &, double)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+K\+Geo\+Object\+::rotate (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Point} \&}]{, }
+\item[{double}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classGKGeoObject_a51615728502012b8b4d168976bd89210}{}\label{classGKGeoObject_a51615728502012b8b4d168976bd89210}
+Rotates the object an angle in radians around the center of rotation 
+
+Reimplemented in \hyperlink{classGKDPoint_a143039d0ae0e60288bc15000439c2e24}{G\+K\+D\+Point}.
+
+\index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!set\+Altitude@{set\+Altitude}}
+\index{set\+Altitude@{set\+Altitude}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{set\+Altitude(\+G\+K\+Coord value)}{setAltitude(GKCoord value)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+K\+Geo\+Object\+::set\+Altitude (
+\begin{DoxyParamCaption}
+\item[{G\+K\+Coord}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classGKGeoObject_a2891f402d1030c8e89cef8483b416e73}{}\label{classGKGeoObject_a2891f402d1030c8e89cef8483b416e73}
+Changes the altitude of this object setting the minimum Z to \char`\"{}value\char`\"{} (and moving the rest of the points to z = value -\/ \hyperlink{classGKGeoObject_afcd83963b4e1eab7d5401cfc268ed4d2}{get\+Altitude()} ) 
+
+Reimplemented in \hyperlink{classGKDPoint_aadbf5a3105ea433e45b6d7368854cc22}{G\+K\+D\+Point}.
+
+\index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!set\+Data\+Value@{set\+Data\+Value}}
+\index{set\+Data\+Value@{set\+Data\+Value}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{set\+Data\+Value(const G\+K\+Column $\ast$attr, const Q\+Variant \&v) override}{setDataValue(const GKColumn *attr, const QVariant &v) override}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+K\+Geo\+Object\+::set\+Data\+Value (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Column $\ast$}]{attr, }
+\item[{const Q\+Variant \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classGKGeoObject_ad86c134ad0733ca08d9663205cc72e39}{}\label{classGKGeoObject_ad86c134ad0733ca08d9663205cc72e39}
+Sets the value of an attribute. \char`\"{}v\char`\"{} is copied. 
+
+Reimplemented from \hyperlink{classGKObject_afc228a2c74e04adfbe58190698ce60d6}{G\+K\+Object}.
+
+\index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!set\+Drawed\+In\+Frame@{set\+Drawed\+In\+Frame}}
+\index{set\+Drawed\+In\+Frame@{set\+Drawed\+In\+Frame}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{set\+Drawed\+In\+Frame(uint frame)}{setDrawedInFrame(uint frame)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+Geo\+Object\+::set\+Drawed\+In\+Frame (
+\begin{DoxyParamCaption}
+\item[{uint}]{frame}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKGeoObject_adaf0e387abe85f6b0127137d9107d56a}{}\label{classGKGeoObject_adaf0e387abe85f6b0127137d9107d56a}
+The last frame in which was this drawer found inside the view and drawn. Only valid when drawing a view. The next view will reset this value. \index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!set\+Filter\+Scale@{set\+Filter\+Scale}}
+\index{set\+Filter\+Scale@{set\+Filter\+Scale}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{set\+Filter\+Scale(quint8 value)}{setFilterScale(quint8 value)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+Geo\+Object\+::set\+Filter\+Scale (
+\begin{DoxyParamCaption}
+\item[{quint8}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKGeoObject_ab57cdf6bc945e4d0c30582aa23b0a9a2}{}\label{classGKGeoObject_ab57cdf6bc945e4d0c30582aa23b0a9a2}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classGKGeoObject_a0308e2b5627e7a5f84dbb663b2769c27}{G\+K\+Geo\+Object\+::get\+Filter\+Scale()} 
+\end{DoxySeeAlso}
+\index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!set\+Labeled@{set\+Labeled}}
+\index{set\+Labeled@{set\+Labeled}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{set\+Labeled(bool value)}{setLabeled(bool value)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+Geo\+Object\+::set\+Labeled (
+\begin{DoxyParamCaption}
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKGeoObject_a94546f583dd6e41cafab462f48030557}{}\label{classGKGeoObject_a94546f583dd6e41cafab462f48030557}
+Sets this object as labeled\+: a label will appear over it. By default the label contains the ID and name of the object but it can be customized using the geo model preferences. This customization is per type.
+
+The drawer will get the specific label from the G2\+D\+Drawer\+::get\+Object\+Label method. \index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!set\+Layer@{set\+Layer}}
+\index{set\+Layer@{set\+Layer}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{set\+Layer(\+G\+K\+Layer $\ast$alayer)}{setLayer(GKLayer *alayer)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+K\+Geo\+Object\+::set\+Layer (
+\begin{DoxyParamCaption}
+\item[{G\+K\+Layer $\ast$}]{alayer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKGeoObject_a2bc41c1436e19de5bd3938c5a57936c3}{}\label{classGKGeoObject_a2bc41c1436e19de5bd3938c5a57936c3}
+Set the layer of this object. Note tha t this operation will N\+OT change the object from a layer to another. In order to do so use functions in the G\+K\+Geo\+Model class. The G\+K\+Geo\+Model class will take care of removing the object from one layer and inserting into another. \index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!set\+Mark@{set\+Mark}}
+\index{set\+Mark@{set\+Mark}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{set\+Mark(int new\+Mark)}{setMark(int newMark)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+K\+Geo\+Object\+::set\+Mark (
+\begin{DoxyParamCaption}
+\item[{int}]{new\+Mark}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKGeoObject_aef22c197bc73c9282952b0d0308acabf}{}\label{classGKGeoObject_aef22c197bc73c9282952b0d0308acabf}
+Mark an object using the first mark. See get\+Mark for details.
+
+If new\+Mark is 0 then the object will be unmarked. \index{G\+K\+Geo\+Object@{G\+K\+Geo\+Object}!set\+Selected@{set\+Selected}}
+\index{set\+Selected@{set\+Selected}!G\+K\+Geo\+Object@{G\+K\+Geo\+Object}}
+\subsubsection[{\texorpdfstring{set\+Selected(bool new\+State)}{setSelected(bool newState)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+K\+Geo\+Object\+::set\+Selected (
+\begin{DoxyParamCaption}
+\item[{bool}]{new\+State}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKGeoObject_a9016157ffeac73f0d89f8c5f309edba5}{}\label{classGKGeoObject_a9016157ffeac73f0d89f8c5f309edba5}
+Is the object selected?... Note that is selected by model and not by view. This means that a selected object will appear selected in all the view. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/core/ang\+\_\+kernel/G\+K\+Geo\+Object.\+h\end{DoxyCompactItemize}

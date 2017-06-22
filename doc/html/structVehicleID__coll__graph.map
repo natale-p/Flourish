@@ -1,0 +1,5 @@
+<map id="VehicleID" name="VehicleID">
+<area shape="rect" id="node2" href="$structasn__struct__ctx__s.html" title="asn_struct_ctx_s" alt="" coords="5,5,128,32"/>
+<area shape="rect" id="node4" href="$structOCTET__STRING.html" title="OCTET_STRING" alt="" coords="72,95,197,121"/>
+<area shape="rect" id="node3" href="$unionVehicleID_1_1VehicleID__u.html" title="VehicleID::VehicleID_u" alt="" coords="69,184,227,211"/>
+</map>

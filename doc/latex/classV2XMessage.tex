@@ -1,0 +1,121 @@
+\hypertarget{classV2XMessage}{}\section{V2\+X\+Message Class Reference}
+\label{classV2XMessage}\index{V2\+X\+Message@{V2\+X\+Message}}
+
+
+A message in the \hyperlink{classV2XFramework}{V2\+X\+Framework}.  
+
+
+
+
+{\ttfamily \#include $<$V2\+X\+Message.\+h$>$}
+
+
+
+Inheritance diagram for V2\+X\+Message\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classV2XMessage__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classV2XMessage_a4000543fbe0ed18d5a55864a7eb80b7d}{V2\+X\+Message} ()\hypertarget{classV2XMessage_a4000543fbe0ed18d5a55864a7eb80b7d}{}\label{classV2XMessage_a4000543fbe0ed18d5a55864a7eb80b7d}
+
+\begin{DoxyCompactList}\small\item\em Empty default Constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classV2XMessage_afc5697ed69362a6cb53af027f7d9311e}{$\sim$\+V2\+X\+Message} ()\hypertarget{classV2XMessage_afc5697ed69362a6cb53af027f7d9311e}{}\label{classV2XMessage_afc5697ed69362a6cb53af027f7d9311e}
+
+\begin{DoxyCompactList}\small\item\em Empty default deconstructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classV2XMessage}{V2\+X\+Message} $\ast$ \hyperlink{classV2XMessage_a0838dc7505794641df7f0a3bdc4148b1}{copy} () const =0
+\begin{DoxyCompactList}\small\item\em Copy the message. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classV2XMessage_a233239ca7e33f6db8c4fc4176ecc2c69}{print} () const =0\hypertarget{classV2XMessage_a233239ca7e33f6db8c4fc4176ecc2c69}{}\label{classV2XMessage_a233239ca7e33f6db8c4fc4176ecc2c69}
+
+\begin{DoxyCompactList}\small\item\em Print the message content (D\+E\+P\+R\+E\+C\+A\+T\+ED) \end{DoxyCompactList}\item 
+virtual quint32 \hyperlink{classV2XMessage_ae1b54af9f8f88bb0c2a6967d3f6e7777}{get\+Size} () const =0
+\begin{DoxyCompactList}\small\item\em Get the message size. \end{DoxyCompactList}\item 
+void \hyperlink{classV2XMessage_a46e7b3abf9f2fdf2a7a94935c41e97d2}{set\+Source} (const Address \&source)
+\begin{DoxyCompactList}\small\item\em Set the source of the message. \end{DoxyCompactList}\item 
+Address \hyperlink{classV2XMessage_a86d4f9af9ea21c0c30bc06b1a3615ca0}{get\+Source} () const 
+\begin{DoxyCompactList}\small\item\em Get the source address. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A message in the \hyperlink{classV2XFramework}{V2\+X\+Framework}. 
+
+The message is, for now, very simple, and does not include serialization/deserialization, as well as any way to encapsulate one in another. 
+
+\subsection{Member Function Documentation}
+\index{V2\+X\+Message@{V2\+X\+Message}!copy@{copy}}
+\index{copy@{copy}!V2\+X\+Message@{V2\+X\+Message}}
+\subsubsection[{\texorpdfstring{copy() const =0}{copy() const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf V2\+X\+Message}$\ast$ V2\+X\+Message\+::copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classV2XMessage_a0838dc7505794641df7f0a3bdc4148b1}{}\label{classV2XMessage_a0838dc7505794641df7f0a3bdc4148b1}
+
+
+Copy the message. 
+
+\begin{DoxyReturn}{Returns}
+A copy of the message 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classCAMMessage_a27935907b25d9e8648891a281dd48df6}{C\+A\+M\+Message}, \hyperlink{classDENMMessage_aae291a9abf0f99c9c54500ec2e716bea}{D\+E\+N\+M\+Message}, \hyperlink{classMAPEMMessage_accc512420a152a574133636c19352d3c}{M\+A\+P\+E\+M\+Message}, and \hyperlink{classSPATEMMessage_a082ffadf59589fe7a9c80573e948839d}{S\+P\+A\+T\+E\+M\+Message}.
+
+\index{V2\+X\+Message@{V2\+X\+Message}!get\+Size@{get\+Size}}
+\index{get\+Size@{get\+Size}!V2\+X\+Message@{V2\+X\+Message}}
+\subsubsection[{\texorpdfstring{get\+Size() const =0}{getSize() const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual quint32 V2\+X\+Message\+::get\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classV2XMessage_ae1b54af9f8f88bb0c2a6967d3f6e7777}{}\label{classV2XMessage_ae1b54af9f8f88bb0c2a6967d3f6e7777}
+
+
+Get the message size. 
+
+\begin{DoxyReturn}{Returns}
+the message size 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classCAMMessage_ace1b6d647755a20130e692565882ce68}{C\+A\+M\+Message}, \hyperlink{classDENMMessage_a6bb584a4ddb1f66f626e12d5928fe940}{D\+E\+N\+M\+Message}, \hyperlink{classMAPEMMessage_ad3c86311a46c1b0e34cdbe2fdbded5c7}{M\+A\+P\+E\+M\+Message}, and \hyperlink{classSPATEMMessage_a96963a892572398a79ea2c742d53085b}{S\+P\+A\+T\+E\+M\+Message}.
+
+\index{V2\+X\+Message@{V2\+X\+Message}!get\+Source@{get\+Source}}
+\index{get\+Source@{get\+Source}!V2\+X\+Message@{V2\+X\+Message}}
+\subsubsection[{\texorpdfstring{get\+Source() const }{getSource() const }}]{\setlength{\rightskip}{0pt plus 5cm}Address V2\+X\+Message\+::get\+Source (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classV2XMessage_a86d4f9af9ea21c0c30bc06b1a3615ca0}{}\label{classV2XMessage_a86d4f9af9ea21c0c30bc06b1a3615ca0}
+
+
+Get the source address. 
+
+\begin{DoxyReturn}{Returns}
+the source address 
+\end{DoxyReturn}
+\index{V2\+X\+Message@{V2\+X\+Message}!set\+Source@{set\+Source}}
+\index{set\+Source@{set\+Source}!V2\+X\+Message@{V2\+X\+Message}}
+\subsubsection[{\texorpdfstring{set\+Source(const Address \&source)}{setSource(const Address &source)}}]{\setlength{\rightskip}{0pt plus 5cm}void V2\+X\+Message\+::set\+Source (
+\begin{DoxyParamCaption}
+\item[{const Address \&}]{source}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classV2XMessage_a46e7b3abf9f2fdf2a7a94935c41e97d2}{}\label{classV2XMessage_a46e7b3abf9f2fdf2a7a94935c41e97d2}
+
+
+Set the source of the message. 
+
+T\+O\+DO\+: Implement Headers
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & the source address \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/aimsun\+\_\+extensions/\+V2\+X\+Framework/V2\+X\+Message.\+h\end{DoxyCompactItemize}

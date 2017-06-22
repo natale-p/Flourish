@@ -1,0 +1,8 @@
+<map id="SPATEM" name="SPATEM">
+<area shape="rect" id="node2" href="$structasn__struct__ctx__s.html" title="asn_struct_ctx_s" alt="" coords="182,5,304,32"/>
+<area shape="rect" id="node3" href="$structItsPduHeader.html" title="ItsPduHeader" alt="" coords="81,145,184,172"/>
+<area shape="rect" id="node4" href="$structSPAT.html" title="SPAT" alt="" coords="320,196,377,223"/>
+<area shape="rect" id="node5" href="$structOCTET__STRING.html" title="OCTET_STRING" alt="" coords="286,95,411,121"/>
+<area shape="rect" id="node6" href="$structSPAT_1_1SPAT____regional.html" title="SPAT::SPAT__regional" alt="" coords="436,95,594,121"/>
+<area shape="rect" id="node7" href="$structIntersectionStateList.html" title="IntersectionStateList" alt="" coords="618,95,761,121"/>
+</map>

@@ -1,0 +1,19 @@
+<map id="NodeXY" name="NodeXY">
+<area shape="rect" id="node2" href="$structNodeOffsetPointXY.html" title="NodeOffsetPointXY" alt="" coords="1120,121,1257,148"/>
+<area shape="rect" id="node3" href="$structasn__struct__ctx__s.html" title="asn_struct_ctx_s" alt="" coords="5,407,128,433"/>
+<area shape="rect" id="node5" href="$structNode__XY__24b.html" title="Node_XY_24b" alt="" coords="428,115,535,141"/>
+<area shape="rect" id="node6" href="$structNode__LLmD__64b.html" title="Node_LLmD_64b" alt="" coords="420,172,543,199"/>
+<area shape="rect" id="node7" href="$structNode__XY__20b.html" title="Node_XY_20b" alt="" coords="428,220,535,247"/>
+<area shape="rect" id="node8" href="$structRegionalExtension__272P15.html" title="RegionalExtension_272P15" alt="" coords="567,309,749,336"/>
+<area shape="rect" id="node9" href="$structANY.html" title="ANY" alt="" coords="289,324,340,351"/>
+<area shape="rect" id="node10" href="$structNode__XY__26b.html" title="Node_XY_26b" alt="" coords="605,361,711,388"/>
+<area shape="rect" id="node11" href="$structNode__XY__32b.html" title="Node_XY_32b" alt="" coords="428,427,535,453"/>
+<area shape="rect" id="node12" href="$structNode__XY__28b.html" title="Node_XY_28b" alt="" coords="605,484,711,511"/>
+<area shape="rect" id="node13" href="$structNode__XY__22b.html" title="Node_XY_22b" alt="" coords="428,549,535,576"/>
+<area shape="rect" id="node14" href="$structNodeAttributeSetXY.html" title="NodeAttributeSetXY" alt="" coords="588,689,728,716"/>
+<area shape="rect" id="node15" href="$structNodeAttributeXYList.html" title="NodeAttributeXYList" alt="" coords="244,664,385,691"/>
+<area shape="rect" id="node16" href="$structLaneDataAttributeList.html" title="LaneDataAttributeList" alt="" coords="241,715,389,741"/>
+<area shape="rect" id="node17" href="$structNodeAttributeSetXY_1_1NodeAttributeSetXY____regional.html" title="NodeAttributeSetXY\l::NodeAttributeSetXY\l__regional" alt="" coords="241,765,389,821"/>
+<area shape="rect" id="node18" href="$structSegmentAttributeXYList.html" title="SegmentAttributeXYList" alt="" coords="233,845,396,872"/>
+<area shape="rect" id="node4" href="$unionNodeOffsetPointXY_1_1NodeOffsetPointXY__u.html" title="NodeOffsetPointXY::\lNodeOffsetPointXY_u" alt="" coords="863,302,1013,343"/>
+</map>

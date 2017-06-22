@@ -1,0 +1,6 @@
+<map id="SignalStatus" name="SignalStatus">
+<area shape="rect" id="node2" href="$structasn__struct__ctx__s.html" title="asn_struct_ctx_s" alt="" coords="5,80,128,107"/>
+<area shape="rect" id="node3" href="$structSignalStatus_1_1SignalStatus____regional.html" title="SignalStatus::SignalStatus\l__regional" alt="" coords="233,41,412,82"/>
+<area shape="rect" id="node4" href="$structSignalStatusPackageList.html" title="SignalStatusPackageList" alt="" coords="239,107,407,133"/>
+<area shape="rect" id="node5" href="$structIntersectionReferenceID.html" title="IntersectionReferenceID" alt="" coords="241,157,405,184"/>
+</map>

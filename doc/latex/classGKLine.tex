@@ -1,0 +1,149 @@
+\hypertarget{classGKLine}{}\section{G\+K\+Line Class Reference}
+\label{classGKLine}\index{G\+K\+Line@{G\+K\+Line}}
+
+
+A Line in 2D space.  
+
+
+
+
+{\ttfamily \#include $<$G\+K\+Line.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries G\+K\+Line} (const \hyperlink{classGKPoint}{G\+K\+Point} \&p1, const \hyperlink{classGKPoint}{G\+K\+Point} \&p2)\hypertarget{classGKLine_a76ebfc0786fab10adcbdc0e25c9dbe8d}{}\label{classGKLine_a76ebfc0786fab10adcbdc0e25c9dbe8d}
+
+\item 
+{\bfseries G\+K\+Line} (const \hyperlink{classGKPoint}{G\+K\+Point} \&p1, G\+K\+Coord slope)\hypertarget{classGKLine_a26dafa86a78052fcc39c8cd28ee139ea}{}\label{classGKLine_a26dafa86a78052fcc39c8cd28ee139ea}
+
+\item 
+{\bfseries G\+K\+Line} (const \hyperlink{classGKPoint}{G\+K\+Point} \&p, const G\+K\+Vector \&v)\hypertarget{classGKLine_a53e6eee5cd7d90e8f3f4e9052bc99c27}{}\label{classGKLine_a53e6eee5cd7d90e8f3f4e9052bc99c27}
+
+\item 
+void \hyperlink{classGKLine_a6026d00869da073bcd45e8a1501ece88}{set} (const \hyperlink{classGKPoint}{G\+K\+Point} \&p1, const \hyperlink{classGKPoint}{G\+K\+Point} \&p2)\hypertarget{classGKLine_a6026d00869da073bcd45e8a1501ece88}{}\label{classGKLine_a6026d00869da073bcd45e8a1501ece88}
+
+\begin{DoxyCompactList}\small\item\em Sets this line to be the one defined by these two points. \end{DoxyCompactList}\item 
+\hyperlink{classGKLine}{G\+K\+Line} \hyperlink{classGKLine_ac6cf49aeec17fe932979e746f74dbd5d}{parallel\+Line\+At\+Dist} (const \hyperlink{classGKPoint}{G\+K\+Point} \&p1, const \hyperlink{classGKPoint}{G\+K\+Point} \&p2, \hyperlink{namespaceGK_adbf6d461cf314c17e29ca660da291274}{G\+K\+::\+Road\+Side} side, double dist) const 
+\item 
+\hyperlink{classGKLine}{G\+K\+Line} \hyperlink{classGKLine_a528540503450e6ee7865ca702cc08fe2}{perpendicular\+Line\+At\+Point} (const \hyperlink{classGKPoint}{G\+K\+Point} \&point) const 
+\item 
+bool \hyperlink{classGKLine_a580f3c2126348737a724f14241340086}{intersects} (const \hyperlink{classGKLine}{G\+K\+Line} \&line2, \hyperlink{classGKPoint}{G\+K\+Point} $\ast$point, double epsilon=0.\+001) const 
+\item 
+bool \hyperlink{classGKLine_aa0618666fd2cbf95e56516819a8ac92e}{intersects\+Perpendicular} (const \hyperlink{classGKPoint}{G\+K\+Point} \&p\+\_\+per, \hyperlink{classGKPoint}{G\+K\+Point} $\ast$p\+\_\+intersec) const 
+\item 
+void \hyperlink{classGKLine_a2b434e208cbdf9e8566bcac7516e6f03}{rotate} (const \hyperlink{classGKPoint}{G\+K\+Point} \&center, double angle)
+\item 
+G\+K\+Coord \hyperlink{classGKLine_a150b5fef0994e2c8a22ff1e41ebe6cba}{angle\+Between\+Lines} (const \hyperlink{classGKLine}{G\+K\+Line} \&line2) const 
+\item 
+G\+K\+Coord \hyperlink{classGKLine_a503e44cfd91aafeac05ec182a439abd4}{angle\+Between\+Lines\+Complete} (const \hyperlink{classGKLine}{G\+K\+Line} \&line2) const 
+\item 
+bool \hyperlink{classGKLine_a1b390da084e212728a7550fcd0434f5b}{contains} (const \hyperlink{classGKPoint}{G\+K\+Point} \&p, G\+K\+Coord epsilon=0.\+1) const 
+\item 
+G\+K\+Coord \hyperlink{classGKLine_a118e861901318b0728dcda414a3199f8}{dist\+To\+Point2D} (const \hyperlink{classGKPoint}{G\+K\+Point} \&p) const 
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double {\bfseries slope}\hypertarget{classGKLine_a9d938df4f4ca0b93e51dbf522711f6ee}{}\label{classGKLine_a9d938df4f4ca0b93e51dbf522711f6ee}
+
+\item 
+double {\bfseries coef}\hypertarget{classGKLine_a6e6eb41ac043baeab308ea18e2d90048}{}\label{classGKLine_a6e6eb41ac043baeab308ea18e2d90048}
+
+\item 
+G\+K\+Coord {\bfseries fromX}\hypertarget{classGKLine_a4c7a7f29224c051a86667068a6c6e0f0}{}\label{classGKLine_a4c7a7f29224c051a86667068a6c6e0f0}
+
+\item 
+G\+K\+Coord {\bfseries fromY}\hypertarget{classGKLine_a558a30d1bb96c52ea56d467aa7a4d57b}{}\label{classGKLine_a558a30d1bb96c52ea56d467aa7a4d57b}
+
+\item 
+G\+K\+Coord {\bfseries toX}\hypertarget{classGKLine_adc527d9e6624fa83127b508f189393c9}{}\label{classGKLine_adc527d9e6624fa83127b508f189393c9}
+
+\item 
+G\+K\+Coord {\bfseries toY}\hypertarget{classGKLine_acf17667c1d63a53afce2b9184259de49}{}\label{classGKLine_acf17667c1d63a53afce2b9184259de49}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A Line in 2D space. 
+
+Class that defines a 2D line and contains methods for the most common greometrical operations over a line. 
+
+\subsection{Member Function Documentation}
+\index{G\+K\+Line@{G\+K\+Line}!angle\+Between\+Lines@{angle\+Between\+Lines}}
+\index{angle\+Between\+Lines@{angle\+Between\+Lines}!G\+K\+Line@{G\+K\+Line}}
+\subsubsection[{\texorpdfstring{angle\+Between\+Lines(const G\+K\+Line \&line2) const }{angleBetweenLines(const GKLine &line2) const }}]{\setlength{\rightskip}{0pt plus 5cm}G\+K\+Coord G\+K\+Line\+::angle\+Between\+Lines (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Line} \&}]{line2}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKLine_a150b5fef0994e2c8a22ff1e41ebe6cba}{}\label{classGKLine_a150b5fef0994e2c8a22ff1e41ebe6cba}
+Returns the minimum angle in radians ( between 0 and G\+K\+P\+I/2) this two lines make. If lines are parallel D\+B\+L\+\_\+\+M\+AX is returned. If lines are the same 0 is returned. \index{G\+K\+Line@{G\+K\+Line}!angle\+Between\+Lines\+Complete@{angle\+Between\+Lines\+Complete}}
+\index{angle\+Between\+Lines\+Complete@{angle\+Between\+Lines\+Complete}!G\+K\+Line@{G\+K\+Line}}
+\subsubsection[{\texorpdfstring{angle\+Between\+Lines\+Complete(const G\+K\+Line \&line2) const }{angleBetweenLinesComplete(const GKLine &line2) const }}]{\setlength{\rightskip}{0pt plus 5cm}G\+K\+Coord G\+K\+Line\+::angle\+Between\+Lines\+Complete (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Line} \&}]{line2}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKLine_a503e44cfd91aafeac05ec182a439abd4}{}\label{classGKLine_a503e44cfd91aafeac05ec182a439abd4}
+Returns the minimum angle in radians (between -\/\+G\+K\+PI and G\+K\+PI) this two lines make. If lines are parallel D\+B\+L\+\_\+\+M\+AX is returned. If lines are the same 0 is returned. \index{G\+K\+Line@{G\+K\+Line}!contains@{contains}}
+\index{contains@{contains}!G\+K\+Line@{G\+K\+Line}}
+\subsubsection[{\texorpdfstring{contains(const G\+K\+Point \&p, G\+K\+Coord epsilon=0.\+1) const }{contains(const GKPoint &p, GKCoord epsilon=0.1) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+Line\+::contains (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Point} \&}]{p, }
+\item[{G\+K\+Coord}]{epsilon = {\ttfamily 0.1}}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKLine_a1b390da084e212728a7550fcd0434f5b}{}\label{classGKLine_a1b390da084e212728a7550fcd0434f5b}
+It returns true if p is located inside the line or false otherwise. \index{G\+K\+Line@{G\+K\+Line}!dist\+To\+Point2D@{dist\+To\+Point2D}}
+\index{dist\+To\+Point2D@{dist\+To\+Point2D}!G\+K\+Line@{G\+K\+Line}}
+\subsubsection[{\texorpdfstring{dist\+To\+Point2\+D(const G\+K\+Point \&p) const }{distToPoint2D(const GKPoint &p) const }}]{\setlength{\rightskip}{0pt plus 5cm}G\+K\+Coord G\+K\+Line\+::dist\+To\+Point2D (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Point} \&}]{p}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKLine_a118e861901318b0728dcda414a3199f8}{}\label{classGKLine_a118e861901318b0728dcda414a3199f8}
+Returns the minimum distance from any point of the line to the point p. \index{G\+K\+Line@{G\+K\+Line}!intersects@{intersects}}
+\index{intersects@{intersects}!G\+K\+Line@{G\+K\+Line}}
+\subsubsection[{\texorpdfstring{intersects(const G\+K\+Line \&line2, G\+K\+Point $\ast$point, double epsilon=0.\+001) const }{intersects(const GKLine &line2, GKPoint *point, double epsilon=0.001) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+Line\+::intersects (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Line} \&}]{line2, }
+\item[{{\bf G\+K\+Point} $\ast$}]{point, }
+\item[{double}]{epsilon = {\ttfamily 0.001}}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKLine_a580f3c2126348737a724f14241340086}{}\label{classGKLine_a580f3c2126348737a724f14241340086}
+If this and line2 intersect returns true and finds the intersection point p. Remember that lines perpendicular to the x axis are codified with slope = D\+B\+L\+\_\+\+M\+AX and coef = x. Epsilon is the allowed difference between slopes to consider both lines parallel. \index{G\+K\+Line@{G\+K\+Line}!intersects\+Perpendicular@{intersects\+Perpendicular}}
+\index{intersects\+Perpendicular@{intersects\+Perpendicular}!G\+K\+Line@{G\+K\+Line}}
+\subsubsection[{\texorpdfstring{intersects\+Perpendicular(const G\+K\+Point \&p\+\_\+per, G\+K\+Point $\ast$p\+\_\+intersec) const }{intersectsPerpendicular(const GKPoint &p_per, GKPoint *p_intersec) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+Line\+::intersects\+Perpendicular (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Point} \&}]{p\+\_\+per, }
+\item[{{\bf G\+K\+Point} $\ast$}]{p\+\_\+intersec}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKLine_aa0618666fd2cbf95e56516819a8ac92e}{}\label{classGKLine_aa0618666fd2cbf95e56516819a8ac92e}
+Returns true if there is a perpendicular line to this one that ges by p\+\_\+per. If so, the point in this line that is the intersection (p\+\_\+intersec) is also calculated and returned. \index{G\+K\+Line@{G\+K\+Line}!parallel\+Line\+At\+Dist@{parallel\+Line\+At\+Dist}}
+\index{parallel\+Line\+At\+Dist@{parallel\+Line\+At\+Dist}!G\+K\+Line@{G\+K\+Line}}
+\subsubsection[{\texorpdfstring{parallel\+Line\+At\+Dist(const G\+K\+Point \&p1, const G\+K\+Point \&p2, G\+K\+::\+Road\+Side side, double dist) const }{parallelLineAtDist(const GKPoint &p1, const GKPoint &p2, GK::RoadSide side, double dist) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+K\+Line} G\+K\+Line\+::parallel\+Line\+At\+Dist (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Point} \&}]{p1, }
+\item[{const {\bf G\+K\+Point} \&}]{p2, }
+\item[{{\bf G\+K\+::\+Road\+Side}}]{side, }
+\item[{double}]{dist}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKLine_ac6cf49aeec17fe932979e746f74dbd5d}{}\label{classGKLine_ac6cf49aeec17fe932979e746f74dbd5d}
+Given a vector in this line from p1 to p2, finds the parallel line at distance dist, either at the right (side = 0) or at the left side of the vector. \index{G\+K\+Line@{G\+K\+Line}!perpendicular\+Line\+At\+Point@{perpendicular\+Line\+At\+Point}}
+\index{perpendicular\+Line\+At\+Point@{perpendicular\+Line\+At\+Point}!G\+K\+Line@{G\+K\+Line}}
+\subsubsection[{\texorpdfstring{perpendicular\+Line\+At\+Point(const G\+K\+Point \&point) const }{perpendicularLineAtPoint(const GKPoint &point) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+K\+Line} G\+K\+Line\+::perpendicular\+Line\+At\+Point (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Point} \&}]{point}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKLine_a528540503450e6ee7865ca702cc08fe2}{}\label{classGKLine_a528540503450e6ee7865ca702cc08fe2}
+Returns the perpendicular line that goes by point. If this line is parallel to the x axis then the perpendicular that is returned is codified with slope = D\+B\+L\+\_\+\+M\+AX and coef = point.\+x \index{G\+K\+Line@{G\+K\+Line}!rotate@{rotate}}
+\index{rotate@{rotate}!G\+K\+Line@{G\+K\+Line}}
+\subsubsection[{\texorpdfstring{rotate(const G\+K\+Point \&center, double angle)}{rotate(const GKPoint &center, double angle)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+Line\+::rotate (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Point} \&}]{center, }
+\item[{double}]{angle}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKLine_a2b434e208cbdf9e8566bcac7516e6f03}{}\label{classGKLine_a2b434e208cbdf9e8566bcac7516e6f03}
+Rotates this line modifying it using center as the rotation point and angle (value in radians) the angle of rotation. A positive angle will be a clokwise rotation (horaria) while a negative angle will be a counterclokwise rotation (anti-\/horaria). 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/core/ang\+\_\+kernel/G\+K\+Line.\+h\end{DoxyCompactItemize}

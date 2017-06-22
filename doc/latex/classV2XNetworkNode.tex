@@ -1,0 +1,221 @@
+\hypertarget{classV2XNetworkNode}{}\section{V2\+X\+Network\+Node Class Reference}
+\label{classV2XNetworkNode}\index{V2\+X\+Network\+Node@{V2\+X\+Network\+Node}}
+
+
+A Node in the network.  
+
+
+
+
+{\ttfamily \#include $<$V2\+X\+Network\+Node.\+h$>$}
+
+
+
+Inheritance diagram for V2\+X\+Network\+Node\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{classV2XNetworkNode__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for V2\+X\+Network\+Node\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{classV2XNetworkNode__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classV2XNetworkNode_a629990c53b6e3f0086d87f71ad57f0a3}{V2\+X\+Network\+Node} (quint32 id)
+\begin{DoxyCompactList}\small\item\em Constructor with an id. \end{DoxyCompactList}\item 
+virtual \hyperlink{classV2XNetworkNode_a3c022f71b67ecff71ac4fa7b9b45deeb}{$\sim$\+V2\+X\+Network\+Node} ()\hypertarget{classV2XNetworkNode_a3c022f71b67ecff71ac4fa7b9b45deeb}{}\label{classV2XNetworkNode_a3c022f71b67ecff71ac4fa7b9b45deeb}
+
+\begin{DoxyCompactList}\small\item\em Deconstructor. \end{DoxyCompactList}\item 
+bool \hyperlink{classV2XNetworkNode_ad1cbc1627c89e96af0ddb82a9e649665}{operator==} (const \hyperlink{classV2XNetworkNode}{V2\+X\+Network\+Node} \&other) const 
+\begin{DoxyCompactList}\small\item\em operator == \end{DoxyCompactList}\item 
+quint64 \hyperlink{classV2XNetworkNode_ab992d43cfb18c15932b649e8cde44682}{get\+Id} () const 
+\begin{DoxyCompactList}\small\item\em Get the ID of the node. \end{DoxyCompactList}\item 
+virtual \hyperlink{classV2XNetworkPoint}{V2\+X\+Network\+Point} \hyperlink{classV2XNetworkNode_aa214d725e50f8568f6b35acd949404d5}{get\+Position} () const =0
+\begin{DoxyCompactList}\small\item\em Get the position of the node. \end{DoxyCompactList}\item 
+void \hyperlink{classV2XNetworkNode_aa437171cebe336e110a0100647ca0dd5}{set\+Time\+Of\+The\+Day} (const \hyperlink{classV2XNetworkTime}{V2\+X\+Network\+Time} \&time)
+\begin{DoxyCompactList}\small\item\em Update the time of the day in this node. \end{DoxyCompactList}\item 
+\hyperlink{classV2XNetworkTime}{V2\+X\+Network\+Time} \hyperlink{classV2XNetworkNode_a6891c5e695b61431050b361bf0dcadaf}{get\+Time\+Of\+The\+Day} () const 
+\begin{DoxyCompactList}\small\item\em Get the current time for the node. \end{DoxyCompactList}\item 
+void \hyperlink{classV2XNetworkNode_a10426aaa56ca97cfefc331af3b4689ec}{set\+Abs\+Time} (const \hyperlink{classV2XNetworkTime}{V2\+X\+Network\+Time} \&time)
+\begin{DoxyCompactList}\small\item\em Update the absolute time in this node. \end{DoxyCompactList}\item 
+\hyperlink{classV2XNetworkTime}{V2\+X\+Network\+Time} \hyperlink{classV2XNetworkNode_a9b5a0a992279a423f171eb01e69213eb}{get\+Abs\+Time} () const 
+\begin{DoxyCompactList}\small\item\em Get the current absolute time for the node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Pointer$<$ \hyperlink{classNetDevice}{Net\+Device} $>$ \hyperlink{classV2XNetworkNode_a040b748993cb648258421981439f7ec3}{m\+\_\+dev}\hypertarget{classV2XNetworkNode_a040b748993cb648258421981439f7ec3}{}\label{classV2XNetworkNode_a040b748993cb648258421981439f7ec3}
+
+\begin{DoxyCompactList}\small\item\em Device. \end{DoxyCompactList}\item 
+\hyperlink{classV2XNetworkTime}{V2\+X\+Network\+Time} \hyperlink{classV2XNetworkNode_a445b08f1b991d2860eb204898bedccf5}{m\+\_\+time\+Of\+The\+Day}\hypertarget{classV2XNetworkNode_a445b08f1b991d2860eb204898bedccf5}{}\label{classV2XNetworkNode_a445b08f1b991d2860eb204898bedccf5}
+
+\begin{DoxyCompactList}\small\item\em Time of the day. \end{DoxyCompactList}\item 
+\hyperlink{classV2XNetworkTime}{V2\+X\+Network\+Time} \hyperlink{classV2XNetworkNode_ae7f74fac1bf8958cbb6b15c6325ffeb8}{m\+\_\+abs\+Time}\hypertarget{classV2XNetworkNode_ae7f74fac1bf8958cbb6b15c6325ffeb8}{}\label{classV2XNetworkNode_ae7f74fac1bf8958cbb6b15c6325ffeb8}
+
+\begin{DoxyCompactList}\small\item\em Absolute time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A Node in the network. 
+
+It represents any object with a connection. It has two different time values\+: the first is the so-\/called absolute time, and represents the time since the beginning of the simulation. The second one, called time of the day, it is the difference between now and midnight (00\+:00.\+00) of the current day.
+
+A network node has also a position; moreover, different objects have different id. The ID should be unique, or otherwise a lot of problems will appear.
+
+To retrieve the values, use the associated getters.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classV2XNetworkNode_ab992d43cfb18c15932b649e8cde44682}{get\+Id} 
+
+\hyperlink{classV2XNetworkNode_a6891c5e695b61431050b361bf0dcadaf}{get\+Time\+Of\+The\+Day} 
+
+\hyperlink{classV2XNetworkNode_a9b5a0a992279a423f171eb01e69213eb}{get\+Abs\+Time} 
+
+\hyperlink{classV2XNetworkNode_aa214d725e50f8568f6b35acd949404d5}{get\+Position} 
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{V2\+X\+Network\+Node@{V2\+X\+Network\+Node}!V2\+X\+Network\+Node@{V2\+X\+Network\+Node}}
+\index{V2\+X\+Network\+Node@{V2\+X\+Network\+Node}!V2\+X\+Network\+Node@{V2\+X\+Network\+Node}}
+\subsubsection[{\texorpdfstring{V2\+X\+Network\+Node(quint32 id)}{V2XNetworkNode(quint32 id)}}]{\setlength{\rightskip}{0pt plus 5cm}V2\+X\+Network\+Node\+::\+V2\+X\+Network\+Node (
+\begin{DoxyParamCaption}
+\item[{quint32}]{id}
+\end{DoxyParamCaption}
+)}\hypertarget{classV2XNetworkNode_a629990c53b6e3f0086d87f71ad57f0a3}{}\label{classV2XNetworkNode_a629990c53b6e3f0086d87f71ad57f0a3}
+
+
+Constructor with an id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Given ID \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{V2\+X\+Network\+Node@{V2\+X\+Network\+Node}!get\+Abs\+Time@{get\+Abs\+Time}}
+\index{get\+Abs\+Time@{get\+Abs\+Time}!V2\+X\+Network\+Node@{V2\+X\+Network\+Node}}
+\subsubsection[{\texorpdfstring{get\+Abs\+Time() const }{getAbsTime() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf V2\+X\+Network\+Time} V2\+X\+Network\+Node\+::get\+Abs\+Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classV2XNetworkNode_a9b5a0a992279a423f171eb01e69213eb}{}\label{classV2XNetworkNode_a9b5a0a992279a423f171eb01e69213eb}
+
+
+Get the current absolute time for the node. 
+
+\begin{DoxyReturn}{Returns}
+The current absolute time 
+\end{DoxyReturn}
+\index{V2\+X\+Network\+Node@{V2\+X\+Network\+Node}!get\+Id@{get\+Id}}
+\index{get\+Id@{get\+Id}!V2\+X\+Network\+Node@{V2\+X\+Network\+Node}}
+\subsubsection[{\texorpdfstring{get\+Id() const }{getId() const }}]{\setlength{\rightskip}{0pt plus 5cm}quint64 V2\+X\+Network\+Node\+::get\+Id (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classV2XNetworkNode_ab992d43cfb18c15932b649e8cde44682}{}\label{classV2XNetworkNode_ab992d43cfb18c15932b649e8cde44682}
+
+
+Get the ID of the node. 
+
+\begin{DoxyReturn}{Returns}
+the ID of the node 
+\end{DoxyReturn}
+\index{V2\+X\+Network\+Node@{V2\+X\+Network\+Node}!get\+Position@{get\+Position}}
+\index{get\+Position@{get\+Position}!V2\+X\+Network\+Node@{V2\+X\+Network\+Node}}
+\subsubsection[{\texorpdfstring{get\+Position() const =0}{getPosition() const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf V2\+X\+Network\+Point} V2\+X\+Network\+Node\+::get\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classV2XNetworkNode_aa214d725e50f8568f6b35acd949404d5}{}\label{classV2XNetworkNode_aa214d725e50f8568f6b35acd949404d5}
+
+
+Get the position of the node. 
+
+\begin{DoxyReturn}{Returns}
+the position of the node 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classV2XSimpleAP_ad83fd3c047d9fef2e88c54297171106f}{V2\+X\+Simple\+AP}, and \hyperlink{classV2XConnectedAgent_a1bb1360e7658df70cd202e2dbde27d75}{V2\+X\+Connected\+Agent}.
+
+\index{V2\+X\+Network\+Node@{V2\+X\+Network\+Node}!get\+Time\+Of\+The\+Day@{get\+Time\+Of\+The\+Day}}
+\index{get\+Time\+Of\+The\+Day@{get\+Time\+Of\+The\+Day}!V2\+X\+Network\+Node@{V2\+X\+Network\+Node}}
+\subsubsection[{\texorpdfstring{get\+Time\+Of\+The\+Day() const }{getTimeOfTheDay() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf V2\+X\+Network\+Time} V2\+X\+Network\+Node\+::get\+Time\+Of\+The\+Day (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classV2XNetworkNode_a6891c5e695b61431050b361bf0dcadaf}{}\label{classV2XNetworkNode_a6891c5e695b61431050b361bf0dcadaf}
+
+
+Get the current time for the node. 
+
+\begin{DoxyReturn}{Returns}
+The current time 
+\end{DoxyReturn}
+\index{V2\+X\+Network\+Node@{V2\+X\+Network\+Node}!operator==@{operator==}}
+\index{operator==@{operator==}!V2\+X\+Network\+Node@{V2\+X\+Network\+Node}}
+\subsubsection[{\texorpdfstring{operator==(const V2\+X\+Network\+Node \&other) const }{operator==(const V2XNetworkNode &other) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool V2\+X\+Network\+Node\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf V2\+X\+Network\+Node} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classV2XNetworkNode_ad1cbc1627c89e96af0ddb82a9e649665}{}\label{classV2XNetworkNode_ad1cbc1627c89e96af0ddb82a9e649665}
+
+
+operator == 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & other node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the ID are the same (assumption\+: ID are unique) 
+\end{DoxyReturn}
+\index{V2\+X\+Network\+Node@{V2\+X\+Network\+Node}!set\+Abs\+Time@{set\+Abs\+Time}}
+\index{set\+Abs\+Time@{set\+Abs\+Time}!V2\+X\+Network\+Node@{V2\+X\+Network\+Node}}
+\subsubsection[{\texorpdfstring{set\+Abs\+Time(const V2\+X\+Network\+Time \&time)}{setAbsTime(const V2XNetworkTime &time)}}]{\setlength{\rightskip}{0pt plus 5cm}void V2\+X\+Network\+Node\+::set\+Abs\+Time (
+\begin{DoxyParamCaption}
+\item[{const {\bf V2\+X\+Network\+Time} \&}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classV2XNetworkNode_a10426aaa56ca97cfefc331af3b4689ec}{}\label{classV2XNetworkNode_a10426aaa56ca97cfefc331af3b4689ec}
+
+
+Update the absolute time in this node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & the current absolute time \\
+\hline
+\end{DoxyParams}
+\index{V2\+X\+Network\+Node@{V2\+X\+Network\+Node}!set\+Time\+Of\+The\+Day@{set\+Time\+Of\+The\+Day}}
+\index{set\+Time\+Of\+The\+Day@{set\+Time\+Of\+The\+Day}!V2\+X\+Network\+Node@{V2\+X\+Network\+Node}}
+\subsubsection[{\texorpdfstring{set\+Time\+Of\+The\+Day(const V2\+X\+Network\+Time \&time)}{setTimeOfTheDay(const V2XNetworkTime &time)}}]{\setlength{\rightskip}{0pt plus 5cm}void V2\+X\+Network\+Node\+::set\+Time\+Of\+The\+Day (
+\begin{DoxyParamCaption}
+\item[{const {\bf V2\+X\+Network\+Time} \&}]{time}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classV2XNetworkNode_aa437171cebe336e110a0100647ca0dd5}{}\label{classV2XNetworkNode_aa437171cebe336e110a0100647ca0dd5}
+
+
+Update the time of the day in this node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & the current time \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/aimsun\+\_\+extensions/\+V2\+X\+Framework/V2\+X\+Network\+Node.\+h\end{DoxyCompactItemize}

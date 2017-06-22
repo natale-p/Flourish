@@ -1,0 +1,10 @@
+<map id="RoadSegment" name="RoadSegment">
+<area shape="rect" id="node2" href="$structOCTET__STRING.html" title="OCTET_STRING" alt="" coords="436,44,561,71"/>
+<area shape="rect" id="node3" href="$structasn__struct__ctx__s.html" title="asn_struct_ctx_s" alt="" coords="5,181,128,208"/>
+<area shape="rect" id="node4" href="$structSpeedLimitList.html" title="SpeedLimitList" alt="" coords="445,100,553,127"/>
+<area shape="rect" id="node5" href="$structRoadSegment_1_1RoadSegment____regional.html" title="RoadSegment::RoadSegment\l__regional" alt="" coords="585,163,781,205"/>
+<area shape="rect" id="node6" href="$structRoadLaneSetList.html" title="RoadLaneSetList" alt="" coords="437,221,560,248"/>
+<area shape="rect" id="node7" href="$structPosition3D.html" title="Position3D" alt="" coords="640,292,727,319"/>
+<area shape="rect" id="node8" href="$structPosition3D_1_1Position3D____regional.html" title="Position3D::Position3D\l__regional" alt="" coords="243,326,402,367"/>
+<area shape="rect" id="node9" href="$structRoadSegmentReferenceID.html" title="RoadSegmentReferenceID" alt="" coords="233,392,412,419"/>
+</map>

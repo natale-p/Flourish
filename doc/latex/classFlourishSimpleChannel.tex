@@ -1,0 +1,115 @@
+\hypertarget{classFlourishSimpleChannel}{}\section{Flourish\+Simple\+Channel Class Reference}
+\label{classFlourishSimpleChannel}\index{Flourish\+Simple\+Channel@{Flourish\+Simple\+Channel}}
+
+
+The base class for the channels in the Flourish model.  
+
+
+
+
+{\ttfamily \#include $<$Flourish\+Simple\+Channel.\+h$>$}
+
+
+
+Inheritance diagram for Flourish\+Simple\+Channel\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{classFlourishSimpleChannel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Flourish\+Simple\+Channel\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{classFlourishSimpleChannel__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classFlourishSimpleChannel_af9becdf9708f16e182652cd50954f222}{send\+Up\+To} (double time)
+\begin{DoxyCompactList}\small\item\em Deliver to the current registered statiosn the messages enqueued up to the time specified. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{classFlourishSimpleChannel_a4edba03aee0227355da4944eebee382d}{broadcast} (const Q\+Shared\+Pointer$<$ \hyperlink{classV2XMessage}{Packet} $>$ \&packet, int src\+Net\+Device\+Id)
+\begin{DoxyCompactList}\small\item\em Enqueue the packet for a broadcast. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The base class for the channels in the Flourish model. 
+
+Copyright T\+SS 2017
+
+Author\+: Natale Patriciello \href{mailto:natale.patriciello@aimsun.com}{\tt natale.\+patriciello@aimsun.\+com} The channel provide a simple functionality for doing a broadcast between all the connected devices. It is strictly connected to the class \hyperlink{classFlourishSimpleNetDevice}{Flourish\+Simple\+Net\+Device}.
+
+A device should register itself through the attach method (and, therefore, detach it when it is appropriate through the detach method). Then, to send a message, the device should call the broadcast method (the only provided) that calculates the delivery time, and save the pair delivery time -\/ message into an internal queue.
+
+To deliver the messages enqueued, the owner of the \hyperlink{classChannel}{Channel} should call the send\+Up\+To method, specifying a time. All the messages enqued for a delivery time which is less or equal to the one specified will be delivered to the attached devices.
+
+In this way, it is modeled the possibility of a vehicle A which is in the range of the vehicle B at the time of the sending, but then A leaves the range at the time of delivery, and therefore should not be able to receive the message.
+
+The \hyperlink{classErrorModel}{Error\+Model} and the delay are documented in the \hyperlink{classSimpleChannel}{Simple\+Channel} class.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classFlourishSimpleChannel_af9becdf9708f16e182652cd50954f222}{send\+Up\+To} 
+
+\hyperlink{classFlourishSimpleChannel_a4edba03aee0227355da4944eebee382d}{broadcast} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\index{Flourish\+Simple\+Channel@{Flourish\+Simple\+Channel}!broadcast@{broadcast}}
+\index{broadcast@{broadcast}!Flourish\+Simple\+Channel@{Flourish\+Simple\+Channel}}
+\subsubsection[{\texorpdfstring{broadcast(const Q\+Shared\+Pointer$<$ Packet $>$ \&packet, int src\+Net\+Device\+Id)}{broadcast(const QSharedPointer< Packet > &packet, int srcNetDeviceId)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Flourish\+Simple\+Channel\+::broadcast (
+\begin{DoxyParamCaption}
+\item[{const Q\+Shared\+Pointer$<$ {\bf Packet} $>$ \&}]{packet, }
+\item[{int}]{src\+Net\+Device\+Id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classFlourishSimpleChannel_a4edba03aee0227355da4944eebee382d}{}\label{classFlourishSimpleChannel_a4edba03aee0227355da4944eebee382d}
+
+
+Enqueue the packet for a broadcast. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & Packet \\
+\hline
+{\em src\+Net\+Device} & Source \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the enqueue has been done successfully 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classSimpleChannel_ad465fab93c7a56ebc605af7cf0c2db06}{Simple\+Channel}.
+
+\index{Flourish\+Simple\+Channel@{Flourish\+Simple\+Channel}!send\+Up\+To@{send\+Up\+To}}
+\index{send\+Up\+To@{send\+Up\+To}!Flourish\+Simple\+Channel@{Flourish\+Simple\+Channel}}
+\subsubsection[{\texorpdfstring{send\+Up\+To(double time)}{sendUpTo(double time)}}]{\setlength{\rightskip}{0pt plus 5cm}void Flourish\+Simple\+Channel\+::send\+Up\+To (
+\begin{DoxyParamCaption}
+\item[{double}]{time}
+\end{DoxyParamCaption}
+)}\hypertarget{classFlourishSimpleChannel_af9becdf9708f16e182652cd50954f222}{}\label{classFlourishSimpleChannel_af9becdf9708f16e182652cd50954f222}
+
+
+Deliver to the current registered statiosn the messages enqueued up to the time specified. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Time \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+plugins/\+Flourish\+V2\+X\+Framework/Flourish\+Simple\+Channel.\+h\item 
+plugins/\+Flourish\+V2\+X\+Framework/Flourish\+Simple\+Channel.\+cpp\end{DoxyCompactItemize}

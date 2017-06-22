@@ -1,0 +1,31 @@
+\hypertarget{structGKObject____idComparer}{}\section{G\+K\+Object\+\_\+\+\_\+id\+Comparer Struct Reference}
+\label{structGKObject____idComparer}\index{G\+K\+Object\+\_\+\+\_\+id\+Comparer@{G\+K\+Object\+\_\+\+\_\+id\+Comparer}}
+
+
+A function to sort (\hyperlink{classGKObject}{G\+K\+Object} $\ast$) by id. To use, mainly, in std\+:map to keep the map sorted by id and not by pointer value.  
+
+
+
+
+{\ttfamily \#include $<$G\+K\+Object.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries operator()} (const \hyperlink{classGKObject}{G\+K\+Object} $\ast$s1, const \hyperlink{classGKObject}{G\+K\+Object} $\ast$s2) const \hypertarget{structGKObject____idComparer_a478eab115a3b2082641fbe6ec5206656}{}\label{structGKObject____idComparer_a478eab115a3b2082641fbe6ec5206656}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A function to sort (\hyperlink{classGKObject}{G\+K\+Object} $\ast$) by id. To use, mainly, in std\+:map to keep the map sorted by id and not by pointer value. 
+
+Example\+: 
+\begin{DoxyCode}
+std::map<GKSection *, float, GKObject\_\_idComparer > amap;
+\end{DoxyCode}
+ 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/core/ang\+\_\+kernel/G\+K\+Object.\+h\end{DoxyCompactItemize}

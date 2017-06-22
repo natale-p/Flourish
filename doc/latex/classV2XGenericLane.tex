@@ -1,0 +1,306 @@
+\hypertarget{classV2XGenericLane}{}\section{V2\+X\+Generic\+Lane Class Reference}
+\label{classV2XGenericLane}\index{V2\+X\+Generic\+Lane@{V2\+X\+Generic\+Lane}}
+
+
+A generic lane connected to an intersection.  
+
+
+
+
+{\ttfamily \#include $<$V2\+X\+Generic\+Lane.\+h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static quint32 \hyperlink{classV2XGenericLane_a9cc28d187662fa9159528caf998cd6d1}{get\+Id} (const G\+K\+Section $\ast$section)
+\begin{DoxyCompactList}\small\item\em Get the unique ID of the section (lane) \end{DoxyCompactList}\item 
+static bool \hyperlink{classV2XGenericLane_aa08c46fe2c03960eab2e17b765e8bd2f}{get\+Generic\+Lane} (const G\+K\+Section $\ast$section, const G\+K\+Node $\ast$node, \hyperlink{structGenericLane}{Generic\+Lane\+\_\+t} $\ast$generic\+Lane)
+\begin{DoxyCompactList}\small\item\em Fill a generic lane struct. \end{DoxyCompactList}\item 
+static bool \hyperlink{classV2XGenericLane_a6f2720dd290d768d91ff198fd2cbc9cf}{get\+Connects\+To} (const G\+K\+Section $\ast$section, const G\+K\+Node $\ast$node, \hyperlink{structConnectsToList}{Connects\+To\+List\+\_\+t} $\ast$connects\+To)
+\begin{DoxyCompactList}\small\item\em Fill a Connects\+To structure. \end{DoxyCompactList}\item 
+static bool \hyperlink{classV2XGenericLane_a4947a90e58287d48497bd13385d30248}{get\+Lane\+Attributes} (const G\+K\+Section $\ast$section, \hyperlink{structLaneAttributes}{Lane\+Attributes\+\_\+t} $\ast$attributes)
+\begin{DoxyCompactList}\small\item\em Get lane attributes. \end{DoxyCompactList}\item 
+static bool \hyperlink{classV2XGenericLane_a171b13ef927f7de010def22904942f92}{get\+Directional\+Use} (const G\+K\+Section $\ast$section, \hyperlink{structBIT__STRING__s}{Lane\+Direction\+\_\+t} $\ast$lane\+Direction)
+\begin{DoxyCompactList}\small\item\em get\+Directional\+Use Allowed directions of travel in the lane object. All lanes are described from the stop line outwards. \end{DoxyCompactList}\item 
+static bool \hyperlink{classV2XGenericLane_aa233aac13f8d6ab512cf32b2785b4cf0}{get\+Shared\+With} (const G\+K\+Section $\ast$section, \hyperlink{structBIT__STRING__s}{Lane\+Sharing\+\_\+t} $\ast$lane\+Sharing)
+\begin{DoxyCompactList}\small\item\em Get the object this lane is shared with. \end{DoxyCompactList}\item 
+static bool \hyperlink{classV2XGenericLane_a5862f995774786d081e019dc48469e43}{get\+Vehicle\+Lane\+Type} (const G\+K\+Section $\ast$section, \hyperlink{structBIT__STRING__s}{Lane\+Attributes\+\_\+\+Vehicle\+\_\+t} $\ast$lane\+Attr\+Veh)
+\begin{DoxyCompactList}\small\item\em Get attributes for a vehicle lane type. \end{DoxyCompactList}\item 
+static bool \hyperlink{classV2XGenericLane_ac28ac1659e153745d5f3d4c348deab20}{get\+Lane\+Type} (const G\+K\+Section $\ast$section, \hyperlink{structLaneTypeAttributes}{Lane\+Type\+Attributes\+\_\+t} $\ast$lane\+Type\+Attributes)
+\begin{DoxyCompactList}\small\item\em Get the type of the lane, with its attributes. \end{DoxyCompactList}\item 
+static bool \hyperlink{classV2XGenericLane_a923658a7f6c809ed4fddbb4406deff31}{get\+Node\+List\+XY} (const G\+K\+Section $\ast$section, \hyperlink{structNodeListXY}{Node\+List\+X\+Y\+\_\+t} $\ast$node\+List)
+\begin{DoxyCompactList}\small\item\em Get the lane nodes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A generic lane connected to an intersection. 
+
+Through its public method, it can extract information from the Aimsun simulator into common defined structures, to be used to construct E\+T\+S\+I-\/compliant messages. 
+
+\subsection{Member Function Documentation}
+\index{V2\+X\+Generic\+Lane@{V2\+X\+Generic\+Lane}!get\+Connects\+To@{get\+Connects\+To}}
+\index{get\+Connects\+To@{get\+Connects\+To}!V2\+X\+Generic\+Lane@{V2\+X\+Generic\+Lane}}
+\subsubsection[{\texorpdfstring{get\+Connects\+To(const G\+K\+Section $\ast$section, const G\+K\+Node $\ast$node, Connects\+To\+List\+\_\+t $\ast$connects\+To)}{getConnectsTo(const GKSection *section, const GKNode *node, ConnectsToList_t *connectsTo)}}]{\setlength{\rightskip}{0pt plus 5cm}static bool V2\+X\+Generic\+Lane\+::get\+Connects\+To (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Section $\ast$}]{section, }
+\item[{const G\+K\+Node $\ast$}]{node, }
+\item[{{\bf Connects\+To\+List\+\_\+t} $\ast$}]{connects\+To}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classV2XGenericLane_a6f2720dd290d768d91ff198fd2cbc9cf}{}\label{classV2XGenericLane_a6f2720dd290d768d91ff198fd2cbc9cf}
+
+
+Fill a Connects\+To structure. 
+
+Indicates to which sections this lane connects to.
+
+
+\begin{DoxyParams}{Parameters}
+{\em section} & The reference section \\
+\hline
+{\em node} & The reference node \\
+\hline
+{\em connects\+To} & The structure to fill \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if success 
+\end{DoxyReturn}
+\index{V2\+X\+Generic\+Lane@{V2\+X\+Generic\+Lane}!get\+Directional\+Use@{get\+Directional\+Use}}
+\index{get\+Directional\+Use@{get\+Directional\+Use}!V2\+X\+Generic\+Lane@{V2\+X\+Generic\+Lane}}
+\subsubsection[{\texorpdfstring{get\+Directional\+Use(const G\+K\+Section $\ast$section, Lane\+Direction\+\_\+t $\ast$lane\+Direction)}{getDirectionalUse(const GKSection *section, LaneDirection_t *laneDirection)}}]{\setlength{\rightskip}{0pt plus 5cm}static bool V2\+X\+Generic\+Lane\+::get\+Directional\+Use (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Section $\ast$}]{section, }
+\item[{{\bf Lane\+Direction\+\_\+t} $\ast$}]{lane\+Direction}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classV2XGenericLane_a171b13ef927f7de010def22904942f92}{}\label{classV2XGenericLane_a171b13ef927f7de010def22904942f92}
+
+
+get\+Directional\+Use Allowed directions of travel in the lane object. All lanes are described from the stop line outwards. 
+
+The bits are defined as\+: name \mbox{[}position\mbox{]} -\/$>$ desc \+:
+
+
+\begin{DoxyItemize}
+\item ingress\+Path (0) -\/$>$ travel from rear of path to front is allowed
+\item egress\+Path (1) -\/$>$ travel from front of path to rear is allowed
+\end{DoxyItemize}
+
+Notes\+: No Travel, i.\+e. the lane object type does not support travel (medians, curbs, etc.) is indicated by not asserting any bit value. Bi-\/\+Directional Travel (such as a ped crosswalk) is indicated by asserting both of the bits
+
+
+\begin{DoxyParams}{Parameters}
+{\em section} & Section to gather the information from \\
+\hline
+{\em lane\+Direction} & structure to fill\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if success 
+\end{DoxyReturn}
+\index{V2\+X\+Generic\+Lane@{V2\+X\+Generic\+Lane}!get\+Generic\+Lane@{get\+Generic\+Lane}}
+\index{get\+Generic\+Lane@{get\+Generic\+Lane}!V2\+X\+Generic\+Lane@{V2\+X\+Generic\+Lane}}
+\subsubsection[{\texorpdfstring{get\+Generic\+Lane(const G\+K\+Section $\ast$section, const G\+K\+Node $\ast$node, Generic\+Lane\+\_\+t $\ast$generic\+Lane)}{getGenericLane(const GKSection *section, const GKNode *node, GenericLane_t *genericLane)}}]{\setlength{\rightskip}{0pt plus 5cm}static bool V2\+X\+Generic\+Lane\+::get\+Generic\+Lane (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Section $\ast$}]{section, }
+\item[{const G\+K\+Node $\ast$}]{node, }
+\item[{{\bf Generic\+Lane\+\_\+t} $\ast$}]{generic\+Lane}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classV2XGenericLane_aa08c46fe2c03960eab2e17b765e8bd2f}{}\label{classV2XGenericLane_aa08c46fe2c03960eab2e17b765e8bd2f}
+
+
+Fill a generic lane struct. 
+
+The method uses other public methods of this class to build a valid generic line struct to use in messages
+
+
+\begin{DoxyParams}{Parameters}
+{\em section} & Section to gather the information from \\
+\hline
+{\em node} & Node to get information on turnings / signals from \\
+\hline
+{\em generic\+Lane} & struct to fill \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if success 
+\end{DoxyReturn}
+\index{V2\+X\+Generic\+Lane@{V2\+X\+Generic\+Lane}!get\+Id@{get\+Id}}
+\index{get\+Id@{get\+Id}!V2\+X\+Generic\+Lane@{V2\+X\+Generic\+Lane}}
+\subsubsection[{\texorpdfstring{get\+Id(const G\+K\+Section $\ast$section)}{getId(const GKSection *section)}}]{\setlength{\rightskip}{0pt plus 5cm}static quint32 V2\+X\+Generic\+Lane\+::get\+Id (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Section $\ast$}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classV2XGenericLane_a9cc28d187662fa9159528caf998cd6d1}{}\label{classV2XGenericLane_a9cc28d187662fa9159528caf998cd6d1}
+
+
+Get the unique ID of the section (lane) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em section} & Section to gather the ID from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the unique ID of the section 
+\end{DoxyReturn}
+\index{V2\+X\+Generic\+Lane@{V2\+X\+Generic\+Lane}!get\+Lane\+Attributes@{get\+Lane\+Attributes}}
+\index{get\+Lane\+Attributes@{get\+Lane\+Attributes}!V2\+X\+Generic\+Lane@{V2\+X\+Generic\+Lane}}
+\subsubsection[{\texorpdfstring{get\+Lane\+Attributes(const G\+K\+Section $\ast$section, Lane\+Attributes\+\_\+t $\ast$attributes)}{getLaneAttributes(const GKSection *section, LaneAttributes_t *attributes)}}]{\setlength{\rightskip}{0pt plus 5cm}static bool V2\+X\+Generic\+Lane\+::get\+Lane\+Attributes (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Section $\ast$}]{section, }
+\item[{{\bf Lane\+Attributes\+\_\+t} $\ast$}]{attributes}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classV2XGenericLane_a4947a90e58287d48497bd13385d30248}{}\label{classV2XGenericLane_a4947a90e58287d48497bd13385d30248}
+
+
+Get lane attributes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em section} & Section to gather the information from \\
+\hline
+{\em attributes} & structure to fill \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if success 
+\end{DoxyReturn}
+\index{V2\+X\+Generic\+Lane@{V2\+X\+Generic\+Lane}!get\+Lane\+Type@{get\+Lane\+Type}}
+\index{get\+Lane\+Type@{get\+Lane\+Type}!V2\+X\+Generic\+Lane@{V2\+X\+Generic\+Lane}}
+\subsubsection[{\texorpdfstring{get\+Lane\+Type(const G\+K\+Section $\ast$section, Lane\+Type\+Attributes\+\_\+t $\ast$lane\+Type\+Attributes)}{getLaneType(const GKSection *section, LaneTypeAttributes_t *laneTypeAttributes)}}]{\setlength{\rightskip}{0pt plus 5cm}static bool V2\+X\+Generic\+Lane\+::get\+Lane\+Type (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Section $\ast$}]{section, }
+\item[{{\bf Lane\+Type\+Attributes\+\_\+t} $\ast$}]{lane\+Type\+Attributes}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classV2XGenericLane_ac28ac1659e153745d5f3d4c348deab20}{}\label{classV2XGenericLane_ac28ac1659e153745d5f3d4c348deab20}
+
+
+Get the type of the lane, with its attributes. 
+
+There could be different type of lanes. Depending on the internal object, this function can return attributes for motor vehicle lanes, pedestrian crosswalks, bike lanes, pedestrian sidewalk paths, medians \& channelization, roadway markings, trains and trolleys, parking and stopping lanes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em section} & Section to gather the information from \\
+\hline
+{\em lane\+Type\+Attributes} & struct to fill \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if success 
+\end{DoxyReturn}
+\index{V2\+X\+Generic\+Lane@{V2\+X\+Generic\+Lane}!get\+Node\+List\+XY@{get\+Node\+List\+XY}}
+\index{get\+Node\+List\+XY@{get\+Node\+List\+XY}!V2\+X\+Generic\+Lane@{V2\+X\+Generic\+Lane}}
+\subsubsection[{\texorpdfstring{get\+Node\+List\+X\+Y(const G\+K\+Section $\ast$section, Node\+List\+X\+Y\+\_\+t $\ast$node\+List)}{getNodeListXY(const GKSection *section, NodeListXY_t *nodeList)}}]{\setlength{\rightskip}{0pt plus 5cm}static bool V2\+X\+Generic\+Lane\+::get\+Node\+List\+XY (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Section $\ast$}]{section, }
+\item[{{\bf Node\+List\+X\+Y\+\_\+t} $\ast$}]{node\+List}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classV2XGenericLane_a923658a7f6c809ed4fddbb4406deff31}{}\label{classV2XGenericLane_a923658a7f6c809ed4fddbb4406deff31}
+
+
+Get the lane nodes. 
+
+The structure can be defined as\+:
+\begin{DoxyItemize}
+\item a lane made up of two or more XY node points and any attributes defined in those nodes
+\item a lane path computed by translating the data defined by another lane
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em section} & Section to gather the information from \\
+\hline
+{\em node\+List} & we return a lane made up by four XY node points representing the lane as a rectangle, using x and y in aimsun as latitude and longitude \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if success 
+\end{DoxyReturn}
+\index{V2\+X\+Generic\+Lane@{V2\+X\+Generic\+Lane}!get\+Shared\+With@{get\+Shared\+With}}
+\index{get\+Shared\+With@{get\+Shared\+With}!V2\+X\+Generic\+Lane@{V2\+X\+Generic\+Lane}}
+\subsubsection[{\texorpdfstring{get\+Shared\+With(const G\+K\+Section $\ast$section, Lane\+Sharing\+\_\+t $\ast$lane\+Sharing)}{getSharedWith(const GKSection *section, LaneSharing_t *laneSharing)}}]{\setlength{\rightskip}{0pt plus 5cm}static bool V2\+X\+Generic\+Lane\+::get\+Shared\+With (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Section $\ast$}]{section, }
+\item[{{\bf Lane\+Sharing\+\_\+t} $\ast$}]{lane\+Sharing}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classV2XGenericLane_aa233aac13f8d6ab512cf32b2785b4cf0}{}\label{classV2XGenericLane_aa233aac13f8d6ab512cf32b2785b4cf0}
+
+
+Get the object this lane is shared with. 
+
+The bits are defined as follows\+:
+
+
+\begin{DoxyItemize}
+\item overlapping\+Lane\+Description\+Provided (0) -\/$>$ Assert when another lane object is present to describe the path of the overlapping shared lane. This construct is not used for lane objects which simply cross
+\item multiple\+Lanes\+Treated\+As\+One\+Lane (1) -\/$>$ Assert if the lane object path and width details represents multiple lanes within it that are not further described
+\end{DoxyItemize}
+
+Various modes and type of traffic that may share this lane\+:
+
+
+\begin{DoxyItemize}
+\item other\+Non\+Motorized\+Traffic\+Types (2) -- horse drawn etc.
+\item individual\+Motorized\+Vehicle\+Traffic (3)
+\item bus\+Vehicle\+Traffic (4)
+\item taxi\+Vehicle\+Traffic (5)
+\item pedestrians\+Traffic (6)
+\item cyclist\+Vehicle\+Traffic (7)
+\item tracked\+Vehicle\+Traffic (8)
+\item pedestrian\+Traffic (9)
+\end{DoxyItemize}
+
+All zeros would indicate \textquotesingle{}not shared\textquotesingle{} and \textquotesingle{}not overlapping\textquotesingle{}
+
+
+\begin{DoxyParams}{Parameters}
+{\em section} & Section to gather the information from \\
+\hline
+{\em lane\+Sharing} & structure to fill \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if success 
+\end{DoxyReturn}
+\index{V2\+X\+Generic\+Lane@{V2\+X\+Generic\+Lane}!get\+Vehicle\+Lane\+Type@{get\+Vehicle\+Lane\+Type}}
+\index{get\+Vehicle\+Lane\+Type@{get\+Vehicle\+Lane\+Type}!V2\+X\+Generic\+Lane@{V2\+X\+Generic\+Lane}}
+\subsubsection[{\texorpdfstring{get\+Vehicle\+Lane\+Type(const G\+K\+Section $\ast$section, Lane\+Attributes\+\_\+\+Vehicle\+\_\+t $\ast$lane\+Attr\+Veh)}{getVehicleLaneType(const GKSection *section, LaneAttributes_Vehicle_t *laneAttrVeh)}}]{\setlength{\rightskip}{0pt plus 5cm}static bool V2\+X\+Generic\+Lane\+::get\+Vehicle\+Lane\+Type (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Section $\ast$}]{section, }
+\item[{{\bf Lane\+Attributes\+\_\+\+Vehicle\+\_\+t} $\ast$}]{lane\+Attr\+Veh}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classV2XGenericLane_a5862f995774786d081e019dc48469e43}{}\label{classV2XGenericLane_a5862f995774786d081e019dc48469e43}
+
+
+Get attributes for a vehicle lane type. 
+
+The bits are defined as follows\+:
+
+
+\begin{DoxyItemize}
+\item is\+Vehicle\+Revocable\+Lane (0) this lane may be activated or not based on the current \hyperlink{structSPAT}{S\+P\+AT} message contents. If not asserted, the lane is A\+L\+W\+A\+YS present
+\item is\+Vehicle\+Fly\+Over\+Lane (1) path of lane is not at grade
+\item hov\+Lane\+Use\+Only (2)
+\item restricted\+To\+Bus\+Use (3)
+\item restricted\+To\+Taxi\+Use (4)
+\item restricted\+From\+Public\+Use (5)
+\item has\+I\+Rbeacon\+Coverage (6)
+\item permission\+On\+Request (7)e.\+g. to inform about a lane for e-\/cars
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em section} & Section to gather the information from \\
+\hline
+{\em lane\+Attr\+Veh} & structure to fill \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if success 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/aimsun\+\_\+extensions/\+V2\+X\+Framework/V2\+X\+Generic\+Lane.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,285 @@
+\hypertarget{classV2XFramework}{}\section{V2\+X\+Framework Class Reference}
+\label{classV2XFramework}\index{V2\+X\+Framework@{V2\+X\+Framework}}
+
+
+Interface for a generic \hyperlink{classV2XFramework}{V2\+X\+Framework}.  
+
+
+
+
+{\ttfamily \#include $<$V2\+X\+Framework.\+h$>$}
+
+
+
+Inheritance diagram for V2\+X\+Framework\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{classV2XFramework__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for V2\+X\+Framework\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{classV2XFramework__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classV2XFramework_a7a828eef39f000cd7611e73d7a04b051}{V2\+X\+Framework} (\hyperlink{classADynamicAPISetup}{A\+Dynamic\+A\+P\+I\+Setup} \&setup)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classV2XFramework_a4dda2e4d2904f3aa79c91d9ee1c124b2}{$\sim$\+V2\+X\+Framework} ()\hypertarget{classV2XFramework_a4dda2e4d2904f3aa79c91d9ee1c124b2}{}\label{classV2XFramework_a4dda2e4d2904f3aa79c91d9ee1c124b2}
+
+\begin{DoxyCompactList}\small\item\em Deconstructor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classV2XFramework_a192e2e3d6ddcf126cdeff7fbc016589e}{arrival\+New\+AP} (quint32 id, G\+K\+Object $\ast$obj, \hyperlink{group__V2XFramework_ga22a1c07fac7df77efff8f0d4f6f3c248}{V2\+X\+Intersection\+List} intersections)=0
+\begin{DoxyCompactList}\small\item\em Called each time an access point is added in the G\+UI. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Q\+String \hyperlink{classV2XFramework_aa0058496403bcc100df86320b1eaa17b}{get\+Internal\+Network\+Group\+Name} ()
+\begin{DoxyCompactList}\small\item\em Get the internal Network group name. \end{DoxyCompactList}\item 
+static Q\+String \hyperlink{classV2XFramework_a63a8411f6c20f4a4d46faa703004f275}{get\+Gui\+Network\+Group\+Name} ()
+\begin{DoxyCompactList}\small\item\em Get the G\+UI version of the Network group name. \end{DoxyCompactList}\item 
+static Q\+String \hyperlink{classV2XFramework_a2e96e223ca6d57540284bd38ee50cc0b}{get\+Internal\+A\+P\+Name} ()
+\begin{DoxyCompactList}\small\item\em Get the internal access point name. \end{DoxyCompactList}\item 
+static Q\+String \hyperlink{classV2XFramework_aeea36d4adc7175a56030dcacabc53d2f}{get\+Gui\+A\+P\+Name} ()
+\begin{DoxyCompactList}\small\item\em Get the G\+UI version of the access point name. \end{DoxyCompactList}\item 
+static Q\+String \hyperlink{classV2XFramework_a9056b2df054b21522083053ed3d2999b}{get\+Internal\+A\+P\+Layer\+Name} ()
+\begin{DoxyCompactList}\small\item\em Get the internal access point layer name. \end{DoxyCompactList}\item 
+static Q\+String \hyperlink{classV2XFramework_a77ae415ff10b8fecd1d867a4a9984d01}{get\+Gui\+A\+P\+Layer\+Name} ()
+\begin{DoxyCompactList}\small\item\em Get the G\+UI version of the access point layer name. \end{DoxyCompactList}\item 
+static Q\+String \hyperlink{classV2XFramework_ad01858d5856b2c609a340fd6a093cf49}{get\+Internal\+A\+P\+Folder\+Name} ()
+\begin{DoxyCompactList}\small\item\em Get the internal access point folder name. \end{DoxyCompactList}\item 
+static Q\+String \hyperlink{classV2XFramework_a266c7971eb8d8ebdbd7c82bc81ed4d26}{get\+Gui\+A\+P\+Folder\+Name} ()
+\begin{DoxyCompactList}\small\item\em Get the G\+UI version of the access point folder name. \end{DoxyCompactList}\item 
+static Q\+String \hyperlink{classV2XFramework_a3f74007c455d6d179f27c474a255d7dd}{get\+Internal\+Framework\+Name} ()
+\begin{DoxyCompactList}\small\item\em Get the internal framework name. \end{DoxyCompactList}\item 
+static Q\+String \hyperlink{classV2XFramework_a06e4bd6b250717b27b2109281d096661}{get\+Internal\+Station\+Type\+Name} ()
+\begin{DoxyCompactList}\small\item\em Get the internal name for the station type attribute. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classV2XFramework_a9293e0d83186b1a5ae8c48bdd41865d8}{init} ()\hypertarget{classV2XFramework_a9293e0d83186b1a5ae8c48bdd41865d8}{}\label{classV2XFramework_a9293e0d83186b1a5ae8c48bdd41865d8}
+
+\begin{DoxyCompactList}\small\item\em Initialize the class. It is obligatory to call it in the subclasses. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classADynamicAPISetup}{A\+Dynamic\+A\+P\+I\+Setup} \hyperlink{classV2XFramework_afe850cb43d6e5812c203dd1d149f3736}{m\+\_\+setup}\hypertarget{classV2XFramework_afe850cb43d6e5812c203dd1d149f3736}{}\label{classV2XFramework_afe850cb43d6e5812c203dd1d149f3736}
+
+\begin{DoxyCompactList}\small\item\em The setup object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface for a generic \hyperlink{classV2XFramework}{V2\+X\+Framework}. 
+
+Each method represents a Callback which is called in specific moments of the simulation. These are inherited from \hyperlink{classADynamicAPI}{A\+Dynamic\+A\+PI}, except for arrival\+New\+AP which is called from inside the init method. Right now, the only way to communicate with the G\+UI is through the finished G\+K\+Model when the simulation starts.
+
+Right now only one way to communicate exists, while it is planned to have multiple way to carry on communications. This first and simple way is called \char`\"{}\+Simple\char`\"{}, and is described in the class \hyperlink{classV2XSimpleAP}{V2\+X\+Simple\+AP}.
+
+Each object in this framework follows the pre and post rule\+: a pre method is called before any simulation step, while a post method is called after a simulation step has been done for all the objects.
+
+Please remember to call its method init to correctly initialize the type names and folders for the framework.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classV2XSimpleAP}{V2\+X\+Simple\+AP} 
+
+\hyperlink{classADynamicAPI}{A\+Dynamic\+A\+PI} 
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{V2\+X\+Framework@{V2\+X\+Framework}!V2\+X\+Framework@{V2\+X\+Framework}}
+\index{V2\+X\+Framework@{V2\+X\+Framework}!V2\+X\+Framework@{V2\+X\+Framework}}
+\subsubsection[{\texorpdfstring{V2\+X\+Framework(\+A\+Dynamic\+A\+P\+I\+Setup \&setup)}{V2XFramework(ADynamicAPISetup &setup)}}]{\setlength{\rightskip}{0pt plus 5cm}V2\+X\+Framework\+::\+V2\+X\+Framework (
+\begin{DoxyParamCaption}
+\item[{{\bf A\+Dynamic\+A\+P\+I\+Setup} \&}]{setup}
+\end{DoxyParamCaption}
+)}\hypertarget{classV2XFramework_a7a828eef39f000cd7611e73d7a04b051}{}\label{classV2XFramework_a7a828eef39f000cd7611e73d7a04b051}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em setup} & A\+PI setup function \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{V2\+X\+Framework@{V2\+X\+Framework}!arrival\+New\+AP@{arrival\+New\+AP}}
+\index{arrival\+New\+AP@{arrival\+New\+AP}!V2\+X\+Framework@{V2\+X\+Framework}}
+\subsubsection[{\texorpdfstring{arrival\+New\+A\+P(quint32 id, G\+K\+Object $\ast$obj, V2\+X\+Intersection\+List intersections)=0}{arrivalNewAP(quint32 id, GKObject *obj, V2XIntersectionList intersections)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void V2\+X\+Framework\+::arrival\+New\+AP (
+\begin{DoxyParamCaption}
+\item[{quint32}]{id, }
+\item[{G\+K\+Object $\ast$}]{obj, }
+\item[{{\bf V2\+X\+Intersection\+List}}]{intersections}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classV2XFramework_a192e2e3d6ddcf126cdeff7fbc016589e}{}\label{classV2XFramework_a192e2e3d6ddcf126cdeff7fbc016589e}
+
+
+Called each time an access point is added in the G\+UI. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & unique ID of the access point \\
+\hline
+{\em obj} & an opaque pointer to the object \\
+\hline
+{\em intersections} & the intersections the AP is connected to (R\+SU) \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classFlourishV2XFramework_a7229f12d53f55bf2486612c97785aa5b}{Flourish\+V2\+X\+Framework}.
+
+\index{V2\+X\+Framework@{V2\+X\+Framework}!get\+Gui\+A\+P\+Folder\+Name@{get\+Gui\+A\+P\+Folder\+Name}}
+\index{get\+Gui\+A\+P\+Folder\+Name@{get\+Gui\+A\+P\+Folder\+Name}!V2\+X\+Framework@{V2\+X\+Framework}}
+\subsubsection[{\texorpdfstring{get\+Gui\+A\+P\+Folder\+Name()}{getGuiAPFolderName()}}]{\setlength{\rightskip}{0pt plus 5cm}static Q\+String V2\+X\+Framework\+::get\+Gui\+A\+P\+Folder\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classV2XFramework_a266c7971eb8d8ebdbd7c82bc81ed4d26}{}\label{classV2XFramework_a266c7971eb8d8ebdbd7c82bc81ed4d26}
+
+
+Get the G\+UI version of the access point folder name. 
+
+\begin{DoxyReturn}{Returns}
+\char`\"{}\+Access Points\char`\"{}, translatable 
+\end{DoxyReturn}
+\index{V2\+X\+Framework@{V2\+X\+Framework}!get\+Gui\+A\+P\+Layer\+Name@{get\+Gui\+A\+P\+Layer\+Name}}
+\index{get\+Gui\+A\+P\+Layer\+Name@{get\+Gui\+A\+P\+Layer\+Name}!V2\+X\+Framework@{V2\+X\+Framework}}
+\subsubsection[{\texorpdfstring{get\+Gui\+A\+P\+Layer\+Name()}{getGuiAPLayerName()}}]{\setlength{\rightskip}{0pt plus 5cm}static Q\+String V2\+X\+Framework\+::get\+Gui\+A\+P\+Layer\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classV2XFramework_a77ae415ff10b8fecd1d867a4a9984d01}{}\label{classV2XFramework_a77ae415ff10b8fecd1d867a4a9984d01}
+
+
+Get the G\+UI version of the access point layer name. 
+
+\begin{DoxyReturn}{Returns}
+\char`\"{}\+Access Points\char`\"{} 
+\end{DoxyReturn}
+\index{V2\+X\+Framework@{V2\+X\+Framework}!get\+Gui\+A\+P\+Name@{get\+Gui\+A\+P\+Name}}
+\index{get\+Gui\+A\+P\+Name@{get\+Gui\+A\+P\+Name}!V2\+X\+Framework@{V2\+X\+Framework}}
+\subsubsection[{\texorpdfstring{get\+Gui\+A\+P\+Name()}{getGuiAPName()}}]{\setlength{\rightskip}{0pt plus 5cm}static Q\+String V2\+X\+Framework\+::get\+Gui\+A\+P\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classV2XFramework_aeea36d4adc7175a56030dcacabc53d2f}{}\label{classV2XFramework_aeea36d4adc7175a56030dcacabc53d2f}
+
+
+Get the G\+UI version of the access point name. 
+
+\begin{DoxyReturn}{Returns}
+\char`\"{}\+Network Access Point\char`\"{}, translatable 
+\end{DoxyReturn}
+\index{V2\+X\+Framework@{V2\+X\+Framework}!get\+Gui\+Network\+Group\+Name@{get\+Gui\+Network\+Group\+Name}}
+\index{get\+Gui\+Network\+Group\+Name@{get\+Gui\+Network\+Group\+Name}!V2\+X\+Framework@{V2\+X\+Framework}}
+\subsubsection[{\texorpdfstring{get\+Gui\+Network\+Group\+Name()}{getGuiNetworkGroupName()}}]{\setlength{\rightskip}{0pt plus 5cm}static Q\+String V2\+X\+Framework\+::get\+Gui\+Network\+Group\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classV2XFramework_a63a8411f6c20f4a4d46faa703004f275}{}\label{classV2XFramework_a63a8411f6c20f4a4d46faa703004f275}
+
+
+Get the G\+UI version of the Network group name. 
+
+\begin{DoxyReturn}{Returns}
+\char`\"{}\+Network G\+U\+I Group\char`\"{}, translatable 
+\end{DoxyReturn}
+\index{V2\+X\+Framework@{V2\+X\+Framework}!get\+Internal\+A\+P\+Folder\+Name@{get\+Internal\+A\+P\+Folder\+Name}}
+\index{get\+Internal\+A\+P\+Folder\+Name@{get\+Internal\+A\+P\+Folder\+Name}!V2\+X\+Framework@{V2\+X\+Framework}}
+\subsubsection[{\texorpdfstring{get\+Internal\+A\+P\+Folder\+Name()}{getInternalAPFolderName()}}]{\setlength{\rightskip}{0pt plus 5cm}static Q\+String V2\+X\+Framework\+::get\+Internal\+A\+P\+Folder\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classV2XFramework_ad01858d5856b2c609a340fd6a093cf49}{}\label{classV2XFramework_ad01858d5856b2c609a340fd6a093cf49}
+
+
+Get the internal access point folder name. 
+
+\begin{DoxyReturn}{Returns}
+\char`\"{}\+G\+K\+Model\+::top\+::infrastructure\+::access\+Points\char`\"{} 
+\end{DoxyReturn}
+\index{V2\+X\+Framework@{V2\+X\+Framework}!get\+Internal\+A\+P\+Layer\+Name@{get\+Internal\+A\+P\+Layer\+Name}}
+\index{get\+Internal\+A\+P\+Layer\+Name@{get\+Internal\+A\+P\+Layer\+Name}!V2\+X\+Framework@{V2\+X\+Framework}}
+\subsubsection[{\texorpdfstring{get\+Internal\+A\+P\+Layer\+Name()}{getInternalAPLayerName()}}]{\setlength{\rightskip}{0pt plus 5cm}static Q\+String V2\+X\+Framework\+::get\+Internal\+A\+P\+Layer\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classV2XFramework_a9056b2df054b21522083053ed3d2999b}{}\label{classV2XFramework_a9056b2df054b21522083053ed3d2999b}
+
+
+Get the internal access point layer name. 
+
+\begin{DoxyReturn}{Returns}
+\char`\"{}\+Access Points\char`\"{} 
+\end{DoxyReturn}
+\index{V2\+X\+Framework@{V2\+X\+Framework}!get\+Internal\+A\+P\+Name@{get\+Internal\+A\+P\+Name}}
+\index{get\+Internal\+A\+P\+Name@{get\+Internal\+A\+P\+Name}!V2\+X\+Framework@{V2\+X\+Framework}}
+\subsubsection[{\texorpdfstring{get\+Internal\+A\+P\+Name()}{getInternalAPName()}}]{\setlength{\rightskip}{0pt plus 5cm}static Q\+String V2\+X\+Framework\+::get\+Internal\+A\+P\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classV2XFramework_a2e96e223ca6d57540284bd38ee50cc0b}{}\label{classV2XFramework_a2e96e223ca6d57540284bd38ee50cc0b}
+
+
+Get the internal access point name. 
+
+\begin{DoxyReturn}{Returns}
+\char`\"{}\+Network\+G\+U\+I\+A\+P\char`\"{} 
+\end{DoxyReturn}
+\index{V2\+X\+Framework@{V2\+X\+Framework}!get\+Internal\+Framework\+Name@{get\+Internal\+Framework\+Name}}
+\index{get\+Internal\+Framework\+Name@{get\+Internal\+Framework\+Name}!V2\+X\+Framework@{V2\+X\+Framework}}
+\subsubsection[{\texorpdfstring{get\+Internal\+Framework\+Name()}{getInternalFrameworkName()}}]{\setlength{\rightskip}{0pt plus 5cm}static Q\+String V2\+X\+Framework\+::get\+Internal\+Framework\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classV2XFramework_a3f74007c455d6d179f27c474a255d7dd}{}\label{classV2XFramework_a3f74007c455d6d179f27c474a255d7dd}
+
+
+Get the internal framework name. 
+
+\begin{DoxyReturn}{Returns}
+\char`\"{}\+V2\+X\+Framework\char`\"{} 
+\end{DoxyReturn}
+\index{V2\+X\+Framework@{V2\+X\+Framework}!get\+Internal\+Network\+Group\+Name@{get\+Internal\+Network\+Group\+Name}}
+\index{get\+Internal\+Network\+Group\+Name@{get\+Internal\+Network\+Group\+Name}!V2\+X\+Framework@{V2\+X\+Framework}}
+\subsubsection[{\texorpdfstring{get\+Internal\+Network\+Group\+Name()}{getInternalNetworkGroupName()}}]{\setlength{\rightskip}{0pt plus 5cm}static Q\+String V2\+X\+Framework\+::get\+Internal\+Network\+Group\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classV2XFramework_aa0058496403bcc100df86320b1eaa17b}{}\label{classV2XFramework_aa0058496403bcc100df86320b1eaa17b}
+
+
+Get the internal Network group name. 
+
+\begin{DoxyReturn}{Returns}
+\char`\"{}\+Network\+G\+U\+I\+Group\char`\"{} 
+\end{DoxyReturn}
+\index{V2\+X\+Framework@{V2\+X\+Framework}!get\+Internal\+Station\+Type\+Name@{get\+Internal\+Station\+Type\+Name}}
+\index{get\+Internal\+Station\+Type\+Name@{get\+Internal\+Station\+Type\+Name}!V2\+X\+Framework@{V2\+X\+Framework}}
+\subsubsection[{\texorpdfstring{get\+Internal\+Station\+Type\+Name()}{getInternalStationTypeName()}}]{\setlength{\rightskip}{0pt plus 5cm}static Q\+String V2\+X\+Framework\+::get\+Internal\+Station\+Type\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classV2XFramework_a06e4bd6b250717b27b2109281d096661}{}\label{classV2XFramework_a06e4bd6b250717b27b2109281d096661}
+
+
+Get the internal name for the station type attribute. 
+
+\begin{DoxyReturn}{Returns}
+\char`\"{}station\+\_\+type\char`\"{} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/aimsun\+\_\+extensions/\+V2\+X\+Framework/V2\+X\+Framework.\+h\end{DoxyCompactItemize}

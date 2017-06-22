@@ -1,0 +1,109 @@
+\hypertarget{classV2XNetworkNode_1_1Position}{}\section{V2\+X\+Network\+Node\+:\+:Position Class Reference}
+\label{classV2XNetworkNode_1_1Position}\index{V2\+X\+Network\+Node\+::\+Position@{V2\+X\+Network\+Node\+::\+Position}}
+
+
+A position for the node.  
+
+
+
+
+{\ttfamily \#include $<$V2\+X\+Network\+Node.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classV2XNetworkNode_1_1Position_a766bb75d24d9e692aa07f2d1a7c971f2}{operator==} (const \hyperlink{classV2XNetworkNode_1_1Position}{Position} \&other) const 
+\begin{DoxyCompactList}\small\item\em operator == \end{DoxyCompactList}\item 
+bool \hyperlink{classV2XNetworkNode_1_1Position_a897c79c59c60ebb5ce43878605b0db2f}{operator!=} (const \hyperlink{classV2XNetworkNode_1_1Position}{Position} \&other) const 
+\begin{DoxyCompactList}\small\item\em operator != \end{DoxyCompactList}\item 
+double \hyperlink{classV2XNetworkNode_1_1Position_acf9f224fe0a687529dfcd707d189028b}{distance} (const \hyperlink{classV2XNetworkNode_1_1Position}{Position} \&other) const 
+\begin{DoxyCompactList}\small\item\em Calculate the distance between this and another position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double {\bfseries x}\hypertarget{classV2XNetworkNode_1_1Position_a49b66d898791f81b609d5fb3cb45fa50}{}\label{classV2XNetworkNode_1_1Position_a49b66d898791f81b609d5fb3cb45fa50}
+
+\item 
+double \hyperlink{classV2XNetworkNode_1_1Position_a6bcf9361cdd45657683e88c63667b8e6}{y}
+\item 
+double \hyperlink{classV2XNetworkNode_1_1Position_a62ad74894b82d59081584aab1b5598a2}{z}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A position for the node. 
+
+The implementation will change, by aggregating an object \char`\"{}\+Mobility\char`\"{} instead of saving an object with type \hyperlink{classV2XNetworkNode_1_1Position}{V2\+X\+Network\+Node\+::\+Position} 
+
+\subsection{Member Function Documentation}
+\index{V2\+X\+Network\+Node\+::\+Position@{V2\+X\+Network\+Node\+::\+Position}!distance@{distance}}
+\index{distance@{distance}!V2\+X\+Network\+Node\+::\+Position@{V2\+X\+Network\+Node\+::\+Position}}
+\subsubsection[{\texorpdfstring{distance(const Position \&other) const }{distance(const Position &other) const }}]{\setlength{\rightskip}{0pt plus 5cm}double V2\+X\+Network\+Node\+::\+Position\+::distance (
+\begin{DoxyParamCaption}
+\item[{const {\bf Position} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classV2XNetworkNode_1_1Position_acf9f224fe0a687529dfcd707d189028b}{}\label{classV2XNetworkNode_1_1Position_acf9f224fe0a687529dfcd707d189028b}
+
+
+Calculate the distance between this and another position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & other position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the euclydean distance 
+\end{DoxyReturn}
+\index{V2\+X\+Network\+Node\+::\+Position@{V2\+X\+Network\+Node\+::\+Position}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!V2\+X\+Network\+Node\+::\+Position@{V2\+X\+Network\+Node\+::\+Position}}
+\subsubsection[{\texorpdfstring{operator"!=(const Position \&other) const }{operator!=(const Position &other) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool V2\+X\+Network\+Node\+::\+Position\+::operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Position} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classV2XNetworkNode_1_1Position_a897c79c59c60ebb5ce43878605b0db2f}{}\label{classV2XNetworkNode_1_1Position_a897c79c59c60ebb5ce43878605b0db2f}
+
+
+operator != 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & other object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the two position are different 
+\end{DoxyReturn}
+\index{V2\+X\+Network\+Node\+::\+Position@{V2\+X\+Network\+Node\+::\+Position}!operator==@{operator==}}
+\index{operator==@{operator==}!V2\+X\+Network\+Node\+::\+Position@{V2\+X\+Network\+Node\+::\+Position}}
+\subsubsection[{\texorpdfstring{operator==(const Position \&other) const }{operator==(const Position &other) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool V2\+X\+Network\+Node\+::\+Position\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Position} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classV2XNetworkNode_1_1Position_a766bb75d24d9e692aa07f2d1a7c971f2}{}\label{classV2XNetworkNode_1_1Position_a766bb75d24d9e692aa07f2d1a7c971f2}
+
+
+operator == 
+
+!$<$ Z position 
+\begin{DoxyParams}{Parameters}
+{\em other} & other object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the two position are the same 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\index{V2\+X\+Network\+Node\+::\+Position@{V2\+X\+Network\+Node\+::\+Position}!y@{y}}
+\index{y@{y}!V2\+X\+Network\+Node\+::\+Position@{V2\+X\+Network\+Node\+::\+Position}}
+\subsubsection[{\texorpdfstring{y}{y}}]{\setlength{\rightskip}{0pt plus 5cm}double V2\+X\+Network\+Node\+::\+Position\+::y}\hypertarget{classV2XNetworkNode_1_1Position_a6bcf9361cdd45657683e88c63667b8e6}{}\label{classV2XNetworkNode_1_1Position_a6bcf9361cdd45657683e88c63667b8e6}
+!$<$ X position \index{V2\+X\+Network\+Node\+::\+Position@{V2\+X\+Network\+Node\+::\+Position}!z@{z}}
+\index{z@{z}!V2\+X\+Network\+Node\+::\+Position@{V2\+X\+Network\+Node\+::\+Position}}
+\subsubsection[{\texorpdfstring{z}{z}}]{\setlength{\rightskip}{0pt plus 5cm}double V2\+X\+Network\+Node\+::\+Position\+::z}\hypertarget{classV2XNetworkNode_1_1Position_a62ad74894b82d59081584aab1b5598a2}{}\label{classV2XNetworkNode_1_1Position_a62ad74894b82d59081584aab1b5598a2}
+!$<$ Y position 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/aimsun\+\_\+extensions/\+V2\+X\+Framework/V2\+X\+Network\+Node.\+h\end{DoxyCompactItemize}

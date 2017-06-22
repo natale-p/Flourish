@@ -1,0 +1,7 @@
+<map id="FlourishConnectedAgent" name="FlourishConnectedAgent">
+<area shape="rect" id="node2" href="$classV2XConnectedAgent.html" title="Represents a connected vehicle (e.g., a mobile station) in the framework. " alt="" coords="130,261,274,288"/>
+<area shape="rect" id="node3" href="$classV2XSimpleAP.html" title="Represent a wireless Access Point. " alt="" coords="49,185,155,212"/>
+<area shape="rect" id="node4" href="$classV2XNetworkNode.html" title="A Node in the network. " alt="" coords="39,109,165,136"/>
+<area shape="rect" id="node6" href="$classV2XNetworkTime.html" title="Represents a time with respect to some initial reference point. " alt="" coords="101,5,226,32"/>
+<area shape="rect" id="node7" href="$classADynamicAgent.html" title="Get and set information from/to the Aimsun objects (including vehicles) " alt="" coords="178,185,295,212"/>
+</map>

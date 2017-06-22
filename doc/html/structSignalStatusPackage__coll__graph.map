@@ -1,0 +1,11 @@
+<map id="SignalStatusPackage" name="SignalStatusPackage">
+<area shape="rect" id="node2" href="$structasn__struct__ctx__s.html" title="asn_struct_ctx_s" alt="" coords="37,215,160,242"/>
+<area shape="rect" id="node3" href="$structIntersectionAccessPoint.html" title="IntersectionAccessPoint" alt="" coords="297,41,461,67"/>
+<area shape="rect" id="node5" href="$structSignalRequesterInfo.html" title="SignalRequesterInfo" alt="" coords="1157,237,1297,263"/>
+<area shape="rect" id="node6" href="$structVehicleID.html" title="VehicleID" alt="" coords="981,266,1060,293"/>
+<area shape="rect" id="node8" href="$structOCTET__STRING.html" title="OCTET_STRING" alt="" coords="317,317,442,343"/>
+<area shape="rect" id="node9" href="$structRequestorType.html" title="RequestorType" alt="" coords="485,215,596,242"/>
+<area shape="rect" id="node10" href="$structSignalStatusPackage_1_1SignalStatusPackage____regional.html" title="SignalStatusPackage\l::SignalStatusPackage\l__regional" alt="" coords="803,146,957,202"/>
+<area shape="rect" id="node4" href="$unionIntersectionAccessPoint_1_1IntersectionAccessPoint__u.html" title="IntersectionAccessPoint\l::IntersectionAccessPoint_u" alt="" coords="5,5,192,47"/>
+<area shape="rect" id="node7" href="$unionVehicleID_1_1VehicleID__u.html" title="VehicleID::VehicleID_u" alt="" coords="620,317,779,343"/>
+</map>

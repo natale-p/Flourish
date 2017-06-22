@@ -1,0 +1,49 @@
+\hypertarget{classV2XBroker}{}\section{V2\+X\+Broker Class Reference}
+\label{classV2XBroker}\index{V2\+X\+Broker@{V2\+X\+Broker}}
+
+
+Inheritance diagram for V2\+X\+Broker\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{classV2XBroker__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries init} ()=0\hypertarget{classV2XBroker_a4b48721b0ca1e99d2d39c657564a629c}{}\label{classV2XBroker_a4b48721b0ca1e99d2d39c657564a629c}
+
+\item 
+virtual void {\bfseries pre\+Update} (double time, double time\+Sta, double sim\+Step)=0\hypertarget{classV2XBroker_a6236c2c50501e4489768e0f761acb6be}{}\label{classV2XBroker_a6236c2c50501e4489768e0f761acb6be}
+
+\item 
+virtual void {\bfseries post\+Update} (double time, double time\+Sta, double sim\+Step)=0\hypertarget{classV2XBroker_a1942364f64b119c38004a1c80136c533}{}\label{classV2XBroker_a1942364f64b119c38004a1c80136c533}
+
+\item 
+virtual void {\bfseries veh\+Subscription} (\hyperlink{classConnectedAgent}{Connected\+Agent} $\ast$agent)\hypertarget{classV2XBroker_a0239382f19ef6e03c7ef72968375cf98}{}\label{classV2XBroker_a0239382f19ef6e03c7ef72968375cf98}
+
+\item 
+virtual void {\bfseries veh\+Unsubscription} (\hyperlink{classConnectedAgent}{Connected\+Agent} $\ast$agent)\hypertarget{classV2XBroker_a4ea13cca6619f4ffd3acd9e497b2bdd5}{}\label{classV2XBroker_a4ea13cca6619f4ffd3acd9e497b2bdd5}
+
+\item 
+virtual void {\bfseries send\+Point2\+Point} (double time\+Stamp, \hyperlink{classConnectedAgent}{Connected\+Agent} $\ast$to, \hyperlink{classV2XMessage}{V2\+X\+Message} $\ast$message)\hypertarget{classV2XBroker_a8ce71187ab605a8c2474c3846d831e91}{}\label{classV2XBroker_a8ce71187ab605a8c2474c3846d831e91}
+
+\item 
+virtual void {\bfseries broadcast} (double time\+Stamp, \hyperlink{classV2XMessage}{V2\+X\+Message} $\ast$message)\hypertarget{classV2XBroker_a63e70972e73690d8feea7e42f96b27a4}{}\label{classV2XBroker_a63e70972e73690d8feea7e42f96b27a4}
+
+\item 
+virtual \hyperlink{classV2XMessage}{V2\+X\+Message} $\ast$ {\bfseries get\+New\+Message} (int atype)=0\hypertarget{classV2XBroker_a41b696d9f9a515b77f16abe3bb2134f6}{}\label{classV2XBroker_a41b696d9f9a515b77f16abe3bb2134f6}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Q\+List$<$ \hyperlink{classConnectedAgent}{Connected\+Agent} $\ast$ $>$ {\bfseries vehiclessubscribed}\hypertarget{classV2XBroker_a2bdc4a1efb5b4dff5b29cca5a95a8e37}{}\label{classV2XBroker_a2bdc4a1efb5b4dff5b29cca5a95a8e37}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/aimsun\+\_\+extensions/\+V2\+X\+Framework/V2\+X\+Broker.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,223 @@
+\hypertarget{classDENMMessage}{}\section{D\+E\+N\+M\+Message Class Reference}
+\label{classDENMMessage}\index{D\+E\+N\+M\+Message@{D\+E\+N\+M\+Message}}
+
+
+A \hyperlink{structDENM}{D\+E\+NM} message.  
+
+
+
+
+{\ttfamily \#include $<$D\+E\+N\+M\+Message.\+h$>$}
+
+
+
+Inheritance diagram for D\+E\+N\+M\+Message\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{classDENMMessage__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for D\+E\+N\+M\+Message\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{classDENMMessage__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDENMMessage_a2e336f6000a1a339b8a5674ae525fb57}{D\+E\+N\+M\+Message} ()\hypertarget{classDENMMessage_a2e336f6000a1a339b8a5674ae525fb57}{}\label{classDENMMessage_a2e336f6000a1a339b8a5674ae525fb57}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{classDENMMessage}{D\+E\+N\+M\+Message} constructor. \end{DoxyCompactList}\item 
+\hyperlink{classDENMMessage_a313edd168c148ef63baaba84ebf29004}{D\+E\+N\+M\+Message} (const \hyperlink{classDENMMessage}{D\+E\+N\+M\+Message} \&other)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classDENMMessage}{D\+E\+N\+M\+Message} copy constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classDENMMessage_a453feabe025e290fbc23d6e163db7fa9}{$\sim$\+D\+E\+N\+M\+Message} ()\hypertarget{classDENMMessage_a453feabe025e290fbc23d6e163db7fa9}{}\label{classDENMMessage_a453feabe025e290fbc23d6e163db7fa9}
+
+\begin{DoxyCompactList}\small\item\em Deconstructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classV2XMessage}{V2\+X\+Message} $\ast$ \hyperlink{classDENMMessage_aae291a9abf0f99c9c54500ec2e716bea}{copy} () const 
+\begin{DoxyCompactList}\small\item\em Copy the message content (shallow copy) \end{DoxyCompactList}\item 
+virtual void \hyperlink{classDENMMessage_a0a375d746340b2b762ddc24205a67f58}{print} () const \hypertarget{classDENMMessage_a0a375d746340b2b762ddc24205a67f58}{}\label{classDENMMessage_a0a375d746340b2b762ddc24205a67f58}
+
+\begin{DoxyCompactList}\small\item\em print the message over console in X\+ML format \end{DoxyCompactList}\item 
+virtual quint32 \hyperlink{classDENMMessage_a6bb584a4ddb1f66f626e12d5928fe940}{get\+Size} () const 
+\begin{DoxyCompactList}\small\item\em get the size of a message \end{DoxyCompactList}\item 
+bool \hyperlink{classDENMMessage_ab061708d456f3921bfaabacf15287290}{from\+X\+ML} (const char $\ast$buf, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Build this object from an X\+ML representation. \end{DoxyCompactList}\item 
+bool \hyperlink{classDENMMessage_a7fae1c9283cf924804a68cdceb337554}{from\+X\+ML} (const char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Build this object from a file containing an X\+ML representation. \end{DoxyCompactList}\item 
+bool \hyperlink{classDENMMessage_a22e4f9e4a693f0164478b898cce64be0}{to\+X\+ML} (std\+::ostream $\ast$out) const 
+\begin{DoxyCompactList}\small\item\em Write this message in an X\+ML format. \end{DoxyCompactList}\item 
+void \hyperlink{classDENMMessage_a5ddb2e681944585e4704231818e96800}{to\+Console} () const \hypertarget{classDENMMessage_a5ddb2e681944585e4704231818e96800}{}\label{classDENMMessage_a5ddb2e681944585e4704231818e96800}
+
+\begin{DoxyCompactList}\small\item\em Print the message to the console. \end{DoxyCompactList}\item 
+const \hyperlink{structDENM}{D\+E\+N\+M\+\_\+t} $\ast$ \hyperlink{classDENMMessage_aafe380fd43ae1a6499e34ba1cf82f514}{const\+Data} () const 
+\begin{DoxyCompactList}\small\item\em Read-\/only data access. \end{DoxyCompactList}\item 
+\hyperlink{structDENM}{D\+E\+N\+M\+\_\+t} $\ast$ \hyperlink{classDENMMessage_a9f003727df70d0e5ad68afd43923390d}{data} ()
+\begin{DoxyCompactList}\small\item\em Write data access. \end{DoxyCompactList}\item 
+void \hyperlink{classDENMMessage_a0cbb36c1d20462b847debffcd5bb76df}{initialize\+Empty} ()\hypertarget{classDENMMessage_a0cbb36c1d20462b847debffcd5bb76df}{}\label{classDENMMessage_a0cbb36c1d20462b847debffcd5bb76df}
+
+\begin{DoxyCompactList}\small\item\em Allocate raw data for directly manipulating it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A \hyperlink{structDENM}{D\+E\+NM} message. 
+
+Copyright T\+SS 2017
+
+Author\+: Natale Patriciello \href{mailto:natale.patriciello@aimsun.com}{\tt natale.\+patriciello@aimsun.\+com}
+
+Represents a \hyperlink{structDENM}{D\+E\+NM} Message through the use of \hyperlink{classASN1CContainer}{A\+S\+N1\+C\+Container}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{D\+E\+N\+M\+Message@{D\+E\+N\+M\+Message}!D\+E\+N\+M\+Message@{D\+E\+N\+M\+Message}}
+\index{D\+E\+N\+M\+Message@{D\+E\+N\+M\+Message}!D\+E\+N\+M\+Message@{D\+E\+N\+M\+Message}}
+\subsubsection[{\texorpdfstring{D\+E\+N\+M\+Message(const D\+E\+N\+M\+Message \&other)}{DENMMessage(const DENMMessage &other)}}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+N\+M\+Message\+::\+D\+E\+N\+M\+Message (
+\begin{DoxyParamCaption}
+\item[{const {\bf D\+E\+N\+M\+Message} \&}]{other}
+\end{DoxyParamCaption}
+)}\hypertarget{classDENMMessage_a313edd168c148ef63baaba84ebf29004}{}\label{classDENMMessage_a313edd168c148ef63baaba84ebf29004}
+
+
+\hyperlink{classDENMMessage}{D\+E\+N\+M\+Message} copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & copy \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{D\+E\+N\+M\+Message@{D\+E\+N\+M\+Message}!const\+Data@{const\+Data}}
+\index{const\+Data@{const\+Data}!D\+E\+N\+M\+Message@{D\+E\+N\+M\+Message}}
+\subsubsection[{\texorpdfstring{const\+Data() const }{constData() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf D\+E\+N\+M\+\_\+t}$\ast$ D\+E\+N\+M\+Message\+::const\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classDENMMessage_aafe380fd43ae1a6499e34ba1cf82f514}{}\label{classDENMMessage_aafe380fd43ae1a6499e34ba1cf82f514}
+
+
+Read-\/only data access. 
+
+\begin{DoxyReturn}{Returns}
+A read-\/only copy of the data 
+\end{DoxyReturn}
+\index{D\+E\+N\+M\+Message@{D\+E\+N\+M\+Message}!copy@{copy}}
+\index{copy@{copy}!D\+E\+N\+M\+Message@{D\+E\+N\+M\+Message}}
+\subsubsection[{\texorpdfstring{copy() const }{copy() const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf V2\+X\+Message}$\ast$ D\+E\+N\+M\+Message\+::copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classDENMMessage_aae291a9abf0f99c9c54500ec2e716bea}{}\label{classDENMMessage_aae291a9abf0f99c9c54500ec2e716bea}
+
+
+Copy the message content (shallow copy) 
+
+\begin{DoxyReturn}{Returns}
+a copy of the message 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classV2XMessage_a0838dc7505794641df7f0a3bdc4148b1}{V2\+X\+Message}.
+
+\index{D\+E\+N\+M\+Message@{D\+E\+N\+M\+Message}!data@{data}}
+\index{data@{data}!D\+E\+N\+M\+Message@{D\+E\+N\+M\+Message}}
+\subsubsection[{\texorpdfstring{data()}{data()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+E\+N\+M\+\_\+t}$\ast$ D\+E\+N\+M\+Message\+::data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classDENMMessage_a9f003727df70d0e5ad68afd43923390d}{}\label{classDENMMessage_a9f003727df70d0e5ad68afd43923390d}
+
+
+Write data access. 
+
+\begin{DoxyReturn}{Returns}
+A writeable copy of the data 
+\end{DoxyReturn}
+\index{D\+E\+N\+M\+Message@{D\+E\+N\+M\+Message}!from\+X\+ML@{from\+X\+ML}}
+\index{from\+X\+ML@{from\+X\+ML}!D\+E\+N\+M\+Message@{D\+E\+N\+M\+Message}}
+\subsubsection[{\texorpdfstring{from\+X\+M\+L(const char $\ast$buf, size\+\_\+t size)}{fromXML(const char *buf, size_t size)}}]{\setlength{\rightskip}{0pt plus 5cm}bool D\+E\+N\+M\+Message\+::from\+X\+ML (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{buf, }
+\item[{size\+\_\+t}]{size}
+\end{DoxyParamCaption}
+)}\hypertarget{classDENMMessage_ab061708d456f3921bfaabacf15287290}{}\label{classDENMMessage_ab061708d456f3921bfaabacf15287290}
+
+
+Build this object from an X\+ML representation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & buffer of the representation \\
+\hline
+{\em size} & size of the buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the construction was fine 
+\end{DoxyReturn}
+\index{D\+E\+N\+M\+Message@{D\+E\+N\+M\+Message}!from\+X\+ML@{from\+X\+ML}}
+\index{from\+X\+ML@{from\+X\+ML}!D\+E\+N\+M\+Message@{D\+E\+N\+M\+Message}}
+\subsubsection[{\texorpdfstring{from\+X\+M\+L(const char $\ast$filename)}{fromXML(const char *filename)}}]{\setlength{\rightskip}{0pt plus 5cm}bool D\+E\+N\+M\+Message\+::from\+X\+ML (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename}
+\end{DoxyParamCaption}
+)}\hypertarget{classDENMMessage_a7fae1c9283cf924804a68cdceb337554}{}\label{classDENMMessage_a7fae1c9283cf924804a68cdceb337554}
+
+
+Build this object from a file containing an X\+ML representation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & File name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the construction was fine 
+\end{DoxyReturn}
+\index{D\+E\+N\+M\+Message@{D\+E\+N\+M\+Message}!get\+Size@{get\+Size}}
+\index{get\+Size@{get\+Size}!D\+E\+N\+M\+Message@{D\+E\+N\+M\+Message}}
+\subsubsection[{\texorpdfstring{get\+Size() const }{getSize() const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual quint32 D\+E\+N\+M\+Message\+::get\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classDENMMessage_a6bb584a4ddb1f66f626e12d5928fe940}{}\label{classDENMMessage_a6bb584a4ddb1f66f626e12d5928fe940}
+
+
+get the size of a message 
+
+\begin{DoxyReturn}{Returns}
+the size of a message 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classV2XMessage_ae1b54af9f8f88bb0c2a6967d3f6e7777}{V2\+X\+Message}.
+
+\index{D\+E\+N\+M\+Message@{D\+E\+N\+M\+Message}!to\+X\+ML@{to\+X\+ML}}
+\index{to\+X\+ML@{to\+X\+ML}!D\+E\+N\+M\+Message@{D\+E\+N\+M\+Message}}
+\subsubsection[{\texorpdfstring{to\+X\+M\+L(std\+::ostream $\ast$out) const }{toXML(std::ostream *out) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool D\+E\+N\+M\+Message\+::to\+X\+ML (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream $\ast$}]{out}
+\end{DoxyParamCaption}
+) const}\hypertarget{classDENMMessage_a22e4f9e4a693f0164478b898cce64be0}{}\label{classDENMMessage_a22e4f9e4a693f0164478b898cce64be0}
+
+
+Write this message in an X\+ML format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & output stream \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if everything went fine 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/aimsun\+\_\+extensions/\+V2\+X\+Framework/D\+E\+N\+M\+Message.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,6 @@
+<map id="V2XConnectedAgent" name="V2XConnectedAgent">
+<area shape="rect" id="node6" href="$classFlourishConnectedAgent.html" title="A mobile agent. " alt="" coords="53,304,218,331"/>
+<area shape="rect" id="node2" href="$classV2XSimpleAP.html" title="Represent a wireless Access Point. " alt="" coords="16,155,121,181"/>
+<area shape="rect" id="node3" href="$classV2XNetworkNode.html" title="A Node in the network. " alt="" coords="5,80,132,107"/>
+<area shape="rect" id="node5" href="$classADynamicAgent.html" title="Get and set information from/to the Aimsun objects (including vehicles) " alt="" coords="145,155,262,181"/>
+</map>

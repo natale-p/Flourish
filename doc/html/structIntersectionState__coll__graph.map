@@ -1,0 +1,10 @@
+<map id="IntersectionState" name="IntersectionState">
+<area shape="rect" id="node2" href="$structEnabledLaneList.html" title="EnabledLaneList" alt="" coords="264,65,383,92"/>
+<area shape="rect" id="node3" href="$structasn__struct__ctx__s.html" title="asn_struct_ctx_s" alt="" coords="5,193,128,220"/>
+<area shape="rect" id="node4" href="$structOCTET__STRING.html" title="OCTET_STRING" alt="" coords="261,116,386,143"/>
+<area shape="rect" id="node5" href="$structMovementList.html" title="MovementList" alt="" coords="271,167,375,193"/>
+<area shape="rect" id="node6" href="$structBIT__STRING__s.html" title="BIT_STRING_s" alt="" coords="266,217,381,244"/>
+<area shape="rect" id="node7" href="$structManeuverAssistList.html" title="ManeuverAssistList" alt="" coords="255,268,392,295"/>
+<area shape="rect" id="node8" href="$structIntersectionReferenceID.html" title="IntersectionReferenceID" alt="" coords="241,319,405,345"/>
+<area shape="rect" id="node9" href="$structIntersectionState_1_1IntersectionState____regional.html" title="IntersectionState::\lIntersectionState__regional" alt="" coords="233,370,413,411"/>
+</map>

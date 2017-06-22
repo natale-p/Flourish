@@ -1,0 +1,647 @@
+\hypertarget{classADynamicAPISetup}{}\section{A\+Dynamic\+A\+P\+I\+Setup Class Reference}
+\label{classADynamicAPISetup}\index{A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}}
+
+
+The interface between the internals of Aimsun with the outside.  
+
+
+
+
+{\ttfamily \#include $<$A\+Dynamic\+A\+P\+I\+Setup.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structADynamicAPISetup_1_1UserPreference}{User\+Preference}
+\begin{DoxyCompactList}\small\item\em Define a preference for the attributes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classADynamicAPISetup_a0ffce2ed1acaeaf1f058fab833e375c3}{Type} \{ \\*
+{\bfseries Invalid}, 
+{\bfseries Map}, 
+{\bfseries List}, 
+{\bfseries String}, 
+\\*
+{\bfseries String\+List}, 
+{\bfseries Font}, 
+{\bfseries Pixmap}, 
+{\bfseries Brush}, 
+\\*
+{\bfseries Rect}, 
+{\bfseries Size}, 
+{\bfseries Color}, 
+{\bfseries Palette}, 
+\\*
+{\bfseries Color\+Group}, 
+{\bfseries Icon\+Set}, 
+{\bfseries Point}, 
+{\bfseries Image}, 
+\\*
+{\bfseries Int}, 
+{\bfseries U\+Int}, 
+{\bfseries Bool}, 
+{\bfseries Double}, 
+\\*
+{\bfseries C\+String}, 
+{\bfseries Point\+Array}, 
+{\bfseries Region}, 
+{\bfseries Bitmap}, 
+\\*
+{\bfseries Cursor}, 
+{\bfseries Size\+Policy}, 
+{\bfseries Date}, 
+{\bfseries Time}, 
+\\*
+{\bfseries Date\+Time}, 
+{\bfseries Byte\+Array}, 
+{\bfseries \+\_\+\+G\+K\+Object}, 
+{\bfseries \+\_\+\+G\+K\+Segmented\+Attribute\+\_\+\+Obsolete}, 
+\\*
+{\bfseries \+\_\+\+G\+K\+Time\+Serie}, 
+{\bfseries \+\_\+\+G\+K\+Enum}, 
+{\bfseries \+\_\+\+G\+K\+Time\+Duration}, 
+{\bfseries \+\_\+\+G\+K\+Object\+List}, 
+\\*
+{\bfseries \+\_\+\+G\+K\+Column}, 
+{\bfseries \+\_\+\+G\+K\+Type}, 
+{\bfseries \+\_\+\+G\+K\+Content}, 
+{\bfseries File}, 
+\\*
+{\bfseries Void}, 
+{\bfseries \+\_\+\+G\+K\+Normal\+Distribution\+Parameters}
+ \}\hypertarget{classADynamicAPISetup_a0ffce2ed1acaeaf1f058fab833e375c3}{}\label{classADynamicAPISetup_a0ffce2ed1acaeaf1f058fab833e375c3}
+\begin{DoxyCompactList}\small\item\em Available attribute types (copy pasted from G\+K\+Column) \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classADynamicAPISetup_a58135747ce3f1e21d9f1e385e9f6a662}{A\+Dynamic\+A\+P\+I\+Setup} (G\+K\+Model $\ast$handler\+Mod, G\+K\+Experiment $\ast$handler\+Exp)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classADynamicAPISetup}{A\+Dynamic\+A\+P\+I\+Setup} default constructor. \end{DoxyCompactList}\item 
+\hyperlink{classADynamicAPISetup_a34729d3bc53ff074d47f6425ab151e08}{A\+Dynamic\+A\+P\+I\+Setup} ()
+\begin{DoxyCompactList}\small\item\em Empty constructor. \end{DoxyCompactList}\item 
+\hyperlink{classADynamicAPISetup_a574eaf2330c8f790c7a613557d7792bf}{A\+Dynamic\+A\+P\+I\+Setup} (const \hyperlink{classADynamicAPISetup}{A\+Dynamic\+A\+P\+I\+Setup} \&other)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\hyperlink{classADynamicAPISetup}{A\+Dynamic\+A\+P\+I\+Setup} \& \hyperlink{classADynamicAPISetup_a18674582bd3f891a9cce6a764e4e158a}{operator=} (const \hyperlink{classADynamicAPISetup}{A\+Dynamic\+A\+P\+I\+Setup} \&b)
+\begin{DoxyCompactList}\small\item\em Assignment operator. \end{DoxyCompactList}\item 
+virtual \hyperlink{classADynamicAPISetup_a9da635df06b8f3e62b3e76e9805a8fbf}{$\sim$\+A\+Dynamic\+A\+P\+I\+Setup} ()\hypertarget{classADynamicAPISetup_a9da635df06b8f3e62b3e76e9805a8fbf}{}\label{classADynamicAPISetup_a9da635df06b8f3e62b3e76e9805a8fbf}
+
+\begin{DoxyCompactList}\small\item\em Deconstructor. \end{DoxyCompactList}\item 
+int \hyperlink{classADynamicAPISetup_a12384f9e9cc8275040a5199a59c3803e}{add\+Experiment\+Column} (const Q\+String \&internal\+Name, const Q\+String \&gui\+Name, \hyperlink{classADynamicAPISetup_a0ffce2ed1acaeaf1f058fab833e375c3}{A\+Dynamic\+A\+P\+I\+Setup\+::\+Type} column\+Type)
+\begin{DoxyCompactList}\small\item\em It adds a new column (attribute) to G\+K\+Experiment. \end{DoxyCompactList}\item 
+int \hyperlink{classADynamicAPISetup_a4d4f228468a6d066f08441fc924ac61b}{add\+Type\+Column} (const Q\+String \&type\+Name, const Q\+String \&internal\+Name, const Q\+String \&gui\+Name, \hyperlink{classADynamicAPISetup_a0ffce2ed1acaeaf1f058fab833e375c3}{A\+Dynamic\+A\+P\+I\+Setup\+::\+Type} column\+Type) const 
+\begin{DoxyCompactList}\small\item\em It adds a new column (attribute) to a Type. \end{DoxyCompactList}\item 
+int \hyperlink{classADynamicAPISetup_a217f8ef15bf6d83075b987dace758867}{get\+Experiment\+Column\+Id} (const Q\+String \&internal\+Name) const 
+\begin{DoxyCompactList}\small\item\em Gets a unique id of a column (attribute) from G\+K\+Experiment. \end{DoxyCompactList}\item 
+int \hyperlink{classADynamicAPISetup_abf39333e1b293f862f9b0f7e6d16ed6a}{get\+Type\+Column\+ID} (const Q\+String \&type\+Name, const Q\+String \&internal\+Name) const 
+\begin{DoxyCompactList}\small\item\em Gets a unique id of a column (attribute) for a generic type. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \hyperlink{classADynamicAPISetup_abb5a2457bcb09ac3ab852b39241a5423}{get\+Experiment\+Value} (int column\+Id) const 
+\begin{DoxyCompactList}\small\item\em Get the value of an experiment attribute represented by the column id. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \hyperlink{classADynamicAPISetup_a6e72b6afa88ff847c2fe1383eb94a86f}{get\+Object\+Value} (const G\+K\+Base\+Object $\ast$from, const Q\+String \&type\+Name, const Q\+String \&internal\+Name) const 
+\begin{DoxyCompactList}\small\item\em Get the value of an attribute over an object. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \hyperlink{classADynamicAPISetup_a875a35d90a1609421c7dbef3dad8db4e}{get\+Object\+Value} (const D\+T\+A\+Vehicle\+Type $\ast$from, const Q\+String \&type\+Name, const Q\+String \&internal\+Name) const 
+\begin{DoxyCompactList}\small\item\em Get the value of an attribute over an object. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\T \hyperlink{classADynamicAPISetup_a34b4b14838d1cffb375be9daad2ba9c8}{get\+Object\+Value} (const G\+K\+Object $\ast$from, const Q\+String \&type\+Name, const Q\+String \&internal\+Name) const 
+\begin{DoxyCompactList}\small\item\em Get the value of an attribute over an object. \end{DoxyCompactList}\item 
+void \hyperlink{classADynamicAPISetup_a8342d479c2a8e3e3889273be570c8ce9}{set\+Experiment\+Value} (int acolumn, double avalue)
+\begin{DoxyCompactList}\small\item\em Sets the value of a column (attribute) defined inside the experiment. \end{DoxyCompactList}\item 
+G\+K\+Preferences\+Group $\ast$ \hyperlink{classADynamicAPISetup_ab8281f794f49b827159a68eb3750cd45}{create\+Preference\+Group} (const Q\+String \&internal\+Name, const Q\+String \&gui\+Name)
+\begin{DoxyCompactList}\small\item\em Create a preference group. \end{DoxyCompactList}\item 
+void \hyperlink{classADynamicAPISetup_aeeb3d01d913a02afe40d49c9ed1fcecd}{create\+Preference} (G\+K\+Preferences\+Group $\ast$group, const \hyperlink{structADynamicAPISetup_1_1UserPreference}{User\+Preference} \&preference\+Def) const 
+\begin{DoxyCompactList}\small\item\em Create a preference inside a group. \end{DoxyCompactList}\item 
+Q\+String \hyperlink{classADynamicAPISetup_ad7134069f96f9e5d1e452270ce97260e}{get\+Preference} (const Q\+String \&internal\+Name, const G\+K\+Object $\ast$obj=nullptr) const 
+\begin{DoxyCompactList}\small\item\em Get the preference value for the preference specified. \end{DoxyCompactList}\item 
+Q\+String \hyperlink{classADynamicAPISetup_ad75bb97185094bad86a6bac41f4ca9ff}{get\+Preference} (const Q\+String \&internal\+Name, const G\+K\+Base\+Object $\ast$obj=nullptr) const 
+\begin{DoxyCompactList}\small\item\em Get the preference value for the preference specified. \end{DoxyCompactList}\item 
+Q\+String \hyperlink{classADynamicAPISetup_a74a24f10e205e0f9672c2f2610fa6c5b}{get\+Preference} (const Q\+String \&internal\+Name, const D\+T\+A\+Vehicle\+Type $\ast$obj=nullptr) const 
+\begin{DoxyCompactList}\small\item\em Get the preference value for the preference specified. \end{DoxyCompactList}\item 
+G\+K\+Type $\ast$ \hyperlink{classADynamicAPISetup_a667216f0c397edd3752e76c84d3a7153}{create\+Type} (const Q\+String \&type\+Name, const Q\+String \&super\+Type, const Q\+String \&gui\+Name)
+\begin{DoxyCompactList}\small\item\em Create a custom type inside Aimsun. \end{DoxyCompactList}\item 
+Q\+List$<$ G\+K\+Object $\ast$ $>$ \hyperlink{classADynamicAPISetup_ac2f277aca863a981eddaa7f0340dc023}{get\+Obj\+In\+Folder} (const G\+K\+Folder $\ast$folder) const 
+\begin{DoxyCompactList}\small\item\em Get a list of objects in a specific folder. \end{DoxyCompactList}\item 
+G\+K\+Type $\ast$ \hyperlink{classADynamicAPISetup_a04ccb2c6b63e852ada80f5c6fac6305e}{find\+Type} (const Q\+String \&type\+Name) const 
+\begin{DoxyCompactList}\small\item\em Find a type giving the name. \end{DoxyCompactList}\item 
+G\+K\+Folder $\ast$ \hyperlink{classADynamicAPISetup_a91b16dc7b90f8ff9eba045dde9024f76}{find\+Folder} (const Q\+String \&layer\+Folder) const 
+\begin{DoxyCompactList}\small\item\em Find a folder giving its name. \end{DoxyCompactList}\item 
+G\+K\+Column $\ast$ \hyperlink{classADynamicAPISetup_a27020d13f933b59238ca293b80be6537}{get\+Type\+Column} (const Q\+String \&type\+Name, const Q\+String \&internal\+Name) const 
+\begin{DoxyCompactList}\small\item\em Get a column from a type. \end{DoxyCompactList}\item 
+const G\+K\+Experiment $\ast$ \hyperlink{classADynamicAPISetup_ab26fb83aaedf69f2ed8064a5760a5210}{get\+Experiment} () const 
+\begin{DoxyCompactList}\small\item\em Get a pointer to the current experiment. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The interface between the internals of Aimsun with the outside. 
+
+In this class are reported all the typical functionalities needed by a plugin based on \hyperlink{classADynamicAPI}{A\+Dynamic\+A\+PI}. The interface, right now, is mainly towards the type and their attributes. In Aimsun there are types (for example, each vehicle is of type G\+K\+Vehicle) and each type can have multiple attributes, represented by columns (because in the user interface they are reported as such).
+
+To add a custom attribute to a know type, usually the workflow is\+: \begin{DoxyVerb}if (! setup.addColumnToType (myType, myAttributeName, translatableAttributeName, ADynamicAPISetup::Double))
+    qDebug () << "Can't add the type";
+else
+    // Attribute added successfully
+\end{DoxyVerb}
+
+
+To retrieve a value, it is necessary to understand that an attribute usually changes across different instances of the type. For example, an attribute for a vehicle can have different value, depending on the vehicle (the vehicle A can have the attribute set to 2.\+0, while the vehicle B can have 4.\+0).
+
+So, the retrieval is usually tied up with an object\+: \begin{DoxyVerb}...
+GKObject *obj = ... // someone passes that pointer to us
+qDebug() << "value:" << setup.getTypeValueDoubleFrom(obj, myType, myAttributeName);
+\end{DoxyVerb}
+
+
+There are methods which are meant to be N\+OT called from outside aimsun. Usually, for these methods you will not have access to the right include file to use the object (for instance, create\+Type, get\+Obj\+In\+Folder, find\+Type, find\+Folder, are not meant to be used from outside, but they can be used from framework which uses \hyperlink{classADynamicAPI}{A\+Dynamic\+A\+PI} but are inside Aimsun). 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}!A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}}
+\index{A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}!A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}}
+\subsubsection[{\texorpdfstring{A\+Dynamic\+A\+P\+I\+Setup(\+G\+K\+Model $\ast$handler\+Mod, G\+K\+Experiment $\ast$handler\+Exp)}{ADynamicAPISetup(GKModel *handlerMod, GKExperiment *handlerExp)}}]{\setlength{\rightskip}{0pt plus 5cm}A\+Dynamic\+A\+P\+I\+Setup\+::\+A\+Dynamic\+A\+P\+I\+Setup (
+\begin{DoxyParamCaption}
+\item[{G\+K\+Model $\ast$}]{handler\+Mod, }
+\item[{G\+K\+Experiment $\ast$}]{handler\+Exp}
+\end{DoxyParamCaption}
+)}\hypertarget{classADynamicAPISetup_a58135747ce3f1e21d9f1e385e9f6a662}{}\label{classADynamicAPISetup_a58135747ce3f1e21d9f1e385e9f6a662}
+
+
+\hyperlink{classADynamicAPISetup}{A\+Dynamic\+A\+P\+I\+Setup} default constructor. 
+
+Aimsun is forced to use this constructor; the other one is used only to have a empty constructor while waiting for a copy to be made
+
+
+\begin{DoxyParams}{Parameters}
+{\em handler\+Mod} & the G\+K\+Model \\
+\hline
+{\em handler\+Exp} & the G\+K\+Experiment \\
+\hline
+\end{DoxyParams}
+\index{A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}!A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}}
+\index{A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}!A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}}
+\subsubsection[{\texorpdfstring{A\+Dynamic\+A\+P\+I\+Setup()}{ADynamicAPISetup()}}]{\setlength{\rightskip}{0pt plus 5cm}A\+Dynamic\+A\+P\+I\+Setup\+::\+A\+Dynamic\+A\+P\+I\+Setup (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classADynamicAPISetup_a34729d3bc53ff074d47f6425ab151e08}{}\label{classADynamicAPISetup_a34729d3bc53ff074d47f6425ab151e08}
+
+
+Empty constructor. 
+
+The object is in an invalid state. \index{A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}!A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}}
+\index{A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}!A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}}
+\subsubsection[{\texorpdfstring{A\+Dynamic\+A\+P\+I\+Setup(const A\+Dynamic\+A\+P\+I\+Setup \&other)}{ADynamicAPISetup(const ADynamicAPISetup &other)}}]{\setlength{\rightskip}{0pt plus 5cm}A\+Dynamic\+A\+P\+I\+Setup\+::\+A\+Dynamic\+A\+P\+I\+Setup (
+\begin{DoxyParamCaption}
+\item[{const {\bf A\+Dynamic\+A\+P\+I\+Setup} \&}]{other}
+\end{DoxyParamCaption}
+)}\hypertarget{classADynamicAPISetup_a574eaf2330c8f790c7a613557d7792bf}{}\label{classADynamicAPISetup_a574eaf2330c8f790c7a613557d7792bf}
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Other instance of \hyperlink{classADynamicAPISetup}{A\+Dynamic\+A\+P\+I\+Setup} \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}!add\+Experiment\+Column@{add\+Experiment\+Column}}
+\index{add\+Experiment\+Column@{add\+Experiment\+Column}!A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}}
+\subsubsection[{\texorpdfstring{add\+Experiment\+Column(const Q\+String \&internal\+Name, const Q\+String \&gui\+Name, A\+Dynamic\+A\+P\+I\+Setup\+::\+Type column\+Type)}{addExperimentColumn(const QString &internalName, const QString &guiName, ADynamicAPISetup::Type columnType)}}]{\setlength{\rightskip}{0pt plus 5cm}int A\+Dynamic\+A\+P\+I\+Setup\+::add\+Experiment\+Column (
+\begin{DoxyParamCaption}
+\item[{const Q\+String \&}]{internal\+Name, }
+\item[{const Q\+String \&}]{gui\+Name, }
+\item[{{\bf A\+Dynamic\+A\+P\+I\+Setup\+::\+Type}}]{column\+Type}
+\end{DoxyParamCaption}
+)}\hypertarget{classADynamicAPISetup_a12384f9e9cc8275040a5199a59c3803e}{}\label{classADynamicAPISetup_a12384f9e9cc8275040a5199a59c3803e}
+
+
+It adds a new column (attribute) to G\+K\+Experiment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em internal\+Name} & Attribute name (internal, should be in the form yy\+::zz. It will be prepended by \char`\"{}\+G\+K\+Experiment\+::\char`\"{} to form a complete name \char`\"{}\+G\+K\+Experiment\+::yy\+::zz\char`\"{}). \\
+\hline
+{\em gui\+Name} & Translatable name for the G\+UI \\
+\hline
+{\em column\+Type} & Type of the column\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 in case of failure, otherwise the attribute ID 
+\end{DoxyReturn}
+\index{A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}!add\+Type\+Column@{add\+Type\+Column}}
+\index{add\+Type\+Column@{add\+Type\+Column}!A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}}
+\subsubsection[{\texorpdfstring{add\+Type\+Column(const Q\+String \&type\+Name, const Q\+String \&internal\+Name, const Q\+String \&gui\+Name, A\+Dynamic\+A\+P\+I\+Setup\+::\+Type column\+Type) const }{addTypeColumn(const QString &typeName, const QString &internalName, const QString &guiName, ADynamicAPISetup::Type columnType) const }}]{\setlength{\rightskip}{0pt plus 5cm}int A\+Dynamic\+A\+P\+I\+Setup\+::add\+Type\+Column (
+\begin{DoxyParamCaption}
+\item[{const Q\+String \&}]{type\+Name, }
+\item[{const Q\+String \&}]{internal\+Name, }
+\item[{const Q\+String \&}]{gui\+Name, }
+\item[{{\bf A\+Dynamic\+A\+P\+I\+Setup\+::\+Type}}]{column\+Type}
+\end{DoxyParamCaption}
+) const}\hypertarget{classADynamicAPISetup_a4d4f228468a6d066f08441fc924ac61b}{}\label{classADynamicAPISetup_a4d4f228468a6d066f08441fc924ac61b}
+
+
+It adds a new column (attribute) to a Type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type\+Name} & The type name \\
+\hline
+{\em internal\+Name} & Attribute name (internal, should be in the form yy\+::zz. It will be prepended by the type name, so if the type is \char`\"{}\+G\+K\+Experiment\char`\"{} the final name will be \char`\"{}\+G\+K\+Experiment\+::yy\+::zz\char`\"{}). \\
+\hline
+{\em gui\+Name} & Translatable name for the G\+UI \\
+\hline
+{\em column\+Type} & The column type\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 in case of failure, otherwise the attribute ID 
+\end{DoxyReturn}
+\index{A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}!create\+Preference@{create\+Preference}}
+\index{create\+Preference@{create\+Preference}!A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}}
+\subsubsection[{\texorpdfstring{create\+Preference(\+G\+K\+Preferences\+Group $\ast$group, const User\+Preference \&preference\+Def) const }{createPreference(GKPreferencesGroup *group, const UserPreference &preferenceDef) const }}]{\setlength{\rightskip}{0pt plus 5cm}void A\+Dynamic\+A\+P\+I\+Setup\+::create\+Preference (
+\begin{DoxyParamCaption}
+\item[{G\+K\+Preferences\+Group $\ast$}]{group, }
+\item[{const {\bf User\+Preference} \&}]{preference\+Def}
+\end{DoxyParamCaption}
+) const}\hypertarget{classADynamicAPISetup_aeeb3d01d913a02afe40d49c9ed1fcecd}{}\label{classADynamicAPISetup_aeeb3d01d913a02afe40d49c9ed1fcecd}
+
+
+Create a preference inside a group. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em group} & Pointer to the group \\
+\hline
+{\em preference\+Def} & Structure containing the preference settings \\
+\hline
+\end{DoxyParams}
+\index{A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}!create\+Preference\+Group@{create\+Preference\+Group}}
+\index{create\+Preference\+Group@{create\+Preference\+Group}!A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}}
+\subsubsection[{\texorpdfstring{create\+Preference\+Group(const Q\+String \&internal\+Name, const Q\+String \&gui\+Name)}{createPreferenceGroup(const QString &internalName, const QString &guiName)}}]{\setlength{\rightskip}{0pt plus 5cm}G\+K\+Preferences\+Group$\ast$ A\+Dynamic\+A\+P\+I\+Setup\+::create\+Preference\+Group (
+\begin{DoxyParamCaption}
+\item[{const Q\+String \&}]{internal\+Name, }
+\item[{const Q\+String \&}]{gui\+Name}
+\end{DoxyParamCaption}
+)}\hypertarget{classADynamicAPISetup_ab8281f794f49b827159a68eb3750cd45}{}\label{classADynamicAPISetup_ab8281f794f49b827159a68eb3750cd45}
+
+
+Create a preference group. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em internal\+Name} & the internal name of the preference \\
+\hline
+{\em gui\+Name} & the (translatable) name of the preference \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a (opaque) pointer to the newly created group 
+\end{DoxyReturn}
+\index{A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}!create\+Type@{create\+Type}}
+\index{create\+Type@{create\+Type}!A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}}
+\subsubsection[{\texorpdfstring{create\+Type(const Q\+String \&type\+Name, const Q\+String \&super\+Type, const Q\+String \&gui\+Name)}{createType(const QString &typeName, const QString &superType, const QString &guiName)}}]{\setlength{\rightskip}{0pt plus 5cm}G\+K\+Type$\ast$ A\+Dynamic\+A\+P\+I\+Setup\+::create\+Type (
+\begin{DoxyParamCaption}
+\item[{const Q\+String \&}]{type\+Name, }
+\item[{const Q\+String \&}]{super\+Type, }
+\item[{const Q\+String \&}]{gui\+Name}
+\end{DoxyParamCaption}
+)}\hypertarget{classADynamicAPISetup_a667216f0c397edd3752e76c84d3a7153}{}\label{classADynamicAPISetup_a667216f0c397edd3752e76c84d3a7153}
+
+
+Create a custom type inside Aimsun. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type\+Name} & Name of the type \\
+\hline
+{\em super\+Type} & Parent type \\
+\hline
+{\em gui\+Name} & Translatable name for the G\+UI \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the newly created type 
+\end{DoxyReturn}
+\index{A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}!find\+Folder@{find\+Folder}}
+\index{find\+Folder@{find\+Folder}!A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}}
+\subsubsection[{\texorpdfstring{find\+Folder(const Q\+String \&layer\+Folder) const }{findFolder(const QString &layerFolder) const }}]{\setlength{\rightskip}{0pt plus 5cm}G\+K\+Folder$\ast$ A\+Dynamic\+A\+P\+I\+Setup\+::find\+Folder (
+\begin{DoxyParamCaption}
+\item[{const Q\+String \&}]{layer\+Folder}
+\end{DoxyParamCaption}
+) const}\hypertarget{classADynamicAPISetup_a91b16dc7b90f8ff9eba045dde9024f76}{}\label{classADynamicAPISetup_a91b16dc7b90f8ff9eba045dde9024f76}
+
+
+Find a folder giving its name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em layer\+Folder} & The folder name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The folder pointer 
+\end{DoxyReturn}
+\index{A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}!find\+Type@{find\+Type}}
+\index{find\+Type@{find\+Type}!A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}}
+\subsubsection[{\texorpdfstring{find\+Type(const Q\+String \&type\+Name) const }{findType(const QString &typeName) const }}]{\setlength{\rightskip}{0pt plus 5cm}G\+K\+Type$\ast$ A\+Dynamic\+A\+P\+I\+Setup\+::find\+Type (
+\begin{DoxyParamCaption}
+\item[{const Q\+String \&}]{type\+Name}
+\end{DoxyParamCaption}
+) const}\hypertarget{classADynamicAPISetup_a04ccb2c6b63e852ada80f5c6fac6305e}{}\label{classADynamicAPISetup_a04ccb2c6b63e852ada80f5c6fac6305e}
+
+
+Find a type giving the name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type\+Name} & The typename \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the type if it exists, nullptr otherwise 
+\end{DoxyReturn}
+\index{A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}!get\+Experiment@{get\+Experiment}}
+\index{get\+Experiment@{get\+Experiment}!A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}}
+\subsubsection[{\texorpdfstring{get\+Experiment() const }{getExperiment() const }}]{\setlength{\rightskip}{0pt plus 5cm}const G\+K\+Experiment$\ast$ A\+Dynamic\+A\+P\+I\+Setup\+::get\+Experiment (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classADynamicAPISetup_ab26fb83aaedf69f2ed8064a5760a5210}{}\label{classADynamicAPISetup_ab26fb83aaedf69f2ed8064a5760a5210}
+
+
+Get a pointer to the current experiment. 
+
+\begin{DoxyReturn}{Returns}
+an (opaque) pointer to the experiment 
+\end{DoxyReturn}
+\index{A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}!get\+Experiment\+Column\+Id@{get\+Experiment\+Column\+Id}}
+\index{get\+Experiment\+Column\+Id@{get\+Experiment\+Column\+Id}!A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}}
+\subsubsection[{\texorpdfstring{get\+Experiment\+Column\+Id(const Q\+String \&internal\+Name) const }{getExperimentColumnId(const QString &internalName) const }}]{\setlength{\rightskip}{0pt plus 5cm}int A\+Dynamic\+A\+P\+I\+Setup\+::get\+Experiment\+Column\+Id (
+\begin{DoxyParamCaption}
+\item[{const Q\+String \&}]{internal\+Name}
+\end{DoxyParamCaption}
+) const}\hypertarget{classADynamicAPISetup_a217f8ef15bf6d83075b987dace758867}{}\label{classADynamicAPISetup_a217f8ef15bf6d83075b987dace758867}
+
+
+Gets a unique id of a column (attribute) from G\+K\+Experiment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em internal\+Name} & Internal attribute name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The unique id of the attribute from G\+K\+Experiment 
+\end{DoxyReturn}
+\index{A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}!get\+Experiment\+Value@{get\+Experiment\+Value}}
+\index{get\+Experiment\+Value@{get\+Experiment\+Value}!A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}}
+\subsubsection[{\texorpdfstring{get\+Experiment\+Value(int column\+Id) const }{getExperimentValue(int columnId) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ T A\+Dynamic\+A\+P\+I\+Setup\+::get\+Experiment\+Value (
+\begin{DoxyParamCaption}
+\item[{int}]{column\+Id}
+\end{DoxyParamCaption}
+) const}\hypertarget{classADynamicAPISetup_abb5a2457bcb09ac3ab852b39241a5423}{}\label{classADynamicAPISetup_abb5a2457bcb09ac3ab852b39241a5423}
+
+
+Get the value of an experiment attribute represented by the column id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em column\+Id} & The column ID\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the attribute value (implemented only for double values) 
+\end{DoxyReturn}
+\index{A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}!get\+Object\+Value@{get\+Object\+Value}}
+\index{get\+Object\+Value@{get\+Object\+Value}!A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}}
+\subsubsection[{\texorpdfstring{get\+Object\+Value(const G\+K\+Base\+Object $\ast$from, const Q\+String \&type\+Name, const Q\+String \&internal\+Name) const }{getObjectValue(const GKBaseObject *from, const QString &typeName, const QString &internalName) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ T A\+Dynamic\+A\+P\+I\+Setup\+::get\+Object\+Value (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Base\+Object $\ast$}]{from, }
+\item[{const Q\+String \&}]{type\+Name, }
+\item[{const Q\+String \&}]{internal\+Name}
+\end{DoxyParamCaption}
+) const}\hypertarget{classADynamicAPISetup_a6e72b6afa88ff847c2fe1383eb94a86f}{}\label{classADynamicAPISetup_a6e72b6afa88ff847c2fe1383eb94a86f}
+
+
+Get the value of an attribute over an object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & The object \\
+\hline
+{\em type\+Name} & The typename of the object \\
+\hline
+{\em internal\+Name} & The internal name of the attribute \\
+\hline
+\end{DoxyParams}
+\index{A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}!get\+Object\+Value@{get\+Object\+Value}}
+\index{get\+Object\+Value@{get\+Object\+Value}!A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}}
+\subsubsection[{\texorpdfstring{get\+Object\+Value(const D\+T\+A\+Vehicle\+Type $\ast$from, const Q\+String \&type\+Name, const Q\+String \&internal\+Name) const }{getObjectValue(const DTAVehicleType *from, const QString &typeName, const QString &internalName) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ T A\+Dynamic\+A\+P\+I\+Setup\+::get\+Object\+Value (
+\begin{DoxyParamCaption}
+\item[{const D\+T\+A\+Vehicle\+Type $\ast$}]{from, }
+\item[{const Q\+String \&}]{type\+Name, }
+\item[{const Q\+String \&}]{internal\+Name}
+\end{DoxyParamCaption}
+) const}\hypertarget{classADynamicAPISetup_a875a35d90a1609421c7dbef3dad8db4e}{}\label{classADynamicAPISetup_a875a35d90a1609421c7dbef3dad8db4e}
+
+
+Get the value of an attribute over an object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & The object \\
+\hline
+{\em type\+Name} & The typename of the object \\
+\hline
+{\em internal\+Name} & The internal name of the attribute \\
+\hline
+\end{DoxyParams}
+\index{A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}!get\+Object\+Value@{get\+Object\+Value}}
+\index{get\+Object\+Value@{get\+Object\+Value}!A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}}
+\subsubsection[{\texorpdfstring{get\+Object\+Value(const G\+K\+Object $\ast$from, const Q\+String \&type\+Name, const Q\+String \&internal\+Name) const }{getObjectValue(const GKObject *from, const QString &typeName, const QString &internalName) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ T A\+Dynamic\+A\+P\+I\+Setup\+::get\+Object\+Value (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Object $\ast$}]{from, }
+\item[{const Q\+String \&}]{type\+Name, }
+\item[{const Q\+String \&}]{internal\+Name}
+\end{DoxyParamCaption}
+) const}\hypertarget{classADynamicAPISetup_a34b4b14838d1cffb375be9daad2ba9c8}{}\label{classADynamicAPISetup_a34b4b14838d1cffb375be9daad2ba9c8}
+
+
+Get the value of an attribute over an object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from} & The object \\
+\hline
+{\em type\+Name} & The typename of the object \\
+\hline
+{\em internal\+Name} & The internal name of the attribute \\
+\hline
+\end{DoxyParams}
+\index{A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}!get\+Obj\+In\+Folder@{get\+Obj\+In\+Folder}}
+\index{get\+Obj\+In\+Folder@{get\+Obj\+In\+Folder}!A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}}
+\subsubsection[{\texorpdfstring{get\+Obj\+In\+Folder(const G\+K\+Folder $\ast$folder) const }{getObjInFolder(const GKFolder *folder) const }}]{\setlength{\rightskip}{0pt plus 5cm}Q\+List$<$G\+K\+Object$\ast$$>$ A\+Dynamic\+A\+P\+I\+Setup\+::get\+Obj\+In\+Folder (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Folder $\ast$}]{folder}
+\end{DoxyParamCaption}
+) const}\hypertarget{classADynamicAPISetup_ac2f277aca863a981eddaa7f0340dc023}{}\label{classADynamicAPISetup_ac2f277aca863a981eddaa7f0340dc023}
+
+
+Get a list of objects in a specific folder. 
+
+\begin{DoxyReturn}{Returns}
+a list of object 
+\end{DoxyReturn}
+\index{A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}!get\+Preference@{get\+Preference}}
+\index{get\+Preference@{get\+Preference}!A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}}
+\subsubsection[{\texorpdfstring{get\+Preference(const Q\+String \&internal\+Name, const G\+K\+Object $\ast$obj=nullptr) const }{getPreference(const QString &internalName, const GKObject *obj=nullptr) const }}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String A\+Dynamic\+A\+P\+I\+Setup\+::get\+Preference (
+\begin{DoxyParamCaption}
+\item[{const Q\+String \&}]{internal\+Name, }
+\item[{const G\+K\+Object $\ast$}]{obj = {\ttfamily nullptr}}
+\end{DoxyParamCaption}
+) const}\hypertarget{classADynamicAPISetup_ad7134069f96f9e5d1e452270ce97260e}{}\label{classADynamicAPISetup_ad7134069f96f9e5d1e452270ce97260e}
+
+
+Get the preference value for the preference specified. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em internal\+Name} & Internal name of the preference \\
+\hline
+{\em obj} & Object on which check the default value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the preference selected, or an empty string 
+\end{DoxyReturn}
+\index{A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}!get\+Preference@{get\+Preference}}
+\index{get\+Preference@{get\+Preference}!A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}}
+\subsubsection[{\texorpdfstring{get\+Preference(const Q\+String \&internal\+Name, const G\+K\+Base\+Object $\ast$obj=nullptr) const }{getPreference(const QString &internalName, const GKBaseObject *obj=nullptr) const }}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String A\+Dynamic\+A\+P\+I\+Setup\+::get\+Preference (
+\begin{DoxyParamCaption}
+\item[{const Q\+String \&}]{internal\+Name, }
+\item[{const G\+K\+Base\+Object $\ast$}]{obj = {\ttfamily nullptr}}
+\end{DoxyParamCaption}
+) const}\hypertarget{classADynamicAPISetup_ad75bb97185094bad86a6bac41f4ca9ff}{}\label{classADynamicAPISetup_ad75bb97185094bad86a6bac41f4ca9ff}
+
+
+Get the preference value for the preference specified. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em internal\+Name} & Internal name of the preference \\
+\hline
+{\em obj} & Object on which check the default value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the preference selected, or an empty string 
+\end{DoxyReturn}
+\index{A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}!get\+Preference@{get\+Preference}}
+\index{get\+Preference@{get\+Preference}!A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}}
+\subsubsection[{\texorpdfstring{get\+Preference(const Q\+String \&internal\+Name, const D\+T\+A\+Vehicle\+Type $\ast$obj=nullptr) const }{getPreference(const QString &internalName, const DTAVehicleType *obj=nullptr) const }}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String A\+Dynamic\+A\+P\+I\+Setup\+::get\+Preference (
+\begin{DoxyParamCaption}
+\item[{const Q\+String \&}]{internal\+Name, }
+\item[{const D\+T\+A\+Vehicle\+Type $\ast$}]{obj = {\ttfamily nullptr}}
+\end{DoxyParamCaption}
+) const}\hypertarget{classADynamicAPISetup_a74a24f10e205e0f9672c2f2610fa6c5b}{}\label{classADynamicAPISetup_a74a24f10e205e0f9672c2f2610fa6c5b}
+
+
+Get the preference value for the preference specified. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em internal\+Name} & Internal name of the preference \\
+\hline
+{\em obj} & Object on which check the default value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the preference selected, or an empty string 
+\end{DoxyReturn}
+\index{A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}!get\+Type\+Column@{get\+Type\+Column}}
+\index{get\+Type\+Column@{get\+Type\+Column}!A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}}
+\subsubsection[{\texorpdfstring{get\+Type\+Column(const Q\+String \&type\+Name, const Q\+String \&internal\+Name) const }{getTypeColumn(const QString &typeName, const QString &internalName) const }}]{\setlength{\rightskip}{0pt plus 5cm}G\+K\+Column$\ast$ A\+Dynamic\+A\+P\+I\+Setup\+::get\+Type\+Column (
+\begin{DoxyParamCaption}
+\item[{const Q\+String \&}]{type\+Name, }
+\item[{const Q\+String \&}]{internal\+Name}
+\end{DoxyParamCaption}
+) const}\hypertarget{classADynamicAPISetup_a27020d13f933b59238ca293b80be6537}{}\label{classADynamicAPISetup_a27020d13f933b59238ca293b80be6537}
+
+
+Get a column from a type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type\+Name} & Name of the type \\
+\hline
+{\em internal\+Name} & Name of the column \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to G\+K\+Column if found, nullptr otherwise 
+\end{DoxyReturn}
+\index{A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}!get\+Type\+Column\+ID@{get\+Type\+Column\+ID}}
+\index{get\+Type\+Column\+ID@{get\+Type\+Column\+ID}!A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}}
+\subsubsection[{\texorpdfstring{get\+Type\+Column\+I\+D(const Q\+String \&type\+Name, const Q\+String \&internal\+Name) const }{getTypeColumnID(const QString &typeName, const QString &internalName) const }}]{\setlength{\rightskip}{0pt plus 5cm}int A\+Dynamic\+A\+P\+I\+Setup\+::get\+Type\+Column\+ID (
+\begin{DoxyParamCaption}
+\item[{const Q\+String \&}]{type\+Name, }
+\item[{const Q\+String \&}]{internal\+Name}
+\end{DoxyParamCaption}
+) const}\hypertarget{classADynamicAPISetup_abf39333e1b293f862f9b0f7e6d16ed6a}{}\label{classADynamicAPISetup_abf39333e1b293f862f9b0f7e6d16ed6a}
+
+
+Gets a unique id of a column (attribute) for a generic type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type\+Name} & The type name \\
+\hline
+{\em internal\+Name} & Internal attribute name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The unique id of the attribute 
+\end{DoxyReturn}
+\index{A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}!operator=@{operator=}}
+\index{operator=@{operator=}!A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}}
+\subsubsection[{\texorpdfstring{operator=(const A\+Dynamic\+A\+P\+I\+Setup \&b)}{operator=(const ADynamicAPISetup &b)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf A\+Dynamic\+A\+P\+I\+Setup}\& A\+Dynamic\+A\+P\+I\+Setup\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf A\+Dynamic\+A\+P\+I\+Setup} \&}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{classADynamicAPISetup_a18674582bd3f891a9cce6a764e4e158a}{}\label{classADynamicAPISetup_a18674582bd3f891a9cce6a764e4e158a}
+
+
+Assignment operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & Other instance of \hyperlink{classADynamicAPISetup}{A\+Dynamic\+A\+P\+I\+Setup} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$\ast$this 
+\end{DoxyReturn}
+\index{A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}!set\+Experiment\+Value@{set\+Experiment\+Value}}
+\index{set\+Experiment\+Value@{set\+Experiment\+Value}!A\+Dynamic\+A\+P\+I\+Setup@{A\+Dynamic\+A\+P\+I\+Setup}}
+\subsubsection[{\texorpdfstring{set\+Experiment\+Value(int acolumn, double avalue)}{setExperimentValue(int acolumn, double avalue)}}]{\setlength{\rightskip}{0pt plus 5cm}void A\+Dynamic\+A\+P\+I\+Setup\+::set\+Experiment\+Value (
+\begin{DoxyParamCaption}
+\item[{int}]{acolumn, }
+\item[{double}]{avalue}
+\end{DoxyParamCaption}
+)}\hypertarget{classADynamicAPISetup_a8342d479c2a8e3e3889273be570c8ce9}{}\label{classADynamicAPISetup_a8342d479c2a8e3e3889273be570c8ce9}
+
+
+Sets the value of a column (attribute) defined inside the experiment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em acolumn} & The column ID \\
+\hline
+{\em avalue} & The value \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/core/\+A\+N\+G\+\_\+\+D\+T\+A/\+A\+Dynamic\+A\+P\+I/A\+Dynamic\+A\+P\+I\+Setup.\+h\end{DoxyCompactItemize}

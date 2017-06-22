@@ -1,0 +1,6 @@
+<map id="TrailerCharacteristics" name="TrailerCharacteristics">
+<area shape="rect" id="node2" href="$structasn__struct__ctx__s.html" title="asn_struct_ctx_s" alt="" coords="5,103,128,129"/>
+<area shape="rect" id="node3" href="$structTrailerCharacteristics_1_1TrailerCharacteristics____equalTo.html" title="TrailerCharacteristics\l::TrailerCharacteristics\l__equalTo" alt="" coords="233,43,388,99"/>
+<area shape="rect" id="node4" href="$structTrailerCharacteristics_1_1TrailerCharacteristics____ranges.html" title="TrailerCharacteristics\l::TrailerCharacteristics\l__ranges" alt="" coords="233,123,388,179"/>
+<area shape="rect" id="node5" href="$structTrailerCharacteristics_1_1TrailerCharacteristics____notEqualTo.html" title="TrailerCharacteristics\l::TrailerCharacteristics\l__notEqualTo" alt="" coords="233,203,388,259"/>
+</map>

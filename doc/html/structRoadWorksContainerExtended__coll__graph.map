@@ -1,0 +1,10 @@
+<map id="RoadWorksContainerExtended" name="RoadWorksContainerExtended">
+<area shape="rect" id="node2" href="$structClosedLanes.html" title="ClosedLanes" alt="" coords="551,57,649,84"/>
+<area shape="rect" id="node3" href="$structasn__struct__ctx__s.html" title="asn_struct_ctx_s" alt="" coords="5,201,128,228"/>
+<area shape="rect" id="node4" href="$structBIT__STRING__s.html" title="BIT_STRING_s" alt="" coords="233,117,348,144"/>
+<area shape="rect" id="node5" href="$structReferenceDenms.html" title="ReferenceDenms" alt="" coords="372,173,496,200"/>
+<area shape="rect" id="node6" href="$structItineraryPath.html" title="ItineraryPath" alt="" coords="386,232,482,258"/>
+<area shape="rect" id="node7" href="$structDeltaReferencePosition.html" title="DeltaReferencePosition" alt="" coords="520,296,680,322"/>
+<area shape="rect" id="node8" href="$structRestrictedTypes.html" title="RestrictedTypes" alt="" coords="375,346,493,373"/>
+<area shape="rect" id="node9" href="$structCauseCode.html" title="CauseCode" alt="" coords="245,401,336,428"/>
+</map>

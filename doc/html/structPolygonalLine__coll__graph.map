@@ -1,0 +1,8 @@
+<map id="PolygonalLine" name="PolygonalLine">
+<area shape="rect" id="node2" href="$structasn__struct__ctx__s.html" title="asn_struct_ctx_s" alt="" coords="5,167,128,193"/>
+<area shape="rect" id="node4" href="$structPolygonalLine_1_1PolygonalLine__u_1_1PolygonalLine____absolutePositionsWithAltitude.html" title="PolygonalLine::Polygonal\lLine_u::PolygonalLine\l__absolutePositionsWithAltitude" alt="" coords="233,72,444,128"/>
+<area shape="rect" id="node5" href="$structPolygonalLine_1_1PolygonalLine__u_1_1PolygonalLine____absolutePositions.html" title="PolygonalLine::Polygonal\lLine_u::PolygonalLine\l__absolutePositions" alt="" coords="255,152,423,208"/>
+<area shape="rect" id="node6" href="$structPolygonalLine_1_1PolygonalLine__u_1_1PolygonalLine____deltaPositionsWithAltitude.html" title="PolygonalLine::Polygonal\lLine_u::PolygonalLine\l__deltaPositionsWithAltitude" alt="" coords="244,232,433,288"/>
+<area shape="rect" id="node7" href="$structPolygonalLine_1_1PolygonalLine__u_1_1PolygonalLine____deltaPositions.html" title="PolygonalLine::Polygonal\lLine_u::PolygonalLine\l__deltaPositions" alt="" coords="255,312,423,368"/>
+<area shape="rect" id="node3" href="$unionPolygonalLine_1_1PolygonalLine__u.html" title="PolygonalLine::Polygonal\lLine_u" alt="" coords="671,159,839,201"/>
+</map>

@@ -1,0 +1,32 @@
+<map id="DENM" name="DENM">
+<area shape="rect" id="node2" href="$structDecentralizedEnvironmentalNotificationMessage.html" title="DecentralizedEnvironmental\lNotificationMessage" alt="" coords="1561,977,1747,1018"/>
+<area shape="rect" id="node3" href="$structAlacarteContainer.html" title="AlacarteContainer" alt="" coords="1336,720,1463,747"/>
+<area shape="rect" id="node4" href="$structStationaryVehicleContainer.html" title="StationaryVehicleContainer" alt="" coords="991,536,1171,563"/>
+<area shape="rect" id="node5" href="$structasn__struct__ctx__s.html" title="asn_struct_ctx_s" alt="" coords="5,813,128,840"/>
+<area shape="rect" id="node6" href="$structVehicleIdentification.html" title="VehicleIdentification" alt="" coords="617,492,755,519"/>
+<area shape="rect" id="node7" href="$structOCTET__STRING.html" title="OCTET_STRING" alt="" coords="246,533,371,560"/>
+<area shape="rect" id="node8" href="$structBIT__STRING__s.html" title="BIT_STRING_s" alt="" coords="251,813,366,840"/>
+<area shape="rect" id="node9" href="$structDangerousGoodsExtended.html" title="DangerousGoodsExtended" alt="" coords="597,567,775,593"/>
+<area shape="rect" id="node10" href="$structCauseCode.html" title="CauseCode" alt="" coords="263,340,354,367"/>
+<area shape="rect" id="node11" href="$structImpactReductionContainer.html" title="ImpactReductionContainer" alt="" coords="597,720,775,747"/>
+<area shape="rect" id="node12" href="$structPositionOfPillars.html" title="PositionOfPillars" alt="" coords="249,697,368,724"/>
+<area shape="rect" id="node13" href="$structRoadWorksContainerExtended.html" title="RoadWorksContainerExtended" alt="" coords="980,947,1183,973"/>
+<area shape="rect" id="node14" href="$structClosedLanes.html" title="ClosedLanes" alt="" coords="637,896,735,923"/>
+<area shape="rect" id="node15" href="$structReferenceDenms.html" title="ReferenceDenms" alt="" coords="426,996,550,1023"/>
+<area shape="rect" id="node16" href="$structItineraryPath.html" title="ItineraryPath" alt="" coords="440,1052,536,1079"/>
+<area shape="rect" id="node17" href="$structDeltaReferencePosition.html" title="DeltaReferencePosition" alt="" coords="408,1108,568,1135"/>
+<area shape="rect" id="node18" href="$structRestrictedTypes.html" title="RestrictedTypes" alt="" coords="429,1151,547,1177"/>
+<area shape="rect" id="node19" href="$structManagementContainer.html" title="ManagementContainer" alt="" coords="1005,1364,1158,1391"/>
+<area shape="rect" id="node21" href="$structReferencePosition.html" title="ReferencePosition" alt="" coords="621,1299,751,1325"/>
+<area shape="rect" id="node22" href="$structPosConfidenceEllipse.html" title="PosConfidenceEllipse" alt="" coords="233,1235,384,1261"/>
+<area shape="rect" id="node23" href="$structAltitude.html" title="Altitude" alt="" coords="275,1285,342,1312"/>
+<area shape="rect" id="node24" href="$structActionID.html" title="ActionID" alt="" coords="451,1391,525,1417"/>
+<area shape="rect" id="node25" href="$structLocationContainer.html" title="LocationContainer" alt="" coords="623,107,749,133"/>
+<area shape="rect" id="node26" href="$structSpeed.html" title="Speed" alt="" coords="279,5,338,32"/>
+<area shape="rect" id="node27" href="$structHeading.html" title="Heading" alt="" coords="273,56,344,83"/>
+<area shape="rect" id="node28" href="$structTraces.html" title="Traces" alt="" coords="277,107,340,133"/>
+<area shape="rect" id="node29" href="$structSituationContainer.html" title="SituationContainer" alt="" coords="621,243,751,269"/>
+<area shape="rect" id="node30" href="$structEventHistory.html" title="EventHistory" alt="" coords="259,220,358,247"/>
+<area shape="rect" id="node31" href="$structItsPduHeader.html" title="ItsPduHeader" alt="" coords="829,1585,931,1612"/>
+<area shape="rect" id="node20" href="$structASN____PRIMITIVE__TYPE__s.html" title="ASN__PRIMITIVE_TYPE_s" alt="" coords="592,1476,780,1503"/>
+</map>

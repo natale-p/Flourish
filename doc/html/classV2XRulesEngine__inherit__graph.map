@@ -1,0 +1,4 @@
+<map id="V2XRulesEngine" name="V2XRulesEngine">
+<area shape="rect" id="node2" href="$classFlourishInfrastructureRulesEngine.html" title="Takes decision for an infrastructure giving the received messages. " alt="" coords="5,80,184,121"/>
+<area shape="rect" id="node3" href="$classFlourishVehicleRulesEngine.html" title="Takes decision for a vehicle giving the received messages. " alt="" coords="209,87,394,114"/>
+</map>

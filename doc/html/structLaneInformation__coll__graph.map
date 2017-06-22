@@ -1,0 +1,16 @@
+<map id="LaneInformation" name="LaneInformation">
+<area shape="rect" id="node2" href="$structasn__struct__ctx__s.html" title="asn_struct_ctx_s" alt="" coords="5,447,128,473"/>
+<area shape="rect" id="node3" href="$structCompleteVehicleCharacteristics.html" title="CompleteVehicleCharacteristics" alt="" coords="955,235,1164,261"/>
+<area shape="rect" id="node4" href="$structTractorCharacteristics.html" title="TractorCharacteristics" alt="" coords="669,235,819,261"/>
+<area shape="rect" id="node5" href="$structTractorCharacteristics_1_1TractorCharacteristics____ranges.html" title="TractorCharacteristics\l::TractorCharacteristics\l__ranges" alt="" coords="233,181,392,237"/>
+<area shape="rect" id="node6" href="$structTractorCharacteristics_1_1TractorCharacteristics____notEqualTo.html" title="TractorCharacteristics\l::TractorCharacteristics\l__notEqualTo" alt="" coords="233,261,392,317"/>
+<area shape="rect" id="node7" href="$structTractorCharacteristics_1_1TractorCharacteristics____equalTo.html" title="TractorCharacteristics\l::TractorCharacteristics\l__equalTo" alt="" coords="233,341,392,397"/>
+<area shape="rect" id="node8" href="$structCompleteVehicleCharacteristics_1_1CompleteVehicleCharacteristics____trailer.html" title="CompleteVehicleCharacteristics\l::CompleteVehicleCharacteristics\l__trailer" alt="" coords="416,381,633,437"/>
+<area shape="rect" id="node9" href="$structDTM.html" title="DTM" alt="" coords="1034,605,1085,632"/>
+<area shape="rect" id="node10" href="$structBIT__STRING__s.html" title="BIT_STRING_s" alt="" coords="467,524,582,551"/>
+<area shape="rect" id="node11" href="$structDTM_1_1DTM____month__day.html" title="DTM::DTM__month_day" alt="" coords="661,605,827,632"/>
+<area shape="rect" id="node12" href="$structMonthDay.html" title="MonthDay" alt="" coords="271,636,354,663"/>
+<area shape="rect" id="node13" href="$structHoursMinutes.html" title="HoursMinutes" alt="" coords="261,687,364,713"/>
+<area shape="rect" id="node14" href="$structDTM_1_1DTM____hourMinutes.html" title="DTM::DTM__hourMinutes" alt="" coords="657,727,831,753"/>
+<area shape="rect" id="node15" href="$structDTM_1_1DTM____year.html" title="DTM::DTM__year" alt="" coords="461,805,588,832"/>
+</map>

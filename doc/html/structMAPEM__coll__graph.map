@@ -1,0 +1,11 @@
+<map id="MAPEM" name="MAPEM">
+<area shape="rect" id="node2" href="$structMapData.html" title="MapData" alt="" coords="920,200,995,227"/>
+<area shape="rect" id="node3" href="$structRestrictionClassList.html" title="RestrictionClassList" alt="" coords="397,120,537,147"/>
+<area shape="rect" id="node4" href="$structasn__struct__ctx__s.html" title="asn_struct_ctx_s" alt="" coords="5,223,128,249"/>
+<area shape="rect" id="node5" href="$structRoadSegmentList.html" title="RoadSegmentList" alt="" coords="403,176,530,203"/>
+<area shape="rect" id="node6" href="$structMapData_1_1MapData____regional.html" title="MapData::MapData__regional" alt="" coords="575,244,769,271"/>
+<area shape="rect" id="node7" href="$structIntersectionGeometryList.html" title="IntersectionGeometryList" alt="" coords="383,289,551,316"/>
+<area shape="rect" id="node8" href="$structDataParameters.html" title="DataParameters" alt="" coords="613,357,731,384"/>
+<area shape="rect" id="node9" href="$structOCTET__STRING.html" title="OCTET_STRING" alt="" coords="233,401,359,428"/>
+<area shape="rect" id="node10" href="$structItsPduHeader.html" title="ItsPduHeader" alt="" coords="793,429,896,456"/>
+</map>

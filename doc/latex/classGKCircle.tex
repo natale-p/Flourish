@@ -1,0 +1,316 @@
+\hypertarget{classGKCircle}{}\section{G\+K\+Circle Class Reference}
+\label{classGKCircle}\index{G\+K\+Circle@{G\+K\+Circle}}
+
+
+A 2D Circle.  
+
+
+
+
+{\ttfamily \#include $<$G\+K\+Circle.\+h$>$}
+
+
+
+Inheritance diagram for G\+K\+Circle\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=165pt]{classGKCircle__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for G\+K\+Circle\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{classGKCircle__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classGKCircle_ac8773f84e358b70ef1f26adbce1e047e}{G\+K\+Circle} ()
+\begin{DoxyCompactList}\small\item\em Constructor. Default values\+: \end{DoxyCompactList}\item 
+void \hyperlink{classGKCircle_a24899c7875caed4c452ec6b9fd52d5a6}{set\+Pen\+Color} (const Q\+Color \&color)
+\item 
+const Q\+Color \& \hyperlink{classGKCircle_a934b4b2fccce3683aff98cfea8a47f25}{get\+Pen\+Color} () const 
+\item 
+void \hyperlink{classGKCircle_acc101fb7fffe59c7901340c67bf737f4}{set\+Pen\+Style} (const Qt\+::\+Pen\+Style \&astyle)
+\item 
+const Qt\+::\+Pen\+Style \& \hyperlink{classGKCircle_a93722085db829db84504aff914ea847b}{get\+Pen\+Style} () const 
+\item 
+void \hyperlink{classGKCircle_ae368ef101c9d3160836d52fc9817b4bc}{set\+Pen\+Size} (float size)
+\item 
+float \hyperlink{classGKCircle_a0c84de99ad24d9ba95111e934cdfa5d3}{get\+Pen\+Size} () const 
+\item 
+void \hyperlink{classGKCircle_a9c6c59618f5ea6ad78bce94cf0cc260e}{set\+Pen\+Size\+Units} (const \hyperlink{namespaceGK_adde45307f3be11d926c291a749271263}{G\+K\+::\+Size\+Units} \&units)
+\item 
+const \hyperlink{namespaceGK_adde45307f3be11d926c291a749271263}{G\+K\+::\+Size\+Units} \& \hyperlink{classGKCircle_aec301a3b9027976a9f1a04c7e83a9e58}{get\+Pen\+Size\+Units} () const 
+\item 
+void \hyperlink{classGKCircle_af6f55ceedaad054ba9c1344be5e36e95}{set\+Brush\+Color} (const Q\+Color \&color)
+\item 
+const Q\+Color \& \hyperlink{classGKCircle_a9891dcb030190339cf003c96bf0a0b7a}{get\+Brush\+Color} () const 
+\item 
+void \hyperlink{classGKCircle_a10fd31dc02b93b59fcccb24affd01974}{set\+Brush\+Style} (const Qt\+::\+Brush\+Style \&astyle)
+\item 
+const Qt\+::\+Brush\+Style \& \hyperlink{classGKCircle_aed80d8e34b178d54e32f6749e1714357}{get\+Brush\+Style} () const 
+\item 
+float \hyperlink{classGKCircle_a1ec897531666363e98707aa4379e61f5}{get\+Radius} () const 
+\item 
+void \hyperlink{classGKCircle_a69bcf4bdfd4cb4ca7dcd6c7b3238d33b}{set\+Radius} (float r)
+\item 
+virtual \hyperlink{classGKObject}{G\+K\+Object} $\ast$ \hyperlink{classGKCircle_a2b820f2a2970c26fc00d551a928666c5}{clone} (bool add\+It\+To\+Model=true) const 
+\item 
+\hyperlink{classGKBBox}{G\+K\+B\+Box} \hyperlink{classGKCircle_a226d8bd48d2a1103abc07503eb890675}{get\+B\+Box} () const \hypertarget{classGKCircle_a226d8bd48d2a1103abc07503eb890675}{}\label{classGKCircle_a226d8bd48d2a1103abc07503eb890675}
+
+\begin{DoxyCompactList}\small\item\em Gets the bbox of this object. The default implementation returns an undefined \hyperlink{classGKBBox}{G\+K\+B\+Box}. \end{DoxyCompactList}\item 
+void \hyperlink{classGKCircle_aec9a628a5bad05a693e9786cf92a5284}{store} (G\+K\+Data\+Stream \&s)\hypertarget{classGKCircle_aec9a628a5bad05a693e9786cf92a5284}{}\label{classGKCircle_aec9a628a5bad05a693e9786cf92a5284}
+
+\begin{DoxyCompactList}\small\item\em Stores the object in a file. \end{DoxyCompactList}\item 
+void \hyperlink{classGKCircle_a7ddc3f516e412e5d002886f087bcdfa4}{restore} (G\+K\+Data\+Stream \&s)\hypertarget{classGKCircle_a7ddc3f516e412e5d002886f087bcdfa4}{}\label{classGKCircle_a7ddc3f516e412e5d002886f087bcdfa4}
+
+\begin{DoxyCompactList}\small\item\em Restores the object from a file. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classGKCircle_a929dd6179836a5deb5f03a8720dd61b5}{store\+X\+ML} (G\+K\+Text\+Stream \&s)\hypertarget{classGKCircle_a929dd6179836a5deb5f03a8720dd61b5}{}\label{classGKCircle_a929dd6179836a5deb5f03a8720dd61b5}
+
+\begin{DoxyCompactList}\small\item\em Stores the object in a file. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classGKCircle_ac8fc079796a0a89408ec77d9a7f74cc8}{restore\+X\+ML} (G\+K\+Text\+Stream \&s, Q\+Dom\+Node \&node)\hypertarget{classGKCircle_ac8fc079796a0a89408ec77d9a7f74cc8}{}\label{classGKCircle_ac8fc079796a0a89408ec77d9a7f74cc8}
+
+\begin{DoxyCompactList}\small\item\em Restores the object from a file. \end{DoxyCompactList}\item 
+virtual G\+K\+Object\+Del\+Cmd $\ast$ \hyperlink{classGKCircle_ac7a927ddee87c516bb0764c38d937364}{get\+Del\+Cmd} ()
+\item 
+bool {\bfseries to\+Json} (G\+K\+J\+Son\+Storer \&context, G\+K\+Json\+Object\+Parts \&parts) const \hypertarget{classGKCircle_a7ddb37d3c39748cfd6e03c73b7c1280a}{}\label{classGKCircle_a7ddb37d3c39748cfd6e03c73b7c1280a}
+
+\item 
+bool {\bfseries from\+Json} (G\+K\+J\+Son\+Storer \&context, const G\+K\+Json\+Object\+Parts \&parts)\hypertarget{classGKCircle_a43d1bb224b7a6d5e8af99a01f6fc3cc1}{}\label{classGKCircle_a43d1bb224b7a6d5e8af99a01f6fc3cc1}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static uint \hyperlink{classGKCircle_a270ea9935fb1b96d75e8a6e0fae0df58}{radius\+Att}
+\item 
+static uint \hyperlink{classGKCircle_a856335ddf2a8a08cf9dc883756987792}{pen\+Style\+Attr}
+\item 
+static uint \hyperlink{classGKCircle_a2fe3b334156d797f338f6266dfe1aa0b}{pen\+Color\+Attr}
+\item 
+static uint \hyperlink{classGKCircle_adc9c156f7bafda83d9e429bbd96f3764}{pen\+Size\+Attr}
+\item 
+static uint \hyperlink{classGKCircle_aa0a92a1ecdff12dfb393f5d86886d640}{brush\+Style\+Attr}
+\item 
+static uint \hyperlink{classGKCircle_a0c8f5f5a201442b85f1d9749fe359b22}{brush\+Color\+Attr}
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float {\bfseries radius}\hypertarget{classGKCircle_ab782440c46d59eb715925a1fbd301a54}{}\label{classGKCircle_ab782440c46d59eb715925a1fbd301a54}
+
+\item 
+Qt\+::\+Pen\+Style {\bfseries style}\hypertarget{classGKCircle_a0083e4393092c97cb6c51269facfe613}{}\label{classGKCircle_a0083e4393092c97cb6c51269facfe613}
+
+\item 
+Q\+Color {\bfseries color}\hypertarget{classGKCircle_a8e89582934dbf07b8076173bdc807c2d}{}\label{classGKCircle_a8e89582934dbf07b8076173bdc807c2d}
+
+\item 
+float {\bfseries pen\+Size}\hypertarget{classGKCircle_a0a20823dff855aa74ddf48034da8d591}{}\label{classGKCircle_a0a20823dff855aa74ddf48034da8d591}
+
+\item 
+\hyperlink{namespaceGK_adde45307f3be11d926c291a749271263}{G\+K\+::\+Size\+Units} {\bfseries pen\+Size\+Units}\hypertarget{classGKCircle_a0b924c29b8a5e34d53817d6dc2ab47d9}{}\label{classGKCircle_a0b924c29b8a5e34d53817d6dc2ab47d9}
+
+\item 
+Qt\+::\+Brush\+Style {\bfseries brush\+Style}\hypertarget{classGKCircle_a4d13bbbf5713247b9c2c0b32751218dc}{}\label{classGKCircle_a4d13bbbf5713247b9c2c0b32751218dc}
+
+\item 
+Q\+Color {\bfseries brush\+Color}\hypertarget{classGKCircle_a623689be849449444d67631791d04511}{}\label{classGKCircle_a623689be849449444d67631791d04511}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static float {\bfseries gk\+Min\+Radius}\hypertarget{classGKCircle_ada1d7ff00407e0cc2f4dcafe43613480}{}\label{classGKCircle_ada1d7ff00407e0cc2f4dcafe43613480}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A 2D Circle. 
+
+A \hyperlink{classGKCircle}{G\+K\+Circle} represents a circle with a radius (expressed in metres), and is drawn with a fill and an outline.
+\begin{DoxyItemize}
+\item The outline is drawn using the pen\+Style, pen\+Color, pen\+Size and pen\+Size\+Units properties.
+\item The fill is drawn using the brush\+Style and brush\+Color properties. 
+\end{DoxyItemize}
+
+\subsection{Constructor \& Destructor Documentation}
+\index{G\+K\+Circle@{G\+K\+Circle}!G\+K\+Circle@{G\+K\+Circle}}
+\index{G\+K\+Circle@{G\+K\+Circle}!G\+K\+Circle@{G\+K\+Circle}}
+\subsubsection[{\texorpdfstring{G\+K\+Circle()}{GKCircle()}}]{\setlength{\rightskip}{0pt plus 5cm}G\+K\+Circle\+::\+G\+K\+Circle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKCircle_ac8773f84e358b70ef1f26adbce1e047e}{}\label{classGKCircle_ac8773f84e358b70ef1f26adbce1e047e}
+
+
+Constructor. Default values\+: 
+
+
+\begin{DoxyItemize}
+\item pen\+Style\+: solid line
+\item pen\+Color\+: black
+\item pen\+Size\+: 1.\+0
+\item pen\+Size\+Units\+: G\+K\+::e\+Pixels
+\item brush\+Style\+: No\+Brush
+\item brush\+Color\+: black
+\item radius\+: 1.\+0 
+\end{DoxyItemize}
+
+\subsection{Member Function Documentation}
+\index{G\+K\+Circle@{G\+K\+Circle}!clone@{clone}}
+\index{clone@{clone}!G\+K\+Circle@{G\+K\+Circle}}
+\subsubsection[{\texorpdfstring{clone(bool add\+It\+To\+Model=true) const }{clone(bool addItToModel=true) const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf G\+K\+Object}$\ast$ G\+K\+Circle\+::clone (
+\begin{DoxyParamCaption}
+\item[{bool}]{add\+It\+To\+Model = {\ttfamily true}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKCircle_a2b820f2a2970c26fc00d551a928666c5}{}\label{classGKCircle_a2b820f2a2970c26fc00d551a928666c5}
+Returns a clone of this object (minus the ID that will be different). The cloned object will be added to the model (it will be created using the G\+K\+System\+::new\+Object call. 
+
+Reimplemented from \hyperlink{classGKDPoint_a8289d0a5357e581c7a0450f8fa649ecd}{G\+K\+D\+Point}.
+
+\index{G\+K\+Circle@{G\+K\+Circle}!get\+Brush\+Color@{get\+Brush\+Color}}
+\index{get\+Brush\+Color@{get\+Brush\+Color}!G\+K\+Circle@{G\+K\+Circle}}
+\subsubsection[{\texorpdfstring{get\+Brush\+Color() const }{getBrushColor() const }}]{\setlength{\rightskip}{0pt plus 5cm}const Q\+Color\& G\+K\+Circle\+::get\+Brush\+Color (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKCircle_a9891dcb030190339cf003c96bf0a0b7a}{}\label{classGKCircle_a9891dcb030190339cf003c96bf0a0b7a}
+Gets the circle\textquotesingle{}s brush\+Color. \index{G\+K\+Circle@{G\+K\+Circle}!get\+Brush\+Style@{get\+Brush\+Style}}
+\index{get\+Brush\+Style@{get\+Brush\+Style}!G\+K\+Circle@{G\+K\+Circle}}
+\subsubsection[{\texorpdfstring{get\+Brush\+Style() const }{getBrushStyle() const }}]{\setlength{\rightskip}{0pt plus 5cm}const Qt\+::\+Brush\+Style\& G\+K\+Circle\+::get\+Brush\+Style (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKCircle_aed80d8e34b178d54e32f6749e1714357}{}\label{classGKCircle_aed80d8e34b178d54e32f6749e1714357}
+Gets the circle\textquotesingle{}s brush\+Style. \index{G\+K\+Circle@{G\+K\+Circle}!get\+Del\+Cmd@{get\+Del\+Cmd}}
+\index{get\+Del\+Cmd@{get\+Del\+Cmd}!G\+K\+Circle@{G\+K\+Circle}}
+\subsubsection[{\texorpdfstring{get\+Del\+Cmd()}{getDelCmd()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual G\+K\+Object\+Del\+Cmd$\ast$ G\+K\+Circle\+::get\+Del\+Cmd (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKCircle_ac7a927ddee87c516bb0764c38d937364}{}\label{classGKCircle_ac7a927ddee87c516bb0764c38d937364}
+Object will be deleted. The user must write a suitable G\+K\+Object\+Del\+Cmd subclass and return it in this method. The implementation in this class returns a G\+K\+Object\+Del\+Cmd as it is (it removes the object from the G\+K\+Model and delete it if needed after command destruction, removes the object from the G\+K\+Geo\+Model and removes connections to it). 
+
+Reimplemented from \hyperlink{classGKDPoint_a7d0d52055586cf5807d1db051c0eea1f}{G\+K\+D\+Point}.
+
+\index{G\+K\+Circle@{G\+K\+Circle}!get\+Pen\+Color@{get\+Pen\+Color}}
+\index{get\+Pen\+Color@{get\+Pen\+Color}!G\+K\+Circle@{G\+K\+Circle}}
+\subsubsection[{\texorpdfstring{get\+Pen\+Color() const }{getPenColor() const }}]{\setlength{\rightskip}{0pt plus 5cm}const Q\+Color\& G\+K\+Circle\+::get\+Pen\+Color (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKCircle_a934b4b2fccce3683aff98cfea8a47f25}{}\label{classGKCircle_a934b4b2fccce3683aff98cfea8a47f25}
+Gets the circle\textquotesingle{}s pen\+Color. \index{G\+K\+Circle@{G\+K\+Circle}!get\+Pen\+Size@{get\+Pen\+Size}}
+\index{get\+Pen\+Size@{get\+Pen\+Size}!G\+K\+Circle@{G\+K\+Circle}}
+\subsubsection[{\texorpdfstring{get\+Pen\+Size() const }{getPenSize() const }}]{\setlength{\rightskip}{0pt plus 5cm}float G\+K\+Circle\+::get\+Pen\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKCircle_a0c84de99ad24d9ba95111e934cdfa5d3}{}\label{classGKCircle_a0c84de99ad24d9ba95111e934cdfa5d3}
+Gets the circle\textquotesingle{}s pen\+Size. \index{G\+K\+Circle@{G\+K\+Circle}!get\+Pen\+Size\+Units@{get\+Pen\+Size\+Units}}
+\index{get\+Pen\+Size\+Units@{get\+Pen\+Size\+Units}!G\+K\+Circle@{G\+K\+Circle}}
+\subsubsection[{\texorpdfstring{get\+Pen\+Size\+Units() const }{getPenSizeUnits() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf G\+K\+::\+Size\+Units}\& G\+K\+Circle\+::get\+Pen\+Size\+Units (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKCircle_aec301a3b9027976a9f1a04c7e83a9e58}{}\label{classGKCircle_aec301a3b9027976a9f1a04c7e83a9e58}
+Gets the circle\textquotesingle{}s pen\+Size\+Units. \index{G\+K\+Circle@{G\+K\+Circle}!get\+Pen\+Style@{get\+Pen\+Style}}
+\index{get\+Pen\+Style@{get\+Pen\+Style}!G\+K\+Circle@{G\+K\+Circle}}
+\subsubsection[{\texorpdfstring{get\+Pen\+Style() const }{getPenStyle() const }}]{\setlength{\rightskip}{0pt plus 5cm}const Qt\+::\+Pen\+Style\& G\+K\+Circle\+::get\+Pen\+Style (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKCircle_a93722085db829db84504aff914ea847b}{}\label{classGKCircle_a93722085db829db84504aff914ea847b}
+Gets the circle\textquotesingle{}s pen\+Style. \index{G\+K\+Circle@{G\+K\+Circle}!get\+Radius@{get\+Radius}}
+\index{get\+Radius@{get\+Radius}!G\+K\+Circle@{G\+K\+Circle}}
+\subsubsection[{\texorpdfstring{get\+Radius() const }{getRadius() const }}]{\setlength{\rightskip}{0pt plus 5cm}float G\+K\+Circle\+::get\+Radius (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKCircle_a1ec897531666363e98707aa4379e61f5}{}\label{classGKCircle_a1ec897531666363e98707aa4379e61f5}
+Gets the circle\textquotesingle{}s radius (in metres). \index{G\+K\+Circle@{G\+K\+Circle}!set\+Brush\+Color@{set\+Brush\+Color}}
+\index{set\+Brush\+Color@{set\+Brush\+Color}!G\+K\+Circle@{G\+K\+Circle}}
+\subsubsection[{\texorpdfstring{set\+Brush\+Color(const Q\+Color \&color)}{setBrushColor(const QColor &color)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+Circle\+::set\+Brush\+Color (
+\begin{DoxyParamCaption}
+\item[{const Q\+Color \&}]{color}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKCircle_af6f55ceedaad054ba9c1344be5e36e95}{}\label{classGKCircle_af6f55ceedaad054ba9c1344be5e36e95}
+Sets the circle\textquotesingle{}s brush\+Color. \index{G\+K\+Circle@{G\+K\+Circle}!set\+Brush\+Style@{set\+Brush\+Style}}
+\index{set\+Brush\+Style@{set\+Brush\+Style}!G\+K\+Circle@{G\+K\+Circle}}
+\subsubsection[{\texorpdfstring{set\+Brush\+Style(const Qt\+::\+Brush\+Style \&astyle)}{setBrushStyle(const Qt::BrushStyle &astyle)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+Circle\+::set\+Brush\+Style (
+\begin{DoxyParamCaption}
+\item[{const Qt\+::\+Brush\+Style \&}]{astyle}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKCircle_a10fd31dc02b93b59fcccb24affd01974}{}\label{classGKCircle_a10fd31dc02b93b59fcccb24affd01974}
+Sets the circle\textquotesingle{}s brush\+Style. \index{G\+K\+Circle@{G\+K\+Circle}!set\+Pen\+Color@{set\+Pen\+Color}}
+\index{set\+Pen\+Color@{set\+Pen\+Color}!G\+K\+Circle@{G\+K\+Circle}}
+\subsubsection[{\texorpdfstring{set\+Pen\+Color(const Q\+Color \&color)}{setPenColor(const QColor &color)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+Circle\+::set\+Pen\+Color (
+\begin{DoxyParamCaption}
+\item[{const Q\+Color \&}]{color}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKCircle_a24899c7875caed4c452ec6b9fd52d5a6}{}\label{classGKCircle_a24899c7875caed4c452ec6b9fd52d5a6}
+Sets the circle\textquotesingle{}s pen\+Color. \index{G\+K\+Circle@{G\+K\+Circle}!set\+Pen\+Size@{set\+Pen\+Size}}
+\index{set\+Pen\+Size@{set\+Pen\+Size}!G\+K\+Circle@{G\+K\+Circle}}
+\subsubsection[{\texorpdfstring{set\+Pen\+Size(float size)}{setPenSize(float size)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+Circle\+::set\+Pen\+Size (
+\begin{DoxyParamCaption}
+\item[{float}]{size}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKCircle_ae368ef101c9d3160836d52fc9817b4bc}{}\label{classGKCircle_ae368ef101c9d3160836d52fc9817b4bc}
+Sets the circle\textquotesingle{}s pen\+Size. \index{G\+K\+Circle@{G\+K\+Circle}!set\+Pen\+Size\+Units@{set\+Pen\+Size\+Units}}
+\index{set\+Pen\+Size\+Units@{set\+Pen\+Size\+Units}!G\+K\+Circle@{G\+K\+Circle}}
+\subsubsection[{\texorpdfstring{set\+Pen\+Size\+Units(const G\+K\+::\+Size\+Units \&units)}{setPenSizeUnits(const GK::SizeUnits &units)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+Circle\+::set\+Pen\+Size\+Units (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+::\+Size\+Units} \&}]{units}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKCircle_a9c6c59618f5ea6ad78bce94cf0cc260e}{}\label{classGKCircle_a9c6c59618f5ea6ad78bce94cf0cc260e}
+Sets the circle\textquotesingle{}s pen\+Size\+Units. \index{G\+K\+Circle@{G\+K\+Circle}!set\+Pen\+Style@{set\+Pen\+Style}}
+\index{set\+Pen\+Style@{set\+Pen\+Style}!G\+K\+Circle@{G\+K\+Circle}}
+\subsubsection[{\texorpdfstring{set\+Pen\+Style(const Qt\+::\+Pen\+Style \&astyle)}{setPenStyle(const Qt::PenStyle &astyle)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+Circle\+::set\+Pen\+Style (
+\begin{DoxyParamCaption}
+\item[{const Qt\+::\+Pen\+Style \&}]{astyle}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKCircle_acc101fb7fffe59c7901340c67bf737f4}{}\label{classGKCircle_acc101fb7fffe59c7901340c67bf737f4}
+Sets the circle\textquotesingle{}s pen\+Style. \index{G\+K\+Circle@{G\+K\+Circle}!set\+Radius@{set\+Radius}}
+\index{set\+Radius@{set\+Radius}!G\+K\+Circle@{G\+K\+Circle}}
+\subsubsection[{\texorpdfstring{set\+Radius(float r)}{setRadius(float r)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+Circle\+::set\+Radius (
+\begin{DoxyParamCaption}
+\item[{float}]{r}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKCircle_a69bcf4bdfd4cb4ca7dcd6c7b3238d33b}{}\label{classGKCircle_a69bcf4bdfd4cb4ca7dcd6c7b3238d33b}
+Sets the circle\textquotesingle{}s radius (in metres). 
+
+\subsection{Member Data Documentation}
+\index{G\+K\+Circle@{G\+K\+Circle}!brush\+Color\+Attr@{brush\+Color\+Attr}}
+\index{brush\+Color\+Attr@{brush\+Color\+Attr}!G\+K\+Circle@{G\+K\+Circle}}
+\subsubsection[{\texorpdfstring{brush\+Color\+Attr}{brushColorAttr}}]{\setlength{\rightskip}{0pt plus 5cm}uint G\+K\+Circle\+::brush\+Color\+Attr\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classGKCircle_a0c8f5f5a201442b85f1d9749fe359b22}{}\label{classGKCircle_a0c8f5f5a201442b85f1d9749fe359b22}
+Brush Colour \index{G\+K\+Circle@{G\+K\+Circle}!brush\+Style\+Attr@{brush\+Style\+Attr}}
+\index{brush\+Style\+Attr@{brush\+Style\+Attr}!G\+K\+Circle@{G\+K\+Circle}}
+\subsubsection[{\texorpdfstring{brush\+Style\+Attr}{brushStyleAttr}}]{\setlength{\rightskip}{0pt plus 5cm}uint G\+K\+Circle\+::brush\+Style\+Attr\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classGKCircle_aa0a92a1ecdff12dfb393f5d86886d640}{}\label{classGKCircle_aa0a92a1ecdff12dfb393f5d86886d640}
+Brush Style \index{G\+K\+Circle@{G\+K\+Circle}!pen\+Color\+Attr@{pen\+Color\+Attr}}
+\index{pen\+Color\+Attr@{pen\+Color\+Attr}!G\+K\+Circle@{G\+K\+Circle}}
+\subsubsection[{\texorpdfstring{pen\+Color\+Attr}{penColorAttr}}]{\setlength{\rightskip}{0pt plus 5cm}uint G\+K\+Circle\+::pen\+Color\+Attr\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classGKCircle_a2fe3b334156d797f338f6266dfe1aa0b}{}\label{classGKCircle_a2fe3b334156d797f338f6266dfe1aa0b}
+Pen Colour \index{G\+K\+Circle@{G\+K\+Circle}!pen\+Size\+Attr@{pen\+Size\+Attr}}
+\index{pen\+Size\+Attr@{pen\+Size\+Attr}!G\+K\+Circle@{G\+K\+Circle}}
+\subsubsection[{\texorpdfstring{pen\+Size\+Attr}{penSizeAttr}}]{\setlength{\rightskip}{0pt plus 5cm}uint G\+K\+Circle\+::pen\+Size\+Attr\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classGKCircle_adc9c156f7bafda83d9e429bbd96f3764}{}\label{classGKCircle_adc9c156f7bafda83d9e429bbd96f3764}
+Pen Size \index{G\+K\+Circle@{G\+K\+Circle}!pen\+Style\+Attr@{pen\+Style\+Attr}}
+\index{pen\+Style\+Attr@{pen\+Style\+Attr}!G\+K\+Circle@{G\+K\+Circle}}
+\subsubsection[{\texorpdfstring{pen\+Style\+Attr}{penStyleAttr}}]{\setlength{\rightskip}{0pt plus 5cm}uint G\+K\+Circle\+::pen\+Style\+Attr\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classGKCircle_a856335ddf2a8a08cf9dc883756987792}{}\label{classGKCircle_a856335ddf2a8a08cf9dc883756987792}
+Pen Style \index{G\+K\+Circle@{G\+K\+Circle}!radius\+Att@{radius\+Att}}
+\index{radius\+Att@{radius\+Att}!G\+K\+Circle@{G\+K\+Circle}}
+\subsubsection[{\texorpdfstring{radius\+Att}{radiusAtt}}]{\setlength{\rightskip}{0pt plus 5cm}uint G\+K\+Circle\+::radius\+Att\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classGKCircle_a270ea9935fb1b96d75e8a6e0fae0df58}{}\label{classGKCircle_a270ea9935fb1b96d75e8a6e0fae0df58}
+Radius 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/core/ang\+\_\+kernel/G\+K\+Circle.\+h\end{DoxyCompactItemize}

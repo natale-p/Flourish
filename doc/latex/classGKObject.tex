@@ -1,0 +1,1655 @@
+\hypertarget{classGKObject}{}\section{G\+K\+Object Class Reference}
+\label{classGKObject}\index{G\+K\+Object@{G\+K\+Object}}
+
+
+Main class, almost all the objects derivate from this class.  
+
+
+
+
+{\ttfamily \#include $<$G\+K\+Object.\+h$>$}
+
+
+
+Inheritance diagram for G\+K\+Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=165pt]{classGKObject__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for G\+K\+Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{classGKObject__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classGKObject_af9a418378f637f4666f50b720f9f41e4}{Identifier\+Form\+Flag} \{ \\*
+{\bfseries e\+Identifier\+Default} = 0x0000, 
+{\bfseries e\+Identifier\+Id} = 0x0001, 
+{\bfseries e\+Identifier\+Name} = 0x0002, 
+{\bfseries e\+Identifier\+External\+Id} = 0x0004, 
+\\*
+{\bfseries e\+Identifier\+Type\+External\+Name} = 0x0008, 
+{\bfseries e\+Identifier\+Description} = 0x0010, 
+{\bfseries e\+Identifier\+Standard} = e\+Identifier\+Id $\vert$ e\+Identifier\+Name $\vert$ e\+Identifier\+External\+Id, 
+{\bfseries e\+Identifier\+Standard\+With\+Type} = e\+Identifier\+Standard $\vert$ e\+Identifier\+Type\+External\+Name, 
+\\*
+{\bfseries e\+Identifier\+All} = e\+Identifier\+Standard\+With\+Type $\vert$ e\+Identifier\+Description
+ \}
+\item 
+enum \hyperlink{classGKObject_a097bd6e3a9c40a1b2d53cde7b171c851}{G\+K\+Lock\+Type} \{ {\bfseries e\+None}, 
+{\bfseries e\+Modification}, 
+{\bfseries e\+Delete}, 
+{\bfseries e\+Modification\+Delete}
+ \}
+\item 
+enum \hyperlink{classGKObject_ad8cb816946f2bd9e34714a830b14f3b8}{G\+K\+Object\+Status} \{ {\bfseries e\+New}, 
+{\bfseries e\+Saved}, 
+{\bfseries e\+Modified}, 
+{\bfseries e\+Deleted}
+ \}
+\item 
+enum {\bfseries Json\+Extra\+Status} \{ {\bfseries e\+Unmodified\+Extra}, 
+{\bfseries e\+Modified\+Extra}
+ \}\hypertarget{classGKObject_a7eb29d7fb8263e8b64b091566c500418}{}\label{classGKObject_a7eb29d7fb8263e8b64b091566c500418}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries G\+K\+Object} (const \hyperlink{classGKObject}{G\+K\+Object} \&o)\hypertarget{classGKObject_a82545d9836efe1fb18f711087110fe2d}{}\label{classGKObject_a82545d9836efe1fb18f711087110fe2d}
+
+\item 
+virtual void \hyperlink{classGKObject_a9ee62f3b50ef85349f812f34ad534801}{added\+To\+Catalog} ()\hypertarget{classGKObject_a9ee62f3b50ef85349f812f34ad534801}{}\label{classGKObject_a9ee62f3b50ef85349f812f34ad534801}
+
+\begin{DoxyCompactList}\small\item\em Called by the catalogue when this object is added to it. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classGKObject_ab5f3d4044907b3b1aef653575981eeab}{removed\+From\+Catalog} ()\hypertarget{classGKObject_ab5f3d4044907b3b1aef653575981eeab}{}\label{classGKObject_ab5f3d4044907b3b1aef653575981eeab}
+
+\begin{DoxyCompactList}\small\item\em Called by the catalogue when this object is removed from it. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classGKObject_a81a2e8cee6d6d6d59ab57683310732ea}{store} (G\+K\+Data\+Stream \&s)\hypertarget{classGKObject_a81a2e8cee6d6d6d59ab57683310732ea}{}\label{classGKObject_a81a2e8cee6d6d6d59ab57683310732ea}
+
+\begin{DoxyCompactList}\small\item\em Stores the object in a file. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classGKObject_a94de210200c6b594d903984ba1bb55d9}{restore} (G\+K\+Data\+Stream \&s)\hypertarget{classGKObject_a94de210200c6b594d903984ba1bb55d9}{}\label{classGKObject_a94de210200c6b594d903984ba1bb55d9}
+
+\begin{DoxyCompactList}\small\item\em Restores the object from a file. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classGKObject_a7931e3a71ea833111d2c5992a51094ca}{restore\+From\+Copy} (G\+K\+Data\+Stream \&s)\hypertarget{classGKObject_a7931e3a71ea833111d2c5992a51094ca}{}\label{classGKObject_a7931e3a71ea833111d2c5992a51094ca}
+
+\begin{DoxyCompactList}\small\item\em Restores the object from a copy. This implementation calls restore. Others can do extra steps (for example, an external matrix will copy the file too) \end{DoxyCompactList}\item 
+virtual Q\+String \hyperlink{classGKObject_a448719529af8ce2ac16209f3ba1472d2}{test\+Restore} (G\+K\+Data\+Stream \&s)\hypertarget{classGKObject_a448719529af8ce2ac16209f3ba1472d2}{}\label{classGKObject_a448719529af8ce2ac16209f3ba1472d2}
+
+\begin{DoxyCompactList}\small\item\em A test function that restores this object to a string. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classGKObject_afd278ae77f692983059e45391532b9d3}{check\+For\+Validity} (G\+K\+Data\+Stream \&s)
+\item 
+virtual void \hyperlink{classGKObject_a443757bcfd3dee1826155a3f89497c8e}{post\+Restore} (G\+K\+Data\+Stream \&)
+\item 
+virtual void \hyperlink{classGKObject_a346bb3a641dcb5b5dc2b4880f9db2fc0}{post\+Restore\+Unsafe} (G\+K\+Data\+Stream \&)
+\item 
+virtual bool \hyperlink{classGKObject_a273a3ce4b93e48816f1223da4d10e3ea}{can\+Decode} (const Q\+Mime\+Data $\ast$)
+\item 
+quint32 \hyperlink{classGKObject_a160a938613052ed297caa8ae3ded57cf}{get\+Tick} () const 
+\item 
+virtual void \hyperlink{classGKObject_aa021efb86f83770079d8f10f4cf67b99}{increase\+Tick} ()
+\item 
+void \hyperlink{classGKObject_a8ae4a2e273c269e00bd993f378b78e8e}{set\+Tick} (quint32 t)
+\item 
+\hyperlink{classGKObject}{G\+K\+Object} \& \hyperlink{classGKObject_a67f49064bb49dd5e683b593aea715e91}{operator=} (const \hyperlink{classGKObject}{G\+K\+Object} \&item)
+\item 
+bool \hyperlink{classGKObject_a6585152b7a3103309c3fd90a220b8ec5}{operator$<$} (const \hyperlink{classGKObject}{G\+K\+Object} \&item) const 
+\item 
+virtual \hyperlink{classGKObject}{G\+K\+Object} $\ast$ \hyperlink{classGKObject_a0b70f4563bd69f3a4ff5d5a893b4e221}{clone} (bool add\+It\+To\+Model=true) const 
+\item 
+G\+K\+Folder $\ast$ \hyperlink{classGKObject_abdb8fcf05d860a385f77ce7ae880e705}{get\+Create\+Root\+Folder} ()\hypertarget{classGKObject_abdb8fcf05d860a385f77ce7ae880e705}{}\label{classGKObject_abdb8fcf05d860a385f77ce7ae880e705}
+
+\begin{DoxyCompactList}\small\item\em Returns the root folder. If the root folder doesn\textquotesingle{}t exist it will create one. \end{DoxyCompactList}\item 
+G\+K\+Folder $\ast$ \hyperlink{classGKObject_a4d404efa6f242bdf3d8a5984578e854b}{get\+Root\+Folder} () const \hypertarget{classGKObject_a4d404efa6f242bdf3d8a5984578e854b}{}\label{classGKObject_a4d404efa6f242bdf3d8a5984578e854b}
+
+\begin{DoxyCompactList}\small\item\em Can return N\+U\+LL (no folder) or an empty list (no folders again). \end{DoxyCompactList}\item 
+void \hyperlink{classGKObject_a85e67cb58a286d7c1e212640c1516989}{set\+Root\+Folder} (G\+K\+Folder $\ast$afolder)
+\item 
+G\+K\+Folder $\ast$ \hyperlink{classGKObject_a0584dde84922527e708fff3bc4ea2053}{find\+Folder} (const Q\+String \&by\+Name) const 
+\item 
+void \hyperlink{classGKObject_af834154bd1e5db51631820b5a4729b5a}{rename\+Folder} (const Q\+String \&internal\+Name, const Q\+String \&external\+Name)
+\item 
+Q\+Vector$<$ G\+K\+Folder $\ast$ $>$ \hyperlink{classGKObject_a5c23864ce223cf35232f4f455b26d0a7}{get\+Parent\+Folders} () const 
+\item 
+virtual G\+K\+Object\+Set \hyperlink{classGKObject_a00c609e3db6da98bc61abf70883c03b2}{get\+Used\+Objects} (bool recursive=true) const 
+\item 
+virtual void \hyperlink{classGKObject_a9f03837861b142b10ac690b335167fcd}{mutate\+Column} (const G\+K\+Column $\ast$attr, const Q\+Variant \&v)
+\item 
+void \hyperlink{classGKObject_a1daf48cf86ffa4b66d6bfd40641957a6}{mutate\+Column\+By\+ID} (uint attr\+Id, const Q\+Variant \&v)
+\item 
+virtual void \hyperlink{classGKObject_a3fdd0ed3d079b17fc1410a453ef86d97}{mutate\+Column} (const G\+K\+Column $\ast$attr, const \hyperlink{classGKObject}{G\+K\+Object} $\ast$v)
+\item 
+void \hyperlink{classGKObject_aa75d70d3b93b12bf85318ba1e37b08fc}{mutate\+Column\+By\+ID} (uint attr\+Id, const \hyperlink{classGKObject}{G\+K\+Object} $\ast$v)
+\item 
+bool \hyperlink{classGKObject_a574e6d6ade01718cf6ad0b70a8fa6bb3}{is\+Data\+Value\+Null} (const G\+K\+Column $\ast$attr) const 
+\item 
+virtual Q\+Variant $\ast$ \hyperlink{classGKObject_ac75262d879bc8dc912234fe64a618726}{get\+Data\+Value} (const G\+K\+Column $\ast$attr, bool $\ast$deleteit, const \hyperlink{classGKContext}{G\+K\+Context} \&context=\hyperlink{classGKContext_a37de2dc1b6bab087b9b92a445922e79d}{G\+K\+Context\+::any\+Context}) const override
+\item 
+Q\+Variant $\ast$ \hyperlink{classGKObject_a2d81f6712c496054d22b0437eba0f1cc}{get\+Data\+Value\+By\+ID} (uint attr\+Id, bool $\ast$deleteit, const \hyperlink{classGKContext}{G\+K\+Context} \&context=\hyperlink{classGKContext_a37de2dc1b6bab087b9b92a445922e79d}{G\+K\+Context\+::any\+Context}) const override
+\item 
+virtual void \hyperlink{classGKObject_afc228a2c74e04adfbe58190698ce60d6}{set\+Data\+Value} (const G\+K\+Column $\ast$attr, const Q\+Variant \&v)
+\item 
+void \hyperlink{classGKObject_a98906ea35fbf174d07c8e28b7f00438c}{set\+Data\+Value\+By\+ID} (uint attr\+Id, const Q\+Variant \&v)
+\item 
+virtual void \hyperlink{classGKObject_aa05a9ba7c67bfea85c4c834099261725}{set\+Data\+Value\+Object} (const G\+K\+Column $\ast$attr, const \hyperlink{classGKObject}{G\+K\+Object} $\ast$obj)
+\item 
+void \hyperlink{classGKObject_ab83cc937e9d3a0be93422b4f35315779}{set\+Data\+Value\+Object\+By\+ID} (uint attr\+Id, const \hyperlink{classGKObject}{G\+K\+Object} $\ast$obj)
+\item 
+virtual void \hyperlink{classGKObject_a7c3cb5302749d462ac8bebbaf6bd0368}{set\+Data\+Value\+Double} (const G\+K\+Column $\ast$attr, double v)
+\item 
+void \hyperlink{classGKObject_af2775908cda803e6d69fd37f8ad1e4a7}{set\+Data\+Value\+Double\+By\+ID} (uint attr\+Id, double v)
+\item 
+virtual double \hyperlink{classGKObject_ae7b4508b5a12cc7165adae7ab40d3836}{get\+Data\+Value\+In\+TS} (const G\+K\+Column $\ast$attr, G\+K\+Time\+Serie\+Index index, double $\ast$deviation=N\+U\+LL) const override
+\item 
+virtual bool \hyperlink{classGKObject_a04f3465ff3636cb557ad07814beccd47}{has\+T\+S\+With\+Data} (const G\+K\+Column $\ast$col) const 
+\item 
+double \hyperlink{classGKObject_ade795854307395ec3add6f01ff50c52a}{get\+Data\+Value\+In\+T\+S\+By\+ID} (uint attr\+Id, G\+K\+Time\+Serie\+Index index, double $\ast$deviation=N\+U\+LL) const override
+\item 
+virtual G\+K\+Time\+Serie $\ast$ \hyperlink{classGKObject_ae5fa8b85141b85a1798b30410ecb7f55}{get\+Data\+Value\+TS} (const G\+K\+Column $\ast$attr) const override
+\item 
+G\+K\+Time\+Serie $\ast$ \hyperlink{classGKObject_a2a8110072139986e2481f9d47bd929f8}{get\+Data\+Value\+T\+S\+By\+ID} (uint attr\+Id) const override
+\item 
+virtual void \hyperlink{classGKObject_a7b0fa4fc85a6578f9bf330eed5ba53fa}{set\+Data\+Value\+In\+TS} (const G\+K\+Column $\ast$attr, G\+K\+Time\+Serie\+Index index, double value, double deviation, G\+K\+T\+S\+Description $\ast$a\+Description=N\+U\+LL, int reserved\+Size=0)
+\item 
+virtual void \hyperlink{classGKObject_aa84235c157d2ace0199e883af58fa525}{set\+Data\+Value\+In\+TS} (const G\+K\+Column $\ast$attr, G\+K\+Time\+Serie\+Index index, double value, double deviation, double lower\+Value, G\+K\+T\+S\+Description $\ast$a\+Description=N\+U\+LL, int reserved\+Size=0)
+\item 
+virtual void \hyperlink{classGKObject_af5e9500d0a9decb5b7e8c4ee7edaf515}{set\+Data\+Value\+In\+Single\+TS} (const G\+K\+Column $\ast$attr, G\+K\+Time\+Serie\+Index index, double value, double deviation, G\+K\+T\+S\+Description $\ast$a\+Description)
+\item 
+void \hyperlink{classGKObject_aac2f7a2ab000092ba6fc25c0d1476df0}{set\+Data\+Value\+In\+T\+S\+By\+ID} (uint attr\+Id, G\+K\+Time\+Serie\+Index index, double value, double deviation, G\+K\+T\+S\+Description $\ast$a\+Description=N\+U\+LL, int reserved\+Size=0)
+\item 
+virtual void \hyperlink{classGKObject_a7260240cd9e4a6a2b3b85b652f12be40}{set\+Aggregated\+Value\+In\+TS} (const G\+K\+Column $\ast$attr, double value, double deviation, G\+K\+T\+S\+Description $\ast$a\+Description=N\+U\+LL)
+\item 
+void \hyperlink{classGKObject_aa33240228fa2412eb744bf790484bb2a}{set\+Aggregated\+Value\+In\+T\+S\+By\+ID} (uint attr\+Id, double value, double deviation, G\+K\+T\+S\+Description $\ast$a\+Description=N\+U\+LL)
+\item 
+virtual void \hyperlink{classGKObject_a5a15db6ec28dcdcd8d5428de0a648a60}{clear\+Data\+Value\+TS} (const G\+K\+Column $\ast$attr, G\+K\+T\+S\+Description $\ast$a\+Description=N\+U\+LL)
+\item 
+void \hyperlink{classGKObject_a966b14e3eda905eb950bd8e4a0c627dc}{clear\+Data\+Value\+T\+S\+By\+ID} (uint attr\+Id, G\+K\+T\+S\+Description $\ast$a\+Description=N\+U\+LL)
+\item 
+virtual int \hyperlink{classGKObject_a1a19168a7f85db37554ae5632a5e89a5}{get\+Data\+Value\+Int} (const G\+K\+Column $\ast$attr, const \hyperlink{classGKContext}{G\+K\+Context} \&context=\hyperlink{classGKContext_a37de2dc1b6bab087b9b92a445922e79d}{G\+K\+Context\+::any\+Context}) const override
+\item 
+int \hyperlink{classGKObject_a89b17b6bc62ca3f144e25fd637308cf0}{get\+Data\+Value\+Int\+By\+ID} (uint attr\+Id, const \hyperlink{classGKContext}{G\+K\+Context} \&context=\hyperlink{classGKContext_a37de2dc1b6bab087b9b92a445922e79d}{G\+K\+Context\+::any\+Context}) const override
+\item 
+double \hyperlink{classGKObject_a5f2d6ea14b11d42dee9d7e795dcb9370}{get\+Data\+Value\+Double} (const G\+K\+Column $\ast$attr, const \hyperlink{classGKContext}{G\+K\+Context} \&context=\hyperlink{classGKContext_a37de2dc1b6bab087b9b92a445922e79d}{G\+K\+Context\+::any\+Context}) const override
+\item 
+double \hyperlink{classGKObject_a62e8d9c7d663027ba49d778145cd9705}{get\+Data\+Value\+Double\+By\+ID} (uint attr\+Id, const \hyperlink{classGKContext}{G\+K\+Context} \&context=\hyperlink{classGKContext_a37de2dc1b6bab087b9b92a445922e79d}{G\+K\+Context\+::any\+Context}) const override
+\item 
+Q\+String \hyperlink{classGKObject_ab7ea66283fe3a7732da043262dff51e2}{get\+Data\+Value\+String} (const G\+K\+Column $\ast$attr, const \hyperlink{classGKContext}{G\+K\+Context} \&context=\hyperlink{classGKContext_a37de2dc1b6bab087b9b92a445922e79d}{G\+K\+Context\+::any\+Context}) const override
+\item 
+Q\+String \hyperlink{classGKObject_a6eabd8c4b25fb20094d075d986e94015}{get\+Data\+Value\+String\+By\+ID} (uint attr\+Id, const \hyperlink{classGKContext}{G\+K\+Context} \&context=\hyperlink{classGKContext_a37de2dc1b6bab087b9b92a445922e79d}{G\+K\+Context\+::any\+Context}) const override
+\item 
+bool \hyperlink{classGKObject_a7f84545d868c53f65e6df09a8ca10f75}{get\+Data\+Value\+Bool} (const G\+K\+Column $\ast$attr, const \hyperlink{classGKContext}{G\+K\+Context} \&context=\hyperlink{classGKContext_a37de2dc1b6bab087b9b92a445922e79d}{G\+K\+Context\+::any\+Context}) const override
+\item 
+bool \hyperlink{classGKObject_a390a8acd3245bf70bda684b93021bf32}{get\+Data\+Value\+Bool\+By\+ID} (uint attr\+Id, const \hyperlink{classGKContext}{G\+K\+Context} \&context=\hyperlink{classGKContext_a37de2dc1b6bab087b9b92a445922e79d}{G\+K\+Context\+::any\+Context}) const override
+\item 
+\hyperlink{classGKObject}{G\+K\+Object} $\ast$ \hyperlink{classGKObject_a47e5fa225dbfce728bc1d45a9d742ab5}{get\+Data\+Value\+Object} (const G\+K\+Column $\ast$attr, const \hyperlink{classGKContext}{G\+K\+Context} \&context=\hyperlink{classGKContext_a37de2dc1b6bab087b9b92a445922e79d}{G\+K\+Context\+::any\+Context}) const override
+\item 
+\hyperlink{classGKObject}{G\+K\+Object} $\ast$ \hyperlink{classGKObject_a0107083f955e848f0e1af39f6a9e1263}{get\+Data\+Value\+Object\+By\+ID} (uint attr\+Id, const \hyperlink{classGKContext}{G\+K\+Context} \&context=\hyperlink{classGKContext_a37de2dc1b6bab087b9b92a445922e79d}{G\+K\+Context\+::any\+Context}) const override
+\item 
+Q\+Date \hyperlink{classGKObject_a89e18a58729aa19fc955ea56ca6d64e6}{get\+Data\+Value\+Date} (const G\+K\+Column $\ast$attr, const \hyperlink{classGKContext}{G\+K\+Context} \&context=\hyperlink{classGKContext_a37de2dc1b6bab087b9b92a445922e79d}{G\+K\+Context\+::any\+Context}) const override
+\item 
+Q\+Date \hyperlink{classGKObject_a16fd1ea80b037c2711afe5f481b05be0}{get\+Data\+Value\+Date\+By\+ID} (uint attr\+Id, const \hyperlink{classGKContext}{G\+K\+Context} \&context=\hyperlink{classGKContext_a37de2dc1b6bab087b9b92a445922e79d}{G\+K\+Context\+::any\+Context}) const override
+\item 
+Q\+Time \hyperlink{classGKObject_a5d819751b84c1070389f1de5272b2653}{get\+Data\+Value\+Time} (const G\+K\+Column $\ast$attr, const \hyperlink{classGKContext}{G\+K\+Context} \&context=\hyperlink{classGKContext_a37de2dc1b6bab087b9b92a445922e79d}{G\+K\+Context\+::any\+Context}) const override
+\item 
+Q\+Time \hyperlink{classGKObject_a5debfef84c5b0a056ea69808bb70bf38}{get\+Data\+Value\+Time\+By\+ID} (uint attr\+Id, const \hyperlink{classGKContext}{G\+K\+Context} \&context=\hyperlink{classGKContext_a37de2dc1b6bab087b9b92a445922e79d}{G\+K\+Context\+::any\+Context}) const override
+\item 
+\hyperlink{classGKTimeDuration}{G\+K\+Time\+Duration} \hyperlink{classGKObject_aff1ecee68193a30729f70ad5e1179e8b}{get\+Data\+Value\+Time\+Duration} (const G\+K\+Column $\ast$attr, const \hyperlink{classGKContext}{G\+K\+Context} \&context=\hyperlink{classGKContext_a37de2dc1b6bab087b9b92a445922e79d}{G\+K\+Context\+::any\+Context}) const override
+\item 
+\hyperlink{classGKTimeDuration}{G\+K\+Time\+Duration} \hyperlink{classGKObject_a2f659029f39e986a07632ee0ce85da9b}{get\+Data\+Value\+Time\+Duration\+By\+ID} (uint attr\+Id, const \hyperlink{classGKContext}{G\+K\+Context} \&context=\hyperlink{classGKContext_a37de2dc1b6bab087b9b92a445922e79d}{G\+K\+Context\+::any\+Context}) const override
+\item 
+void \hyperlink{classGKObject_a59b264f0a002944ee4baa42c9774c105}{remove\+Data\+Value} (const G\+K\+Column $\ast$attr)\hypertarget{classGKObject_a59b264f0a002944ee4baa42c9774c105}{}\label{classGKObject_a59b264f0a002944ee4baa42c9774c105}
+
+\begin{DoxyCompactList}\small\item\em Removes an external attribute value from this object. \end{DoxyCompactList}\item 
+void {\bfseries remove\+Data\+Value\+By\+ID} (uint attr\+Id)\hypertarget{classGKObject_a294a9f4d38755b1f9b9a4df321d4e3c7}{}\label{classGKObject_a294a9f4d38755b1f9b9a4df321d4e3c7}
+
+\item 
+const Q\+String \& \hyperlink{classGKObject_a855f93b1fcdb8d82aa91ae97c10996b3}{get\+Description} () const override\hypertarget{classGKObject_a855f93b1fcdb8d82aa91ae97c10996b3}{}\label{classGKObject_a855f93b1fcdb8d82aa91ae97c10996b3}
+
+\begin{DoxyCompactList}\small\item\em Get the object description (entered by the user) \end{DoxyCompactList}\item 
+void \hyperlink{classGKObject_ab51a1efe5448e85f63777c6f018b8a7d}{set\+Description} (const Q\+String \&adescription)\hypertarget{classGKObject_ab51a1efe5448e85f63777c6f018b8a7d}{}\label{classGKObject_ab51a1efe5448e85f63777c6f018b8a7d}
+
+\begin{DoxyCompactList}\small\item\em Set the object description. \end{DoxyCompactList}\item 
+const Q\+String \& \hyperlink{classGKObject_a2b17cb85e8c403b4a91b223bf5f776de}{get\+External\+Id} () const override\hypertarget{classGKObject_a2b17cb85e8c403b4a91b223bf5f776de}{}\label{classGKObject_a2b17cb85e8c403b4a91b223bf5f776de}
+
+\begin{DoxyCompactList}\small\item\em Get the object external ID stored in \hyperlink{classGKBaseObject_a8287b7ae2c1c41363d3ad44dfc53190a}{G\+K\+Object\+::external\+Id\+Att}. \end{DoxyCompactList}\item 
+void \hyperlink{classGKObject_a6ac40f8daaae90b1c39de6ce738376ee}{set\+External\+Id} (const Q\+String \&an\+Id)\hypertarget{classGKObject_a6ac40f8daaae90b1c39de6ce738376ee}{}\label{classGKObject_a6ac40f8daaae90b1c39de6ce738376ee}
+
+\begin{DoxyCompactList}\small\item\em Set the object external ID stored in \hyperlink{classGKBaseObject_a8287b7ae2c1c41363d3ad44dfc53190a}{G\+K\+Object\+::external\+Id\+Att}. \end{DoxyCompactList}\item 
+virtual G\+K\+Object\+Del\+Cmd $\ast$ \hyperlink{classGKObject_ac4a47dac5d37a254e97bee6946c755b7}{get\+Del\+Cmd} ()
+\item 
+virtual G\+K\+Object\+Connection\+Del\+Cmd $\ast$ \hyperlink{classGKObject_ada5bae3e25acd44a5468f62c62b962de}{get\+Del\+Connection\+Cmd} (\hyperlink{classGKObject}{G\+K\+Object} $\ast$target)
+\item 
+virtual void \hyperlink{classGKObject_a4c548e5fc63c0db5e35baf6eb57e9757}{non\+Command\+Object\+Removed} (\hyperlink{classGKObject}{G\+K\+Object} $\ast$)
+\item 
+virtual void \hyperlink{classGKObject_a8f390d9dc03ab2cf6d689a6a9b1fde65}{init} ()
+\item 
+virtual void \hyperlink{classGKObject_af09dcaede290d87fe1e5b727cf807b0f}{set\+Id} (quint32 aid, G\+K\+Model $\ast$model)
+\item 
+quint32 \hyperlink{classGKObject_a7b4db3e163ac785ffa386b07dbba6eea}{get\+Id} () const override
+\item 
+virtual void \hyperlink{classGKObject_a21afff8b02df6ddcacfc4da855b57870}{set\+U\+U\+ID} (Q\+Uuid uuid)
+\item 
+Q\+Uuid \hyperlink{classGKObject_a8d2ee8903f2519cefccbad25f5fdf8bc}{get\+U\+U\+ID} () const 
+\item 
+void \hyperlink{classGKObject_ab52114827dbfa4f5d06a9615ba574406}{new\+U\+U\+ID} ()
+\item 
+virtual void \hyperlink{classGKObject_a606d0a2f5513902ba8e3624817fdbf2b}{set\+Name} (const Q\+String \&aname)
+\item 
+const Q\+String \& \hyperlink{classGKObject_a4f5ba333d4cbe5c28a91088073faa6e0}{get\+Name} () const override
+\item 
+Q\+String \hyperlink{classGKObject_a5be9614346783ff71327b6abc6bc0607}{get\+Extended\+Id} (Identifier\+Form form=e\+Identifier\+Default) const 
+\item 
+Q\+String \hyperlink{classGKObject_a20956e302f753261a4b642e072063c5f}{get\+Name\+Or\+Extended\+Id} (Identifier\+Form form=e\+Identifier\+Default) const 
+\item 
+virtual Q\+String \hyperlink{classGKObject_a9b4135e10ab18e202dd71afe15018042}{get\+Type\+Name} () const override
+\item 
+virtual Q\+String \hyperlink{classGKObject_a7c36c406c513701b936759aedf6adfbc}{get\+Type\+External\+Name} () const override
+\item 
+virtual \hyperlink{classGKObject}{G\+K\+Object} $\ast$ \hyperlink{classGKObject_a1e26700bd67f942c7d12ca71b24eb462}{get\+Master} () const override\hypertarget{classGKObject_a1e26700bd67f942c7d12ca71b24eb462}{}\label{classGKObject_a1e26700bd67f942c7d12ca71b24eb462}
+
+\begin{DoxyCompactList}\small\item\em The object that originates this object. In this case it is itself. \end{DoxyCompactList}\item 
+G\+K\+Type $\ast$ \hyperlink{classGKObject_aef2dbd7f7342fa9ca5f01917c46994cf}{get\+Type} () const 
+\item 
+virtual void \hyperlink{classGKObject_a765ebd500ad44121d1507655787bb10b}{set\+Type} (G\+K\+Type $\ast$atype)
+\item 
+bool \hyperlink{classGKObject_a0bc06a08e680c8f304a19074d3307207}{isA} (const G\+K\+Type $\ast$atype) const 
+\item 
+bool \hyperlink{classGKObject_af104d2d309eb86ae7defe6049d4e11fe}{isA} (const Q\+String \&type\+Name) const 
+\item 
+virtual void \hyperlink{classGKObject_a92c98c7bcbb8e6b8b07022a32fe80c01}{set\+Model} (G\+K\+Model $\ast$amodel)
+\item 
+G\+K\+Model $\ast$ \hyperlink{classGKObject_a3362b2e6a23016c44f366f8fef9eb72a}{get\+Model} () const override
+\item 
+virtual void \hyperlink{classGKObject_a2bc1418a21399ed05979bdd0ef7d7fdc}{set\+Lock} (\hyperlink{classGKObject_a097bd6e3a9c40a1b2d53cde7b171c851}{G\+K\+Lock\+Type} atype)
+\item 
+\hyperlink{classGKObject_a097bd6e3a9c40a1b2d53cde7b171c851}{G\+K\+Lock\+Type} \hyperlink{classGKObject_a4b666c8124018e78c7ab4720925ce767}{get\+Lock} () const 
+\item 
+virtual bool \hyperlink{classGKObject_ab177d522fe520e1a715b624fcc6ddb11}{can\+Be\+Deleted} () const 
+\item 
+virtual bool \hyperlink{classGKObject_a8f50f2a968b01df84a07cfd02ae0d5ff}{can\+Be\+Modified} () const 
+\item 
+virtual bool \hyperlink{classGKObject_ad5ac15fbbca40d75a943a8ddf73a8a7a}{can\+Be\+Edited} () const 
+\item 
+\hyperlink{classGKObject_ad8cb816946f2bd9e34714a830b14f3b8}{G\+K\+Object\+Status} \hyperlink{classGKObject_ab69075b7a9371ff12399ad575c1de75f}{get\+Status} () const 
+\item 
+virtual void \hyperlink{classGKObject_a47281a8be1b0bc03380e46ccd5b886c3}{set\+Status} (const \hyperlink{classGKObject_ad8cb816946f2bd9e34714a830b14f3b8}{G\+K\+Object\+Status} astatus)
+\item 
+void \hyperlink{classGKObject_a64bf09817c3a2639dda97bb2466d6d10}{notify\+Status\+Change} ()
+\item 
+bool \hyperlink{classGKObject_a960fc52fc9b7be6852d4591e6afc6584}{is\+Temporary} () const 
+\item 
+void \hyperlink{classGKObject_aba6adba0cebc98d0b7ba2e0d8a33c63a}{set\+Temporary} (bool value)
+\item 
+bool \hyperlink{classGKObject_ae2084342679907d99d81e1befbe5a35a}{is\+External} () const 
+\item 
+void \hyperlink{classGKObject_ab22a5ba2bcaa7c7f639e0ff0ec39b3c3}{set\+External} (bool value)
+\item 
+virtual void \hyperlink{classGKObject_a04c9b7bae9da3277fd0d96625539c974}{preferences\+Changed} ()
+\item 
+void \hyperlink{classGKObject_a52d73e24359bb5ad6ccdbbf02463cc9f}{remove\+Column} (G\+K\+Column $\ast$column)
+\item 
+void \hyperlink{classGKObject_a35ae238b96e5f5589cbe828fc7b78d16}{reset\+Column} (G\+K\+Column $\ast$column)
+\item 
+virtual Q\+String \hyperlink{classGKObject_a270fc001443a1c24c0f8d34353f2c69b}{get\+Tool\+Tip\+String} () const 
+\item 
+virtual bool \hyperlink{classGKObject_aed24065d688b9be828be91ddcc8e1603}{allow\+Clipboard\+Operations} () const 
+\item 
+bool \hyperlink{classGKObject_ac54ca7164f5048670b7b233f7dd070e3}{is\+In\+A\+Revision} () const 
+\item 
+void \hyperlink{classGKObject_a4d8757e7f3d7942ab55bca3ea183e9cf}{set\+In\+A\+Revision} (bool value)
+\item 
+virtual G\+K\+Object\+Diagnosis \hyperlink{classGKObject_ac76e3d7799e199d4a722aceff841ecae}{get\+Diagnosis} () const 
+\item 
+void $\ast$ \hyperlink{classGKObject_abe52120c6133b48eedfd0133828a1bf9}{get\+External\+Row} () const 
+\item 
+void \hyperlink{classGKObject_a0c1e0d22d45252a517575d34a5c7065a}{set\+External\+Row} (void $\ast$value)
+\item 
+virtual G\+K\+Object\+Compare\+Data \hyperlink{classGKObject_a6b22ecbae17d74a55bd9bc698641db86}{compare} (const \hyperlink{classGKObject}{G\+K\+Object} $\ast$obj) const 
+\item 
+virtual void \hyperlink{classGKObject_abd9a874f8e2a6da483136787335562d9}{accept\+Visitor} (G\+K\+Visitor \&visitor)
+\item 
+virtual void \hyperlink{classGKObject_a3f4d1001e500a2d4744483fbf422aee5}{accept\+Visitor} (G\+K\+Visitor \&visitor) const 
+\item 
+virtual bool \hyperlink{classGKObject_a089427722ccb540bc4d376102c4e3953}{exists} (quint32 scenario\+Id) const 
+\item 
+Q\+Vector$<$ G\+K\+Column $\ast$ $>$ {\bfseries get\+Related\+Columns} (G\+K\+Type $\ast$type) const \hypertarget{classGKObject_a68937bd2c123ad0fb9d426584ffcaa06}{}\label{classGKObject_a68937bd2c123ad0fb9d426584ffcaa06}
+
+\item 
+virtual void \hyperlink{classGKObject_a6bc9c5a19cc8d195d478857e158fba16}{store\+X\+ML} (G\+K\+Text\+Stream \&s)\hypertarget{classGKObject_a6bc9c5a19cc8d195d478857e158fba16}{}\label{classGKObject_a6bc9c5a19cc8d195d478857e158fba16}
+
+\begin{DoxyCompactList}\small\item\em Stores the object in a file. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classGKObject_a6eedc1a08e034b517f71f52b2beacee7}{restore\+X\+ML} (G\+K\+Text\+Stream \&s, Q\+Dom\+Node \&node)\hypertarget{classGKObject_a6eedc1a08e034b517f71f52b2beacee7}{}\label{classGKObject_a6eedc1a08e034b517f71f52b2beacee7}
+
+\begin{DoxyCompactList}\small\item\em Restores the object from a file. \end{DoxyCompactList}\item 
+virtual bool {\bfseries to\+Json} (G\+K\+J\+Son\+Storer \&context, G\+K\+Json\+Object\+Parts \&parts) const \hypertarget{classGKObject_a94d232d3f74b29874aa361eaadc67330}{}\label{classGKObject_a94d232d3f74b29874aa361eaadc67330}
+
+\item 
+virtual bool {\bfseries from\+Json} (G\+K\+J\+Son\+Storer \&context, const G\+K\+Json\+Object\+Parts \&parts)\hypertarget{classGKObject_aa2863af987931e0fbcb693084e30eb9a}{}\label{classGKObject_aa2863af987931e0fbcb693084e30eb9a}
+
+\item 
+virtual Q\+Byte\+Array \hyperlink{classGKObject_a1087e83311b156c33d626656837c9834}{to\+Json\+Extra} (G\+K\+J\+Son\+Storer \&context, Json\+Extra\+Status \&status) const 
+\item 
+virtual void {\bfseries from\+Json\+Extra} (const Q\+Byte\+Array \&ba)\hypertarget{classGKObject_a47d1b431f778bad0a103422789b790ad}{}\label{classGKObject_a47d1b431f778bad0a103422789b790ad}
+
+\item 
+bool \hyperlink{classGKObject_aec1d94b913a9e94f74c5c345e08fbf6a}{has\+Been\+Restored} () const 
+\item 
+Q\+String \hyperlink{classGKObject_ac09026de24f573dc93daddf57da844d1}{get\+Debug\+Info} () const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static uint \hyperlink{classGKObject_a62b7b0bca4a499a99b706c07d7401599}{type\+Name\+Att}\hypertarget{classGKObject_a62b7b0bca4a499a99b706c07d7401599}{}\label{classGKObject_a62b7b0bca4a499a99b706c07d7401599}
+
+\begin{DoxyCompactList}\small\item\em Object Type Name (G\+K\+Type\+::get\+Name) as an attribute. \end{DoxyCompactList}\item 
+static uint \hyperlink{classGKObject_a4bb1a006385999d0ee85a952b77b1579}{type\+External\+Name\+Att}\hypertarget{classGKObject_a4bb1a006385999d0ee85a952b77b1579}{}\label{classGKObject_a4bb1a006385999d0ee85a952b77b1579}
+
+\begin{DoxyCompactList}\small\item\em Object Type External Name (G\+K\+Type\+::get\+External\+Name) as an attribute. \end{DoxyCompactList}\item 
+static uint \hyperlink{classGKObject_a2ce21377a60b11eb561b014d5116d194}{revised\+Att}\hypertarget{classGKObject_a2ce21377a60b11eb561b014d5116d194}{}\label{classGKObject_a2ce21377a60b11eb561b014d5116d194}
+
+\begin{DoxyCompactList}\small\item\em Is it revised? \end{DoxyCompactList}\item 
+static uint \hyperlink{classGKObject_a2d3c15945adc711cd10a0e0cffa85ce3}{U\+U\+I\+D\+Att}\hypertarget{classGKObject_a2d3c15945adc711cd10a0e0cffa85ce3}{}\label{classGKObject_a2d3c15945adc711cd10a0e0cffa85ce3}
+
+\begin{DoxyCompactList}\small\item\em Object U\+U\+ID. \end{DoxyCompactList}\item 
+static Identifier\+Form \hyperlink{classGKObject_a9db2ffda1c05ae007ad8dd5cf95e452f}{default\+Identifier\+Form}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classGKObject_a89de1ba900e5547145cdecae30c83238}{delete\+And\+Clean\+Row} ()
+\item 
+const G\+K\+Accessor $\ast$ {\bfseries get\+Accessor} (const G\+K\+Column $\ast$column, bool $\ast$found=0) const \hypertarget{classGKObject_ae9944d06a2adc2d8a62247d4fb84ab1d}{}\label{classGKObject_ae9944d06a2adc2d8a62247d4fb84ab1d}
+
+\item 
+bool {\bfseries set\+Member} (const G\+K\+Column $\ast$column, const Q\+Variant \&v)\hypertarget{classGKObject_a94e2486112d1966192de4ef656590bf8}{}\label{classGKObject_a94e2486112d1966192de4ef656590bf8}
+
+\item 
+{\footnotesize template$<$class T $>$ }\\const T \& {\bfseries get\+Member\+\_\+ref} (const G\+K\+Column $\ast$column, bool $\ast$found) const \hypertarget{classGKObject_a3e60c199a6cad40c4846ae0d4510d915}{}\label{classGKObject_a3e60c199a6cad40c4846ae0d4510d915}
+
+\item 
+{\footnotesize template$<$class T $>$ }\\T {\bfseries get\+Member} (const G\+K\+Column $\ast$column, bool $\ast$found) const \hypertarget{classGKObject_a2c74822669db204a2f9760df6beaadd6}{}\label{classGKObject_a2c74822669db204a2f9760df6beaadd6}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+G\+K\+Folder $\ast$ {\bfseries root\+Folder}\hypertarget{classGKObject_adf0a0724ecfdce4a81060338808713a0}{}\label{classGKObject_adf0a0724ecfdce4a81060338808713a0}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Main class, almost all the objects derivate from this class. 
+
+The main class in the G\+Kernel module. It offers\+:
+\begin{DoxyItemize}
+\item A user-\/defined name
+\item A description (allows the documentation of this object)
+\item Folders (unordered set of objects)\+: see G\+K\+Folder
+\item Extensible attributes\+: see G\+K\+Type and G\+K\+Column
+\end{DoxyItemize}
+
+\subsubsection*{Object creation}
+
+A \hyperlink{classGKObject}{G\+K\+Object} is created using the G\+K\+System\+::new\+Object call, either when a new object is required or when an object is restored from disk or copied (from the clipboard). When an object is created, it receives a type and a model and it\textquotesingle{}s stored in the catalogue (G\+K\+Catalog). Avoid calling the new operator of a specific class to create an object since all these additional initializations will not be done (the exception to the rule is when the developer wants to create a temporary object and type, model or catalogue presence are not required).
+
+Object creation example\+:
+
+
+\begin{DoxyCode}
+GKModel     *model;
+...
+GPolyline * polyline = (GKPolyline*)GKSystem::getSystem().newObject( \textcolor{stringliteral}{"GKPolyline"}, model );
+\end{DoxyCode}
+
+
+\paragraph*{Object Factory}
+
+The G\+K\+System\+::new\+Object method looks for a C function that creates the object (an object factory). This function, in order to be located, must be called in a specific way and explicitly exported in Windows platform (in the other platforms, symbols in a shared library are exported by default).
+
+For example, if we add My\+Class to the system, in order to create instances of it we will implement a C function which name will be My\+Class followed by Factory\+: 
+\begin{DoxyCode}
+\textcolor{keyword}{extern} \textcolor{stringliteral}{"C"} EXPORT\_MACRO \hyperlink{classGKObject}{GKObject} * MyClassFactory( GKModel * model, GKType * type );
+\end{DoxyCode}
+
+
+The implementation of My\+Class\+Factory will be\+:
+
+
+\begin{DoxyCode}
+\hyperlink{classGKObject}{GKObject} * MyClassFactory( GKModel * model, GKType * type )
+\{
+    \textcolor{keywordflow}{return} \textcolor{keyword}{new} MyClass();
+\}
+\end{DoxyCode}
+
+
+If the developer doesn\textquotesingle{}t provide an object factory with the correct name, signature and correctly exported, the method G\+K\+System\+::new\+Object will fail and no object will be created.
+
+\paragraph*{Exporting Symbols}
+
+Classes and functions defined in the developer plug-\/in and used by Aimsun (object factories, editor factories, new classes,...) reside in a D\+LL in Windows or in a shared library in U\+N\+IX, Linux and M\+AC OS X. In Windows platform (due to Microsoft and Intel C++ compilers) these symbols must be explicitly exported, that is, marked as symbols that can be used by the application where the D\+LL is loaded. In the other platforms (due to G\+CC compiler) these symbols are automatically exported.
+
+In order to export symbols they have to be marked with {\ttfamily \+\_\+\+\_\+declspec(dllexport)} when the D\+LL is compiled and must be marked as {\ttfamily \+\_\+\+\_\+declspec(dllimport)} when the symbol is included by an application that will use it. And, logically, in non Windows platforms no mark is needed at all.
+
+The best way to deal with this requirement is to define a macro for Windows platform as follows\+:
+
+
+\begin{DoxyCode}
+\textcolor{preprocessor}{#ifdef \_WIN32}
+\textcolor{preprocessor}{    #ifdef \_DLL\_DEF}
+\textcolor{preprocessor}{        #define EXPORT\_MACRO \_\_declspec(dllexport)}
+\textcolor{preprocessor}{    #else}
+\textcolor{preprocessor}{        #define EXPORT\_MACRO \_\_declspec(dllimport)}
+\textcolor{preprocessor}{    #endif}
+\textcolor{preprocessor}{#else}
+\textcolor{preprocessor}{    #define EXPORT\_MACRO }
+\textcolor{preprocessor}{#endif}
+\end{DoxyCode}
+
+
+This macro requires that, during compilation, the developer defines \+\_\+\+W\+I\+N32 when compiling in a Windows platform and defines \+\_\+\+D\+L\+L\+\_\+\+D\+EF when compiling the D\+LL. If another D\+LL or application uses this D\+LL, then it will define \+\_\+\+W\+I\+N32 but not \+\_\+\+D\+L\+L\+\_\+\+D\+EF so, in this case, \+\_\+\+\_\+declspec(dllimport) will be used.
+
+It is recommendable for the name of the macro (E\+X\+P\+O\+R\+T\+\_\+\+M\+A\+C\+RO in the example) to be unique among other D\+L\+Ls. A good name can be, for example, P\+L\+U\+G\+I\+N\+\_\+\+N\+A\+M\+E\+E\+X\+P\+O\+RT, where P\+L\+U\+G\+I\+N\+\_\+\+N\+A\+ME is the name of the plug-\/in.
+
+\subsubsection*{Identifiers}
+
+An object has not only a type and a model but also a unique identifier (set when the object is created the first time via G\+K\+System\+::new\+Object) and inmutable during all the object lifetime. Use the G\+K\+System\+::get\+Id to get the identifier.
+
+It supports also an external identifier using the \hyperlink{classGKBaseObject_a8287b7ae2c1c41363d3ad44dfc53190a}{G\+K\+Object\+::external\+Id\+Att} attribute. This attribute is used to identify this object in an external system where using the unique identifier of this object is not convenient (either because the identifier is coded in a different way or because the identifier was already set and cannot be changed). Use the methods \hyperlink{classGKObject}{G\+K\+Object} \hyperlink{classGKObject_a2b17cb85e8c403b4a91b223bf5f776de}{G\+K\+Object\+::get\+External\+Id} and \hyperlink{classGKObject_a6ac40f8daaae90b1c39de6ce738376ee}{G\+K\+Object\+::set\+External\+Id}.
+
+\subsubsection*{Store and Restore}
+
+Objects are stored in a file via the \hyperlink{classGKObject_a81a2e8cee6d6d6d59ab57683310732ea}{G\+K\+Object\+::store} method. The developer must call the store method from the super class first and then add all new information to the data stream. See G\+K\+Data\+Stream documentation for further details.
+
+Objects are restored from a file using the \hyperlink{classGKObject_a94de210200c6b594d903984ba1bb55d9}{G\+K\+Object\+::restore} method. The developer must call the restore method from the super class first and, then, read any additional data. Note that versioning is supported. See G\+K\+Type and G\+K\+Data\+Stream for more information.
+
+\subsubsection*{Generic Attribute Access (Extensible Object Model)}
+
+Aimsun can access attributes from any object in a generic way using the \hyperlink{classGKObject_ac75262d879bc8dc912234fe64a618726}{G\+K\+Object\+::get\+Data\+Value} and \hyperlink{classGKObject_afc228a2c74e04adfbe58190698ce60d6}{G\+K\+Object\+::set\+Data\+Value} methods. These attributes have been declared during the G\+K\+Type creation.
+
+There is one way to store data in a generic way, using the \hyperlink{classGKObject_afc228a2c74e04adfbe58190698ce60d6}{G\+K\+Object\+::set\+Data\+Value} method, and several ways to get the data back\+: \hyperlink{classGKObject_ac75262d879bc8dc912234fe64a618726}{G\+K\+Object\+::get\+Data\+Value}, \hyperlink{classGKObject_a1a19168a7f85db37554ae5632a5e89a5}{G\+K\+Object\+::get\+Data\+Value\+Int}, \hyperlink{classGKObject_a7f84545d868c53f65e6df09a8ca10f75}{G\+K\+Object\+::get\+Data\+Value\+Bool}, \hyperlink{classGKObject_a5f2d6ea14b11d42dee9d7e795dcb9370}{G\+K\+Object\+::get\+Data\+Value\+Double} and \hyperlink{classGKObject_ab7ea66283fe3a7732da043262dff51e2}{G\+K\+Object\+::get\+Data\+Value\+String}.
+
+The specific calls are much more efficient as the generic ones, because the user doesn\textquotesingle{}t need to convert the Q\+Variant to the final type.
+
+As a developer you need to rewrite these functions (the set and the get) only for internal attributes. When doing it, make sure that a call to the supertype method is done if the attribute is not in this type (because it may be in the super type).
+
+For the get, only one function has to be written, either the generic one (\hyperlink{classGKObject_ac75262d879bc8dc912234fe64a618726}{G\+K\+Object\+::get\+Data\+Value}) or the specific one (depending on the attribute type).
+
+An example follows (see also G\+K\+Type)\+: If we have the following class\+: 
+\begin{DoxyCode}
+\textcolor{keyword}{class }Road : \textcolor{keyword}{public} GKPolyline
+\{
+    \textcolor{keywordtype}{int} speed;
+\};
+\end{DoxyCode}
+
+
+Then we will write the set method\+: 
+\begin{DoxyCode}
+\textcolor{keywordtype}{void} Road::setDataValue( \textcolor{keyword}{const} GKColumn * attr, \textcolor{keyword}{const} QVariant & v )
+\{
+    \textcolor{keywordflow}{if}( attr->getStoreType() == GKColumn::eInternal )\{
+        \textcolor{keywordflow}{if}( attr->getId() == speedAtt )\{
+            speed = v.toInt();
+        \}\textcolor{keywordflow}{else}\{
+            GKPolyline::setDataValue( attr, v );        
+        \}
+    \}\textcolor{keywordflow}{else}\{
+        GKPolyline::setDataValue( attr, v );
+    \}
+\}
+\end{DoxyCode}
+
+
+and the get method\+: 
+\begin{DoxyCode}
+\textcolor{keywordtype}{int} Road::getDataValueInt( \textcolor{keyword}{const} GKColumn * attr, \textcolor{keyword}{const} \hyperlink{classGKContext}{GKContext} & context )\textcolor{keyword}{ const}
+\textcolor{keyword}{}\{
+    \textcolor{keywordtype}{int}     res = 0;
+
+    \textcolor{keywordflow}{if}( attr->getStoreType() == GKColumn::eInternal )\{
+        \textcolor{keywordflow}{if}( attr->getId() == speedAtt )\{
+            res = speed;
+        \}\textcolor{keywordflow}{else}\{
+            res = GKPolyline::getDataValueInt( attr, context );
+        \}
+    \}\textcolor{keywordflow}{else}\{
+        res = GKPolyline::getDataValueInt( attr, context );
+    \}
+    \textcolor{keywordflow}{return} res;
+\}   
+\end{DoxyCode}
+
+
+or the genetic get method\+: 
+\begin{DoxyCode}
+QVariant * Road::getDataValue( \textcolor{keyword}{const} GKColumn * attr, \textcolor{keywordtype}{bool} * deleteit )
+\{
+    QVariant        *res = NULL;
+
+     *deleteit = \textcolor{keyword}{false};
+    \textcolor{keywordflow}{if}( attr->getStoreType() == GKColumn::eInternal )\{
+        \textcolor{keywordflow}{if}( attr->getId() == speedAtt )\{
+            res = \textcolor{keyword}{new} QVariant( speed );    
+             *deleteit = \textcolor{keyword}{true};
+        \}\textcolor{keywordflow}{else}\{
+            res = GKPolyline::getDataValue( attr, deleteit );
+        \}
+    \}\textcolor{keywordflow}{else}\{
+        res = GKPolyline::getDataValue( attr, deleteit );
+    \}
+    \textcolor{keywordflow}{return} res;
+\}   
+\end{DoxyCode}
+
+
+\subsubsection*{Folders}
+
+Each \hyperlink{classGKObject}{G\+K\+Object} can have a folder in where it can store any kind of data. This folder is called the root folder. This folder can store itself a collection of objects and folders (and so on).
+
+\subsubsection*{Object Status}
+
+An object changes its status during its lifetime. It goes from \textquotesingle{}new\textquotesingle{} when created, to \textquotesingle{}saved\textquotesingle{} when stored in disk (or restored from it), to \textquotesingle{}deleted\textquotesingle{} when it\textquotesingle{}s deleted and \textquotesingle{}modified\textquotesingle{} when it\textquotesingle{}s edited (in a dialog, in a command).
+
+All the status changes are managed automatically by the system except the \textquotesingle{}modify\textquotesingle{} one. The developer must mark the object as modified when it is modified (usually in the editor during the accept operation and in the command during the undo and redo).
+
+If the object is not marked as modified when it\textquotesingle{}s modified, it will not be saved in a database (database store and restore will be supported in future Aimsun versions).
+
+When an operation modifies an object, it is important to call \hyperlink{classGKObject_aa021efb86f83770079d8f10f4cf67b99}{G\+K\+Object\+::increase\+Tick} so that observers of this object are aware of a change.
+
+\subsubsection*{Delete commands}
+
+When this object is deleted, the system will ask for a delete command using the method \hyperlink{classGKObject_ac4a47dac5d37a254e97bee6946c755b7}{G\+K\+Object\+::get\+Del\+Cmd}. This command will have the responsability for deleting the object and all the references to it (and undo this operation).
+
+\begin{DoxySeeAlso}{See also}
+G\+K\+Type, G\+K\+Column, G\+K\+Model, G\+K\+Data\+Stream, G\+K\+Folder, G\+K\+Preferences 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Enumeration Documentation}
+\index{G\+K\+Object@{G\+K\+Object}!G\+K\+Lock\+Type@{G\+K\+Lock\+Type}}
+\index{G\+K\+Lock\+Type@{G\+K\+Lock\+Type}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{G\+K\+Lock\+Type}{GKLockType}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf G\+K\+Object\+::\+G\+K\+Lock\+Type}}\hypertarget{classGKObject_a097bd6e3a9c40a1b2d53cde7b171c851}{}\label{classGKObject_a097bd6e3a9c40a1b2d53cde7b171c851}
+Lock types for this object. \index{G\+K\+Object@{G\+K\+Object}!G\+K\+Object\+Status@{G\+K\+Object\+Status}}
+\index{G\+K\+Object\+Status@{G\+K\+Object\+Status}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{G\+K\+Object\+Status}{GKObjectStatus}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf G\+K\+Object\+::\+G\+K\+Object\+Status}}\hypertarget{classGKObject_ad8cb816946f2bd9e34714a830b14f3b8}{}\label{classGKObject_ad8cb816946f2bd9e34714a830b14f3b8}
+See \hyperlink{classGKObject_ab69075b7a9371ff12399ad575c1de75f}{G\+K\+Object\+::get\+Status} \index{G\+K\+Object@{G\+K\+Object}!Identifier\+Form\+Flag@{Identifier\+Form\+Flag}}
+\index{Identifier\+Form\+Flag@{Identifier\+Form\+Flag}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{Identifier\+Form\+Flag}{IdentifierFormFlag}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf G\+K\+Object\+::\+Identifier\+Form\+Flag}}\hypertarget{classGKObject_af9a418378f637f4666f50b720f9f41e4}{}\label{classGKObject_af9a418378f637f4666f50b720f9f41e4}
+When asking for the extended identifier (\hyperlink{classGKObject_a5be9614346783ff71327b6abc6bc0607}{G\+K\+Object\+::get\+Extended\+Id}) of an object, the information to use to create it. It can be a combination of\+:
+\begin{DoxyItemize}
+\item e\+Identifier\+Id\+: the identifier
+\item e\+Identifier\+Name\+: the name
+\item e\+Identifier\+External\+Id\+: the external ID
+\item e\+Identifier\+Description\+: the description
+\item e\+Identifier\+Type\+External\+Name\+: the external\+Name of the type 
+\end{DoxyItemize}
+
+\subsection{Member Function Documentation}
+\index{G\+K\+Object@{G\+K\+Object}!accept\+Visitor@{accept\+Visitor}}
+\index{accept\+Visitor@{accept\+Visitor}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{accept\+Visitor(\+G\+K\+Visitor \&visitor)}{acceptVisitor(GKVisitor &visitor)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+K\+Object\+::accept\+Visitor (
+\begin{DoxyParamCaption}
+\item[{G\+K\+Visitor \&}]{visitor}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKObject_abd9a874f8e2a6da483136787335562d9}{}\label{classGKObject_abd9a874f8e2a6da483136787335562d9}
+Accept visitor method. See G\+K\+Visitor class. 
+
+Reimplemented in \hyperlink{classGKGeoObject_a7ba7ef1150e1b27c41b47b21c738b52a}{G\+K\+Geo\+Object}, and \hyperlink{classGKDPoint_a72ec8ba93733d4dd9eea7ee0eed6ade5}{G\+K\+D\+Point}.
+
+\index{G\+K\+Object@{G\+K\+Object}!accept\+Visitor@{accept\+Visitor}}
+\index{accept\+Visitor@{accept\+Visitor}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{accept\+Visitor(\+G\+K\+Visitor \&visitor) const }{acceptVisitor(GKVisitor &visitor) const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+K\+Object\+::accept\+Visitor (
+\begin{DoxyParamCaption}
+\item[{G\+K\+Visitor \&}]{visitor}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKObject_a3f4d1001e500a2d4744483fbf422aee5}{}\label{classGKObject_a3f4d1001e500a2d4744483fbf422aee5}
+Accept visitor method (const version). See G\+K\+Visitor class. 
+
+Reimplemented in \hyperlink{classGKGeoObject_a8098da83ef0177983da38f045281cfa5}{G\+K\+Geo\+Object}, and \hyperlink{classGKDPoint_afa6a3ce0476ed68257e7864e701856dd}{G\+K\+D\+Point}.
+
+\index{G\+K\+Object@{G\+K\+Object}!allow\+Clipboard\+Operations@{allow\+Clipboard\+Operations}}
+\index{allow\+Clipboard\+Operations@{allow\+Clipboard\+Operations}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{allow\+Clipboard\+Operations() const }{allowClipboardOperations() const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool G\+K\+Object\+::allow\+Clipboard\+Operations (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classGKObject_aed24065d688b9be828be91ddcc8e1603}{}\label{classGKObject_aed24065d688b9be828be91ddcc8e1603}
+If true the object can be Copied and Pasted. \index{G\+K\+Object@{G\+K\+Object}!can\+Be\+Deleted@{can\+Be\+Deleted}}
+\index{can\+Be\+Deleted@{can\+Be\+Deleted}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{can\+Be\+Deleted() const }{canBeDeleted() const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool G\+K\+Object\+::can\+Be\+Deleted (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKObject_ab177d522fe520e1a715b624fcc6ddb11}{}\label{classGKObject_ab177d522fe520e1a715b624fcc6ddb11}
+Return true is this object can be deleted. This function can be rewritten to support complex locks as objects locked because its container is locked. \index{G\+K\+Object@{G\+K\+Object}!can\+Be\+Edited@{can\+Be\+Edited}}
+\index{can\+Be\+Edited@{can\+Be\+Edited}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{can\+Be\+Edited() const }{canBeEdited() const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool G\+K\+Object\+::can\+Be\+Edited (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKObject_ad5ac15fbbca40d75a943a8ddf73a8a7a}{}\label{classGKObject_ad5ac15fbbca40d75a943a8ddf73a8a7a}
+Return true is this object can be modified. This function can be rewritten to support complex locks as objects locked because its container is locked. 
+
+Reimplemented in \hyperlink{classGKGeoObject_a1f711271ae98d5eecb3a4cc4482a3110}{G\+K\+Geo\+Object}.
+
+\index{G\+K\+Object@{G\+K\+Object}!can\+Be\+Modified@{can\+Be\+Modified}}
+\index{can\+Be\+Modified@{can\+Be\+Modified}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{can\+Be\+Modified() const }{canBeModified() const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool G\+K\+Object\+::can\+Be\+Modified (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKObject_a8f50f2a968b01df84a07cfd02ae0d5ff}{}\label{classGKObject_a8f50f2a968b01df84a07cfd02ae0d5ff}
+Return true is this object can be modified. This function can be rewritten to support complex locks as objects locked because its container is locked. 
+
+Reimplemented in \hyperlink{classGKGeoObject_a19a4e8d78feb4d584c975acef1efb68d}{G\+K\+Geo\+Object}.
+
+\index{G\+K\+Object@{G\+K\+Object}!can\+Decode@{can\+Decode}}
+\index{can\+Decode@{can\+Decode}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{can\+Decode(const Q\+Mime\+Data $\ast$)}{canDecode(const QMimeData *)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool G\+K\+Object\+::can\+Decode (
+\begin{DoxyParamCaption}
+\item[{const Q\+Mime\+Data $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classGKObject_a273a3ce4b93e48816f1223da4d10e3ea}{}\label{classGKObject_a273a3ce4b93e48816f1223da4d10e3ea}
+In a drag and drop operation (or copy and paste), this object is the objective (where the selection has been dropped or where it will be pasted).
+
+It will return true if it accepts the drop/paste and false otherwise. \index{G\+K\+Object@{G\+K\+Object}!check\+For\+Validity@{check\+For\+Validity}}
+\index{check\+For\+Validity@{check\+For\+Validity}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{check\+For\+Validity(\+G\+K\+Data\+Stream \&s)}{checkForValidity(GKDataStream &s)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool G\+K\+Object\+::check\+For\+Validity (
+\begin{DoxyParamCaption}
+\item[{G\+K\+Data\+Stream \&}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKObject_afd278ae77f692983059e45391532b9d3}{}\label{classGKObject_afd278ae77f692983059e45391532b9d3}
+After a restore, return false if this object is invalid. It will be removed from the model. 
+
+Reimplemented in \hyperlink{classGKGeoObject_ad51f9b7b707899590228da2f4eec29e7}{G\+K\+Geo\+Object}.
+
+\index{G\+K\+Object@{G\+K\+Object}!clear\+Data\+Value\+TS@{clear\+Data\+Value\+TS}}
+\index{clear\+Data\+Value\+TS@{clear\+Data\+Value\+TS}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{clear\+Data\+Value\+T\+S(const G\+K\+Column $\ast$attr, G\+K\+T\+S\+Description $\ast$a\+Description=\+N\+U\+L\+L)}{clearDataValueTS(const GKColumn *attr, GKTSDescription *aDescription=NULL)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+K\+Object\+::clear\+Data\+Value\+TS (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Column $\ast$}]{attr, }
+\item[{G\+K\+T\+S\+Description $\ast$}]{a\+Description = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKObject_a5a15db6ec28dcdcd8d5428de0a648a60}{}\label{classGKObject_a5a15db6ec28dcdcd8d5428de0a648a60}
+Clears a Time Series and initializes it using an optional description \index{G\+K\+Object@{G\+K\+Object}!clear\+Data\+Value\+T\+S\+By\+ID@{clear\+Data\+Value\+T\+S\+By\+ID}}
+\index{clear\+Data\+Value\+T\+S\+By\+ID@{clear\+Data\+Value\+T\+S\+By\+ID}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{clear\+Data\+Value\+T\+S\+By\+I\+D(uint attr\+Id, G\+K\+T\+S\+Description $\ast$a\+Description=\+N\+U\+L\+L)}{clearDataValueTSByID(uint attrId, GKTSDescription *aDescription=NULL)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+Object\+::clear\+Data\+Value\+T\+S\+By\+ID (
+\begin{DoxyParamCaption}
+\item[{uint}]{attr\+Id, }
+\item[{G\+K\+T\+S\+Description $\ast$}]{a\+Description = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKObject_a966b14e3eda905eb950bd8e4a0c627dc}{}\label{classGKObject_a966b14e3eda905eb950bd8e4a0c627dc}
+Clears a Time Series and initializes it using an optional description \index{G\+K\+Object@{G\+K\+Object}!clone@{clone}}
+\index{clone@{clone}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{clone(bool add\+It\+To\+Model=true) const }{clone(bool addItToModel=true) const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf G\+K\+Object}$\ast$ G\+K\+Object\+::clone (
+\begin{DoxyParamCaption}
+\item[{bool}]{add\+It\+To\+Model = {\ttfamily true}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKObject_a0b70f4563bd69f3a4ff5d5a893b4e221}{}\label{classGKObject_a0b70f4563bd69f3a4ff5d5a893b4e221}
+Returns this object copied in a new one. It will be added to the catalog by default unless the \textquotesingle{}add\+It\+Tomodel\textquotesingle{} is false. 
+
+Reimplemented in \hyperlink{classGKGeoObject_a342c5d7928c3c4e82cc44240078d4e27}{G\+K\+Geo\+Object}, \hyperlink{classGKCircle_a2b820f2a2970c26fc00d551a928666c5}{G\+K\+Circle}, and \hyperlink{classGKDPoint_a8289d0a5357e581c7a0450f8fa649ecd}{G\+K\+D\+Point}.
+
+\index{G\+K\+Object@{G\+K\+Object}!compare@{compare}}
+\index{compare@{compare}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{compare(const G\+K\+Object $\ast$obj) const }{compare(const GKObject *obj) const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual G\+K\+Object\+Compare\+Data G\+K\+Object\+::compare (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKObject_a6b22ecbae17d74a55bd9bc698641db86}{}\label{classGKObject_a6b22ecbae17d74a55bd9bc698641db86}
+Compare this object with \char`\"{}obj\char`\"{}. Return a list of attributes that are different. The ID is not compared. 
+
+Reimplemented in \hyperlink{classGKGeoObject_aec2c201cfcc6e9740bbe67875f0aeb5c}{G\+K\+Geo\+Object}, and \hyperlink{classGKDPoint_a0dc57d1512d6eae6ffff4e3a4e2d3df5}{G\+K\+D\+Point}.
+
+\index{G\+K\+Object@{G\+K\+Object}!delete\+And\+Clean\+Row@{delete\+And\+Clean\+Row}}
+\index{delete\+And\+Clean\+Row@{delete\+And\+Clean\+Row}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{delete\+And\+Clean\+Row()}{deleteAndCleanRow()}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+Object\+::delete\+And\+Clean\+Row (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classGKObject_a89de1ba900e5547145cdecae30c83238}{}\label{classGKObject_a89de1ba900e5547145cdecae30c83238}
+Private function, do not call unless you know what are doing. \index{G\+K\+Object@{G\+K\+Object}!exists@{exists}}
+\index{exists@{exists}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{exists(quint32 scenario\+Id) const }{exists(quint32 scenarioId) const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool G\+K\+Object\+::exists (
+\begin{DoxyParamCaption}
+\item[{quint32}]{scenario\+Id}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKObject_a089427722ccb540bc4d376102c4e3953}{}\label{classGKObject_a089427722ccb540bc4d376102c4e3953}
+Returns true if this object exists in the scenario. An object can exists in several, all or just one scenario. If scenario is 0 it will return always true. Objects exists or not based on Geometry Configuration settings attached to the Scenario.
+
+Only geo objects are marked as existing or not directly. Non geo objects can be nonexistent based on contained geo objects (for example a Signal Group exists if all the turnings exists). 
+
+Reimplemented in \hyperlink{classGKGeoObject_a7cfe423fb52cb46d8aa0bb148a4961e2}{G\+K\+Geo\+Object}.
+
+\index{G\+K\+Object@{G\+K\+Object}!find\+Folder@{find\+Folder}}
+\index{find\+Folder@{find\+Folder}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{find\+Folder(const Q\+String \&by\+Name) const }{findFolder(const QString &byName) const }}]{\setlength{\rightskip}{0pt plus 5cm}G\+K\+Folder$\ast$ G\+K\+Object\+::find\+Folder (
+\begin{DoxyParamCaption}
+\item[{const Q\+String \&}]{by\+Name}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKObject_a0584dde84922527e708fff3bc4ea2053}{}\label{classGKObject_a0584dde84922527e708fff3bc4ea2053}
+Finds a folder by its internal name among the different folders in this object. \begin{DoxySeeAlso}{See also}
+G\+K\+Folder\+::find\+Folder 
+\end{DoxySeeAlso}
+\index{G\+K\+Object@{G\+K\+Object}!get\+Data\+Value@{get\+Data\+Value}}
+\index{get\+Data\+Value@{get\+Data\+Value}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{get\+Data\+Value(const G\+K\+Column $\ast$attr, bool $\ast$deleteit, const G\+K\+Context \&context=\+G\+K\+Context\+::any\+Context) const override}{getDataValue(const GKColumn *attr, bool *deleteit, const GKContext &context=GKContext::anyContext) const override}}]{\setlength{\rightskip}{0pt plus 5cm}virtual Q\+Variant$\ast$ G\+K\+Object\+::get\+Data\+Value (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Column $\ast$}]{attr, }
+\item[{bool $\ast$}]{deleteit, }
+\item[{const {\bf G\+K\+Context} \&}]{context = {\ttfamily {\bf G\+K\+Context\+::any\+Context}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classGKObject_ac75262d879bc8dc912234fe64a618726}{}\label{classGKObject_ac75262d879bc8dc912234fe64a618726}
+Get the value of an attribute. If no value is found, N\+U\+LL is returned. If deleteit is true, the returned value must be deleted by the method that makes the call. 
+
+Implements \hyperlink{classGKBaseObject_ae88f397d9b9f2b4a9de0d82ebf49407e}{G\+K\+Base\+Object}.
+
+\index{G\+K\+Object@{G\+K\+Object}!get\+Data\+Value\+Bool@{get\+Data\+Value\+Bool}}
+\index{get\+Data\+Value\+Bool@{get\+Data\+Value\+Bool}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{get\+Data\+Value\+Bool(const G\+K\+Column $\ast$attr, const G\+K\+Context \&context=\+G\+K\+Context\+::any\+Context) const override}{getDataValueBool(const GKColumn *attr, const GKContext &context=GKContext::anyContext) const override}}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+Object\+::get\+Data\+Value\+Bool (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Column $\ast$}]{attr, }
+\item[{const {\bf G\+K\+Context} \&}]{context = {\ttfamily {\bf G\+K\+Context\+::any\+Context}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classGKObject_a7f84545d868c53f65e6df09a8ca10f75}{}\label{classGKObject_a7f84545d868c53f65e6df09a8ca10f75}
+See \hyperlink{classGKObject_a1a19168a7f85db37554ae5632a5e89a5}{G\+K\+Object\+::get\+Data\+Value\+Int} 
+
+Implements \hyperlink{classGKBaseObject_aa3eef7d9327e171508cc917895f45152}{G\+K\+Base\+Object}.
+
+\index{G\+K\+Object@{G\+K\+Object}!get\+Data\+Value\+Bool\+By\+ID@{get\+Data\+Value\+Bool\+By\+ID}}
+\index{get\+Data\+Value\+Bool\+By\+ID@{get\+Data\+Value\+Bool\+By\+ID}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{get\+Data\+Value\+Bool\+By\+I\+D(uint attr\+Id, const G\+K\+Context \&context=\+G\+K\+Context\+::any\+Context) const override}{getDataValueBoolByID(uint attrId, const GKContext &context=GKContext::anyContext) const override}}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+Object\+::get\+Data\+Value\+Bool\+By\+ID (
+\begin{DoxyParamCaption}
+\item[{uint}]{attr\+Id, }
+\item[{const {\bf G\+K\+Context} \&}]{context = {\ttfamily {\bf G\+K\+Context\+::any\+Context}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classGKObject_a390a8acd3245bf70bda684b93021bf32}{}\label{classGKObject_a390a8acd3245bf70bda684b93021bf32}
+See \hyperlink{classGKObject_a1a19168a7f85db37554ae5632a5e89a5}{G\+K\+Object\+::get\+Data\+Value\+Int} 
+
+Implements \hyperlink{classGKBaseObject_a64d5f12b34818f5d001dbd4e0e73de0d}{G\+K\+Base\+Object}.
+
+\index{G\+K\+Object@{G\+K\+Object}!get\+Data\+Value\+By\+ID@{get\+Data\+Value\+By\+ID}}
+\index{get\+Data\+Value\+By\+ID@{get\+Data\+Value\+By\+ID}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{get\+Data\+Value\+By\+I\+D(uint attr\+Id, bool $\ast$deleteit, const G\+K\+Context \&context=\+G\+K\+Context\+::any\+Context) const override}{getDataValueByID(uint attrId, bool *deleteit, const GKContext &context=GKContext::anyContext) const override}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Variant$\ast$ G\+K\+Object\+::get\+Data\+Value\+By\+ID (
+\begin{DoxyParamCaption}
+\item[{uint}]{attr\+Id, }
+\item[{bool $\ast$}]{deleteit, }
+\item[{const {\bf G\+K\+Context} \&}]{context = {\ttfamily {\bf G\+K\+Context\+::any\+Context}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classGKObject_a2d81f6712c496054d22b0437eba0f1cc}{}\label{classGKObject_a2d81f6712c496054d22b0437eba0f1cc}
+Get the value of an attribute. If no value is found, N\+U\+LL is returned. If deleteit is true, the returned value must be deleted by the method that makes the call. 
+
+Implements \hyperlink{classGKBaseObject_afe167f2a87468c8f4a1b639cdd9201e0}{G\+K\+Base\+Object}.
+
+\index{G\+K\+Object@{G\+K\+Object}!get\+Data\+Value\+Date@{get\+Data\+Value\+Date}}
+\index{get\+Data\+Value\+Date@{get\+Data\+Value\+Date}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{get\+Data\+Value\+Date(const G\+K\+Column $\ast$attr, const G\+K\+Context \&context=\+G\+K\+Context\+::any\+Context) const override}{getDataValueDate(const GKColumn *attr, const GKContext &context=GKContext::anyContext) const override}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Date G\+K\+Object\+::get\+Data\+Value\+Date (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Column $\ast$}]{attr, }
+\item[{const {\bf G\+K\+Context} \&}]{context = {\ttfamily {\bf G\+K\+Context\+::any\+Context}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classGKObject_a89e18a58729aa19fc955ea56ca6d64e6}{}\label{classGKObject_a89e18a58729aa19fc955ea56ca6d64e6}
+See \hyperlink{classGKObject_a1a19168a7f85db37554ae5632a5e89a5}{G\+K\+Object\+::get\+Data\+Value\+Int} 
+
+Implements \hyperlink{classGKBaseObject_a9e488c0d638961320c57704dd541d5e1}{G\+K\+Base\+Object}.
+
+\index{G\+K\+Object@{G\+K\+Object}!get\+Data\+Value\+Date\+By\+ID@{get\+Data\+Value\+Date\+By\+ID}}
+\index{get\+Data\+Value\+Date\+By\+ID@{get\+Data\+Value\+Date\+By\+ID}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{get\+Data\+Value\+Date\+By\+I\+D(uint attr\+Id, const G\+K\+Context \&context=\+G\+K\+Context\+::any\+Context) const override}{getDataValueDateByID(uint attrId, const GKContext &context=GKContext::anyContext) const override}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Date G\+K\+Object\+::get\+Data\+Value\+Date\+By\+ID (
+\begin{DoxyParamCaption}
+\item[{uint}]{attr\+Id, }
+\item[{const {\bf G\+K\+Context} \&}]{context = {\ttfamily {\bf G\+K\+Context\+::any\+Context}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classGKObject_a16fd1ea80b037c2711afe5f481b05be0}{}\label{classGKObject_a16fd1ea80b037c2711afe5f481b05be0}
+See \hyperlink{classGKObject_a1a19168a7f85db37554ae5632a5e89a5}{G\+K\+Object\+::get\+Data\+Value\+Int} 
+
+Implements \hyperlink{classGKBaseObject_a3d9d2f2adfe1ea3289ce24cf1bdc882f}{G\+K\+Base\+Object}.
+
+\index{G\+K\+Object@{G\+K\+Object}!get\+Data\+Value\+Double@{get\+Data\+Value\+Double}}
+\index{get\+Data\+Value\+Double@{get\+Data\+Value\+Double}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{get\+Data\+Value\+Double(const G\+K\+Column $\ast$attr, const G\+K\+Context \&context=\+G\+K\+Context\+::any\+Context) const override}{getDataValueDouble(const GKColumn *attr, const GKContext &context=GKContext::anyContext) const override}}]{\setlength{\rightskip}{0pt plus 5cm}double G\+K\+Object\+::get\+Data\+Value\+Double (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Column $\ast$}]{attr, }
+\item[{const {\bf G\+K\+Context} \&}]{context = {\ttfamily {\bf G\+K\+Context\+::any\+Context}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classGKObject_a5f2d6ea14b11d42dee9d7e795dcb9370}{}\label{classGKObject_a5f2d6ea14b11d42dee9d7e795dcb9370}
+See \hyperlink{classGKObject_a1a19168a7f85db37554ae5632a5e89a5}{G\+K\+Object\+::get\+Data\+Value\+Int} 
+
+Implements \hyperlink{classGKBaseObject_ab31d8734b5c82b7872da7c28caccc535}{G\+K\+Base\+Object}.
+
+\index{G\+K\+Object@{G\+K\+Object}!get\+Data\+Value\+Double\+By\+ID@{get\+Data\+Value\+Double\+By\+ID}}
+\index{get\+Data\+Value\+Double\+By\+ID@{get\+Data\+Value\+Double\+By\+ID}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{get\+Data\+Value\+Double\+By\+I\+D(uint attr\+Id, const G\+K\+Context \&context=\+G\+K\+Context\+::any\+Context) const override}{getDataValueDoubleByID(uint attrId, const GKContext &context=GKContext::anyContext) const override}}]{\setlength{\rightskip}{0pt plus 5cm}double G\+K\+Object\+::get\+Data\+Value\+Double\+By\+ID (
+\begin{DoxyParamCaption}
+\item[{uint}]{attr\+Id, }
+\item[{const {\bf G\+K\+Context} \&}]{context = {\ttfamily {\bf G\+K\+Context\+::any\+Context}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classGKObject_a62e8d9c7d663027ba49d778145cd9705}{}\label{classGKObject_a62e8d9c7d663027ba49d778145cd9705}
+See \hyperlink{classGKObject_a1a19168a7f85db37554ae5632a5e89a5}{G\+K\+Object\+::get\+Data\+Value\+Int} 
+
+Implements \hyperlink{classGKBaseObject_a406a839bc0dc4ddf5eaae9a0e63ee5ef}{G\+K\+Base\+Object}.
+
+\index{G\+K\+Object@{G\+K\+Object}!get\+Data\+Value\+Int@{get\+Data\+Value\+Int}}
+\index{get\+Data\+Value\+Int@{get\+Data\+Value\+Int}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{get\+Data\+Value\+Int(const G\+K\+Column $\ast$attr, const G\+K\+Context \&context=\+G\+K\+Context\+::any\+Context) const override}{getDataValueInt(const GKColumn *attr, const GKContext &context=GKContext::anyContext) const override}}]{\setlength{\rightskip}{0pt plus 5cm}virtual int G\+K\+Object\+::get\+Data\+Value\+Int (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Column $\ast$}]{attr, }
+\item[{const {\bf G\+K\+Context} \&}]{context = {\ttfamily {\bf G\+K\+Context\+::any\+Context}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classGKObject_a1a19168a7f85db37554ae5632a5e89a5}{}\label{classGKObject_a1a19168a7f85db37554ae5632a5e89a5}
+Helper functions (only for access). It\textquotesingle{}s faster than get\+Data\+Value since it doesn\textquotesingle{}t creates any intermediate Q\+Variant for internal attributes. Note that for G\+K\+Time\+Serie it returns the default value, in order to get any other value (position or condition dependant) use get\+Data\+Value to take the whole attribute 
+
+Implements \hyperlink{classGKBaseObject_a01bcf1a2ff617e84b461bfebb5ddc556}{G\+K\+Base\+Object}.
+
+
+
+Reimplemented in \hyperlink{classGKGeoObject_afb827f2d02c261840b9f60b54d66977a}{G\+K\+Geo\+Object}.
+
+\index{G\+K\+Object@{G\+K\+Object}!get\+Data\+Value\+Int\+By\+ID@{get\+Data\+Value\+Int\+By\+ID}}
+\index{get\+Data\+Value\+Int\+By\+ID@{get\+Data\+Value\+Int\+By\+ID}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{get\+Data\+Value\+Int\+By\+I\+D(uint attr\+Id, const G\+K\+Context \&context=\+G\+K\+Context\+::any\+Context) const override}{getDataValueIntByID(uint attrId, const GKContext &context=GKContext::anyContext) const override}}]{\setlength{\rightskip}{0pt plus 5cm}int G\+K\+Object\+::get\+Data\+Value\+Int\+By\+ID (
+\begin{DoxyParamCaption}
+\item[{uint}]{attr\+Id, }
+\item[{const {\bf G\+K\+Context} \&}]{context = {\ttfamily {\bf G\+K\+Context\+::any\+Context}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classGKObject_a89b17b6bc62ca3f144e25fd637308cf0}{}\label{classGKObject_a89b17b6bc62ca3f144e25fd637308cf0}
+Helper functions (only for access). It\textquotesingle{}s faster than get\+Data\+Value since it doesn\textquotesingle{}t creates any intermediate Q\+Variant for internal attributes. Note that for G\+K\+Time\+Serie it returns the default value, in order to get any other value (position or condition dependant) use get\+Data\+Value to take the whole attribute 
+
+Implements \hyperlink{classGKBaseObject_ac68785485ca46410a911ee2db0cfb43c}{G\+K\+Base\+Object}.
+
+\index{G\+K\+Object@{G\+K\+Object}!get\+Data\+Value\+In\+TS@{get\+Data\+Value\+In\+TS}}
+\index{get\+Data\+Value\+In\+TS@{get\+Data\+Value\+In\+TS}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{get\+Data\+Value\+In\+T\+S(const G\+K\+Column $\ast$attr, G\+K\+Time\+Serie\+Index index, double $\ast$deviation=\+N\+U\+L\+L) const override}{getDataValueInTS(const GKColumn *attr, GKTimeSerieIndex index, double *deviation=NULL) const override}}]{\setlength{\rightskip}{0pt plus 5cm}virtual double G\+K\+Object\+::get\+Data\+Value\+In\+TS (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Column $\ast$}]{attr, }
+\item[{G\+K\+Time\+Serie\+Index}]{index, }
+\item[{double $\ast$}]{deviation = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classGKObject_ae7b4508b5a12cc7165adae7ab40d3836}{}\label{classGKObject_ae7b4508b5a12cc7165adae7ab40d3836}
+Get a value for a Time\+Serie or 0.\+0 if no value is found (no value for the index) and, optionally, its deviation. 
+
+Implements \hyperlink{classGKBaseObject_a60409cd3407257cde924579760db4ac9}{G\+K\+Base\+Object}.
+
+\index{G\+K\+Object@{G\+K\+Object}!get\+Data\+Value\+In\+T\+S\+By\+ID@{get\+Data\+Value\+In\+T\+S\+By\+ID}}
+\index{get\+Data\+Value\+In\+T\+S\+By\+ID@{get\+Data\+Value\+In\+T\+S\+By\+ID}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{get\+Data\+Value\+In\+T\+S\+By\+I\+D(uint attr\+Id, G\+K\+Time\+Serie\+Index index, double $\ast$deviation=\+N\+U\+L\+L) const override}{getDataValueInTSByID(uint attrId, GKTimeSerieIndex index, double *deviation=NULL) const override}}]{\setlength{\rightskip}{0pt plus 5cm}double G\+K\+Object\+::get\+Data\+Value\+In\+T\+S\+By\+ID (
+\begin{DoxyParamCaption}
+\item[{uint}]{attr\+Id, }
+\item[{G\+K\+Time\+Serie\+Index}]{index, }
+\item[{double $\ast$}]{deviation = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classGKObject_ade795854307395ec3add6f01ff50c52a}{}\label{classGKObject_ade795854307395ec3add6f01ff50c52a}
+Get a value for a Time\+Serie or 0.\+0 if no value is found (no value for the index) and, optionally, its deviation. 
+
+Implements \hyperlink{classGKBaseObject_ab95510cc5f255eab3d53003ee0100eb6}{G\+K\+Base\+Object}.
+
+\index{G\+K\+Object@{G\+K\+Object}!get\+Data\+Value\+Object@{get\+Data\+Value\+Object}}
+\index{get\+Data\+Value\+Object@{get\+Data\+Value\+Object}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{get\+Data\+Value\+Object(const G\+K\+Column $\ast$attr, const G\+K\+Context \&context=\+G\+K\+Context\+::any\+Context) const override}{getDataValueObject(const GKColumn *attr, const GKContext &context=GKContext::anyContext) const override}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+K\+Object}$\ast$ G\+K\+Object\+::get\+Data\+Value\+Object (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Column $\ast$}]{attr, }
+\item[{const {\bf G\+K\+Context} \&}]{context = {\ttfamily {\bf G\+K\+Context\+::any\+Context}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classGKObject_a47e5fa225dbfce728bc1d45a9d742ab5}{}\label{classGKObject_a47e5fa225dbfce728bc1d45a9d742ab5}
+See \hyperlink{classGKObject_a1a19168a7f85db37554ae5632a5e89a5}{G\+K\+Object\+::get\+Data\+Value\+Int} 
+
+Implements \hyperlink{classGKBaseObject_a85b9abf441b0854648e884a88c25f0ba}{G\+K\+Base\+Object}.
+
+\index{G\+K\+Object@{G\+K\+Object}!get\+Data\+Value\+Object\+By\+ID@{get\+Data\+Value\+Object\+By\+ID}}
+\index{get\+Data\+Value\+Object\+By\+ID@{get\+Data\+Value\+Object\+By\+ID}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{get\+Data\+Value\+Object\+By\+I\+D(uint attr\+Id, const G\+K\+Context \&context=\+G\+K\+Context\+::any\+Context) const override}{getDataValueObjectByID(uint attrId, const GKContext &context=GKContext::anyContext) const override}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+K\+Object}$\ast$ G\+K\+Object\+::get\+Data\+Value\+Object\+By\+ID (
+\begin{DoxyParamCaption}
+\item[{uint}]{attr\+Id, }
+\item[{const {\bf G\+K\+Context} \&}]{context = {\ttfamily {\bf G\+K\+Context\+::any\+Context}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classGKObject_a0107083f955e848f0e1af39f6a9e1263}{}\label{classGKObject_a0107083f955e848f0e1af39f6a9e1263}
+See \hyperlink{classGKObject_a1a19168a7f85db37554ae5632a5e89a5}{G\+K\+Object\+::get\+Data\+Value\+Int} 
+
+Implements \hyperlink{classGKBaseObject_a09d9039d3185b14fc0d5dd8e207b3c8d}{G\+K\+Base\+Object}.
+
+\index{G\+K\+Object@{G\+K\+Object}!get\+Data\+Value\+String@{get\+Data\+Value\+String}}
+\index{get\+Data\+Value\+String@{get\+Data\+Value\+String}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{get\+Data\+Value\+String(const G\+K\+Column $\ast$attr, const G\+K\+Context \&context=\+G\+K\+Context\+::any\+Context) const override}{getDataValueString(const GKColumn *attr, const GKContext &context=GKContext::anyContext) const override}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String G\+K\+Object\+::get\+Data\+Value\+String (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Column $\ast$}]{attr, }
+\item[{const {\bf G\+K\+Context} \&}]{context = {\ttfamily {\bf G\+K\+Context\+::any\+Context}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classGKObject_ab7ea66283fe3a7732da043262dff51e2}{}\label{classGKObject_ab7ea66283fe3a7732da043262dff51e2}
+See \hyperlink{classGKObject_a1a19168a7f85db37554ae5632a5e89a5}{G\+K\+Object\+::get\+Data\+Value\+Int} 
+
+Implements \hyperlink{classGKBaseObject_aa849b95c5b9e0556816edf4b4fa69487}{G\+K\+Base\+Object}.
+
+\index{G\+K\+Object@{G\+K\+Object}!get\+Data\+Value\+String\+By\+ID@{get\+Data\+Value\+String\+By\+ID}}
+\index{get\+Data\+Value\+String\+By\+ID@{get\+Data\+Value\+String\+By\+ID}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{get\+Data\+Value\+String\+By\+I\+D(uint attr\+Id, const G\+K\+Context \&context=\+G\+K\+Context\+::any\+Context) const override}{getDataValueStringByID(uint attrId, const GKContext &context=GKContext::anyContext) const override}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String G\+K\+Object\+::get\+Data\+Value\+String\+By\+ID (
+\begin{DoxyParamCaption}
+\item[{uint}]{attr\+Id, }
+\item[{const {\bf G\+K\+Context} \&}]{context = {\ttfamily {\bf G\+K\+Context\+::any\+Context}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classGKObject_a6eabd8c4b25fb20094d075d986e94015}{}\label{classGKObject_a6eabd8c4b25fb20094d075d986e94015}
+See \hyperlink{classGKObject_a1a19168a7f85db37554ae5632a5e89a5}{G\+K\+Object\+::get\+Data\+Value\+Int} 
+
+Implements \hyperlink{classGKBaseObject_a75be29d474546eb09fb80aff39b631b3}{G\+K\+Base\+Object}.
+
+\index{G\+K\+Object@{G\+K\+Object}!get\+Data\+Value\+Time@{get\+Data\+Value\+Time}}
+\index{get\+Data\+Value\+Time@{get\+Data\+Value\+Time}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{get\+Data\+Value\+Time(const G\+K\+Column $\ast$attr, const G\+K\+Context \&context=\+G\+K\+Context\+::any\+Context) const override}{getDataValueTime(const GKColumn *attr, const GKContext &context=GKContext::anyContext) const override}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Time G\+K\+Object\+::get\+Data\+Value\+Time (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Column $\ast$}]{attr, }
+\item[{const {\bf G\+K\+Context} \&}]{context = {\ttfamily {\bf G\+K\+Context\+::any\+Context}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classGKObject_a5d819751b84c1070389f1de5272b2653}{}\label{classGKObject_a5d819751b84c1070389f1de5272b2653}
+See \hyperlink{classGKObject_a1a19168a7f85db37554ae5632a5e89a5}{G\+K\+Object\+::get\+Data\+Value\+Int} 
+
+Implements \hyperlink{classGKBaseObject_a9fa2cdeb7eb1067b42583e76050bf8f6}{G\+K\+Base\+Object}.
+
+\index{G\+K\+Object@{G\+K\+Object}!get\+Data\+Value\+Time\+By\+ID@{get\+Data\+Value\+Time\+By\+ID}}
+\index{get\+Data\+Value\+Time\+By\+ID@{get\+Data\+Value\+Time\+By\+ID}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{get\+Data\+Value\+Time\+By\+I\+D(uint attr\+Id, const G\+K\+Context \&context=\+G\+K\+Context\+::any\+Context) const override}{getDataValueTimeByID(uint attrId, const GKContext &context=GKContext::anyContext) const override}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Time G\+K\+Object\+::get\+Data\+Value\+Time\+By\+ID (
+\begin{DoxyParamCaption}
+\item[{uint}]{attr\+Id, }
+\item[{const {\bf G\+K\+Context} \&}]{context = {\ttfamily {\bf G\+K\+Context\+::any\+Context}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classGKObject_a5debfef84c5b0a056ea69808bb70bf38}{}\label{classGKObject_a5debfef84c5b0a056ea69808bb70bf38}
+See \hyperlink{classGKObject_a1a19168a7f85db37554ae5632a5e89a5}{G\+K\+Object\+::get\+Data\+Value\+Int} 
+
+Implements \hyperlink{classGKBaseObject_ae9de00386b6b30c4c7156ef59cd44580}{G\+K\+Base\+Object}.
+
+\index{G\+K\+Object@{G\+K\+Object}!get\+Data\+Value\+Time\+Duration@{get\+Data\+Value\+Time\+Duration}}
+\index{get\+Data\+Value\+Time\+Duration@{get\+Data\+Value\+Time\+Duration}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{get\+Data\+Value\+Time\+Duration(const G\+K\+Column $\ast$attr, const G\+K\+Context \&context=\+G\+K\+Context\+::any\+Context) const override}{getDataValueTimeDuration(const GKColumn *attr, const GKContext &context=GKContext::anyContext) const override}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+K\+Time\+Duration} G\+K\+Object\+::get\+Data\+Value\+Time\+Duration (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Column $\ast$}]{attr, }
+\item[{const {\bf G\+K\+Context} \&}]{context = {\ttfamily {\bf G\+K\+Context\+::any\+Context}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classGKObject_aff1ecee68193a30729f70ad5e1179e8b}{}\label{classGKObject_aff1ecee68193a30729f70ad5e1179e8b}
+See \hyperlink{classGKObject_a1a19168a7f85db37554ae5632a5e89a5}{G\+K\+Object\+::get\+Data\+Value\+Int} 
+
+Implements \hyperlink{classGKBaseObject_a06de09433e3d78066030b74ca1e56f2d}{G\+K\+Base\+Object}.
+
+\index{G\+K\+Object@{G\+K\+Object}!get\+Data\+Value\+Time\+Duration\+By\+ID@{get\+Data\+Value\+Time\+Duration\+By\+ID}}
+\index{get\+Data\+Value\+Time\+Duration\+By\+ID@{get\+Data\+Value\+Time\+Duration\+By\+ID}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{get\+Data\+Value\+Time\+Duration\+By\+I\+D(uint attr\+Id, const G\+K\+Context \&context=\+G\+K\+Context\+::any\+Context) const override}{getDataValueTimeDurationByID(uint attrId, const GKContext &context=GKContext::anyContext) const override}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+K\+Time\+Duration} G\+K\+Object\+::get\+Data\+Value\+Time\+Duration\+By\+ID (
+\begin{DoxyParamCaption}
+\item[{uint}]{attr\+Id, }
+\item[{const {\bf G\+K\+Context} \&}]{context = {\ttfamily {\bf G\+K\+Context\+::any\+Context}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classGKObject_a2f659029f39e986a07632ee0ce85da9b}{}\label{classGKObject_a2f659029f39e986a07632ee0ce85da9b}
+See \hyperlink{classGKObject_a1a19168a7f85db37554ae5632a5e89a5}{G\+K\+Object\+::get\+Data\+Value\+Int} 
+
+Implements \hyperlink{classGKBaseObject_a468c98b71d1b4feff47f7d99a55d7ea1}{G\+K\+Base\+Object}.
+
+\index{G\+K\+Object@{G\+K\+Object}!get\+Data\+Value\+TS@{get\+Data\+Value\+TS}}
+\index{get\+Data\+Value\+TS@{get\+Data\+Value\+TS}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{get\+Data\+Value\+T\+S(const G\+K\+Column $\ast$attr) const override}{getDataValueTS(const GKColumn *attr) const override}}]{\setlength{\rightskip}{0pt plus 5cm}virtual G\+K\+Time\+Serie$\ast$ G\+K\+Object\+::get\+Data\+Value\+TS (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Column $\ast$}]{attr}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classGKObject_ae5fa8b85141b85a1798b30410ecb7f55}{}\label{classGKObject_ae5fa8b85141b85a1798b30410ecb7f55}
+Get a Time Series. 
+
+Implements \hyperlink{classGKBaseObject_a655fa8e6246dab899e22a79c9fdbd6ec}{G\+K\+Base\+Object}.
+
+\index{G\+K\+Object@{G\+K\+Object}!get\+Data\+Value\+T\+S\+By\+ID@{get\+Data\+Value\+T\+S\+By\+ID}}
+\index{get\+Data\+Value\+T\+S\+By\+ID@{get\+Data\+Value\+T\+S\+By\+ID}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{get\+Data\+Value\+T\+S\+By\+I\+D(uint attr\+Id) const override}{getDataValueTSByID(uint attrId) const override}}]{\setlength{\rightskip}{0pt plus 5cm}G\+K\+Time\+Serie$\ast$ G\+K\+Object\+::get\+Data\+Value\+T\+S\+By\+ID (
+\begin{DoxyParamCaption}
+\item[{uint}]{attr\+Id}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classGKObject_a2a8110072139986e2481f9d47bd929f8}{}\label{classGKObject_a2a8110072139986e2481f9d47bd929f8}
+Get a Time Series. 
+
+Implements \hyperlink{classGKBaseObject_ab20dd8504b580a37636e6b71fdaaa5cd}{G\+K\+Base\+Object}.
+
+\index{G\+K\+Object@{G\+K\+Object}!get\+Debug\+Info@{get\+Debug\+Info}}
+\index{get\+Debug\+Info@{get\+Debug\+Info}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{get\+Debug\+Info() const }{getDebugInfo() const }}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String G\+K\+Object\+::get\+Debug\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKObject_ac09026de24f573dc93daddf57da844d1}{}\label{classGKObject_ac09026de24f573dc93daddf57da844d1}
+Returns a string containing the memory position, id, uuid and type name of this object \index{G\+K\+Object@{G\+K\+Object}!get\+Del\+Cmd@{get\+Del\+Cmd}}
+\index{get\+Del\+Cmd@{get\+Del\+Cmd}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{get\+Del\+Cmd()}{getDelCmd()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual G\+K\+Object\+Del\+Cmd$\ast$ G\+K\+Object\+::get\+Del\+Cmd (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKObject_ac4a47dac5d37a254e97bee6946c755b7}{}\label{classGKObject_ac4a47dac5d37a254e97bee6946c755b7}
+Object will be deleted. The user must write a suitable G\+K\+Object\+Del\+Cmd subclass and return it in this method. The implementation in this class returns a G\+K\+Object\+Del\+Cmd as it is (it removes the object from the G\+K\+Model and delete it if needed after command destruction, removes the object from the G\+K\+Geo\+Model and removes connections to it). 
+
+Reimplemented in \hyperlink{classGKCircle_ac7a927ddee87c516bb0764c38d937364}{G\+K\+Circle}, and \hyperlink{classGKDPoint_a7d0d52055586cf5807d1db051c0eea1f}{G\+K\+D\+Point}.
+
+\index{G\+K\+Object@{G\+K\+Object}!get\+Del\+Connection\+Cmd@{get\+Del\+Connection\+Cmd}}
+\index{get\+Del\+Connection\+Cmd@{get\+Del\+Connection\+Cmd}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{get\+Del\+Connection\+Cmd(\+G\+K\+Object $\ast$target)}{getDelConnectionCmd(GKObject *target)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual G\+K\+Object\+Connection\+Del\+Cmd$\ast$ G\+K\+Object\+::get\+Del\+Connection\+Cmd (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+K\+Object} $\ast$}]{target}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKObject_ada5bae3e25acd44a5468f62c62b962de}{}\label{classGKObject_ada5bae3e25acd44a5468f62c62b962de}
+This object has connections to \char`\"{}target\char`\"{} and \char`\"{}target\char`\"{} will be removed. Create and return a delete command to handle undo and redo of the affected connections. If the object is deleted outside a command (no U\+N\+DO) then the model will call \hyperlink{classGKObject_a4c548e5fc63c0db5e35baf6eb57e9757}{G\+K\+Object\+::non\+Command\+Object\+Removed} instead.
+
+If this method returns a N\+U\+LL it means that the delete is not possible and the command will not be done. If an object is connected to another but decides that no information is needed in the delete command then it has to return an empty G\+K\+Object\+Connection\+Del\+Cmd instead of a N\+U\+LL.
+
+See also G\+K\+Model. \index{G\+K\+Object@{G\+K\+Object}!get\+Diagnosis@{get\+Diagnosis}}
+\index{get\+Diagnosis@{get\+Diagnosis}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{get\+Diagnosis() const }{getDiagnosis() const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual G\+K\+Object\+Diagnosis G\+K\+Object\+::get\+Diagnosis (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKObject_ac76e3d7799e199d4a722aceff841ecae}{}\label{classGKObject_ac76e3d7799e199d4a722aceff841ecae}
+Returns a diagnosis of this object for warnings and errors. \index{G\+K\+Object@{G\+K\+Object}!get\+Extended\+Id@{get\+Extended\+Id}}
+\index{get\+Extended\+Id@{get\+Extended\+Id}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{get\+Extended\+Id(\+Identifier\+Form form=e\+Identifier\+Default) const }{getExtendedId(IdentifierForm form=eIdentifierDefault) const }}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String G\+K\+Object\+::get\+Extended\+Id (
+\begin{DoxyParamCaption}
+\item[{Identifier\+Form}]{form = {\ttfamily eIdentifierDefault}}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKObject_a5be9614346783ff71327b6abc6bc0607}{}\label{classGKObject_a5be9614346783ff71327b6abc6bc0607}
+Returns the informations corresponding to the specified form. If form is e\+Identifier\+Default, \hyperlink{classGKObject_a9db2ffda1c05ae007ad8dd5cf95e452f}{G\+K\+Object\+::default\+Identifier\+Form} will be used. \index{G\+K\+Object@{G\+K\+Object}!get\+External\+Row@{get\+External\+Row}}
+\index{get\+External\+Row@{get\+External\+Row}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{get\+External\+Row() const }{getExternalRow() const }}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ G\+K\+Object\+::get\+External\+Row (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKObject_abe52120c6133b48eedfd0133828a1bf9}{}\label{classGKObject_abe52120c6133b48eedfd0133828a1bf9}
+A pointer to external data associated with this object. \index{G\+K\+Object@{G\+K\+Object}!get\+Id@{get\+Id}}
+\index{get\+Id@{get\+Id}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{get\+Id() const override}{getId() const override}}]{\setlength{\rightskip}{0pt plus 5cm}quint32 G\+K\+Object\+::get\+Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classGKObject_a7b4db3e163ac785ffa386b07dbba6eea}{}\label{classGKObject_a7b4db3e163ac785ffa386b07dbba6eea}
+Return the unique identifier of this object. 
+
+Implements \hyperlink{classGKBaseObject_a3399cf77ea1b1f9e12cd779a547df7d8}{G\+K\+Base\+Object}.
+
+\index{G\+K\+Object@{G\+K\+Object}!get\+Lock@{get\+Lock}}
+\index{get\+Lock@{get\+Lock}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{get\+Lock() const }{getLock() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+K\+Lock\+Type} G\+K\+Object\+::get\+Lock (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKObject_a4b666c8124018e78c7ab4720925ce767}{}\label{classGKObject_a4b666c8124018e78c7ab4720925ce767}
+Return the current lock for this object. Note that is preferred to use \hyperlink{classGKObject_ab177d522fe520e1a715b624fcc6ddb11}{G\+K\+Object\+::can\+Be\+Deleted} and \hyperlink{classGKObject_a8f50f2a968b01df84a07cfd02ae0d5ff}{G\+K\+Object\+::can\+Be\+Modified} instead of this method since e\+Lock return the lock over this particular object but an object can return e\+None (no lock) but can be locked because other (container) object is locked. \index{G\+K\+Object@{G\+K\+Object}!get\+Model@{get\+Model}}
+\index{get\+Model@{get\+Model}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{get\+Model() const override}{getModel() const override}}]{\setlength{\rightskip}{0pt plus 5cm}G\+K\+Model$\ast$ G\+K\+Object\+::get\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classGKObject_a3362b2e6a23016c44f366f8fef9eb72a}{}\label{classGKObject_a3362b2e6a23016c44f366f8fef9eb72a}
+Return the model of this object, 
+
+Implements \hyperlink{classGKBaseObject_ac277f8125f58f40abc059d648cd67978}{G\+K\+Base\+Object}.
+
+\index{G\+K\+Object@{G\+K\+Object}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{get\+Name() const override}{getName() const override}}]{\setlength{\rightskip}{0pt plus 5cm}const Q\+String\& G\+K\+Object\+::get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classGKObject_a4f5ba333d4cbe5c28a91088073faa6e0}{}\label{classGKObject_a4f5ba333d4cbe5c28a91088073faa6e0}
+The optional name of this object. 
+
+Implements \hyperlink{classGKBaseObject_ab7eb118912e83603c059300458282a5f}{G\+K\+Base\+Object}.
+
+\index{G\+K\+Object@{G\+K\+Object}!get\+Name\+Or\+Extended\+Id@{get\+Name\+Or\+Extended\+Id}}
+\index{get\+Name\+Or\+Extended\+Id@{get\+Name\+Or\+Extended\+Id}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{get\+Name\+Or\+Extended\+Id(\+Identifier\+Form form=e\+Identifier\+Default) const }{getNameOrExtendedId(IdentifierForm form=eIdentifierDefault) const }}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String G\+K\+Object\+::get\+Name\+Or\+Extended\+Id (
+\begin{DoxyParamCaption}
+\item[{Identifier\+Form}]{form = {\ttfamily eIdentifierDefault}}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKObject_a20956e302f753261a4b642e072063c5f}{}\label{classGKObject_a20956e302f753261a4b642e072063c5f}
+Returns name if not empty or the get\+Extended\+Id of the specified form. \index{G\+K\+Object@{G\+K\+Object}!get\+Parent\+Folders@{get\+Parent\+Folders}}
+\index{get\+Parent\+Folders@{get\+Parent\+Folders}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{get\+Parent\+Folders() const }{getParentFolders() const }}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Vector$<$G\+K\+Folder $\ast$$>$ G\+K\+Object\+::get\+Parent\+Folders (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKObject_a5c23864ce223cf35232f4f455b26d0a7}{}\label{classGKObject_a5c23864ce223cf35232f4f455b26d0a7}
+It returns the folders that contain this object as a first level object. It will return only the folders that have this object in the list obtained using the function G\+K\+Folder\+::get\+Contents() \index{G\+K\+Object@{G\+K\+Object}!get\+Status@{get\+Status}}
+\index{get\+Status@{get\+Status}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{get\+Status() const }{getStatus() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+K\+Object\+Status} G\+K\+Object\+::get\+Status (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKObject_ab69075b7a9371ff12399ad575c1de75f}{}\label{classGKObject_ab69075b7a9371ff12399ad575c1de75f}
+Get the current status of this object\+:
+\begin{DoxyItemize}
+\item e\+New\+: the object has been created during this session.
+\item e\+Saved\+: the object has been saved.
+\item e\+Modified\+: the object has been modified (edited).
+\item e\+Deleted\+: the object has been deleted. 
+\end{DoxyItemize}\index{G\+K\+Object@{G\+K\+Object}!get\+Tick@{get\+Tick}}
+\index{get\+Tick@{get\+Tick}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{get\+Tick() const }{getTick() const }}]{\setlength{\rightskip}{0pt plus 5cm}quint32 G\+K\+Object\+::get\+Tick (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKObject_a160a938613052ed297caa8ae3ded57cf}{}\label{classGKObject_a160a938613052ed297caa8ae3ded57cf}
+The current tick of this object. See \hyperlink{classGKObject_aa021efb86f83770079d8f10f4cf67b99}{G\+K\+Object\+::increase\+Tick} \index{G\+K\+Object@{G\+K\+Object}!get\+Tool\+Tip\+String@{get\+Tool\+Tip\+String}}
+\index{get\+Tool\+Tip\+String@{get\+Tool\+Tip\+String}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{get\+Tool\+Tip\+String() const }{getToolTipString() const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual Q\+String G\+K\+Object\+::get\+Tool\+Tip\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKObject_a270fc001443a1c24c0f8d34353f2c69b}{}\label{classGKObject_a270fc001443a1c24c0f8d34353f2c69b}
+Returns a string that describes this object. By default the ID, name and external ID. 
+
+Reimplemented in \hyperlink{classGKGeoObject_a72a947de242b8108e434881ec8046d62}{G\+K\+Geo\+Object}.
+
+\index{G\+K\+Object@{G\+K\+Object}!get\+Type@{get\+Type}}
+\index{get\+Type@{get\+Type}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{get\+Type() const }{getType() const }}]{\setlength{\rightskip}{0pt plus 5cm}G\+K\+Type$\ast$ G\+K\+Object\+::get\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKObject_aef2dbd7f7342fa9ca5f01917c46994cf}{}\label{classGKObject_aef2dbd7f7342fa9ca5f01917c46994cf}
+Returns the type of this object. \index{G\+K\+Object@{G\+K\+Object}!get\+Type\+External\+Name@{get\+Type\+External\+Name}}
+\index{get\+Type\+External\+Name@{get\+Type\+External\+Name}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{get\+Type\+External\+Name() const override}{getTypeExternalName() const override}}]{\setlength{\rightskip}{0pt plus 5cm}virtual Q\+String G\+K\+Object\+::get\+Type\+External\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classGKObject_a7c36c406c513701b936759aedf6adfbc}{}\label{classGKObject_a7c36c406c513701b936759aedf6adfbc}
+The type external name of this object. Is equivalent to \hyperlink{classGKObject_aef2dbd7f7342fa9ca5f01917c46994cf}{get\+Type()}-\/$>$get\+External\+Name() 
+
+Implements \hyperlink{classGKBaseObject_af1f4d7d9900badfb98f70bd17a6dfa81}{G\+K\+Base\+Object}.
+
+\index{G\+K\+Object@{G\+K\+Object}!get\+Type\+Name@{get\+Type\+Name}}
+\index{get\+Type\+Name@{get\+Type\+Name}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{get\+Type\+Name() const override}{getTypeName() const override}}]{\setlength{\rightskip}{0pt plus 5cm}virtual Q\+String G\+K\+Object\+::get\+Type\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{classGKObject_a9b4135e10ab18e202dd71afe15018042}{}\label{classGKObject_a9b4135e10ab18e202dd71afe15018042}
+The type name of this object. Is equivalent to \hyperlink{classGKObject_aef2dbd7f7342fa9ca5f01917c46994cf}{get\+Type()}-\/$>$\hyperlink{classGKObject_a4f5ba333d4cbe5c28a91088073faa6e0}{get\+Name()} 
+
+Implements \hyperlink{classGKBaseObject_af7a70bb706e3d324e7f3992f0ee463c4}{G\+K\+Base\+Object}.
+
+\index{G\+K\+Object@{G\+K\+Object}!get\+Used\+Objects@{get\+Used\+Objects}}
+\index{get\+Used\+Objects@{get\+Used\+Objects}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{get\+Used\+Objects(bool recursive=true) const }{getUsedObjects(bool recursive=true) const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual G\+K\+Object\+Set G\+K\+Object\+::get\+Used\+Objects (
+\begin{DoxyParamCaption}
+\item[{bool}]{recursive = {\ttfamily true}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKObject_a00c609e3db6da98bc61abf70883c03b2}{}\label{classGKObject_a00c609e3db6da98bc61abf70883c03b2}
+Returns a set containing all the objects which are \char`\"{}used\char`\"{} by this object and, if specified so, the objects used by them.
+
+By default it returns an empty set.
+
+\begin{DoxyWarning}{Warning}
+\+: this function is intended to be used only to provide experiment-\/based filtering in the browser bar, so it\textquotesingle{}s not implemented for every class. 
+\end{DoxyWarning}
+\index{G\+K\+Object@{G\+K\+Object}!get\+U\+U\+ID@{get\+U\+U\+ID}}
+\index{get\+U\+U\+ID@{get\+U\+U\+ID}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{get\+U\+U\+I\+D() const }{getUUID() const }}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Uuid G\+K\+Object\+::get\+U\+U\+ID (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKObject_a8d2ee8903f2519cefccbad25f5fdf8bc}{}\label{classGKObject_a8d2ee8903f2519cefccbad25f5fdf8bc}
+Return the unique identifier of this object. \index{G\+K\+Object@{G\+K\+Object}!has\+Been\+Restored@{has\+Been\+Restored}}
+\index{has\+Been\+Restored@{has\+Been\+Restored}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{has\+Been\+Restored() const }{hasBeenRestored() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+Object\+::has\+Been\+Restored (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKObject_aec1d94b913a9e94f74c5c345e08fbf6a}{}\label{classGKObject_aec1d94b913a9e94f74c5c345e08fbf6a}
+Returns true if this objects has been restored (from\+Jon or restore). \index{G\+K\+Object@{G\+K\+Object}!has\+T\+S\+With\+Data@{has\+T\+S\+With\+Data}}
+\index{has\+T\+S\+With\+Data@{has\+T\+S\+With\+Data}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{has\+T\+S\+With\+Data(const G\+K\+Column $\ast$col) const }{hasTSWithData(const GKColumn *col) const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool G\+K\+Object\+::has\+T\+S\+With\+Data (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Column $\ast$}]{col}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKObject_a04f3465ff3636cb557ad07814beccd47}{}\label{classGKObject_a04f3465ff3636cb557ad07814beccd47}
+Check if ts has data for this object \index{G\+K\+Object@{G\+K\+Object}!increase\+Tick@{increase\+Tick}}
+\index{increase\+Tick@{increase\+Tick}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{increase\+Tick()}{increaseTick()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+K\+Object\+::increase\+Tick (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKObject_aa021efb86f83770079d8f10f4cf67b99}{}\label{classGKObject_aa021efb86f83770079d8f10f4cf67b99}
+Increases the current tick of this object. An object has a tick that represents its age. During every modification the operation increases the tick. Other classes can use this tick information to know if they must sync data that refers to this object (for example a drawer). 
+
+Reimplemented in \hyperlink{classGKGeoObject_ad7741c593a280579d11686f3ef0024d9}{G\+K\+Geo\+Object}.
+
+\index{G\+K\+Object@{G\+K\+Object}!init@{init}}
+\index{init@{init}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{init()}{init()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+K\+Object\+::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKObject_a8f390d9dc03ab2cf6d689a6a9b1fde65}{}\label{classGKObject_a8f390d9dc03ab2cf6d689a6a9b1fde65}
+Object initialisation must be here, this function is called after setting object type, model and the creation of the associate G\+K\+Row. Attributes that not depend of the type, or the model can be initialised in the object constructor (since the object is first created and then the type and model are asigned).
+
+Usually only G\+K\+Column attributes will be inicialized here. 
+
+Reimplemented in \hyperlink{classNetworkGUIAP_aeb618492efbfb05d298dcea35078a92b}{Network\+G\+U\+I\+AP}.
+
+\index{G\+K\+Object@{G\+K\+Object}!isA@{isA}}
+\index{isA@{isA}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{is\+A(const G\+K\+Type $\ast$atype) const }{isA(const GKType *atype) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+Object\+::isA (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Type $\ast$}]{atype}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKObject_a0bc06a08e680c8f304a19074d3307207}{}\label{classGKObject_a0bc06a08e680c8f304a19074d3307207}
+Returns true if this object is an instance of a type (or a sub type of it). \index{G\+K\+Object@{G\+K\+Object}!isA@{isA}}
+\index{isA@{isA}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{is\+A(const Q\+String \&type\+Name) const }{isA(const QString &typeName) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+Object\+::isA (
+\begin{DoxyParamCaption}
+\item[{const Q\+String \&}]{type\+Name}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKObject_af104d2d309eb86ae7defe6049d4e11fe}{}\label{classGKObject_af104d2d309eb86ae7defe6049d4e11fe}
+Returns true if this object is an instance of a type (or a sub type of it). \index{G\+K\+Object@{G\+K\+Object}!is\+Data\+Value\+Null@{is\+Data\+Value\+Null}}
+\index{is\+Data\+Value\+Null@{is\+Data\+Value\+Null}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{is\+Data\+Value\+Null(const G\+K\+Column $\ast$attr) const }{isDataValueNull(const GKColumn *attr) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+Object\+::is\+Data\+Value\+Null (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Column $\ast$}]{attr}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKObject_a574e6d6ade01718cf6ad0b70a8fa6bb3}{}\label{classGKObject_a574e6d6ade01718cf6ad0b70a8fa6bb3}
+Returns true if a external column is N\+U\+LL, false if it is not external or is no N\+U\+LL \index{G\+K\+Object@{G\+K\+Object}!is\+External@{is\+External}}
+\index{is\+External@{is\+External}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{is\+External() const }{isExternal() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+Object\+::is\+External (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKObject_ae2084342679907d99d81e1befbe5a35a}{}\label{classGKObject_ae2084342679907d99d81e1befbe5a35a}
+True if it is a external object, that is an object that lives in another Aimsun document (used by replications and experiments in revisions to show in a network data from another).
+
+An external object is also temporary (see \hyperlink{classGKObject_a960fc52fc9b7be6852d4591e6afc6584}{G\+K\+Object\+::is\+Temporary}) \index{G\+K\+Object@{G\+K\+Object}!is\+In\+A\+Revision@{is\+In\+A\+Revision}}
+\index{is\+In\+A\+Revision@{is\+In\+A\+Revision}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{is\+In\+A\+Revision() const }{isInARevision() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+Object\+::is\+In\+A\+Revision (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKObject_ac54ca7164f5048670b7b233f7dd070e3}{}\label{classGKObject_ac54ca7164f5048670b7b233f7dd070e3}
+If true this object is in a revision (not in the base network) as it has been created or modified on a revision. \index{G\+K\+Object@{G\+K\+Object}!is\+Temporary@{is\+Temporary}}
+\index{is\+Temporary@{is\+Temporary}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{is\+Temporary() const }{isTemporary() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+Object\+::is\+Temporary (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKObject_a960fc52fc9b7be6852d4591e6afc6584}{}\label{classGKObject_a960fc52fc9b7be6852d4591e6afc6584}
+Return true is it is a temporary object. A temporary object will not be stored with the rest of the G\+K\+Model. \index{G\+K\+Object@{G\+K\+Object}!mutate\+Column@{mutate\+Column}}
+\index{mutate\+Column@{mutate\+Column}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{mutate\+Column(const G\+K\+Column $\ast$attr, const Q\+Variant \&v)}{mutateColumn(const GKColumn *attr, const QVariant &v)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+K\+Object\+::mutate\+Column (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Column $\ast$}]{attr, }
+\item[{const Q\+Variant \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKObject_a9f03837861b142b10ac690b335167fcd}{}\label{classGKObject_a9f03837861b142b10ac690b335167fcd}
+A previously external column has been converted to internal. During the restore, this function will be called to move the value from the variant to the internal variable. \index{G\+K\+Object@{G\+K\+Object}!mutate\+Column@{mutate\+Column}}
+\index{mutate\+Column@{mutate\+Column}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{mutate\+Column(const G\+K\+Column $\ast$attr, const G\+K\+Object $\ast$v)}{mutateColumn(const GKColumn *attr, const GKObject *v)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+K\+Object\+::mutate\+Column (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Column $\ast$}]{attr, }
+\item[{const {\bf G\+K\+Object} $\ast$}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKObject_a3fdd0ed3d079b17fc1410a453ef86d97}{}\label{classGKObject_a3fdd0ed3d079b17fc1410a453ef86d97}
+A previously external column has been converted to internal. During the restore this function will be called to move the value from the variant to the internal variable. \index{G\+K\+Object@{G\+K\+Object}!mutate\+Column\+By\+ID@{mutate\+Column\+By\+ID}}
+\index{mutate\+Column\+By\+ID@{mutate\+Column\+By\+ID}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{mutate\+Column\+By\+I\+D(uint attr\+Id, const Q\+Variant \&v)}{mutateColumnByID(uint attrId, const QVariant &v)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+Object\+::mutate\+Column\+By\+ID (
+\begin{DoxyParamCaption}
+\item[{uint}]{attr\+Id, }
+\item[{const Q\+Variant \&}]{v}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKObject_a1daf48cf86ffa4b66d6bfd40641957a6}{}\label{classGKObject_a1daf48cf86ffa4b66d6bfd40641957a6}
+A previously external column has been converted to internal. During the restore this function will be called to move the value from the variant to the internal variable. \index{G\+K\+Object@{G\+K\+Object}!mutate\+Column\+By\+ID@{mutate\+Column\+By\+ID}}
+\index{mutate\+Column\+By\+ID@{mutate\+Column\+By\+ID}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{mutate\+Column\+By\+I\+D(uint attr\+Id, const G\+K\+Object $\ast$v)}{mutateColumnByID(uint attrId, const GKObject *v)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+Object\+::mutate\+Column\+By\+ID (
+\begin{DoxyParamCaption}
+\item[{uint}]{attr\+Id, }
+\item[{const {\bf G\+K\+Object} $\ast$}]{v}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKObject_aa75d70d3b93b12bf85318ba1e37b08fc}{}\label{classGKObject_aa75d70d3b93b12bf85318ba1e37b08fc}
+A previously external column has been converted to internal. During the restore this function will be called to move the value from the variant to the internal variable. \index{G\+K\+Object@{G\+K\+Object}!new\+U\+U\+ID@{new\+U\+U\+ID}}
+\index{new\+U\+U\+ID@{new\+U\+U\+ID}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{new\+U\+U\+I\+D()}{newUUID()}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+Object\+::new\+U\+U\+ID (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKObject_ab52114827dbfa4f5d06a9615ba574406}{}\label{classGKObject_ab52114827dbfa4f5d06a9615ba574406}
+Set a new U\+U\+ID for this object (at creation time) \index{G\+K\+Object@{G\+K\+Object}!non\+Command\+Object\+Removed@{non\+Command\+Object\+Removed}}
+\index{non\+Command\+Object\+Removed@{non\+Command\+Object\+Removed}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{non\+Command\+Object\+Removed(\+G\+K\+Object $\ast$)}{nonCommandObjectRemoved(GKObject *)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+K\+Object\+::non\+Command\+Object\+Removed (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+K\+Object} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classGKObject_a4c548e5fc63c0db5e35baf6eb57e9757}{}\label{classGKObject_a4c548e5fc63c0db5e35baf6eb57e9757}
+This object has connections to \char`\"{}target\char`\"{} and \char`\"{}target\char`\"{} will be removed. No command is required as the object is deleted outside a command (if is deleted in a command the model will call \hyperlink{classGKObject_ada5bae3e25acd44a5468f62c62b962de}{G\+K\+Object\+::get\+Del\+Connection\+Cmd} instead).
+
+See also G\+K\+Model. \index{G\+K\+Object@{G\+K\+Object}!notify\+Status\+Change@{notify\+Status\+Change}}
+\index{notify\+Status\+Change@{notify\+Status\+Change}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{notify\+Status\+Change()}{notifyStatusChange()}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+Object\+::notify\+Status\+Change (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKObject_a64bf09817c3a2639dda97bb2466d6d10}{}\label{classGKObject_a64bf09817c3a2639dda97bb2466d6d10}
+Notify the change on this object. Use set\+Status except when the object changes something on it that will not be store, that is, no need to mark the model as unsave but still the G\+UI (for example) should be notified. \index{G\+K\+Object@{G\+K\+Object}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{operator$<$(const G\+K\+Object \&item) const }{operator<(const GKObject &item) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+Object\+::operator$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Object} \&}]{item}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKObject_a6585152b7a3103309c3fd90a220b8ec5}{}\label{classGKObject_a6585152b7a3103309c3fd90a220b8ec5}
+The less than operator has been rewritten because Q\+Maps are always sorted by key and we want to specify the order using the id attribute. \index{G\+K\+Object@{G\+K\+Object}!operator=@{operator=}}
+\index{operator=@{operator=}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{operator=(const G\+K\+Object \&item)}{operator=(const GKObject &item)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+K\+Object}\& G\+K\+Object\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Object} \&}]{item}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKObject_a67f49064bb49dd5e683b593aea715e91}{}\label{classGKObject_a67f49064bb49dd5e683b593aea715e91}
+The assignment operator has been rewritten (as the copy constructor) to be sure that, when copying, the object will never lose its id, type or model. \index{G\+K\+Object@{G\+K\+Object}!post\+Restore@{post\+Restore}}
+\index{post\+Restore@{post\+Restore}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{post\+Restore(\+G\+K\+Data\+Stream \&)}{postRestore(GKDataStream &)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+K\+Object\+::post\+Restore (
+\begin{DoxyParamCaption}
+\item[{G\+K\+Data\+Stream \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classGKObject_a443757bcfd3dee1826155a3f89497c8e}{}\label{classGKObject_a443757bcfd3dee1826155a3f89497c8e}
+All the objects have been restored. Use this call to perform any additional operation that cannot be done in the restore method (maybe requires an object that will be restored after this one).
+
+This method is evaluated using thread so it must be thread safe. For unsafe operations used post\+Restore\+Unsafe. 
+
+Reimplemented in \hyperlink{classGKGeoObject_ac3d477ad4b35bc0628c39081b4fc09ec}{G\+K\+Geo\+Object}, and \hyperlink{classGKDPoint_a43415f7118e37f8e495c5b484565902e}{G\+K\+D\+Point}.
+
+\index{G\+K\+Object@{G\+K\+Object}!post\+Restore\+Unsafe@{post\+Restore\+Unsafe}}
+\index{post\+Restore\+Unsafe@{post\+Restore\+Unsafe}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{post\+Restore\+Unsafe(\+G\+K\+Data\+Stream \&)}{postRestoreUnsafe(GKDataStream &)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+K\+Object\+::post\+Restore\+Unsafe (
+\begin{DoxyParamCaption}
+\item[{G\+K\+Data\+Stream \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classGKObject_a346bb3a641dcb5b5dc2b4880f9db2fc0}{}\label{classGKObject_a346bb3a641dcb5b5dc2b4880f9db2fc0}
+All the objects have been restored. Use this call to perform any additional operation that cannot be done in the restore method (maybe requires an object that will be restored after this one).
+
+This method is evaluated in the main thread so it can perform non safe thread operations. For thread safe operations used post\+Restore. \index{G\+K\+Object@{G\+K\+Object}!preferences\+Changed@{preferences\+Changed}}
+\index{preferences\+Changed@{preferences\+Changed}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{preferences\+Changed()}{preferencesChanged()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+K\+Object\+::preferences\+Changed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classGKObject_a04c9b7bae9da3277fd0d96625539c974}{}\label{classGKObject_a04c9b7bae9da3277fd0d96625539c974}
+The preferences for the G\+K\+Model has been edited. Rewrite this method to react to any change that is interested to this object.
+
+Note that, in order to receive this call, this object must be added to the preferences notification list. And, when the object is destroyed, it must delete it from that list. A good place to set this code is in the \hyperlink{classGKObject_a9ee62f3b50ef85349f812f34ad534801}{G\+K\+Object\+::added\+To\+Catalog} and \hyperlink{classGKObject_ab5f3d4044907b3b1aef653575981eeab}{G\+K\+Object\+::removed\+From\+Catalog}. \index{G\+K\+Object@{G\+K\+Object}!remove\+Column@{remove\+Column}}
+\index{remove\+Column@{remove\+Column}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{remove\+Column(\+G\+K\+Column $\ast$column)}{removeColumn(GKColumn *column)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+Object\+::remove\+Column (
+\begin{DoxyParamCaption}
+\item[{G\+K\+Column $\ast$}]{column}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKObject_a52d73e24359bb5ad6ccdbbf02463cc9f}{}\label{classGKObject_a52d73e24359bb5ad6ccdbbf02463cc9f}
+Removes this (external) column from this object. \index{G\+K\+Object@{G\+K\+Object}!rename\+Folder@{rename\+Folder}}
+\index{rename\+Folder@{rename\+Folder}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{rename\+Folder(const Q\+String \&internal\+Name, const Q\+String \&external\+Name)}{renameFolder(const QString &internalName, const QString &externalName)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+Object\+::rename\+Folder (
+\begin{DoxyParamCaption}
+\item[{const Q\+String \&}]{internal\+Name, }
+\item[{const Q\+String \&}]{external\+Name}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKObject_af834154bd1e5db51631820b5a4729b5a}{}\label{classGKObject_af834154bd1e5db51631820b5a4729b5a}
+Renames the top folders names to allow to open networks in different languages with the correct language names \index{G\+K\+Object@{G\+K\+Object}!reset\+Column@{reset\+Column}}
+\index{reset\+Column@{reset\+Column}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{reset\+Column(\+G\+K\+Column $\ast$column)}{resetColumn(GKColumn *column)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+Object\+::reset\+Column (
+\begin{DoxyParamCaption}
+\item[{G\+K\+Column $\ast$}]{column}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKObject_a35ae238b96e5f5589cbe828fc7b78d16}{}\label{classGKObject_a35ae238b96e5f5589cbe828fc7b78d16}
+Removes the value on the (external) column from this object. A time series or a string will be cleared, a scalar value will be set (if a number) to -\/1, a bool wil be set to false... \index{G\+K\+Object@{G\+K\+Object}!set\+Aggregated\+Value\+In\+TS@{set\+Aggregated\+Value\+In\+TS}}
+\index{set\+Aggregated\+Value\+In\+TS@{set\+Aggregated\+Value\+In\+TS}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{set\+Aggregated\+Value\+In\+T\+S(const G\+K\+Column $\ast$attr, double value, double deviation, G\+K\+T\+S\+Description $\ast$a\+Description=\+N\+U\+L\+L)}{setAggregatedValueInTS(const GKColumn *attr, double value, double deviation, GKTSDescription *aDescription=NULL)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+K\+Object\+::set\+Aggregated\+Value\+In\+TS (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Column $\ast$}]{attr, }
+\item[{double}]{value, }
+\item[{double}]{deviation, }
+\item[{G\+K\+T\+S\+Description $\ast$}]{a\+Description = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKObject_a7260240cd9e4a6a2b3b85b652f12be40}{}\label{classGKObject_a7260240cd9e4a6a2b3b85b652f12be40}
+Set the aggregated value (and a deviation that can be -\/1 for N\+U\+LL deviations) for a time series. \index{G\+K\+Object@{G\+K\+Object}!set\+Aggregated\+Value\+In\+T\+S\+By\+ID@{set\+Aggregated\+Value\+In\+T\+S\+By\+ID}}
+\index{set\+Aggregated\+Value\+In\+T\+S\+By\+ID@{set\+Aggregated\+Value\+In\+T\+S\+By\+ID}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{set\+Aggregated\+Value\+In\+T\+S\+By\+I\+D(uint attr\+Id, double value, double deviation, G\+K\+T\+S\+Description $\ast$a\+Description=\+N\+U\+L\+L)}{setAggregatedValueInTSByID(uint attrId, double value, double deviation, GKTSDescription *aDescription=NULL)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+Object\+::set\+Aggregated\+Value\+In\+T\+S\+By\+ID (
+\begin{DoxyParamCaption}
+\item[{uint}]{attr\+Id, }
+\item[{double}]{value, }
+\item[{double}]{deviation, }
+\item[{G\+K\+T\+S\+Description $\ast$}]{a\+Description = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKObject_aa33240228fa2412eb744bf790484bb2a}{}\label{classGKObject_aa33240228fa2412eb744bf790484bb2a}
+Set the aggregated value (and a deviation that can be -\/1 for N\+U\+LL deviations) for a time series. \index{G\+K\+Object@{G\+K\+Object}!set\+Data\+Value@{set\+Data\+Value}}
+\index{set\+Data\+Value@{set\+Data\+Value}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{set\+Data\+Value(const G\+K\+Column $\ast$attr, const Q\+Variant \&v)}{setDataValue(const GKColumn *attr, const QVariant &v)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+K\+Object\+::set\+Data\+Value (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Column $\ast$}]{attr, }
+\item[{const Q\+Variant \&}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKObject_afc228a2c74e04adfbe58190698ce60d6}{}\label{classGKObject_afc228a2c74e04adfbe58190698ce60d6}
+Sets the value of an attribute. \char`\"{}v\char`\"{} is copied. 
+
+Reimplemented in \hyperlink{classGKGeoObject_ad86c134ad0733ca08d9663205cc72e39}{G\+K\+Geo\+Object}.
+
+\index{G\+K\+Object@{G\+K\+Object}!set\+Data\+Value\+By\+ID@{set\+Data\+Value\+By\+ID}}
+\index{set\+Data\+Value\+By\+ID@{set\+Data\+Value\+By\+ID}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{set\+Data\+Value\+By\+I\+D(uint attr\+Id, const Q\+Variant \&v)}{setDataValueByID(uint attrId, const QVariant &v)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+Object\+::set\+Data\+Value\+By\+ID (
+\begin{DoxyParamCaption}
+\item[{uint}]{attr\+Id, }
+\item[{const Q\+Variant \&}]{v}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKObject_a98906ea35fbf174d07c8e28b7f00438c}{}\label{classGKObject_a98906ea35fbf174d07c8e28b7f00438c}
+Sets the value of an attribute. \char`\"{}v\char`\"{} is copied. \index{G\+K\+Object@{G\+K\+Object}!set\+Data\+Value\+Double@{set\+Data\+Value\+Double}}
+\index{set\+Data\+Value\+Double@{set\+Data\+Value\+Double}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{set\+Data\+Value\+Double(const G\+K\+Column $\ast$attr, double v)}{setDataValueDouble(const GKColumn *attr, double v)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+K\+Object\+::set\+Data\+Value\+Double (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Column $\ast$}]{attr, }
+\item[{double}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKObject_a7c3cb5302749d462ac8bebbaf6bd0368}{}\label{classGKObject_a7c3cb5302749d462ac8bebbaf6bd0368}
+Sets the value of an attribute. \index{G\+K\+Object@{G\+K\+Object}!set\+Data\+Value\+Double\+By\+ID@{set\+Data\+Value\+Double\+By\+ID}}
+\index{set\+Data\+Value\+Double\+By\+ID@{set\+Data\+Value\+Double\+By\+ID}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{set\+Data\+Value\+Double\+By\+I\+D(uint attr\+Id, double v)}{setDataValueDoubleByID(uint attrId, double v)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+Object\+::set\+Data\+Value\+Double\+By\+ID (
+\begin{DoxyParamCaption}
+\item[{uint}]{attr\+Id, }
+\item[{double}]{v}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKObject_af2775908cda803e6d69fd37f8ad1e4a7}{}\label{classGKObject_af2775908cda803e6d69fd37f8ad1e4a7}
+Sets the value of an attribute. \index{G\+K\+Object@{G\+K\+Object}!set\+Data\+Value\+In\+Single\+TS@{set\+Data\+Value\+In\+Single\+TS}}
+\index{set\+Data\+Value\+In\+Single\+TS@{set\+Data\+Value\+In\+Single\+TS}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{set\+Data\+Value\+In\+Single\+T\+S(const G\+K\+Column $\ast$attr, G\+K\+Time\+Serie\+Index index, double value, double deviation, G\+K\+T\+S\+Description $\ast$a\+Description)}{setDataValueInSingleTS(const GKColumn *attr, GKTimeSerieIndex index, double value, double deviation, GKTSDescription *aDescription)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+K\+Object\+::set\+Data\+Value\+In\+Single\+TS (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Column $\ast$}]{attr, }
+\item[{G\+K\+Time\+Serie\+Index}]{index, }
+\item[{double}]{value, }
+\item[{double}]{deviation, }
+\item[{G\+K\+T\+S\+Description $\ast$}]{a\+Description}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKObject_af5e9500d0a9decb5b7e8c4ee7edaf515}{}\label{classGKObject_af5e9500d0a9decb5b7e8c4ee7edaf515}
+Set the value (and a deviation that can be -\/1 for N\+U\+LL deviations) for a time series interval. If the time series has not been created, this method will create it. The time series created will be a G\+K\+Single\+Value\+Time\+Serie, that is, a time series with a single time interval. In this case, it is recommended to specify its description (G\+K\+T\+S\+Description).
+
+The parameter \char`\"{}index\char`\"{} indicates both the position in the TS and the dimension. If the position is less than 0 (-\/1 is recomended) the value will be added at the end of the TS. \index{G\+K\+Object@{G\+K\+Object}!set\+Data\+Value\+In\+TS@{set\+Data\+Value\+In\+TS}}
+\index{set\+Data\+Value\+In\+TS@{set\+Data\+Value\+In\+TS}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{set\+Data\+Value\+In\+T\+S(const G\+K\+Column $\ast$attr, G\+K\+Time\+Serie\+Index index, double value, double deviation, G\+K\+T\+S\+Description $\ast$a\+Description=\+N\+U\+L\+L, int reserved\+Size=0)}{setDataValueInTS(const GKColumn *attr, GKTimeSerieIndex index, double value, double deviation, GKTSDescription *aDescription=NULL, int reservedSize=0)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+K\+Object\+::set\+Data\+Value\+In\+TS (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Column $\ast$}]{attr, }
+\item[{G\+K\+Time\+Serie\+Index}]{index, }
+\item[{double}]{value, }
+\item[{double}]{deviation, }
+\item[{G\+K\+T\+S\+Description $\ast$}]{a\+Description = {\ttfamily NULL}, }
+\item[{int}]{reserved\+Size = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKObject_a7b0fa4fc85a6578f9bf330eed5ba53fa}{}\label{classGKObject_a7b0fa4fc85a6578f9bf330eed5ba53fa}
+Set the value (and a deviation that can be -\/1 for N\+U\+LL deviations) for a time series index. If the time series has not been created, this method will created it. In this case, it is recommended to specify its description (G\+K\+T\+S\+Description).
+
+The parameter \char`\"{}index\char`\"{} indicates the position in the TS. If the pos is less than 0 (-\/1 is recomended) the value will be added at the end of the TS. \index{G\+K\+Object@{G\+K\+Object}!set\+Data\+Value\+In\+TS@{set\+Data\+Value\+In\+TS}}
+\index{set\+Data\+Value\+In\+TS@{set\+Data\+Value\+In\+TS}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{set\+Data\+Value\+In\+T\+S(const G\+K\+Column $\ast$attr, G\+K\+Time\+Serie\+Index index, double value, double deviation, double lower\+Value, G\+K\+T\+S\+Description $\ast$a\+Description=\+N\+U\+L\+L, int reserved\+Size=0)}{setDataValueInTS(const GKColumn *attr, GKTimeSerieIndex index, double value, double deviation, double lowerValue, GKTSDescription *aDescription=NULL, int reservedSize=0)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+K\+Object\+::set\+Data\+Value\+In\+TS (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Column $\ast$}]{attr, }
+\item[{G\+K\+Time\+Serie\+Index}]{index, }
+\item[{double}]{value, }
+\item[{double}]{deviation, }
+\item[{double}]{lower\+Value, }
+\item[{G\+K\+T\+S\+Description $\ast$}]{a\+Description = {\ttfamily NULL}, }
+\item[{int}]{reserved\+Size = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKObject_aa84235c157d2ace0199e883af58fa525}{}\label{classGKObject_aa84235c157d2ace0199e883af58fa525}
+Set the value (and a deviation, or upper\+Bound value, that can be -\/1 for N\+U\+LL deviations and a lower\+Bound value, that can be -\/1 for no bounds definition) for a time series index. If the time series has not been created, this method will created it. In this case, it is recommended to specify its description (G\+K\+T\+S\+Description).
+
+The parameter \char`\"{}index\char`\"{} indicates the position in the TS. If the pos is less than 0 (-\/1 is recomended) the value will be added at the end of the TS. \index{G\+K\+Object@{G\+K\+Object}!set\+Data\+Value\+In\+T\+S\+By\+ID@{set\+Data\+Value\+In\+T\+S\+By\+ID}}
+\index{set\+Data\+Value\+In\+T\+S\+By\+ID@{set\+Data\+Value\+In\+T\+S\+By\+ID}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{set\+Data\+Value\+In\+T\+S\+By\+I\+D(uint attr\+Id, G\+K\+Time\+Serie\+Index index, double value, double deviation, G\+K\+T\+S\+Description $\ast$a\+Description=\+N\+U\+L\+L, int reserved\+Size=0)}{setDataValueInTSByID(uint attrId, GKTimeSerieIndex index, double value, double deviation, GKTSDescription *aDescription=NULL, int reservedSize=0)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+Object\+::set\+Data\+Value\+In\+T\+S\+By\+ID (
+\begin{DoxyParamCaption}
+\item[{uint}]{attr\+Id, }
+\item[{G\+K\+Time\+Serie\+Index}]{index, }
+\item[{double}]{value, }
+\item[{double}]{deviation, }
+\item[{G\+K\+T\+S\+Description $\ast$}]{a\+Description = {\ttfamily NULL}, }
+\item[{int}]{reserved\+Size = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKObject_aac2f7a2ab000092ba6fc25c0d1476df0}{}\label{classGKObject_aac2f7a2ab000092ba6fc25c0d1476df0}
+Set the value (and a deviation that can be -\/1 for N\+U\+LL deviations) for a time series index. If the time series has not been created this method will created it. In this case is recommended to specify its description (G\+K\+T\+S\+Description).
+
+The parameter \char`\"{}index\char`\"{} indicates the position in the TS. If the pos is less than 0 (-\/1 is recomended) the value will be add at the end of the TS. \index{G\+K\+Object@{G\+K\+Object}!set\+Data\+Value\+Object@{set\+Data\+Value\+Object}}
+\index{set\+Data\+Value\+Object@{set\+Data\+Value\+Object}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{set\+Data\+Value\+Object(const G\+K\+Column $\ast$attr, const G\+K\+Object $\ast$obj)}{setDataValueObject(const GKColumn *attr, const GKObject *obj)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+K\+Object\+::set\+Data\+Value\+Object (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Column $\ast$}]{attr, }
+\item[{const {\bf G\+K\+Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKObject_aa05a9ba7c67bfea85c4c834099261725}{}\label{classGKObject_aa05a9ba7c67bfea85c4c834099261725}
+Sets the value of an attribute of type \+\_\+\+G\+K\+Object. \index{G\+K\+Object@{G\+K\+Object}!set\+Data\+Value\+Object\+By\+ID@{set\+Data\+Value\+Object\+By\+ID}}
+\index{set\+Data\+Value\+Object\+By\+ID@{set\+Data\+Value\+Object\+By\+ID}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{set\+Data\+Value\+Object\+By\+I\+D(uint attr\+Id, const G\+K\+Object $\ast$obj)}{setDataValueObjectByID(uint attrId, const GKObject *obj)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+Object\+::set\+Data\+Value\+Object\+By\+ID (
+\begin{DoxyParamCaption}
+\item[{uint}]{attr\+Id, }
+\item[{const {\bf G\+K\+Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKObject_ab83cc937e9d3a0be93422b4f35315779}{}\label{classGKObject_ab83cc937e9d3a0be93422b4f35315779}
+Sets the value of an attribute of type \+\_\+\+G\+K\+Object. \index{G\+K\+Object@{G\+K\+Object}!set\+External@{set\+External}}
+\index{set\+External@{set\+External}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{set\+External(bool value)}{setExternal(bool value)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+Object\+::set\+External (
+\begin{DoxyParamCaption}
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKObject_ab22a5ba2bcaa7c7f639e0ff0ec39b3c3}{}\label{classGKObject_ab22a5ba2bcaa7c7f639e0ff0ec39b3c3}
+True if it is a external object, that is an object that lives in another Aimsun document (used by replications and experiments in revisions to show in a network data from another).
+
+An external object is also temporary (see \hyperlink{classGKObject_a960fc52fc9b7be6852d4591e6afc6584}{G\+K\+Object\+::is\+Temporary}) \index{G\+K\+Object@{G\+K\+Object}!set\+External\+Row@{set\+External\+Row}}
+\index{set\+External\+Row@{set\+External\+Row}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{set\+External\+Row(void $\ast$value)}{setExternalRow(void *value)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+Object\+::set\+External\+Row (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKObject_a0c1e0d22d45252a517575d34a5c7065a}{}\label{classGKObject_a0c1e0d22d45252a517575d34a5c7065a}
+A pointer to external data associated with this object. \index{G\+K\+Object@{G\+K\+Object}!set\+Id@{set\+Id}}
+\index{set\+Id@{set\+Id}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{set\+Id(quint32 aid, G\+K\+Model $\ast$model)}{setId(quint32 aid, GKModel *model)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+K\+Object\+::set\+Id (
+\begin{DoxyParamCaption}
+\item[{quint32}]{aid, }
+\item[{G\+K\+Model $\ast$}]{model}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKObject_af09dcaede290d87fe1e5b727cf807b0f}{}\label{classGKObject_af09dcaede290d87fe1e5b727cf807b0f}
+This set\+Id sets the unique ID of this object. This id C\+A\+N\+N\+OT be change, it\textquotesingle{}s assigned on creation time and keep constant during all the object life.
+
+This method is called automatically either when the object is created in the G\+K\+System\+::new\+Object or when its restored. \index{G\+K\+Object@{G\+K\+Object}!set\+In\+A\+Revision@{set\+In\+A\+Revision}}
+\index{set\+In\+A\+Revision@{set\+In\+A\+Revision}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{set\+In\+A\+Revision(bool value)}{setInARevision(bool value)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+Object\+::set\+In\+A\+Revision (
+\begin{DoxyParamCaption}
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKObject_a4d8757e7f3d7942ab55bca3ea183e9cf}{}\label{classGKObject_a4d8757e7f3d7942ab55bca3ea183e9cf}
+If true this object is in a revision (not in the base network) as it has been created or modified on a revision. \index{G\+K\+Object@{G\+K\+Object}!set\+Lock@{set\+Lock}}
+\index{set\+Lock@{set\+Lock}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{set\+Lock(\+G\+K\+Lock\+Type atype)}{setLock(GKLockType atype)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+K\+Object\+::set\+Lock (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+K\+Lock\+Type}}]{atype}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKObject_a2bc1418a21399ed05979bdd0ef7d7fdc}{}\label{classGKObject_a2bc1418a21399ed05979bdd0ef7d7fdc}
+Set the lock of an object\+:
+\begin{DoxyItemize}
+\item e\+None means no lock
+\item e\+Modification means that the object cannot be modified
+\item e\+Delete means that the object cannot be deleted
+\item e\+Modification\+Delete that the object cannot be neither modified nor deleted. 
+\end{DoxyItemize}\index{G\+K\+Object@{G\+K\+Object}!set\+Model@{set\+Model}}
+\index{set\+Model@{set\+Model}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{set\+Model(\+G\+K\+Model $\ast$amodel)}{setModel(GKModel *amodel)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+K\+Object\+::set\+Model (
+\begin{DoxyParamCaption}
+\item[{G\+K\+Model $\ast$}]{amodel}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKObject_a92c98c7bcbb8e6b8b07022a32fe80c01}{}\label{classGKObject_a92c98c7bcbb8e6b8b07022a32fe80c01}
+Sets the model in where this object resides. Done automatically by G\+K\+System\+::new\+Object. \index{G\+K\+Object@{G\+K\+Object}!set\+Name@{set\+Name}}
+\index{set\+Name@{set\+Name}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{set\+Name(const Q\+String \&aname)}{setName(const QString &aname)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+K\+Object\+::set\+Name (
+\begin{DoxyParamCaption}
+\item[{const Q\+String \&}]{aname}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKObject_a606d0a2f5513902ba8e3624817fdbf2b}{}\label{classGKObject_a606d0a2f5513902ba8e3624817fdbf2b}
+The optional name of this object. \index{G\+K\+Object@{G\+K\+Object}!set\+Root\+Folder@{set\+Root\+Folder}}
+\index{set\+Root\+Folder@{set\+Root\+Folder}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{set\+Root\+Folder(\+G\+K\+Folder $\ast$afolder)}{setRootFolder(GKFolder *afolder)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+Object\+::set\+Root\+Folder (
+\begin{DoxyParamCaption}
+\item[{G\+K\+Folder $\ast$}]{afolder}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKObject_a85e67cb58a286d7c1e212640c1516989}{}\label{classGKObject_a85e67cb58a286d7c1e212640c1516989}
+Sets the root folder for this object (it comes from a restore operation, in order to create the root folder use \hyperlink{classGKObject_abdb8fcf05d860a385f77ce7ae880e705}{G\+K\+Object\+::get\+Create\+Root\+Folder}). \index{G\+K\+Object@{G\+K\+Object}!set\+Status@{set\+Status}}
+\index{set\+Status@{set\+Status}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{set\+Status(const G\+K\+Object\+Status astatus)}{setStatus(const GKObjectStatus astatus)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+K\+Object\+::set\+Status (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Object\+Status}}]{astatus}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKObject_a47281a8be1b0bc03380e46ccd5b886c3}{}\label{classGKObject_a47281a8be1b0bc03380e46ccd5b886c3}
+Change the status of an object and the status of the model (to unsave if the object is modified). Note that a e\+New object, when modified, keeps its e\+New state. Call \hyperlink{classGKObject_a64bf09817c3a2639dda97bb2466d6d10}{G\+K\+Object\+::notify\+Status\+Change} to reflect the change in other objects \index{G\+K\+Object@{G\+K\+Object}!set\+Temporary@{set\+Temporary}}
+\index{set\+Temporary@{set\+Temporary}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{set\+Temporary(bool value)}{setTemporary(bool value)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+Object\+::set\+Temporary (
+\begin{DoxyParamCaption}
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKObject_aba6adba0cebc98d0b7ba2e0d8a33c63a}{}\label{classGKObject_aba6adba0cebc98d0b7ba2e0d8a33c63a}
+Set this object to temporary (or not). See \hyperlink{classGKObject_a960fc52fc9b7be6852d4591e6afc6584}{G\+K\+Object\+::is\+Temporary}. \index{G\+K\+Object@{G\+K\+Object}!set\+Tick@{set\+Tick}}
+\index{set\+Tick@{set\+Tick}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{set\+Tick(quint32 t)}{setTick(quint32 t)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+Object\+::set\+Tick (
+\begin{DoxyParamCaption}
+\item[{quint32}]{t}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKObject_a8ae4a2e273c269e00bd993f378b78e8e}{}\label{classGKObject_a8ae4a2e273c269e00bd993f378b78e8e}
+Set the current tick of this object. See \hyperlink{classGKObject_aa021efb86f83770079d8f10f4cf67b99}{G\+K\+Object\+::increase\+Tick} \index{G\+K\+Object@{G\+K\+Object}!set\+Type@{set\+Type}}
+\index{set\+Type@{set\+Type}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{set\+Type(\+G\+K\+Type $\ast$atype)}{setType(GKType *atype)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+K\+Object\+::set\+Type (
+\begin{DoxyParamCaption}
+\item[{G\+K\+Type $\ast$}]{atype}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKObject_a765ebd500ad44121d1507655787bb10b}{}\label{classGKObject_a765ebd500ad44121d1507655787bb10b}
+Sets the type for this object and creates the extension data (additional attributes for this object) for type \char`\"{}atype\char`\"{}. Done automatically by G\+K\+System\+::new\+Object. \index{G\+K\+Object@{G\+K\+Object}!set\+U\+U\+ID@{set\+U\+U\+ID}}
+\index{set\+U\+U\+ID@{set\+U\+U\+ID}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{set\+U\+U\+I\+D(\+Q\+Uuid uuid)}{setUUID(QUuid uuid)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+K\+Object\+::set\+U\+U\+ID (
+\begin{DoxyParamCaption}
+\item[{Q\+Uuid}]{uuid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKObject_a21afff8b02df6ddcacfc4da855b57870}{}\label{classGKObject_a21afff8b02df6ddcacfc4da855b57870}
+This set\+U\+U\+ID sets the unique ID of this object. This id C\+A\+N\+N\+OT be change, it\textquotesingle{}s assigned on creation time and keep constant during all the object life.
+
+This method is called automatically either when the object is created in the G\+K\+System\+::new\+Object or when its restored. \index{G\+K\+Object@{G\+K\+Object}!to\+Json\+Extra@{to\+Json\+Extra}}
+\index{to\+Json\+Extra@{to\+Json\+Extra}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{to\+Json\+Extra(\+G\+K\+J\+Son\+Storer \&context, Json\+Extra\+Status \&status) const }{toJsonExtra(GKJSonStorer &context, JsonExtraStatus &status) const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual Q\+Byte\+Array G\+K\+Object\+::to\+Json\+Extra (
+\begin{DoxyParamCaption}
+\item[{G\+K\+J\+Son\+Storer \&}]{context, }
+\item[{Json\+Extra\+Status \&}]{status}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKObject_a1087e83311b156c33d626656837c9834}{}\label{classGKObject_a1087e83311b156c33d626656837c9834}
+Has this object any extra data to store? Use a null Q\+Byte\+Array is not and a non null (empty or fill) when there is info 
+
+\subsection{Member Data Documentation}
+\index{G\+K\+Object@{G\+K\+Object}!default\+Identifier\+Form@{default\+Identifier\+Form}}
+\index{default\+Identifier\+Form@{default\+Identifier\+Form}!G\+K\+Object@{G\+K\+Object}}
+\subsubsection[{\texorpdfstring{default\+Identifier\+Form}{defaultIdentifierForm}}]{\setlength{\rightskip}{0pt plus 5cm}Identifier\+Form G\+K\+Object\+::default\+Identifier\+Form\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classGKObject_a9db2ffda1c05ae007ad8dd5cf95e452f}{}\label{classGKObject_a9db2ffda1c05ae007ad8dd5cf95e452f}
+See G\+K\+Object\+::\+Identifier\+Form 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/core/ang\+\_\+kernel/G\+K\+Object.\+h\end{DoxyCompactItemize}

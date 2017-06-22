@@ -1,0 +1,6 @@
+<map id="GKCircle" name="GKCircle">
+<area shape="rect" id="node2" href="$classGKDPoint.html" title="A 3D drawable point. " alt="" coords="19,233,101,260"/>
+<area shape="rect" id="node3" href="$classGKGeoObject.html" title="Base class for all the graphical objects (objects with a representation in 2D and/or 3D Views) ..." alt="" coords="9,157,111,184"/>
+<area shape="rect" id="node4" href="$classGKObject.html" title="Main class, almost all the objects derivate from this class. " alt="" coords="21,81,99,108"/>
+<area shape="rect" id="node5" href="$classGKBaseObject.html" title="Base class for normal objects (GKObject) and simulated objects (GKSimulatedObject) sharing an interfa..." alt="" coords="5,5,115,32"/>
+</map>

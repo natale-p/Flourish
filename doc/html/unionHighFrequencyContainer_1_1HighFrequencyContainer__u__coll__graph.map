@@ -1,0 +1,17 @@
+<map id="HighFrequencyContainer::HighFrequencyContainer_u" name="HighFrequencyContainer::HighFrequencyContainer_u">
+<area shape="rect" id="node2" href="$structRSUContainerHighFrequency.html" title="RSUContainerHighFrequency" alt="" coords="731,104,925,131"/>
+<area shape="rect" id="node3" href="$structProtectedCommunicationZonesRSU.html" title="ProtectedCommunicationZonesRSU" alt="" coords="233,104,468,131"/>
+<area shape="rect" id="node4" href="$structasn__struct__ctx__s.html" title="asn_struct_ctx_s" alt="" coords="5,396,128,423"/>
+<area shape="rect" id="node5" href="$structBasicVehicleContainerHighFrequency.html" title="BasicVehicleContainerHigh\lFrequency" alt="" coords="737,413,919,454"/>
+<area shape="rect" id="node6" href="$structSpeed.html" title="Speed" alt="" coords="321,217,380,244"/>
+<area shape="rect" id="node7" href="$structVerticalAcceleration.html" title="VerticalAcceleration" alt="" coords="281,268,420,295"/>
+<area shape="rect" id="node8" href="$structLongitudinalAcceleration.html" title="LongitudinalAcceleration" alt="" coords="269,319,432,345"/>
+<area shape="rect" id="node9" href="$structHeading.html" title="Heading" alt="" coords="315,369,386,396"/>
+<area shape="rect" id="node10" href="$structSteeringWheelAngle.html" title="SteeringWheelAngle" alt="" coords="281,420,421,447"/>
+<area shape="rect" id="node11" href="$structBIT__STRING__s.html" title="BIT_STRING_s" alt="" coords="293,471,408,497"/>
+<area shape="rect" id="node12" href="$structLateralAcceleration.html" title="LateralAcceleration" alt="" coords="284,521,417,548"/>
+<area shape="rect" id="node13" href="$structVehicleLength.html" title="VehicleLength" alt="" coords="299,572,403,599"/>
+<area shape="rect" id="node14" href="$structYawRate.html" title="YawRate" alt="" coords="313,623,389,649"/>
+<area shape="rect" id="node15" href="$structCenDsrcTollingZone.html" title="CenDsrcTollingZone" alt="" coords="280,673,421,700"/>
+<area shape="rect" id="node16" href="$structCurvature.html" title="Curvature" alt="" coords="311,724,390,751"/>
+</map>

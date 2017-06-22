@@ -1,0 +1,5 @@
+<map id="LaneTypeAttributes" name="LaneTypeAttributes">
+<area shape="rect" id="node2" href="$structasn__struct__ctx__s.html" title="asn_struct_ctx_s" alt="" coords="26,5,149,32"/>
+<area shape="rect" id="node4" href="$structBIT__STRING__s.html" title="BIT_STRING_s" alt="" coords="94,95,209,121"/>
+<area shape="rect" id="node3" href="$unionLaneTypeAttributes_1_1LaneTypeAttributes__u.html" title="LaneTypeAttributes\l::LaneTypeAttributes_u" alt="" coords="89,287,246,328"/>
+</map>

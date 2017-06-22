@@ -1,0 +1,171 @@
+\hypertarget{classFlourishVehicleRulesEngine}{}\section{Flourish\+Vehicle\+Rules\+Engine Class Reference}
+\label{classFlourishVehicleRulesEngine}\index{Flourish\+Vehicle\+Rules\+Engine@{Flourish\+Vehicle\+Rules\+Engine}}
+
+
+Takes decision for a vehicle giving the received messages.  
+
+
+
+
+{\ttfamily \#include $<$Flourish\+Vehicle\+Rules\+Engine.\+h$>$}
+
+
+
+Inheritance diagram for Flourish\+Vehicle\+Rules\+Engine\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{classFlourishVehicleRulesEngine__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Flourish\+Vehicle\+Rules\+Engine\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{classFlourishVehicleRulesEngine__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classFlourishVehicleRulesEngine_a9f559e90fe0a9a34b94f445559d7899e}{Flourish\+Vehicle\+Rules\+Engine} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classFlourishVehicleRulesEngine_ae509135b6a35b2705a3fa05f13ab11fd}{$\sim$\+Flourish\+Vehicle\+Rules\+Engine} ()\hypertarget{classFlourishVehicleRulesEngine_ae509135b6a35b2705a3fa05f13ab11fd}{}\label{classFlourishVehicleRulesEngine_ae509135b6a35b2705a3fa05f13ab11fd}
+
+\begin{DoxyCompactList}\small\item\em Deconstructor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classFlourishVehicleRulesEngine_a0c4060913c82b831e89528d13649d0cc}{evaluate} (const Q\+Shared\+Pointer$<$ const \hyperlink{classCAMMessage}{C\+A\+M\+Message} $>$ \&message, \hyperlink{classV2XSimpleAP}{V2\+X\+Simple\+AP} $\ast$agent) Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\begin{DoxyCompactList}\small\item\em Evaluate a \hyperlink{structCAM}{C\+AM} message. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classFlourishVehicleRulesEngine_a46c306791b362a6f2db46daf205506bd}{evaluate} (const Q\+Shared\+Pointer$<$ const \hyperlink{classDENMMessage}{D\+E\+N\+M\+Message} $>$ \&message, \hyperlink{classV2XSimpleAP}{V2\+X\+Simple\+AP} $\ast$agent) Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\begin{DoxyCompactList}\small\item\em Evaluate a \hyperlink{structDENM}{D\+E\+NM} message. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classFlourishVehicleRulesEngine_af46f952ea4b4aa841a3f4efe906a411d}{evaluate} (const Q\+Shared\+Pointer$<$ const \hyperlink{classSPATEMMessage}{S\+P\+A\+T\+E\+M\+Message} $>$ \&message, \hyperlink{classV2XSimpleAP}{V2\+X\+Simple\+AP} $\ast$agent) Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\begin{DoxyCompactList}\small\item\em Evaluate a \hyperlink{structSPATEM}{S\+P\+A\+T\+EM} message. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classFlourishVehicleRulesEngine_a88a79d4cca8d118f2ce888d87f59f33c}{evaluate} (const Q\+Shared\+Pointer$<$ const \hyperlink{classMAPEMMessage}{M\+A\+P\+E\+M\+Message} $>$ \&message, \hyperlink{classV2XSimpleAP}{V2\+X\+Simple\+AP} $\ast$agent) Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\begin{DoxyCompactList}\small\item\em Evaluate a \hyperlink{structMAPEM}{M\+A\+P\+EM} message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Takes decision for a vehicle giving the received messages. 
+
+Copyright T\+SS 2017
+
+Author\+: Natale Patriciello \href{mailto:natale.patriciello@aimsun.com}{\tt natale.\+patriciello@aimsun.\+com}
+
+Takes decisions based on the incoming messages. The \textquotesingle{}evaluate\textquotesingle{} methods, are called when a message should be evaluated (please note that they are empty now and should be implemented) 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Flourish\+Vehicle\+Rules\+Engine@{Flourish\+Vehicle\+Rules\+Engine}!Flourish\+Vehicle\+Rules\+Engine@{Flourish\+Vehicle\+Rules\+Engine}}
+\index{Flourish\+Vehicle\+Rules\+Engine@{Flourish\+Vehicle\+Rules\+Engine}!Flourish\+Vehicle\+Rules\+Engine@{Flourish\+Vehicle\+Rules\+Engine}}
+\subsubsection[{\texorpdfstring{Flourish\+Vehicle\+Rules\+Engine()}{FlourishVehicleRulesEngine()}}]{\setlength{\rightskip}{0pt plus 5cm}Flourish\+Vehicle\+Rules\+Engine\+::\+Flourish\+Vehicle\+Rules\+Engine (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classFlourishVehicleRulesEngine_a9f559e90fe0a9a34b94f445559d7899e}{}\label{classFlourishVehicleRulesEngine_a9f559e90fe0a9a34b94f445559d7899e}
+
+
+Constructor. 
+
+Copyright T\+SS 2017
+
+Author\+: Natale Patriciello \href{mailto:natale.patriciello@aimsun.com}{\tt natale.\+patriciello@aimsun.\+com} 
+
+\subsection{Member Function Documentation}
+\index{Flourish\+Vehicle\+Rules\+Engine@{Flourish\+Vehicle\+Rules\+Engine}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!Flourish\+Vehicle\+Rules\+Engine@{Flourish\+Vehicle\+Rules\+Engine}}
+\subsubsection[{\texorpdfstring{evaluate(const Q\+Shared\+Pointer$<$ const C\+A\+M\+Message $>$ \&message, V2\+X\+Simple\+A\+P $\ast$agent) Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE}{evaluate(const QSharedPointer< const CAMMessage > &message, V2XSimpleAP *agent) Q_DECL_OVERRIDE}}]{\setlength{\rightskip}{0pt plus 5cm}void Flourish\+Vehicle\+Rules\+Engine\+::evaluate (
+\begin{DoxyParamCaption}
+\item[{const Q\+Shared\+Pointer$<$ const {\bf C\+A\+M\+Message} $>$ \&}]{message, }
+\item[{{\bf V2\+X\+Simple\+AP} $\ast$}]{agent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classFlourishVehicleRulesEngine_a0c4060913c82b831e89528d13649d0cc}{}\label{classFlourishVehicleRulesEngine_a0c4060913c82b831e89528d13649d0cc}
+
+
+Evaluate a \hyperlink{structCAM}{C\+AM} message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Message to evaluate \\
+\hline
+{\em agent} & Agent who received the message \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classV2XRulesEngine_ada3feb1787443ed73cddd6cf0594774d}{V2\+X\+Rules\+Engine}.
+
+\index{Flourish\+Vehicle\+Rules\+Engine@{Flourish\+Vehicle\+Rules\+Engine}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!Flourish\+Vehicle\+Rules\+Engine@{Flourish\+Vehicle\+Rules\+Engine}}
+\subsubsection[{\texorpdfstring{evaluate(const Q\+Shared\+Pointer$<$ const D\+E\+N\+M\+Message $>$ \&message, V2\+X\+Simple\+A\+P $\ast$agent) Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE}{evaluate(const QSharedPointer< const DENMMessage > &message, V2XSimpleAP *agent) Q_DECL_OVERRIDE}}]{\setlength{\rightskip}{0pt plus 5cm}void Flourish\+Vehicle\+Rules\+Engine\+::evaluate (
+\begin{DoxyParamCaption}
+\item[{const Q\+Shared\+Pointer$<$ const {\bf D\+E\+N\+M\+Message} $>$ \&}]{message, }
+\item[{{\bf V2\+X\+Simple\+AP} $\ast$}]{agent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classFlourishVehicleRulesEngine_a46c306791b362a6f2db46daf205506bd}{}\label{classFlourishVehicleRulesEngine_a46c306791b362a6f2db46daf205506bd}
+
+
+Evaluate a \hyperlink{structDENM}{D\+E\+NM} message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Message to evaluate \\
+\hline
+{\em agent} & Agent who received the message \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classV2XRulesEngine_a17fb61ee361a65cf2c17c5e836beecb4}{V2\+X\+Rules\+Engine}.
+
+\index{Flourish\+Vehicle\+Rules\+Engine@{Flourish\+Vehicle\+Rules\+Engine}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!Flourish\+Vehicle\+Rules\+Engine@{Flourish\+Vehicle\+Rules\+Engine}}
+\subsubsection[{\texorpdfstring{evaluate(const Q\+Shared\+Pointer$<$ const S\+P\+A\+T\+E\+M\+Message $>$ \&message, V2\+X\+Simple\+A\+P $\ast$agent) Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE}{evaluate(const QSharedPointer< const SPATEMMessage > &message, V2XSimpleAP *agent) Q_DECL_OVERRIDE}}]{\setlength{\rightskip}{0pt plus 5cm}void Flourish\+Vehicle\+Rules\+Engine\+::evaluate (
+\begin{DoxyParamCaption}
+\item[{const Q\+Shared\+Pointer$<$ const {\bf S\+P\+A\+T\+E\+M\+Message} $>$ \&}]{message, }
+\item[{{\bf V2\+X\+Simple\+AP} $\ast$}]{agent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classFlourishVehicleRulesEngine_af46f952ea4b4aa841a3f4efe906a411d}{}\label{classFlourishVehicleRulesEngine_af46f952ea4b4aa841a3f4efe906a411d}
+
+
+Evaluate a \hyperlink{structSPATEM}{S\+P\+A\+T\+EM} message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Message to evaluate \\
+\hline
+{\em agent} & Agent who received the message \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classV2XRulesEngine_a5ee90d966d5828c7f28dea45c9000e38}{V2\+X\+Rules\+Engine}.
+
+\index{Flourish\+Vehicle\+Rules\+Engine@{Flourish\+Vehicle\+Rules\+Engine}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!Flourish\+Vehicle\+Rules\+Engine@{Flourish\+Vehicle\+Rules\+Engine}}
+\subsubsection[{\texorpdfstring{evaluate(const Q\+Shared\+Pointer$<$ const M\+A\+P\+E\+M\+Message $>$ \&message, V2\+X\+Simple\+A\+P $\ast$agent) Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE}{evaluate(const QSharedPointer< const MAPEMMessage > &message, V2XSimpleAP *agent) Q_DECL_OVERRIDE}}]{\setlength{\rightskip}{0pt plus 5cm}void Flourish\+Vehicle\+Rules\+Engine\+::evaluate (
+\begin{DoxyParamCaption}
+\item[{const Q\+Shared\+Pointer$<$ const {\bf M\+A\+P\+E\+M\+Message} $>$ \&}]{message, }
+\item[{{\bf V2\+X\+Simple\+AP} $\ast$}]{agent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classFlourishVehicleRulesEngine_a88a79d4cca8d118f2ce888d87f59f33c}{}\label{classFlourishVehicleRulesEngine_a88a79d4cca8d118f2ce888d87f59f33c}
+
+
+Evaluate a \hyperlink{structMAPEM}{M\+A\+P\+EM} message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Message to evaluate \\
+\hline
+{\em agent} & Agent who received the message \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classV2XRulesEngine_a49992f684bc9761d4bec9ebe142131f0}{V2\+X\+Rules\+Engine}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+plugins/\+Flourish\+V2\+X\+Framework/Flourish\+Vehicle\+Rules\+Engine.\+h\item 
+plugins/\+Flourish\+V2\+X\+Framework/Flourish\+Vehicle\+Rules\+Engine.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,9 @@
+<map id="MapData" name="MapData">
+<area shape="rect" id="node2" href="$structRestrictionClassList.html" title="RestrictionClassList" alt="" coords="425,41,565,68"/>
+<area shape="rect" id="node3" href="$structasn__struct__ctx__s.html" title="asn_struct_ctx_s" alt="" coords="5,151,128,177"/>
+<area shape="rect" id="node4" href="$structRoadSegmentList.html" title="RoadSegmentList" alt="" coords="432,99,559,125"/>
+<area shape="rect" id="node5" href="$structMapData_1_1MapData____regional.html" title="MapData::MapData__regional" alt="" coords="589,160,784,187"/>
+<area shape="rect" id="node6" href="$structIntersectionGeometryList.html" title="IntersectionGeometryList" alt="" coords="233,212,401,239"/>
+<area shape="rect" id="node7" href="$structDataParameters.html" title="DataParameters" alt="" coords="628,273,745,300"/>
+<area shape="rect" id="node8" href="$structOCTET__STRING.html" title="OCTET_STRING" alt="" coords="255,335,380,361"/>
+</map>

@@ -1,0 +1,382 @@
+\hypertarget{classV2XSimpleAP}{}\section{V2\+X\+Simple\+AP Class Reference}
+\label{classV2XSimpleAP}\index{V2\+X\+Simple\+AP@{V2\+X\+Simple\+AP}}
+
+
+Represent a wireless Access Point.  
+
+
+
+
+{\ttfamily \#include $<$V2\+X\+Simple\+A\+P.\+h$>$}
+
+
+
+Inheritance diagram for V2\+X\+Simple\+AP\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{classV2XSimpleAP__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for V2\+X\+Simple\+AP\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{classV2XSimpleAP__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classV2XSimpleAP_a48231a6cf0b61c2cbb99fc3e4b4f9cb7}{received} (const Q\+Pointer$<$ \hyperlink{classNetDevice}{Net\+Device} $>$ \&device, const Q\+Shared\+Pointer$<$ const \hyperlink{group__V2XFramework_ga1b82bfc289dbcb9aced56200d7abc964}{Packet} $>$ \&packet, const Address \&addr)=0
+\begin{DoxyCompactList}\small\item\em A message has been received. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classV2XSimpleAP_a90c59b49f6f278f00ce3a05f433f8f81}{station\+Removed} (\hyperlink{classV2XSimpleAP}{V2\+X\+Simple\+AP} $\ast$AP)
+\begin{DoxyCompactList}\small\item\em A AP has been removed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classV2XSimpleAP_a078a901cc02dd14b395c7907cc0c6238}{destroyed} (\hyperlink{classV2XSimpleAP}{V2\+X\+Simple\+AP} $\ast$AP)
+\begin{DoxyCompactList}\small\item\em Signal emitted in the deconstructor, to signal that this AP is about to be removed from the network. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classV2XSimpleAP_a116cd6eb21bc9e0d7139e0b48c33fe0f}{V2\+X\+Simple\+AP} (quint32 id)
+\begin{DoxyCompactList}\small\item\em Constructor for a moving AP. \end{DoxyCompactList}\item 
+\hyperlink{classV2XSimpleAP_abbccd4bcd32f15679490de5874ea8805}{V2\+X\+Simple\+AP} (quint32 id, const G\+K\+Object $\ast$obj)
+\begin{DoxyCompactList}\small\item\em Constructor for an AP. \end{DoxyCompactList}\item 
+\hyperlink{classV2XSimpleAP_a95e176fa9df41ed4a168493b55175d30}{$\sim$\+V2\+X\+Simple\+AP} ()\hypertarget{classV2XSimpleAP_a95e176fa9df41ed4a168493b55175d30}{}\label{classV2XSimpleAP_a95e176fa9df41ed4a168493b55175d30}
+
+\begin{DoxyCompactList}\small\item\em Deconstructor. \end{DoxyCompactList}\item 
+void \hyperlink{classV2XSimpleAP_a669bd3709cf5631e0da5f6412ff4593d}{set\+Radius} (double radius)
+\begin{DoxyCompactList}\small\item\em Set the radius of the AP. \end{DoxyCompactList}\item 
+double \hyperlink{classV2XSimpleAP_a44f3bb9ed8c1856a927fcc8ba5ec319f}{get\+Radius} () const 
+\begin{DoxyCompactList}\small\item\em Get the AP radius. \end{DoxyCompactList}\item 
+\hyperlink{classSimpleChannel}{Simple\+Channel} $\ast$ \hyperlink{classV2XSimpleAP_a621e3150595e2b09aeb3256558b49df4}{get\+Channel} () const 
+\item 
+void \hyperlink{classV2XSimpleAP_a79f0af47be5552753fe632c78f2ec6bc}{distribute\+Messages} ()
+\begin{DoxyCompactList}\small\item\em Instruct the channel to deliver the enqueued message. \end{DoxyCompactList}\item 
+void \hyperlink{classV2XSimpleAP_a8fd56e48cf5831064528e9bbe4326f78}{send\+Message} ()
+\begin{DoxyCompactList}\small\item\em Generate, and then send to the device, a message. \end{DoxyCompactList}\item 
+bool \hyperlink{classV2XSimpleAP_a333f26e24a11969ce54316625e14fa17}{agent\+Is\+In\+Radius} (const \hyperlink{classV2XNetworkNode}{V2\+X\+Network\+Node} $\ast$agent) const 
+\begin{DoxyCompactList}\small\item\em Check if the given agent is in the radius of the AP. \end{DoxyCompactList}\item 
+void \hyperlink{classV2XSimpleAP_a0a31c16445c79095f6f8bbdaa8265fd3}{connect\+Intersections} (\hyperlink{group__V2XFramework_ga22a1c07fac7df77efff8f0d4f6f3c248}{V2\+X\+Intersection\+List} connected\+Intersections)
+\begin{DoxyCompactList}\small\item\em Attach to this station a list of \hyperlink{classV2XIntersection}{V2\+X\+Intersection} objects. \end{DoxyCompactList}\item 
+virtual \hyperlink{classV2XNetworkPoint}{V2\+X\+Network\+Point} \hyperlink{classV2XSimpleAP_ad83fd3c047d9fef2e88c54297171106f}{get\+Position} () const Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\begin{DoxyCompactList}\small\item\em Get the position of the node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classV2XSimpleAP_aa3fa97ad5234a7e49bada9f514fb9d35}{connect\+To} (\hyperlink{classV2XSimpleAP}{V2\+X\+Simple\+AP} $\ast$AP)
+\begin{DoxyCompactList}\small\item\em Attach to the specified AP. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classV2XSimpleAP_a01300f7a6bf2d711f17b581aaa7a64d3}{disconnect\+From} (\hyperlink{classV2XSimpleAP}{V2\+X\+Simple\+AP} $\ast$AP)
+\begin{DoxyCompactList}\small\item\em Detach from the specified AP. \end{DoxyCompactList}\item 
+virtual Packet\+Pointer\+List \hyperlink{classV2XSimpleAP_a7dd6286913001eb2554dee16693e8def}{generate\+Message} ()=0
+\begin{DoxyCompactList}\small\item\em Generate a list of messages to be transmitted. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__V2XFramework_ga22a1c07fac7df77efff8f0d4f6f3c248}{V2\+X\+Intersection\+List} \hyperlink{classV2XSimpleAP_a2dab85aaf75f11b08a044c171c010949}{m\+\_\+connected\+Intersections}\hypertarget{classV2XSimpleAP_a2dab85aaf75f11b08a044c171c010949}{}\label{classV2XSimpleAP_a2dab85aaf75f11b08a044c171c010949}
+
+\begin{DoxyCompactList}\small\item\em The list of intersections connected to this AP. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represent a wireless Access Point. 
+
+The objective is to model any wireless object which has the capability to send or to receive a message. The communication model lacks propagation fading, transmission power, and in general, is a very basic one.
+
+{\bfseries  Features }
+
+A radius is the main property of a wireless access point, to emulate a propagation fading. Every object out of this radius is, therefore, unable to communicate with it (take a look to set\+Radius and get\+Radius, and for connectivity, to the method agent\+Is\+In\+Radius).
+
+A channel (method get\+Channel) characterizes each access point; it is the medium through with it can send and receive messages. There are as many channels as access points (contrary on the real world in which the number of channels is often limited). The documentation of \hyperlink{classSimpleChannel}{Simple\+Channel} defines the properties of the channel itself (namely, \hyperlink{classErrorModel}{Error\+Model} and latency).
+
+{\bfseries  Communication Model }
+
+The access point is born to be passive, in the sense that it does not initiate any connection, but instead is waiting passively for others to connect to its channel (we will refer to these others as subscribers). The user of this class is supposed to update the current time with the method set\+Time of \hyperlink{classV2XNetworkNode}{V2\+X\+Network\+Node}. Then, it is expected to call the methods \hyperlink{classV2XSimpleAP_a79f0af47be5552753fe632c78f2ec6bc}{distribute\+Messages()} and \hyperlink{classV2XSimpleAP_a8fd56e48cf5831064528e9bbe4326f78}{send\+Message()}. While the names of the methods are similar, their operations differ.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classV2XSimpleAP_a79f0af47be5552753fe632c78f2ec6bc}{distribute\+Messages} 
+
+send\+Messages 
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{V2\+X\+Simple\+AP@{V2\+X\+Simple\+AP}!V2\+X\+Simple\+AP@{V2\+X\+Simple\+AP}}
+\index{V2\+X\+Simple\+AP@{V2\+X\+Simple\+AP}!V2\+X\+Simple\+AP@{V2\+X\+Simple\+AP}}
+\subsubsection[{\texorpdfstring{V2\+X\+Simple\+A\+P(quint32 id)}{V2XSimpleAP(quint32 id)}}]{\setlength{\rightskip}{0pt plus 5cm}V2\+X\+Simple\+A\+P\+::\+V2\+X\+Simple\+AP (
+\begin{DoxyParamCaption}
+\item[{quint32}]{id}
+\end{DoxyParamCaption}
+)}\hypertarget{classV2XSimpleAP_a116cd6eb21bc9e0d7139e0b48c33fe0f}{}\label{classV2XSimpleAP_a116cd6eb21bc9e0d7139e0b48c33fe0f}
+
+
+Constructor for a moving AP. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Unique ID for the object \\
+\hline
+\end{DoxyParams}
+\index{V2\+X\+Simple\+AP@{V2\+X\+Simple\+AP}!V2\+X\+Simple\+AP@{V2\+X\+Simple\+AP}}
+\index{V2\+X\+Simple\+AP@{V2\+X\+Simple\+AP}!V2\+X\+Simple\+AP@{V2\+X\+Simple\+AP}}
+\subsubsection[{\texorpdfstring{V2\+X\+Simple\+A\+P(quint32 id, const G\+K\+Object $\ast$obj)}{V2XSimpleAP(quint32 id, const GKObject *obj)}}]{\setlength{\rightskip}{0pt plus 5cm}V2\+X\+Simple\+A\+P\+::\+V2\+X\+Simple\+AP (
+\begin{DoxyParamCaption}
+\item[{quint32}]{id, }
+\item[{const G\+K\+Object $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}\hypertarget{classV2XSimpleAP_abbccd4bcd32f15679490de5874ea8805}{}\label{classV2XSimpleAP_abbccd4bcd32f15679490de5874ea8805}
+
+
+Constructor for an AP. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Unique ID for the object \\
+\hline
+{\em obj} & (Opaque) pointer to an object inside Aimsun \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{V2\+X\+Simple\+AP@{V2\+X\+Simple\+AP}!agent\+Is\+In\+Radius@{agent\+Is\+In\+Radius}}
+\index{agent\+Is\+In\+Radius@{agent\+Is\+In\+Radius}!V2\+X\+Simple\+AP@{V2\+X\+Simple\+AP}}
+\subsubsection[{\texorpdfstring{agent\+Is\+In\+Radius(const V2\+X\+Network\+Node $\ast$agent) const }{agentIsInRadius(const V2XNetworkNode *agent) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool V2\+X\+Simple\+A\+P\+::agent\+Is\+In\+Radius (
+\begin{DoxyParamCaption}
+\item[{const {\bf V2\+X\+Network\+Node} $\ast$}]{agent}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classV2XSimpleAP_a333f26e24a11969ce54316625e14fa17}{}\label{classV2XSimpleAP_a333f26e24a11969ce54316625e14fa17}
+
+
+Check if the given agent is in the radius of the AP. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em agent} & Agent to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the agent in the range of the AP 
+\end{DoxyReturn}
+\index{V2\+X\+Simple\+AP@{V2\+X\+Simple\+AP}!connect\+Intersections@{connect\+Intersections}}
+\index{connect\+Intersections@{connect\+Intersections}!V2\+X\+Simple\+AP@{V2\+X\+Simple\+AP}}
+\subsubsection[{\texorpdfstring{connect\+Intersections(\+V2\+X\+Intersection\+List connected\+Intersections)}{connectIntersections(V2XIntersectionList connectedIntersections)}}]{\setlength{\rightskip}{0pt plus 5cm}void V2\+X\+Simple\+A\+P\+::connect\+Intersections (
+\begin{DoxyParamCaption}
+\item[{{\bf V2\+X\+Intersection\+List}}]{connected\+Intersections}
+\end{DoxyParamCaption}
+)}\hypertarget{classV2XSimpleAP_a0a31c16445c79095f6f8bbdaa8265fd3}{}\label{classV2XSimpleAP_a0a31c16445c79095f6f8bbdaa8265fd3}
+
+
+Attach to this station a list of \hyperlink{classV2XIntersection}{V2\+X\+Intersection} objects. 
+
+After this call, the station become a R\+SU.
+
+
+\begin{DoxyParams}{Parameters}
+{\em connected\+Intersections} & The connected intersections \\
+\hline
+\end{DoxyParams}
+\index{V2\+X\+Simple\+AP@{V2\+X\+Simple\+AP}!connect\+To@{connect\+To}}
+\index{connect\+To@{connect\+To}!V2\+X\+Simple\+AP@{V2\+X\+Simple\+AP}}
+\subsubsection[{\texorpdfstring{connect\+To(\+V2\+X\+Simple\+A\+P $\ast$\+A\+P)}{connectTo(V2XSimpleAP *AP)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void V2\+X\+Simple\+A\+P\+::connect\+To (
+\begin{DoxyParamCaption}
+\item[{{\bf V2\+X\+Simple\+AP} $\ast$}]{AP}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classV2XSimpleAP_aa3fa97ad5234a7e49bada9f514fb9d35}{}\label{classV2XSimpleAP_aa3fa97ad5234a7e49bada9f514fb9d35}
+
+
+Attach to the specified AP. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em AP} & AP to attach to \\
+\hline
+\end{DoxyParams}
+\index{V2\+X\+Simple\+AP@{V2\+X\+Simple\+AP}!destroyed@{destroyed}}
+\index{destroyed@{destroyed}!V2\+X\+Simple\+AP@{V2\+X\+Simple\+AP}}
+\subsubsection[{\texorpdfstring{destroyed}{destroyed}}]{\setlength{\rightskip}{0pt plus 5cm}void V2\+X\+Simple\+A\+P\+::destroyed (
+\begin{DoxyParamCaption}
+\item[{{\bf V2\+X\+Simple\+AP} $\ast$}]{AP}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}\hypertarget{classV2XSimpleAP_a078a901cc02dd14b395c7907cc0c6238}{}\label{classV2XSimpleAP_a078a901cc02dd14b395c7907cc0c6238}
+
+
+Signal emitted in the deconstructor, to signal that this AP is about to be removed from the network. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em AP} & (this) AP \\
+\hline
+\end{DoxyParams}
+\index{V2\+X\+Simple\+AP@{V2\+X\+Simple\+AP}!disconnect\+From@{disconnect\+From}}
+\index{disconnect\+From@{disconnect\+From}!V2\+X\+Simple\+AP@{V2\+X\+Simple\+AP}}
+\subsubsection[{\texorpdfstring{disconnect\+From(\+V2\+X\+Simple\+A\+P $\ast$\+A\+P)}{disconnectFrom(V2XSimpleAP *AP)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void V2\+X\+Simple\+A\+P\+::disconnect\+From (
+\begin{DoxyParamCaption}
+\item[{{\bf V2\+X\+Simple\+AP} $\ast$}]{AP}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classV2XSimpleAP_a01300f7a6bf2d711f17b581aaa7a64d3}{}\label{classV2XSimpleAP_a01300f7a6bf2d711f17b581aaa7a64d3}
+
+
+Detach from the specified AP. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em AP} & AP to detach \\
+\hline
+\end{DoxyParams}
+\index{V2\+X\+Simple\+AP@{V2\+X\+Simple\+AP}!distribute\+Messages@{distribute\+Messages}}
+\index{distribute\+Messages@{distribute\+Messages}!V2\+X\+Simple\+AP@{V2\+X\+Simple\+AP}}
+\subsubsection[{\texorpdfstring{distribute\+Messages()}{distributeMessages()}}]{\setlength{\rightskip}{0pt plus 5cm}void V2\+X\+Simple\+A\+P\+::distribute\+Messages (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classV2XSimpleAP_a79f0af47be5552753fe632c78f2ec6bc}{}\label{classV2XSimpleAP_a79f0af47be5552753fe632c78f2ec6bc}
+
+
+Instruct the channel to deliver the enqueued message. 
+
+The delivery will be done up to the current time.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classV2XSimpleAP_a8fd56e48cf5831064528e9bbe4326f78}{send\+Message} 
+\end{DoxySeeAlso}
+\index{V2\+X\+Simple\+AP@{V2\+X\+Simple\+AP}!generate\+Message@{generate\+Message}}
+\index{generate\+Message@{generate\+Message}!V2\+X\+Simple\+AP@{V2\+X\+Simple\+AP}}
+\subsubsection[{\texorpdfstring{generate\+Message()=0}{generateMessage()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual Packet\+Pointer\+List V2\+X\+Simple\+A\+P\+::generate\+Message (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\hypertarget{classV2XSimpleAP_a7dd6286913001eb2554dee16693e8def}{}\label{classV2XSimpleAP_a7dd6286913001eb2554dee16693e8def}
+
+
+Generate a list of messages to be transmitted. 
+
+\begin{DoxyReturn}{Returns}
+A list of messages 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classFlourishConnectedAgent_a054a54d45a3f198d6f905f7e1aa87455}{Flourish\+Connected\+Agent}, and \hyperlink{classFlourishAP_a63b7d385704b4ff897120751223e27f0}{Flourish\+AP}.
+
+\index{V2\+X\+Simple\+AP@{V2\+X\+Simple\+AP}!get\+Channel@{get\+Channel}}
+\index{get\+Channel@{get\+Channel}!V2\+X\+Simple\+AP@{V2\+X\+Simple\+AP}}
+\subsubsection[{\texorpdfstring{get\+Channel() const }{getChannel() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Simple\+Channel}$\ast$ V2\+X\+Simple\+A\+P\+::get\+Channel (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classV2XSimpleAP_a621e3150595e2b09aeb3256558b49df4}{}\label{classV2XSimpleAP_a621e3150595e2b09aeb3256558b49df4}
+\begin{DoxyReturn}{Returns}
+The channel of this AP 
+\end{DoxyReturn}
+\index{V2\+X\+Simple\+AP@{V2\+X\+Simple\+AP}!get\+Position@{get\+Position}}
+\index{get\+Position@{get\+Position}!V2\+X\+Simple\+AP@{V2\+X\+Simple\+AP}}
+\subsubsection[{\texorpdfstring{get\+Position() const Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE}{getPosition() const Q_DECL_OVERRIDE}}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf V2\+X\+Network\+Point} V2\+X\+Simple\+A\+P\+::get\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classV2XSimpleAP_ad83fd3c047d9fef2e88c54297171106f}{}\label{classV2XSimpleAP_ad83fd3c047d9fef2e88c54297171106f}
+
+
+Get the position of the node. 
+
+\begin{DoxyReturn}{Returns}
+the position of the node 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classV2XNetworkNode_aa214d725e50f8568f6b35acd949404d5}{V2\+X\+Network\+Node}.
+
+
+
+Reimplemented in \hyperlink{classV2XConnectedAgent_a1bb1360e7658df70cd202e2dbde27d75}{V2\+X\+Connected\+Agent}.
+
+\index{V2\+X\+Simple\+AP@{V2\+X\+Simple\+AP}!get\+Radius@{get\+Radius}}
+\index{get\+Radius@{get\+Radius}!V2\+X\+Simple\+AP@{V2\+X\+Simple\+AP}}
+\subsubsection[{\texorpdfstring{get\+Radius() const }{getRadius() const }}]{\setlength{\rightskip}{0pt plus 5cm}double V2\+X\+Simple\+A\+P\+::get\+Radius (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classV2XSimpleAP_a44f3bb9ed8c1856a927fcc8ba5ec319f}{}\label{classV2XSimpleAP_a44f3bb9ed8c1856a927fcc8ba5ec319f}
+
+
+Get the AP radius. 
+
+\begin{DoxyReturn}{Returns}
+the AP radius 
+\end{DoxyReturn}
+\index{V2\+X\+Simple\+AP@{V2\+X\+Simple\+AP}!received@{received}}
+\index{received@{received}!V2\+X\+Simple\+AP@{V2\+X\+Simple\+AP}}
+\subsubsection[{\texorpdfstring{received}{received}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void V2\+X\+Simple\+A\+P\+::received (
+\begin{DoxyParamCaption}
+\item[{const Q\+Pointer$<$ {\bf Net\+Device} $>$ \&}]{device, }
+\item[{const Q\+Shared\+Pointer$<$ const {\bf Packet} $>$ \&}]{packet, }
+\item[{const Address \&}]{addr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}, {\ttfamily [slot]}}\hypertarget{classV2XSimpleAP_a48231a6cf0b61c2cbb99fc3e4b4f9cb7}{}\label{classV2XSimpleAP_a48231a6cf0b61c2cbb99fc3e4b4f9cb7}
+
+
+A message has been received. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Device which has received the message \\
+\hline
+{\em packet} & Packet received \\
+\hline
+{\em addr} & Source address \\
+\hline
+\end{DoxyParams}
+\index{V2\+X\+Simple\+AP@{V2\+X\+Simple\+AP}!send\+Message@{send\+Message}}
+\index{send\+Message@{send\+Message}!V2\+X\+Simple\+AP@{V2\+X\+Simple\+AP}}
+\subsubsection[{\texorpdfstring{send\+Message()}{sendMessage()}}]{\setlength{\rightskip}{0pt plus 5cm}void V2\+X\+Simple\+A\+P\+::send\+Message (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classV2XSimpleAP_a8fd56e48cf5831064528e9bbe4326f78}{}\label{classV2XSimpleAP_a8fd56e48cf5831064528e9bbe4326f78}
+
+
+Generate, and then send to the device, a message. 
+
+The message is generated through the method generate\+Message, and then it is sent with a broadcast address to the personal device. \hyperlink{classV2XSimpleAP}{V2\+X\+Simple\+AP} is using the Simple communication framework, so to discover how a message is broadcasted, please take a look to the \hyperlink{classSimpleNetDevice}{Simple\+Net\+Device} documentation. \index{V2\+X\+Simple\+AP@{V2\+X\+Simple\+AP}!set\+Radius@{set\+Radius}}
+\index{set\+Radius@{set\+Radius}!V2\+X\+Simple\+AP@{V2\+X\+Simple\+AP}}
+\subsubsection[{\texorpdfstring{set\+Radius(double radius)}{setRadius(double radius)}}]{\setlength{\rightskip}{0pt plus 5cm}void V2\+X\+Simple\+A\+P\+::set\+Radius (
+\begin{DoxyParamCaption}
+\item[{double}]{radius}
+\end{DoxyParamCaption}
+)}\hypertarget{classV2XSimpleAP_a669bd3709cf5631e0da5f6412ff4593d}{}\label{classV2XSimpleAP_a669bd3709cf5631e0da5f6412ff4593d}
+
+
+Set the radius of the AP. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radius} & Radius \\
+\hline
+\end{DoxyParams}
+\index{V2\+X\+Simple\+AP@{V2\+X\+Simple\+AP}!station\+Removed@{station\+Removed}}
+\index{station\+Removed@{station\+Removed}!V2\+X\+Simple\+AP@{V2\+X\+Simple\+AP}}
+\subsubsection[{\texorpdfstring{station\+Removed}{stationRemoved}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void V2\+X\+Simple\+A\+P\+::station\+Removed (
+\begin{DoxyParamCaption}
+\item[{{\bf V2\+X\+Simple\+AP} $\ast$}]{AP}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [slot]}}\hypertarget{classV2XSimpleAP_a90c59b49f6f278f00ce3a05f433f8f81}{}\label{classV2XSimpleAP_a90c59b49f6f278f00ce3a05f433f8f81}
+
+
+A AP has been removed. 
+
+This can be called because a AP we were connected to is being destroyed (e.\+g., it is leaving the network).
+
+
+\begin{DoxyParams}{Parameters}
+{\em AP} & AP which is about to be removed \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/aimsun\+\_\+extensions/\+V2\+X\+Framework/V2\+X\+Simple\+A\+P.\+h\end{DoxyCompactItemize}

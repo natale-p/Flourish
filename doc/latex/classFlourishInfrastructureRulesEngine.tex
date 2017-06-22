@@ -1,0 +1,171 @@
+\hypertarget{classFlourishInfrastructureRulesEngine}{}\section{Flourish\+Infrastructure\+Rules\+Engine Class Reference}
+\label{classFlourishInfrastructureRulesEngine}\index{Flourish\+Infrastructure\+Rules\+Engine@{Flourish\+Infrastructure\+Rules\+Engine}}
+
+
+Takes decision for an infrastructure giving the received messages.  
+
+
+
+
+{\ttfamily \#include $<$Flourish\+Infrastructure\+Rules\+Engine.\+h$>$}
+
+
+
+Inheritance diagram for Flourish\+Infrastructure\+Rules\+Engine\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classFlourishInfrastructureRulesEngine__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Flourish\+Infrastructure\+Rules\+Engine\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classFlourishInfrastructureRulesEngine__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classFlourishInfrastructureRulesEngine_a9c3c573610fdc22a6c0b1f3c04ba1b52}{Flourish\+Infrastructure\+Rules\+Engine} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classFlourishInfrastructureRulesEngine_a1ff66470d788e23861ae6a3b177fb0a5}{$\sim$\+Flourish\+Infrastructure\+Rules\+Engine} ()\hypertarget{classFlourishInfrastructureRulesEngine_a1ff66470d788e23861ae6a3b177fb0a5}{}\label{classFlourishInfrastructureRulesEngine_a1ff66470d788e23861ae6a3b177fb0a5}
+
+\begin{DoxyCompactList}\small\item\em Deconstructor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classFlourishInfrastructureRulesEngine_a1e15fc61fd580562ccb8a16e6b93e907}{evaluate} (const Q\+Shared\+Pointer$<$ const \hyperlink{classCAMMessage}{C\+A\+M\+Message} $>$ \&message, \hyperlink{classV2XSimpleAP}{V2\+X\+Simple\+AP} $\ast$agent) Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\begin{DoxyCompactList}\small\item\em Evaluate a \hyperlink{structCAM}{C\+AM} message. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classFlourishInfrastructureRulesEngine_a0017d33855e87f9f80211ccd8fd7c183}{evaluate} (const Q\+Shared\+Pointer$<$ const \hyperlink{classDENMMessage}{D\+E\+N\+M\+Message} $>$ \&message, \hyperlink{classV2XSimpleAP}{V2\+X\+Simple\+AP} $\ast$agent) Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\begin{DoxyCompactList}\small\item\em Evaluate a \hyperlink{structDENM}{D\+E\+NM} message. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classFlourishInfrastructureRulesEngine_a1044d6e57ad05d830f02ba974a8759e5}{evaluate} (const Q\+Shared\+Pointer$<$ const \hyperlink{classSPATEMMessage}{S\+P\+A\+T\+E\+M\+Message} $>$ \&message, \hyperlink{classV2XSimpleAP}{V2\+X\+Simple\+AP} $\ast$agent) Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\begin{DoxyCompactList}\small\item\em Evaluate a \hyperlink{structSPATEM}{S\+P\+A\+T\+EM} message. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classFlourishInfrastructureRulesEngine_a332ec1445ba5c46257149536da4c51f4}{evaluate} (const Q\+Shared\+Pointer$<$ const \hyperlink{classMAPEMMessage}{M\+A\+P\+E\+M\+Message} $>$ \&message, \hyperlink{classV2XSimpleAP}{V2\+X\+Simple\+AP} $\ast$agent) Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\begin{DoxyCompactList}\small\item\em Evaluate a \hyperlink{structMAPEM}{M\+A\+P\+EM} message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Takes decision for an infrastructure giving the received messages. 
+
+Copyright T\+SS 2017
+
+Author\+: Natale Patriciello \href{mailto:natale.patriciello@aimsun.com}{\tt natale.\+patriciello@aimsun.\+com}
+
+Takes decisions based on the incoming messages. The \textquotesingle{}evaluate\textquotesingle{} methods, are called when a message should be evaluated (please note that they are empty now and should be implemented). 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Flourish\+Infrastructure\+Rules\+Engine@{Flourish\+Infrastructure\+Rules\+Engine}!Flourish\+Infrastructure\+Rules\+Engine@{Flourish\+Infrastructure\+Rules\+Engine}}
+\index{Flourish\+Infrastructure\+Rules\+Engine@{Flourish\+Infrastructure\+Rules\+Engine}!Flourish\+Infrastructure\+Rules\+Engine@{Flourish\+Infrastructure\+Rules\+Engine}}
+\subsubsection[{\texorpdfstring{Flourish\+Infrastructure\+Rules\+Engine()}{FlourishInfrastructureRulesEngine()}}]{\setlength{\rightskip}{0pt plus 5cm}Flourish\+Infrastructure\+Rules\+Engine\+::\+Flourish\+Infrastructure\+Rules\+Engine (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classFlourishInfrastructureRulesEngine_a9c3c573610fdc22a6c0b1f3c04ba1b52}{}\label{classFlourishInfrastructureRulesEngine_a9c3c573610fdc22a6c0b1f3c04ba1b52}
+
+
+Constructor. 
+
+Copyright T\+SS 2017
+
+Author\+: Natale Patriciello \href{mailto:natale.patriciello@aimsun.com}{\tt natale.\+patriciello@aimsun.\+com} 
+
+\subsection{Member Function Documentation}
+\index{Flourish\+Infrastructure\+Rules\+Engine@{Flourish\+Infrastructure\+Rules\+Engine}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!Flourish\+Infrastructure\+Rules\+Engine@{Flourish\+Infrastructure\+Rules\+Engine}}
+\subsubsection[{\texorpdfstring{evaluate(const Q\+Shared\+Pointer$<$ const C\+A\+M\+Message $>$ \&message, V2\+X\+Simple\+A\+P $\ast$agent) Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE}{evaluate(const QSharedPointer< const CAMMessage > &message, V2XSimpleAP *agent) Q_DECL_OVERRIDE}}]{\setlength{\rightskip}{0pt plus 5cm}void Flourish\+Infrastructure\+Rules\+Engine\+::evaluate (
+\begin{DoxyParamCaption}
+\item[{const Q\+Shared\+Pointer$<$ const {\bf C\+A\+M\+Message} $>$ \&}]{message, }
+\item[{{\bf V2\+X\+Simple\+AP} $\ast$}]{agent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classFlourishInfrastructureRulesEngine_a1e15fc61fd580562ccb8a16e6b93e907}{}\label{classFlourishInfrastructureRulesEngine_a1e15fc61fd580562ccb8a16e6b93e907}
+
+
+Evaluate a \hyperlink{structCAM}{C\+AM} message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Message to evaluate \\
+\hline
+{\em agent} & Agent who received the message \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classV2XRulesEngine_ada3feb1787443ed73cddd6cf0594774d}{V2\+X\+Rules\+Engine}.
+
+\index{Flourish\+Infrastructure\+Rules\+Engine@{Flourish\+Infrastructure\+Rules\+Engine}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!Flourish\+Infrastructure\+Rules\+Engine@{Flourish\+Infrastructure\+Rules\+Engine}}
+\subsubsection[{\texorpdfstring{evaluate(const Q\+Shared\+Pointer$<$ const D\+E\+N\+M\+Message $>$ \&message, V2\+X\+Simple\+A\+P $\ast$agent) Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE}{evaluate(const QSharedPointer< const DENMMessage > &message, V2XSimpleAP *agent) Q_DECL_OVERRIDE}}]{\setlength{\rightskip}{0pt plus 5cm}void Flourish\+Infrastructure\+Rules\+Engine\+::evaluate (
+\begin{DoxyParamCaption}
+\item[{const Q\+Shared\+Pointer$<$ const {\bf D\+E\+N\+M\+Message} $>$ \&}]{message, }
+\item[{{\bf V2\+X\+Simple\+AP} $\ast$}]{agent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classFlourishInfrastructureRulesEngine_a0017d33855e87f9f80211ccd8fd7c183}{}\label{classFlourishInfrastructureRulesEngine_a0017d33855e87f9f80211ccd8fd7c183}
+
+
+Evaluate a \hyperlink{structDENM}{D\+E\+NM} message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Message to evaluate \\
+\hline
+{\em agent} & Agent who received the message \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classV2XRulesEngine_a17fb61ee361a65cf2c17c5e836beecb4}{V2\+X\+Rules\+Engine}.
+
+\index{Flourish\+Infrastructure\+Rules\+Engine@{Flourish\+Infrastructure\+Rules\+Engine}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!Flourish\+Infrastructure\+Rules\+Engine@{Flourish\+Infrastructure\+Rules\+Engine}}
+\subsubsection[{\texorpdfstring{evaluate(const Q\+Shared\+Pointer$<$ const S\+P\+A\+T\+E\+M\+Message $>$ \&message, V2\+X\+Simple\+A\+P $\ast$agent) Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE}{evaluate(const QSharedPointer< const SPATEMMessage > &message, V2XSimpleAP *agent) Q_DECL_OVERRIDE}}]{\setlength{\rightskip}{0pt plus 5cm}void Flourish\+Infrastructure\+Rules\+Engine\+::evaluate (
+\begin{DoxyParamCaption}
+\item[{const Q\+Shared\+Pointer$<$ const {\bf S\+P\+A\+T\+E\+M\+Message} $>$ \&}]{message, }
+\item[{{\bf V2\+X\+Simple\+AP} $\ast$}]{agent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classFlourishInfrastructureRulesEngine_a1044d6e57ad05d830f02ba974a8759e5}{}\label{classFlourishInfrastructureRulesEngine_a1044d6e57ad05d830f02ba974a8759e5}
+
+
+Evaluate a \hyperlink{structSPATEM}{S\+P\+A\+T\+EM} message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Message to evaluate \\
+\hline
+{\em agent} & Agent who received the message \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classV2XRulesEngine_a5ee90d966d5828c7f28dea45c9000e38}{V2\+X\+Rules\+Engine}.
+
+\index{Flourish\+Infrastructure\+Rules\+Engine@{Flourish\+Infrastructure\+Rules\+Engine}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!Flourish\+Infrastructure\+Rules\+Engine@{Flourish\+Infrastructure\+Rules\+Engine}}
+\subsubsection[{\texorpdfstring{evaluate(const Q\+Shared\+Pointer$<$ const M\+A\+P\+E\+M\+Message $>$ \&message, V2\+X\+Simple\+A\+P $\ast$agent) Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE}{evaluate(const QSharedPointer< const MAPEMMessage > &message, V2XSimpleAP *agent) Q_DECL_OVERRIDE}}]{\setlength{\rightskip}{0pt plus 5cm}void Flourish\+Infrastructure\+Rules\+Engine\+::evaluate (
+\begin{DoxyParamCaption}
+\item[{const Q\+Shared\+Pointer$<$ const {\bf M\+A\+P\+E\+M\+Message} $>$ \&}]{message, }
+\item[{{\bf V2\+X\+Simple\+AP} $\ast$}]{agent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classFlourishInfrastructureRulesEngine_a332ec1445ba5c46257149536da4c51f4}{}\label{classFlourishInfrastructureRulesEngine_a332ec1445ba5c46257149536da4c51f4}
+
+
+Evaluate a \hyperlink{structMAPEM}{M\+A\+P\+EM} message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & pointer to the M\+AP message \\
+\hline
+{\em agent} & the agent originating the request \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classV2XRulesEngine_a49992f684bc9761d4bec9ebe142131f0}{V2\+X\+Rules\+Engine}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+plugins/\+Flourish\+V2\+X\+Framework/Flourish\+Infrastructure\+Rules\+Engine.\+h\item 
+plugins/\+Flourish\+V2\+X\+Framework/Flourish\+Infrastructure\+Rules\+Engine.\+cpp\end{DoxyCompactItemize}

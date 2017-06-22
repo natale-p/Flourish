@@ -1,0 +1,333 @@
+\hypertarget{classADynamicAgent}{}\section{A\+Dynamic\+Agent Class Reference}
+\label{classADynamicAgent}\index{A\+Dynamic\+Agent@{A\+Dynamic\+Agent}}
+
+
+Get and set information from/to the Aimsun objects (including vehicles)  
+
+
+
+
+{\ttfamily \#include $<$A\+Dynamic\+Agent.\+h$>$}
+
+
+
+Inheritance diagram for A\+Dynamic\+Agent\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{classADynamicAgent__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classADynamicAgent_a6535a8f571086793727c30b387c4883d}{A\+Dynamic\+Agent} (quint32 idhandler, D\+T\+A\+Veh $\ast$an\+Agent)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classADynamicAgent_ae1ba3cb111cb30562ad37df2aa0cda77}{$\sim$\+A\+Dynamic\+Agent} ()\hypertarget{classADynamicAgent_ae1ba3cb111cb30562ad37df2aa0cda77}{}\label{classADynamicAgent_ae1ba3cb111cb30562ad37df2aa0cda77}
+
+\begin{DoxyCompactList}\small\item\em Deconstructor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classADynamicAgent_a44aacef8be0302f2edc528a6b96168f7}{get\+State} (double time, double time\+Sta)=0
+\begin{DoxyCompactList}\small\item\em Will be called by Aimsun simulator for every simulation step. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classADynamicAgent_ae52606684f790a26d46861ea21e932e7}{set\+State} (double time, double time\+Sta)=0
+\begin{DoxyCompactList}\small\item\em Will be called by Aimsun simulator for every simulation step. \end{DoxyCompactList}\item 
+int \hyperlink{classADynamicAgent_afaf6756338d00b2448776747ad00ea65}{get\+Id} () const 
+\item 
+int \hyperlink{classADynamicAgent_a9ca35fea075e20e491e493d9fd44df92}{get\+Veh\+Type} () const 
+\item 
+double \hyperlink{classADynamicAgent_acf478908f7f973585b5be726581421ac}{get\+Length} () const 
+\item 
+double \hyperlink{classADynamicAgent_a1193101357f3a12c4ba71965960c07ca}{get\+Width} () const 
+\item 
+double \hyperlink{classADynamicAgent_a59ef63d722e335a71a7b6a0df0d71ee4}{get\+Max\+Acceleration} () const 
+\item 
+double \hyperlink{classADynamicAgent_aace95766f8809611d1031b979fa8a337}{get\+Normal\+Deceleration} () const 
+\item 
+double \hyperlink{classADynamicAgent_a853f42ee7434c44c3c69c4151aeec7ff}{get\+Max\+Deceleration} () const 
+\item 
+double \hyperlink{classADynamicAgent_ab6af88406508481aee9ea2ed6acea157}{get\+Clearance} () const 
+\item 
+double \hyperlink{classADynamicAgent_a4d9313c66b0b8f000d294f7055211488}{get\+Sensitivity\+Factor} () const 
+\item 
+double \hyperlink{classADynamicAgent_adae57adcd692c56f1660dd95c2c827fa}{get\+Minimum\+Headway} () const 
+\item 
+bool \hyperlink{classADynamicAgent_af9a306fbf63c42dafdb3e5c9fc16cd40}{get\+Coordinates} (double $\ast$xfront, double $\ast$yfront, double $\ast$zfront, double $\ast$xback, double $\ast$yback, double $\ast$zback) const 
+\item 
+double \hyperlink{classADynamicAgent_ad6fc5e3ac38f74264be2203a00372f86}{get\+Free\+Flow\+Speed} () const 
+\item 
+double \hyperlink{classADynamicAgent_a9f6f908d8ea87021027677929d0e35ec}{get\+Speed} () const 
+\item 
+double \hyperlink{classADynamicAgent_a8896cb6d238d2babc6a0666aa57aca3f}{get\+Acceleration} () const 
+\item 
+double \hyperlink{classADynamicAgent_a0ad74bbe2e59ea63941b4dd34807b2aa}{get\+Heading} () const 
+\item 
+D\+T\+A\+Vehicle\+Type $\ast$ \hyperlink{classADynamicAgent_a40f4d4c543dd62607d349aa21d35de43}{get\+Vehicle\+Type} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Get and set information from/to the Aimsun objects (including vehicles) 
+
+The two methods, which are called in a middle of the simulation steps, are\+:
+
+
+\begin{DoxyItemize}
+\item The get\+State method, will be called by Aimsun simulator for every simulation step.
+\item The set\+State method, will be called by Aimsun simulator for every simulation step.
+\end{DoxyItemize}
+
+Please remember that no order of call is guaranty between different updates. The other methods are getters for various vehicle properties, and they resolve to the internal agent in Aimsun. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{A\+Dynamic\+Agent@{A\+Dynamic\+Agent}!A\+Dynamic\+Agent@{A\+Dynamic\+Agent}}
+\index{A\+Dynamic\+Agent@{A\+Dynamic\+Agent}!A\+Dynamic\+Agent@{A\+Dynamic\+Agent}}
+\subsubsection[{\texorpdfstring{A\+Dynamic\+Agent(quint32 idhandler, D\+T\+A\+Veh $\ast$an\+Agent)}{ADynamicAgent(quint32 idhandler, DTAVeh *anAgent)}}]{\setlength{\rightskip}{0pt plus 5cm}A\+Dynamic\+Agent\+::\+A\+Dynamic\+Agent (
+\begin{DoxyParamCaption}
+\item[{quint32}]{idhandler, }
+\item[{D\+T\+A\+Veh $\ast$}]{an\+Agent}
+\end{DoxyParamCaption}
+)}\hypertarget{classADynamicAgent_a6535a8f571086793727c30b387c4883d}{}\label{classADynamicAgent_a6535a8f571086793727c30b387c4883d}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em idhandler} & Unique id of the agent (equivalent to call get\+Id) \\
+\hline
+{\em an\+Agent} & Opaque pointer for Aimsun agent \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{A\+Dynamic\+Agent@{A\+Dynamic\+Agent}!get\+Acceleration@{get\+Acceleration}}
+\index{get\+Acceleration@{get\+Acceleration}!A\+Dynamic\+Agent@{A\+Dynamic\+Agent}}
+\subsubsection[{\texorpdfstring{get\+Acceleration() const }{getAcceleration() const }}]{\setlength{\rightskip}{0pt plus 5cm}double A\+Dynamic\+Agent\+::get\+Acceleration (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classADynamicAgent_a8896cb6d238d2babc6a0666aa57aca3f}{}\label{classADynamicAgent_a8896cb6d238d2babc6a0666aa57aca3f}
+\begin{DoxyReturn}{Returns}
+The current acceleration/deceleration of the vehicle (m/s2) 
+\end{DoxyReturn}
+\index{A\+Dynamic\+Agent@{A\+Dynamic\+Agent}!get\+Clearance@{get\+Clearance}}
+\index{get\+Clearance@{get\+Clearance}!A\+Dynamic\+Agent@{A\+Dynamic\+Agent}}
+\subsubsection[{\texorpdfstring{get\+Clearance() const }{getClearance() const }}]{\setlength{\rightskip}{0pt plus 5cm}double A\+Dynamic\+Agent\+::get\+Clearance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classADynamicAgent_ab6af88406508481aee9ea2ed6acea157}{}\label{classADynamicAgent_ab6af88406508481aee9ea2ed6acea157}
+\begin{DoxyReturn}{Returns}
+The clearance space (Minimum gap) of the vehicle as defined in the vehicle type (m) 
+\end{DoxyReturn}
+\index{A\+Dynamic\+Agent@{A\+Dynamic\+Agent}!get\+Coordinates@{get\+Coordinates}}
+\index{get\+Coordinates@{get\+Coordinates}!A\+Dynamic\+Agent@{A\+Dynamic\+Agent}}
+\subsubsection[{\texorpdfstring{get\+Coordinates(double $\ast$xfront, double $\ast$yfront, double $\ast$zfront, double $\ast$xback, double $\ast$yback, double $\ast$zback) const }{getCoordinates(double *xfront, double *yfront, double *zfront, double *xback, double *yback, double *zback) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool A\+Dynamic\+Agent\+::get\+Coordinates (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{xfront, }
+\item[{double $\ast$}]{yfront, }
+\item[{double $\ast$}]{zfront, }
+\item[{double $\ast$}]{xback, }
+\item[{double $\ast$}]{yback, }
+\item[{double $\ast$}]{zback}
+\end{DoxyParamCaption}
+) const}\hypertarget{classADynamicAgent_af9a306fbf63c42dafdb3e5c9fc16cd40}{}\label{classADynamicAgent_af9a306fbf63c42dafdb3e5c9fc16cd40}
+
+\begin{DoxyParams}{Parameters}
+{\em xfront} & T\+O\+DO \\
+\hline
+{\em yfront} & T\+O\+DO \\
+\hline
+{\em zfront} & T\+O\+DO \\
+\hline
+{\em xback} & T\+O\+DO \\
+\hline
+{\em yback} & T\+O\+DO \\
+\hline
+{\em zback} & T\+O\+DO \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The coordinates of the middle front point and middle back point 
+\end{DoxyReturn}
+\index{A\+Dynamic\+Agent@{A\+Dynamic\+Agent}!get\+Free\+Flow\+Speed@{get\+Free\+Flow\+Speed}}
+\index{get\+Free\+Flow\+Speed@{get\+Free\+Flow\+Speed}!A\+Dynamic\+Agent@{A\+Dynamic\+Agent}}
+\subsubsection[{\texorpdfstring{get\+Free\+Flow\+Speed() const }{getFreeFlowSpeed() const }}]{\setlength{\rightskip}{0pt plus 5cm}double A\+Dynamic\+Agent\+::get\+Free\+Flow\+Speed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classADynamicAgent_ad6fc5e3ac38f74264be2203a00372f86}{}\label{classADynamicAgent_ad6fc5e3ac38f74264be2203a00372f86}
+\begin{DoxyReturn}{Returns}
+The maximum Desired \hyperlink{structSpeed}{Speed} of the vehicle for the current lane (m/s) 
+\end{DoxyReturn}
+\index{A\+Dynamic\+Agent@{A\+Dynamic\+Agent}!get\+Heading@{get\+Heading}}
+\index{get\+Heading@{get\+Heading}!A\+Dynamic\+Agent@{A\+Dynamic\+Agent}}
+\subsubsection[{\texorpdfstring{get\+Heading() const }{getHeading() const }}]{\setlength{\rightskip}{0pt plus 5cm}double A\+Dynamic\+Agent\+::get\+Heading (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classADynamicAgent_a0ad74bbe2e59ea63941b4dd34807b2aa}{}\label{classADynamicAgent_a0ad74bbe2e59ea63941b4dd34807b2aa}
+\begin{DoxyReturn}{Returns}
+The heading express in angle \+: 0 North, 90 East, 180 South 270 West 
+\end{DoxyReturn}
+\index{A\+Dynamic\+Agent@{A\+Dynamic\+Agent}!get\+Id@{get\+Id}}
+\index{get\+Id@{get\+Id}!A\+Dynamic\+Agent@{A\+Dynamic\+Agent}}
+\subsubsection[{\texorpdfstring{get\+Id() const }{getId() const }}]{\setlength{\rightskip}{0pt plus 5cm}int A\+Dynamic\+Agent\+::get\+Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classADynamicAgent_afaf6756338d00b2448776747ad00ea65}{}\label{classADynamicAgent_afaf6756338d00b2448776747ad00ea65}
+\begin{DoxyReturn}{Returns}
+The Aimsun id vehicle assigned during the simulation 
+\end{DoxyReturn}
+\index{A\+Dynamic\+Agent@{A\+Dynamic\+Agent}!get\+Length@{get\+Length}}
+\index{get\+Length@{get\+Length}!A\+Dynamic\+Agent@{A\+Dynamic\+Agent}}
+\subsubsection[{\texorpdfstring{get\+Length() const }{getLength() const }}]{\setlength{\rightskip}{0pt plus 5cm}double A\+Dynamic\+Agent\+::get\+Length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classADynamicAgent_acf478908f7f973585b5be726581421ac}{}\label{classADynamicAgent_acf478908f7f973585b5be726581421ac}
+\begin{DoxyReturn}{Returns}
+The length of the vehicle (meters) 
+\end{DoxyReturn}
+\index{A\+Dynamic\+Agent@{A\+Dynamic\+Agent}!get\+Max\+Acceleration@{get\+Max\+Acceleration}}
+\index{get\+Max\+Acceleration@{get\+Max\+Acceleration}!A\+Dynamic\+Agent@{A\+Dynamic\+Agent}}
+\subsubsection[{\texorpdfstring{get\+Max\+Acceleration() const }{getMaxAcceleration() const }}]{\setlength{\rightskip}{0pt plus 5cm}double A\+Dynamic\+Agent\+::get\+Max\+Acceleration (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classADynamicAgent_a59ef63d722e335a71a7b6a0df0d71ee4}{}\label{classADynamicAgent_a59ef63d722e335a71a7b6a0df0d71ee4}
+\begin{DoxyReturn}{Returns}
+The Maximum acceleration of the vehicle as specified in the vehicle type considering local variations (m/s2) 
+\end{DoxyReturn}
+\index{A\+Dynamic\+Agent@{A\+Dynamic\+Agent}!get\+Max\+Deceleration@{get\+Max\+Deceleration}}
+\index{get\+Max\+Deceleration@{get\+Max\+Deceleration}!A\+Dynamic\+Agent@{A\+Dynamic\+Agent}}
+\subsubsection[{\texorpdfstring{get\+Max\+Deceleration() const }{getMaxDeceleration() const }}]{\setlength{\rightskip}{0pt plus 5cm}double A\+Dynamic\+Agent\+::get\+Max\+Deceleration (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classADynamicAgent_a853f42ee7434c44c3c69c4151aeec7ff}{}\label{classADynamicAgent_a853f42ee7434c44c3c69c4151aeec7ff}
+\begin{DoxyReturn}{Returns}
+The Maximum (emergency) deceleration of the vehicle as specified in the vehicle type considering local variations (m/s2) 
+\end{DoxyReturn}
+\index{A\+Dynamic\+Agent@{A\+Dynamic\+Agent}!get\+Minimum\+Headway@{get\+Minimum\+Headway}}
+\index{get\+Minimum\+Headway@{get\+Minimum\+Headway}!A\+Dynamic\+Agent@{A\+Dynamic\+Agent}}
+\subsubsection[{\texorpdfstring{get\+Minimum\+Headway() const }{getMinimumHeadway() const }}]{\setlength{\rightskip}{0pt plus 5cm}double A\+Dynamic\+Agent\+::get\+Minimum\+Headway (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classADynamicAgent_adae57adcd692c56f1660dd95c2c827fa}{}\label{classADynamicAgent_adae57adcd692c56f1660dd95c2c827fa}
+\begin{DoxyReturn}{Returns}
+The Minimum Headway (also know as Gap) in font of the vehicle as defined in the vehicle type (s) 
+\end{DoxyReturn}
+\index{A\+Dynamic\+Agent@{A\+Dynamic\+Agent}!get\+Normal\+Deceleration@{get\+Normal\+Deceleration}}
+\index{get\+Normal\+Deceleration@{get\+Normal\+Deceleration}!A\+Dynamic\+Agent@{A\+Dynamic\+Agent}}
+\subsubsection[{\texorpdfstring{get\+Normal\+Deceleration() const }{getNormalDeceleration() const }}]{\setlength{\rightskip}{0pt plus 5cm}double A\+Dynamic\+Agent\+::get\+Normal\+Deceleration (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classADynamicAgent_aace95766f8809611d1031b979fa8a337}{}\label{classADynamicAgent_aace95766f8809611d1031b979fa8a337}
+\begin{DoxyReturn}{Returns}
+The Nomal deceleration of the vehicle as specified in the vehicle type considering local variations (m/s2) 
+\end{DoxyReturn}
+\index{A\+Dynamic\+Agent@{A\+Dynamic\+Agent}!get\+Sensitivity\+Factor@{get\+Sensitivity\+Factor}}
+\index{get\+Sensitivity\+Factor@{get\+Sensitivity\+Factor}!A\+Dynamic\+Agent@{A\+Dynamic\+Agent}}
+\subsubsection[{\texorpdfstring{get\+Sensitivity\+Factor() const }{getSensitivityFactor() const }}]{\setlength{\rightskip}{0pt plus 5cm}double A\+Dynamic\+Agent\+::get\+Sensitivity\+Factor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classADynamicAgent_a4d9313c66b0b8f000d294f7055211488}{}\label{classADynamicAgent_a4d9313c66b0b8f000d294f7055211488}
+\begin{DoxyReturn}{Returns}
+The sensitivity Factor to Leader´s deceleration as defined in the vehicle type 
+\end{DoxyReturn}
+\index{A\+Dynamic\+Agent@{A\+Dynamic\+Agent}!get\+Speed@{get\+Speed}}
+\index{get\+Speed@{get\+Speed}!A\+Dynamic\+Agent@{A\+Dynamic\+Agent}}
+\subsubsection[{\texorpdfstring{get\+Speed() const }{getSpeed() const }}]{\setlength{\rightskip}{0pt plus 5cm}double A\+Dynamic\+Agent\+::get\+Speed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classADynamicAgent_a9f6f908d8ea87021027677929d0e35ec}{}\label{classADynamicAgent_a9f6f908d8ea87021027677929d0e35ec}
+\begin{DoxyReturn}{Returns}
+The current speed of the vehicle (m/s) 
+\end{DoxyReturn}
+\index{A\+Dynamic\+Agent@{A\+Dynamic\+Agent}!get\+State@{get\+State}}
+\index{get\+State@{get\+State}!A\+Dynamic\+Agent@{A\+Dynamic\+Agent}}
+\subsubsection[{\texorpdfstring{get\+State(double time, double time\+Sta)=0}{getState(double time, double timeSta)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void A\+Dynamic\+Agent\+::get\+State (
+\begin{DoxyParamCaption}
+\item[{double}]{time, }
+\item[{double}]{time\+Sta}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classADynamicAgent_a44aacef8be0302f2edc528a6b96168f7}{}\label{classADynamicAgent_a44aacef8be0302f2edc528a6b96168f7}
+
+
+Will be called by Aimsun simulator for every simulation step. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Simulation time \\
+\hline
+{\em time\+Sta} & Time from 00\+:00.\+00 (midnight) of the current day \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classV2XConnectedAgent_a3c7e42f33c9cb3c25cd2374063f151da}{V2\+X\+Connected\+Agent}.
+
+\index{A\+Dynamic\+Agent@{A\+Dynamic\+Agent}!get\+Vehicle\+Type@{get\+Vehicle\+Type}}
+\index{get\+Vehicle\+Type@{get\+Vehicle\+Type}!A\+Dynamic\+Agent@{A\+Dynamic\+Agent}}
+\subsubsection[{\texorpdfstring{get\+Vehicle\+Type() const }{getVehicleType() const }}]{\setlength{\rightskip}{0pt plus 5cm}D\+T\+A\+Vehicle\+Type$\ast$ A\+Dynamic\+Agent\+::get\+Vehicle\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classADynamicAgent_a40f4d4c543dd62607d349aa21d35de43}{}\label{classADynamicAgent_a40f4d4c543dd62607d349aa21d35de43}
+\begin{DoxyReturn}{Returns}
+The vehicle type 
+\end{DoxyReturn}
+\index{A\+Dynamic\+Agent@{A\+Dynamic\+Agent}!get\+Veh\+Type@{get\+Veh\+Type}}
+\index{get\+Veh\+Type@{get\+Veh\+Type}!A\+Dynamic\+Agent@{A\+Dynamic\+Agent}}
+\subsubsection[{\texorpdfstring{get\+Veh\+Type() const }{getVehType() const }}]{\setlength{\rightskip}{0pt plus 5cm}int A\+Dynamic\+Agent\+::get\+Veh\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classADynamicAgent_a9ca35fea075e20e491e493d9fd44df92}{}\label{classADynamicAgent_a9ca35fea075e20e491e493d9fd44df92}
+\begin{DoxyReturn}{Returns}
+the Aimsun Vehicle Type of the vehicle 
+\end{DoxyReturn}
+\index{A\+Dynamic\+Agent@{A\+Dynamic\+Agent}!get\+Width@{get\+Width}}
+\index{get\+Width@{get\+Width}!A\+Dynamic\+Agent@{A\+Dynamic\+Agent}}
+\subsubsection[{\texorpdfstring{get\+Width() const }{getWidth() const }}]{\setlength{\rightskip}{0pt plus 5cm}double A\+Dynamic\+Agent\+::get\+Width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classADynamicAgent_a1193101357f3a12c4ba71965960c07ca}{}\label{classADynamicAgent_a1193101357f3a12c4ba71965960c07ca}
+\begin{DoxyReturn}{Returns}
+The width of the vehicle (meters) 
+\end{DoxyReturn}
+\index{A\+Dynamic\+Agent@{A\+Dynamic\+Agent}!set\+State@{set\+State}}
+\index{set\+State@{set\+State}!A\+Dynamic\+Agent@{A\+Dynamic\+Agent}}
+\subsubsection[{\texorpdfstring{set\+State(double time, double time\+Sta)=0}{setState(double time, double timeSta)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void A\+Dynamic\+Agent\+::set\+State (
+\begin{DoxyParamCaption}
+\item[{double}]{time, }
+\item[{double}]{time\+Sta}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classADynamicAgent_ae52606684f790a26d46861ea21e932e7}{}\label{classADynamicAgent_ae52606684f790a26d46861ea21e932e7}
+
+
+Will be called by Aimsun simulator for every simulation step. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Simulation time \\
+\hline
+{\em time\+Sta} & Time from 00\+:00.\+00 (midnight) of the current day \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classV2XConnectedAgent_a771b23c38e5ac18d0219d4d8fefccb5a}{V2\+X\+Connected\+Agent}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/core/\+A\+N\+G\+\_\+\+D\+T\+A/\+A\+Dynamic\+A\+P\+I/A\+Dynamic\+Agent.\+h\end{DoxyCompactItemize}

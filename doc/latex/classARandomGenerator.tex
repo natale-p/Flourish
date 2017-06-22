@@ -1,0 +1,90 @@
+\hypertarget{classARandomGenerator}{}\section{A\+Random\+Generator Class Reference}
+\label{classARandomGenerator}\index{A\+Random\+Generator@{A\+Random\+Generator}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries A\+Random\+Generator} (const \hyperlink{classARandomGenerator}{A\+Random\+Generator} \&other\+R\+NG)\hypertarget{classARandomGenerator_aa209ff80ec6623dd434c56e163597d8c}{}\label{classARandomGenerator_aa209ff80ec6623dd434c56e163597d8c}
+
+\item 
+{\bfseries A\+Random\+Generator} (int aseed)\hypertarget{classARandomGenerator_ab8a7945444c0aab6f4c61b1afa6e96a6}{}\label{classARandomGenerator_ab8a7945444c0aab6f4c61b1afa6e96a6}
+
+\item 
+\hyperlink{classARandomGenerator}{A\+Random\+Generator} \& {\bfseries operator=} (\hyperlink{classARandomGenerator}{A\+Random\+Generator} const \&other)\hypertarget{classARandomGenerator_a004e74cdd129366e21f9c9876096fd81}{}\label{classARandomGenerator_a004e74cdd129366e21f9c9876096fd81}
+
+\item 
+void {\bfseries set\+Seed} (int aseed)\hypertarget{classARandomGenerator_a82e7f7c641f4bd4caa4e43db2f32468a}{}\label{classARandomGenerator_a82e7f7c641f4bd4caa4e43db2f32468a}
+
+\item 
+int {\bfseries get\+Seed} () const \hypertarget{classARandomGenerator_a11d8618fbf6539f2b4f0d919a5dad9a7}{}\label{classARandomGenerator_a11d8618fbf6539f2b4f0d919a5dad9a7}
+
+\item 
+int $\ast$ {\bfseries get\+Ref\+Seed} ()\hypertarget{classARandomGenerator_a7764d336630fdb25f8219d29e2d9ae80}{}\label{classARandomGenerator_a7764d336630fdb25f8219d29e2d9ae80}
+
+\item 
+virtual double {\bfseries random01} ()\hypertarget{classARandomGenerator_a7bed33db3faf4b39fa08eee18782ecb1}{}\label{classARandomGenerator_a7bed33db3faf4b39fa08eee18782ecb1}
+
+\item 
+double {\bfseries uniform} (double a, double b)\hypertarget{classARandomGenerator_a69017d79b869ef608affa8b82b1e607e}{}\label{classARandomGenerator_a69017d79b869ef608affa8b82b1e607e}
+
+\item 
+double {\bfseries normal} (double mu, double sigma)\hypertarget{classARandomGenerator_aec025a2421d67fded97e85ef6f7a2fca}{}\label{classARandomGenerator_aec025a2421d67fded97e85ef6f7a2fca}
+
+\item 
+double {\bfseries normalfull} (double mu, double sigma)\hypertarget{classARandomGenerator_acbef92da4df9b3c8de59341b71611440}{}\label{classARandomGenerator_acbef92da4df9b3c8de59341b71611440}
+
+\item 
+double \hyperlink{classARandomGenerator_a85e2f9a6b4c39d19c4bc4beadfa9dbfb}{normal\+\_\+mt} (double mu, double sigma, double amin, double amax, double $\ast$first\+Random\+Num=N\+U\+LL, double $\ast$second\+Random\+Num=N\+U\+LL)
+\item 
+double {\bfseries lognormal\+\_\+mt} (double mu, double sigma, double min, double max)\hypertarget{classARandomGenerator_aaad820ff562ed1242caa0de2baa1f51c}{}\label{classARandomGenerator_aaad820ff562ed1242caa0de2baa1f51c}
+
+\item 
+double {\bfseries exponential} (double lambda)\hypertarget{classARandomGenerator_a8b2d07c0d5523187adf4aa2e3f5b6670}{}\label{classARandomGenerator_a8b2d07c0d5523187adf4aa2e3f5b6670}
+
+\item 
+double {\bfseries get\+Headway} (int headway\+Type, double time\+Between\+Vehs, double shiftfactor)\hypertarget{classARandomGenerator_a495b02983cb88cd90de855296258fa8b}{}\label{classARandomGenerator_a495b02983cb88cd90de855296258fa8b}
+
+\item 
+int {\bfseries random\+Class} (int n)\hypertarget{classARandomGenerator_a1ab5c007ca0d56262c774f5c311f28b3}{}\label{classARandomGenerator_a1ab5c007ca0d56262c774f5c311f28b3}
+
+\item 
+int {\bfseries get\+New\+Seed} ()\hypertarget{classARandomGenerator_adf4750f97d3ae800643c7d8d61ffbf45}{}\label{classARandomGenerator_adf4750f97d3ae800643c7d8d61ffbf45}
+
+\item 
+void {\bfseries store\+State} (Q\+Data\+Stream \&stream)\hypertarget{classARandomGenerator_a6cfbac4a9b0aabd8b09ffbd7627202d2}{}\label{classARandomGenerator_a6cfbac4a9b0aabd8b09ffbd7627202d2}
+
+\item 
+void {\bfseries restore\+State} (Q\+Data\+Stream \&stream)\hypertarget{classARandomGenerator_a557b66ccbc65a2513c327b070ec74154}{}\label{classARandomGenerator_a557b66ccbc65a2513c327b070ec74154}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double {\bfseries uniform} (double value01, double a, double b)\hypertarget{classARandomGenerator_a5d718b7a952f71e3741b4d3d75ec2413}{}\label{classARandomGenerator_a5d718b7a952f71e3741b4d3d75ec2413}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries seed}\hypertarget{classARandomGenerator_a7b7d03496867576ed46b39ca3ce10236}{}\label{classARandomGenerator_a7b7d03496867576ed46b39ca3ce10236}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{A\+Random\+Generator@{A\+Random\+Generator}!normal\+\_\+mt@{normal\+\_\+mt}}
+\index{normal\+\_\+mt@{normal\+\_\+mt}!A\+Random\+Generator@{A\+Random\+Generator}}
+\subsubsection[{\texorpdfstring{normal\+\_\+mt(double mu, double sigma, double amin, double amax, double $\ast$first\+Random\+Num=\+N\+U\+L\+L, double $\ast$second\+Random\+Num=\+N\+U\+L\+L)}{normal_mt(double mu, double sigma, double amin, double amax, double *firstRandomNum=NULL, double *secondRandomNum=NULL)}}]{\setlength{\rightskip}{0pt plus 5cm}double A\+Random\+Generator\+::normal\+\_\+mt (
+\begin{DoxyParamCaption}
+\item[{double}]{mu, }
+\item[{double}]{sigma, }
+\item[{double}]{amin, }
+\item[{double}]{amax, }
+\item[{double $\ast$}]{first\+Random\+Num = {\ttfamily NULL}, }
+\item[{double $\ast$}]{second\+Random\+Num = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+)}\hypertarget{classARandomGenerator_a85e2f9a6b4c39d19c4bc4beadfa9dbfb}{}\label{classARandomGenerator_a85e2f9a6b4c39d19c4bc4beadfa9dbfb}
+first\+Random\+Num and second\+Random\+Num can be externally specified and also returned. When they are not null and their value is $>$ 0 they will be used instead of generating them using the random01() function. If they are not null, the random numbers used will be returned. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/core/random/F\+Rand.\+h\end{DoxyCompactItemize}

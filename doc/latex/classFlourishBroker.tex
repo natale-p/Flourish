@@ -1,0 +1,234 @@
+\hypertarget{classFlourishBroker}{}\section{Flourish\+Broker Class Reference}
+\label{classFlourishBroker}\index{Flourish\+Broker@{Flourish\+Broker}}
+
+
+Supervise the framework operations.  
+
+
+
+
+{\ttfamily \#include $<$Flourish\+Broker.\+h$>$}
+
+
+
+Inheritance diagram for Flourish\+Broker\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{classFlourishBroker__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Flourish\+Broker\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{classFlourishBroker__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classFlourishBroker_a6361ac77665c9d3f5205fe42b388c062}{Flourish\+Broker} ()\hypertarget{classFlourishBroker_a6361ac77665c9d3f5205fe42b388c062}{}\label{classFlourishBroker_a6361ac77665c9d3f5205fe42b388c062}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classFlourishBroker_a665feb82cdd87e45ac307f9ba7fc91a2}{$\sim$\+Flourish\+Broker} ()\hypertarget{classFlourishBroker_a665feb82cdd87e45ac307f9ba7fc91a2}{}\label{classFlourishBroker_a665feb82cdd87e45ac307f9ba7fc91a2}
+
+\begin{DoxyCompactList}\small\item\em Deconstructor. \end{DoxyCompactList}\item 
+void \hyperlink{classFlourishBroker_a56893aa4d35d71c353d8fd1f9dc03fee}{do\+Post} (double time, double time\+Sta, double sim\+Step)
+\begin{DoxyCompactList}\small\item\em Ask the agents and stations to do the post operations. \end{DoxyCompactList}\item 
+void \hyperlink{classFlourishBroker_a8003c8ada9ce635b6cde81584b5f7265}{do\+Pre} (double time, double time\+Sta, double sim\+Step)
+\begin{DoxyCompactList}\small\item\em Ask the agents and stations to do the pre operations. \end{DoxyCompactList}\item 
+void \hyperlink{classFlourishBroker_a2ac65b27e43f3fcb89a384edac8d300b}{add\+AP} (\hyperlink{classFlourishAP}{Flourish\+AP} $\ast$ap, double delay, double prob)
+\begin{DoxyCompactList}\small\item\em Creates a new \hyperlink{classFlourishAP}{Flourish\+AP}. \end{DoxyCompactList}\item 
+void \hyperlink{classFlourishBroker_ad861cc52e98e29f4880c4db07ba25166}{add\+Agent} (\hyperlink{classFlourishConnectedAgent}{Flourish\+Connected\+Agent} $\ast$agent, double radius, double delay, double prob)
+\begin{DoxyCompactList}\small\item\em Save the pointer of the agent inside an internal list. \end{DoxyCompactList}\item 
+void \hyperlink{classFlourishBroker_ade755d5bccedaebc2412a2f211600ec1}{remove\+Agent} (\hyperlink{classFlourishConnectedAgent}{Flourish\+Connected\+Agent} $\ast$agent)
+\begin{DoxyCompactList}\small\item\em remove\+Agent \end{DoxyCompactList}\item 
+Q\+Set$<$ \hyperlink{classV2XNetworkNode}{V2\+X\+Network\+Node} $\ast$ $>$ \hyperlink{classFlourishBroker_ae8685fc139bea35d3f74ecb2bf998004}{get\+Nearest\+Stations} (const \hyperlink{classV2XSimpleAP}{V2\+X\+Simple\+AP} $\ast$target) const 
+\begin{DoxyCompactList}\small\item\em Get a set of station near the given station. \end{DoxyCompactList}\item 
+Q\+Set$<$ \hyperlink{classV2XNetworkNode}{V2\+X\+Network\+Node} $\ast$ $>$ \hyperlink{classFlourishBroker_a19d8cf9d985f5bcac58abb0e5f01860e}{get\+Nearest\+Agent} (const \hyperlink{classV2XSimpleAP}{V2\+X\+Simple\+AP} $\ast$station) const 
+\begin{DoxyCompactList}\small\item\em Get a set of agent near the given station. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Supervise the framework operations. 
+
+The class is responsible to save pointers to all the stations and agents in the simulation. Moreover, it coordinates the pre and post events between all the stations.
+
+More in particular, the class provide a way to find nearest stations and agents (with an high computational cost; calling n and m the number of vehicles and stations, respectively, the cost is O(n) for retrieving the nearest agents and O(m) to retrieve the nearest stations).
+
+We have different group of methods, meant to be called from different classes. The first group (do\+Post, do\+Pre, add\+Station, add\+Agent, remove\+Agent) is meant to be called by \hyperlink{classFlourishV2XFramework}{Flourish\+V2\+X\+Framework}. The second one, composed by now, get\+Nearest\+Station, get\+Nearest\+Agent, is meant to be called by the stations.
+
+To see what is possible to do with the agents and stations, please take a look to their documentation (\hyperlink{classFlourishConnectedAgent}{Flourish\+Connected\+Agent} and \hyperlink{classFlourishAP}{Flourish\+AP}).
+
+\begin{DoxySeeAlso}{See also}
+get\+Nearest\+Station 
+
+\hyperlink{classFlourishBroker_a19d8cf9d985f5bcac58abb0e5f01860e}{get\+Nearest\+Agent} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\index{Flourish\+Broker@{Flourish\+Broker}!add\+Agent@{add\+Agent}}
+\index{add\+Agent@{add\+Agent}!Flourish\+Broker@{Flourish\+Broker}}
+\subsubsection[{\texorpdfstring{add\+Agent(\+Flourish\+Connected\+Agent $\ast$agent, double radius, double delay, double prob)}{addAgent(FlourishConnectedAgent *agent, double radius, double delay, double prob)}}]{\setlength{\rightskip}{0pt plus 5cm}void Flourish\+Broker\+::add\+Agent (
+\begin{DoxyParamCaption}
+\item[{{\bf Flourish\+Connected\+Agent} $\ast$}]{agent, }
+\item[{double}]{radius, }
+\item[{double}]{delay, }
+\item[{double}]{prob}
+\end{DoxyParamCaption}
+)}\hypertarget{classFlourishBroker_ad861cc52e98e29f4880c4db07ba25166}{}\label{classFlourishBroker_ad861cc52e98e29f4880c4db07ba25166}
+
+
+Save the pointer of the agent inside an internal list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em agent} & created agent \\
+\hline
+{\em radius} & the radius of the agent \\
+\hline
+{\em delay} & the delay of its channel \\
+\hline
+{\em prob} & the error probability (P\+ER) \\
+\hline
+\end{DoxyParams}
+\index{Flourish\+Broker@{Flourish\+Broker}!add\+AP@{add\+AP}}
+\index{add\+AP@{add\+AP}!Flourish\+Broker@{Flourish\+Broker}}
+\subsubsection[{\texorpdfstring{add\+A\+P(\+Flourish\+A\+P $\ast$ap, double delay, double prob)}{addAP(FlourishAP *ap, double delay, double prob)}}]{\setlength{\rightskip}{0pt plus 5cm}void Flourish\+Broker\+::add\+AP (
+\begin{DoxyParamCaption}
+\item[{{\bf Flourish\+AP} $\ast$}]{ap, }
+\item[{double}]{delay, }
+\item[{double}]{prob}
+\end{DoxyParamCaption}
+)}\hypertarget{classFlourishBroker_a2ac65b27e43f3fcb89a384edac8d300b}{}\label{classFlourishBroker_a2ac65b27e43f3fcb89a384edac8d300b}
+
+
+Creates a new \hyperlink{classFlourishAP}{Flourish\+AP}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ap} & Access Point \\
+\hline
+{\em delay} & the propagation delay of this station \\
+\hline
+{\em prob} & the probability of loss (P\+ER) of this station \\
+\hline
+\end{DoxyParams}
+\index{Flourish\+Broker@{Flourish\+Broker}!do\+Post@{do\+Post}}
+\index{do\+Post@{do\+Post}!Flourish\+Broker@{Flourish\+Broker}}
+\subsubsection[{\texorpdfstring{do\+Post(double time, double time\+Sta, double sim\+Step)}{doPost(double time, double timeSta, double simStep)}}]{\setlength{\rightskip}{0pt plus 5cm}void Flourish\+Broker\+::do\+Post (
+\begin{DoxyParamCaption}
+\item[{double}]{time, }
+\item[{double}]{time\+Sta, }
+\item[{double}]{sim\+Step}
+\end{DoxyParamCaption}
+)}\hypertarget{classFlourishBroker_a56893aa4d35d71c353d8fd1f9dc03fee}{}\label{classFlourishBroker_a56893aa4d35d71c353d8fd1f9dc03fee}
+
+
+Ask the agents and stations to do the post operations. 
+
+The order is the following\+:
+
+
+\begin{DoxyItemize}
+\item It is asked to all the agents to update their links, giving their positions and the positions of the other agent/stations
+\item It is asked to all the agents and to all the stations to exchange messages, and then to generate their message to broadcast
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & T\+O\+DO \\
+\hline
+{\em time\+Sta} & T\+O\+DO \\
+\hline
+{\em sim\+Step} & T\+O\+DO \\
+\hline
+\end{DoxyParams}
+\index{Flourish\+Broker@{Flourish\+Broker}!do\+Pre@{do\+Pre}}
+\index{do\+Pre@{do\+Pre}!Flourish\+Broker@{Flourish\+Broker}}
+\subsubsection[{\texorpdfstring{do\+Pre(double time, double time\+Sta, double sim\+Step)}{doPre(double time, double timeSta, double simStep)}}]{\setlength{\rightskip}{0pt plus 5cm}void Flourish\+Broker\+::do\+Pre (
+\begin{DoxyParamCaption}
+\item[{double}]{time, }
+\item[{double}]{time\+Sta, }
+\item[{double}]{sim\+Step}
+\end{DoxyParamCaption}
+)}\hypertarget{classFlourishBroker_a8003c8ada9ce635b6cde81584b5f7265}{}\label{classFlourishBroker_a8003c8ada9ce635b6cde81584b5f7265}
+
+
+Ask the agents and stations to do the pre operations. 
+
+It only update the current time in all the agents/stations. In the future, it will trigger the analysis of the income messages.
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & T\+O\+DO \\
+\hline
+{\em time\+Sta} & T\+O\+DO \\
+\hline
+{\em sim\+Step} & T\+O\+DO \\
+\hline
+\end{DoxyParams}
+\index{Flourish\+Broker@{Flourish\+Broker}!get\+Nearest\+Agent@{get\+Nearest\+Agent}}
+\index{get\+Nearest\+Agent@{get\+Nearest\+Agent}!Flourish\+Broker@{Flourish\+Broker}}
+\subsubsection[{\texorpdfstring{get\+Nearest\+Agent(const V2\+X\+Simple\+A\+P $\ast$station) const }{getNearestAgent(const V2XSimpleAP *station) const }}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Set$<$ {\bf V2\+X\+Network\+Node} $\ast$ $>$ Flourish\+Broker\+::get\+Nearest\+Agent (
+\begin{DoxyParamCaption}
+\item[{const {\bf V2\+X\+Simple\+AP} $\ast$}]{station}
+\end{DoxyParamCaption}
+) const}\hypertarget{classFlourishBroker_a19d8cf9d985f5bcac58abb0e5f01860e}{}\label{classFlourishBroker_a19d8cf9d985f5bcac58abb0e5f01860e}
+
+
+Get a set of agent near the given station. 
+
+If the agents are n, the cost of this function is O(n). 
+\begin{DoxyParams}{Parameters}
+{\em station} & station \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a set of agents for which the given position is in the communication range 
+\end{DoxyReturn}
+\index{Flourish\+Broker@{Flourish\+Broker}!get\+Nearest\+Stations@{get\+Nearest\+Stations}}
+\index{get\+Nearest\+Stations@{get\+Nearest\+Stations}!Flourish\+Broker@{Flourish\+Broker}}
+\subsubsection[{\texorpdfstring{get\+Nearest\+Stations(const V2\+X\+Simple\+A\+P $\ast$target) const }{getNearestStations(const V2XSimpleAP *target) const }}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Set$<$ {\bf V2\+X\+Network\+Node} $\ast$ $>$ Flourish\+Broker\+::get\+Nearest\+Stations (
+\begin{DoxyParamCaption}
+\item[{const {\bf V2\+X\+Simple\+AP} $\ast$}]{target}
+\end{DoxyParamCaption}
+) const}\hypertarget{classFlourishBroker_ae8685fc139bea35d3f74ecb2bf998004}{}\label{classFlourishBroker_ae8685fc139bea35d3f74ecb2bf998004}
+
+
+Get a set of station near the given station. 
+
+If the position are m, the cost of this function is O(m). 
+\begin{DoxyParams}{Parameters}
+{\em target} & target station \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a set of station for which the given position is in the communication range 
+\end{DoxyReturn}
+\index{Flourish\+Broker@{Flourish\+Broker}!remove\+Agent@{remove\+Agent}}
+\index{remove\+Agent@{remove\+Agent}!Flourish\+Broker@{Flourish\+Broker}}
+\subsubsection[{\texorpdfstring{remove\+Agent(\+Flourish\+Connected\+Agent $\ast$agent)}{removeAgent(FlourishConnectedAgent *agent)}}]{\setlength{\rightskip}{0pt plus 5cm}void Flourish\+Broker\+::remove\+Agent (
+\begin{DoxyParamCaption}
+\item[{{\bf Flourish\+Connected\+Agent} $\ast$}]{agent}
+\end{DoxyParamCaption}
+)}\hypertarget{classFlourishBroker_ade755d5bccedaebc2412a2f211600ec1}{}\label{classFlourishBroker_ade755d5bccedaebc2412a2f211600ec1}
+
+
+remove\+Agent 
+
+
+\begin{DoxyParams}{Parameters}
+{\em agent} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+plugins/\+Flourish\+V2\+X\+Framework/Flourish\+Broker.\+h\item 
+plugins/\+Flourish\+V2\+X\+Framework/Flourish\+Broker.\+cpp\end{DoxyCompactItemize}

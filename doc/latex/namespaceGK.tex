@@ -1,0 +1,251 @@
+\hypertarget{namespaceGK}{}\section{GK Namespace Reference}
+\label{namespaceGK}\index{GK@{GK}}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespaceGK_ae682f9fb77047e45fa91c27e569b8fee}{Aggregation\+Type} \{ \\*
+{\bfseries e\+Aggregation\+Undefined}, 
+{\bfseries e\+Aggregation\+Default}, 
+{\bfseries e\+Aggregation\+Mean}, 
+{\bfseries e\+Aggregation\+Sum}, 
+\\*
+{\bfseries e\+Aggregation\+Custom}, 
+{\bfseries e\+Aggregation\+Max}, 
+{\bfseries e\+Aggregation\+Min}, 
+{\bfseries e\+Aggregation\+Std\+Dev}, 
+\\*
+{\bfseries e\+Aggregation\+Median}, 
+{\bfseries e\+Aggregation\+H\+Mean}
+ \}
+\item 
+enum \hyperlink{namespaceGK_a6069947a18799ceb56e3593963a44edf}{Null\+Meaning} \{ \\*
+{\bfseries e\+Null\+Means\+Undefined}, 
+{\bfseries e\+Null\+Means\+All}, 
+{\bfseries e\+Null\+Means\+Any}, 
+{\bfseries e\+Null\+Means\+New}, 
+\\*
+{\bfseries e\+Null\+Means\+None}, 
+{\bfseries e\+Null\+Means\+Total}, 
+{\bfseries e\+Null\+Means\+Same\+As\+Reference}
+ \}\hypertarget{namespaceGK_a6069947a18799ceb56e3593963a44edf}{}\label{namespaceGK_a6069947a18799ceb56e3593963a44edf}
+\begin{DoxyCompactList}\small\item\em Description of possible meanings of a N\+U\+LL value. \end{DoxyCompactList}
+\item 
+enum \hyperlink{namespaceGK_a046daf4705db5aac14d3f998d1382a36}{O\+D\+Type} \{ \\*
+{\bfseries e\+O\+D\+Undefined}, 
+{\bfseries e\+O\+D\+Destination}, 
+{\bfseries e\+O\+D\+Origin}, 
+{\bfseries e\+O\+D\+Both}, 
+\\*
+{\bfseries e\+O\+D\+None}
+ \}\hypertarget{namespaceGK_a046daf4705db5aac14d3f998d1382a36}{}\label{namespaceGK_a046daf4705db5aac14d3f998d1382a36}
+\begin{DoxyCompactList}\small\item\em Origin/\+Destination roles. \end{DoxyCompactList}
+\item 
+enum \hyperlink{namespaceGK_acff655917cf02cfbda984b465457ce74}{Connection\+Type} \{ \\*
+{\bfseries e\+Connection\+Undefined}, 
+{\bfseries e\+From}, 
+{\bfseries e\+To}, 
+{\bfseries e\+Bidirectional}, 
+\\*
+{\bfseries e\+Connection\+None}
+ \}
+\item 
+enum \hyperlink{namespaceGK_adbf6d461cf314c17e29ca660da291274}{Road\+Side} \{ {\bfseries e\+Road\+Undefined} = -\/1, 
+{\bfseries e\+Road\+Right} = 0, 
+{\bfseries e\+Road\+Left} = 1
+ \}\hypertarget{namespaceGK_adbf6d461cf314c17e29ca660da291274}{}\label{namespaceGK_adbf6d461cf314c17e29ca660da291274}
+\begin{DoxyCompactList}\small\item\em Road sides. \end{DoxyCompactList}
+\item 
+enum \hyperlink{namespaceGK_af98710aa1bcc7d054724570e33aebda3}{Latitude\+Longitude\+Type} \{ {\bfseries e\+Latitude\+Undefined} = -\/1, 
+{\bfseries e\+Latitude\+As\+Decimal} = 0, 
+{\bfseries e\+Latitude\+As\+Degree} = 1
+ \}\hypertarget{namespaceGK_af98710aa1bcc7d054724570e33aebda3}{}\label{namespaceGK_af98710aa1bcc7d054724570e33aebda3}
+\begin{DoxyCompactList}\small\item\em Latiture \& Longitude type. \end{DoxyCompactList}
+\item 
+enum \hyperlink{namespaceGK_adde45307f3be11d926c291a749271263}{Size\+Units} \{ \\*
+{\bfseries e\+Pixels}, 
+{\bfseries e\+Centimeters}, 
+{\bfseries e\+Meters}, 
+{\bfseries e\+Kilometers}, 
+\\*
+{\bfseries e\+Inches}, 
+{\bfseries e\+Feet}, 
+{\bfseries e\+Miles}, 
+{\bfseries e\+Degrees}
+ \}\hypertarget{namespaceGK_adde45307f3be11d926c291a749271263}{}\label{namespaceGK_adde45307f3be11d926c291a749271263}
+\begin{DoxyCompactList}\small\item\em Units to express a size. \end{DoxyCompactList}
+\item 
+enum \hyperlink{namespaceGK_adb84e06031348703b31fda55aa47f224}{Unit\+System} \{ {\bfseries e\+Unit\+System\+Undefined} = 0, 
+{\bfseries e\+Metric} = 1, 
+{\bfseries e\+English} = 2
+ \}\hypertarget{namespaceGK_adb84e06031348703b31fda55aa47f224}{}\label{namespaceGK_adb84e06031348703b31fda55aa47f224}
+\begin{DoxyCompactList}\small\item\em Unit systems. \end{DoxyCompactList}
+\item 
+enum \hyperlink{namespaceGK_a5ddba301910be36598d8c4261a94b93f}{Detail\+Level} \{ \\*
+{\bfseries e\+Micro}, 
+{\bfseries e\+Meso}, 
+{\bfseries e\+Macro}, 
+{\bfseries e\+Travel\+Demand}, 
+\\*
+{\bfseries e\+Dynamic\+Macro}, 
+{\bfseries e\+Hybrid}
+ \}\hypertarget{namespaceGK_a5ddba301910be36598d8c4261a94b93f}{}\label{namespaceGK_a5ddba301910be36598d8c4261a94b93f}
+\begin{DoxyCompactList}\small\item\em Simulation detail levels. \end{DoxyCompactList}
+\item 
+enum \hyperlink{namespaceGK_a2f01756bc0253f960ed9e75b00638fd3}{Object\+Deletion\+Behaviour} \{ {\bfseries e\+Delete\+Objects}, 
+{\bfseries e\+Do\+Not\+Delete\+Objects}
+ \}\hypertarget{namespaceGK_a2f01756bc0253f960ed9e75b00638fd3}{}\label{namespaceGK_a2f01756bc0253f960ed9e75b00638fd3}
+\begin{DoxyCompactList}\small\item\em Object deletion behaviour. \end{DoxyCompactList}
+\item 
+enum \hyperlink{namespaceGK_a3a072c41e7de00bafcfa83c9ce7fe760}{Conversion} \{ \\*
+{\bfseries e\+Conversion\+Undefined} = 0, 
+{\bfseries e\+Distance} = 1, 
+{\bfseries e\+Area} = 2, 
+{\bfseries e\+Speed} = 3, 
+\\*
+{\bfseries e\+Acceleration} = 4, 
+{\bfseries e\+Reliability} = 5, 
+{\bfseries e\+Weight} = 6, 
+{\bfseries e\+Speed\+MS} = 7, 
+\\*
+{\bfseries e\+Density} = 8, 
+{\bfseries e\+Stops\+Density} = 9, 
+{\bfseries e\+Distance\+KM} = 10, 
+{\bfseries e\+Travel\+Time\+Distance} = 11, 
+\\*
+{\bfseries e\+Fuel\+Consumption} = 12, 
+{\bfseries e\+Instant\+Fuel\+Consumption} = 13, 
+{\bfseries e\+Distance\+Fuel\+Consumption} = 14, 
+{\bfseries e\+Emission} = 15, 
+\\*
+{\bfseries e\+Instant\+Emission} = 16, 
+{\bfseries e\+Distance\+Emission} = 17, 
+{\bfseries e\+Stops} = 18, 
+{\bfseries e\+Temperature} = 19, 
+\\*
+{\bfseries e\+Per\+KM} = 20, 
+{\bfseries e\+Seconds}, 
+{\bfseries e\+Minutes}, 
+{\bfseries e\+Hours}, 
+\\*
+{\bfseries e\+Vehicle}, 
+{\bfseries e\+Vehicle\+Per\+Hour}, 
+{\bfseries e\+Pedestrian}, 
+{\bfseries e\+Pedestrian\+Per\+Hour}, 
+\\*
+{\bfseries e\+P\+CU}, 
+{\bfseries e\+P\+C\+U\+Per\+Hour}, 
+{\bfseries e\+Percent}, 
+{\bfseries e\+Level\+Of\+Service}, 
+\\*
+{\bfseries e\+Weight\+Horse\+Power}, 
+{\bfseries e\+Weight\+Front\+Area}, 
+{\bfseries e\+P\+C\+U\+Density}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool G\+K\+E\+X\+P\+O\+RT \hyperlink{namespaceGK_a9a2c928fc44cbecdbd948b4b0b489538}{Object\+Less\+Than} (const \hyperlink{classGKBaseObject}{G\+K\+Base\+Object} $\ast$o1, const \hyperlink{classGKBaseObject}{G\+K\+Base\+Object} $\ast$o2)
+\item 
+bool G\+K\+E\+X\+P\+O\+RT \hyperlink{namespaceGK_ad5e4e1a2c41fd8335dc543c26e8b5761}{Object\+Less\+Than\+By\+Name} (const \hyperlink{classGKBaseObject}{G\+K\+Base\+Object} $\ast$o1, const \hyperlink{classGKBaseObject}{G\+K\+Base\+Object} $\ast$o2)
+\item 
+bool G\+K\+E\+X\+P\+O\+RT \hyperlink{namespaceGK_a3492164edf11fdcaffb9435bce038876}{Object\+Less\+Than\+By\+External\+Id} (const \hyperlink{classGKBaseObject}{G\+K\+Base\+Object} $\ast$o1, const \hyperlink{classGKBaseObject}{G\+K\+Base\+Object} $\ast$o2)
+\item 
+bool G\+K\+E\+X\+P\+O\+RT \hyperlink{namespaceGK_ada52d07ebbbd8dda87d756e44a73cba8}{Type\+Less\+Than\+By\+Name} (const G\+K\+Type $\ast$o1, const G\+K\+Type $\ast$o2)
+\item 
+uint G\+K\+E\+X\+P\+O\+RT \hyperlink{namespaceGK_ac4e1e92b6badc3e06e92f7590be79070}{Time\+To\+Seconds} (const \hyperlink{classGKTimeDuration}{G\+K\+Time\+Duration} \&duration, uint $\ast$miliseconds=N\+U\+LL)
+\item 
+double G\+K\+E\+X\+P\+O\+RT \hyperlink{namespaceGK_af2bbd33c2ffce344989207ae36fa6c08}{Time\+To\+Seconds\+Double} (const \hyperlink{classGKTimeDuration}{G\+K\+Time\+Duration} \&time)
+\item 
+uint G\+K\+E\+X\+P\+O\+RT \hyperlink{namespaceGK_adfccbf56e5ddc541fe499357ab85e83e}{Time\+To\+Seconds} (const Q\+Time \&time, uint $\ast$miliseconds=N\+U\+LL)
+\item 
+double G\+K\+E\+X\+P\+O\+RT \hyperlink{namespaceGK_acf7645da975cc14ff6cb6533e43e03b7}{Time\+To\+Seconds\+Double} (const Q\+Time \&time)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file should contain general enums, typedef, etc. but no functions, only types\+: this header is intended to be included in other headers. 
+
+\subsection{Enumeration Type Documentation}
+\index{GK@{GK}!Aggregation\+Type@{Aggregation\+Type}}
+\index{Aggregation\+Type@{Aggregation\+Type}!GK@{GK}}
+\subsubsection[{\texorpdfstring{Aggregation\+Type}{AggregationType}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf G\+K\+::\+Aggregation\+Type}}\hypertarget{namespaceGK_ae682f9fb77047e45fa91c27e569b8fee}{}\label{namespaceGK_ae682f9fb77047e45fa91c27e569b8fee}
+Different way to aggregate values \index{GK@{GK}!Connection\+Type@{Connection\+Type}}
+\index{Connection\+Type@{Connection\+Type}!GK@{GK}}
+\subsubsection[{\texorpdfstring{Connection\+Type}{ConnectionType}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf G\+K\+::\+Connection\+Type}}\hypertarget{namespaceGK_acff655917cf02cfbda984b465457ce74}{}\label{namespaceGK_acff655917cf02cfbda984b465457ce74}
+Connection type between two entities A and B\+:
+\begin{DoxyItemize}
+\item e\+To\+: A to B
+\item e\+From\+: A from B
+\item e\+Bidirectional\+: A from B and A to B
+\item e\+Connection\+None\+: A and B are not connected
+\item e\+Connection\+Undefined\+: unknown 
+\end{DoxyItemize}\index{GK@{GK}!Conversion@{Conversion}}
+\index{Conversion@{Conversion}!GK@{GK}}
+\subsubsection[{\texorpdfstring{Conversion}{Conversion}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf G\+K\+::\+Conversion}}\hypertarget{namespaceGK_a3a072c41e7de00bafcfa83c9ce7fe760}{}\label{namespaceGK_a3a072c41e7de00bafcfa83c9ce7fe760}
+Physical dimensions of values in various units ( \textquotesingle{}distance by time\textquotesingle{} can either correspond to e\+Speed (km/h in e\+Metric) or to e\+Speed\+MS (m/s in e\+Metric) ). Each Conversion corresponds to a conversion factor between two different Unit\+System. 
+
+\subsection{Function Documentation}
+\index{GK@{GK}!Object\+Less\+Than@{Object\+Less\+Than}}
+\index{Object\+Less\+Than@{Object\+Less\+Than}!GK@{GK}}
+\subsubsection[{\texorpdfstring{Object\+Less\+Than(const G\+K\+Base\+Object $\ast$o1, const G\+K\+Base\+Object $\ast$o2)}{ObjectLessThan(const GKBaseObject *o1, const GKBaseObject *o2)}}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+E\+X\+P\+O\+RT G\+K\+::\+Object\+Less\+Than (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Base\+Object} $\ast$}]{o1, }
+\item[{const {\bf G\+K\+Base\+Object} $\ast$}]{o2}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceGK_a9a2c928fc44cbecdbd948b4b0b489538}{}\label{namespaceGK_a9a2c928fc44cbecdbd948b4b0b489538}
+Compares two \hyperlink{classGKObject}{G\+K\+Object} $\ast$ using their id Useful for using in combination with std\+::sort. \index{GK@{GK}!Object\+Less\+Than\+By\+External\+Id@{Object\+Less\+Than\+By\+External\+Id}}
+\index{Object\+Less\+Than\+By\+External\+Id@{Object\+Less\+Than\+By\+External\+Id}!GK@{GK}}
+\subsubsection[{\texorpdfstring{Object\+Less\+Than\+By\+External\+Id(const G\+K\+Base\+Object $\ast$o1, const G\+K\+Base\+Object $\ast$o2)}{ObjectLessThanByExternalId(const GKBaseObject *o1, const GKBaseObject *o2)}}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+E\+X\+P\+O\+RT G\+K\+::\+Object\+Less\+Than\+By\+External\+Id (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Base\+Object} $\ast$}]{o1, }
+\item[{const {\bf G\+K\+Base\+Object} $\ast$}]{o2}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceGK_a3492164edf11fdcaffb9435bce038876}{}\label{namespaceGK_a3492164edf11fdcaffb9435bce038876}
+Compares two \hyperlink{classGKObject}{G\+K\+Object} $\ast$ using their extaernal ids (locale aware) Useful for using in combination with std\+::sort. \index{GK@{GK}!Object\+Less\+Than\+By\+Name@{Object\+Less\+Than\+By\+Name}}
+\index{Object\+Less\+Than\+By\+Name@{Object\+Less\+Than\+By\+Name}!GK@{GK}}
+\subsubsection[{\texorpdfstring{Object\+Less\+Than\+By\+Name(const G\+K\+Base\+Object $\ast$o1, const G\+K\+Base\+Object $\ast$o2)}{ObjectLessThanByName(const GKBaseObject *o1, const GKBaseObject *o2)}}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+E\+X\+P\+O\+RT G\+K\+::\+Object\+Less\+Than\+By\+Name (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Base\+Object} $\ast$}]{o1, }
+\item[{const {\bf G\+K\+Base\+Object} $\ast$}]{o2}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceGK_ad5e4e1a2c41fd8335dc543c26e8b5761}{}\label{namespaceGK_ad5e4e1a2c41fd8335dc543c26e8b5761}
+Compares two \hyperlink{classGKObject}{G\+K\+Object} $\ast$ using their name (locale aware) Useful for using in combination with std\+::sort. \index{GK@{GK}!Time\+To\+Seconds@{Time\+To\+Seconds}}
+\index{Time\+To\+Seconds@{Time\+To\+Seconds}!GK@{GK}}
+\subsubsection[{\texorpdfstring{Time\+To\+Seconds(const G\+K\+Time\+Duration \&duration, uint $\ast$miliseconds=\+N\+U\+L\+L)}{TimeToSeconds(const GKTimeDuration &duration, uint *miliseconds=NULL)}}]{\setlength{\rightskip}{0pt plus 5cm}uint G\+K\+E\+X\+P\+O\+RT G\+K\+::\+Time\+To\+Seconds (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Time\+Duration} \&}]{duration, }
+\item[{uint $\ast$}]{miliseconds = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceGK_ac4e1e92b6badc3e06e92f7590be79070}{}\label{namespaceGK_ac4e1e92b6badc3e06e92f7590be79070}
+Translates a \hyperlink{classGKTimeDuration}{G\+K\+Time\+Duration} to seconds. \index{GK@{GK}!Time\+To\+Seconds@{Time\+To\+Seconds}}
+\index{Time\+To\+Seconds@{Time\+To\+Seconds}!GK@{GK}}
+\subsubsection[{\texorpdfstring{Time\+To\+Seconds(const Q\+Time \&time, uint $\ast$miliseconds=\+N\+U\+L\+L)}{TimeToSeconds(const QTime &time, uint *miliseconds=NULL)}}]{\setlength{\rightskip}{0pt plus 5cm}uint G\+K\+E\+X\+P\+O\+RT G\+K\+::\+Time\+To\+Seconds (
+\begin{DoxyParamCaption}
+\item[{const Q\+Time \&}]{time, }
+\item[{uint $\ast$}]{miliseconds = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceGK_adfccbf56e5ddc541fe499357ab85e83e}{}\label{namespaceGK_adfccbf56e5ddc541fe499357ab85e83e}
+Translates a Q\+Time to seconds. \index{GK@{GK}!Time\+To\+Seconds\+Double@{Time\+To\+Seconds\+Double}}
+\index{Time\+To\+Seconds\+Double@{Time\+To\+Seconds\+Double}!GK@{GK}}
+\subsubsection[{\texorpdfstring{Time\+To\+Seconds\+Double(const G\+K\+Time\+Duration \&time)}{TimeToSecondsDouble(const GKTimeDuration &time)}}]{\setlength{\rightskip}{0pt plus 5cm}double G\+K\+E\+X\+P\+O\+RT G\+K\+::\+Time\+To\+Seconds\+Double (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Time\+Duration} \&}]{time}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceGK_af2bbd33c2ffce344989207ae36fa6c08}{}\label{namespaceGK_af2bbd33c2ffce344989207ae36fa6c08}
+Translates a \hyperlink{classGKTimeDuration}{G\+K\+Time\+Duration} to seconds taking into account also the miliseconds. \index{GK@{GK}!Time\+To\+Seconds\+Double@{Time\+To\+Seconds\+Double}}
+\index{Time\+To\+Seconds\+Double@{Time\+To\+Seconds\+Double}!GK@{GK}}
+\subsubsection[{\texorpdfstring{Time\+To\+Seconds\+Double(const Q\+Time \&time)}{TimeToSecondsDouble(const QTime &time)}}]{\setlength{\rightskip}{0pt plus 5cm}double G\+K\+E\+X\+P\+O\+RT G\+K\+::\+Time\+To\+Seconds\+Double (
+\begin{DoxyParamCaption}
+\item[{const Q\+Time \&}]{time}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceGK_acf7645da975cc14ff6cb6533e43e03b7}{}\label{namespaceGK_acf7645da975cc14ff6cb6533e43e03b7}
+Translates a Q\+Time to seconds taking into account also the miliseconds. \index{GK@{GK}!Type\+Less\+Than\+By\+Name@{Type\+Less\+Than\+By\+Name}}
+\index{Type\+Less\+Than\+By\+Name@{Type\+Less\+Than\+By\+Name}!GK@{GK}}
+\subsubsection[{\texorpdfstring{Type\+Less\+Than\+By\+Name(const G\+K\+Type $\ast$o1, const G\+K\+Type $\ast$o2)}{TypeLessThanByName(const GKType *o1, const GKType *o2)}}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+E\+X\+P\+O\+RT G\+K\+::\+Type\+Less\+Than\+By\+Name (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Type $\ast$}]{o1, }
+\item[{const G\+K\+Type $\ast$}]{o2}
+\end{DoxyParamCaption}
+)}\hypertarget{namespaceGK_ada52d07ebbbd8dda87d756e44a73cba8}{}\label{namespaceGK_ada52d07ebbbd8dda87d756e44a73cba8}
+Compares two G\+K\+Type $\ast$ using their name (case insensitive) Useful for using in combination with q\+Sort. 

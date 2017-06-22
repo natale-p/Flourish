@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classADynamicAPI.html" title="A communication framework between Aimsun and an external plugin. " alt="" coords="5,5,111,32"/>
+<area shape="rect" id="node2" href="$classV2XFramework.html" title="Interface for a generic V2XFramework. " alt="" coords="159,5,271,32"/>
+<area shape="rect" id="node3" href="$classFlourishV2XFramework.html" title="Main framework class. " alt="" coords="319,5,477,32"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="SignalRequestPackage" name="SignalRequestPackage">
+<area shape="rect" id="node2" href="$structSignalRequest.html" title="SignalRequest" alt="" coords="712,200,819,227"/>
+<area shape="rect" id="node3" href="$structasn__struct__ctx__s.html" title="asn_struct_ctx_s" alt="" coords="37,149,160,176"/>
+<area shape="rect" id="node4" href="$structSignalRequest_1_1SignalRequest____regional.html" title="SignalRequest::SignalRequest\l__regional" alt="" coords="297,193,497,234"/>
+<area shape="rect" id="node5" href="$structIntersectionAccessPoint.html" title="IntersectionAccessPoint" alt="" coords="315,309,479,336"/>
+<area shape="rect" id="node7" href="$structIntersectionReferenceID.html" title="IntersectionReferenceID" alt="" coords="315,259,479,285"/>
+<area shape="rect" id="node8" href="$structSignalRequestPackage_1_1SignalRequestPackage____regional.html" title="SignalRequestPackage\l::SignalRequestPackage\l__regional" alt="" coords="521,5,688,61"/>
+<area shape="rect" id="node6" href="$unionIntersectionAccessPoint_1_1IntersectionAccessPoint__u.html" title="IntersectionAccessPoint\l::IntersectionAccessPoint_u" alt="" coords="5,302,192,343"/>
+</map>

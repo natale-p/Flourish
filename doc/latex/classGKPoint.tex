@@ -1,0 +1,358 @@
+\hypertarget{classGKPoint}{}\section{G\+K\+Point Class Reference}
+\label{classGKPoint}\index{G\+K\+Point@{G\+K\+Point}}
+
+
+A 3D Point usually in m (or feet).  
+
+
+
+
+{\ttfamily \#include $<$G\+K\+Point.\+h$>$}
+
+
+
+Collaboration diagram for G\+K\+Point\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=170pt]{classGKPoint__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries G\+K\+Point} (G\+K\+Coord ax, G\+K\+Coord ay, G\+K\+Coord az=0.\+0f)\hypertarget{classGKPoint_a512a7bcf6b31e17d42457850c83b964c}{}\label{classGKPoint_a512a7bcf6b31e17d42457850c83b964c}
+
+\item 
+virtual void \hyperlink{classGKPoint_a9322b1c4658817f31230c028fb7eda97}{store\+X\+ML} (G\+K\+Text\+Stream \&s, const Q\+String \&name=Q\+String\+::null)\hypertarget{classGKPoint_a9322b1c4658817f31230c028fb7eda97}{}\label{classGKPoint_a9322b1c4658817f31230c028fb7eda97}
+
+\begin{DoxyCompactList}\small\item\em Stores the object in a file. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classGKPoint_a8e86395ad656e94a71c5c42c4e92e995}{restore\+X\+ML} (G\+K\+Text\+Stream \&s, Q\+Dom\+Node \&node)\hypertarget{classGKPoint_a8e86395ad656e94a71c5c42c4e92e995}{}\label{classGKPoint_a8e86395ad656e94a71c5c42c4e92e995}
+
+\begin{DoxyCompactList}\small\item\em Restores the object from a file. \end{DoxyCompactList}\item 
+bool \hyperlink{classGKPoint_ad2e891020b49e2a9549f6494cea7b8c8}{are\+Equal} (const \hyperlink{classGKPoint}{G\+K\+Point} \&c, double epsilon) const \hypertarget{classGKPoint_ad2e891020b49e2a9549f6494cea7b8c8}{}\label{classGKPoint_ad2e891020b49e2a9549f6494cea7b8c8}
+
+\begin{DoxyCompactList}\small\item\em Are points near? epsilon in m... \end{DoxyCompactList}\item 
+bool \hyperlink{classGKPoint_ad69cf74184795f829bc23a7842c9d52d}{are\+Equal2D} (const \hyperlink{classGKPoint}{G\+K\+Point} \&c, double epsilon) const \hypertarget{classGKPoint_ad69cf74184795f829bc23a7842c9d52d}{}\label{classGKPoint_ad69cf74184795f829bc23a7842c9d52d}
+
+\begin{DoxyCompactList}\small\item\em Are points near? epsilon in m... It does not take the z coordinate into account. \end{DoxyCompactList}\item 
+bool \hyperlink{classGKPoint_a973a589ee0b1f38efcb71446f305e828}{operator==} (const \hyperlink{classGKPoint}{G\+K\+Point} \&c) const 
+\item 
+bool \hyperlink{classGKPoint_a22ea11710cf45ea674dd2751dd15db16}{operator!=} (const \hyperlink{classGKPoint}{G\+K\+Point} \&c) const 
+\item 
+\hyperlink{classGKPoint}{G\+K\+Point} \& \hyperlink{classGKPoint_afdf00b8a204e92706219fd6f713d51c5}{operator+=} (const \hyperlink{classGKPoint}{G\+K\+Point} \&c)
+\item 
+\hyperlink{classGKPoint}{G\+K\+Point} \& \hyperlink{classGKPoint_a0f8daa5b0e00dbe277ae2d13f7183ef1}{operator-\/=} (const \hyperlink{classGKPoint}{G\+K\+Point} \&c)
+\item 
+\hyperlink{classGKPoint}{G\+K\+Point} \& {\bfseries operator$\ast$=} (G\+K\+Coord f)\hypertarget{classGKPoint_a1096a53d592624099f3c377ea387386d}{}\label{classGKPoint_a1096a53d592624099f3c377ea387386d}
+
+\item 
+\hyperlink{classGKPoint}{G\+K\+Point} \hyperlink{classGKPoint_a49eb5b7f0a82547ab73381a0681dbda6}{operator+} (const \hyperlink{classGKPoint}{G\+K\+Point} \&c) const 
+\item 
+\hyperlink{classGKPoint}{G\+K\+Point} \hyperlink{classGKPoint_ada69506f4a28f5677ceb589b760ff2d5}{operator-\/} (const \hyperlink{classGKPoint}{G\+K\+Point} \&c) const 
+\item 
+\hyperlink{classGKPoint}{G\+K\+Point} \hyperlink{classGKPoint_ae03bb5ff56c91973d4a85f7f2e14379e}{operator+} (const G\+K\+Vector \&c) const 
+\item 
+\hyperlink{classGKPoint}{G\+K\+Point} \hyperlink{classGKPoint_a820a921c8cd07a9ec15526d7677d0fba}{operator-\/} (const G\+K\+Vector \&c) const 
+\item 
+\hyperlink{classGKPoint}{G\+K\+Point} \hyperlink{classGKPoint_a1d0cd1f3ed5d44bd88895e82849aa934}{operator+} (G\+K\+Coord c) const 
+\item 
+\hyperlink{classGKPoint}{G\+K\+Point} \hyperlink{classGKPoint_a709b05770a34025f4bc41bd9cd57b516}{operator-\/} (G\+K\+Coord c) const 
+\item 
+\hyperlink{classGKPoint}{G\+K\+Point} \hyperlink{classGKPoint_a5503c4a33c7bffbca07aeb74ff2f23dd}{operator$\ast$} (G\+K\+Coord c) const 
+\item 
+\hyperlink{classGKPoint}{G\+K\+Point} \hyperlink{classGKPoint_afaebd76baf8a9b7902ea77e8f95a6a20}{operator/} (G\+K\+Coord c) const 
+\item 
+bool \hyperlink{classGKPoint_a597fd195edde7b78a635c1c9dc89336f}{almost\+Differents} (const \hyperlink{classGKPoint}{G\+K\+Point} \&c, G\+K\+Coord factor) const 
+\item 
+double \hyperlink{classGKPoint_a16745a3828174f2ff7c6034e9fc52a89}{distance2D} (const \hyperlink{classGKPoint}{G\+K\+Point} \&c) const \hypertarget{classGKPoint_a16745a3828174f2ff7c6034e9fc52a89}{}\label{classGKPoint_a16745a3828174f2ff7c6034e9fc52a89}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{structDistance}{Distance} between \char`\"{}this\char`\"{} point and point \char`\"{}c\char`\"{} whitout use Z coordinate. \end{DoxyCompactList}\item 
+double \hyperlink{classGKPoint_a9b006f77d1c21b4790b9e283f614130a}{distance3D} (const \hyperlink{classGKPoint}{G\+K\+Point} \&c) const \hypertarget{classGKPoint_a9b006f77d1c21b4790b9e283f614130a}{}\label{classGKPoint_a9b006f77d1c21b4790b9e283f614130a}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{structDistance}{Distance} between \char`\"{}this\char`\"{} point and point \char`\"{}c\char`\"{}. \end{DoxyCompactList}\item 
+double \hyperlink{classGKPoint_ad3bef85423b383789d36e54bbfaf7940}{length} () const \hypertarget{classGKPoint_ad3bef85423b383789d36e54bbfaf7940}{}\label{classGKPoint_ad3bef85423b383789d36e54bbfaf7940}
+
+\begin{DoxyCompactList}\small\item\em Length. \end{DoxyCompactList}\item 
+\hyperlink{classGKPoint}{G\+K\+Point} \hyperlink{classGKPoint_a548d2c2e01d1de07acf7f8a4d4b74d26}{normalized} () const \hypertarget{classGKPoint_a548d2c2e01d1de07acf7f8a4d4b74d26}{}\label{classGKPoint_a548d2c2e01d1de07acf7f8a4d4b74d26}
+
+\begin{DoxyCompactList}\small\item\em Unit vector pointing in the same direction. \end{DoxyCompactList}\item 
+G\+K\+Coord \hyperlink{classGKPoint_a96419af7a05ce6a95577fd6b218cfb9b}{operator$\ast$} (const \hyperlink{classGKPoint}{G\+K\+Point} \&c) const \hypertarget{classGKPoint_a96419af7a05ce6a95577fd6b218cfb9b}{}\label{classGKPoint_a96419af7a05ce6a95577fd6b218cfb9b}
+
+\begin{DoxyCompactList}\small\item\em Dot product. \end{DoxyCompactList}\item 
+\hyperlink{classGKPoint}{G\+K\+Point} \hyperlink{classGKPoint_a1505ab26460c15119799e7cd98c2b073}{operator-\/} () const \hypertarget{classGKPoint_a1505ab26460c15119799e7cd98c2b073}{}\label{classGKPoint_a1505ab26460c15119799e7cd98c2b073}
+
+\begin{DoxyCompactList}\small\item\em Negative operator. \end{DoxyCompactList}\item 
+bool \hyperlink{classGKPoint_a85794c282bb266e3c729f877f9d26212}{is\+NaN} () const \hypertarget{classGKPoint_a85794c282bb266e3c729f877f9d26212}{}\label{classGKPoint_a85794c282bb266e3c729f877f9d26212}
+
+\begin{DoxyCompactList}\small\item\em NaN detector. \end{DoxyCompactList}\item 
+void \hyperlink{classGKPoint_a8d225379f5fc0faed23c5f171fcad9d4}{set} (G\+K\+Coord ax, G\+K\+Coord ay, G\+K\+Coord az=0.\+0f)
+\item 
+bool {\bfseries alineados} (const \hyperlink{classGKPoint}{G\+K\+Point} \&v2, const \hyperlink{classGKPoint}{G\+K\+Point} \&v3) const \hypertarget{classGKPoint_acb6d96959b54e4bb0d8c4ef2248607f4}{}\label{classGKPoint_acb6d96959b54e4bb0d8c4ef2248607f4}
+
+\item 
+G\+K\+Coord \hyperlink{classGKPoint_acbb8052799fc88956c88bfde3d3d4ba6}{get\+Angle\+Horizontal\+In\+Degs} (const \hyperlink{classGKPoint}{G\+K\+Point} \&p2) const 
+\item 
+G\+K\+Coord \hyperlink{classGKPoint_a78fd6383b37a6047891652af89be807d}{get\+Angle\+Horizontal\+In\+Rads} (const \hyperlink{classGKPoint}{G\+K\+Point} \&p2) const 
+\item 
+double \hyperlink{classGKPoint_a6c1727e81b0cd7a70193d1d1f58d7242}{get\+Min\+Angle\+Horizontal\+In\+Rads} (const \hyperlink{classGKPoint}{G\+K\+Point} \&point) const 
+\item 
+double \hyperlink{classGKPoint_a325037c771bdbbd40db82ea7e6f0f617}{get\+Min\+Angle\+Vertical\+In\+Rads} (const \hyperlink{classGKPoint}{G\+K\+Point} \&point) const 
+\item 
+G\+K\+Line \hyperlink{classGKPoint_a80f59e2ee0485cb00e926e06b3dadb01}{line2\+D\+Ptp} (const \hyperlink{classGKPoint}{G\+K\+Point} \&p2) const 
+\item 
+\hyperlink{classGKPoint}{G\+K\+Point} \hyperlink{classGKPoint_a73b34991d203aff80955bac7f7a8ce99}{rotate2D} (const \hyperlink{classGKPoint}{G\+K\+Point} \&center, double angle) const 
+\item 
+void \hyperlink{classGKPoint_a0c2d013b0a50fd9f5aa9a78637adf07e}{rotate2\+D\+This} (const \hyperlink{classGKPoint}{G\+K\+Point} \&center, double angle)
+\item 
+\hyperlink{classGKPoint}{G\+K\+Point} \hyperlink{classGKPoint_abc1d081da24f07b08ce9eccbfb0f54b8}{lerp} (const \hyperlink{classGKPoint}{G\+K\+Point} \&p, double f) const \hypertarget{classGKPoint_abc1d081da24f07b08ce9eccbfb0f54b8}{}\label{classGKPoint_abc1d081da24f07b08ce9eccbfb0f54b8}
+
+\begin{DoxyCompactList}\small\item\em Lerp\+: returns (1-\/f)this + pf. \end{DoxyCompactList}\item 
+\hyperlink{classGKPoint}{G\+K\+Point} \hyperlink{classGKPoint_a4304568bc5160c754a1ba3c3c675e5df}{l\+Dist} (const \hyperlink{classGKPoint}{G\+K\+Point} \&p2, double distance) const 
+\item 
+bool \hyperlink{classGKPoint_a16a070f6bb7bff1f727a7d8e528ce20d}{between\+Points} (const \hyperlink{classGKPoint}{G\+K\+Point} \&p1, const \hyperlink{classGKPoint}{G\+K\+Point} \&p2, double epsilon) const 
+\item 
+bool \hyperlink{classGKPoint_a13dd7de88b383e9a17d7548a5f302fb5}{point\+At\+Distance} (const \hyperlink{classGKPoint}{G\+K\+Point} \&p, const double d, \hyperlink{classGKPoint}{G\+K\+Point} \&res) const 
+\item 
+Q\+String \hyperlink{classGKPoint_a7441caea1479057d331856f29fc56bb1}{to\+String} () const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classGKPoint}{G\+K\+Point} \hyperlink{classGKPoint_a338770a72221f1908b6ae340cf9feb88}{from\+String} (const Q\+String \&str)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+G\+K\+Coord \hyperlink{classGKPoint_ae616939b95941353b9d23b282332cbfc}{x}\hypertarget{classGKPoint_ae616939b95941353b9d23b282332cbfc}{}\label{classGKPoint_ae616939b95941353b9d23b282332cbfc}
+
+\begin{DoxyCompactList}\small\item\em X coordinate of the point. \end{DoxyCompactList}\item 
+G\+K\+Coord \hyperlink{classGKPoint_a839ef379a0dc82f99a7a047393aa6b88}{y}\hypertarget{classGKPoint_a839ef379a0dc82f99a7a047393aa6b88}{}\label{classGKPoint_a839ef379a0dc82f99a7a047393aa6b88}
+
+\begin{DoxyCompactList}\small\item\em Y coordinate of the point. \end{DoxyCompactList}\item 
+G\+K\+Coord \hyperlink{classGKPoint_a13dc31f05fc7e7fd3bae4c66f7743207}{z}\hypertarget{classGKPoint_a13dc31f05fc7e7fd3bae4c66f7743207}{}\label{classGKPoint_a13dc31f05fc7e7fd3bae4c66f7743207}
+
+\begin{DoxyCompactList}\small\item\em Z coordinate of the point. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classGKPoint}{G\+K\+Point} \hyperlink{classGKPoint_afac9d48f41ae62702ef6af86b104951b}{zero}\hypertarget{classGKPoint_afac9d48f41ae62702ef6af86b104951b}{}\label{classGKPoint_afac9d48f41ae62702ef6af86b104951b}
+
+\begin{DoxyCompactList}\small\item\em Point at (0, 0, 0) \end{DoxyCompactList}\item 
+static \hyperlink{classGKPoint}{G\+K\+Point} \hyperlink{classGKPoint_a50dcde8d809f19aa064f1c9cc71b372b}{null}\hypertarget{classGKPoint_a50dcde8d809f19aa064f1c9cc71b372b}{}\label{classGKPoint_a50dcde8d809f19aa064f1c9cc71b372b}
+
+\begin{DoxyCompactList}\small\item\em Point at (Nan, Nan, Nan) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+G\+K\+E\+X\+P\+O\+RT Q\+Data\+Stream \& {\bfseries operator$<$$<$} (Q\+Data\+Stream \&, const \hyperlink{classGKPoint}{G\+K\+Point} \&)\hypertarget{classGKPoint_ad1144e9964c8156bb0c3083c01c57105}{}\label{classGKPoint_ad1144e9964c8156bb0c3083c01c57105}
+
+\item 
+G\+K\+E\+X\+P\+O\+RT Q\+Data\+Stream \& {\bfseries operator$>$$>$} (Q\+Data\+Stream \&, \hyperlink{classGKPoint}{G\+K\+Point} \&)\hypertarget{classGKPoint_a79869069dabf27f25b5350d811488cc5}{}\label{classGKPoint_a79869069dabf27f25b5350d811488cc5}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A 3D Point usually in m (or feet). 
+
+This 3d point can contain the (x, y, z) coordinates of a point. It can be used to contain a 2d point as most of the methods have a default z value asigned to 0. 
+
+\subsection{Member Function Documentation}
+\index{G\+K\+Point@{G\+K\+Point}!almost\+Differents@{almost\+Differents}}
+\index{almost\+Differents@{almost\+Differents}!G\+K\+Point@{G\+K\+Point}}
+\subsubsection[{\texorpdfstring{almost\+Differents(const G\+K\+Point \&c, G\+K\+Coord factor) const }{almostDifferents(const GKPoint &c, GKCoord factor) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+Point\+::almost\+Differents (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Point} \&}]{c, }
+\item[{G\+K\+Coord}]{factor}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKPoint_a597fd195edde7b78a635c1c9dc89336f}{}\label{classGKPoint_a597fd195edde7b78a635c1c9dc89336f}
+Returns true if \char`\"{}this\char`\"{} is diffent of \char`\"{}c\char`\"{} after multiply the coordinates by factor and compared each one as intergers \index{G\+K\+Point@{G\+K\+Point}!between\+Points@{between\+Points}}
+\index{between\+Points@{between\+Points}!G\+K\+Point@{G\+K\+Point}}
+\subsubsection[{\texorpdfstring{between\+Points(const G\+K\+Point \&p1, const G\+K\+Point \&p2, double epsilon) const }{betweenPoints(const GKPoint &p1, const GKPoint &p2, double epsilon) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+Point\+::between\+Points (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Point} \&}]{p1, }
+\item[{const {\bf G\+K\+Point} \&}]{p2, }
+\item[{double}]{epsilon}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKPoint_a16a070f6bb7bff1f727a7d8e528ce20d}{}\label{classGKPoint_a16a070f6bb7bff1f727a7d8e528ce20d}
+Supposing that all three points pertain to the same line, returns true if this is located between p1 and p2; false otherwise. The epsilon is the distance in m allowed for distorsion \index{G\+K\+Point@{G\+K\+Point}!from\+String@{from\+String}}
+\index{from\+String@{from\+String}!G\+K\+Point@{G\+K\+Point}}
+\subsubsection[{\texorpdfstring{from\+String(const Q\+String \&str)}{fromString(const QString &str)}}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf G\+K\+Point} G\+K\+Point\+::from\+String (
+\begin{DoxyParamCaption}
+\item[{const Q\+String \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classGKPoint_a338770a72221f1908b6ae340cf9feb88}{}\label{classGKPoint_a338770a72221f1908b6ae340cf9feb88}
+A point is created from a string having the format x,y,z x, y and z coordinates can have different sizes \index{G\+K\+Point@{G\+K\+Point}!get\+Angle\+Horizontal\+In\+Degs@{get\+Angle\+Horizontal\+In\+Degs}}
+\index{get\+Angle\+Horizontal\+In\+Degs@{get\+Angle\+Horizontal\+In\+Degs}!G\+K\+Point@{G\+K\+Point}}
+\subsubsection[{\texorpdfstring{get\+Angle\+Horizontal\+In\+Degs(const G\+K\+Point \&p2) const }{getAngleHorizontalInDegs(const GKPoint &p2) const }}]{\setlength{\rightskip}{0pt plus 5cm}G\+K\+Coord G\+K\+Point\+::get\+Angle\+Horizontal\+In\+Degs (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Point} \&}]{p2}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKPoint_acbb8052799fc88956c88bfde3d3d4ba6}{}\label{classGKPoint_acbb8052799fc88956c88bfde3d3d4ba6}
+Returns the angle that the segment defined by this point and \char`\"{}point\char`\"{} makes with the horitzontal. Between G\+K\+PI and -\/\+G\+K\+PI \index{G\+K\+Point@{G\+K\+Point}!get\+Angle\+Horizontal\+In\+Rads@{get\+Angle\+Horizontal\+In\+Rads}}
+\index{get\+Angle\+Horizontal\+In\+Rads@{get\+Angle\+Horizontal\+In\+Rads}!G\+K\+Point@{G\+K\+Point}}
+\subsubsection[{\texorpdfstring{get\+Angle\+Horizontal\+In\+Rads(const G\+K\+Point \&p2) const }{getAngleHorizontalInRads(const GKPoint &p2) const }}]{\setlength{\rightskip}{0pt plus 5cm}G\+K\+Coord G\+K\+Point\+::get\+Angle\+Horizontal\+In\+Rads (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Point} \&}]{p2}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKPoint_a78fd6383b37a6047891652af89be807d}{}\label{classGKPoint_a78fd6383b37a6047891652af89be807d}
+Returns the angle that the segment defined by this point and \char`\"{}point\char`\"{} makes with the horitzontal. Between G\+K\+PI and -\/\+G\+K\+PI \index{G\+K\+Point@{G\+K\+Point}!get\+Min\+Angle\+Horizontal\+In\+Rads@{get\+Min\+Angle\+Horizontal\+In\+Rads}}
+\index{get\+Min\+Angle\+Horizontal\+In\+Rads@{get\+Min\+Angle\+Horizontal\+In\+Rads}!G\+K\+Point@{G\+K\+Point}}
+\subsubsection[{\texorpdfstring{get\+Min\+Angle\+Horizontal\+In\+Rads(const G\+K\+Point \&point) const }{getMinAngleHorizontalInRads(const GKPoint &point) const }}]{\setlength{\rightskip}{0pt plus 5cm}double G\+K\+Point\+::get\+Min\+Angle\+Horizontal\+In\+Rads (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Point} \&}]{point}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKPoint_a6c1727e81b0cd7a70193d1d1f58d7242}{}\label{classGKPoint_a6c1727e81b0cd7a70193d1d1f58d7242}
+Returns the angle that the line defined by this point and \char`\"{}point\char`\"{} makes with the horitzontal. Between G\+K\+P\+I/2 and -\/\+G\+K\+P\+I/2 \index{G\+K\+Point@{G\+K\+Point}!get\+Min\+Angle\+Vertical\+In\+Rads@{get\+Min\+Angle\+Vertical\+In\+Rads}}
+\index{get\+Min\+Angle\+Vertical\+In\+Rads@{get\+Min\+Angle\+Vertical\+In\+Rads}!G\+K\+Point@{G\+K\+Point}}
+\subsubsection[{\texorpdfstring{get\+Min\+Angle\+Vertical\+In\+Rads(const G\+K\+Point \&point) const }{getMinAngleVerticalInRads(const GKPoint &point) const }}]{\setlength{\rightskip}{0pt plus 5cm}double G\+K\+Point\+::get\+Min\+Angle\+Vertical\+In\+Rads (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Point} \&}]{point}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKPoint_a325037c771bdbbd40db82ea7e6f0f617}{}\label{classGKPoint_a325037c771bdbbd40db82ea7e6f0f617}
+Returns the angle that the line defined by this point and \char`\"{}point\char`\"{} makes with the vertical. Between G\+K\+P\+I/2 and -\/\+G\+K\+P\+I/2 \index{G\+K\+Point@{G\+K\+Point}!l\+Dist@{l\+Dist}}
+\index{l\+Dist@{l\+Dist}!G\+K\+Point@{G\+K\+Point}}
+\subsubsection[{\texorpdfstring{l\+Dist(const G\+K\+Point \&p2, double distance) const }{lDist(const GKPoint &p2, double distance) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+K\+Point} G\+K\+Point\+::l\+Dist (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Point} \&}]{p2, }
+\item[{double}]{distance}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKPoint_a4304568bc5160c754a1ba3c3c675e5df}{}\label{classGKPoint_a4304568bc5160c754a1ba3c3c675e5df}
+Finds a point p in the line defined by this and p2, at distance \char`\"{}distance\char`\"{} from this going to p2 \index{G\+K\+Point@{G\+K\+Point}!line2\+D\+Ptp@{line2\+D\+Ptp}}
+\index{line2\+D\+Ptp@{line2\+D\+Ptp}!G\+K\+Point@{G\+K\+Point}}
+\subsubsection[{\texorpdfstring{line2\+D\+Ptp(const G\+K\+Point \&p2) const }{line2DPtp(const GKPoint &p2) const }}]{\setlength{\rightskip}{0pt plus 5cm}G\+K\+Line G\+K\+Point\+::line2\+D\+Ptp (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Point} \&}]{p2}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKPoint_a80f59e2ee0485cb00e926e06b3dadb01}{}\label{classGKPoint_a80f59e2ee0485cb00e926e06b3dadb01}
+Given a second point, returns the Line in 2 dimensions that goes by them. If the line is vertical, it is codified with slope = D\+B\+L\+\_\+\+MA and coef = x constant \index{G\+K\+Point@{G\+K\+Point}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!G\+K\+Point@{G\+K\+Point}}
+\subsubsection[{\texorpdfstring{operator"!=(const G\+K\+Point \&c) const }{operator!=(const GKPoint &c) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+Point\+::operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Point} \&}]{c}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKPoint_a22ea11710cf45ea674dd2751dd15db16}{}\label{classGKPoint_a22ea11710cf45ea674dd2751dd15db16}
+Operator that returns true if the two compared points are different. This operator returns false if the points are equal. \index{G\+K\+Point@{G\+K\+Point}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!G\+K\+Point@{G\+K\+Point}}
+\subsubsection[{\texorpdfstring{operator$\ast$(\+G\+K\+Coord c) const }{operator*(GKCoord c) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+K\+Point} G\+K\+Point\+::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{G\+K\+Coord}]{c}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKPoint_a5503c4a33c7bffbca07aeb74ff2f23dd}{}\label{classGKPoint_a5503c4a33c7bffbca07aeb74ff2f23dd}
+Operator that multiplies a scalar to all point components \index{G\+K\+Point@{G\+K\+Point}!operator+@{operator+}}
+\index{operator+@{operator+}!G\+K\+Point@{G\+K\+Point}}
+\subsubsection[{\texorpdfstring{operator+(const G\+K\+Point \&c) const }{operator+(const GKPoint &c) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+K\+Point} G\+K\+Point\+::operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Point} \&}]{c}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKPoint_a49eb5b7f0a82547ab73381a0681dbda6}{}\label{classGKPoint_a49eb5b7f0a82547ab73381a0681dbda6}
+Operator that adds one point to another. \index{G\+K\+Point@{G\+K\+Point}!operator+@{operator+}}
+\index{operator+@{operator+}!G\+K\+Point@{G\+K\+Point}}
+\subsubsection[{\texorpdfstring{operator+(const G\+K\+Vector \&c) const }{operator+(const GKVector &c) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+K\+Point} G\+K\+Point\+::operator+ (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Vector \&}]{c}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKPoint_ae03bb5ff56c91973d4a85f7f2e14379e}{}\label{classGKPoint_ae03bb5ff56c91973d4a85f7f2e14379e}
+Operator that adds one vector to a point. \index{G\+K\+Point@{G\+K\+Point}!operator+@{operator+}}
+\index{operator+@{operator+}!G\+K\+Point@{G\+K\+Point}}
+\subsubsection[{\texorpdfstring{operator+(\+G\+K\+Coord c) const }{operator+(GKCoord c) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+K\+Point} G\+K\+Point\+::operator+ (
+\begin{DoxyParamCaption}
+\item[{G\+K\+Coord}]{c}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKPoint_a1d0cd1f3ed5d44bd88895e82849aa934}{}\label{classGKPoint_a1d0cd1f3ed5d44bd88895e82849aa934}
+Operator that adds a scalar to all point components \index{G\+K\+Point@{G\+K\+Point}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!G\+K\+Point@{G\+K\+Point}}
+\subsubsection[{\texorpdfstring{operator+=(const G\+K\+Point \&c)}{operator+=(const GKPoint &c)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+K\+Point}\& G\+K\+Point\+::operator+= (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Point} \&}]{c}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKPoint_afdf00b8a204e92706219fd6f713d51c5}{}\label{classGKPoint_afdf00b8a204e92706219fd6f713d51c5}
+Operator that adds one point to another. \index{G\+K\+Point@{G\+K\+Point}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!G\+K\+Point@{G\+K\+Point}}
+\subsubsection[{\texorpdfstring{operator-\/(const G\+K\+Point \&c) const }{operator-(const GKPoint &c) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+K\+Point} G\+K\+Point\+::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Point} \&}]{c}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKPoint_ada69506f4a28f5677ceb589b760ff2d5}{}\label{classGKPoint_ada69506f4a28f5677ceb589b760ff2d5}
+Operator that subtracts one point to another. \index{G\+K\+Point@{G\+K\+Point}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!G\+K\+Point@{G\+K\+Point}}
+\subsubsection[{\texorpdfstring{operator-\/(const G\+K\+Vector \&c) const }{operator-(const GKVector &c) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+K\+Point} G\+K\+Point\+::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Vector \&}]{c}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKPoint_a820a921c8cd07a9ec15526d7677d0fba}{}\label{classGKPoint_a820a921c8cd07a9ec15526d7677d0fba}
+Operator that subtracts one vector to a point. \index{G\+K\+Point@{G\+K\+Point}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!G\+K\+Point@{G\+K\+Point}}
+\subsubsection[{\texorpdfstring{operator-\/(\+G\+K\+Coord c) const }{operator-(GKCoord c) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+K\+Point} G\+K\+Point\+::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{G\+K\+Coord}]{c}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKPoint_a709b05770a34025f4bc41bd9cd57b516}{}\label{classGKPoint_a709b05770a34025f4bc41bd9cd57b516}
+Operator that subtracts a scalar to all point components. \index{G\+K\+Point@{G\+K\+Point}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!G\+K\+Point@{G\+K\+Point}}
+\subsubsection[{\texorpdfstring{operator-\/=(const G\+K\+Point \&c)}{operator-=(const GKPoint &c)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+K\+Point}\& G\+K\+Point\+::operator-\/= (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Point} \&}]{c}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKPoint_a0f8daa5b0e00dbe277ae2d13f7183ef1}{}\label{classGKPoint_a0f8daa5b0e00dbe277ae2d13f7183ef1}
+Operator that subtracts one point to another. \index{G\+K\+Point@{G\+K\+Point}!operator/@{operator/}}
+\index{operator/@{operator/}!G\+K\+Point@{G\+K\+Point}}
+\subsubsection[{\texorpdfstring{operator/(\+G\+K\+Coord c) const }{operator/(GKCoord c) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+K\+Point} G\+K\+Point\+::operator/ (
+\begin{DoxyParamCaption}
+\item[{G\+K\+Coord}]{c}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKPoint_afaebd76baf8a9b7902ea77e8f95a6a20}{}\label{classGKPoint_afaebd76baf8a9b7902ea77e8f95a6a20}
+Operator that divides a scalar to all point components \index{G\+K\+Point@{G\+K\+Point}!operator==@{operator==}}
+\index{operator==@{operator==}!G\+K\+Point@{G\+K\+Point}}
+\subsubsection[{\texorpdfstring{operator==(const G\+K\+Point \&c) const }{operator==(const GKPoint &c) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+Point\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Point} \&}]{c}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKPoint_a973a589ee0b1f38efcb71446f305e828}{}\label{classGKPoint_a973a589ee0b1f38efcb71446f305e828}
+Operator that returns true if the two compared points are equal. This operator returns false if the points are different. \index{G\+K\+Point@{G\+K\+Point}!point\+At\+Distance@{point\+At\+Distance}}
+\index{point\+At\+Distance@{point\+At\+Distance}!G\+K\+Point@{G\+K\+Point}}
+\subsubsection[{\texorpdfstring{point\+At\+Distance(const G\+K\+Point \&p, const double d, G\+K\+Point \&res) const }{pointAtDistance(const GKPoint &p, const double d, GKPoint &res) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+Point\+::point\+At\+Distance (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Point} \&}]{p, }
+\item[{const double}]{d, }
+\item[{{\bf G\+K\+Point} \&}]{res}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKPoint_a13dd7de88b383e9a17d7548a5f302fb5}{}\label{classGKPoint_a13dd7de88b383e9a17d7548a5f302fb5}
+Fills the point \textquotesingle{}res\textquotesingle{} that is on the line that goes to point \textquotesingle{}p\textquotesingle{} at distance \textquotesingle{}d\textquotesingle{} If the value returnen is \textquotesingle{}false\textquotesingle{} then an error occourred and \textquotesingle{}res\textquotesingle{} is not filled \index{G\+K\+Point@{G\+K\+Point}!rotate2D@{rotate2D}}
+\index{rotate2D@{rotate2D}!G\+K\+Point@{G\+K\+Point}}
+\subsubsection[{\texorpdfstring{rotate2\+D(const G\+K\+Point \&center, double angle) const }{rotate2D(const GKPoint &center, double angle) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+K\+Point} G\+K\+Point\+::rotate2D (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Point} \&}]{center, }
+\item[{double}]{angle}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKPoint_a73b34991d203aff80955bac7f7a8ce99}{}\label{classGKPoint_a73b34991d203aff80955bac7f7a8ce99}
+Rotates this point, given a center and an angle in radians. The rotated point is returned and this one is not modified \index{G\+K\+Point@{G\+K\+Point}!rotate2\+D\+This@{rotate2\+D\+This}}
+\index{rotate2\+D\+This@{rotate2\+D\+This}!G\+K\+Point@{G\+K\+Point}}
+\subsubsection[{\texorpdfstring{rotate2\+D\+This(const G\+K\+Point \&center, double angle)}{rotate2DThis(const GKPoint &center, double angle)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+Point\+::rotate2\+D\+This (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Point} \&}]{center, }
+\item[{double}]{angle}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKPoint_a0c2d013b0a50fd9f5aa9a78637adf07e}{}\label{classGKPoint_a0c2d013b0a50fd9f5aa9a78637adf07e}
+Rotates this point, given a center and an angle in radians, modifying it. \index{G\+K\+Point@{G\+K\+Point}!set@{set}}
+\index{set@{set}!G\+K\+Point@{G\+K\+Point}}
+\subsubsection[{\texorpdfstring{set(\+G\+K\+Coord ax, G\+K\+Coord ay, G\+K\+Coord az=0.\+0f)}{set(GKCoord ax, GKCoord ay, GKCoord az=0.0f)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+Point\+::set (
+\begin{DoxyParamCaption}
+\item[{G\+K\+Coord}]{ax, }
+\item[{G\+K\+Coord}]{ay, }
+\item[{G\+K\+Coord}]{az = {\ttfamily 0.0f}}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKPoint_a8d225379f5fc0faed23c5f171fcad9d4}{}\label{classGKPoint_a8d225379f5fc0faed23c5f171fcad9d4}
+Sets the (x, y, z) coordinates of the point. \index{G\+K\+Point@{G\+K\+Point}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!G\+K\+Point@{G\+K\+Point}}
+\subsubsection[{\texorpdfstring{to\+String() const }{toString() const }}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String G\+K\+Point\+::to\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKPoint_a7441caea1479057d331856f29fc56bb1}{}\label{classGKPoint_a7441caea1479057d331856f29fc56bb1}
+Returns a Q\+String having the format x,y,z 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/core/ang\+\_\+kernel/G\+K\+Point.\+h\end{DoxyCompactItemize}

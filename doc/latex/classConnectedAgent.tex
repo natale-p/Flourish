@@ -1,0 +1,129 @@
+\hypertarget{classConnectedAgent}{}\section{Connected\+Agent Class Reference}
+\label{classConnectedAgent}\index{Connected\+Agent@{Connected\+Agent}}
+
+
+Represents a connected vehicle.  
+
+
+
+
+{\ttfamily \#include $<$Connected\+Agent.\+h$>$}
+
+
+
+Inheritance diagram for Connected\+Agent\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{classConnectedAgent__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Connected\+Agent\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{classConnectedAgent__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classConnectedAgent_ab75385df4de172507e5bf31638b48054}{Connected\+Agent} (unsigned short idhandler, void $\ast$agent)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classConnectedAgent}{Connected\+Agent} constructor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classConnectedAgent_a9411cd70fe8ef6a1bb351b87a35e0231}{get\+State} (double time, double time\+Sta)=0
+\begin{DoxyCompactList}\small\item\em Called each simulation step. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classConnectedAgent_ab6f5ce73988eff1c14e3c59ebd2d1762}{set\+State} (double time, double time\+Sta)=0
+\begin{DoxyCompactList}\small\item\em Called each simulation step. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents a connected vehicle. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Connected\+Agent@{Connected\+Agent}!Connected\+Agent@{Connected\+Agent}}
+\index{Connected\+Agent@{Connected\+Agent}!Connected\+Agent@{Connected\+Agent}}
+\subsubsection[{\texorpdfstring{Connected\+Agent(unsigned short idhandler, void $\ast$agent)}{ConnectedAgent(unsigned short idhandler, void *agent)}}]{\setlength{\rightskip}{0pt plus 5cm}Connected\+Agent\+::\+Connected\+Agent (
+\begin{DoxyParamCaption}
+\item[{unsigned short}]{idhandler, }
+\item[{void $\ast$}]{agent}
+\end{DoxyParamCaption}
+)}\hypertarget{classConnectedAgent_ab75385df4de172507e5bf31638b48054}{}\label{classConnectedAgent_ab75385df4de172507e5bf31638b48054}
+
+
+\hyperlink{classConnectedAgent}{Connected\+Agent} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em idhandler} & id of the vehicle \\
+\hline
+{\em agent} & opaque pointer with some data \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Connected\+Agent@{Connected\+Agent}!get\+State@{get\+State}}
+\index{get\+State@{get\+State}!Connected\+Agent@{Connected\+Agent}}
+\subsubsection[{\texorpdfstring{get\+State(double time, double time\+Sta)=0}{getState(double time, double timeSta)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Connected\+Agent\+::get\+State (
+\begin{DoxyParamCaption}
+\item[{double}]{time, }
+\item[{double}]{time\+Sta}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classConnectedAgent_a9411cd70fe8ef6a1bb351b87a35e0231}{}\label{classConnectedAgent_a9411cd70fe8ef6a1bb351b87a35e0231}
+
+
+Called each simulation step. 
+
+Add a little of description\+: When it is called? What state it is supposed to get?
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & T\+O\+DO \\
+\hline
+{\em time\+Sta} & T\+O\+DO \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classADynamicAgent_a44aacef8be0302f2edc528a6b96168f7}{A\+Dynamic\+Agent}.
+
+
+
+Implemented in \hyperlink{classFlourishConnectedAgent_a413549affba2a4e47a37a369a7c4f16e}{Flourish\+Connected\+Agent}.
+
+\index{Connected\+Agent@{Connected\+Agent}!set\+State@{set\+State}}
+\index{set\+State@{set\+State}!Connected\+Agent@{Connected\+Agent}}
+\subsubsection[{\texorpdfstring{set\+State(double time, double time\+Sta)=0}{setState(double time, double timeSta)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Connected\+Agent\+::set\+State (
+\begin{DoxyParamCaption}
+\item[{double}]{time, }
+\item[{double}]{time\+Sta}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classConnectedAgent_ab6f5ce73988eff1c14e3c59ebd2d1762}{}\label{classConnectedAgent_ab6f5ce73988eff1c14e3c59ebd2d1762}
+
+
+Called each simulation step. 
+
+Add a little of description\+: When it is called? What state it is supposed to set?
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & T\+O\+DO \\
+\hline
+{\em time\+Sta} & T\+O\+DO \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classADynamicAgent_ae52606684f790a26d46861ea21e932e7}{A\+Dynamic\+Agent}.
+
+
+
+Implemented in \hyperlink{classFlourishConnectedAgent_a2ad3311fbf9e23473087837a23b2f130}{Flourish\+Connected\+Agent}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/aimsun\+\_\+extensions/\+V2\+X\+Framework/Connected\+Agent.\+h\end{DoxyCompactItemize}

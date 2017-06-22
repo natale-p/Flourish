@@ -1,0 +1,192 @@
+\hypertarget{classGKContext}{}\section{G\+K\+Context Class Reference}
+\label{classGKContext}\index{G\+K\+Context@{G\+K\+Context}}
+
+
+Context time for time dependent data (As Time Series).  
+
+
+
+
+{\ttfamily \#include $<$G\+K\+Context.\+h$>$}
+
+
+
+Collaboration diagram for G\+K\+Context\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classGKContext__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classGKContext_a2b98b38dd875e956e803b0d0aa0c9290}{set\+Time} (const Q\+Date\+Time \&f, const Q\+Date\+Time \&t, const Q\+Date\+Time \&n)
+\item 
+void \hyperlink{classGKContext_a85453edb25ba1f029445f1ba44557fd4}{set\+From} (const Q\+Date\+Time \&t)\hypertarget{classGKContext_a85453edb25ba1f029445f1ba44557fd4}{}\label{classGKContext_a85453edb25ba1f029445f1ba44557fd4}
+
+\begin{DoxyCompactList}\small\item\em Sets \textquotesingle{}from\textquotesingle{} time. \end{DoxyCompactList}\item 
+void \hyperlink{classGKContext_ab6a23360ba0074e759c01efcf5e622f4}{set\+Now} (const Q\+Date\+Time \&t)\hypertarget{classGKContext_ab6a23360ba0074e759c01efcf5e622f4}{}\label{classGKContext_ab6a23360ba0074e759c01efcf5e622f4}
+
+\begin{DoxyCompactList}\small\item\em Sets \textquotesingle{}now\textquotesingle{} time. \end{DoxyCompactList}\item 
+void \hyperlink{classGKContext_a576fc89f848018e986374d72066c1c96}{set\+To} (const Q\+Date\+Time \&t)\hypertarget{classGKContext_a576fc89f848018e986374d72066c1c96}{}\label{classGKContext_a576fc89f848018e986374d72066c1c96}
+
+\begin{DoxyCompactList}\small\item\em Sets \textquotesingle{}to\textquotesingle{} time. \end{DoxyCompactList}\item 
+void \hyperlink{classGKContext_a50e6d719d8b76e98d3124426018dfb83}{set\+Dimension} (int dimension)\hypertarget{classGKContext_a50e6d719d8b76e98d3124426018dfb83}{}\label{classGKContext_a50e6d719d8b76e98d3124426018dfb83}
+
+\begin{DoxyCompactList}\small\item\em The dimension (for multidimensional TS) \end{DoxyCompactList}\item 
+const Q\+Date\+Time \& \hyperlink{classGKContext_a8257441688f38f9a6108a523a427f8b0}{get\+Now} () const \hypertarget{classGKContext_a8257441688f38f9a6108a523a427f8b0}{}\label{classGKContext_a8257441688f38f9a6108a523a427f8b0}
+
+\begin{DoxyCompactList}\small\item\em Returns \textquotesingle{}now\textquotesingle{} time. \end{DoxyCompactList}\item 
+const Q\+Date\+Time \& \hyperlink{classGKContext_ac23f3d09d708ca57f24601792c0318e8}{get\+From} () const \hypertarget{classGKContext_ac23f3d09d708ca57f24601792c0318e8}{}\label{classGKContext_ac23f3d09d708ca57f24601792c0318e8}
+
+\begin{DoxyCompactList}\small\item\em Returns \textquotesingle{}from\textquotesingle{} time. \end{DoxyCompactList}\item 
+const Q\+Date\+Time \& \hyperlink{classGKContext_aa4203db94958da803c123d0db06e13d7}{get\+To} () const \hypertarget{classGKContext_aa4203db94958da803c123d0db06e13d7}{}\label{classGKContext_aa4203db94958da803c123d0db06e13d7}
+
+\begin{DoxyCompactList}\small\item\em Returns \textquotesingle{}to\textquotesingle{} time. \end{DoxyCompactList}\item 
+int \hyperlink{classGKContext_ac694a50af913b0a2e23fbcfdb9c59b1a}{get\+Dimension} () const \hypertarget{classGKContext_ac694a50af913b0a2e23fbcfdb9c59b1a}{}\label{classGKContext_ac694a50af913b0a2e23fbcfdb9c59b1a}
+
+\begin{DoxyCompactList}\small\item\em The dimension (for multidimensional TS) \end{DoxyCompactList}\item 
+bool \hyperlink{classGKContext_a7a758cca958715f1db31ec67d191ef99}{same\+Day} () const 
+\item 
+void \hyperlink{classGKContext_a016f3c6735246f6c6ea270dcc2d5e9d5}{set\+Aggregated} (bool value)
+\item 
+bool \hyperlink{classGKContext_a47043679596801c39a9eecfe6f8ada7b}{is\+Aggregated} () const 
+\item 
+\hyperlink{namespaceGK_ae682f9fb77047e45fa91c27e569b8fee}{G\+K\+::\+Aggregation\+Type} \hyperlink{classGKContext_a6c248a04710043307381502416350310}{get\+Aggregation\+Type} () const 
+\item 
+void \hyperlink{classGKContext_ac83b083d77cfa532f2deacc316b11fb9}{set\+Aggregation\+Type} (\hyperlink{namespaceGK_ae682f9fb77047e45fa91c27e569b8fee}{G\+K\+::\+Aggregation\+Type} t)
+\item 
+bool \hyperlink{classGKContext_aa90ee9c956bd9523ba52df5a168eecd0}{is\+Valid} () const 
+\item 
+Q\+String \hyperlink{classGKContext_a47664e26a94b558165fbe9a99cfef156}{to\+String} (bool with\+Date=true) const 
+\item 
+bool \hyperlink{classGKContext_a4fceb046a3eca904089f3edbba5b15b7}{operator==} (const \hyperlink{classGKContext}{G\+K\+Context} \&rhs) const 
+\item 
+bool \hyperlink{classGKContext_ad646873a65bc7e663b659e9c0f117a9d}{operator!=} (const \hyperlink{classGKContext}{G\+K\+Context} \&rhs) const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classGKContext}{G\+K\+Context} \hyperlink{classGKContext_a37de2dc1b6bab087b9b92a445922e79d}{any\+Context}
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Date\+Time {\bfseries from}\hypertarget{classGKContext_a4ca3da6973783aac9a14aeaa3e03d89e}{}\label{classGKContext_a4ca3da6973783aac9a14aeaa3e03d89e}
+
+\item 
+Q\+Date\+Time {\bfseries to}\hypertarget{classGKContext_aad9c04c98aa6b5feb2726924d59e41a4}{}\label{classGKContext_aad9c04c98aa6b5feb2726924d59e41a4}
+
+\item 
+Q\+Date\+Time {\bfseries now}\hypertarget{classGKContext_af6111c6215d4e8ea310190079023231d}{}\label{classGKContext_af6111c6215d4e8ea310190079023231d}
+
+\item 
+bool {\bfseries use\+Aggregated}\hypertarget{classGKContext_a63b53add5db1ce35c77589f33de975f7}{}\label{classGKContext_a63b53add5db1ce35c77589f33de975f7}
+
+\item 
+\hyperlink{namespaceGK_ae682f9fb77047e45fa91c27e569b8fee}{G\+K\+::\+Aggregation\+Type} {\bfseries aggregation\+Type}\hypertarget{classGKContext_a851d59b4d7f6d7b1944d12e9836af1fb}{}\label{classGKContext_a851d59b4d7f6d7b1944d12e9836af1fb}
+
+\item 
+int {\bfseries dimension}\hypertarget{classGKContext_a3878036cac962e371cfdbfb86b615a37}{}\label{classGKContext_a3878036cac962e371cfdbfb86b615a37}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Context time for time dependent data (As Time Series). 
+
+A \hyperlink{classGKContext}{G\+K\+Context} holds the initial and end time for data that depends on time (as time series either produced by a simulator or from real detection data).
+
+It includes also a \char`\"{}now\char`\"{} time used to fetch (or show) data at a given instant.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classGKObject}{G\+K\+Object}, G\+K\+Time\+Serie, G\+K\+T\+S\+Description 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\index{G\+K\+Context@{G\+K\+Context}!get\+Aggregation\+Type@{get\+Aggregation\+Type}}
+\index{get\+Aggregation\+Type@{get\+Aggregation\+Type}!G\+K\+Context@{G\+K\+Context}}
+\subsubsection[{\texorpdfstring{get\+Aggregation\+Type() const }{getAggregationType() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+K\+::\+Aggregation\+Type} G\+K\+Context\+::get\+Aggregation\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKContext_a6c248a04710043307381502416350310}{}\label{classGKContext_a6c248a04710043307381502416350310}
+Defines the aggregation type to be used when the context is aggregated. \index{G\+K\+Context@{G\+K\+Context}!is\+Aggregated@{is\+Aggregated}}
+\index{is\+Aggregated@{is\+Aggregated}!G\+K\+Context@{G\+K\+Context}}
+\subsubsection[{\texorpdfstring{is\+Aggregated() const }{isAggregated() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+Context\+::is\+Aggregated (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKContext_a47043679596801c39a9eecfe6f8ada7b}{}\label{classGKContext_a47043679596801c39a9eecfe6f8ada7b}
+On time series, it returns the aggregated data instead of an interval value. \index{G\+K\+Context@{G\+K\+Context}!is\+Valid@{is\+Valid}}
+\index{is\+Valid@{is\+Valid}!G\+K\+Context@{G\+K\+Context}}
+\subsubsection[{\texorpdfstring{is\+Valid() const }{isValid() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+Context\+::is\+Valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKContext_aa90ee9c956bd9523ba52df5a168eecd0}{}\label{classGKContext_aa90ee9c956bd9523ba52df5a168eecd0}
+Returns true if from, to and now are valid. \index{G\+K\+Context@{G\+K\+Context}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!G\+K\+Context@{G\+K\+Context}}
+\subsubsection[{\texorpdfstring{operator"!=(const G\+K\+Context \&rhs) const }{operator!=(const GKContext &rhs) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+Context\+::operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Context} \&}]{rhs}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKContext_ad646873a65bc7e663b659e9c0f117a9d}{}\label{classGKContext_ad646873a65bc7e663b659e9c0f117a9d}
+Different operator. \index{G\+K\+Context@{G\+K\+Context}!operator==@{operator==}}
+\index{operator==@{operator==}!G\+K\+Context@{G\+K\+Context}}
+\subsubsection[{\texorpdfstring{operator==(const G\+K\+Context \&rhs) const }{operator==(const GKContext &rhs) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+Context\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Context} \&}]{rhs}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKContext_a4fceb046a3eca904089f3edbba5b15b7}{}\label{classGKContext_a4fceb046a3eca904089f3edbba5b15b7}
+Equal operator. \index{G\+K\+Context@{G\+K\+Context}!same\+Day@{same\+Day}}
+\index{same\+Day@{same\+Day}!G\+K\+Context@{G\+K\+Context}}
+\subsubsection[{\texorpdfstring{same\+Day() const }{sameDay() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+K\+Context\+::same\+Day (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKContext_a7a758cca958715f1db31ec67d191ef99}{}\label{classGKContext_a7a758cca958715f1db31ec67d191ef99}
+Returns true if the initial and end time are in the same day. \index{G\+K\+Context@{G\+K\+Context}!set\+Aggregated@{set\+Aggregated}}
+\index{set\+Aggregated@{set\+Aggregated}!G\+K\+Context@{G\+K\+Context}}
+\subsubsection[{\texorpdfstring{set\+Aggregated(bool value)}{setAggregated(bool value)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+Context\+::set\+Aggregated (
+\begin{DoxyParamCaption}
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKContext_a016f3c6735246f6c6ea270dcc2d5e9d5}{}\label{classGKContext_a016f3c6735246f6c6ea270dcc2d5e9d5}
+On time series, it returns the aggregated data instead of an interval value. \index{G\+K\+Context@{G\+K\+Context}!set\+Aggregation\+Type@{set\+Aggregation\+Type}}
+\index{set\+Aggregation\+Type@{set\+Aggregation\+Type}!G\+K\+Context@{G\+K\+Context}}
+\subsubsection[{\texorpdfstring{set\+Aggregation\+Type(\+G\+K\+::\+Aggregation\+Type t)}{setAggregationType(GK::AggregationType t)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+Context\+::set\+Aggregation\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+K\+::\+Aggregation\+Type}}]{t}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKContext_ac83b083d77cfa532f2deacc316b11fb9}{}\label{classGKContext_ac83b083d77cfa532f2deacc316b11fb9}
+Defines the aggregation type to be used when the context is aggregated. \index{G\+K\+Context@{G\+K\+Context}!set\+Time@{set\+Time}}
+\index{set\+Time@{set\+Time}!G\+K\+Context@{G\+K\+Context}}
+\subsubsection[{\texorpdfstring{set\+Time(const Q\+Date\+Time \&f, const Q\+Date\+Time \&t, const Q\+Date\+Time \&n)}{setTime(const QDateTime &f, const QDateTime &t, const QDateTime &n)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+Context\+::set\+Time (
+\begin{DoxyParamCaption}
+\item[{const Q\+Date\+Time \&}]{f, }
+\item[{const Q\+Date\+Time \&}]{t, }
+\item[{const Q\+Date\+Time \&}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKContext_a2b98b38dd875e956e803b0d0aa0c9290}{}\label{classGKContext_a2b98b38dd875e956e803b0d0aa0c9290}
+Sets the \textquotesingle{}from\textquotesingle{}, \textquotesingle{}to\textquotesingle{} and \textquotesingle{}now\textquotesingle{} times \index{G\+K\+Context@{G\+K\+Context}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!G\+K\+Context@{G\+K\+Context}}
+\subsubsection[{\texorpdfstring{to\+String(bool with\+Date=true) const }{toString(bool withDate=true) const }}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String G\+K\+Context\+::to\+String (
+\begin{DoxyParamCaption}
+\item[{bool}]{with\+Date = {\ttfamily true}}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKContext_a47664e26a94b558165fbe9a99cfef156}{}\label{classGKContext_a47664e26a94b558165fbe9a99cfef156}
+Returns a Q\+String description of the context. 
+
+\subsection{Member Data Documentation}
+\index{G\+K\+Context@{G\+K\+Context}!any\+Context@{any\+Context}}
+\index{any\+Context@{any\+Context}!G\+K\+Context@{G\+K\+Context}}
+\subsubsection[{\texorpdfstring{any\+Context}{anyContext}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+K\+Context} G\+K\+Context\+::any\+Context\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classGKContext_a37de2dc1b6bab087b9b92a445922e79d}{}\label{classGKContext_a37de2dc1b6bab087b9b92a445922e79d}
+A special value for methods that expect a \hyperlink{classGKContext}{G\+K\+Context}. This value means that we will not care about the time context when accesing the information. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/core/ang\+\_\+kernel/G\+K\+Context.\+h\end{DoxyCompactItemize}

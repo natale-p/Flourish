@@ -1,0 +1,13 @@
+<map id="RequestorDescription" name="RequestorDescription">
+<area shape="rect" id="node2" href="$structRequestorPositionVector.html" title="RequestorPositionVector" alt="" coords="963,137,1129,164"/>
+<area shape="rect" id="node3" href="$structasn__struct__ctx__s.html" title="asn_struct_ctx_s" alt="" coords="5,272,128,299"/>
+<area shape="rect" id="node4" href="$structTransmissionAndSpeed.html" title="TransmissionAndSpeed" alt="" coords="416,119,576,145"/>
+<area shape="rect" id="node5" href="$structPosition3D.html" title="Position3D" alt="" coords="636,181,723,208"/>
+<area shape="rect" id="node6" href="$structPosition3D_1_1Position3D____regional.html" title="Position3D::Position3D\l__regional" alt="" coords="233,233,392,274"/>
+<area shape="rect" id="node7" href="$structOCTET__STRING.html" title="OCTET_STRING" alt="" coords="250,299,375,325"/>
+<area shape="rect" id="node8" href="$structVehicleID.html" title="VehicleID" alt="" coords="1007,312,1085,339"/>
+<area shape="rect" id="node10" href="$structRequestorDescription_1_1RequestorDescription____regional.html" title="RequestorDescription\l::RequestorDescription\l__regional" alt="" coords="783,385,939,441"/>
+<area shape="rect" id="node11" href="$structBIT__STRING__s.html" title="BIT_STRING_s" alt="" coords="439,457,553,484"/>
+<area shape="rect" id="node12" href="$structRequestorType.html" title="RequestorType" alt="" coords="805,513,916,540"/>
+<area shape="rect" id="node9" href="$unionVehicleID_1_1VehicleID__u.html" title="VehicleID::VehicleID_u" alt="" coords="600,300,759,327"/>
+</map>

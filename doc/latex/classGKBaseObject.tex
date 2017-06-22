@@ -1,0 +1,462 @@
+\hypertarget{classGKBaseObject}{}\section{G\+K\+Base\+Object Class Reference}
+\label{classGKBaseObject}\index{G\+K\+Base\+Object@{G\+K\+Base\+Object}}
+
+
+Base class for normal objects (\hyperlink{classGKObject}{G\+K\+Object}) and simulated objects (G\+K\+Simulated\+Object) sharing an interface to get basic information (id, name, model and column based information).  
+
+
+
+
+{\ttfamily \#include $<$G\+K\+Base\+Object.\+h$>$}
+
+
+
+Inheritance diagram for G\+K\+Base\+Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=165pt]{classGKBaseObject__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries G\+K\+Base\+Object} (\hyperlink{classGKBaseObject}{G\+K\+Base\+Object} const \&rhs)\hypertarget{classGKBaseObject_a5133b2b343dfdaaf723eaa77d20f8ebb}{}\label{classGKBaseObject_a5133b2b343dfdaaf723eaa77d20f8ebb}
+
+\item 
+virtual Q\+String \hyperlink{classGKBaseObject_af7a70bb706e3d324e7f3992f0ee463c4}{get\+Type\+Name} () const =0
+\item 
+virtual Q\+String \hyperlink{classGKBaseObject_af1f4d7d9900badfb98f70bd17a6dfa81}{get\+Type\+External\+Name} () const =0
+\item 
+virtual \hyperlink{classGKObject}{G\+K\+Object} $\ast$ \hyperlink{classGKBaseObject_a874dc37f9f7df7778bedb9bce4a30e5c}{get\+Master} () const =0\hypertarget{classGKBaseObject_a874dc37f9f7df7778bedb9bce4a30e5c}{}\label{classGKBaseObject_a874dc37f9f7df7778bedb9bce4a30e5c}
+
+\begin{DoxyCompactList}\small\item\em The object that originates this object. \end{DoxyCompactList}\item 
+virtual quint32 \hyperlink{classGKBaseObject_a3399cf77ea1b1f9e12cd779a547df7d8}{get\+Id} () const =0
+\item 
+virtual const Q\+String \& \hyperlink{classGKBaseObject_ab7eb118912e83603c059300458282a5f}{get\+Name} () const =0
+\item 
+virtual const Q\+String \& \hyperlink{classGKBaseObject_ad36de1ef4a9964f1e664a4c9b348e839}{get\+External\+Id} () const =0\hypertarget{classGKBaseObject_ad36de1ef4a9964f1e664a4c9b348e839}{}\label{classGKBaseObject_ad36de1ef4a9964f1e664a4c9b348e839}
+
+\begin{DoxyCompactList}\small\item\em Get the object external ID stored in \hyperlink{classGKBaseObject_a8287b7ae2c1c41363d3ad44dfc53190a}{G\+K\+Object\+::external\+Id\+Att}. \end{DoxyCompactList}\item 
+virtual const Q\+String \& \hyperlink{classGKBaseObject_a364f48904a6ef6122498b9775b154866}{get\+Description} () const =0\hypertarget{classGKBaseObject_a364f48904a6ef6122498b9775b154866}{}\label{classGKBaseObject_a364f48904a6ef6122498b9775b154866}
+
+\begin{DoxyCompactList}\small\item\em Get the object description (entered by the user) \end{DoxyCompactList}\item 
+virtual G\+K\+Model $\ast$ \hyperlink{classGKBaseObject_ac277f8125f58f40abc059d648cd67978}{get\+Model} () const =0
+\item 
+virtual Q\+Variant $\ast$ \hyperlink{classGKBaseObject_ae88f397d9b9f2b4a9de0d82ebf49407e}{get\+Data\+Value} (const G\+K\+Column $\ast$attr, bool $\ast$deleteit, const \hyperlink{classGKContext}{G\+K\+Context} \&context=\hyperlink{classGKContext_a37de2dc1b6bab087b9b92a445922e79d}{G\+K\+Context\+::any\+Context}) const =0
+\item 
+virtual Q\+Variant $\ast$ \hyperlink{classGKBaseObject_afe167f2a87468c8f4a1b639cdd9201e0}{get\+Data\+Value\+By\+ID} (uint attr\+Id, bool $\ast$deleteit, const \hyperlink{classGKContext}{G\+K\+Context} \&context=\hyperlink{classGKContext_a37de2dc1b6bab087b9b92a445922e79d}{G\+K\+Context\+::any\+Context}) const =0
+\item 
+virtual double \hyperlink{classGKBaseObject_a60409cd3407257cde924579760db4ac9}{get\+Data\+Value\+In\+TS} (const G\+K\+Column $\ast$attr, G\+K\+Time\+Serie\+Index index, double $\ast$deviation=N\+U\+LL) const =0
+\item 
+virtual double \hyperlink{classGKBaseObject_ab95510cc5f255eab3d53003ee0100eb6}{get\+Data\+Value\+In\+T\+S\+By\+ID} (uint attr\+Id, G\+K\+Time\+Serie\+Index index, double $\ast$deviation=N\+U\+LL) const =0
+\item 
+virtual G\+K\+Time\+Serie $\ast$ \hyperlink{classGKBaseObject_a655fa8e6246dab899e22a79c9fdbd6ec}{get\+Data\+Value\+TS} (const G\+K\+Column $\ast$attr) const =0
+\item 
+virtual G\+K\+Time\+Serie $\ast$ \hyperlink{classGKBaseObject_ab20dd8504b580a37636e6b71fdaaa5cd}{get\+Data\+Value\+T\+S\+By\+ID} (uint attr\+Id) const =0
+\item 
+virtual int \hyperlink{classGKBaseObject_a01bcf1a2ff617e84b461bfebb5ddc556}{get\+Data\+Value\+Int} (const G\+K\+Column $\ast$attr, const \hyperlink{classGKContext}{G\+K\+Context} \&context=\hyperlink{classGKContext_a37de2dc1b6bab087b9b92a445922e79d}{G\+K\+Context\+::any\+Context}) const =0
+\item 
+virtual int \hyperlink{classGKBaseObject_ac68785485ca46410a911ee2db0cfb43c}{get\+Data\+Value\+Int\+By\+ID} (uint attr\+Id, const \hyperlink{classGKContext}{G\+K\+Context} \&context=\hyperlink{classGKContext_a37de2dc1b6bab087b9b92a445922e79d}{G\+K\+Context\+::any\+Context}) const =0
+\item 
+virtual double \hyperlink{classGKBaseObject_ab31d8734b5c82b7872da7c28caccc535}{get\+Data\+Value\+Double} (const G\+K\+Column $\ast$attr, const \hyperlink{classGKContext}{G\+K\+Context} \&context=\hyperlink{classGKContext_a37de2dc1b6bab087b9b92a445922e79d}{G\+K\+Context\+::any\+Context}) const =0
+\item 
+virtual double \hyperlink{classGKBaseObject_a406a839bc0dc4ddf5eaae9a0e63ee5ef}{get\+Data\+Value\+Double\+By\+ID} (uint attr\+Id, const \hyperlink{classGKContext}{G\+K\+Context} \&context=\hyperlink{classGKContext_a37de2dc1b6bab087b9b92a445922e79d}{G\+K\+Context\+::any\+Context}) const =0
+\item 
+virtual Q\+String \hyperlink{classGKBaseObject_aa849b95c5b9e0556816edf4b4fa69487}{get\+Data\+Value\+String} (const G\+K\+Column $\ast$attr, const \hyperlink{classGKContext}{G\+K\+Context} \&context=\hyperlink{classGKContext_a37de2dc1b6bab087b9b92a445922e79d}{G\+K\+Context\+::any\+Context}) const =0
+\item 
+virtual Q\+String \hyperlink{classGKBaseObject_a75be29d474546eb09fb80aff39b631b3}{get\+Data\+Value\+String\+By\+ID} (uint attr\+Id, const \hyperlink{classGKContext}{G\+K\+Context} \&context=\hyperlink{classGKContext_a37de2dc1b6bab087b9b92a445922e79d}{G\+K\+Context\+::any\+Context}) const =0
+\item 
+virtual bool \hyperlink{classGKBaseObject_aa3eef7d9327e171508cc917895f45152}{get\+Data\+Value\+Bool} (const G\+K\+Column $\ast$attr, const \hyperlink{classGKContext}{G\+K\+Context} \&context=\hyperlink{classGKContext_a37de2dc1b6bab087b9b92a445922e79d}{G\+K\+Context\+::any\+Context}) const =0
+\item 
+virtual bool \hyperlink{classGKBaseObject_a64d5f12b34818f5d001dbd4e0e73de0d}{get\+Data\+Value\+Bool\+By\+ID} (uint attr\+Id, const \hyperlink{classGKContext}{G\+K\+Context} \&context=\hyperlink{classGKContext_a37de2dc1b6bab087b9b92a445922e79d}{G\+K\+Context\+::any\+Context}) const =0
+\item 
+virtual \hyperlink{classGKObject}{G\+K\+Object} $\ast$ \hyperlink{classGKBaseObject_a85b9abf441b0854648e884a88c25f0ba}{get\+Data\+Value\+Object} (const G\+K\+Column $\ast$attr, const \hyperlink{classGKContext}{G\+K\+Context} \&context=\hyperlink{classGKContext_a37de2dc1b6bab087b9b92a445922e79d}{G\+K\+Context\+::any\+Context}) const =0
+\item 
+virtual \hyperlink{classGKObject}{G\+K\+Object} $\ast$ \hyperlink{classGKBaseObject_a09d9039d3185b14fc0d5dd8e207b3c8d}{get\+Data\+Value\+Object\+By\+ID} (uint attr\+Id, const \hyperlink{classGKContext}{G\+K\+Context} \&context=\hyperlink{classGKContext_a37de2dc1b6bab087b9b92a445922e79d}{G\+K\+Context\+::any\+Context}) const =0
+\item 
+virtual Q\+Date \hyperlink{classGKBaseObject_a9e488c0d638961320c57704dd541d5e1}{get\+Data\+Value\+Date} (const G\+K\+Column $\ast$attr, const \hyperlink{classGKContext}{G\+K\+Context} \&context=\hyperlink{classGKContext_a37de2dc1b6bab087b9b92a445922e79d}{G\+K\+Context\+::any\+Context}) const =0
+\item 
+virtual Q\+Date \hyperlink{classGKBaseObject_a3d9d2f2adfe1ea3289ce24cf1bdc882f}{get\+Data\+Value\+Date\+By\+ID} (uint attr\+Id, const \hyperlink{classGKContext}{G\+K\+Context} \&context=\hyperlink{classGKContext_a37de2dc1b6bab087b9b92a445922e79d}{G\+K\+Context\+::any\+Context}) const =0
+\item 
+virtual Q\+Time \hyperlink{classGKBaseObject_a9fa2cdeb7eb1067b42583e76050bf8f6}{get\+Data\+Value\+Time} (const G\+K\+Column $\ast$attr, const \hyperlink{classGKContext}{G\+K\+Context} \&context=\hyperlink{classGKContext_a37de2dc1b6bab087b9b92a445922e79d}{G\+K\+Context\+::any\+Context}) const =0
+\item 
+virtual Q\+Time \hyperlink{classGKBaseObject_ae9de00386b6b30c4c7156ef59cd44580}{get\+Data\+Value\+Time\+By\+ID} (uint attr\+Id, const \hyperlink{classGKContext}{G\+K\+Context} \&context=\hyperlink{classGKContext_a37de2dc1b6bab087b9b92a445922e79d}{G\+K\+Context\+::any\+Context}) const =0
+\item 
+virtual \hyperlink{classGKTimeDuration}{G\+K\+Time\+Duration} \hyperlink{classGKBaseObject_a06de09433e3d78066030b74ca1e56f2d}{get\+Data\+Value\+Time\+Duration} (const G\+K\+Column $\ast$attr, const \hyperlink{classGKContext}{G\+K\+Context} \&context=\hyperlink{classGKContext_a37de2dc1b6bab087b9b92a445922e79d}{G\+K\+Context\+::any\+Context}) const =0
+\item 
+virtual \hyperlink{classGKTimeDuration}{G\+K\+Time\+Duration} \hyperlink{classGKBaseObject_a468c98b71d1b4feff47f7d99a55d7ea1}{get\+Data\+Value\+Time\+Duration\+By\+ID} (uint attr\+Id, const \hyperlink{classGKContext}{G\+K\+Context} \&context=\hyperlink{classGKContext_a37de2dc1b6bab087b9b92a445922e79d}{G\+K\+Context\+::any\+Context}) const =0
+\item 
+void $\ast$ \hyperlink{classGKBaseObject_a41b254960f047a457ef059f71806eb6d}{get\+Python\+Version} () const 
+\item 
+void \hyperlink{classGKBaseObject_a0b654ea3bcd0a04c255deb00a3ac8d46}{set\+Python\+Version} (void $\ast$obj)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static uint \hyperlink{classGKBaseObject_a692577c6db5ddebed9aec14ae0612271}{id\+Att}\hypertarget{classGKBaseObject_a692577c6db5ddebed9aec14ae0612271}{}\label{classGKBaseObject_a692577c6db5ddebed9aec14ae0612271}
+
+\begin{DoxyCompactList}\small\item\em Object Identifier as an attribute. \end{DoxyCompactList}\item 
+static uint \hyperlink{classGKBaseObject_a51c855051cf69dd505efe282088fbffe}{name\+Att}\hypertarget{classGKBaseObject_a51c855051cf69dd505efe282088fbffe}{}\label{classGKBaseObject_a51c855051cf69dd505efe282088fbffe}
+
+\begin{DoxyCompactList}\small\item\em Object Name as an attribute. \end{DoxyCompactList}\item 
+static uint \hyperlink{classGKBaseObject_a8287b7ae2c1c41363d3ad44dfc53190a}{external\+Id\+Att}\hypertarget{classGKBaseObject_a8287b7ae2c1c41363d3ad44dfc53190a}{}\label{classGKBaseObject_a8287b7ae2c1c41363d3ad44dfc53190a}
+
+\begin{DoxyCompactList}\small\item\em Object External ID as an attribute. \end{DoxyCompactList}\item 
+static uint \hyperlink{classGKBaseObject_a8faae8de2c0699fb9cda7cf0ea878f11}{description\+Att}\hypertarget{classGKBaseObject_a8faae8de2c0699fb9cda7cf0ea878f11}{}\label{classGKBaseObject_a8faae8de2c0699fb9cda7cf0ea878f11}
+
+\begin{DoxyCompactList}\small\item\em Object Description as an attribute. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class for normal objects (\hyperlink{classGKObject}{G\+K\+Object}) and simulated objects (G\+K\+Simulated\+Object) sharing an interface to get basic information (id, name, model and column based information). 
+
+\begin{DoxySeeAlso}{See also}
+G\+K\+Objects 
+
+G\+K\+Simulated\+Object 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\index{G\+K\+Base\+Object@{G\+K\+Base\+Object}!get\+Data\+Value@{get\+Data\+Value}}
+\index{get\+Data\+Value@{get\+Data\+Value}!G\+K\+Base\+Object@{G\+K\+Base\+Object}}
+\subsubsection[{\texorpdfstring{get\+Data\+Value(const G\+K\+Column $\ast$attr, bool $\ast$deleteit, const G\+K\+Context \&context=\+G\+K\+Context\+::any\+Context) const =0}{getDataValue(const GKColumn *attr, bool *deleteit, const GKContext &context=GKContext::anyContext) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual Q\+Variant$\ast$ G\+K\+Base\+Object\+::get\+Data\+Value (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Column $\ast$}]{attr, }
+\item[{bool $\ast$}]{deleteit, }
+\item[{const {\bf G\+K\+Context} \&}]{context = {\ttfamily {\bf G\+K\+Context\+::any\+Context}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classGKBaseObject_ae88f397d9b9f2b4a9de0d82ebf49407e}{}\label{classGKBaseObject_ae88f397d9b9f2b4a9de0d82ebf49407e}
+Get the value of an attribute. If no value is found N\+U\+LL is returned. If deleteit is true the returned value must be deleted by the method that makes the call. 
+
+Implemented in \hyperlink{classGKObject_ac75262d879bc8dc912234fe64a618726}{G\+K\+Object}.
+
+\index{G\+K\+Base\+Object@{G\+K\+Base\+Object}!get\+Data\+Value\+Bool@{get\+Data\+Value\+Bool}}
+\index{get\+Data\+Value\+Bool@{get\+Data\+Value\+Bool}!G\+K\+Base\+Object@{G\+K\+Base\+Object}}
+\subsubsection[{\texorpdfstring{get\+Data\+Value\+Bool(const G\+K\+Column $\ast$attr, const G\+K\+Context \&context=\+G\+K\+Context\+::any\+Context) const =0}{getDataValueBool(const GKColumn *attr, const GKContext &context=GKContext::anyContext) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool G\+K\+Base\+Object\+::get\+Data\+Value\+Bool (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Column $\ast$}]{attr, }
+\item[{const {\bf G\+K\+Context} \&}]{context = {\ttfamily {\bf G\+K\+Context\+::any\+Context}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classGKBaseObject_aa3eef7d9327e171508cc917895f45152}{}\label{classGKBaseObject_aa3eef7d9327e171508cc917895f45152}
+See \hyperlink{classGKObject_a1a19168a7f85db37554ae5632a5e89a5}{G\+K\+Object\+::get\+Data\+Value\+Int} 
+
+Implemented in \hyperlink{classGKObject_a7f84545d868c53f65e6df09a8ca10f75}{G\+K\+Object}.
+
+\index{G\+K\+Base\+Object@{G\+K\+Base\+Object}!get\+Data\+Value\+Bool\+By\+ID@{get\+Data\+Value\+Bool\+By\+ID}}
+\index{get\+Data\+Value\+Bool\+By\+ID@{get\+Data\+Value\+Bool\+By\+ID}!G\+K\+Base\+Object@{G\+K\+Base\+Object}}
+\subsubsection[{\texorpdfstring{get\+Data\+Value\+Bool\+By\+I\+D(uint attr\+Id, const G\+K\+Context \&context=\+G\+K\+Context\+::any\+Context) const =0}{getDataValueBoolByID(uint attrId, const GKContext &context=GKContext::anyContext) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool G\+K\+Base\+Object\+::get\+Data\+Value\+Bool\+By\+ID (
+\begin{DoxyParamCaption}
+\item[{uint}]{attr\+Id, }
+\item[{const {\bf G\+K\+Context} \&}]{context = {\ttfamily {\bf G\+K\+Context\+::any\+Context}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classGKBaseObject_a64d5f12b34818f5d001dbd4e0e73de0d}{}\label{classGKBaseObject_a64d5f12b34818f5d001dbd4e0e73de0d}
+See \hyperlink{classGKObject_a1a19168a7f85db37554ae5632a5e89a5}{G\+K\+Object\+::get\+Data\+Value\+Int} 
+
+Implemented in \hyperlink{classGKObject_a390a8acd3245bf70bda684b93021bf32}{G\+K\+Object}.
+
+\index{G\+K\+Base\+Object@{G\+K\+Base\+Object}!get\+Data\+Value\+By\+ID@{get\+Data\+Value\+By\+ID}}
+\index{get\+Data\+Value\+By\+ID@{get\+Data\+Value\+By\+ID}!G\+K\+Base\+Object@{G\+K\+Base\+Object}}
+\subsubsection[{\texorpdfstring{get\+Data\+Value\+By\+I\+D(uint attr\+Id, bool $\ast$deleteit, const G\+K\+Context \&context=\+G\+K\+Context\+::any\+Context) const =0}{getDataValueByID(uint attrId, bool *deleteit, const GKContext &context=GKContext::anyContext) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual Q\+Variant$\ast$ G\+K\+Base\+Object\+::get\+Data\+Value\+By\+ID (
+\begin{DoxyParamCaption}
+\item[{uint}]{attr\+Id, }
+\item[{bool $\ast$}]{deleteit, }
+\item[{const {\bf G\+K\+Context} \&}]{context = {\ttfamily {\bf G\+K\+Context\+::any\+Context}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classGKBaseObject_afe167f2a87468c8f4a1b639cdd9201e0}{}\label{classGKBaseObject_afe167f2a87468c8f4a1b639cdd9201e0}
+Get the value of an attribute. If no value is found N\+U\+LL is returned. If deleteit is true the returned value must be deleted by the method that makes the call. 
+
+Implemented in \hyperlink{classGKObject_a2d81f6712c496054d22b0437eba0f1cc}{G\+K\+Object}.
+
+\index{G\+K\+Base\+Object@{G\+K\+Base\+Object}!get\+Data\+Value\+Date@{get\+Data\+Value\+Date}}
+\index{get\+Data\+Value\+Date@{get\+Data\+Value\+Date}!G\+K\+Base\+Object@{G\+K\+Base\+Object}}
+\subsubsection[{\texorpdfstring{get\+Data\+Value\+Date(const G\+K\+Column $\ast$attr, const G\+K\+Context \&context=\+G\+K\+Context\+::any\+Context) const =0}{getDataValueDate(const GKColumn *attr, const GKContext &context=GKContext::anyContext) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual Q\+Date G\+K\+Base\+Object\+::get\+Data\+Value\+Date (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Column $\ast$}]{attr, }
+\item[{const {\bf G\+K\+Context} \&}]{context = {\ttfamily {\bf G\+K\+Context\+::any\+Context}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classGKBaseObject_a9e488c0d638961320c57704dd541d5e1}{}\label{classGKBaseObject_a9e488c0d638961320c57704dd541d5e1}
+See \hyperlink{classGKObject_a1a19168a7f85db37554ae5632a5e89a5}{G\+K\+Object\+::get\+Data\+Value\+Int} 
+
+Implemented in \hyperlink{classGKObject_a89e18a58729aa19fc955ea56ca6d64e6}{G\+K\+Object}.
+
+\index{G\+K\+Base\+Object@{G\+K\+Base\+Object}!get\+Data\+Value\+Date\+By\+ID@{get\+Data\+Value\+Date\+By\+ID}}
+\index{get\+Data\+Value\+Date\+By\+ID@{get\+Data\+Value\+Date\+By\+ID}!G\+K\+Base\+Object@{G\+K\+Base\+Object}}
+\subsubsection[{\texorpdfstring{get\+Data\+Value\+Date\+By\+I\+D(uint attr\+Id, const G\+K\+Context \&context=\+G\+K\+Context\+::any\+Context) const =0}{getDataValueDateByID(uint attrId, const GKContext &context=GKContext::anyContext) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual Q\+Date G\+K\+Base\+Object\+::get\+Data\+Value\+Date\+By\+ID (
+\begin{DoxyParamCaption}
+\item[{uint}]{attr\+Id, }
+\item[{const {\bf G\+K\+Context} \&}]{context = {\ttfamily {\bf G\+K\+Context\+::any\+Context}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classGKBaseObject_a3d9d2f2adfe1ea3289ce24cf1bdc882f}{}\label{classGKBaseObject_a3d9d2f2adfe1ea3289ce24cf1bdc882f}
+See \hyperlink{classGKObject_a1a19168a7f85db37554ae5632a5e89a5}{G\+K\+Object\+::get\+Data\+Value\+Int} 
+
+Implemented in \hyperlink{classGKObject_a16fd1ea80b037c2711afe5f481b05be0}{G\+K\+Object}.
+
+\index{G\+K\+Base\+Object@{G\+K\+Base\+Object}!get\+Data\+Value\+Double@{get\+Data\+Value\+Double}}
+\index{get\+Data\+Value\+Double@{get\+Data\+Value\+Double}!G\+K\+Base\+Object@{G\+K\+Base\+Object}}
+\subsubsection[{\texorpdfstring{get\+Data\+Value\+Double(const G\+K\+Column $\ast$attr, const G\+K\+Context \&context=\+G\+K\+Context\+::any\+Context) const =0}{getDataValueDouble(const GKColumn *attr, const GKContext &context=GKContext::anyContext) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual double G\+K\+Base\+Object\+::get\+Data\+Value\+Double (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Column $\ast$}]{attr, }
+\item[{const {\bf G\+K\+Context} \&}]{context = {\ttfamily {\bf G\+K\+Context\+::any\+Context}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classGKBaseObject_ab31d8734b5c82b7872da7c28caccc535}{}\label{classGKBaseObject_ab31d8734b5c82b7872da7c28caccc535}
+See \hyperlink{classGKObject_a1a19168a7f85db37554ae5632a5e89a5}{G\+K\+Object\+::get\+Data\+Value\+Int} 
+
+Implemented in \hyperlink{classGKObject_a5f2d6ea14b11d42dee9d7e795dcb9370}{G\+K\+Object}, and \hyperlink{classGKGeoObject_ac32ff25339c108c9c4eb1327bd1cdad4}{G\+K\+Geo\+Object}.
+
+\index{G\+K\+Base\+Object@{G\+K\+Base\+Object}!get\+Data\+Value\+Double\+By\+ID@{get\+Data\+Value\+Double\+By\+ID}}
+\index{get\+Data\+Value\+Double\+By\+ID@{get\+Data\+Value\+Double\+By\+ID}!G\+K\+Base\+Object@{G\+K\+Base\+Object}}
+\subsubsection[{\texorpdfstring{get\+Data\+Value\+Double\+By\+I\+D(uint attr\+Id, const G\+K\+Context \&context=\+G\+K\+Context\+::any\+Context) const =0}{getDataValueDoubleByID(uint attrId, const GKContext &context=GKContext::anyContext) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual double G\+K\+Base\+Object\+::get\+Data\+Value\+Double\+By\+ID (
+\begin{DoxyParamCaption}
+\item[{uint}]{attr\+Id, }
+\item[{const {\bf G\+K\+Context} \&}]{context = {\ttfamily {\bf G\+K\+Context\+::any\+Context}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classGKBaseObject_a406a839bc0dc4ddf5eaae9a0e63ee5ef}{}\label{classGKBaseObject_a406a839bc0dc4ddf5eaae9a0e63ee5ef}
+See \hyperlink{classGKObject_a1a19168a7f85db37554ae5632a5e89a5}{G\+K\+Object\+::get\+Data\+Value\+Int} 
+
+Implemented in \hyperlink{classGKObject_a62e8d9c7d663027ba49d778145cd9705}{G\+K\+Object}.
+
+\index{G\+K\+Base\+Object@{G\+K\+Base\+Object}!get\+Data\+Value\+Int@{get\+Data\+Value\+Int}}
+\index{get\+Data\+Value\+Int@{get\+Data\+Value\+Int}!G\+K\+Base\+Object@{G\+K\+Base\+Object}}
+\subsubsection[{\texorpdfstring{get\+Data\+Value\+Int(const G\+K\+Column $\ast$attr, const G\+K\+Context \&context=\+G\+K\+Context\+::any\+Context) const =0}{getDataValueInt(const GKColumn *attr, const GKContext &context=GKContext::anyContext) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual int G\+K\+Base\+Object\+::get\+Data\+Value\+Int (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Column $\ast$}]{attr, }
+\item[{const {\bf G\+K\+Context} \&}]{context = {\ttfamily {\bf G\+K\+Context\+::any\+Context}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classGKBaseObject_a01bcf1a2ff617e84b461bfebb5ddc556}{}\label{classGKBaseObject_a01bcf1a2ff617e84b461bfebb5ddc556}
+Helper functions (only for access). It\textquotesingle{}s faster than get\+Data\+Value since it doesn\textquotesingle{}t creates any intermediate Q\+Variant for internal attributes. Note that for G\+K\+Time\+Serie it returns the default value, in order to get any other value (position or condition dependant) use get\+Data\+Value to take the whole attribute 
+
+Implemented in \hyperlink{classGKObject_a1a19168a7f85db37554ae5632a5e89a5}{G\+K\+Object}, and \hyperlink{classGKGeoObject_afb827f2d02c261840b9f60b54d66977a}{G\+K\+Geo\+Object}.
+
+\index{G\+K\+Base\+Object@{G\+K\+Base\+Object}!get\+Data\+Value\+Int\+By\+ID@{get\+Data\+Value\+Int\+By\+ID}}
+\index{get\+Data\+Value\+Int\+By\+ID@{get\+Data\+Value\+Int\+By\+ID}!G\+K\+Base\+Object@{G\+K\+Base\+Object}}
+\subsubsection[{\texorpdfstring{get\+Data\+Value\+Int\+By\+I\+D(uint attr\+Id, const G\+K\+Context \&context=\+G\+K\+Context\+::any\+Context) const =0}{getDataValueIntByID(uint attrId, const GKContext &context=GKContext::anyContext) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual int G\+K\+Base\+Object\+::get\+Data\+Value\+Int\+By\+ID (
+\begin{DoxyParamCaption}
+\item[{uint}]{attr\+Id, }
+\item[{const {\bf G\+K\+Context} \&}]{context = {\ttfamily {\bf G\+K\+Context\+::any\+Context}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classGKBaseObject_ac68785485ca46410a911ee2db0cfb43c}{}\label{classGKBaseObject_ac68785485ca46410a911ee2db0cfb43c}
+Helper functions (only for access). It\textquotesingle{}s faster than get\+Data\+Value since it doesn\textquotesingle{}t creates any intermediate Q\+Variant for internal attributes. Note that for G\+K\+Time\+Serie it returns the default value, in order to get any other value (position or condition dependant) use get\+Data\+Value to take the whole attribute 
+
+Implemented in \hyperlink{classGKObject_a89b17b6bc62ca3f144e25fd637308cf0}{G\+K\+Object}.
+
+\index{G\+K\+Base\+Object@{G\+K\+Base\+Object}!get\+Data\+Value\+In\+TS@{get\+Data\+Value\+In\+TS}}
+\index{get\+Data\+Value\+In\+TS@{get\+Data\+Value\+In\+TS}!G\+K\+Base\+Object@{G\+K\+Base\+Object}}
+\subsubsection[{\texorpdfstring{get\+Data\+Value\+In\+T\+S(const G\+K\+Column $\ast$attr, G\+K\+Time\+Serie\+Index index, double $\ast$deviation=\+N\+U\+L\+L) const =0}{getDataValueInTS(const GKColumn *attr, GKTimeSerieIndex index, double *deviation=NULL) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual double G\+K\+Base\+Object\+::get\+Data\+Value\+In\+TS (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Column $\ast$}]{attr, }
+\item[{G\+K\+Time\+Serie\+Index}]{index, }
+\item[{double $\ast$}]{deviation = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classGKBaseObject_a60409cd3407257cde924579760db4ac9}{}\label{classGKBaseObject_a60409cd3407257cde924579760db4ac9}
+Get a value for a Time\+Serie or 0.\+0 if no value is found (no value for the index) and, optionally, its deviation 
+
+Implemented in \hyperlink{classGKObject_ae7b4508b5a12cc7165adae7ab40d3836}{G\+K\+Object}.
+
+\index{G\+K\+Base\+Object@{G\+K\+Base\+Object}!get\+Data\+Value\+In\+T\+S\+By\+ID@{get\+Data\+Value\+In\+T\+S\+By\+ID}}
+\index{get\+Data\+Value\+In\+T\+S\+By\+ID@{get\+Data\+Value\+In\+T\+S\+By\+ID}!G\+K\+Base\+Object@{G\+K\+Base\+Object}}
+\subsubsection[{\texorpdfstring{get\+Data\+Value\+In\+T\+S\+By\+I\+D(uint attr\+Id, G\+K\+Time\+Serie\+Index index, double $\ast$deviation=\+N\+U\+L\+L) const =0}{getDataValueInTSByID(uint attrId, GKTimeSerieIndex index, double *deviation=NULL) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual double G\+K\+Base\+Object\+::get\+Data\+Value\+In\+T\+S\+By\+ID (
+\begin{DoxyParamCaption}
+\item[{uint}]{attr\+Id, }
+\item[{G\+K\+Time\+Serie\+Index}]{index, }
+\item[{double $\ast$}]{deviation = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classGKBaseObject_ab95510cc5f255eab3d53003ee0100eb6}{}\label{classGKBaseObject_ab95510cc5f255eab3d53003ee0100eb6}
+Get a value for a Time\+Serie or 0.\+0 if no value is found (no value for the index) and, optionally, its deviation 
+
+Implemented in \hyperlink{classGKObject_ade795854307395ec3add6f01ff50c52a}{G\+K\+Object}.
+
+\index{G\+K\+Base\+Object@{G\+K\+Base\+Object}!get\+Data\+Value\+Object@{get\+Data\+Value\+Object}}
+\index{get\+Data\+Value\+Object@{get\+Data\+Value\+Object}!G\+K\+Base\+Object@{G\+K\+Base\+Object}}
+\subsubsection[{\texorpdfstring{get\+Data\+Value\+Object(const G\+K\+Column $\ast$attr, const G\+K\+Context \&context=\+G\+K\+Context\+::any\+Context) const =0}{getDataValueObject(const GKColumn *attr, const GKContext &context=GKContext::anyContext) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf G\+K\+Object}$\ast$ G\+K\+Base\+Object\+::get\+Data\+Value\+Object (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Column $\ast$}]{attr, }
+\item[{const {\bf G\+K\+Context} \&}]{context = {\ttfamily {\bf G\+K\+Context\+::any\+Context}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classGKBaseObject_a85b9abf441b0854648e884a88c25f0ba}{}\label{classGKBaseObject_a85b9abf441b0854648e884a88c25f0ba}
+See \hyperlink{classGKObject_a1a19168a7f85db37554ae5632a5e89a5}{G\+K\+Object\+::get\+Data\+Value\+Int} 
+
+Implemented in \hyperlink{classGKObject_a47e5fa225dbfce728bc1d45a9d742ab5}{G\+K\+Object}.
+
+\index{G\+K\+Base\+Object@{G\+K\+Base\+Object}!get\+Data\+Value\+Object\+By\+ID@{get\+Data\+Value\+Object\+By\+ID}}
+\index{get\+Data\+Value\+Object\+By\+ID@{get\+Data\+Value\+Object\+By\+ID}!G\+K\+Base\+Object@{G\+K\+Base\+Object}}
+\subsubsection[{\texorpdfstring{get\+Data\+Value\+Object\+By\+I\+D(uint attr\+Id, const G\+K\+Context \&context=\+G\+K\+Context\+::any\+Context) const =0}{getDataValueObjectByID(uint attrId, const GKContext &context=GKContext::anyContext) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf G\+K\+Object}$\ast$ G\+K\+Base\+Object\+::get\+Data\+Value\+Object\+By\+ID (
+\begin{DoxyParamCaption}
+\item[{uint}]{attr\+Id, }
+\item[{const {\bf G\+K\+Context} \&}]{context = {\ttfamily {\bf G\+K\+Context\+::any\+Context}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classGKBaseObject_a09d9039d3185b14fc0d5dd8e207b3c8d}{}\label{classGKBaseObject_a09d9039d3185b14fc0d5dd8e207b3c8d}
+See \hyperlink{classGKObject_a1a19168a7f85db37554ae5632a5e89a5}{G\+K\+Object\+::get\+Data\+Value\+Int} 
+
+Implemented in \hyperlink{classGKObject_a0107083f955e848f0e1af39f6a9e1263}{G\+K\+Object}.
+
+\index{G\+K\+Base\+Object@{G\+K\+Base\+Object}!get\+Data\+Value\+String@{get\+Data\+Value\+String}}
+\index{get\+Data\+Value\+String@{get\+Data\+Value\+String}!G\+K\+Base\+Object@{G\+K\+Base\+Object}}
+\subsubsection[{\texorpdfstring{get\+Data\+Value\+String(const G\+K\+Column $\ast$attr, const G\+K\+Context \&context=\+G\+K\+Context\+::any\+Context) const =0}{getDataValueString(const GKColumn *attr, const GKContext &context=GKContext::anyContext) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual Q\+String G\+K\+Base\+Object\+::get\+Data\+Value\+String (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Column $\ast$}]{attr, }
+\item[{const {\bf G\+K\+Context} \&}]{context = {\ttfamily {\bf G\+K\+Context\+::any\+Context}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classGKBaseObject_aa849b95c5b9e0556816edf4b4fa69487}{}\label{classGKBaseObject_aa849b95c5b9e0556816edf4b4fa69487}
+See \hyperlink{classGKObject_a1a19168a7f85db37554ae5632a5e89a5}{G\+K\+Object\+::get\+Data\+Value\+Int} 
+
+Implemented in \hyperlink{classGKObject_ab7ea66283fe3a7732da043262dff51e2}{G\+K\+Object}.
+
+\index{G\+K\+Base\+Object@{G\+K\+Base\+Object}!get\+Data\+Value\+String\+By\+ID@{get\+Data\+Value\+String\+By\+ID}}
+\index{get\+Data\+Value\+String\+By\+ID@{get\+Data\+Value\+String\+By\+ID}!G\+K\+Base\+Object@{G\+K\+Base\+Object}}
+\subsubsection[{\texorpdfstring{get\+Data\+Value\+String\+By\+I\+D(uint attr\+Id, const G\+K\+Context \&context=\+G\+K\+Context\+::any\+Context) const =0}{getDataValueStringByID(uint attrId, const GKContext &context=GKContext::anyContext) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual Q\+String G\+K\+Base\+Object\+::get\+Data\+Value\+String\+By\+ID (
+\begin{DoxyParamCaption}
+\item[{uint}]{attr\+Id, }
+\item[{const {\bf G\+K\+Context} \&}]{context = {\ttfamily {\bf G\+K\+Context\+::any\+Context}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classGKBaseObject_a75be29d474546eb09fb80aff39b631b3}{}\label{classGKBaseObject_a75be29d474546eb09fb80aff39b631b3}
+See \hyperlink{classGKObject_a1a19168a7f85db37554ae5632a5e89a5}{G\+K\+Object\+::get\+Data\+Value\+Int} 
+
+Implemented in \hyperlink{classGKObject_a6eabd8c4b25fb20094d075d986e94015}{G\+K\+Object}.
+
+\index{G\+K\+Base\+Object@{G\+K\+Base\+Object}!get\+Data\+Value\+Time@{get\+Data\+Value\+Time}}
+\index{get\+Data\+Value\+Time@{get\+Data\+Value\+Time}!G\+K\+Base\+Object@{G\+K\+Base\+Object}}
+\subsubsection[{\texorpdfstring{get\+Data\+Value\+Time(const G\+K\+Column $\ast$attr, const G\+K\+Context \&context=\+G\+K\+Context\+::any\+Context) const =0}{getDataValueTime(const GKColumn *attr, const GKContext &context=GKContext::anyContext) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual Q\+Time G\+K\+Base\+Object\+::get\+Data\+Value\+Time (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Column $\ast$}]{attr, }
+\item[{const {\bf G\+K\+Context} \&}]{context = {\ttfamily {\bf G\+K\+Context\+::any\+Context}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classGKBaseObject_a9fa2cdeb7eb1067b42583e76050bf8f6}{}\label{classGKBaseObject_a9fa2cdeb7eb1067b42583e76050bf8f6}
+See \hyperlink{classGKObject_a1a19168a7f85db37554ae5632a5e89a5}{G\+K\+Object\+::get\+Data\+Value\+Int} 
+
+Implemented in \hyperlink{classGKObject_a5d819751b84c1070389f1de5272b2653}{G\+K\+Object}.
+
+\index{G\+K\+Base\+Object@{G\+K\+Base\+Object}!get\+Data\+Value\+Time\+By\+ID@{get\+Data\+Value\+Time\+By\+ID}}
+\index{get\+Data\+Value\+Time\+By\+ID@{get\+Data\+Value\+Time\+By\+ID}!G\+K\+Base\+Object@{G\+K\+Base\+Object}}
+\subsubsection[{\texorpdfstring{get\+Data\+Value\+Time\+By\+I\+D(uint attr\+Id, const G\+K\+Context \&context=\+G\+K\+Context\+::any\+Context) const =0}{getDataValueTimeByID(uint attrId, const GKContext &context=GKContext::anyContext) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual Q\+Time G\+K\+Base\+Object\+::get\+Data\+Value\+Time\+By\+ID (
+\begin{DoxyParamCaption}
+\item[{uint}]{attr\+Id, }
+\item[{const {\bf G\+K\+Context} \&}]{context = {\ttfamily {\bf G\+K\+Context\+::any\+Context}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classGKBaseObject_ae9de00386b6b30c4c7156ef59cd44580}{}\label{classGKBaseObject_ae9de00386b6b30c4c7156ef59cd44580}
+See \hyperlink{classGKObject_a1a19168a7f85db37554ae5632a5e89a5}{G\+K\+Object\+::get\+Data\+Value\+Int} 
+
+Implemented in \hyperlink{classGKObject_a5debfef84c5b0a056ea69808bb70bf38}{G\+K\+Object}.
+
+\index{G\+K\+Base\+Object@{G\+K\+Base\+Object}!get\+Data\+Value\+Time\+Duration@{get\+Data\+Value\+Time\+Duration}}
+\index{get\+Data\+Value\+Time\+Duration@{get\+Data\+Value\+Time\+Duration}!G\+K\+Base\+Object@{G\+K\+Base\+Object}}
+\subsubsection[{\texorpdfstring{get\+Data\+Value\+Time\+Duration(const G\+K\+Column $\ast$attr, const G\+K\+Context \&context=\+G\+K\+Context\+::any\+Context) const =0}{getDataValueTimeDuration(const GKColumn *attr, const GKContext &context=GKContext::anyContext) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf G\+K\+Time\+Duration} G\+K\+Base\+Object\+::get\+Data\+Value\+Time\+Duration (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Column $\ast$}]{attr, }
+\item[{const {\bf G\+K\+Context} \&}]{context = {\ttfamily {\bf G\+K\+Context\+::any\+Context}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classGKBaseObject_a06de09433e3d78066030b74ca1e56f2d}{}\label{classGKBaseObject_a06de09433e3d78066030b74ca1e56f2d}
+See \hyperlink{classGKObject_a1a19168a7f85db37554ae5632a5e89a5}{G\+K\+Object\+::get\+Data\+Value\+Int} 
+
+Implemented in \hyperlink{classGKObject_aff1ecee68193a30729f70ad5e1179e8b}{G\+K\+Object}.
+
+\index{G\+K\+Base\+Object@{G\+K\+Base\+Object}!get\+Data\+Value\+Time\+Duration\+By\+ID@{get\+Data\+Value\+Time\+Duration\+By\+ID}}
+\index{get\+Data\+Value\+Time\+Duration\+By\+ID@{get\+Data\+Value\+Time\+Duration\+By\+ID}!G\+K\+Base\+Object@{G\+K\+Base\+Object}}
+\subsubsection[{\texorpdfstring{get\+Data\+Value\+Time\+Duration\+By\+I\+D(uint attr\+Id, const G\+K\+Context \&context=\+G\+K\+Context\+::any\+Context) const =0}{getDataValueTimeDurationByID(uint attrId, const GKContext &context=GKContext::anyContext) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf G\+K\+Time\+Duration} G\+K\+Base\+Object\+::get\+Data\+Value\+Time\+Duration\+By\+ID (
+\begin{DoxyParamCaption}
+\item[{uint}]{attr\+Id, }
+\item[{const {\bf G\+K\+Context} \&}]{context = {\ttfamily {\bf G\+K\+Context\+::any\+Context}}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classGKBaseObject_a468c98b71d1b4feff47f7d99a55d7ea1}{}\label{classGKBaseObject_a468c98b71d1b4feff47f7d99a55d7ea1}
+See \hyperlink{classGKObject_a1a19168a7f85db37554ae5632a5e89a5}{G\+K\+Object\+::get\+Data\+Value\+Int} 
+
+Implemented in \hyperlink{classGKObject_a2f659029f39e986a07632ee0ce85da9b}{G\+K\+Object}.
+
+\index{G\+K\+Base\+Object@{G\+K\+Base\+Object}!get\+Data\+Value\+TS@{get\+Data\+Value\+TS}}
+\index{get\+Data\+Value\+TS@{get\+Data\+Value\+TS}!G\+K\+Base\+Object@{G\+K\+Base\+Object}}
+\subsubsection[{\texorpdfstring{get\+Data\+Value\+T\+S(const G\+K\+Column $\ast$attr) const =0}{getDataValueTS(const GKColumn *attr) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual G\+K\+Time\+Serie$\ast$ G\+K\+Base\+Object\+::get\+Data\+Value\+TS (
+\begin{DoxyParamCaption}
+\item[{const G\+K\+Column $\ast$}]{attr}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classGKBaseObject_a655fa8e6246dab899e22a79c9fdbd6ec}{}\label{classGKBaseObject_a655fa8e6246dab899e22a79c9fdbd6ec}
+Get a Time\+Serie 
+
+Implemented in \hyperlink{classGKObject_ae5fa8b85141b85a1798b30410ecb7f55}{G\+K\+Object}.
+
+\index{G\+K\+Base\+Object@{G\+K\+Base\+Object}!get\+Data\+Value\+T\+S\+By\+ID@{get\+Data\+Value\+T\+S\+By\+ID}}
+\index{get\+Data\+Value\+T\+S\+By\+ID@{get\+Data\+Value\+T\+S\+By\+ID}!G\+K\+Base\+Object@{G\+K\+Base\+Object}}
+\subsubsection[{\texorpdfstring{get\+Data\+Value\+T\+S\+By\+I\+D(uint attr\+Id) const =0}{getDataValueTSByID(uint attrId) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual G\+K\+Time\+Serie$\ast$ G\+K\+Base\+Object\+::get\+Data\+Value\+T\+S\+By\+ID (
+\begin{DoxyParamCaption}
+\item[{uint}]{attr\+Id}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classGKBaseObject_ab20dd8504b580a37636e6b71fdaaa5cd}{}\label{classGKBaseObject_ab20dd8504b580a37636e6b71fdaaa5cd}
+Get a Time\+Serie 
+
+Implemented in \hyperlink{classGKObject_a2a8110072139986e2481f9d47bd929f8}{G\+K\+Object}.
+
+\index{G\+K\+Base\+Object@{G\+K\+Base\+Object}!get\+Id@{get\+Id}}
+\index{get\+Id@{get\+Id}!G\+K\+Base\+Object@{G\+K\+Base\+Object}}
+\subsubsection[{\texorpdfstring{get\+Id() const =0}{getId() const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual quint32 G\+K\+Base\+Object\+::get\+Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classGKBaseObject_a3399cf77ea1b1f9e12cd779a547df7d8}{}\label{classGKBaseObject_a3399cf77ea1b1f9e12cd779a547df7d8}
+Return the unique identifier of this object. 
+
+Implemented in \hyperlink{classGKObject_a7b4db3e163ac785ffa386b07dbba6eea}{G\+K\+Object}.
+
+\index{G\+K\+Base\+Object@{G\+K\+Base\+Object}!get\+Model@{get\+Model}}
+\index{get\+Model@{get\+Model}!G\+K\+Base\+Object@{G\+K\+Base\+Object}}
+\subsubsection[{\texorpdfstring{get\+Model() const =0}{getModel() const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual G\+K\+Model$\ast$ G\+K\+Base\+Object\+::get\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classGKBaseObject_ac277f8125f58f40abc059d648cd67978}{}\label{classGKBaseObject_ac277f8125f58f40abc059d648cd67978}
+Return the model of this object, 
+
+Implemented in \hyperlink{classGKObject_a3362b2e6a23016c44f366f8fef9eb72a}{G\+K\+Object}.
+
+\index{G\+K\+Base\+Object@{G\+K\+Base\+Object}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!G\+K\+Base\+Object@{G\+K\+Base\+Object}}
+\subsubsection[{\texorpdfstring{get\+Name() const =0}{getName() const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual const Q\+String\& G\+K\+Base\+Object\+::get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classGKBaseObject_ab7eb118912e83603c059300458282a5f}{}\label{classGKBaseObject_ab7eb118912e83603c059300458282a5f}
+The optional name of this object. 
+
+Implemented in \hyperlink{classGKObject_a4f5ba333d4cbe5c28a91088073faa6e0}{G\+K\+Object}.
+
+\index{G\+K\+Base\+Object@{G\+K\+Base\+Object}!get\+Python\+Version@{get\+Python\+Version}}
+\index{get\+Python\+Version@{get\+Python\+Version}!G\+K\+Base\+Object@{G\+K\+Base\+Object}}
+\subsubsection[{\texorpdfstring{get\+Python\+Version() const }{getPythonVersion() const }}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ G\+K\+Base\+Object\+::get\+Python\+Version (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKBaseObject_a41b254960f047a457ef059f71806eb6d}{}\label{classGKBaseObject_a41b254960f047a457ef059f71806eb6d}
+Returns a Python version of this object (if it has been set by G\+K\+System\+::get\+Python\+Object() \index{G\+K\+Base\+Object@{G\+K\+Base\+Object}!get\+Type\+External\+Name@{get\+Type\+External\+Name}}
+\index{get\+Type\+External\+Name@{get\+Type\+External\+Name}!G\+K\+Base\+Object@{G\+K\+Base\+Object}}
+\subsubsection[{\texorpdfstring{get\+Type\+External\+Name() const =0}{getTypeExternalName() const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual Q\+String G\+K\+Base\+Object\+::get\+Type\+External\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classGKBaseObject_af1f4d7d9900badfb98f70bd17a6dfa81}{}\label{classGKBaseObject_af1f4d7d9900badfb98f70bd17a6dfa81}
+The type external name of this object. Is equivalent to get\+Type()-\/$>$get\+External\+Name() 
+
+Implemented in \hyperlink{classGKObject_a7c36c406c513701b936759aedf6adfbc}{G\+K\+Object}.
+
+\index{G\+K\+Base\+Object@{G\+K\+Base\+Object}!get\+Type\+Name@{get\+Type\+Name}}
+\index{get\+Type\+Name@{get\+Type\+Name}!G\+K\+Base\+Object@{G\+K\+Base\+Object}}
+\subsubsection[{\texorpdfstring{get\+Type\+Name() const =0}{getTypeName() const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual Q\+String G\+K\+Base\+Object\+::get\+Type\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{classGKBaseObject_af7a70bb706e3d324e7f3992f0ee463c4}{}\label{classGKBaseObject_af7a70bb706e3d324e7f3992f0ee463c4}
+The type name of this object 
+
+Implemented in \hyperlink{classGKObject_a9b4135e10ab18e202dd71afe15018042}{G\+K\+Object}.
+
+\index{G\+K\+Base\+Object@{G\+K\+Base\+Object}!set\+Python\+Version@{set\+Python\+Version}}
+\index{set\+Python\+Version@{set\+Python\+Version}!G\+K\+Base\+Object@{G\+K\+Base\+Object}}
+\subsubsection[{\texorpdfstring{set\+Python\+Version(void $\ast$obj)}{setPythonVersion(void *obj)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+Base\+Object\+::set\+Python\+Version (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}\hypertarget{classGKBaseObject_a0b654ea3bcd0a04c255deb00a3ac8d46}{}\label{classGKBaseObject_a0b654ea3bcd0a04c255deb00a3ac8d46}
+Sets the Python version of this object (when calling G\+K\+System\+::get\+Python\+Object() ) 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/core/ang\+\_\+kernel/G\+K\+Base\+Object.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,35 @@
+\hypertarget{group__FlourishV2X}{}\section{Flourish V2X Plugin}
+\label{group__FlourishV2X}\index{Flourish V2\+X Plugin@{Flourish V2\+X Plugin}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classFlourishAP}{Flourish\+AP}
+\begin{DoxyCompactList}\small\item\em A non-\/mobile infrastructure. \end{DoxyCompactList}\item 
+class \hyperlink{classFlourishBroker}{Flourish\+Broker}
+\begin{DoxyCompactList}\small\item\em Supervise the framework operations. \end{DoxyCompactList}\item 
+class \hyperlink{classFlourishConnectedAgent}{Flourish\+Connected\+Agent}
+\begin{DoxyCompactList}\small\item\em A mobile agent. \end{DoxyCompactList}\item 
+class \hyperlink{classFlourishInfrastructureRulesEngine}{Flourish\+Infrastructure\+Rules\+Engine}
+\begin{DoxyCompactList}\small\item\em Takes decision for an infrastructure giving the received messages. \end{DoxyCompactList}\item 
+class \hyperlink{classFlourishV2XFramework}{Flourish\+V2\+X\+Framework}
+\begin{DoxyCompactList}\small\item\em Main framework class. \end{DoxyCompactList}\item 
+class \hyperlink{classFlourishVehicleRulesEngine}{Flourish\+Vehicle\+Rules\+Engine}
+\begin{DoxyCompactList}\small\item\em Takes decision for a vehicle giving the received messages. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Copyright T\+SS 2017
+
+The framework (based on \hyperlink{classV2XFramework}{V2\+X\+Framework}) aims to provide a platform to simulate communications between vehicles and between vehicles and stations. In the following, we will refer to \char`\"{}core\char`\"{} as everything inside Aimsun simulator, keeping a distinction between what is going on in this plugin and inside Aimsun.
+
+In the framework we have two main objects\+: a \hyperlink{classFlourishConnectedAgent}{Flourish\+Connected\+Agent}, which represents a vehicle, and \hyperlink{classFlourishAP}{Flourish\+AP}, which represents a static infrastructure. To enable V2V communication, each vehicle has internally a station. This means that a \hyperlink{classFlourishConnectedAgent}{Flourish\+Connected\+Agent} can be seen as a moving station. Therefore, we can say that the main components of the framework are mobile stations (\hyperlink{classFlourishConnectedAgent}{Flourish\+Connected\+Agent}) and fixed stations (\hyperlink{classFlourishAP}{Flourish\+AP}).
+
+Visually, in the Aimsun simulator, two main attributes are added to vehicles and access point\+: delay and error\+\_\+rate. Delay (in seconds) is the propagation delay of the associated channel; error\+\_\+rate is, instead, the probability of losing a packet, expressed in \%.
+
+They can be changed through the associated type (e.\+g., for access point right click on the access point, and then go to \char`\"{}\+Attribute\char`\"{} tab, for Vehicles go in Demand Data -\/ Vehicle -\/ and then right click on the vehicle class, and then go to \char`\"{}\+Attribute\char`\"{} tab).
+
+To learn about the internals, look at the documentation of the \hyperlink{classFlourishV2XFramework}{Flourish\+V2\+X\+Framework} class.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classFlourishV2XFramework}{Flourish\+V2\+X\+Framework} 
+\end{DoxySeeAlso}

@@ -1,0 +1,20 @@
+<map id="GenericLane" name="GenericLane">
+<area shape="rect" id="node2" href="$structOCTET__STRING.html" title="OCTET_STRING" alt="" coords="548,140,673,167"/>
+<area shape="rect" id="node3" href="$structasn__struct__ctx__s.html" title="asn_struct_ctx_s" alt="" coords="47,469,170,496"/>
+<area shape="rect" id="node4" href="$structConnectsToList.html" title="ConnectsToList" alt="" coords="879,247,993,273"/>
+<area shape="rect" id="node5" href="$structLaneAttributes.html" title="LaneAttributes" alt="" coords="1425,364,1532,391"/>
+<area shape="rect" id="node6" href="$structBIT__STRING__s.html" title="BIT_STRING_s" alt="" coords="363,443,478,469"/>
+<area shape="rect" id="node7" href="$structLaneTypeAttributes.html" title="LaneTypeAttributes" alt="" coords="1042,393,1177,420"/>
+<area shape="rect" id="node9" href="$structGenericLane_1_1GenericLane____regional.html" title="GenericLane::GenericLane\l__regional" alt="" coords="1225,11,1401,53"/>
+<area shape="rect" id="node10" href="$structOverlayLaneList.html" title="OverlayLaneList" alt="" coords="553,80,669,107"/>
+<area shape="rect" id="node11" href="$structNodeListXY.html" title="NodeListXY" alt="" coords="1433,637,1525,664"/>
+<area shape="rect" id="node13" href="$structComputedLane.html" title="ComputedLane" alt="" coords="721,675,831,701"/>
+<area shape="rect" id="node14" href="$structComputedLane_1_1ComputedLane____offsetYaxis.html" title="ComputedLane::ComputedLane\l__offsetYaxis" alt="" coords="317,790,524,831"/>
+<area shape="rect" id="node16" href="$structComputedLane_1_1ComputedLane____offsetXaxis.html" title="ComputedLane::ComputedLane\l__offsetXaxis" alt="" coords="317,725,524,766"/>
+<area shape="rect" id="node18" href="$structComputedLane_1_1ComputedLane____regional.html" title="ComputedLane::ComputedLane\l__regional" alt="" coords="317,595,524,637"/>
+<area shape="rect" id="node19" href="$structNodeSetXY.html" title="NodeSetXY" alt="" coords="565,584,656,611"/>
+<area shape="rect" id="node8" href="$unionLaneTypeAttributes_1_1LaneTypeAttributes__u.html" title="LaneTypeAttributes\l::LaneTypeAttributes_u" alt="" coords="697,409,855,450"/>
+<area shape="rect" id="node12" href="$unionNodeListXY_1_1NodeListXY__u.html" title="NodeListXY::NodeListXY_u" alt="" coords="1017,637,1201,664"/>
+<area shape="rect" id="node15" href="$unionComputedLane_1_1ComputedLane____offsetYaxis_1_1ComputedLane____offsetYaxis__u.html" title="ComputedLane::ComputedLane\l__offsetYaxis::ComputedLane\l__offsetYaxis_u" alt="" coords="5,876,212,932"/>
+<area shape="rect" id="node17" href="$unionComputedLane_1_1ComputedLane____offsetXaxis_1_1ComputedLane____offsetXaxis__u.html" title="ComputedLane::ComputedLane\l__offsetXaxis::ComputedLane\l__offsetXaxis_u" alt="" coords="5,773,212,829"/>
+</map>

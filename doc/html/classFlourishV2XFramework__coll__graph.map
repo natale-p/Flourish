@@ -1,0 +1,5 @@
+<map id="FlourishV2XFramework" name="FlourishV2XFramework">
+<area shape="rect" id="node2" href="$classV2XFramework.html" title="Interface for a generic V2XFramework. " alt="" coords="75,95,187,121"/>
+<area shape="rect" id="node3" href="$classADynamicAPI.html" title="A communication framework between Aimsun and an external plugin. " alt="" coords="5,5,111,32"/>
+<area shape="rect" id="node4" href="$classADynamicAPISetup.html" title="The interface between the internals of Aimsun with the outside. " alt="" coords="135,5,274,32"/>
+</map>

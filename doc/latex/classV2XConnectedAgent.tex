@@ -1,0 +1,233 @@
+\hypertarget{classV2XConnectedAgent}{}\section{V2\+X\+Connected\+Agent Class Reference}
+\label{classV2XConnectedAgent}\index{V2\+X\+Connected\+Agent@{V2\+X\+Connected\+Agent}}
+
+
+Represents a connected vehicle (e.\+g., a mobile station) in the framework.  
+
+
+
+
+{\ttfamily \#include $<$V2\+X\+Connected\+Agent.\+h$>$}
+
+
+
+Inheritance diagram for V2\+X\+Connected\+Agent\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{classV2XConnectedAgent__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for V2\+X\+Connected\+Agent\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{classV2XConnectedAgent__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classV2XConnectedAgent_a55bacb33165aa33c039420348cb0bfb8}{station\+Removed} (\hyperlink{classV2XSimpleAP}{V2\+X\+Simple\+AP} $\ast$station) Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\begin{DoxyCompactList}\small\item\em An AP has been removed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classV2XConnectedAgent_a0fb86143a5e3f672fd46df6eec4ec7d6}{V2\+X\+Connected\+Agent} (quint32 id\+Handler, D\+T\+A\+Veh $\ast$agent)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classV2XConnectedAgent_ade614f612bd195c7e3c06e4cb0d384e9}{$\sim$\+V2\+X\+Connected\+Agent} ()\hypertarget{classV2XConnectedAgent_ade614f612bd195c7e3c06e4cb0d384e9}{}\label{classV2XConnectedAgent_ade614f612bd195c7e3c06e4cb0d384e9}
+
+\begin{DoxyCompactList}\small\item\em Deconstructor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classV2XConnectedAgent_a3c7e42f33c9cb3c25cd2374063f151da}{get\+State} (double time, double time\+Sta) Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\begin{DoxyCompactList}\small\item\em Will be called by Aimsun simulator for every simulation step. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classV2XConnectedAgent_a771b23c38e5ac18d0219d4d8fefccb5a}{set\+State} (double time, double time\+Sta) Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\begin{DoxyCompactList}\small\item\em Will be called by Aimsun simulator for every simulation step. \end{DoxyCompactList}\item 
+virtual \hyperlink{classV2XNetworkPoint}{V2\+X\+Network\+Point} \hyperlink{classV2XConnectedAgent_a1bb1360e7658df70cd202e2dbde27d75}{get\+Position} () const Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\begin{DoxyCompactList}\small\item\em Get the position of the node. \end{DoxyCompactList}\item 
+void \hyperlink{classV2XConnectedAgent_a01b885f68dc2cd464b2900df5182c6b8}{update\+Links} ()\hypertarget{classV2XConnectedAgent_a01b885f68dc2cd464b2900df5182c6b8}{}\label{classV2XConnectedAgent_a01b885f68dc2cd464b2900df5182c6b8}
+
+\begin{DoxyCompactList}\small\item\em Try to update the active links. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual Q\+Set$<$ \hyperlink{classV2XNetworkNode}{V2\+X\+Network\+Node} $\ast$ $>$ \hyperlink{classV2XConnectedAgent_a409766a272c283572c6c441dcc881691}{get\+Nearest\+Stations} (const \hyperlink{classV2XNetworkNode}{V2\+X\+Network\+Node} $\ast$target) const =0
+\begin{DoxyCompactList}\small\item\em Get a set of station near the given station. \end{DoxyCompactList}\item 
+virtual Q\+Set$<$ \hyperlink{classV2XNetworkNode}{V2\+X\+Network\+Node} $\ast$ $>$ \hyperlink{classV2XConnectedAgent_a31b45665523ac20e2761a8fd046b2d54}{get\+Nearest\+Agent} (const \hyperlink{classV2XNetworkNode}{V2\+X\+Network\+Node} $\ast$station) const =0
+\begin{DoxyCompactList}\small\item\em Get a set of agent near the given station. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Represents a connected vehicle (e.\+g., a mobile station) in the framework. 
+
+Copyright T\+SS 2017
+
+Author\+: Natale Patriciello \href{mailto:natale.patriciello@aimsun.com}{\tt natale.\+patriciello@aimsun.\+com}
+
+The vehicle position is given by the Aimsun simulator. In this framework, it is managed the connection (and the disconnection) of the vehicle with others vehicles/infrastructures. This is done in a very transparent way, equipping the vehicle with an access point, that works like the \hyperlink{classV2XSimpleAP}{V2\+X\+Simple\+AP} object.
+
+The only difference is that it should maintain a list of the in-\/range vehicles and stations, because after each simulation step it is required to update the active links through a call to the method update\+Links.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classV2XConnectedAgent_a01b885f68dc2cd464b2900df5182c6b8}{update\+Links} 
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{V2\+X\+Connected\+Agent@{V2\+X\+Connected\+Agent}!V2\+X\+Connected\+Agent@{V2\+X\+Connected\+Agent}}
+\index{V2\+X\+Connected\+Agent@{V2\+X\+Connected\+Agent}!V2\+X\+Connected\+Agent@{V2\+X\+Connected\+Agent}}
+\subsubsection[{\texorpdfstring{V2\+X\+Connected\+Agent(quint32 id\+Handler, D\+T\+A\+Veh $\ast$agent)}{V2XConnectedAgent(quint32 idHandler, DTAVeh *agent)}}]{\setlength{\rightskip}{0pt plus 5cm}V2\+X\+Connected\+Agent\+::\+V2\+X\+Connected\+Agent (
+\begin{DoxyParamCaption}
+\item[{quint32}]{id\+Handler, }
+\item[{D\+T\+A\+Veh $\ast$}]{agent}
+\end{DoxyParamCaption}
+)}\hypertarget{classV2XConnectedAgent_a0fb86143a5e3f672fd46df6eec4ec7d6}{}\label{classV2XConnectedAgent_a0fb86143a5e3f672fd46df6eec4ec7d6}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id\+Handler} & Id of the agent (should be unique) \\
+\hline
+{\em agent} & Opaque pointer representing the agent inside Aimsun \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{V2\+X\+Connected\+Agent@{V2\+X\+Connected\+Agent}!get\+Nearest\+Agent@{get\+Nearest\+Agent}}
+\index{get\+Nearest\+Agent@{get\+Nearest\+Agent}!V2\+X\+Connected\+Agent@{V2\+X\+Connected\+Agent}}
+\subsubsection[{\texorpdfstring{get\+Nearest\+Agent(const V2\+X\+Network\+Node $\ast$station) const =0}{getNearestAgent(const V2XNetworkNode *station) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual Q\+Set$<${\bf V2\+X\+Network\+Node}$\ast$$>$ V2\+X\+Connected\+Agent\+::get\+Nearest\+Agent (
+\begin{DoxyParamCaption}
+\item[{const {\bf V2\+X\+Network\+Node} $\ast$}]{station}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\hypertarget{classV2XConnectedAgent_a31b45665523ac20e2761a8fd046b2d54}{}\label{classV2XConnectedAgent_a31b45665523ac20e2761a8fd046b2d54}
+
+
+Get a set of agent near the given station. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em station} & station \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a set of agents for which the given position is in the communication range 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classFlourishConnectedAgent_aeb5036c489cc2084fce1a4f49f7a2eda}{Flourish\+Connected\+Agent}.
+
+\index{V2\+X\+Connected\+Agent@{V2\+X\+Connected\+Agent}!get\+Nearest\+Stations@{get\+Nearest\+Stations}}
+\index{get\+Nearest\+Stations@{get\+Nearest\+Stations}!V2\+X\+Connected\+Agent@{V2\+X\+Connected\+Agent}}
+\subsubsection[{\texorpdfstring{get\+Nearest\+Stations(const V2\+X\+Network\+Node $\ast$target) const =0}{getNearestStations(const V2XNetworkNode *target) const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual Q\+Set$<${\bf V2\+X\+Network\+Node}$\ast$$>$ V2\+X\+Connected\+Agent\+::get\+Nearest\+Stations (
+\begin{DoxyParamCaption}
+\item[{const {\bf V2\+X\+Network\+Node} $\ast$}]{target}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\hypertarget{classV2XConnectedAgent_a409766a272c283572c6c441dcc881691}{}\label{classV2XConnectedAgent_a409766a272c283572c6c441dcc881691}
+
+
+Get a set of station near the given station. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & target station \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a set of station for which the given position is in the communication range 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classFlourishConnectedAgent_adff45e8deedae13a9eadd63690be58ca}{Flourish\+Connected\+Agent}.
+
+\index{V2\+X\+Connected\+Agent@{V2\+X\+Connected\+Agent}!get\+Position@{get\+Position}}
+\index{get\+Position@{get\+Position}!V2\+X\+Connected\+Agent@{V2\+X\+Connected\+Agent}}
+\subsubsection[{\texorpdfstring{get\+Position() const Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE}{getPosition() const Q_DECL_OVERRIDE}}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf V2\+X\+Network\+Point} V2\+X\+Connected\+Agent\+::get\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classV2XConnectedAgent_a1bb1360e7658df70cd202e2dbde27d75}{}\label{classV2XConnectedAgent_a1bb1360e7658df70cd202e2dbde27d75}
+
+
+Get the position of the node. 
+
+\begin{DoxyReturn}{Returns}
+the position of the node 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classV2XSimpleAP_ad83fd3c047d9fef2e88c54297171106f}{V2\+X\+Simple\+AP}.
+
+\index{V2\+X\+Connected\+Agent@{V2\+X\+Connected\+Agent}!get\+State@{get\+State}}
+\index{get\+State@{get\+State}!V2\+X\+Connected\+Agent@{V2\+X\+Connected\+Agent}}
+\subsubsection[{\texorpdfstring{get\+State(double time, double time\+Sta) Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE}{getState(double time, double timeSta) Q_DECL_OVERRIDE}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void V2\+X\+Connected\+Agent\+::get\+State (
+\begin{DoxyParamCaption}
+\item[{double}]{time, }
+\item[{double}]{time\+Sta}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classV2XConnectedAgent_a3c7e42f33c9cb3c25cd2374063f151da}{}\label{classV2XConnectedAgent_a3c7e42f33c9cb3c25cd2374063f151da}
+
+
+Will be called by Aimsun simulator for every simulation step. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Simulation time \\
+\hline
+{\em time\+Sta} & Time from 00\+:00.\+00 (midnight) of the current day \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classADynamicAgent_a44aacef8be0302f2edc528a6b96168f7}{A\+Dynamic\+Agent}.
+
+\index{V2\+X\+Connected\+Agent@{V2\+X\+Connected\+Agent}!set\+State@{set\+State}}
+\index{set\+State@{set\+State}!V2\+X\+Connected\+Agent@{V2\+X\+Connected\+Agent}}
+\subsubsection[{\texorpdfstring{set\+State(double time, double time\+Sta) Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE}{setState(double time, double timeSta) Q_DECL_OVERRIDE}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void V2\+X\+Connected\+Agent\+::set\+State (
+\begin{DoxyParamCaption}
+\item[{double}]{time, }
+\item[{double}]{time\+Sta}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classV2XConnectedAgent_a771b23c38e5ac18d0219d4d8fefccb5a}{}\label{classV2XConnectedAgent_a771b23c38e5ac18d0219d4d8fefccb5a}
+
+
+Will be called by Aimsun simulator for every simulation step. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & Simulation time \\
+\hline
+{\em time\+Sta} & Time from 00\+:00.\+00 (midnight) of the current day \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classADynamicAgent_ae52606684f790a26d46861ea21e932e7}{A\+Dynamic\+Agent}.
+
+\index{V2\+X\+Connected\+Agent@{V2\+X\+Connected\+Agent}!station\+Removed@{station\+Removed}}
+\index{station\+Removed@{station\+Removed}!V2\+X\+Connected\+Agent@{V2\+X\+Connected\+Agent}}
+\subsubsection[{\texorpdfstring{station\+Removed}{stationRemoved}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void V2\+X\+Connected\+Agent\+::station\+Removed (
+\begin{DoxyParamCaption}
+\item[{{\bf V2\+X\+Simple\+AP} $\ast$}]{station}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [slot]}}\hypertarget{classV2XConnectedAgent_a55bacb33165aa33c039420348cb0bfb8}{}\label{classV2XConnectedAgent_a55bacb33165aa33c039420348cb0bfb8}
+
+
+An AP has been removed. 
+
+This can be called because a AP we were connected to is being destroyed (e.\+g., it is leaving the network).
+
+
+\begin{DoxyParams}{Parameters}
+{\em station} & AP which is about to be removed \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/aimsun\+\_\+extensions/\+V2\+X\+Framework/V2\+X\+Connected\+Agent.\+h\end{DoxyCompactItemize}

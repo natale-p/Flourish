@@ -1,0 +1,181 @@
+\hypertarget{classFlourishConnectedAgent}{}\section{Flourish\+Connected\+Agent Class Reference}
+\label{classFlourishConnectedAgent}\index{Flourish\+Connected\+Agent@{Flourish\+Connected\+Agent}}
+
+
+A mobile agent.  
+
+
+
+
+{\ttfamily \#include $<$Flourish\+Connected\+Agent.\+h$>$}
+
+
+
+Inheritance diagram for Flourish\+Connected\+Agent\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{classFlourishConnectedAgent__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Flourish\+Connected\+Agent\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{classFlourishConnectedAgent__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classFlourishConnectedAgent_a9414c27bf61777bb62a7e4c565026166}{received} (const Q\+Pointer$<$ \hyperlink{classNetDevice}{Net\+Device} $>$ \&device, const Q\+Shared\+Pointer$<$ const \hyperlink{group__V2XFramework_ga1b82bfc289dbcb9aced56200d7abc964}{Packet} $>$ \&packet, const Address \&addr) Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\begin{DoxyCompactList}\small\item\em A message has been received. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classFlourishConnectedAgent_a646f686674873a927b3c1c2c570dbb67}{Flourish\+Connected\+Agent} (quint32 idhandler, D\+T\+A\+Veh $\ast$agent, \hyperlink{classFlourishBroker}{Flourish\+Broker} $\ast$broker, \hyperlink{classADynamicAPISetup}{A\+Dynamic\+A\+P\+I\+Setup} \&setup)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual Packet\+Pointer\+List \hyperlink{classFlourishConnectedAgent_a054a54d45a3f198d6f905f7e1aa87455}{generate\+Message} () Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\begin{DoxyCompactList}\small\item\em Generate messages to be transmitted. \end{DoxyCompactList}\item 
+Q\+Set$<$ \hyperlink{classV2XNetworkNode}{V2\+X\+Network\+Node} $\ast$ $>$ \hyperlink{classFlourishConnectedAgent_adff45e8deedae13a9eadd63690be58ca}{get\+Nearest\+Stations} (const \hyperlink{classV2XNetworkNode}{V2\+X\+Network\+Node} $\ast$target) const Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\begin{DoxyCompactList}\small\item\em Get a set of station near the given station. \end{DoxyCompactList}\item 
+Q\+Set$<$ \hyperlink{classV2XNetworkNode}{V2\+X\+Network\+Node} $\ast$ $>$ \hyperlink{classFlourishConnectedAgent_aeb5036c489cc2084fce1a4f49f7a2eda}{get\+Nearest\+Agent} (const \hyperlink{classV2XNetworkNode}{V2\+X\+Network\+Node} $\ast$station) const Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE
+\begin{DoxyCompactList}\small\item\em Get a set of agent near the given station. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A mobile agent. 
+
+When it receives a message, the method received is invoked, and then the correspondent methods of \hyperlink{classFlourishVehicleRulesEngine}{Flourish\+Vehicle\+Rules\+Engine} are called. In particular, right now are managed \hyperlink{structCAM}{C\+AM}, \hyperlink{structDENM}{D\+E\+NM}, and \hyperlink{structSPATEM}{S\+P\+A\+T\+EM} messages.
+
+To generate a message, use the method generate\+Message, that should return a list of messages to transmit. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Flourish\+Connected\+Agent@{Flourish\+Connected\+Agent}!Flourish\+Connected\+Agent@{Flourish\+Connected\+Agent}}
+\index{Flourish\+Connected\+Agent@{Flourish\+Connected\+Agent}!Flourish\+Connected\+Agent@{Flourish\+Connected\+Agent}}
+\subsubsection[{\texorpdfstring{Flourish\+Connected\+Agent(quint32 idhandler, D\+T\+A\+Veh $\ast$agent, Flourish\+Broker $\ast$broker, A\+Dynamic\+A\+P\+I\+Setup \&setup)}{FlourishConnectedAgent(quint32 idhandler, DTAVeh *agent, FlourishBroker *broker, ADynamicAPISetup &setup)}}]{\setlength{\rightskip}{0pt plus 5cm}Flourish\+Connected\+Agent\+::\+Flourish\+Connected\+Agent (
+\begin{DoxyParamCaption}
+\item[{quint32}]{idhandler, }
+\item[{D\+T\+A\+Veh $\ast$}]{agent, }
+\item[{{\bf Flourish\+Broker} $\ast$}]{broker, }
+\item[{{\bf A\+Dynamic\+A\+P\+I\+Setup} \&}]{setup}
+\end{DoxyParamCaption}
+)}\hypertarget{classFlourishConnectedAgent_a646f686674873a927b3c1c2c570dbb67}{}\label{classFlourishConnectedAgent_a646f686674873a927b3c1c2c570dbb67}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em idhandler} & id of the agent \\
+\hline
+{\em agent} & opaque pointer to the agent \\
+\hline
+{\em broker} & the broker \\
+\hline
+{\em setup} & the A\+PI setup\\
+\hline
+\end{DoxyParams}
+Copyright T\+SS 2017
+
+Author\+: Natale Patriciello \href{mailto:natale.patriciello@aimsun.com}{\tt natale.\+patriciello@aimsun.\+com} 
+
+\subsection{Member Function Documentation}
+\index{Flourish\+Connected\+Agent@{Flourish\+Connected\+Agent}!generate\+Message@{generate\+Message}}
+\index{generate\+Message@{generate\+Message}!Flourish\+Connected\+Agent@{Flourish\+Connected\+Agent}}
+\subsubsection[{\texorpdfstring{generate\+Message() Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE}{generateMessage() Q_DECL_OVERRIDE}}]{\setlength{\rightskip}{0pt plus 5cm}Packet\+Pointer\+List Flourish\+Connected\+Agent\+::generate\+Message (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classFlourishConnectedAgent_a054a54d45a3f198d6f905f7e1aa87455}{}\label{classFlourishConnectedAgent_a054a54d45a3f198d6f905f7e1aa87455}
+
+
+Generate messages to be transmitted. 
+
+\begin{DoxyReturn}{Returns}
+A list of messages 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classV2XSimpleAP_a7dd6286913001eb2554dee16693e8def}{V2\+X\+Simple\+AP}.
+
+\index{Flourish\+Connected\+Agent@{Flourish\+Connected\+Agent}!get\+Nearest\+Agent@{get\+Nearest\+Agent}}
+\index{get\+Nearest\+Agent@{get\+Nearest\+Agent}!Flourish\+Connected\+Agent@{Flourish\+Connected\+Agent}}
+\subsubsection[{\texorpdfstring{get\+Nearest\+Agent(const V2\+X\+Network\+Node $\ast$station) const Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE}{getNearestAgent(const V2XNetworkNode *station) const Q_DECL_OVERRIDE}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Set$<$ {\bf V2\+X\+Network\+Node} $\ast$ $>$ Flourish\+Connected\+Agent\+::get\+Nearest\+Agent (
+\begin{DoxyParamCaption}
+\item[{const {\bf V2\+X\+Network\+Node} $\ast$}]{station}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classFlourishConnectedAgent_aeb5036c489cc2084fce1a4f49f7a2eda}{}\label{classFlourishConnectedAgent_aeb5036c489cc2084fce1a4f49f7a2eda}
+
+
+Get a set of agent near the given station. 
+
+If the agents are n, the cost of this function is O(n). 
+\begin{DoxyParams}{Parameters}
+{\em station} & station \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a set of agents for which the given position is in the communication range 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classV2XConnectedAgent_a31b45665523ac20e2761a8fd046b2d54}{V2\+X\+Connected\+Agent}.
+
+\index{Flourish\+Connected\+Agent@{Flourish\+Connected\+Agent}!get\+Nearest\+Stations@{get\+Nearest\+Stations}}
+\index{get\+Nearest\+Stations@{get\+Nearest\+Stations}!Flourish\+Connected\+Agent@{Flourish\+Connected\+Agent}}
+\subsubsection[{\texorpdfstring{get\+Nearest\+Stations(const V2\+X\+Network\+Node $\ast$target) const Q\+\_\+\+D\+E\+C\+L\+\_\+\+O\+V\+E\+R\+R\+I\+DE}{getNearestStations(const V2XNetworkNode *target) const Q_DECL_OVERRIDE}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Set$<$ {\bf V2\+X\+Network\+Node} $\ast$ $>$ Flourish\+Connected\+Agent\+::get\+Nearest\+Stations (
+\begin{DoxyParamCaption}
+\item[{const {\bf V2\+X\+Network\+Node} $\ast$}]{target}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classFlourishConnectedAgent_adff45e8deedae13a9eadd63690be58ca}{}\label{classFlourishConnectedAgent_adff45e8deedae13a9eadd63690be58ca}
+
+
+Get a set of station near the given station. 
+
+If the position are m, the cost of this function is O(m). 
+\begin{DoxyParams}{Parameters}
+{\em target} & target station \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a set of station for which the given position is in the communication range 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classV2XConnectedAgent_a409766a272c283572c6c441dcc881691}{V2\+X\+Connected\+Agent}.
+
+\index{Flourish\+Connected\+Agent@{Flourish\+Connected\+Agent}!received@{received}}
+\index{received@{received}!Flourish\+Connected\+Agent@{Flourish\+Connected\+Agent}}
+\subsubsection[{\texorpdfstring{received}{received}}]{\setlength{\rightskip}{0pt plus 5cm}void Flourish\+Connected\+Agent\+::received (
+\begin{DoxyParamCaption}
+\item[{const Q\+Pointer$<$ {\bf Net\+Device} $>$ \&}]{device, }
+\item[{const Q\+Shared\+Pointer$<$ const {\bf Packet} $>$ \&}]{packet, }
+\item[{const Address \&}]{addr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [slot]}}\hypertarget{classFlourishConnectedAgent_a9414c27bf61777bb62a7e4c565026166}{}\label{classFlourishConnectedAgent_a9414c27bf61777bb62a7e4c565026166}
+
+
+A message has been received. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & Device which has received the message \\
+\hline
+{\em packet} & Packet received \\
+\hline
+{\em addr} & Source address \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+plugins/\+Flourish\+V2\+X\+Framework/Flourish\+Connected\+Agent.\+h\item 
+plugins/\+Flourish\+V2\+X\+Framework/Flourish\+Connected\+Agent.\+cpp\end{DoxyCompactItemize}

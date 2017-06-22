@@ -1,0 +1,228 @@
+\hypertarget{classGKDPoint}{}\section{G\+K\+D\+Point Class Reference}
+\label{classGKDPoint}\index{G\+K\+D\+Point@{G\+K\+D\+Point}}
+
+
+A 3D drawable point.  
+
+
+
+
+{\ttfamily \#include $<$G\+K\+D\+Point.\+h$>$}
+
+
+
+Inheritance diagram for G\+K\+D\+Point\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=165pt]{classGKDPoint__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for G\+K\+D\+Point\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{classGKDPoint__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{classGKPoint}{G\+K\+Point} \& \hyperlink{classGKDPoint_a93744bf162b5ea36d572a68433090ebe}{get\+Position} () const 
+\item 
+virtual void \hyperlink{classGKDPoint_a22f3dd78801702908e899ca1874f0a9b}{set\+Position} (const \hyperlink{classGKPoint}{G\+K\+Point} \&p)
+\item 
+virtual void \hyperlink{classGKDPoint_a6a55158b066bf07aab414ea8ef097a01}{translate} (const \hyperlink{classGKPoint}{G\+K\+Point} \&delta)
+\item 
+virtual void \hyperlink{classGKDPoint_a143039d0ae0e60288bc15000439c2e24}{rotate} (const \hyperlink{classGKPoint}{G\+K\+Point} \&center, double angle)
+\item 
+virtual G\+K\+Coord \hyperlink{classGKDPoint_a07b4a81c0a38724e5a3a9799fa877356}{get\+Altitude} () const 
+\item 
+virtual void \hyperlink{classGKDPoint_aadbf5a3105ea433e45b6d7368854cc22}{set\+Altitude} (G\+K\+Coord value)
+\item 
+void \hyperlink{classGKDPoint_a4dca6911aa558b7002801cfc2be10af0}{store} (G\+K\+Data\+Stream \&s)\hypertarget{classGKDPoint_a4dca6911aa558b7002801cfc2be10af0}{}\label{classGKDPoint_a4dca6911aa558b7002801cfc2be10af0}
+
+\begin{DoxyCompactList}\small\item\em Stores the object in a file. \end{DoxyCompactList}\item 
+void \hyperlink{classGKDPoint_aa10dedae2a3d877bd94b1b7bdbe7f0c1}{restore} (G\+K\+Data\+Stream \&s)\hypertarget{classGKDPoint_aa10dedae2a3d877bd94b1b7bdbe7f0c1}{}\label{classGKDPoint_aa10dedae2a3d877bd94b1b7bdbe7f0c1}
+
+\begin{DoxyCompactList}\small\item\em Restores the object from a file. \end{DoxyCompactList}\item 
+void \hyperlink{classGKDPoint_a43415f7118e37f8e495c5b484565902e}{post\+Restore} (G\+K\+Data\+Stream \&s)
+\item 
+virtual void \hyperlink{classGKDPoint_a72ec8ba93733d4dd9eea7ee0eed6ade5}{accept\+Visitor} (G\+K\+Visitor \&visitor)
+\item 
+virtual void \hyperlink{classGKDPoint_afa6a3ce0476ed68257e7864e701856dd}{accept\+Visitor} (G\+K\+Visitor \&visitor) const 
+\item 
+virtual G\+K\+Object\+Compare\+Data \hyperlink{classGKDPoint_a0dc57d1512d6eae6ffff4e3a4e2d3df5}{compare} (const \hyperlink{classGKObject}{G\+K\+Object} $\ast$obj) const 
+\item 
+virtual void \hyperlink{classGKDPoint_ab4d850cf7e7b89001b851f13ef1e292f}{store\+X\+ML} (G\+K\+Text\+Stream \&s)\hypertarget{classGKDPoint_ab4d850cf7e7b89001b851f13ef1e292f}{}\label{classGKDPoint_ab4d850cf7e7b89001b851f13ef1e292f}
+
+\begin{DoxyCompactList}\small\item\em Stores the object in a file. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classGKDPoint_a6744505094d40f1d02c591e3f5578c15}{restore\+X\+ML} (G\+K\+Text\+Stream \&s, Q\+Dom\+Node \&node)\hypertarget{classGKDPoint_a6744505094d40f1d02c591e3f5578c15}{}\label{classGKDPoint_a6744505094d40f1d02c591e3f5578c15}
+
+\begin{DoxyCompactList}\small\item\em Restores the object from a file. \end{DoxyCompactList}\item 
+virtual \hyperlink{classGKObject}{G\+K\+Object} $\ast$ \hyperlink{classGKDPoint_a8289d0a5357e581c7a0450f8fa649ecd}{clone} (bool add\+It\+To\+Model=true) const 
+\item 
+virtual \hyperlink{classGKBBox}{G\+K\+B\+Box} \hyperlink{classGKDPoint_a80b5a875f922428266ba7922b78c6f99}{get\+B\+Box} () const \hypertarget{classGKDPoint_a80b5a875f922428266ba7922b78c6f99}{}\label{classGKDPoint_a80b5a875f922428266ba7922b78c6f99}
+
+\begin{DoxyCompactList}\small\item\em Gets the bbox of this object. The default implementation returns an undefined \hyperlink{classGKBBox}{G\+K\+B\+Box}. \end{DoxyCompactList}\item 
+virtual G\+K\+Object\+Del\+Cmd $\ast$ \hyperlink{classGKDPoint_a7d0d52055586cf5807d1db051c0eea1f}{get\+Del\+Cmd} ()
+\item 
+bool {\bfseries to\+Json} (G\+K\+J\+Son\+Storer \&context, G\+K\+Json\+Object\+Parts \&parts) const \hypertarget{classGKDPoint_ad8b232eaf70581016b53ba501d9870e3}{}\label{classGKDPoint_ad8b232eaf70581016b53ba501d9870e3}
+
+\item 
+bool {\bfseries from\+Json} (G\+K\+J\+Son\+Storer \&context, const G\+K\+Json\+Object\+Parts \&parts)\hypertarget{classGKDPoint_ad731f6f44093b6f3a9920468748a5ae9}{}\label{classGKDPoint_ad731f6f44093b6f3a9920468748a5ae9}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A 3D drawable point. 
+
+A 3D point that can be drawn in a view. Note that this is different from a \hyperlink{classGKPoint}{G\+K\+Point}, this one is a full \hyperlink{classGKObject}{G\+K\+Object} with support for extensible data (new attributes), editors, drawers... The \hyperlink{classGKPoint}{G\+K\+Point} is the generic definition of a point (the coordinates). 
+
+\subsection{Member Function Documentation}
+\index{G\+K\+D\+Point@{G\+K\+D\+Point}!accept\+Visitor@{accept\+Visitor}}
+\index{accept\+Visitor@{accept\+Visitor}!G\+K\+D\+Point@{G\+K\+D\+Point}}
+\subsubsection[{\texorpdfstring{accept\+Visitor(\+G\+K\+Visitor \&visitor)}{acceptVisitor(GKVisitor &visitor)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+K\+D\+Point\+::accept\+Visitor (
+\begin{DoxyParamCaption}
+\item[{G\+K\+Visitor \&}]{visitor}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKDPoint_a72ec8ba93733d4dd9eea7ee0eed6ade5}{}\label{classGKDPoint_a72ec8ba93733d4dd9eea7ee0eed6ade5}
+Accept visitor method. See G\+K\+Visitor class. 
+
+Reimplemented from \hyperlink{classGKGeoObject_a7ba7ef1150e1b27c41b47b21c738b52a}{G\+K\+Geo\+Object}.
+
+\index{G\+K\+D\+Point@{G\+K\+D\+Point}!accept\+Visitor@{accept\+Visitor}}
+\index{accept\+Visitor@{accept\+Visitor}!G\+K\+D\+Point@{G\+K\+D\+Point}}
+\subsubsection[{\texorpdfstring{accept\+Visitor(\+G\+K\+Visitor \&visitor) const }{acceptVisitor(GKVisitor &visitor) const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+K\+D\+Point\+::accept\+Visitor (
+\begin{DoxyParamCaption}
+\item[{G\+K\+Visitor \&}]{visitor}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKDPoint_afa6a3ce0476ed68257e7864e701856dd}{}\label{classGKDPoint_afa6a3ce0476ed68257e7864e701856dd}
+Accept visitor method (const version). See G\+K\+Visitor class. 
+
+Reimplemented from \hyperlink{classGKGeoObject_a8098da83ef0177983da38f045281cfa5}{G\+K\+Geo\+Object}.
+
+\index{G\+K\+D\+Point@{G\+K\+D\+Point}!clone@{clone}}
+\index{clone@{clone}!G\+K\+D\+Point@{G\+K\+D\+Point}}
+\subsubsection[{\texorpdfstring{clone(bool add\+It\+To\+Model=true) const }{clone(bool addItToModel=true) const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf G\+K\+Object}$\ast$ G\+K\+D\+Point\+::clone (
+\begin{DoxyParamCaption}
+\item[{bool}]{add\+It\+To\+Model = {\ttfamily true}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKDPoint_a8289d0a5357e581c7a0450f8fa649ecd}{}\label{classGKDPoint_a8289d0a5357e581c7a0450f8fa649ecd}
+Returns a clone of this object (minus the ID that will be different). The cloned object will be added to the model (it will be created using the G\+K\+System\+::new\+Object call. 
+
+Reimplemented from \hyperlink{classGKGeoObject_a342c5d7928c3c4e82cc44240078d4e27}{G\+K\+Geo\+Object}.
+
+
+
+Reimplemented in \hyperlink{classGKCircle_a2b820f2a2970c26fc00d551a928666c5}{G\+K\+Circle}.
+
+\index{G\+K\+D\+Point@{G\+K\+D\+Point}!compare@{compare}}
+\index{compare@{compare}!G\+K\+D\+Point@{G\+K\+D\+Point}}
+\subsubsection[{\texorpdfstring{compare(const G\+K\+Object $\ast$obj) const }{compare(const GKObject *obj) const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual G\+K\+Object\+Compare\+Data G\+K\+D\+Point\+::compare (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Object} $\ast$}]{obj}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKDPoint_a0dc57d1512d6eae6ffff4e3a4e2d3df5}{}\label{classGKDPoint_a0dc57d1512d6eae6ffff4e3a4e2d3df5}
+Compare this object with \char`\"{}obj\char`\"{}. Return a list of attributes that are different. The ID is not compared. 
+
+Reimplemented from \hyperlink{classGKGeoObject_aec2c201cfcc6e9740bbe67875f0aeb5c}{G\+K\+Geo\+Object}.
+
+\index{G\+K\+D\+Point@{G\+K\+D\+Point}!get\+Altitude@{get\+Altitude}}
+\index{get\+Altitude@{get\+Altitude}!G\+K\+D\+Point@{G\+K\+D\+Point}}
+\subsubsection[{\texorpdfstring{get\+Altitude() const }{getAltitude() const }}]{\setlength{\rightskip}{0pt plus 5cm}virtual G\+K\+Coord G\+K\+D\+Point\+::get\+Altitude (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKDPoint_a07b4a81c0a38724e5a3a9799fa877356}{}\label{classGKDPoint_a07b4a81c0a38724e5a3a9799fa877356}
+Returns the altitud. This corresponds to the z coordinate of the point . 
+
+Reimplemented from \hyperlink{classGKGeoObject_afcd83963b4e1eab7d5401cfc268ed4d2}{G\+K\+Geo\+Object}.
+
+\index{G\+K\+D\+Point@{G\+K\+D\+Point}!get\+Del\+Cmd@{get\+Del\+Cmd}}
+\index{get\+Del\+Cmd@{get\+Del\+Cmd}!G\+K\+D\+Point@{G\+K\+D\+Point}}
+\subsubsection[{\texorpdfstring{get\+Del\+Cmd()}{getDelCmd()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual G\+K\+Object\+Del\+Cmd$\ast$ G\+K\+D\+Point\+::get\+Del\+Cmd (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKDPoint_a7d0d52055586cf5807d1db051c0eea1f}{}\label{classGKDPoint_a7d0d52055586cf5807d1db051c0eea1f}
+Object will be deleted. The user must write a suitable G\+K\+Object\+Del\+Cmd subclass and return it in this method. The implementation in this class returns a G\+K\+Object\+Del\+Cmd as it is (it removes the object from the G\+K\+Model and delete it if needed after command destruction, removes the object from the G\+K\+Geo\+Model and removes connections to it). 
+
+Reimplemented from \hyperlink{classGKObject_ac4a47dac5d37a254e97bee6946c755b7}{G\+K\+Object}.
+
+
+
+Reimplemented in \hyperlink{classGKCircle_ac7a927ddee87c516bb0764c38d937364}{G\+K\+Circle}.
+
+\index{G\+K\+D\+Point@{G\+K\+D\+Point}!get\+Position@{get\+Position}}
+\index{get\+Position@{get\+Position}!G\+K\+D\+Point@{G\+K\+D\+Point}}
+\subsubsection[{\texorpdfstring{get\+Position() const }{getPosition() const }}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf G\+K\+Point}\& G\+K\+D\+Point\+::get\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classGKDPoint_a93744bf162b5ea36d572a68433090ebe}{}\label{classGKDPoint_a93744bf162b5ea36d572a68433090ebe}
+The coordinates of the object \index{G\+K\+D\+Point@{G\+K\+D\+Point}!post\+Restore@{post\+Restore}}
+\index{post\+Restore@{post\+Restore}!G\+K\+D\+Point@{G\+K\+D\+Point}}
+\subsubsection[{\texorpdfstring{post\+Restore(\+G\+K\+Data\+Stream \&s)}{postRestore(GKDataStream &s)}}]{\setlength{\rightskip}{0pt plus 5cm}void G\+K\+D\+Point\+::post\+Restore (
+\begin{DoxyParamCaption}
+\item[{G\+K\+Data\+Stream \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKDPoint_a43415f7118e37f8e495c5b484565902e}{}\label{classGKDPoint_a43415f7118e37f8e495c5b484565902e}
+All the objects have been restored. Use this call to perform any additional operation that cannot be done in the restore method (maybe requires an object that will be restored after this one).
+
+This method is evaluated using thread so it must be thread safe. For unsafe operations used post\+Restore\+Unsafe. 
+
+Reimplemented from \hyperlink{classGKGeoObject_ac3d477ad4b35bc0628c39081b4fc09ec}{G\+K\+Geo\+Object}.
+
+\index{G\+K\+D\+Point@{G\+K\+D\+Point}!rotate@{rotate}}
+\index{rotate@{rotate}!G\+K\+D\+Point@{G\+K\+D\+Point}}
+\subsubsection[{\texorpdfstring{rotate(const G\+K\+Point \&center, double angle)}{rotate(const GKPoint &center, double angle)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+K\+D\+Point\+::rotate (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Point} \&}]{center, }
+\item[{double}]{angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKDPoint_a143039d0ae0e60288bc15000439c2e24}{}\label{classGKDPoint_a143039d0ae0e60288bc15000439c2e24}
+Rotates the \hyperlink{classGKDPoint}{G\+K\+D\+Point} the desired angle using the provided \hyperlink{classGKPoint}{G\+K\+Point} as the rotation center. 
+
+Reimplemented from \hyperlink{classGKGeoObject_a51615728502012b8b4d168976bd89210}{G\+K\+Geo\+Object}.
+
+\index{G\+K\+D\+Point@{G\+K\+D\+Point}!set\+Altitude@{set\+Altitude}}
+\index{set\+Altitude@{set\+Altitude}!G\+K\+D\+Point@{G\+K\+D\+Point}}
+\subsubsection[{\texorpdfstring{set\+Altitude(\+G\+K\+Coord value)}{setAltitude(GKCoord value)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+K\+D\+Point\+::set\+Altitude (
+\begin{DoxyParamCaption}
+\item[{G\+K\+Coord}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKDPoint_aadbf5a3105ea433e45b6d7368854cc22}{}\label{classGKDPoint_aadbf5a3105ea433e45b6d7368854cc22}
+Changes the altitude (that is the z coordinate where the point is located). 
+
+Reimplemented from \hyperlink{classGKGeoObject_a2891f402d1030c8e89cef8483b416e73}{G\+K\+Geo\+Object}.
+
+\index{G\+K\+D\+Point@{G\+K\+D\+Point}!set\+Position@{set\+Position}}
+\index{set\+Position@{set\+Position}!G\+K\+D\+Point@{G\+K\+D\+Point}}
+\subsubsection[{\texorpdfstring{set\+Position(const G\+K\+Point \&p)}{setPosition(const GKPoint &p)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+K\+D\+Point\+::set\+Position (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Point} \&}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKDPoint_a22f3dd78801702908e899ca1874f0a9b}{}\label{classGKDPoint_a22f3dd78801702908e899ca1874f0a9b}
+The coordinates of the object \index{G\+K\+D\+Point@{G\+K\+D\+Point}!translate@{translate}}
+\index{translate@{translate}!G\+K\+D\+Point@{G\+K\+D\+Point}}
+\subsubsection[{\texorpdfstring{translate(const G\+K\+Point \&delta)}{translate(const GKPoint &delta)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+K\+D\+Point\+::translate (
+\begin{DoxyParamCaption}
+\item[{const {\bf G\+K\+Point} \&}]{delta}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classGKDPoint_a6a55158b066bf07aab414ea8ef097a01}{}\label{classGKDPoint_a6a55158b066bf07aab414ea8ef097a01}
+Translates the \hyperlink{classGKDPoint}{G\+K\+D\+Point} adding the delta to the current position. 
+
+Reimplemented from \hyperlink{classGKGeoObject_a353e80eb4751b336f3ea021032ac9bb0}{G\+K\+Geo\+Object}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/core/ang\+\_\+kernel/G\+K\+D\+Point.\+h\end{DoxyCompactItemize}

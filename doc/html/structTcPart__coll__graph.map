@@ -1,0 +1,9 @@
+<map id="TcPart" name="TcPart">
+<area shape="rect" id="node2" href="$structOCTET__STRING.html" title="OCTET_STRING" alt="" coords="280,81,405,108"/>
+<area shape="rect" id="node3" href="$structasn__struct__ctx__s.html" title="asn_struct_ctx_s" alt="" coords="5,205,128,232"/>
+<area shape="rect" id="node4" href="$structTcPart_1_1TcPart____detectionZoneIds.html" title="TcPart::TcPart__detection\lZoneIds" alt="" coords="255,133,430,174"/>
+<area shape="rect" id="node5" href="$structTcPart_1_1TcPart____driverAwarenessZoneIds.html" title="TcPart::TcPart__driverAwareness\lZoneIds" alt="" coords="233,198,452,239"/>
+<area shape="rect" id="node6" href="$structTcPart_1_1TcPart____relevanceZoneIds.html" title="TcPart::TcPart__relevance\lZoneIds" alt="" coords="253,263,432,305"/>
+<area shape="rect" id="node7" href="$structTcPart_1_1TcPart____applicableLanes.html" title="TcPart::TcPart__applicable\lLanes" alt="" coords="253,329,433,370"/>
+<area shape="rect" id="node8" href="$structTcPart_1_1TcPart____text.html" title="TcPart::TcPart__text" alt="" coords="271,395,415,421"/>
+</map>

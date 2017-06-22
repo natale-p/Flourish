@@ -1,0 +1,79 @@
+\hypertarget{classFlourishSimpleNetDevice}{}\section{Flourish\+Simple\+Net\+Device Class Reference}
+\label{classFlourishSimpleNetDevice}\index{Flourish\+Simple\+Net\+Device@{Flourish\+Simple\+Net\+Device}}
+
+
+The base class for all the net devices in the flourish project.  
+
+
+
+
+{\ttfamily \#include $<$Flourish\+Simple\+Net\+Device.\+h$>$}
+
+
+
+Inheritance diagram for Flourish\+Simple\+Net\+Device\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classFlourishSimpleNetDevice__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Flourish\+Simple\+Net\+Device\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classFlourishSimpleNetDevice__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classFlourishSimpleNetDevice_a5578959092ee4a469a43dfbcc20437cc}{Flourish\+Simple\+Net\+Device} ()\hypertarget{classFlourishSimpleNetDevice_a5578959092ee4a469a43dfbcc20437cc}{}\label{classFlourishSimpleNetDevice_a5578959092ee4a469a43dfbcc20437cc}
+
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classFlourishSimpleNetDevice_a9933898ca4f69e6c09142fc17d73596b}{packet\+Received} (const Q\+Shared\+Pointer$<$ const \hyperlink{classV2XMessage}{Packet} $>$ \&packet)
+\begin{DoxyCompactList}\small\item\em A packet has been received. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Flourish\+Simple\+Channel}\hypertarget{classFlourishSimpleNetDevice_a0303c7d51c2540889f5d111604421b0a}{}\label{classFlourishSimpleNetDevice_a0303c7d51c2540889f5d111604421b0a}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The base class for all the net devices in the flourish project. 
+
+This class is tied up with the class \hyperlink{classFlourishSimpleChannel}{Flourish\+Simple\+Channel}. When a packet is received, the method \hyperlink{classFlourishSimpleNetDevice_a9933898ca4f69e6c09142fc17d73596b}{Flourish\+Simple\+Net\+Device\+::packet\+Received} will be called. 
+
+\subsection{Member Function Documentation}
+\index{Flourish\+Simple\+Net\+Device@{Flourish\+Simple\+Net\+Device}!packet\+Received@{packet\+Received}}
+\index{packet\+Received@{packet\+Received}!Flourish\+Simple\+Net\+Device@{Flourish\+Simple\+Net\+Device}}
+\subsubsection[{\texorpdfstring{packet\+Received(const Q\+Shared\+Pointer$<$ const Packet $>$ \&packet)}{packetReceived(const QSharedPointer< const Packet > &packet)}}]{\setlength{\rightskip}{0pt plus 5cm}void Flourish\+Simple\+Net\+Device\+::packet\+Received (
+\begin{DoxyParamCaption}
+\item[{const Q\+Shared\+Pointer$<$ const {\bf Packet} $>$ \&}]{packet}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classFlourishSimpleNetDevice_a9933898ca4f69e6c09142fc17d73596b}{}\label{classFlourishSimpleNetDevice_a9933898ca4f69e6c09142fc17d73596b}
+
+
+A packet has been received. 
+
+It emits the received signal, to which the owning class should connect to.
+
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & Received packet \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+plugins/\+Flourish\+V2\+X\+Framework/Flourish\+Simple\+Net\+Device.\+h\item 
+plugins/\+Flourish\+V2\+X\+Framework/Flourish\+Simple\+Net\+Device.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,4 @@
+<map id="V2XFramework" name="V2XFramework">
+<area shape="rect" id="node2" href="$classADynamicAPI.html" title="A communication framework between Aimsun and an external plugin. " alt="" coords="5,5,111,32"/>
+<area shape="rect" id="node3" href="$classADynamicAPISetup.html" title="The interface between the internals of Aimsun with the outside. " alt="" coords="135,5,274,32"/>
+</map>

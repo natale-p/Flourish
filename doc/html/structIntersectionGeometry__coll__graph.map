@@ -1,0 +1,11 @@
+<map id="IntersectionGeometry" name="IntersectionGeometry">
+<area shape="rect" id="node2" href="$structOCTET__STRING.html" title="OCTET_STRING" alt="" coords="421,40,547,67"/>
+<area shape="rect" id="node3" href="$structasn__struct__ctx__s.html" title="asn_struct_ctx_s" alt="" coords="5,212,128,239"/>
+<area shape="rect" id="node4" href="$structSpeedLimitList.html" title="SpeedLimitList" alt="" coords="430,99,538,125"/>
+<area shape="rect" id="node5" href="$structPreemptPriorityList.html" title="PreemptPriorityList" alt="" coords="581,160,715,187"/>
+<area shape="rect" id="node6" href="$structLaneList.html" title="LaneList" alt="" coords="449,212,519,239"/>
+<area shape="rect" id="node7" href="$structIntersectionGeometry_1_1IntersectionGeometry____regional.html" title="IntersectionGeometry\l::IntersectionGeometry\l__regional" alt="" coords="571,273,725,329"/>
+<area shape="rect" id="node8" href="$structPosition3D.html" title="Position3D" alt="" coords="605,353,691,380"/>
+<area shape="rect" id="node9" href="$structPosition3D_1_1Position3D____regional.html" title="Position3D::Position3D\l__regional" alt="" coords="236,389,395,430"/>
+<area shape="rect" id="node10" href="$structIntersectionReferenceID.html" title="IntersectionReferenceID" alt="" coords="233,455,397,481"/>
+</map>

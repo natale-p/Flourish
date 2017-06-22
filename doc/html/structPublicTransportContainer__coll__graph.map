@@ -1,0 +1,5 @@
+<map id="PublicTransportContainer" name="PublicTransportContainer">
+<area shape="rect" id="node2" href="$structPtActivation.html" title="PtActivation" alt="" coords="95,184,189,211"/>
+<area shape="rect" id="node3" href="$structOCTET__STRING.html" title="OCTET_STRING" alt="" coords="217,95,342,121"/>
+<area shape="rect" id="node4" href="$structasn__struct__ctx__s.html" title="asn_struct_ctx_s" alt="" coords="74,5,197,32"/>
+</map>

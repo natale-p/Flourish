@@ -1,0 +1,96 @@
+\hypertarget{classV2XRandomBroker}{}\section{V2\+X\+Random\+Broker Class Reference}
+\label{classV2XRandomBroker}\index{V2\+X\+Random\+Broker@{V2\+X\+Random\+Broker}}
+
+
+Inheritance diagram for V2\+X\+Random\+Broker\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{classV2XRandomBroker__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for V2\+X\+Random\+Broker\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=271pt]{classV2XRandomBroker__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classV2XRandomBroker_1_1PendingMessage}{Pending\+Message}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries set\+Random\+Seed} (unsigned avalue)\hypertarget{classV2XRandomBroker_a538176e624c98b745cbfb0a423a06430}{}\label{classV2XRandomBroker_a538176e624c98b745cbfb0a423a06430}
+
+\item 
+virtual void {\bfseries set\+Param} (double alatency\+Time\+Mean, double alatency\+Time\+Dev, double alatency\+Time\+Min, double alatency\+Time\+Max, double probability\+Lost)\hypertarget{classV2XRandomBroker_a7dfb34eef14fb965d51768147d5e2efb}{}\label{classV2XRandomBroker_a7dfb34eef14fb965d51768147d5e2efb}
+
+\item 
+virtual void {\bfseries init} ()\hypertarget{classV2XRandomBroker_ad89723bad249bede6900c8b941f6eea3}{}\label{classV2XRandomBroker_ad89723bad249bede6900c8b941f6eea3}
+
+\item 
+virtual void {\bfseries pre\+Update} (double time, double time\+Sta, double sim\+Step)\hypertarget{classV2XRandomBroker_ae4fd93d9308137ef923a2e47b1916f9f}{}\label{classV2XRandomBroker_ae4fd93d9308137ef923a2e47b1916f9f}
+
+\item 
+virtual void {\bfseries post\+Update} (double time, double time\+Sta, double sim\+Step)\hypertarget{classV2XRandomBroker_a2d543262de2092bc9535b528c92d5a31}{}\label{classV2XRandomBroker_a2d543262de2092bc9535b528c92d5a31}
+
+\item 
+virtual void {\bfseries send\+Point2\+Point} (double time\+Stamp, \hyperlink{classConnectedAgent}{Connected\+Agent} $\ast$to, \hyperlink{classV2XMessage}{V2\+X\+Message} $\ast$message)\hypertarget{classV2XRandomBroker_ad53bb0e8b65f085ee9c2fdc2e5828156}{}\label{classV2XRandomBroker_ad53bb0e8b65f085ee9c2fdc2e5828156}
+
+\item 
+virtual void {\bfseries broadcast} (double time\+Stamp, \hyperlink{classV2XMessage}{V2\+X\+Message} $\ast$message)\hypertarget{classV2XRandomBroker_a57f4e8bbf26806335875adf9c20189be}{}\label{classV2XRandomBroker_a57f4e8bbf26806335875adf9c20189be}
+
+\item 
+virtual \hyperlink{classV2XMessage}{V2\+X\+Message} $\ast$ {\bfseries get\+New\+Message} (int atype)=0\hypertarget{classV2XRandomBroker_a2e216df9b1d84479e84c0ce72a2dfbd7}{}\label{classV2XRandomBroker_a2e216df9b1d84479e84c0ce72a2dfbd7}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool {\bfseries is\+Lost\+Packet} (double aprob) const \hypertarget{classV2XRandomBroker_a1585d45336d9d89c76eca3e9608e548f}{}\label{classV2XRandomBroker_a1585d45336d9d89c76eca3e9608e548f}
+
+\item 
+virtual double {\bfseries get\+Latency\+Time} (double amean, double stdev, double min, double max) const \hypertarget{classV2XRandomBroker_ad114e0d280c3c4900e0cc19d658c092a}{}\label{classV2XRandomBroker_ad114e0d280c3c4900e0cc19d658c092a}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classARandomGenerator}{A\+Random\+Generator} $\ast$ {\bfseries random\+Generator}\hypertarget{classV2XRandomBroker_a2fb9da75f0387b18150f80c178eda62d}{}\label{classV2XRandomBroker_a2fb9da75f0387b18150f80c178eda62d}
+
+\item 
+double {\bfseries latency\+Time\+Mean}\hypertarget{classV2XRandomBroker_ae1240efd3aa2bdc480d6dcd4392820d4}{}\label{classV2XRandomBroker_ae1240efd3aa2bdc480d6dcd4392820d4}
+
+\item 
+double {\bfseries latency\+Time\+Std\+Dev}\hypertarget{classV2XRandomBroker_a4f564bb41660bee61ced001345e2110e}{}\label{classV2XRandomBroker_a4f564bb41660bee61ced001345e2110e}
+
+\item 
+double {\bfseries latency\+Time\+Min}\hypertarget{classV2XRandomBroker_a4b946401082e8140ff01c303461bfd8b}{}\label{classV2XRandomBroker_a4b946401082e8140ff01c303461bfd8b}
+
+\item 
+double {\bfseries latency\+Time\+Max}\hypertarget{classV2XRandomBroker_a49df6391057d25c18a7c143311ab9157}{}\label{classV2XRandomBroker_a49df6391057d25c18a7c143311ab9157}
+
+\item 
+double {\bfseries probability\+Packet\+Lost}\hypertarget{classV2XRandomBroker_a71e6aca1e0df97602f689f4dcd2bdc14}{}\label{classV2XRandomBroker_a71e6aca1e0df97602f689f4dcd2bdc14}
+
+\item 
+double {\bfseries current\+Time}\hypertarget{classV2XRandomBroker_ab54ea871c443623a6625c5fa6492db49}{}\label{classV2XRandomBroker_ab54ea871c443623a6625c5fa6492db49}
+
+\item 
+double {\bfseries time\+Step}\hypertarget{classV2XRandomBroker_a855c2038505b619f83b950ee32b8e265}{}\label{classV2XRandomBroker_a855c2038505b619f83b950ee32b8e265}
+
+\item 
+Q\+Multi\+Map$<$ double, \hyperlink{classV2XRandomBroker_1_1PendingMessage}{Pending\+Message} $>$ {\bfseries pending\+Messages}\hypertarget{classV2XRandomBroker_a5c10c2ff6ab62387f3de79f2ae83036c}{}\label{classV2XRandomBroker_a5c10c2ff6ab62387f3de79f2ae83036c}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/aimsun\+\_\+extensions/\+V2\+X\+Framework/V2\+X\+Random\+Broker.\+h\end{DoxyCompactItemize}

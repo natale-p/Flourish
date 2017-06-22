@@ -1,0 +1,127 @@
+\hypertarget{classRateErrorModel}{}\section{Rate\+Error\+Model Class Reference}
+\label{classRateErrorModel}\index{Rate\+Error\+Model@{Rate\+Error\+Model}}
+
+
+Determine which packets are errored corresponding to an underlying distribution, rate, and unit.  
+
+
+
+
+{\ttfamily \#include $<$Error\+Model.\+h$>$}
+
+
+
+Inheritance diagram for Rate\+Error\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=165pt]{classRateErrorModel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Rate\+Error\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=165pt]{classRateErrorModel__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classRateErrorModel_a66989ad0447c35a7890873abdcdb1481}{Error\+Unit} \{ {\bfseries E\+R\+R\+O\+R\+\_\+\+U\+N\+I\+T\+\_\+\+B\+IT}, 
+{\bfseries E\+R\+R\+O\+R\+\_\+\+U\+N\+I\+T\+\_\+\+B\+Y\+TE}, 
+{\bfseries E\+R\+R\+O\+R\+\_\+\+U\+N\+I\+T\+\_\+\+P\+A\+C\+K\+ET}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classRateErrorModel_a66989ad0447c35a7890873abdcdb1481}{Rate\+Error\+Model\+::\+Error\+Unit} \hyperlink{classRateErrorModel_aa25737500139ddf320ae447bc14d6234}{get\+Unit} (void) const 
+\item 
+void \hyperlink{classRateErrorModel_ab5280ff459e202bdb68efcd39188d40b}{set\+Unit} (enum \hyperlink{classRateErrorModel_a66989ad0447c35a7890873abdcdb1481}{Error\+Unit} error\+\_\+unit)
+\item 
+double \hyperlink{classRateErrorModel_a593e311b2c347c8a25872d6c4d4d87c1}{get\+Rate} (void) const 
+\item 
+void \hyperlink{classRateErrorModel_a0f43c7f2becb900c1f24f6594e0e3185}{set\+Rate} (double rate)
+\item 
+void \hyperlink{classRateErrorModel_ae2fce882f90916838728ff838cd36451}{set\+Random\+Seed} (int seed)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Determine which packets are errored corresponding to an underlying distribution, rate, and unit. 
+
+This object is used to flag packets as being lost/errored or not. The two parameters that govern the behavior are the rate (or equivalently, the mean duration/spacing between errors), and the unit (which may be per-\/bit, per-\/byte, and per-\/packet). Users can optionally provide a Random\+Variable\+Stream object; the default is to use a Uniform(0,1) distribution. Reset() on this model will do nothing
+
+Is\+Corrupt() will not modify the packet data buffer 
+
+\subsection{Member Enumeration Documentation}
+\index{Rate\+Error\+Model@{Rate\+Error\+Model}!Error\+Unit@{Error\+Unit}}
+\index{Error\+Unit@{Error\+Unit}!Rate\+Error\+Model@{Rate\+Error\+Model}}
+\subsubsection[{\texorpdfstring{Error\+Unit}{ErrorUnit}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Rate\+Error\+Model\+::\+Error\+Unit}}\hypertarget{classRateErrorModel_a66989ad0447c35a7890873abdcdb1481}{}\label{classRateErrorModel_a66989ad0447c35a7890873abdcdb1481}
+Error unit. The error model can be packet, Byte or bit based. 
+
+\subsection{Member Function Documentation}
+\index{Rate\+Error\+Model@{Rate\+Error\+Model}!get\+Rate@{get\+Rate}}
+\index{get\+Rate@{get\+Rate}!Rate\+Error\+Model@{Rate\+Error\+Model}}
+\subsubsection[{\texorpdfstring{get\+Rate(void) const }{getRate(void) const }}]{\setlength{\rightskip}{0pt plus 5cm}double Rate\+Error\+Model\+::get\+Rate (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classRateErrorModel_a593e311b2c347c8a25872d6c4d4d87c1}{}\label{classRateErrorModel_a593e311b2c347c8a25872d6c4d4d87c1}
+\begin{DoxyReturn}{Returns}
+the error rate being applied by the model 
+\end{DoxyReturn}
+\index{Rate\+Error\+Model@{Rate\+Error\+Model}!get\+Unit@{get\+Unit}}
+\index{get\+Unit@{get\+Unit}!Rate\+Error\+Model@{Rate\+Error\+Model}}
+\subsubsection[{\texorpdfstring{get\+Unit(void) const }{getUnit(void) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Rate\+Error\+Model\+::\+Error\+Unit} Rate\+Error\+Model\+::get\+Unit (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classRateErrorModel_aa25737500139ddf320ae447bc14d6234}{}\label{classRateErrorModel_aa25737500139ddf320ae447bc14d6234}
+\begin{DoxyReturn}{Returns}
+the Error\+Unit being used by the underlying model 
+\end{DoxyReturn}
+\index{Rate\+Error\+Model@{Rate\+Error\+Model}!set\+Random\+Seed@{set\+Random\+Seed}}
+\index{set\+Random\+Seed@{set\+Random\+Seed}!Rate\+Error\+Model@{Rate\+Error\+Model}}
+\subsubsection[{\texorpdfstring{set\+Random\+Seed(int seed)}{setRandomSeed(int seed)}}]{\setlength{\rightskip}{0pt plus 5cm}void Rate\+Error\+Model\+::set\+Random\+Seed (
+\begin{DoxyParamCaption}
+\item[{int}]{seed}
+\end{DoxyParamCaption}
+)}\hypertarget{classRateErrorModel_ae2fce882f90916838728ff838cd36451}{}\label{classRateErrorModel_ae2fce882f90916838728ff838cd36451}
+
+\begin{DoxyParams}{Parameters}
+{\em seed} & The seed \\
+\hline
+\end{DoxyParams}
+\index{Rate\+Error\+Model@{Rate\+Error\+Model}!set\+Rate@{set\+Rate}}
+\index{set\+Rate@{set\+Rate}!Rate\+Error\+Model@{Rate\+Error\+Model}}
+\subsubsection[{\texorpdfstring{set\+Rate(double rate)}{setRate(double rate)}}]{\setlength{\rightskip}{0pt plus 5cm}void Rate\+Error\+Model\+::set\+Rate (
+\begin{DoxyParamCaption}
+\item[{double}]{rate}
+\end{DoxyParamCaption}
+)}\hypertarget{classRateErrorModel_a0f43c7f2becb900c1f24f6594e0e3185}{}\label{classRateErrorModel_a0f43c7f2becb900c1f24f6594e0e3185}
+
+\begin{DoxyParams}{Parameters}
+{\em rate} & the error rate to be used by the model \\
+\hline
+\end{DoxyParams}
+\index{Rate\+Error\+Model@{Rate\+Error\+Model}!set\+Unit@{set\+Unit}}
+\index{set\+Unit@{set\+Unit}!Rate\+Error\+Model@{Rate\+Error\+Model}}
+\subsubsection[{\texorpdfstring{set\+Unit(enum Error\+Unit error\+\_\+unit)}{setUnit(enum ErrorUnit error_unit)}}]{\setlength{\rightskip}{0pt plus 5cm}void Rate\+Error\+Model\+::set\+Unit (
+\begin{DoxyParamCaption}
+\item[{enum {\bf Error\+Unit}}]{error\+\_\+unit}
+\end{DoxyParamCaption}
+)}\hypertarget{classRateErrorModel_ab5280ff459e202bdb68efcd39188d40b}{}\label{classRateErrorModel_ab5280ff459e202bdb68efcd39188d40b}
+
+\begin{DoxyParams}{Parameters}
+{\em error\+\_\+unit} & the Error\+Unit to be used by the underlying model \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/aimsun\+\_\+extensions/\+V2\+X\+Framework/Error\+Model.\+h\end{DoxyCompactItemize}

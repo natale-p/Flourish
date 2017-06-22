@@ -1,0 +1,469 @@
+\hypertarget{classV2XIntersection}{}\section{V2\+X\+Intersection Class Reference}
+\label{classV2XIntersection}\index{V2\+X\+Intersection@{V2\+X\+Intersection}}
+
+
+A representation of an intersection in the context of \hyperlink{classV2XFramework}{V2\+X\+Framework}.  
+
+
+
+
+{\ttfamily \#include $<$V2\+X\+Intersection.\+h$>$}
+
+
+
+Inheritance diagram for V2\+X\+Intersection\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{classV2XIntersection__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for V2\+X\+Intersection\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{classV2XIntersection__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classV2XIntersection_ad291a1e4929b43ffad219dd26868534c}{V2\+X\+Intersection} (G\+K\+Node $\ast$node)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classV2XIntersection_afaf5658f1e2ab9c191535441a4959fc1}{$\sim$\+V2\+X\+Intersection} ()\hypertarget{classV2XIntersection_afaf5658f1e2ab9c191535441a4959fc1}{}\label{classV2XIntersection_afaf5658f1e2ab9c191535441a4959fc1}
+
+\begin{DoxyCompactList}\small\item\em Deconstructor. \end{DoxyCompactList}\item 
+quint32 \hyperlink{classV2XIntersection_a3567a94db4efeaccb53d9a244fb7d6b3}{get\+Id} () const 
+\begin{DoxyCompactList}\small\item\em Get the id of the intersection. \end{DoxyCompactList}\item 
+Q\+String \hyperlink{classV2XIntersection_ae1dfdb950312d7f64e8cd3d9bca2cc50}{get\+Name} () const 
+\begin{DoxyCompactList}\small\item\em Get the name of the intersection. \end{DoxyCompactList}\item 
+bool \hyperlink{classV2XIntersection_a9d042552f51b0aea06f90ec3d9fc65e4}{is\+Manual\+Control\+Enabled} () const 
+\begin{DoxyCompactList}\small\item\em Check if manual control is enabled. \end{DoxyCompactList}\item 
+bool \hyperlink{classV2XIntersection_a6b8fb171f0efd262f1d1a50669836823}{is\+Stop\+Time\+Activated} () const 
+\begin{DoxyCompactList}\small\item\em Check if the timing is stopped. \end{DoxyCompactList}\item 
+bool \hyperlink{classV2XIntersection_a769240fcceec0c1c13c60c07ac5ec279}{is\+Flash\+Failing} () const 
+\begin{DoxyCompactList}\small\item\em Check if there are hardware failures. \end{DoxyCompactList}\item 
+bool \hyperlink{classV2XIntersection_ae7aad466ea2c7da3159c51c6e9384a35}{is\+Preempt\+Active} () const 
+\begin{DoxyCompactList}\small\item\em Check if preempt is active. \end{DoxyCompactList}\item 
+bool \hyperlink{classV2XIntersection_af6e45bd8c5e160fec1b947c35d1f415d}{is\+Signal\+Priority\+Active} () const 
+\begin{DoxyCompactList}\small\item\em Check if signal priority is active. \end{DoxyCompactList}\item 
+bool \hyperlink{classV2XIntersection_a23b86c1a5263021520965973f35efaa4}{is\+Fixed\+Time\+Operation} () const 
+\begin{DoxyCompactList}\small\item\em Check if the operation timings are fixed. \end{DoxyCompactList}\item 
+bool \hyperlink{classV2XIntersection_a50c3c15528fc61daddc97753a2ea0ad5}{is\+Traffic\+Dependent\+Operation} () const 
+\begin{DoxyCompactList}\small\item\em Check if the operation mode depends on traffic. \end{DoxyCompactList}\item 
+bool \hyperlink{classV2XIntersection_aaf2db69bd139e08f291a3c7fea63c834}{is\+Standby\+Operation} () const 
+\begin{DoxyCompactList}\small\item\em Check if the control is in standby. \end{DoxyCompactList}\item 
+bool \hyperlink{classV2XIntersection_a8516c318474941b4bd17c54e5ade01f2}{failure\+Mode} () const 
+\begin{DoxyCompactList}\small\item\em Check if there are problems Controller has a problem or failure in operation. \end{DoxyCompactList}\item 
+bool \hyperlink{classV2XIntersection_a5afda06f57afa866ef3f5ea2f41b24f7}{is\+Off} () const 
+\begin{DoxyCompactList}\small\item\em Check if the controller is off Controller is switched off. \end{DoxyCompactList}\item 
+bool \hyperlink{classV2XIntersection_a0e892b0e723d830ab485ff2d2eba70b6}{recent\+M\+A\+P\+Message\+Update} () const 
+\begin{DoxyCompactList}\small\item\em Check if there are recent M\+AP messages Map revision with content changes. \end{DoxyCompactList}\item 
+bool \hyperlink{classV2XIntersection_a2db48bde4581f4e42e72218c6591db74}{recent\+Change\+In\+M\+A\+Passigned\+Lanes\+I\+Ds\+Used} () const 
+\begin{DoxyCompactList}\small\item\em Check for changes in the lanes. \end{DoxyCompactList}\item 
+bool \hyperlink{classV2XIntersection_ac7e89d7f3e67a8984de48343295db714}{no\+Valid\+M\+A\+Pis\+Available\+At\+This\+Time} () const 
+\begin{DoxyCompactList}\small\item\em Check if there are valid M\+AP messages. \end{DoxyCompactList}\item 
+bool \hyperlink{classV2XIntersection_ae0aaeafa1cf9e8f6704d393a2cc254e5}{no\+Valid\+S\+P\+A\+Tis\+Available\+At\+This\+Time} () const 
+\begin{DoxyCompactList}\small\item\em Check if the \hyperlink{structSPAT}{S\+P\+AT} system is working. \end{DoxyCompactList}\item 
+bool \hyperlink{classV2XIntersection_a504d6e4f88262feee79f4f66332b7b5d}{get\+Intersection\+State} (\hyperlink{structIntersectionState}{Intersection\+State} $\ast$intersection\+State, const \hyperlink{classADynamicAPISetup}{A\+Dynamic\+A\+P\+I\+Setup} \&setup, double time) const 
+\begin{DoxyCompactList}\small\item\em Method to get an intersection state as per I\+SO TS 19091. \end{DoxyCompactList}\item 
+bool \hyperlink{classV2XIntersection_af23a34f08972950e247eb38726f17548}{get\+Intersection\+Status\+Object} (\hyperlink{structBIT__STRING__s}{Intersection\+Status\+Object\+\_\+t} $\ast$intersection\+State\+Object) const 
+\begin{DoxyCompactList}\small\item\em Get the Intersection\+Status\+Object as per I\+SO TS 19091. \end{DoxyCompactList}\item 
+bool \hyperlink{classV2XIntersection_a8e8645c541204b239f15c6195c66cdee}{get\+Movement\+Phase\+State} (Movement\+Phase\+State\+\_\+t $\ast$phase\+State) const 
+\begin{DoxyCompactList}\small\item\em Method to get the movement phase. \end{DoxyCompactList}\item 
+bool \hyperlink{classV2XIntersection_a98eeb9be7e3e2e64cb79fd292379ae7a}{get\+Timings\+Change\+Details} (\hyperlink{structTimeChangeDetails}{Time\+Change\+Details} $\ast$timing) const 
+\begin{DoxyCompactList}\small\item\em get\+Timings\+Change\+Details \end{DoxyCompactList}\item 
+bool \hyperlink{classV2XIntersection_afe1e723b91cdaf1400f3d438e40a1089}{get\+Map\+Data} (\hyperlink{structMapData}{Map\+Data\+\_\+t} $\ast$map\+Data) const 
+\begin{DoxyCompactList}\small\item\em Get the map data for this intersection. \end{DoxyCompactList}\item 
+bool \hyperlink{classV2XIntersection_a7e49cf6af6b34bb8a49937a5d5e2e7e4}{get\+Intersection\+Geometry} (\hyperlink{structIntersectionGeometryList}{Intersection\+Geometry\+List} $\ast$geometry) const 
+\begin{DoxyCompactList}\small\item\em Get the geometry of the intersection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A representation of an intersection in the context of \hyperlink{classV2XFramework}{V2\+X\+Framework}. 
+
+In the context of V2X communications, the Road Side Units (R\+SU) are entities that get information from the intersection(s) they are connected to and broadcast them to the near vehicles. This class translates information from the Aimsun world to the V2X world. This done through the filling of common structures, that are defined by the E\+T\+SI standard.
+
+The intersection is strictly linked to a node, and can obtain information from it.
+
+Reasoning in terms of the framework, the intersections are connections between \hyperlink{classV2XGenericLane}{V2\+X\+Generic\+Lane} objects. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{V2\+X\+Intersection@{V2\+X\+Intersection}!V2\+X\+Intersection@{V2\+X\+Intersection}}
+\index{V2\+X\+Intersection@{V2\+X\+Intersection}!V2\+X\+Intersection@{V2\+X\+Intersection}}
+\subsubsection[{\texorpdfstring{V2\+X\+Intersection(\+G\+K\+Node $\ast$node)}{V2XIntersection(GKNode *node)}}]{\setlength{\rightskip}{0pt plus 5cm}V2\+X\+Intersection\+::\+V2\+X\+Intersection (
+\begin{DoxyParamCaption}
+\item[{G\+K\+Node $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\hypertarget{classV2XIntersection_ad291a1e4929b43ffad219dd26868534c}{}\label{classV2XIntersection_ad291a1e4929b43ffad219dd26868534c}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & Aimsun node \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{V2\+X\+Intersection@{V2\+X\+Intersection}!failure\+Mode@{failure\+Mode}}
+\index{failure\+Mode@{failure\+Mode}!V2\+X\+Intersection@{V2\+X\+Intersection}}
+\subsubsection[{\texorpdfstring{failure\+Mode() const }{failureMode() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool V2\+X\+Intersection\+::failure\+Mode (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classV2XIntersection_a8516c318474941b4bd17c54e5ade01f2}{}\label{classV2XIntersection_a8516c318474941b4bd17c54e5ade01f2}
+
+
+Check if there are problems Controller has a problem or failure in operation. 
+
+\begin{DoxyReturn}{Returns}
+true if there are problems in the controller 
+\end{DoxyReturn}
+\index{V2\+X\+Intersection@{V2\+X\+Intersection}!get\+Id@{get\+Id}}
+\index{get\+Id@{get\+Id}!V2\+X\+Intersection@{V2\+X\+Intersection}}
+\subsubsection[{\texorpdfstring{get\+Id() const }{getId() const }}]{\setlength{\rightskip}{0pt plus 5cm}quint32 V2\+X\+Intersection\+::get\+Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classV2XIntersection_a3567a94db4efeaccb53d9a244fb7d6b3}{}\label{classV2XIntersection_a3567a94db4efeaccb53d9a244fb7d6b3}
+
+
+Get the id of the intersection. 
+
+\begin{DoxyReturn}{Returns}
+the ID of the intersection 
+\end{DoxyReturn}
+\index{V2\+X\+Intersection@{V2\+X\+Intersection}!get\+Intersection\+Geometry@{get\+Intersection\+Geometry}}
+\index{get\+Intersection\+Geometry@{get\+Intersection\+Geometry}!V2\+X\+Intersection@{V2\+X\+Intersection}}
+\subsubsection[{\texorpdfstring{get\+Intersection\+Geometry(\+Intersection\+Geometry\+List $\ast$geometry) const }{getIntersectionGeometry(IntersectionGeometryList *geometry) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool V2\+X\+Intersection\+::get\+Intersection\+Geometry (
+\begin{DoxyParamCaption}
+\item[{{\bf Intersection\+Geometry\+List} $\ast$}]{geometry}
+\end{DoxyParamCaption}
+) const}\hypertarget{classV2XIntersection_a7e49cf6af6b34bb8a49937a5d5e2e7e4}{}\label{classV2XIntersection_a7e49cf6af6b34bb8a49937a5d5e2e7e4}
+
+
+Get the geometry of the intersection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em geometry} & the structure to create and fill (use free() to release memory) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true in case of success 
+\end{DoxyReturn}
+\index{V2\+X\+Intersection@{V2\+X\+Intersection}!get\+Intersection\+State@{get\+Intersection\+State}}
+\index{get\+Intersection\+State@{get\+Intersection\+State}!V2\+X\+Intersection@{V2\+X\+Intersection}}
+\subsubsection[{\texorpdfstring{get\+Intersection\+State(\+Intersection\+State $\ast$intersection\+State, const A\+Dynamic\+A\+P\+I\+Setup \&setup, double time) const }{getIntersectionState(IntersectionState *intersectionState, const ADynamicAPISetup &setup, double time) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool V2\+X\+Intersection\+::get\+Intersection\+State (
+\begin{DoxyParamCaption}
+\item[{{\bf Intersection\+State} $\ast$}]{intersection\+State, }
+\item[{const {\bf A\+Dynamic\+A\+P\+I\+Setup} \&}]{setup, }
+\item[{double}]{time}
+\end{DoxyParamCaption}
+) const}\hypertarget{classV2XIntersection_a504d6e4f88262feee79f4f66332b7b5d}{}\label{classV2XIntersection_a504d6e4f88262feee79f4f66332b7b5d}
+
+
+Method to get an intersection state as per I\+SO TS 19091. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em intersection\+State} & The object to fill. \\
+\hline
+{\em setup} & \hyperlink{classADynamicAPISetup}{A\+Dynamic\+A\+P\+I\+Setup} instance to query information about control plans \\
+\hline
+{\em time} & the time at which the state should be get \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true in case of success 
+\end{DoxyReturn}
+\index{V2\+X\+Intersection@{V2\+X\+Intersection}!get\+Intersection\+Status\+Object@{get\+Intersection\+Status\+Object}}
+\index{get\+Intersection\+Status\+Object@{get\+Intersection\+Status\+Object}!V2\+X\+Intersection@{V2\+X\+Intersection}}
+\subsubsection[{\texorpdfstring{get\+Intersection\+Status\+Object(\+Intersection\+Status\+Object\+\_\+t $\ast$intersection\+State\+Object) const }{getIntersectionStatusObject(IntersectionStatusObject_t *intersectionStateObject) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool V2\+X\+Intersection\+::get\+Intersection\+Status\+Object (
+\begin{DoxyParamCaption}
+\item[{{\bf Intersection\+Status\+Object\+\_\+t} $\ast$}]{intersection\+State\+Object}
+\end{DoxyParamCaption}
+) const}\hypertarget{classV2XIntersection_af23a34f08972950e247eb38726f17548}{}\label{classV2XIntersection_af23a34f08972950e247eb38726f17548}
+
+
+Get the Intersection\+Status\+Object as per I\+SO TS 19091. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em intersection\+State\+Object} & The object to fill \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true in case of success 
+\end{DoxyReturn}
+\index{V2\+X\+Intersection@{V2\+X\+Intersection}!get\+Map\+Data@{get\+Map\+Data}}
+\index{get\+Map\+Data@{get\+Map\+Data}!V2\+X\+Intersection@{V2\+X\+Intersection}}
+\subsubsection[{\texorpdfstring{get\+Map\+Data(\+Map\+Data\+\_\+t $\ast$map\+Data) const }{getMapData(MapData_t *mapData) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool V2\+X\+Intersection\+::get\+Map\+Data (
+\begin{DoxyParamCaption}
+\item[{{\bf Map\+Data\+\_\+t} $\ast$}]{map\+Data}
+\end{DoxyParamCaption}
+) const}\hypertarget{classV2XIntersection_afe1e723b91cdaf1400f3d438e40a1089}{}\label{classV2XIntersection_afe1e723b91cdaf1400f3d438e40a1089}
+
+
+Get the map data for this intersection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em map\+Data} & \mbox{[}in\mbox{]} the Map\+Data\+\_\+t structure to fill \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true in case of success 
+\end{DoxyReturn}
+\index{V2\+X\+Intersection@{V2\+X\+Intersection}!get\+Movement\+Phase\+State@{get\+Movement\+Phase\+State}}
+\index{get\+Movement\+Phase\+State@{get\+Movement\+Phase\+State}!V2\+X\+Intersection@{V2\+X\+Intersection}}
+\subsubsection[{\texorpdfstring{get\+Movement\+Phase\+State(\+Movement\+Phase\+State\+\_\+t $\ast$phase\+State) const }{getMovementPhaseState(MovementPhaseState_t *phaseState) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool V2\+X\+Intersection\+::get\+Movement\+Phase\+State (
+\begin{DoxyParamCaption}
+\item[{Movement\+Phase\+State\+\_\+t $\ast$}]{phase\+State}
+\end{DoxyParamCaption}
+) const}\hypertarget{classV2XIntersection_a8e8645c541204b239f15c6195c66cdee}{}\label{classV2XIntersection_a8e8645c541204b239f15c6195c66cdee}
+
+
+Method to get the movement phase. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em phase\+State} & The Movement\+Phase\+State\+\_\+t object to fill \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true in case of success 
+\end{DoxyReturn}
+\index{V2\+X\+Intersection@{V2\+X\+Intersection}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!V2\+X\+Intersection@{V2\+X\+Intersection}}
+\subsubsection[{\texorpdfstring{get\+Name() const }{getName() const }}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String V2\+X\+Intersection\+::get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classV2XIntersection_ae1dfdb950312d7f64e8cd3d9bca2cc50}{}\label{classV2XIntersection_ae1dfdb950312d7f64e8cd3d9bca2cc50}
+
+
+Get the name of the intersection. 
+
+\begin{DoxyReturn}{Returns}
+The name of the intersection 
+\end{DoxyReturn}
+\index{V2\+X\+Intersection@{V2\+X\+Intersection}!get\+Timings\+Change\+Details@{get\+Timings\+Change\+Details}}
+\index{get\+Timings\+Change\+Details@{get\+Timings\+Change\+Details}!V2\+X\+Intersection@{V2\+X\+Intersection}}
+\subsubsection[{\texorpdfstring{get\+Timings\+Change\+Details(\+Time\+Change\+Details $\ast$timing) const }{getTimingsChangeDetails(TimeChangeDetails *timing) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool V2\+X\+Intersection\+::get\+Timings\+Change\+Details (
+\begin{DoxyParamCaption}
+\item[{{\bf Time\+Change\+Details} $\ast$}]{timing}
+\end{DoxyParamCaption}
+) const}\hypertarget{classV2XIntersection_a98eeb9be7e3e2e64cb79fd292379ae7a}{}\label{classV2XIntersection_a98eeb9be7e3e2e64cb79fd292379ae7a}
+
+
+get\+Timings\+Change\+Details 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em timing} & the \hyperlink{structTimeChangeDetails}{Time\+Change\+Details} to fill \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true in case of success 
+\end{DoxyReturn}
+\index{V2\+X\+Intersection@{V2\+X\+Intersection}!is\+Fixed\+Time\+Operation@{is\+Fixed\+Time\+Operation}}
+\index{is\+Fixed\+Time\+Operation@{is\+Fixed\+Time\+Operation}!V2\+X\+Intersection@{V2\+X\+Intersection}}
+\subsubsection[{\texorpdfstring{is\+Fixed\+Time\+Operation() const }{isFixedTimeOperation() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool V2\+X\+Intersection\+::is\+Fixed\+Time\+Operation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classV2XIntersection_a23b86c1a5263021520965973f35efaa4}{}\label{classV2XIntersection_a23b86c1a5263021520965973f35efaa4}
+
+
+Check if the operation timings are fixed. 
+
+Schedule of signals is based on time only \begin{DoxyReturn}{Returns}
+true if the timings are fixed 
+\end{DoxyReturn}
+\index{V2\+X\+Intersection@{V2\+X\+Intersection}!is\+Flash\+Failing@{is\+Flash\+Failing}}
+\index{is\+Flash\+Failing@{is\+Flash\+Failing}!V2\+X\+Intersection@{V2\+X\+Intersection}}
+\subsubsection[{\texorpdfstring{is\+Flash\+Failing() const }{isFlashFailing() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool V2\+X\+Intersection\+::is\+Flash\+Failing (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classV2XIntersection_a769240fcceec0c1c13c60c07ac5ec279}{}\label{classV2XIntersection_a769240fcceec0c1c13c60c07ac5ec279}
+
+
+Check if there are hardware failures. 
+
+Used to indicate any detected hardware failure
+
+\begin{DoxyReturn}{Returns}
+true in case of hardware failure 
+\end{DoxyReturn}
+\index{V2\+X\+Intersection@{V2\+X\+Intersection}!is\+Manual\+Control\+Enabled@{is\+Manual\+Control\+Enabled}}
+\index{is\+Manual\+Control\+Enabled@{is\+Manual\+Control\+Enabled}!V2\+X\+Intersection@{V2\+X\+Intersection}}
+\subsubsection[{\texorpdfstring{is\+Manual\+Control\+Enabled() const }{isManualControlEnabled() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool V2\+X\+Intersection\+::is\+Manual\+Control\+Enabled (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classV2XIntersection_a9d042552f51b0aea06f90ec3d9fc65e4}{}\label{classV2XIntersection_a9d042552f51b0aea06f90ec3d9fc65e4}
+
+
+Check if manual control is enabled. 
+
+Timing reported is per programmed values, etc. but person at cabinet can manually request that certain intervals are terminated early (e.\+g. green).
+
+\begin{DoxyReturn}{Returns}
+true in case manual control is enabled, false otherwise 
+\end{DoxyReturn}
+\index{V2\+X\+Intersection@{V2\+X\+Intersection}!is\+Off@{is\+Off}}
+\index{is\+Off@{is\+Off}!V2\+X\+Intersection@{V2\+X\+Intersection}}
+\subsubsection[{\texorpdfstring{is\+Off() const }{isOff() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool V2\+X\+Intersection\+::is\+Off (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classV2XIntersection_a5afda06f57afa866ef3f5ea2f41b24f7}{}\label{classV2XIntersection_a5afda06f57afa866ef3f5ea2f41b24f7}
+
+
+Check if the controller is off Controller is switched off. 
+
+\begin{DoxyReturn}{Returns}
+true if the controller is off 
+\end{DoxyReturn}
+\index{V2\+X\+Intersection@{V2\+X\+Intersection}!is\+Preempt\+Active@{is\+Preempt\+Active}}
+\index{is\+Preempt\+Active@{is\+Preempt\+Active}!V2\+X\+Intersection@{V2\+X\+Intersection}}
+\subsubsection[{\texorpdfstring{is\+Preempt\+Active() const }{isPreemptActive() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool V2\+X\+Intersection\+::is\+Preempt\+Active (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classV2XIntersection_ae7aad466ea2c7da3159c51c6e9384a35}{}\label{classV2XIntersection_ae7aad466ea2c7da3159c51c6e9384a35}
+
+
+Check if preempt is active. 
+
+\begin{DoxyReturn}{Returns}
+true if preempt is active 
+\end{DoxyReturn}
+\index{V2\+X\+Intersection@{V2\+X\+Intersection}!is\+Signal\+Priority\+Active@{is\+Signal\+Priority\+Active}}
+\index{is\+Signal\+Priority\+Active@{is\+Signal\+Priority\+Active}!V2\+X\+Intersection@{V2\+X\+Intersection}}
+\subsubsection[{\texorpdfstring{is\+Signal\+Priority\+Active() const }{isSignalPriorityActive() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool V2\+X\+Intersection\+::is\+Signal\+Priority\+Active (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classV2XIntersection_af6e45bd8c5e160fec1b947c35d1f415d}{}\label{classV2XIntersection_af6e45bd8c5e160fec1b947c35d1f415d}
+
+
+Check if signal priority is active. 
+
+\begin{DoxyReturn}{Returns}
+true if signal priority is active 
+\end{DoxyReturn}
+\index{V2\+X\+Intersection@{V2\+X\+Intersection}!is\+Standby\+Operation@{is\+Standby\+Operation}}
+\index{is\+Standby\+Operation@{is\+Standby\+Operation}!V2\+X\+Intersection@{V2\+X\+Intersection}}
+\subsubsection[{\texorpdfstring{is\+Standby\+Operation() const }{isStandbyOperation() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool V2\+X\+Intersection\+::is\+Standby\+Operation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classV2XIntersection_aaf2db69bd139e08f291a3c7fea63c834}{}\label{classV2XIntersection_aaf2db69bd139e08f291a3c7fea63c834}
+
+
+Check if the control is in standby. 
+
+Controller\+: partially switched off or partially amber flashing \begin{DoxyReturn}{Returns}
+true if the controller is in standby 
+\end{DoxyReturn}
+\index{V2\+X\+Intersection@{V2\+X\+Intersection}!is\+Stop\+Time\+Activated@{is\+Stop\+Time\+Activated}}
+\index{is\+Stop\+Time\+Activated@{is\+Stop\+Time\+Activated}!V2\+X\+Intersection@{V2\+X\+Intersection}}
+\subsubsection[{\texorpdfstring{is\+Stop\+Time\+Activated() const }{isStopTimeActivated() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool V2\+X\+Intersection\+::is\+Stop\+Time\+Activated (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classV2XIntersection_a6b8fb171f0efd262f1d1a50669836823}{}\label{classV2XIntersection_a6b8fb171f0efd262f1d1a50669836823}
+
+
+Check if the timing is stopped. 
+
+Definition by the standard\+: \char`\"{}\+And all counting/timing has stopped.\char`\"{}
+
+\begin{DoxyReturn}{Returns}
+true if the timing is stopped, false otherwise 
+\end{DoxyReturn}
+\index{V2\+X\+Intersection@{V2\+X\+Intersection}!is\+Traffic\+Dependent\+Operation@{is\+Traffic\+Dependent\+Operation}}
+\index{is\+Traffic\+Dependent\+Operation@{is\+Traffic\+Dependent\+Operation}!V2\+X\+Intersection@{V2\+X\+Intersection}}
+\subsubsection[{\texorpdfstring{is\+Traffic\+Dependent\+Operation() const }{isTrafficDependentOperation() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool V2\+X\+Intersection\+::is\+Traffic\+Dependent\+Operation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classV2XIntersection_a50c3c15528fc61daddc97753a2ea0ad5}{}\label{classV2XIntersection_a50c3c15528fc61daddc97753a2ea0ad5}
+
+
+Check if the operation mode depends on traffic. 
+
+Operation is based on different levels of traffic parameters (requests, duration of gaps or more complex parameters)
+
+\begin{DoxyReturn}{Returns}
+true if the operation depends on traffic 
+\end{DoxyReturn}
+\index{V2\+X\+Intersection@{V2\+X\+Intersection}!no\+Valid\+M\+A\+Pis\+Available\+At\+This\+Time@{no\+Valid\+M\+A\+Pis\+Available\+At\+This\+Time}}
+\index{no\+Valid\+M\+A\+Pis\+Available\+At\+This\+Time@{no\+Valid\+M\+A\+Pis\+Available\+At\+This\+Time}!V2\+X\+Intersection@{V2\+X\+Intersection}}
+\subsubsection[{\texorpdfstring{no\+Valid\+M\+A\+Pis\+Available\+At\+This\+Time() const }{noValidMAPisAvailableAtThisTime() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool V2\+X\+Intersection\+::no\+Valid\+M\+A\+Pis\+Available\+At\+This\+Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classV2XIntersection_ac7e89d7f3e67a8984de48343295db714}{}\label{classV2XIntersection_ac7e89d7f3e67a8984de48343295db714}
+
+
+Check if there are valid M\+AP messages. 
+
+M\+AP (and various lanes indexes) not available \begin{DoxyReturn}{Returns}
+true if there are no valid M\+AP messages 
+\end{DoxyReturn}
+\index{V2\+X\+Intersection@{V2\+X\+Intersection}!no\+Valid\+S\+P\+A\+Tis\+Available\+At\+This\+Time@{no\+Valid\+S\+P\+A\+Tis\+Available\+At\+This\+Time}}
+\index{no\+Valid\+S\+P\+A\+Tis\+Available\+At\+This\+Time@{no\+Valid\+S\+P\+A\+Tis\+Available\+At\+This\+Time}!V2\+X\+Intersection@{V2\+X\+Intersection}}
+\subsubsection[{\texorpdfstring{no\+Valid\+S\+P\+A\+Tis\+Available\+At\+This\+Time() const }{noValidSPATisAvailableAtThisTime() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool V2\+X\+Intersection\+::no\+Valid\+S\+P\+A\+Tis\+Available\+At\+This\+Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classV2XIntersection_ae0aaeafa1cf9e8f6704d393a2cc254e5}{}\label{classV2XIntersection_ae0aaeafa1cf9e8f6704d393a2cc254e5}
+
+
+Check if the \hyperlink{structSPAT}{S\+P\+AT} system is working. 
+
+\hyperlink{structSPAT}{S\+P\+AT} system is not working at this time \begin{DoxyReturn}{Returns}
+true if the \hyperlink{structSPAT}{S\+P\+AT} system is not working 
+\end{DoxyReturn}
+\index{V2\+X\+Intersection@{V2\+X\+Intersection}!recent\+Change\+In\+M\+A\+Passigned\+Lanes\+I\+Ds\+Used@{recent\+Change\+In\+M\+A\+Passigned\+Lanes\+I\+Ds\+Used}}
+\index{recent\+Change\+In\+M\+A\+Passigned\+Lanes\+I\+Ds\+Used@{recent\+Change\+In\+M\+A\+Passigned\+Lanes\+I\+Ds\+Used}!V2\+X\+Intersection@{V2\+X\+Intersection}}
+\subsubsection[{\texorpdfstring{recent\+Change\+In\+M\+A\+Passigned\+Lanes\+I\+Ds\+Used() const }{recentChangeInMAPassignedLanesIDsUsed() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool V2\+X\+Intersection\+::recent\+Change\+In\+M\+A\+Passigned\+Lanes\+I\+Ds\+Used (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classV2XIntersection_a2db48bde4581f4e42e72218c6591db74}{}\label{classV2XIntersection_a2db48bde4581f4e42e72218c6591db74}
+
+
+Check for changes in the lanes. 
+
+Change in M\+AP\textquotesingle{}s assigned lanes used (lane changes), or changes in the active lane list description \begin{DoxyReturn}{Returns}
+true if there are changes from the previous state 
+\end{DoxyReturn}
+\index{V2\+X\+Intersection@{V2\+X\+Intersection}!recent\+M\+A\+P\+Message\+Update@{recent\+M\+A\+P\+Message\+Update}}
+\index{recent\+M\+A\+P\+Message\+Update@{recent\+M\+A\+P\+Message\+Update}!V2\+X\+Intersection@{V2\+X\+Intersection}}
+\subsubsection[{\texorpdfstring{recent\+M\+A\+P\+Message\+Update() const }{recentMAPMessageUpdate() const }}]{\setlength{\rightskip}{0pt plus 5cm}bool V2\+X\+Intersection\+::recent\+M\+A\+P\+Message\+Update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classV2XIntersection_a0e892b0e723d830ab485ff2d2eba70b6}{}\label{classV2XIntersection_a0e892b0e723d830ab485ff2d2eba70b6}
+
+
+Check if there are recent M\+AP messages Map revision with content changes. 
+
+\begin{DoxyReturn}{Returns}
+true if recently M\+AP messages have been processed 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/aimsun\+\_\+extensions/\+V2\+X\+Framework/V2\+X\+Intersection.\+h\end{DoxyCompactItemize}

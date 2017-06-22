@@ -1,0 +1,4 @@
+<map id="ADynamicAgent" name="ADynamicAgent">
+<area shape="rect" id="node2" href="$classV2XConnectedAgent.html" title="Represents a connected vehicle (e.g., a mobile station) in the framework. " alt="" coords="16,80,160,107"/>
+<area shape="rect" id="node3" href="$classFlourishConnectedAgent.html" title="A mobile agent. " alt="" coords="5,155,171,181"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="GeographicLocationContainer" name="GeographicLocationContainer">
+<area shape="rect" id="node2" href="$structASN____PRIMITIVE__TYPE__s.html" title="ASN__PRIMITIVE_TYPE_s" alt="" coords="676,5,864,32"/>
+<area shape="rect" id="node3" href="$structSpeed.html" title="Speed" alt="" coords="501,107,559,133"/>
+<area shape="rect" id="node4" href="$structasn__struct__ctx__s.html" title="asn_struct_ctx_s" alt="" coords="5,220,128,247"/>
+<area shape="rect" id="node5" href="$structReferencePosition.html" title="ReferencePosition" alt="" coords="705,191,835,217"/>
+<area shape="rect" id="node6" href="$structPosConfidenceEllipse.html" title="PosConfidenceEllipse" alt="" coords="233,220,384,247"/>
+<area shape="rect" id="node7" href="$structAltitude.html" title="Altitude" alt="" coords="275,271,342,297"/>
+<area shape="rect" id="node8" href="$structHeading.html" title="Heading" alt="" coords="495,303,565,329"/>
+<area shape="rect" id="node9" href="$structGeographicLocationContainer_1_1GeographicLocationContainer____parts.html" title="GeographicLocationContainer\l::GeographicLocationContainer__parts" alt="" coords="408,361,652,402"/>
+</map>

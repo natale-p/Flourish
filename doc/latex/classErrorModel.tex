@@ -1,0 +1,105 @@
+\hypertarget{classErrorModel}{}\section{Error\+Model Class Reference}
+\label{classErrorModel}\index{Error\+Model@{Error\+Model}}
+
+
+A general (but empty) error model.  
+
+
+
+
+{\ttfamily \#include $<$Error\+Model.\+h$>$}
+
+
+
+Inheritance diagram for Error\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=165pt]{classErrorModel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Error\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{classErrorModel__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classErrorModel_ac48184bd59f4c0c094b613c8dc986d82}{is\+Corrupt} (Q\+Shared\+Pointer$<$ \hyperlink{group__V2XFramework_ga1b82bfc289dbcb9aced56200d7abc964}{Packet} $>$ pkt)
+\item 
+void \hyperlink{classErrorModel_a402a4355559a27004131bf43d046bf45}{reset} (void)
+\item 
+void \hyperlink{classErrorModel_a42d79fe39bd01e9c4d0043af417f7188}{enable} (void)
+\item 
+void \hyperlink{classErrorModel_a5fd2bd9720b2ad9181dd9e1e2f70239d}{disable} (void)
+\item 
+bool \hyperlink{classErrorModel_ad4dca2dab6afea097304a93b49e74d6d}{is\+Enabled} (void) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A general (but empty) error model. 
+
+Copyright T\+SS 2017
+
+Author\+: Natale Patriciello \href{mailto:natale.patriciello@aimsun.com}{\tt natale.\+patriciello@aimsun.\+com} 
+
+\subsection{Member Function Documentation}
+\index{Error\+Model@{Error\+Model}!disable@{disable}}
+\index{disable@{disable}!Error\+Model@{Error\+Model}}
+\subsubsection[{\texorpdfstring{disable(void)}{disable(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Error\+Model\+::disable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classErrorModel_a5fd2bd9720b2ad9181dd9e1e2f70239d}{}\label{classErrorModel_a5fd2bd9720b2ad9181dd9e1e2f70239d}
+Disable the error model \index{Error\+Model@{Error\+Model}!enable@{enable}}
+\index{enable@{enable}!Error\+Model@{Error\+Model}}
+\subsubsection[{\texorpdfstring{enable(void)}{enable(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Error\+Model\+::enable (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classErrorModel_a42d79fe39bd01e9c4d0043af417f7188}{}\label{classErrorModel_a42d79fe39bd01e9c4d0043af417f7188}
+Enable the error model \index{Error\+Model@{Error\+Model}!is\+Corrupt@{is\+Corrupt}}
+\index{is\+Corrupt@{is\+Corrupt}!Error\+Model@{Error\+Model}}
+\subsubsection[{\texorpdfstring{is\+Corrupt(\+Q\+Shared\+Pointer$<$ Packet $>$ pkt)}{isCorrupt(QSharedPointer< Packet > pkt)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Error\+Model\+::is\+Corrupt (
+\begin{DoxyParamCaption}
+\item[{Q\+Shared\+Pointer$<$ {\bf Packet} $>$}]{pkt}
+\end{DoxyParamCaption}
+)}\hypertarget{classErrorModel_ac48184bd59f4c0c094b613c8dc986d82}{}\label{classErrorModel_ac48184bd59f4c0c094b613c8dc986d82}
+Note\+: Depending on the error model, this function may or may not alter the contents of the packet upon returning true.
+
+\begin{DoxyReturn}{Returns}
+true if the Packet is to be considered as errored/corrupted 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em pkt} & Packet to apply error model to \\
+\hline
+\end{DoxyParams}
+\index{Error\+Model@{Error\+Model}!is\+Enabled@{is\+Enabled}}
+\index{is\+Enabled@{is\+Enabled}!Error\+Model@{Error\+Model}}
+\subsubsection[{\texorpdfstring{is\+Enabled(void) const }{isEnabled(void) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Error\+Model\+::is\+Enabled (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classErrorModel_ad4dca2dab6afea097304a93b49e74d6d}{}\label{classErrorModel_ad4dca2dab6afea097304a93b49e74d6d}
+\begin{DoxyReturn}{Returns}
+true if error model is enabled; false otherwise 
+\end{DoxyReturn}
+\index{Error\+Model@{Error\+Model}!reset@{reset}}
+\index{reset@{reset}!Error\+Model@{Error\+Model}}
+\subsubsection[{\texorpdfstring{reset(void)}{reset(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Error\+Model\+::reset (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classErrorModel_a402a4355559a27004131bf43d046bf45}{}\label{classErrorModel_a402a4355559a27004131bf43d046bf45}
+Reset any state associated with the error model 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/aimsun\+\_\+extensions/\+V2\+X\+Framework/Error\+Model.\+h\end{DoxyCompactItemize}

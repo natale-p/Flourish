@@ -1,0 +1,4 @@
+<map id="GKGeoObject" name="GKGeoObject">
+<area shape="rect" id="node2" href="$classGKObject.html" title="Main class, almost all the objects derivate from this class. " alt="" coords="21,81,99,108"/>
+<area shape="rect" id="node3" href="$classGKBaseObject.html" title="Base class for normal objects (GKObject) and simulated objects (GKSimulatedObject) sharing an interfa..." alt="" coords="5,5,115,32"/>
+</map>
